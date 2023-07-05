@@ -79,12 +79,12 @@ ALTER DATABASE [petshop] SET QUERY_STORE = OFF
 GO
 USE [petshop]
 GO
-/****** Object:  Table [dbo].[agendamento]    Script Date: 04/07/2023 15:01:38 ******/
+/****** Object:  Table [dbo].[Agendamento]    Script Date: 04/07/2023 15:01:38 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
-CREATE TABLE [dbo].[agendamento](
+CREATE TABLE [dbo].[Agendamento](
 	[Id] [int] IDENTITY(1,1) NOT NULL,
 	[Data] [date] NOT NULL,
 	[Horario] [time](7) NOT NULL,
@@ -99,12 +99,12 @@ CREATE TABLE [dbo].[agendamento](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[agendamento_servicos]    Script Date: 04/07/2023 15:01:38 ******/
+/****** Object:  Table [dbo].[AgendamentoServicos]    Script Date: 04/07/2023 15:01:38 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
-CREATE TABLE [dbo].[agendamento_servicos](
+CREATE TABLE [dbo].[AgendamentoServicos](
 	[Id] [int] IDENTITY(1,1) NOT NULL,
 	[IdAgendamento] [int] NOT NULL,
 	[IdServico] [int] NOT NULL,
@@ -116,12 +116,12 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[animal]    Script Date: 04/07/2023 15:01:38 ******/
+/****** Object:  Table [dbo].[Animal]    Script Date: 04/07/2023 15:01:38 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
-CREATE TABLE [dbo].[animal](
+CREATE TABLE [dbo].[Animal](
 	[Id] [int] IDENTITY(1,1) NOT NULL,
 	[Nome] [varchar](50) NOT NULL,
 	[Sexo] [char](1) NOT NULL,
@@ -140,12 +140,12 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[cliente]    Script Date: 04/07/2023 15:01:38 ******/
+/****** Object:  Table [dbo].[Cliente]    Script Date: 04/07/2023 15:01:38 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
-CREATE TABLE [dbo].[cliente](
+CREATE TABLE [dbo].[Cliente](
 	[Id] [int] IDENTITY(1,1) NOT NULL,
 	[Nome] [varchar](50) NOT NULL,
 	[Celular] [varchar](15) NOT NULL,
@@ -161,12 +161,12 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[funcao]    Script Date: 04/07/2023 15:01:38 ******/
+/****** Object:  Table [dbo].[Funcao]    Script Date: 04/07/2023 15:01:38 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
-CREATE TABLE [dbo].[funcao](
+CREATE TABLE [dbo].[Funcao](
 	[Id] [int] IDENTITY(1,1) NOT NULL,
 	[Nome] [varchar](50) NOT NULL,
 PRIMARY KEY CLUSTERED 
@@ -175,12 +175,12 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[funcao_permissao]    Script Date: 04/07/2023 15:01:38 ******/
+/****** Object:  Table [dbo].[FuncaoPermissao]    Script Date: 04/07/2023 15:01:38 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
-CREATE TABLE [dbo].[funcao_permissao](
+CREATE TABLE [dbo].[FuncaoPermissao](
 	[Id] [int] IDENTITY(1,1) NOT NULL,
 	[IdFuncao] [int] NOT NULL,
 	[IdPermissao] [int] NOT NULL,
@@ -190,12 +190,12 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[permissao]    Script Date: 04/07/2023 15:01:38 ******/
+/****** Object:  Table [dbo].[Permissao]    Script Date: 04/07/2023 15:01:38 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
-CREATE TABLE [dbo].[permissao](
+CREATE TABLE [dbo].[Permissao](
 	[Id] [int] IDENTITY(1,1) NOT NULL,
 	[Nome] [varchar](50) NOT NULL,
 PRIMARY KEY CLUSTERED 
@@ -204,12 +204,12 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[profissional]    Script Date: 04/07/2023 15:01:38 ******/
+/****** Object:  Table [dbo].[Profissional]    Script Date: 04/07/2023 15:01:38 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
-CREATE TABLE [dbo].[profissional](
+CREATE TABLE [dbo].[Profissional](
 	[Id] [int] IDENTITY(1,1) NOT NULL,
 	[Nome] [varchar](50) NOT NULL,
 	[DataNascimento] [varchar](10) NULL,
@@ -226,12 +226,12 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[raca]    Script Date: 04/07/2023 15:01:38 ******/
+/****** Object:  Table [dbo].[Raca]    Script Date: 04/07/2023 15:01:38 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
-CREATE TABLE [dbo].[raca](
+CREATE TABLE [dbo].[Raca](
 	[Id] [int] IDENTITY(1,1) NOT NULL,
 	[Nome] [varchar](50) NOT NULL,
 	[RacaPaisOrigem] [varchar](50) NULL,
@@ -241,12 +241,12 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[servico]    Script Date: 04/07/2023 15:01:38 ******/
+/****** Object:  Table [dbo].[Servico]    Script Date: 04/07/2023 15:01:38 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
-CREATE TABLE [dbo].[servico](
+CREATE TABLE [dbo].[Servico](
 	[Id] [int] IDENTITY(1,1) NOT NULL,
 	[Descricao] [varchar](50) NOT NULL,
 	[Preco] [decimal](5, 2) NOT NULL,
@@ -258,12 +258,12 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[usuario]    Script Date: 04/07/2023 15:01:38 ******/
+/****** Object:  Table [dbo].[Usuario]    Script Date: 04/07/2023 15:01:38 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
-CREATE TABLE [dbo].[usuario](
+CREATE TABLE [dbo].[Usuario](
 	[Id] [int] IDENTITY(1,1) NOT NULL,
 	[Login] [varchar](15) NOT NULL,
 	[Senha] [varchar](15) NOT NULL,
@@ -274,37 +274,37 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-ALTER TABLE [dbo].[agendamento] ADD  DEFAULT ((0)) FOR [Total]
+ALTER TABLE [dbo].[Agendamento] ADD  DEFAULT ((0)) FOR [Total]
 GO
-ALTER TABLE [dbo].[agendamento]  WITH CHECK ADD FOREIGN KEY([IdAnimal])
-REFERENCES [dbo].[animal] ([Id])
+ALTER TABLE [dbo].[Agendamento]  WITH CHECK ADD FOREIGN KEY([IdAnimal])
+REFERENCES [dbo].[Animal] ([Id])
 GO
-ALTER TABLE [dbo].[agendamento]  WITH CHECK ADD FOREIGN KEY([IdProfissional])
-REFERENCES [dbo].[profissional] ([Id])
+ALTER TABLE [dbo].[Agendamento]  WITH CHECK ADD FOREIGN KEY([IdProfissional])
+REFERENCES [dbo].[Profissional] ([Id])
 GO
-ALTER TABLE [dbo].[agendamento_servicos]  WITH CHECK ADD FOREIGN KEY([IdServico])
-REFERENCES [dbo].[servico] ([Id])
+ALTER TABLE [dbo].[AgendamentoServicos]  WITH CHECK ADD FOREIGN KEY([IdServico])
+REFERENCES [dbo].[Servico] ([Id])
 GO
-ALTER TABLE [dbo].[agendamento_servicos]  WITH CHECK ADD FOREIGN KEY([IdAgendamento])
-REFERENCES [dbo].[agendamento] ([Id])
+ALTER TABLE [dbo].[AgendamentoServicos]  WITH CHECK ADD FOREIGN KEY([IdAgendamento])
+REFERENCES [dbo].[Agendamento] ([Id])
 GO
-ALTER TABLE [dbo].[animal]  WITH CHECK ADD FOREIGN KEY([IdCliente])
-REFERENCES [dbo].[cliente] ([Id])
+ALTER TABLE [dbo].[Animal]  WITH CHECK ADD FOREIGN KEY([IdCliente])
+REFERENCES [dbo].[Cliente] ([Id])
 GO
-ALTER TABLE [dbo].[animal]  WITH CHECK ADD FOREIGN KEY([IdRaca])
-REFERENCES [dbo].[raca] ([Id])
+ALTER TABLE [dbo].[Animal]  WITH CHECK ADD FOREIGN KEY([IdRaca])
+REFERENCES [dbo].[Raca] ([Id])
 GO
-ALTER TABLE [dbo].[funcao_permissao]  WITH CHECK ADD FOREIGN KEY([IdFuncao])
-REFERENCES [dbo].[funcao] ([Id])
+ALTER TABLE [dbo].[FuncaoPermissao]  WITH CHECK ADD FOREIGN KEY([IdFuncao])
+REFERENCES [dbo].[Funcao] ([Id])
 GO
-ALTER TABLE [dbo].[funcao_permissao]  WITH CHECK ADD FOREIGN KEY([IdPermissao])
-REFERENCES [dbo].[permissao] ([Id])
+ALTER TABLE [dbo].[FuncaoPermissao]  WITH CHECK ADD FOREIGN KEY([IdPermissao])
+REFERENCES [dbo].[Permissao] ([Id])
 GO
-ALTER TABLE [dbo].[profissional]  WITH CHECK ADD FOREIGN KEY([IdFuncao])
-REFERENCES [dbo].[funcao] ([Id])
+ALTER TABLE [dbo].[Profissional]  WITH CHECK ADD FOREIGN KEY([IdFuncao])
+REFERENCES [dbo].[Funcao] ([Id])
 GO
-ALTER TABLE [dbo].[usuario]  WITH CHECK ADD FOREIGN KEY([IdProfissional])
-REFERENCES [dbo].[profissional] ([Id])
+ALTER TABLE [dbo].[Usuario]  WITH CHECK ADD FOREIGN KEY([IdProfissional])
+REFERENCES [dbo].[Profissional] ([Id])
 GO
 USE [master]
 GO
