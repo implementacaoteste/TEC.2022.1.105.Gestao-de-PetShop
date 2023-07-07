@@ -21,7 +21,19 @@ select C.Nome,TC.Telefone From Cliente C, TelefoneCliente TC where C.Id = 1 ;
 /***************************************************************CADASTRAR RAÇA *****************************************************************/
 select *From Raca
 
-insert into (Nome, Especie,RacaPaisOrigem) values ('Mimí','Gato',
+insert into (Nome, Especie,PaisOrigem) values ('Siberiano','Gato', 'Rússia');
+insert into (Nome, Especie,PaisOrigem) values ('Ragdoll','Gato', 'Estados Unidos');
+insert into (Nome, Especie,PaisOrigem) values ('Bombay','Gato', 'Asiático');
+insert into (Nome, Especie,PaisOrigem) values ('Buldogue-campeiro','Cachorro', 'BrasilDogue brasileiro');
+insert into (Nome, Especie,PaisOrigem) values ('Dogue brasileiro','Cachorro', 'Brasil');
+insert into (Nome, Especie,PaisOrigem) values ('Dobermann','Cachorro', 'Alemanha');
+insert into (Nome, Especie,PaisOrigem) values ('Poodle','Cachorro', 'França');
+
+/************************************************************************************************************************************/
+
+/********************************************** CADASTRAR ANIMAL *******************************************************************/
+select *from Animal
+
 
 /********************************************* Permissão********************************************************/
 select *from Permissao
