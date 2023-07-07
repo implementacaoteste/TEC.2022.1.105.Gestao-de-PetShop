@@ -21,6 +21,8 @@ select C.Nome,TC.Telefone From Cliente C, TelefoneCliente TC where C.Id = 1 ;
 /***************************************************************CADASTRAR RAÇA *****************************************************************/
 select *From Raca
 
+insert into (Nome, Especie,RacaPaisOrigem) values ('Mimí','Gato',
+
 /********************************************* Permissão********************************************************/
 select *from Permissao
 
@@ -153,11 +155,13 @@ select P.Nome, TP.Telefone, EP.Email, F.Nome  from Profissional P inner join Tel
 /***********************************************************************************************************************************************************************************/
 
 /**************************************INSERIR USUÁRIO **************************************************************/
+use petshop
+select *from Usuario
 
+insert into Usuario(Login,Senha,IdProfissional) values ('administrador','adm1234',1);
+insert into Usuario(Login,Senha,IdProfissional) values ('AnaPaula','aten1234',2);
 
-
-
-
+/*******************************************************************************************************************************/
 
 
 
