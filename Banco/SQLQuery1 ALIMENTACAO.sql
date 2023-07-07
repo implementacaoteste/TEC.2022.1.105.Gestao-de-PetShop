@@ -1,18 +1,25 @@
 use petshop
 
+
+
+/************************************************** INSERT TABELA CLIENTE *********************************************************/
 select *from Cliente
 select *from TelefoneCliente
+select *from EmailCliente
 
+insert into Cliente (Nome, CPF, Logradouro, Numero,Bairro,Cidade,UF,Pais,CEP, DataNascimento,Foto,Ativo)
+values ('Cleo Pires','111.111.111-11','Rua Assunção', '11','Bairro São João', 'Araguaína','TO','Brasil', '77800-000','01/01/2023',null,1);
 
-insert into Cliente (Nome, CPF, Logradouro, Numero,Cidade,UF,Pais,CEP, DataNascimento,Foto,Ativo)
-values ('Cleo Pires','111.111.111-11','Rua Assunção, Bairro São João', '11', 'Araguaína','TO','Brasil', '77800-000','01/01/2023',null,1);
+insert into TelefoneCliente (Telefone, IdCliente) values ('6399222-2222',1)
+insert into TelefoneCliente (Telefone, IdCliente) values ('6399222-2211',1)
+insert into EmailCliente(Email,IdCliente) values ('cleopires', 1)
 
-insert into TelefoneCliente (Telefone, IdCliente) values ('6399222-2222',2)
-insert into TelefoneCliente (Telefone, IdCliente) values ('6399222-2211',2)
+select C.Nome,TC.Telefone From Cliente C, TelefoneCliente TC where C.Id = 1 ;
 
-select C.Nome,TC.Telefone From Cliente C, TelefoneCliente TC where C.Id = 2 ;
+/******************************************************************************************************************************************************/
 
-update Cliente set Email = 'administrador@hotmail.com' where Id = 1= 
+/***************************************************************CADASTRAR RAÇA *****************************************************************/
+select *From Raca
 
 /********************************************* Permissão********************************************************/
 select *from Permissao
@@ -116,21 +123,33 @@ insert into FuncaoPermissao (IdFuncao,IdPermissao) values (2,20);
 insert into FuncaoPermissao (IdFuncao,IdPermissao) values (2,21);
 
 /****************************************************************************************************************/
-/****************************** INSERIR PROFISSIONAL ***********************************************************/
+/****************************** INSERIR PROFISSIONAL telefone e Email ***********************************************************/
 select *from Profissional
+select *from TelefoneProfissional
+select *from EmailProfissional 
 
-insert into Profissional (Nome,DataNascimento,CPF,Celular,Email,Endereco,IdFuncao,Ativo,Foto)
-values ('Administrador', '01/01/2000','000.000.000-00','(63)99111-1111','administrador@hotmail.com','Rua Administrador, n 00,Bairro Administrador, Cidade Araguaína-TO',1, 1 ,null);
+insert into Profissional (IdFuncao,Nome,CPF,Logradouro, Numero, Bairro, Cidade,UF,Pais, CEP,DataNascimento,Foto,Ativo)
+values (1,'Administrador','000.000.000-00','Rua Administrador','01','Bairro Administrador','Araguaína','TO','Brasil','77800-000', '01/01/2000',null, 1);
+insert into TelefoneProfissional(IdProfissional,Telefone) values (1,'6399200-0000')
+insert into TelefoneProfissional(IdProfissional,Telefone) values (1,'6399200-0001')
+insert into EmailProfissional(Email,IdProfissional) values ('administrador@gmail.com',1)
 
-insert into Profissional (Nome,DataNascimento,CPF,Celular,Email,Endereco,IdFuncao,Ativo,Foto)
-values ('Adriana Lopes', '11/01/2000','111.111.111-11','(63)99222-2222','adriana@hotmail.com','Rua Canvas, n 00,Bairro Lago Sul, Cidade Araguaína-TO',2, 1 ,null);
+insert into Profissional (IdFuncao,Nome,CPF,Logradouro, Numero, Bairro, Cidade,UF,Pais, CEP,DataNascimento,Foto,Ativo)
+values (2,'Ana Paula Santos','000.000.000-01','Rua Carvalhães','308','Bairro Céu azul','Araguaína','TO','Brasil','77800-000', '02/01/2000',null, 1);
+insert into TelefoneProfissional(IdProfissional,Telefone) values (2,'6399200-1111')
+insert into EmailProfissional(Email,IdProfissional) values ('anapaula@gmail.com',2)
 
-insert into Profissional (Nome,DataNascimento,CPF,Celular,Email,Endereco,IdFuncao,Ativo,Foto)
-values ('Lucas Sampaio', '02/02/2002','222.222.222-11','(63)99333-3333','lucas@hotmail.com','Rua Lima, n 00,Bairro Céu Azul, Cidade Araguaína-TO',3, 1 ,null);
+insert into Profissional (IdFuncao,Nome,CPF,Logradouro, Numero, Bairro, Cidade,UF,Pais, CEP,DataNascimento,Foto,Ativo)
+values (3,'Lucas Sampaio','000.000.000-02','Rua Zâmbia','s/n','Bairro Lago Azul IV','Araguaína','TO','Brasil','77800-000', '03/01/2000',null, 1);
+insert into TelefoneProfissional(IdProfissional,Telefone) values (3,'6399200-2222')
+insert into EmailProfissional(Email,IdProfissional) values ('sampoio@gmail.com',3)
 
-insert into Profissional (Nome,DataNascimento,CPF,Celular,Email,Endereco,IdFuncao,Ativo,Foto)
-values ('Camem Lucia Aguiar', '03/03/1999','333.333.333-33','(63)99444-4444','carmem@hotmail.com','Rua Anhaguera, n 645,Bairro Eldorado, Cidade Araguaína-TO',4, 1 ,null);
+insert into Profissional (IdFuncao,Nome,CPF,Logradouro, Numero, Bairro, Cidade,UF,Pais, CEP,DataNascimento,Foto,Ativo)
+values (4,'Carmem Aguiar','000.000.000-03','Rua Colinas','s/n','Bairro Patrocionio','Araguaína','TO','Brasil','77800-000', '04/01/2000',null, 1);
+insert into TelefoneProfissional(IdProfissional,Telefone) values (4,'6399200-3333')
+insert into EmailProfissional(Email,IdProfissional) values ('aguiar@gmail.com',4)
 
+select P.Nome, TP.Telefone, EP.Email, F.Nome  from Profissional P inner join TelefoneProfissional TP on P.Id = TP.IdProfissional inner join EmailProfissional EP on P.Id = EP.IdProfissional inner join Funcao F on F.Id = P.IdFuncao and P.Id = 1
 /***********************************************************************************************************************************************************************************/
 
 /**************************************INSERIR USUÁRIO **************************************************************/
