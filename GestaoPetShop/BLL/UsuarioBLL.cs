@@ -39,20 +39,10 @@ namespace BLL
             ValidarPermissao(1);
             return new UsuarioDAL().BuscarPorId(_id);
         }
-        public Usuario BuscarPorCPF(string _cPF)
+        public List<Usuario> BuscarPorLogin(string _login)
         {
             ValidarPermissao(1);
-            return new UsuarioDAL().BuscarPorCPF(_cPF);
-        }
-        public List<Usuario> BuscarPorNome(string _nome)
-        {
-            ValidarPermissao(1);
-            return new UsuarioDAL().BuscarPorNome(_nome);
-        }
-        public Usuario BuscarPorNomeUsuario(string _nomeUsuario)
-        {
-            ValidarPermissao(1);
-            return new UsuarioDAL().BuscarPorNomeUsuario(_nomeUsuario);
+            return new UsuarioDAL().BuscarPorLogin(_login);
         }
         private void ValidarDados(Usuario _usuario, string _confirmacaoDeSenha)
         {
@@ -62,22 +52,13 @@ namespace BLL
             if (_usuario.Senha.Length <= 3)
                 throw new Exception("A senha deve ter mais de 3 caracteres.") { Data = { { "Id", 123 } } };
 
-            if (_usuario.Nome.Length <= 2)
-                throw new Exception("A nome deve ter mais de 2 caracteres.");
+            if (_usuario.Login.Length <= 2)
+                throw new Exception("O Login deve ter mais de 2 caracteres.");
         }
         public void ValidarPermissao(int _idPermissao)
         {
             if (!new UsuarioDAL().ValidarPermissao(Constantes.IdUsuarioLogado, _idPermissao))
                 throw new Exception("Você não tem permissão de realizar essa operação. Procure o administrador do sistema.");
-        }
-        public void AdicionarGrupoUsuario(int _idUsuario, int _idGrupoUsuario)
-        {
-            if (!new UsuarioDAL().UsuarioPertenceAoGrupo(_idUsuario, _idGrupoUsuario))
-                new UsuarioDAL().AdicionarGrupoUsuario(_idUsuario, _idGrupoUsuario);
-        }
-        public void RemoverGrupoUsuario(int _idUsuario, int _idGrupoUsuario)
-        {
-            new UsuarioDAL().RemoverGrupoUsuario(_idUsuario, _idGrupoUsuario);
         }
         public void Altenticar(string _nomeUsuario, string _senha)
         {
