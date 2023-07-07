@@ -1,11 +1,18 @@
 use petshop
 
 select *from Cliente
+select *from TelefoneCliente
 
-insert into Cliente (Nome,Celular,Email,CPF,Endereco,Foto,DataNascimento,Ativo)
-values ('Administrador Administrando Administroencio', '(63)99111-1111',' administrador@hotmail.com','000.000.000-00','Rua Administrador, n 00,Bairro Administrador, Cidade Araguaína-TO',null,'01/01/2023',1);
 
-update Cliente set Email = 'administrador@hotmail.com' where Id = 1;
+insert into Cliente (Nome, CPF, Logradouro, Numero,Cidade,UF,Pais,CEP, DataNascimento,Foto,Ativo)
+values ('Cleo Pires','111.111.111-11','Rua Assunção, Bairro São João', '11', 'Araguaína','TO','Brasil', '77800-000','01/01/2023',null,1);
+
+insert into TelefoneCliente (Telefone, IdCliente) values ('6399222-2222',2)
+insert into TelefoneCliente (Telefone, IdCliente) values ('6399222-2211',2)
+
+select C.Nome,TC.Telefone From Cliente C, TelefoneCliente TC where C.Id = 2 ;
+
+update Cliente set Email = 'administrador@hotmail.com' where Id = 1= 
 
 /********************************************* Permissão********************************************************/
 select *from Permissao
@@ -57,7 +64,7 @@ insert into Funcao (Nome) values ('Pet Stylist');
 
 /**********************************************************************************************************************/
 select *from FuncaoPermissao
-/* inserir permissão na função Gerente */
+/* inserir permissão na função Gerente tem todas as permissões */
 insert into FuncaoPermissao (IdFuncao,IdPermissao) values (1,1);
 insert into FuncaoPermissao (IdFuncao,IdPermissao) values (1,2);
 insert into FuncaoPermissao (IdFuncao,IdPermissao) values (1,3);
