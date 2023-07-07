@@ -7,13 +7,21 @@ select *from Cliente
 select *from TelefoneCliente
 select *from EmailCliente
 
+-- cliente numero 1
 insert into Cliente (Nome, CPF, Logradouro, Numero,Bairro,Cidade,UF,Pais,CEP, DataNascimento,Foto,Ativo)
-values ('Cleo Pires','111.111.111-11','Rua Assunção', '11','Bairro São João', 'Araguaína','TO','Brasil', '77800-000','01/01/2023',null,1);
+values ('Cleo Pires','111.111.111-11','Rua Assunção', '11','Bairro São João', 'Araguaína','TO','Brasil', '77800-000','01/01/2000',null,1);
 
 insert into TelefoneCliente (Telefone, IdCliente) values ('6399222-2222',1)
 insert into TelefoneCliente (Telefone, IdCliente) values ('6399222-2211',1)
-insert into EmailCliente(Email,IdCliente) values ('cleopires', 1)
+insert into EmailCliente(Email,IdCliente) values ('cleopires@globo.com', 1)
 
+-- cliente numero 2
+insert into Cliente (Nome, CPF, Logradouro, Numero,Bairro,Cidade,UF,Pais,CEP, DataNascimento,Foto,Ativo)
+values ('Marcos Pasquim','111.111.111-22','Rua Pedreira', '1234','Presidente Lula', 'Araguaína','TO','Brasil', '77800-000','01/01/1990',null,1);
+
+insert into TelefoneCliente (Telefone, IdCliente) values ('6399222-3333',2)
+insert into TelefoneCliente (Telefone, IdCliente) values ('6399222-3311',2)
+insert into EmailCliente(Email,IdCliente) values ('marcospasquim@hotmail.com', 1)
 select C.Nome,TC.Telefone From Cliente C, TelefoneCliente TC where C.Id = 1 ;
 
 /******************************************************************************************************************************************************/
@@ -28,12 +36,22 @@ insert into (Nome, Especie,PaisOrigem) values ('Buldogue-campeiro','Cachorro', '
 insert into (Nome, Especie,PaisOrigem) values ('Dogue brasileiro','Cachorro', 'Brasil');
 insert into (Nome, Especie,PaisOrigem) values ('Dobermann','Cachorro', 'Alemanha');
 insert into (Nome, Especie,PaisOrigem) values ('Poodle','Cachorro', 'França');
+insert into (Nome, Especie,PaisOrigem) values ('Vira-Lata','Cachorro', 'Brasil');
+
 
 /************************************************************************************************************************************/
 
 /********************************************** CADASTRAR ANIMAL *******************************************************************/
 select *from Animal
 
+insert into Animal(Nome, Sexo, Agressivo, Cor, Idade, Alergia, IdCLiente, IdRaca, Foto, DataNascimento, Ativo)
+values('Mini', 'F', 'N','Branca',2,'Não tem',1,1,null,'01/01/2021',1);
+
+insert into Animal(Nome, Sexo, Agressivo, Cor, Idade, Alergia, IdCLiente, IdRaca, Foto, DataNascimento, Ativo)
+values('Lesse', 'F', 'N','Marrom',3,'Não tem',2,4,null,'01/01/2020',1);
+
+insert into Animal(Nome, Sexo, Agressivo, Cor, Idade, Alergia, IdCLiente, IdRaca, Foto, DataNascimento, Ativo)
+values('Michele', 'F', 'N','Preta',1,'Não tem',2,3,null,'01/01/2022',1);
 
 /********************************************* Permissão********************************************************/
 select *from Permissao
