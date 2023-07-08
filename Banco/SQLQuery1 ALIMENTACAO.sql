@@ -1,11 +1,29 @@
 use petshop
+/*ANTES DE INSERIR VERIFICAR OS CADASTROS*/
 
+/*---ORDEM DE CADASTRO---
+	1 - Cliente
+	2 - Email do Cliente
+	3 - Telefone do Cliente
+	4 - Raça
+	5 - Animal
+	6 - Função
+	7 - Permissão
+	8 - Função/Permissão
+	9 - Profissional
+	10- Email do Profissional
+	11- Telefone do Profissional
+	12- Usuário
+	13- Agendamento
+	14- Serviço
+	15- Agendamento/Serviços
+*/
 
 
 /************************************************** INSERT TABELA CLIENTE *********************************************************/
-select *from Cliente
-select *from TelefoneCliente
-select *from EmailCliente
+--select *from Cliente
+--select *from TelefoneCliente
+--select *from EmailCliente
 
 -- cliente numero 1
 insert into Cliente (Nome, CPF, Logradouro, Numero,Bairro,Cidade,UF,Pais,CEP, DataNascimento,Foto,Ativo)
@@ -22,27 +40,28 @@ values ('Marcos Pasquim','111.111.111-22','Rua Pedreira', '1234','Presidente Lul
 insert into TelefoneCliente (Telefone, IdCliente) values ('6399222-3333',2)
 insert into TelefoneCliente (Telefone, IdCliente) values ('6399222-3311',2)
 insert into EmailCliente(Email,IdCliente) values ('marcospasquim@hotmail.com', 1)
-select C.Nome,TC.Telefone From Cliente C, TelefoneCliente TC where C.Id = 1 ;
+
+--select C.Nome,TC.Telefone From Cliente C, TelefoneCliente TC where C.Id = 1 ;
 
 /******************************************************************************************************************************************************/
 
 /***************************************************************CADASTRAR RAÇA *****************************************************************/
-select *From Raca
+--select *From Raca
 -- cadastro das raças
-insert into (Nome, Especie,PaisOrigem) values ('Siberiano','Gato', 'Rússia');
-insert into (Nome, Especie,PaisOrigem) values ('Ragdoll','Gato', 'Estados Unidos');
-insert into (Nome, Especie,PaisOrigem) values ('Bombay','Gato', 'Asiático');
-insert into (Nome, Especie,PaisOrigem) values ('Buldogue-campeiro','Cachorro', 'BrasilDogue brasileiro');
-insert into (Nome, Especie,PaisOrigem) values ('Dogue brasileiro','Cachorro', 'Brasil');
-insert into (Nome, Especie,PaisOrigem) values ('Dobermann','Cachorro', 'Alemanha');
-insert into (Nome, Especie,PaisOrigem) values ('Poodle','Cachorro', 'França');
-insert into (Nome, Especie,PaisOrigem) values ('Vira-Lata','Cachorro', 'Brasil');
+insert into Raca(Nome, Especie,PaisOrigem) values ('Siberiano','Gato', 'Rússia');
+insert into Raca(Nome, Especie,PaisOrigem) values ('Ragdoll','Gato', 'Estados Unidos');
+insert into Raca(Nome, Especie,PaisOrigem) values ('Bombay','Gato', 'Asiático');
+insert into Raca(Nome, Especie,PaisOrigem) values ('Buldogue-campeiro','Cachorro', 'BrasilDogue brasileiro');
+insert into Raca(Nome, Especie,PaisOrigem) values ('Dogue brasileiro','Cachorro', 'Brasil');
+insert into Raca(Nome, Especie,PaisOrigem) values ('Dobermann','Cachorro', 'Alemanha');
+insert into Raca(Nome, Especie,PaisOrigem) values ('Poodle','Cachorro', 'França');
+insert into Raca(Nome, Especie,PaisOrigem) values ('Vira-Lata','Cachorro', 'Brasil');
 
 
 /************************************************************************************************************************************/
 
 /********************************************** CADASTRAR ANIMAL *******************************************************************/
-select *from Animal
+--select *from Animal
 --cadastro dos animais
 insert into Animal(Nome, Sexo, Agressivo, Cor, Idade, Alergia, IdCLiente, IdRaca, Foto, DataNascimento, Ativo)
 values('Mini', 'F', 'N','Branca',2,'Não tem',1,1,null,'01/01/2021',1);
@@ -54,7 +73,7 @@ insert into Animal(Nome, Sexo, Agressivo, Cor, Idade, Alergia, IdCLiente, IdRaca
 values('Michele', 'F', 'N','Preta',1,'Não tem',2,3,null,'01/01/2022',1);
 
 /********************************************* Permissão********************************************************/
-select *from Permissao
+--select *from Permissao
 --cadastro das permissões
 insert into Permissao (Nome) values ('Buscar Usuário');--1
 insert into Permissao (Nome) values ('Buscar Cliente');--2
@@ -99,7 +118,7 @@ insert into Permissao (Nome) values ('Excluir Função');--36
 /**********************************************************************************************************************/
 
 /**********************************FUNÇÃO *****************************************************************************/
-select *from Funcao
+--select *from Funcao
 --cadastro das funções
 insert into Funcao (Nome) values ('Gerente');
 insert into Funcao (Nome) values ('Atendente');
@@ -107,7 +126,7 @@ insert into Funcao (Nome) values ('Veterinário');
 insert into Funcao (Nome) values ('Pet Stylist');
 
 /**********************************************************************************************************************/
-select *from FuncaoPermissao
+--select *from FuncaoPermissao
 /* inserir permissão na função Gerente tem todas as permissões */
 insert into FuncaoPermissao (IdFuncao,IdPermissao) values (1,1);
 insert into FuncaoPermissao (IdFuncao,IdPermissao) values (1,2);
@@ -168,9 +187,9 @@ insert into FuncaoPermissao (IdFuncao,IdPermissao) values (2,23);
 
 /****************************************************************************************************************/
 /****************************** INSERIR PROFISSIONAL telefone e Email ***********************************************************/
-select *from Profissional
-select *from TelefoneProfissional
-select *from EmailProfissional 
+--select *from Profissional
+--select *from TelefoneProfissional
+--select *from EmailProfissional 
 --cadastro dos profissionais
 insert into Profissional (IdFuncao,Nome,CPF,Logradouro, Numero, Bairro, Cidade,UF,Pais, CEP,DataNascimento,Foto,Ativo)
 values (1,'Administrador','000.000.000-00','Rua Administrador','01','Bairro Administrador','Araguaína','TO','Brasil','77800-000', '01/01/2000',null, 1);
@@ -193,15 +212,15 @@ values (4,'Carmem Aguiar','000.000.000-03','Rua Colinas','s/n','Bairro Patrocion
 insert into TelefoneProfissional(IdProfissional,Telefone) values (4,'6399200-3333')
 insert into EmailProfissional(Email,IdProfissional) values ('aguiar@gmail.com',4)
 
-select P.Nome, TP.Telefone, EP.Email, F.Nome  from Profissional P inner join TelefoneProfissional TP on P.Id = TP.IdProfissional inner join EmailProfissional EP on P.Id = EP.IdProfissional inner join Funcao F on F.Id = P.IdFuncao and P.Id = 1
+--select P.Nome, TP.Telefone, EP.Email, F.Nome  from Profissional P inner join TelefoneProfissional TP on P.Id = TP.IdProfissional inner join EmailProfissional EP on P.Id = EP.IdProfissional inner join Funcao F on F.Id = P.IdFuncao and P.Id = 1
 /***********************************************************************************************************************************************************************************/
 
 /**************************************INSERIR USUÁRIO **************************************************************/
-use petshop
-select *from Usuario
+--use petshop
+--select *from Usuario
 --cadastro dos usuários
-insert into Usuario(Login,Senha,IdProfissional) values ('administrador','adm1234',1);
-insert into Usuario(Login,Senha,IdProfissional) values ('AnaPaula','aten1234',2);
+insert into Usuario(UsuarioLogin,Senha,IdProfissional) values ('administrador','adm1234',1);
+insert into Usuario(UsuarioLogin,Senha,IdProfissional) values ('AnaPaula','aten1234',2);
 
 /*******************************************************************************************************************************/
 
