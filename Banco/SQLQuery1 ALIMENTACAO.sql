@@ -261,20 +261,42 @@ GO
 
 /*******************************************************************************************************************************/
 
+/**************************************INSERIR AGENDAMENTO **************************************************************/
+--use petshop
+--select *from Agendamento
+--cadastro de Agendamento
+--select * from Animal
+--select * from Profissional
 
+insert into Agendamento(IdAnimal,IdProfissional,DataAg,Horario,Situacao,Total,Ativo) values (1,2,'04/01/2005','09:30:00','Agendado',0.00,1);
+insert into Agendamento(IdAnimal,IdProfissional,DataAg,Horario,Situacao,Total,Ativo) values (1,2,'04/01/2005','09:35:00','Em Andamento',0.00,1);
+insert into Agendamento(IdAnimal,IdProfissional,DataAg,Horario,Situacao,Total,Ativo) values (1,2,'04/01/2005','09:40:00','Finalizado',0.00,1);
 
+/*******************************************************************************************************************************/
 
+/**************************************INSERIR SERVIÇOS **************************************************************/
+--select *from Servico
+--cadastro de Servico
 
+insert into Servico(Descricao,Preco,Tempo,Ativo) values ('Banho porte Pequeno',30.00,30,1);
+insert into Servico(Descricao,Preco,Tempo,Ativo) values ('Banho porte Grande',50.00,45,1);
+insert into Servico(Descricao,Preco,Tempo,Ativo) values ('Tosa Padrão',15.00,30,1);
+insert into Servico(Descricao,Preco,Tempo,Ativo) values ('Tosa Completa',50.00,45,1);
+insert into Servico(Descricao,Preco,Tempo,Ativo) values ('Banho porte Pequeno',30.00,30,1);
+insert into Servico(Descricao,Preco,Tempo,Ativo) values ('Buscar DriverTur',10.00,15,1);
+insert into Servico(Descricao,Preco,Tempo,Ativo) values ('Levar DriverTur',10.00,15,1);
 
+/*******************************************************************************************************************************/
 
+/**************************************INSERIR AGENDAMENTO / SERVIÇOS **************************************************************/
+--select *from AgendamentoServicos
+--cadastro de Agendamento / Servicos
 
+insert into AgendamentoServicos(IdAgendamento,IdServico,Quantidade,ValorUnitario) values (1,2,1,30.00);
 
-
-
-
-
-
-
-
-
-
+SELECT dbo.Cliente.Nome, dbo.Agendamento.Situacao, dbo.Animal.Nome AS Animal, dbo.Servico.Descricao, dbo.AgendamentoServicos.Quantidade, dbo.AgendamentoServicos.ValorUnitario, dbo.Agendamento.Total
+	FROM dbo.Agendamento	INNER JOIN dbo.AgendamentoServicos ON dbo.Agendamento.Id = dbo.AgendamentoServicos.IdAgendamento 
+							INNER JOIN dbo.Animal ON dbo.Agendamento.IdAnimal = dbo.Animal.Id 
+							INNER JOIN dbo.Cliente ON dbo.Animal.IdCliente = dbo.Cliente.Id 
+							INNER JOIN dbo.Servico ON dbo.AgendamentoServicos.IdServico = dbo.Servico.Id 
+							AND IdCliente = 1
