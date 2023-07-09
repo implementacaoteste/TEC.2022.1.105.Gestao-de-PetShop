@@ -39,9 +39,13 @@ values ('Marcos Pasquim','111.111.111-22','Rua Pedreira', '1234','Presidente Lul
 -- telefone do cliente/email 2
 insert into TelefoneCliente (Telefone, IdCliente) values ('6399222-3333',2)
 insert into TelefoneCliente (Telefone, IdCliente) values ('6399222-3311',2)
-insert into EmailCliente(Email,IdCliente) values ('marcospasquim@hotmail.com', 1)
+insert into EmailCliente(Email,IdCliente) values ('marcospasquim@hotmail.com', 2)
 
 --select C.Nome,TC.Telefone From Cliente C, TelefoneCliente TC where C.Id = 1 ;
+
+--SELECT dbo.Cliente.Id, dbo.Cliente.Nome, dbo.TelefoneCliente.IdCliente, dbo.TelefoneCliente.Telefone
+--	FROM dbo.Cliente INNER JOIN dbo.TelefoneCliente 
+--	ON dbo.Cliente.Id = dbo.TelefoneCliente.IdCliente AND IdCliente = 1
 
 /******************************************************************************************************************************************************/
 
@@ -63,14 +67,19 @@ insert into Raca(Nome, Especie,PaisOrigem) values ('Vira-Lata','Cachorro', 'Bras
 /********************************************** CADASTRAR ANIMAL *******************************************************************/
 --select *from Animal
 --cadastro dos animais
-insert into Animal(Nome, Sexo, Agressivo, Cor, Idade, Alergia, IdCLiente, IdRaca, Foto, DataNascimento, Ativo)
-values('Mini', 'F', 'N','Branca',2,'Não tem',1,1,null,'01/01/2021',1);
+insert into Animal(IdCLiente, IdRaca, Nome, Sexo, Agressivo, Cor, Idade, Alergia, Foto, DataNascimento, Ativo)
+values(1,1,'Mini', 'F', 'N','Branca',2,'Não tem', null,'01/01/2021',1);
 
-insert into Animal(Nome, Sexo, Agressivo, Cor, Idade, Alergia, IdCLiente, IdRaca, Foto, DataNascimento, Ativo)
-values('Lesse', 'F', 'N','Marrom',3,'Não tem',2,4,null,'01/01/2020',1);
+insert into Animal(IdCLiente, IdRaca, Nome, Sexo, Agressivo, Cor, Idade, Alergia, Foto, DataNascimento, Ativo)
+values(2,4,'Lesse', 'F', 'N','Marrom',3,'Não tem', null,'01/01/2020',1);
 
-insert into Animal(Nome, Sexo, Agressivo, Cor, Idade, Alergia, IdCLiente, IdRaca, Foto, DataNascimento, Ativo)
-values('Michele', 'F', 'N','Preta',1,'Não tem',2,3,null,'01/01/2022',1);
+insert into Animal(IdCLiente, IdRaca, Nome, Sexo, Agressivo, Cor, Idade, Alergia, Foto, DataNascimento, Ativo)
+values(2,3,'Michele', 'F', 'N','Preta',1,'Não tem', null,'01/01/2022',1);
+
+--SELECT dbo.Cliente.Nome, dbo.Animal.Nome AS Animal, dbo.Raca.Nome AS Raca
+--	FROM dbo.Animal INNER JOIN dbo.Cliente ON dbo.Animal.IdCliente = dbo.Cliente.Id 
+--					INNER JOIN dbo.Raca ON dbo.Animal.IdRaca = dbo.Raca.Id 
+--					AND IdCliente = 2
 
 /********************************************* Permissão********************************************************/
 --select *from Permissao
@@ -185,42 +194,70 @@ insert into FuncaoPermissao (IdFuncao,IdPermissao) values (2,21);
 insert into FuncaoPermissao (IdFuncao,IdPermissao) values (2,22);
 insert into FuncaoPermissao (IdFuncao,IdPermissao) values (2,23);
 
+--SELECT dbo.Funcao.Nome, dbo.Permissao.Nome AS Permissao, dbo.FuncaoPermissao.IdPermissao
+--	FROM dbo.Funcao INNER JOIN dbo.FuncaoPermissao ON dbo.Funcao.Id = dbo.FuncaoPermissao.IdFuncao 
+--					INNER JOIN dbo.Permissao ON dbo.FuncaoPermissao.IdPermissao = dbo.Permissao.Id 
+--					AND IdFuncao = 2
+
+--SELECT dbo.Funcao.Nome, dbo.Permissao.Nome AS Permissao
+--	FROM dbo.Funcao INNER JOIN dbo.FuncaoPermissao ON dbo.Funcao.Id = dbo.FuncaoPermissao.IdFuncao 
+--					INNER JOIN dbo.Permissao ON dbo.FuncaoPermissao.IdPermissao = dbo.Permissao.Id 
+--					AND IdFuncao = 2
+
 /****************************************************************************************************************/
 /****************************** INSERIR PROFISSIONAL telefone e Email ***********************************************************/
 --select *from Profissional
 --select *from TelefoneProfissional
 --select *from EmailProfissional 
+
 --cadastro dos profissionais
 insert into Profissional (IdFuncao,Nome,CPF,Logradouro, Numero, Bairro, Cidade,UF,Pais, CEP,DataNascimento,Foto,Ativo)
-values (1,'Administrador','000.000.000-00','Rua Administrador','01','Bairro Administrador','Araguaína','TO','Brasil','77800-000', '01/01/2000',null, 1);
+values (1,'Administrador','000.000.000-00','Rua Administrador','01','Administrador','Araguaína','TO','Brasil','77800-000', '01/01/2000',null, 1);
 insert into TelefoneProfissional(IdProfissional,Telefone) values (1,'6399200-0000')
 insert into TelefoneProfissional(IdProfissional,Telefone) values (1,'6399200-0001')
-insert into EmailProfissional(Email,IdProfissional) values ('administrador@gmail.com',1)
+insert into EmailProfissional(IdProfissional,Email) values (1,'administrador@gmail.com')
 
 insert into Profissional (IdFuncao,Nome,CPF,Logradouro, Numero, Bairro, Cidade,UF,Pais, CEP,DataNascimento,Foto,Ativo)
 values (2,'Ana Paula Santos','000.000.000-01','Rua Carvalhães','308','Bairro Céu azul','Araguaína','TO','Brasil','77800-000', '02/01/2000',null, 1);
 insert into TelefoneProfissional(IdProfissional,Telefone) values (2,'6399200-1111')
-insert into EmailProfissional(Email,IdProfissional) values ('anapaula@gmail.com',2)
+insert into EmailProfissional(IdProfissional,Email) values (2,'anapaula@gmail.com')
 
 insert into Profissional (IdFuncao,Nome,CPF,Logradouro, Numero, Bairro, Cidade,UF,Pais, CEP,DataNascimento,Foto,Ativo)
 values (3,'Lucas Sampaio','000.000.000-02','Rua Zâmbia','s/n','Bairro Lago Azul IV','Araguaína','TO','Brasil','77800-000', '03/01/2000',null, 1);
 insert into TelefoneProfissional(IdProfissional,Telefone) values (3,'6399200-2222')
-insert into EmailProfissional(Email,IdProfissional) values ('sampoio@gmail.com',3)
+insert into EmailProfissional(IdProfissional,Email) values (3,'sampoio@gmail.com')
 
 insert into Profissional (IdFuncao,Nome,CPF,Logradouro, Numero, Bairro, Cidade,UF,Pais, CEP,DataNascimento,Foto,Ativo)
 values (4,'Carmem Aguiar','000.000.000-03','Rua Colinas','s/n','Bairro Patrocionio','Araguaína','TO','Brasil','77800-000', '04/01/2000',null, 1);
 insert into TelefoneProfissional(IdProfissional,Telefone) values (4,'6399200-3333')
-insert into EmailProfissional(Email,IdProfissional) values ('aguiar@gmail.com',4)
+insert into EmailProfissional(IdProfissional,Email) values (4,'aguiar@gmail.com')
 
---select P.Nome, TP.Telefone, EP.Email, F.Nome  from Profissional P inner join TelefoneProfissional TP on P.Id = TP.IdProfissional inner join EmailProfissional EP on P.Id = EP.IdProfissional inner join Funcao F on F.Id = P.IdFuncao and P.Id = 1
+--select P.Nome, TP.Telefone, EP.Email, F.Nome from Profissional P inner join TelefoneProfissional TP on P.Id = TP.IdProfissional inner join EmailProfissional EP on P.Id = EP.IdProfissional inner join Funcao F on F.Id = P.IdFuncao and P.Id = 1
+
 /***********************************************************************************************************************************************************************************/
 
 /**************************************INSERIR USUÁRIO **************************************************************/
 --use petshop
 --select *from Usuario
 --cadastro dos usuários
-insert into Usuario(UsuarioLogin,Senha,IdProfissional) values ('administrador','adm1234',1);
-insert into Usuario(UsuarioLogin,Senha,IdProfissional) values ('AnaPaula','aten1234',2);
+--insert into Usuario(IdProfissional,UsuarioLogin,Senha) values (1,'administrador','adm1234');
+--insert into Usuario(IdProfissional,UsuarioLogin,Senha) values (2,'AnaPaula','aten1234');
+
+-- UTILIZANDO UMA PROCEDURE
+CREATE PROCEDURE SP_CAD_USUARIO
+	@IdProfissional INT,
+	@UsuarioLogin VARCHAR(15),
+	@Senha VARCHAR(15)
+AS
+BEGIN
+	INSERT INTO USUARIO(IdProfissional,UsuarioLogin,Senha)
+	VALUES(@IdProfissional,@UsuarioLogin,@Senha)
+END
+GO
+
+EXEC SP_CAD_USUARIO 1,'administrador','adm1234'
+EXEC SP_CAD_USUARIO 2,'AnaPaula','aten12341'
+GO
 
 /*******************************************************************************************************************************/
 
