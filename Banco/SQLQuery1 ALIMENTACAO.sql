@@ -15,8 +15,9 @@ use petshop
 	11- Telefone do Profissional
 	12- Usuário
 	13- Agendamento
-	14- Serviço
-	15- Agendamento/Serviços
+	14- Situacao
+	15- Serviço
+	16- Agendamento/Serviços
 */
 
 
@@ -268,9 +269,9 @@ GO
 --select * from Animal
 --select * from Profissional
 
-insert into Agendamento(IdAnimal,IdProfissional,DataAg,Horario,Situacao,Total,Ativo) values (1,2,'04/01/2005','09:30:00','Agendado',0.00,1);
-insert into Agendamento(IdAnimal,IdProfissional,DataAg,Horario,Situacao,Total,Ativo) values (1,2,'04/01/2005','09:35:00','Em Andamento',0.00,1);
-insert into Agendamento(IdAnimal,IdProfissional,DataAg,Horario,Situacao,Total,Ativo) values (1,2,'04/01/2005','09:40:00','Finalizado',0.00,1);
+insert into Agendamento(IdAnimal,IdProfissional,IdSituacao,DataAg,Horario,Total,Ativo) values (1,2,1,'04/01/2005','09:30:00',0.00,1);
+insert into Agendamento(IdAnimal,IdProfissional,IdSituacao,DataAg,Horario,Total,Ativo) values (1,2,2,'04/01/2005','09:35:00',0.00,1);
+insert into Agendamento(IdAnimal,IdProfissional,IdSituacao,DataAg,Horario,Total,Ativo) values (1,2,3,'04/01/2005','09:40:00',0.00,1);
 
 /*******************************************************************************************************************************/
 
@@ -294,7 +295,7 @@ insert into Servico(Descricao,Preco,Tempo,Ativo) values ('Levar DriverTur',10.00
 
 insert into AgendamentoServicos(IdAgendamento,IdServico,Quantidade,ValorUnitario) values (1,2,1,30.00);
 
-SELECT dbo.Cliente.Nome, dbo.Agendamento.Situacao, dbo.Animal.Nome AS Animal, dbo.Servico.Descricao, dbo.AgendamentoServicos.Quantidade, dbo.AgendamentoServicos.ValorUnitario, dbo.Agendamento.Total
+SELECT dbo.Cliente.Nome, dbo.Agendamento.IdSituacao, dbo.Animal.Nome AS Animal, dbo.Servico.Descricao, dbo.AgendamentoServicos.Quantidade, dbo.AgendamentoServicos.ValorUnitario, dbo.Agendamento.Total
 	FROM dbo.Agendamento	INNER JOIN dbo.AgendamentoServicos ON dbo.Agendamento.Id = dbo.AgendamentoServicos.IdAgendamento 
 							INNER JOIN dbo.Animal ON dbo.Agendamento.IdAnimal = dbo.Animal.Id 
 							INNER JOIN dbo.Cliente ON dbo.Animal.IdCliente = dbo.Cliente.Id 
