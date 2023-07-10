@@ -273,6 +273,19 @@ insert into Agendamento(IdAnimal,IdProfissional,IdSituacao,DataAg,Horario,Total,
 insert into Agendamento(IdAnimal,IdProfissional,IdSituacao,DataAg,Horario,Total,Ativo) values (1,2,2,'04/01/2005','09:35:00',0.00,1);
 insert into Agendamento(IdAnimal,IdProfissional,IdSituacao,DataAg,Horario,Total,Ativo) values (1,2,3,'04/01/2005','09:40:00',0.00,1);
 
+
+/*******************************************************************************************************************************/
+
+/**************************************INSERIR SITUAÇÃO **************************************************************/
+--use petshop
+--select *from Situacao
+
+--cadastro de Situacao
+
+insert into Situacao(Descricao) values ('Agendado');
+insert into Situacao(Descricao) values ('Em Andamento');
+insert into Situacao(Descricao) values ('Finalizado');
+
 /*******************************************************************************************************************************/
 
 /**************************************INSERIR SERVIÇOS **************************************************************/
