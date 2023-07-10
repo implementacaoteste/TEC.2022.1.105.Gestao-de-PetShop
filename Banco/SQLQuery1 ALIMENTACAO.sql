@@ -313,4 +313,4 @@ SELECT dbo.Cliente.Nome, dbo.Agendamento.IdSituacao, dbo.Animal.Nome AS Animal, 
 							INNER JOIN dbo.Animal ON dbo.Agendamento.IdAnimal = dbo.Animal.Id 
 							INNER JOIN dbo.Cliente ON dbo.Animal.IdCliente = dbo.Cliente.Id 
 							INNER JOIN dbo.Servico ON dbo.AgendamentoServicos.IdServico = dbo.Servico.Id 
-							AND IdCliente = 1
+							WHERE IdCliente = 1 AND IdSituacao = 3
