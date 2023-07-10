@@ -296,7 +296,6 @@ insert into Servico(Descricao,Preco,Tempo,Ativo) values ('Banho porte Pequeno',3
 insert into Servico(Descricao,Preco,Tempo,Ativo) values ('Banho porte Grande',50.00,45,1);
 insert into Servico(Descricao,Preco,Tempo,Ativo) values ('Tosa Padrão',15.00,30,1);
 insert into Servico(Descricao,Preco,Tempo,Ativo) values ('Tosa Completa',50.00,45,1);
-insert into Servico(Descricao,Preco,Tempo,Ativo) values ('Banho porte Pequeno',30.00,30,1);
 insert into Servico(Descricao,Preco,Tempo,Ativo) values ('Buscar DriverTur',10.00,15,1);
 insert into Servico(Descricao,Preco,Tempo,Ativo) values ('Levar DriverTur',10.00,15,1);
 
