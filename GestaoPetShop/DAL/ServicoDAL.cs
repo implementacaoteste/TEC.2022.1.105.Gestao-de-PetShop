@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -17,11 +18,11 @@ namespace DAL
             {
                 SqlCommand cmd = cn.CreateCommand();
                 cmd.CommandText = @"INSERT INTO Servico(Descricao, Preco, Tempo,Ativo) 
-                                    VALUES(@Login, @IdProfissional, @Senha)";
+                                    VALUES(@Descricao, @Preco, @Tempo,@Ativo)";
                 cmd.CommandType = System.Data.CommandType.Text;
 
                 cmd.Parameters.AddWithValue("@Descricao", _servico.Descricao);
-                cmd.Parameters.AddWithValue("@Preco",_servico.Preco;
+                cmd.Parameters.AddWithValue("@Preco",_servico.Preco);
                 cmd.Parameters.AddWithValue("@Tempo", _servico.Tempo);
                 cmd.Parameters.AddWithValue("@Ativo", _servico.Ativo);
 
@@ -33,17 +34,17 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu erro ao tentar inserir um usuário no banco de dados.", ex);
+                throw new Exception("Ocorreu erro ao tentar inserir um usuário no banco de dados.", ex) { Data = { { "Id", 40 } } };
             }
             finally
             {
                 cn.Close();
             }
         }
-        public List<Usuario> BuscarTodos()
+        public List<Servico> BuscarTodos()
         {
-            List<Usuario> usuarios = new List<Usuario>();
-            Usuario usuario;
+            List<Servico> servicos = new List<Servico>();
+            Servico servico;
 
             SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
             try
@@ -59,35 +60,36 @@ namespace DAL
                 {
                     while (rd.Read())
                     {
-                        usuario = new Usuario();
-                        usuario.Id = Convert.ToInt32(rd["Id"]);
-                        usuario.Login = rd["Login"].ToString();
-                        usuario.IdProfissional = Convert.ToInt32(rd["IdProfissional"]);
-                        usuario.Senha = rd["Senha"].ToString();
-                        usuarios.Add(usuario);
+                        servico = new Servico();
+                        servico.Id = Convert.ToInt32(rd["Id"]);
+                        servico.Descricao = rd["Descricao"].ToString();
+                        servico.Preco = Convert.ToDecimal(rd["Preco"]);
+                        servico.Tempo = Convert.ToInt32(rd["Tempo"]);
+                        servico.Ativo = Convert.ToBoolean(rd["Ativo"]);
+                        servicos.Add(servico);
                     }
                 }
-                return usuarios;
+                return servicos;
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu um erro ao tentar buscar todos os usuários no banco de dados.", ex);
+                throw new Exception("Ocorreu um erro ao tentar buscar todos os Serviços no banco de dados.", ex) { Data = { { "Id", 41 } } };
             }
             finally
             {
                 cn.Close();
             }
         }
-        public Usuario BuscarPorId(int _id)
+        public Servico BuscarPorId(int _id)
         {
-            Usuario usuario = new Usuario();
+            Servico servico = new Servico();
 
             SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
             try
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT Id, Login, IdProfissional, Senha FROM Usuario 
+                cmd.CommandText = @"SELECT Id, Descrico,Preco, Tempo, Ativo FROM Servico 
                                     WHERE Id = @Id";
                 cmd.CommandType = System.Data.CommandType.Text;
 
@@ -99,37 +101,39 @@ namespace DAL
                 {
                     if (rd.Read())
                     {
-                        usuario.Id = Convert.ToInt32(rd["Id"]);
-                        usuario.Login = rd["Login"].ToString();
-                        usuario.Senha = rd["Senha"].ToString();
-                        usuario.IdProfissional = Convert.ToInt32(rd["IdProfissional"]);
+                        servico.Id = Convert.ToInt32(rd["Id"]);
+                        servico.Descricao = rd["Descricao"].ToString();
+                        servico.Preco = Convert.ToDecimal(rd["Preco"]);
+                        servico.Tempo = Convert.ToInt32(rd["Tempo"]);
+                        servico.Ativo = Convert.ToBoolean(rd["Ativo"]);
                     }
                 }
-                return usuario;
+                return servico;
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu um erro ao tentar buscar todos os usuários no banco de dados.", ex);
+                throw new Exception("Ocorreu um erro ao tentar buscar todos os usuários no banco de dados.", ex) { Data = { { "Id", 42 } } };
             }
             finally
             {
                 cn.Close();
             }
         }
-        public void Alterar(Usuario _usuario)
+        public void Alterar(Servico _servico)
         {
             SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
             try
             {
                 SqlCommand cmd = cn.CreateCommand();
-                cmd.CommandText = @"UPDATE Usuario SET Login = @Login, IdProfissional = @IdProfissional, Senha = @Senha 
+                cmd.CommandText = @"UPDATE Servico SET Descricao = @Descricao, Preco = @Preco, Tempo = @Tempo ,  Ativo = @Ativo
                                     WHERE Id = @Id";
                 cmd.CommandType = System.Data.CommandType.Text;
 
-                cmd.Parameters.AddWithValue("@Login", _usuario.Login);
-                cmd.Parameters.AddWithValue("@Senha", _usuario.Senha);
-                cmd.Parameters.AddWithValue("@Id", _usuario.Id);
-                cmd.Parameters.AddWithValue("@IdProfissional", _usuario.IdProfissional);
+                cmd.Parameters.AddWithValue("@Id", _servico.Id);
+                cmd.Parameters.AddWithValue("@Descricao", _servico.Descricao);
+                cmd.Parameters.AddWithValue("@Preco", _servico.Preco);
+                cmd.Parameters.AddWithValue("@Tempo", _servico.Tempo);
+                cmd.Parameters.AddWithValue("@Ativo", _servico.Ativo);
                 cmd.Connection = cn;
                 cn.Open();
 
@@ -137,7 +141,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu erro ao tentar alterar um usuário no banco de dados.", ex);
+                throw new Exception("Ocorreu erro ao tentar alterar um usuário no banco de dados.", ex) { Data = { { "Id", 43 } } }; ;
             }
             finally
             {
@@ -150,7 +154,7 @@ namespace DAL
 
             using (SqlConnection cn = new SqlConnection(Conexao.StringDeConexao))
             {
-                using (SqlCommand cmd = new SqlCommand("DELETE FROM Usuario WHERE Id = @Id", cn))
+                using (SqlCommand cmd = new SqlCommand("DELETE FROM Servico WHERE Id = @Id", cn))
                 {
                     try
                     {
@@ -169,7 +173,7 @@ namespace DAL
                     catch (Exception ex)
                     {
                         transaction.Rollback();
-                        throw new Exception("Ocorreu um erro ao tentar excluir usuário no banco de dados.", ex) { Data = { { "Id", -1 } } };
+                        throw new Exception("Ocorreu um erro ao tentar excluir usuário no banco de dados.", ex) { Data = { { "Id", 44 } } };
                     }
                 }
             }

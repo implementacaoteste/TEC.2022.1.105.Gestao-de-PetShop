@@ -23,6 +23,7 @@ namespace GestaoPetShop
                 MessageBox.Show(ex.Message);
             }
         }
+        
         private void FormPrincipal_Load(object sender, EventArgs e)
         {
             try
@@ -39,6 +40,7 @@ namespace GestaoPetShop
                 MessageBox.Show(ex.Message);
             }
         }
+        
         private void gruposDeUsuáriosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             try
@@ -65,6 +67,15 @@ namespace GestaoPetShop
             {
                 frm.ShowDialog();
             }
+        }
+
+        private void serviçosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (FormConsultaServico frm = new FormConsultaServico())
+            {
+                frm.ShowDialog();
+            }
+
         }
     }
 }
