@@ -16,12 +16,12 @@ namespace DAL
             try
             {
                 SqlCommand cmd = cn.CreateCommand();
-                cmd.CommandText = @"INSERT INTO Usuario(Login, IdProfissional, Senha) 
+                cmd.CommandText = @"INSERT INTO Servico(Descricao, Preco, Tempo,Ativo) 
                                     VALUES(@Login, @IdProfissional, @Senha)";
                 cmd.CommandType = System.Data.CommandType.Text;
 
                 cmd.Parameters.AddWithValue("@Descricao", _servico.Descricao);
-                cmd.Parameters.AddWithValue("@Preco", _servico.Preco);
+                cmd.Parameters.AddWithValue("@Preco",_servico.Preco;
                 cmd.Parameters.AddWithValue("@Tempo", _servico.Tempo);
                 cmd.Parameters.AddWithValue("@Ativo", _servico.Ativo);
 
