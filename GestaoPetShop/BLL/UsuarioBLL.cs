@@ -39,12 +39,12 @@ namespace BLL
         ValidarPermissao(1);
         return new UsuarioDAL().BuscarPorId(_id);
     }
-    //public List<Usuario> BuscarPorLogin(string _login)
-    //{
-    //    ValidarPermissao(1);
-    //    return new UsuarioDAL().BuscarPorLogin(_login);
-    //}
-    private void ValidarDados(Usuario _usuario, string _confirmacaoDeSenha)
+        public List<Usuario> BuscarPorLogin(string _login)
+        {
+            ValidarPermissao(1);
+            return new UsuarioDAL().BuscarPorLogin(_login);
+        }
+        private void ValidarDados(Usuario _usuario, string _confirmacaoDeSenha)
         {
             if (_usuario.Senha != _confirmacaoDeSenha)
                 throw new Exception("A senha e a confirmação da senha devem ser iguais.");
@@ -57,15 +57,15 @@ namespace BLL
         }
         public void ValidarPermissao(int _idPermissao)
         {
-            //if (!new UsuarioDAL().ValidarPermissao(Constantes.IdUsuarioLogado, _idPermissao))
+            if (!new UsuarioDAL().ValidarPermissao(Constantes.IdUsuarioLogado, _idPermissao))
                 throw new Exception("Você não tem permissão de realizar essa operação. Procure o administrador do sistema.");
         }
         public void Altenticar(string _nomeUsuario, string _senha)
         {
-            //Usuario usuario = new UsuarioDAL().BuscarPorNomeUsuario(_nomeUsuario);
-            //if (_senha == usuario.Senha && usuario.Ativo)
-            //    Constantes.IdUsuarioLogado = usuario.Id;
-            //else
+            Usuario usuario = new UsuarioDAL().BuscarPorNomeUsuario(_nomeUsuario);
+            if (_senha == usuario.Senha && usuario.Ativo)
+                Constantes.IdUsuarioLogado = usuario.Id;
+            else
                 throw new Exception("Usuario ou senha inválido.");
         }
     }
