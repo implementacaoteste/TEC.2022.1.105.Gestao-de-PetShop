@@ -51,7 +51,7 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = "SELECT Id,Descricao, Preco, Tempo, Ativo FROM Servico";
+                cmd.CommandText = @"SELECT Id,Descricao, Preco, Tempo, Ativo FROM Servico";
                 cmd.CommandType = System.Data.CommandType.Text;
 
                 cn.Open();
@@ -66,6 +66,7 @@ namespace DAL
                         servico.Preco = Convert.ToDecimal(rd["Preco"]);
                         servico.Tempo = Convert.ToInt32(rd["Tempo"]);
                         servico.Ativo = Convert.ToBoolean(rd["Ativo"]);
+
                         servicos.Add(servico);
                     }
                 }
@@ -89,7 +90,7 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT Id, Descrico,Preco, Tempo, Ativo FROM Servico 
+                cmd.CommandText = @"SELECT Id, Descricao,Preco, Tempo, Ativo FROM Servico 
                                     WHERE Id = @Id";
                 cmd.CommandType = System.Data.CommandType.Text;
 
