@@ -20,18 +20,22 @@ namespace GestaoPetShop
 
         private void button_BucarServico_Click(object sender, EventArgs e)
         {
-            ServicoBLL servicoBLL = new ServicoBLL();
+           
             try
             {
-              
+                ServicoBLL servicoBLL = new ServicoBLL();
                 if (comboBox_EscolhaBuscarServico.SelectedIndex == 0)
                 {
+                 
                     servicoBindingSource.DataSource = servicoBLL.BuscarTodos();
                 }
+
                 if (comboBox_EscolhaBuscarServico.SelectedIndex == 1)
                 {
-                    int id = Convert.ToInt32(textBox_BuscarServico.Text);
-                    servicoBindingSource.DataSource = servicoBLL.BuscarPorId(id);
+                    
+                    
+                    servicoBindingSource.DataSource = servicoBLL.BuscarPorId(Convert.ToInt32(textBox_BuscarServico.Text));
+                    
                 }
 
             }

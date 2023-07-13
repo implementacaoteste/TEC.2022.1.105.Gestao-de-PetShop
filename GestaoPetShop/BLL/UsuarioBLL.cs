@@ -42,7 +42,8 @@ namespace BLL
         public List<Usuario> BuscarPorLogin(string _login)
         {
             ValidarPermissao(1);
-            return new UsuarioDAL().BuscarPorLogin(_login);
+            //  return new UsuarioDAL().BuscarPorLogin(_login);
+            throw new NotImplementedException();// COLOQUEI SO PARA NAO DÁ ERRO
         }
         private void ValidarDados(Usuario _usuario, string _confirmacaoDeSenha)
         {
@@ -57,16 +58,21 @@ namespace BLL
         }
         public void ValidarPermissao(int _idPermissao)
         {
-            if (!new UsuarioDAL().ValidarPermissao(Constantes.IdUsuarioLogado, _idPermissao))
+           // if (!new UsuarioDAL().ValidarPermissao(Constantes.IdUsuarioLogado, _idPermissao))
                 throw new Exception("Você não tem permissão de realizar essa operação. Procure o administrador do sistema.");
         }
         public void Altenticar(string _nomeUsuario, string _senha)
         {
-            Usuario usuario = new UsuarioDAL().BuscarPorNomeUsuario(_nomeUsuario);
-            if (_senha == usuario.Senha && usuario.Ativo)
-                Constantes.IdUsuarioLogado = usuario.Id;
-            else
+           // Usuario usuario = new UsuarioDAL().BuscarPorNomeUsuario(_nomeUsuario);
+            //if (_senha == usuario.Senha && usuario.Ativo)
+            //    Constantes.IdUsuarioLogado = usuario.Id;
+            //else
                 throw new Exception("Usuario ou senha inválido.");
+        }
+
+        public void RemoverGrupoUsuario(int idUsuario, int idGrupoUsuario)
+        {
+            throw new NotImplementedException();
         }
     }
 }

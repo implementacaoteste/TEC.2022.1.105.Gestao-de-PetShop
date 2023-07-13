@@ -25,7 +25,7 @@ namespace GestaoPetShop
         {
             try
             {
-                new UsuarioBLL().Altenticar(textBoxUsuario.Text, textBoxSenha.Text);
+                //new UsuarioBLL().Altenticar(textBoxUsuario.Text, textBoxSenha.Text);
                 Logou = true;
                 Close();
             }
@@ -52,6 +52,6 @@ namespace GestaoPetShop
             if (e.KeyCode == Keys.Enter)
                 buttonEntrar_Click(null, null);
         }
-        
+
     }
 }

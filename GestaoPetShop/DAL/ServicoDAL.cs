@@ -90,7 +90,7 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT Id, Descricao,Preco, Tempo, Ativo FROM Servico 
+                cmd.CommandText = @"SELECT Id, Descricao FROM Servico 
                                     WHERE Id = @Id";
                 cmd.CommandType = System.Data.CommandType.Text;
 

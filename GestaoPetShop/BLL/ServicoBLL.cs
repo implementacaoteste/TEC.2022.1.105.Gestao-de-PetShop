@@ -23,8 +23,18 @@ namespace BLL
         }
         public Servico BuscarPorId(int _id)
         {
-            ServicoDAL servicoDAL = new ServicoDAL();
-            return servicoDAL.BuscarPorId(_id);
+           
+            try
+            {
+                ServicoDAL servicoDAL = new ServicoDAL();
+                return servicoDAL.BuscarPorId(_id);
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception("Ocorreu um erro ao tentar buscar todos os Serviços no banco de dados treta.", ex) { Data = { { "Id", 45 } } };
+            }
+
         }
         public void Alterar(Servico _servico)
         {

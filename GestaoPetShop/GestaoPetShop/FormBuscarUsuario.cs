@@ -96,7 +96,7 @@ namespace GestaoPetShop
                     if (frm.Id != 0)
                     {
                         int idUsuario = ((Usuario)usuarioBindingSource.Current).Id;
-                        new UsuarioBLL().AdicionarGrupoUsuario(idUsuario, frm.Id);
+                      //  new UsuarioBLL().AdicionarGrupoUsuario(idUsuario, frm.Id);
                     }
                 }
                 buttonBuscar_Click(null, null);
