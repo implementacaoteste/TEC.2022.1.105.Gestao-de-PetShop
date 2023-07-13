@@ -96,7 +96,7 @@ namespace GestaoPetShop
                     if (frm.Id != 0)
                     {
                         int idUsuario = ((Usuario)usuarioBindingSource.Current).Id;
-                        //new UsuarioBLL().AdicionarGrupoUsuario(idUsuario, frm.Id);
+                        new UsuarioBLL().AdicionarGrupoUsuario(idUsuario, frm.Id);
                     }
                 }
                 buttonBuscar_Click(null, null);
@@ -116,7 +116,7 @@ namespace GestaoPetShop
 
                 int idGrupoUsuario = ((GrupoUsuario)grupoUsuariosBindingSource.Current).Id;
                 int idUsuario = ((Usuario)usuarioBindingSource.Current).Id;
-                //new UsuarioBLL().RemoverGrupoUsuario(idUsuario, idGrupoUsuario);
+                new UsuarioBLL().RemoverGrupoUsuario(idUsuario, idGrupoUsuario);
                 grupoUsuariosBindingSource.RemoveCurrent();
             }
             catch (Exception ex)

@@ -23,16 +23,16 @@ namespace GestaoPetShop
         
         private void buttonEntrar_Click(object sender, EventArgs e)
         {
-            //try
-            //{
+            try
+            {
                 new UsuarioBLL().Altenticar(textBoxUsuario.Text, textBoxSenha.Text);
                 Logou = true;
                 Close();
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show(ex.Message);
-            //}
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void FormLogin_KeyDown(object sender, KeyEventArgs e)
