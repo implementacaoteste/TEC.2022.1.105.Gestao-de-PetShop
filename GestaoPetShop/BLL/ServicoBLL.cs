@@ -19,22 +19,36 @@ namespace BLL
         public List<Servico> BuscarTodos()
         {
             ServicoDAL servicoDAL = new ServicoDAL();
-            return servicoDAL.BuscarTodos();
+            List<Servico> servicos = servicoDAL.BuscarTodos();
+            if(servicos.Count == 0)
+            {
+                throw new Exception("Não tem serviço cadastrado");
+            }
+            return servicos;
         }
         public Servico BuscarPorId(int _id)
         {
            
-            try
-            {
+           
                 ServicoDAL servicoDAL = new ServicoDAL();
-                return servicoDAL.BuscarPorId(_id);
-            }
-            catch (Exception ex)
+                Servico servico = servicoDAL.BuscarPorId(_id);
+                if (servico.Id == 0)
+                {
+                    throw new Exception("Serviço não encontrado");
+                }
+
+                return servico;
+        }
+        public List<Servico> BuscarPorNome(string _nome)
+        {
+            ServicoDAL servicoDAL = new ServicoDAL();
+           
+            List<Servico> servicos = servicoDAL.BuscarPorNome(_nome);
+            if (servicos.Count == 0)
             {
-
-                throw new Exception("Ocorreu um erro ao tentar buscar todos os Serviços no banco de dados treta.", ex) { Data = { { "Id", 45 } } };
+                throw new Exception("Serviço não encontrado");
             }
-
+            return servicos;
         }
         public void Alterar(Servico _servico)
         {
@@ -47,5 +61,6 @@ namespace BLL
             servicoDAL.Excluir(_id);
         }
 
+       
     }
 }

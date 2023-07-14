@@ -90,7 +90,7 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT Id, Descricao FROM Servico 
+                cmd.CommandText = @"SELECT Id, Descricao, Preco, Tempo, Ativo FROM Servico 
                                     WHERE Id = @Id";
                 cmd.CommandType = System.Data.CommandType.Text;
 
@@ -113,13 +113,54 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu um erro ao tentar buscar todos os usuários no banco de dados.", ex) { Data = { { "Id", 42 } } };
+                throw new Exception("Ocorreu um erro ao tentar buscar todos os usuários no banco de dados ggggggg.", ex) { Data = { { "Id", 42 } } };
             }
             finally
             {
                 cn.Close();
             }
         }
+        public List<Servico> BuscarPorNome(string _nome)
+        {
+            List<Servico> servicos = new List<Servico>();
+            Servico servico;
+
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = cn;
+                cmd.CommandText = @"SELECT Id,Descricao, Preco, Tempo, Ativo FROM Servico WHERE UPPER (Descricao) LIKE UPPER (@Descricao)";
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.Parameters.AddWithValue("@Descricao", "%" + _nome + "%");
+                cn.Open();
+
+                using (SqlDataReader rd = cmd.ExecuteReader())
+                {
+                    while (rd.Read())
+                    {
+                        servico = new Servico();
+                        servico.Id = Convert.ToInt32(rd["Id"]);
+                        servico.Descricao = rd["Descricao"].ToString();
+                        servico.Preco = Convert.ToDecimal(rd["Preco"]);
+                        servico.Tempo = Convert.ToInt32(rd["Tempo"]);
+                        servico.Ativo = Convert.ToBoolean(rd["Ativo"]);
+
+                        servicos.Add(servico);
+                    }
+                }
+                return servicos;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu um erro ao tentar buscar todos os Serviços no banco de dados.", ex) { Data = { { "Id", 41 } } };
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
+
         public void Alterar(Servico _servico)
         {
             SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
@@ -179,5 +220,7 @@ namespace DAL
                 }
             }
         }
+
+        
     }
 }
