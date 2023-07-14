@@ -30,18 +30,18 @@
         {
             this.components = new System.ComponentModel.Container();
             this.servicoDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Preco = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Tempo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Ativo = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.servicoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.comboBox_EscolhaBuscarServico = new System.Windows.Forms.ComboBox();
             this.textBox_BuscarServico = new System.Windows.Forms.TextBox();
             this.button_BucarServico = new System.Windows.Forms.Button();
             this.button_InserirServico = new System.Windows.Forms.Button();
             this.button_AlterarServico = new System.Windows.Forms.Button();
             this.button_ExcluirServico = new System.Windows.Forms.Button();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.servicoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.servicoDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.servicoBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -67,6 +67,22 @@
             this.servicoDataGridView.Size = new System.Drawing.Size(759, 252);
             this.servicoDataGridView.TabIndex = 3;
             // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Id";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 60;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Descricao";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Descrição";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
             // Preco
             // 
             this.Preco.DataPropertyName = "Preco";
@@ -88,6 +104,10 @@
             this.Ativo.Name = "Ativo";
             this.Ativo.ReadOnly = true;
             this.Ativo.Width = 60;
+            // 
+            // servicoBindingSource
+            // 
+            this.servicoBindingSource.DataSource = typeof(Models.Servico);
             // 
             // comboBox_EscolhaBuscarServico
             // 
@@ -147,26 +167,7 @@
             this.button_ExcluirServico.TabIndex = 9;
             this.button_ExcluirServico.Text = "Excluir";
             this.button_ExcluirServico.UseVisualStyleBackColor = true;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Id";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 60;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "Descricao";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Descrição";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // servicoBindingSource
-            // 
-            this.servicoBindingSource.DataSource = typeof(Models.Servico);
+            this.button_ExcluirServico.Click += new System.EventHandler(this.button_ExcluirServico_Click);
             // 
             // FormConsultaServico
             // 

@@ -105,5 +105,28 @@ namespace GestaoPetShop
 
 
         }
+
+        private void button_ExcluirServico_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (servicoBindingSource.Count <= 0)
+                {
+                    MessageBox.Show("Não existe registro selecionado para ser excluído");
+                    return;
+                }
+
+                if (MessageBox.Show("Deseja realmente excluir este registro?", "Atenção", MessageBoxButtons.YesNo) == DialogResult.No)
+                    return;
+
+                int id = ((Servico)servicoBindingSource.Current).Id;
+                new ServicoBLL().Excluir(id);
+                servicoBindingSource.RemoveCurrent();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }

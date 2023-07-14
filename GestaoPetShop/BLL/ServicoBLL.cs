@@ -55,7 +55,7 @@ namespace BLL
             ServicoDAL servicoDAL = new ServicoDAL();
             servicoDAL.Alterar(_servico);
         }
-        public void Excluir(int _id, SqlTransaction _transaction = null)
+        public void Excluir(int _id)
         {
             ServicoDAL servicoDAL = new ServicoDAL();
             servicoDAL.Excluir(_id);
