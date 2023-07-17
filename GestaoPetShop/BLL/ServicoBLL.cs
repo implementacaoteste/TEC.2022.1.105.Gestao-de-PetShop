@@ -57,10 +57,20 @@ namespace BLL
         }
         public void Excluir(int _id)
         {
+            if(new ServicoBLL().ExisteVinculo(_id))
+            {
+                throw new Exception("Este Serviço foi utilizado em agendamento. Deve ser excluído primeiro o registro em agendamento.");
+            }
             ServicoDAL servicoDAL = new ServicoDAL();
             servicoDAL.Excluir(_id);
         }
 
-       
+        public bool ExisteVinculo(int _id)
+        {
+            ServicoDAL servicoDAL = new ServicoDAL();
+            return servicoDAL.ExisteVinculo(_id);
+        }
+
+
     }
 }

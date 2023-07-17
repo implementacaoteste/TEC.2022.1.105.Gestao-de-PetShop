@@ -305,7 +305,7 @@ insert into Servico(Descricao,Preco,Tempo,Ativo) values ('Levar DriverTur',10.00
 --select *from AgendamentoServicos
 --cadastro de Agendamento / Servicos
 
-insert into AgendamentoServicos(IdAgendamento,IdServico,Quantidade,ValorUnitario) values (1,2,1,30.00);
+insert into AgendamentoServicos(IdAgendamento,IdServico,Quantidade,ValorUnitario) values (9,2,1,30.00);
 
 SELECT dbo.Cliente.Nome, dbo.Agendamento.IdSituacao, dbo.Animal.Nome AS Animal, dbo.Servico.Descricao, dbo.AgendamentoServicos.Quantidade, dbo.AgendamentoServicos.ValorUnitario, dbo.Agendamento.Total
 	FROM dbo.Agendamento	INNER JOIN dbo.AgendamentoServicos ON dbo.Agendamento.Id = dbo.AgendamentoServicos.IdAgendamento 
