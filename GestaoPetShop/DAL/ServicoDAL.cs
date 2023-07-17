@@ -190,34 +190,29 @@ namespace DAL
                 cn.Close();
             }
         }
-        public void Excluir(int _id, SqlTransaction _transaction = null)
+        public void Excluir(int _id)
         {
-            SqlTransaction transaction = _transaction;
 
-            using (SqlConnection cn = new SqlConnection(Conexao.StringDeConexao))
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            try
             {
-                using (SqlCommand cmd = new SqlCommand("DELETE FROM Servico WHERE Id = @Id", cn))
-                {
-                    try
-                    {
-                        cmd.CommandType = System.Data.CommandType.Text;
-                        cmd.Parameters.AddWithValue("@Id", _id);
-                        if (_transaction == null)
-                        {
-                            cn.Open();
-                            transaction = cn.BeginTransaction();
-                        }
-                        cmd.Transaction = transaction;
-                        cmd.Connection = transaction.Connection;
-                        if (_transaction == null)
-                            transaction.Commit();
-                    }
-                    catch (Exception ex)
-                    {
-                        transaction.Rollback();
-                        throw new Exception("Ocorreu um erro ao tentar excluir usuário no banco de dados.", ex) { Data = { { "Id", 44 } } };
-                    }
-                }
+                SqlCommand cmd = cn.CreateCommand();
+                cmd.CommandText = @"DELETE FROM Servico WHERE Id = @Id";
+                cmd.CommandType = System.Data.CommandType.Text;
+
+                cmd.Parameters.AddWithValue("@Id",_id);
+                
+                cmd.Connection = cn;
+                cn.Open();
+
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception("Ocorreu um erro ao tentar excluir usuário no banco de dados.", ex) { Data = { { "Id", 44 } } };
+                    
+                
             }
         }
 
