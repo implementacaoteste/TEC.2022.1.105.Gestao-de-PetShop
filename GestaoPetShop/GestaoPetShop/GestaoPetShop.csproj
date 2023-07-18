@@ -196,5 +196,26 @@
       <Name>Models</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2023-07-14 at 21.35.00.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pexels-snapwire-46024.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\01.pata.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\02.pata.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\03.gatocahorro.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\04.pata_pretoEbranco.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\04.WhatsApp Image 2023-07-14 at 21.24.30.jpeg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
