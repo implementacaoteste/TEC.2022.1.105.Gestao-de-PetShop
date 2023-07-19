@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -71,6 +72,10 @@ namespace BLL
             return servicoDAL.ExisteVinculo(_id);
         }
 
-
+        public List<DataGridView1_FormsPrincipal> dataGridView(string _date)
+        {
+            ServicoDAL servicoDAL = new ServicoDAL();
+            return servicoDAL.dataGridView(_date);
+        }
     }
 }

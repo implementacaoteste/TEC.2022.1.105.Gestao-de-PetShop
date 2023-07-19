@@ -1,4 +1,7 @@
-﻿using System;
+﻿using BLL;
+using Models;
+using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace GestaoPetShop
@@ -26,6 +29,8 @@ namespace GestaoPetShop
         
         private void FormPrincipal_Load(object sender, EventArgs e)
         {
+            dataGridView1_Agendamentos.DataSource = new DataGridView1_FormsPrincipal();
+           
             try
             {
                 using (FormLogin frm = new FormLogin())
@@ -76,6 +81,23 @@ namespace GestaoPetShop
                 frm.ShowDialog();
             }
 
+        }
+
+        private void button_BuscarAgendamento_Click(object sender, EventArgs e)
+        {
+            string dataag = monthCalendar1.SelectionStart.ToShortDateString();
+          
+            dataGridView1_Agendamentos.DataSource = new ServicoBLL().dataGridView(dataag);
+
+          
+            dataGridView1_Agendamentos.Visible = true;
+            button1_FecharViewAgendamento.Visible = true;
+        }
+
+        private void button1_FecharViewAgendamento_Click(object sender, EventArgs e)
+        {
+            dataGridView1_Agendamentos.Visible = false;
+            button1_FecharViewAgendamento.Visible = false;
         }
     }
 }
