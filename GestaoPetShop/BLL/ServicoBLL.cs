@@ -72,10 +72,10 @@ namespace BLL
             return servicoDAL.ExisteVinculo(_id);
         }
 
-        public List<DataGridView1_FormsPrincipal> dataGridView(string _date)
-        {
-            ServicoDAL servicoDAL = new ServicoDAL();
-            return servicoDAL.dataGridView(_date);
-        }
+        //public List<DataGridView1_FormsPrincipal> dataGridView(string _date)
+        //{
+        //    ServicoDAL servicoDAL = new ServicoDAL();
+        //    return servicoDAL.dataGridView(_date);
+        //}
     }
 }
