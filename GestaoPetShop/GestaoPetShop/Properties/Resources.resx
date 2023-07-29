@@ -124,6 +124,9 @@
   <data name="01.pata" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\01.pata.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="04.WhatsApp Image 2023-07-14 at 21.24.30" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\04.WhatsApp Image 2023-07-14 at 21.24.30.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="02.pata" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\02.pata.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -136,7 +139,7 @@
   <data name="pexels-snapwire-46024" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pexels-snapwire-46024.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="04.WhatsApp Image 2023-07-14 at 21.24.30" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\04.WhatsApp Image 2023-07-14 at 21.24.30.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="pata" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pata.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

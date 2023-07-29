@@ -36,6 +36,7 @@
             this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.serviçosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridView1FormsPrincipalBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.agendamentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1FormsPrincipalBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -58,7 +59,8 @@
             this.usuáriosToolStripMenuItem,
             this.gruposDeUsuáriosToolStripMenuItem,
             this.clientesToolStripMenuItem,
-            this.serviçosToolStripMenuItem});
+            this.serviçosToolStripMenuItem,
+            this.agendamentoToolStripMenuItem});
             this.cadastroToolStripMenuItem.Name = "cadastroToolStripMenuItem";
             this.cadastroToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
             this.cadastroToolStripMenuItem.Text = "Cadastro";
@@ -92,6 +94,13 @@
             this.serviçosToolStripMenuItem.Size = new System.Drawing.Size(217, 22);
             this.serviçosToolStripMenuItem.Text = "Serviços";
             this.serviçosToolStripMenuItem.Click += new System.EventHandler(this.serviçosToolStripMenuItem_Click);
+            // 
+            // agendamentoToolStripMenuItem
+            // 
+            this.agendamentoToolStripMenuItem.Name = "agendamentoToolStripMenuItem";
+            this.agendamentoToolStripMenuItem.Size = new System.Drawing.Size(217, 22);
+            this.agendamentoToolStripMenuItem.Text = "Agendamento";
+            this.agendamentoToolStripMenuItem.Click += new System.EventHandler(this.agendamentoToolStripMenuItem_Click);
             // 
             // FormPrincipal
             // 
@@ -131,6 +140,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn profissionalDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn telClienteDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource dataGridView1FormsPrincipalBindingSource;
+        private System.Windows.Forms.ToolStripMenuItem agendamentoToolStripMenuItem;
     }
 }
 

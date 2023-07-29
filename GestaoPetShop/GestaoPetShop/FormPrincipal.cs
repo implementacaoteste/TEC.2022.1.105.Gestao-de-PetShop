@@ -82,24 +82,32 @@ namespace GestaoPetShop
             }
 
         }
+
+        private void agendamentoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (frmCadastroAgendamento frm = new frmCadastroAgendamento())
+            {
+                frm.ShowDialog();
+            }
+        }
         /* ERA APENAS UM TESTE - DEIXEI AQUI SÓ PRA LEMBRAR
-        //private void button_BuscarAgendamento_Click(object sender, EventArgs e)
-        //{
-        //    string dataag = monthCalendar1.SelectionStart.ToShortDateString();
+//private void button_BuscarAgendamento_Click(object sender, EventArgs e)
+//{
+//    string dataag = monthCalendar1.SelectionStart.ToShortDateString();
 
-        //    dataGridView1_Agendamentos.DataSource = new ServicoBLL().dataGridView(dataag);
+//    dataGridView1_Agendamentos.DataSource = new ServicoBLL().dataGridView(dataag);
 
 
 
-        //    dataGridView1_Agendamentos.Visible = true;
-        //    button1_FecharViewAgendamento.Visible = true;
-        //}
+//    dataGridView1_Agendamentos.Visible = true;
+//    button1_FecharViewAgendamento.Visible = true;
+//}
 
-        //private void button1_FecharViewAgendamento_Click(object sender, EventArgs e)
-        //{
-        //    dataGridView1_Agendamentos.Visible = false;
-        //    button1_FecharViewAgendamento.Visible = false;
-        //}
-        */
+//private void button1_FecharViewAgendamento_Click(object sender, EventArgs e)
+//{
+//    dataGridView1_Agendamentos.Visible = false;
+//    button1_FecharViewAgendamento.Visible = false;
+//}
+*/
     }
 }

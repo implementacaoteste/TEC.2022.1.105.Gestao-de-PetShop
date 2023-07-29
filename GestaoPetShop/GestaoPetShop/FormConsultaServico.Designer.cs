@@ -32,11 +32,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.comboBox_EscolhaBuscarServico = new System.Windows.Forms.ComboBox();
             this.textBox_BuscarServico = new System.Windows.Forms.TextBox();
-            this.button_BucarServico = new System.Windows.Forms.Button();
-            this.button_InserirServico = new System.Windows.Forms.Button();
-            this.button_AlterarServico = new System.Windows.Forms.Button();
-            this.button_ExcluirServico = new System.Windows.Forms.Button();
-            this.servicoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.servicoDataGridView = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -48,8 +43,13 @@
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.servicoBindingSource)).BeginInit();
+            this.servicoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.button_ExcluirServico = new System.Windows.Forms.Button();
+            this.button_AlterarServico = new System.Windows.Forms.Button();
+            this.button_InserirServico = new System.Windows.Forms.Button();
+            this.button_BucarServico = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.servicoDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.servicoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // comboBox_EscolhaBuscarServico
@@ -73,50 +73,6 @@
             this.textBox_BuscarServico.Name = "textBox_BuscarServico";
             this.textBox_BuscarServico.Size = new System.Drawing.Size(507, 26);
             this.textBox_BuscarServico.TabIndex = 5;
-            // 
-            // button_BucarServico
-            // 
-            this.button_BucarServico.Image = global::GestaoPetShop.Properties.Resources._04_pata_pretoEbranco;
-            this.button_BucarServico.Location = new System.Drawing.Point(687, 93);
-            this.button_BucarServico.Name = "button_BucarServico";
-            this.button_BucarServico.Size = new System.Drawing.Size(80, 84);
-            this.button_BucarServico.TabIndex = 6;
-            this.button_BucarServico.UseVisualStyleBackColor = true;
-            this.button_BucarServico.Click += new System.EventHandler(this.button_BucarServico_Click);
-            // 
-            // button_InserirServico
-            // 
-            this.button_InserirServico.Image = global::GestaoPetShop.Properties.Resources._04_pata_pretoEbranco;
-            this.button_InserirServico.Location = new System.Drawing.Point(687, 218);
-            this.button_InserirServico.Name = "button_InserirServico";
-            this.button_InserirServico.Size = new System.Drawing.Size(80, 84);
-            this.button_InserirServico.TabIndex = 7;
-            this.button_InserirServico.UseVisualStyleBackColor = true;
-            this.button_InserirServico.Click += new System.EventHandler(this.button_InserirServico_Click);
-            // 
-            // button_AlterarServico
-            // 
-            this.button_AlterarServico.Image = global::GestaoPetShop.Properties.Resources._04_pata_pretoEbranco;
-            this.button_AlterarServico.Location = new System.Drawing.Point(687, 340);
-            this.button_AlterarServico.Name = "button_AlterarServico";
-            this.button_AlterarServico.Size = new System.Drawing.Size(80, 84);
-            this.button_AlterarServico.TabIndex = 8;
-            this.button_AlterarServico.UseVisualStyleBackColor = true;
-            this.button_AlterarServico.Click += new System.EventHandler(this.button_AlterarServico_Click);
-            // 
-            // button_ExcluirServico
-            // 
-            this.button_ExcluirServico.Image = global::GestaoPetShop.Properties.Resources._04_pata_pretoEbranco;
-            this.button_ExcluirServico.Location = new System.Drawing.Point(687, 465);
-            this.button_ExcluirServico.Name = "button_ExcluirServico";
-            this.button_ExcluirServico.Size = new System.Drawing.Size(80, 84);
-            this.button_ExcluirServico.TabIndex = 9;
-            this.button_ExcluirServico.UseVisualStyleBackColor = true;
-            this.button_ExcluirServico.Click += new System.EventHandler(this.button_ExcluirServico_Click);
-            // 
-            // servicoBindingSource
-            // 
-            this.servicoBindingSource.DataSource = typeof(Models.Servico);
             // 
             // servicoDataGridView
             // 
@@ -239,6 +195,50 @@
             this.dataGridViewCheckBoxColumn1.ReadOnly = true;
             this.dataGridViewCheckBoxColumn1.Width = 60;
             // 
+            // servicoBindingSource
+            // 
+            this.servicoBindingSource.DataSource = typeof(Models.Servico);
+            // 
+            // button_ExcluirServico
+            // 
+            this.button_ExcluirServico.Image = global::GestaoPetShop.Properties.Resources._04_pata_pretoEbranco;
+            this.button_ExcluirServico.Location = new System.Drawing.Point(687, 465);
+            this.button_ExcluirServico.Name = "button_ExcluirServico";
+            this.button_ExcluirServico.Size = new System.Drawing.Size(80, 84);
+            this.button_ExcluirServico.TabIndex = 9;
+            this.button_ExcluirServico.UseVisualStyleBackColor = true;
+            this.button_ExcluirServico.Click += new System.EventHandler(this.button_ExcluirServico_Click);
+            // 
+            // button_AlterarServico
+            // 
+            this.button_AlterarServico.Image = global::GestaoPetShop.Properties.Resources._04_pata_pretoEbranco;
+            this.button_AlterarServico.Location = new System.Drawing.Point(687, 340);
+            this.button_AlterarServico.Name = "button_AlterarServico";
+            this.button_AlterarServico.Size = new System.Drawing.Size(80, 84);
+            this.button_AlterarServico.TabIndex = 8;
+            this.button_AlterarServico.UseVisualStyleBackColor = true;
+            this.button_AlterarServico.Click += new System.EventHandler(this.button_AlterarServico_Click);
+            // 
+            // button_InserirServico
+            // 
+            this.button_InserirServico.Image = global::GestaoPetShop.Properties.Resources._04_pata_pretoEbranco;
+            this.button_InserirServico.Location = new System.Drawing.Point(687, 218);
+            this.button_InserirServico.Name = "button_InserirServico";
+            this.button_InserirServico.Size = new System.Drawing.Size(80, 84);
+            this.button_InserirServico.TabIndex = 7;
+            this.button_InserirServico.UseVisualStyleBackColor = true;
+            this.button_InserirServico.Click += new System.EventHandler(this.button_InserirServico_Click);
+            // 
+            // button_BucarServico
+            // 
+            this.button_BucarServico.Image = global::GestaoPetShop.Properties.Resources._04_pata_pretoEbranco;
+            this.button_BucarServico.Location = new System.Drawing.Point(687, 93);
+            this.button_BucarServico.Name = "button_BucarServico";
+            this.button_BucarServico.Size = new System.Drawing.Size(80, 84);
+            this.button_BucarServico.TabIndex = 6;
+            this.button_BucarServico.UseVisualStyleBackColor = true;
+            this.button_BucarServico.Click += new System.EventHandler(this.button_BucarServico_Click);
+            // 
             // FormConsultaServico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -261,8 +261,8 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consulta de Serviço";
-            ((System.ComponentModel.ISupportInitialize)(this.servicoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.servicoDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.servicoBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
