@@ -39,9 +39,9 @@
             System.Windows.Forms.Label ativoLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadastroAgendamento));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.idTextBox = new System.Windows.Forms.TextBox();
             this.agendamentoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.petshopDataSet = new GestaoPetShop.petshopDataSet();
-            this.idTextBox = new System.Windows.Forms.TextBox();
             this.idAnimalComboBox = new System.Windows.Forms.ComboBox();
             this.idProfissionalComboBox = new System.Windows.Forms.ComboBox();
             this.idSituacaoComboBox = new System.Windows.Forms.ComboBox();
@@ -62,6 +62,8 @@
             this.btnCancelar = new System.Windows.Forms.PictureBox();
             this.btnSalvar = new System.Windows.Forms.PictureBox();
             this.btnPrimeiro = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
             idLabel = new System.Windows.Forms.Label();
             idAnimalLabel = new System.Windows.Forms.Label();
             idProfissionalLabel = new System.Windows.Forms.Label();
@@ -82,6 +84,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnCancelar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalvar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnPrimeiro)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // idLabel
@@ -158,6 +161,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(idLabel);
             this.groupBox1.Controls.Add(this.idTextBox);
             this.groupBox1.Controls.Add(idAnimalLabel);
@@ -181,6 +185,14 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dados de Agendamento";
             // 
+            // idTextBox
+            // 
+            this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agendamentoBindingSource, "Id", true));
+            this.idTextBox.Location = new System.Drawing.Point(88, 19);
+            this.idTextBox.Name = "idTextBox";
+            this.idTextBox.Size = new System.Drawing.Size(121, 20);
+            this.idTextBox.TabIndex = 1;
+            // 
             // agendamentoBindingSource
             // 
             this.agendamentoBindingSource.DataMember = "Agendamento";
@@ -190,14 +202,6 @@
             // 
             this.petshopDataSet.DataSetName = "petshopDataSet";
             this.petshopDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // idTextBox
-            // 
-            this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agendamentoBindingSource, "Id", true));
-            this.idTextBox.Location = new System.Drawing.Point(88, 19);
-            this.idTextBox.Name = "idTextBox";
-            this.idTextBox.Size = new System.Drawing.Size(121, 20);
-            this.idTextBox.TabIndex = 1;
             // 
             // idAnimalComboBox
             // 
@@ -323,6 +327,7 @@
             this.btnAnterior.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnAnterior.TabIndex = 2;
             this.btnAnterior.TabStop = false;
+            this.btnAnterior.Click += new System.EventHandler(this.btnAnterior_Click);
             // 
             // btnPosterior
             // 
@@ -333,6 +338,7 @@
             this.btnPosterior.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnPosterior.TabIndex = 2;
             this.btnPosterior.TabStop = false;
+            this.btnPosterior.Click += new System.EventHandler(this.btnPosterior_Click);
             // 
             // btnUltimo
             // 
@@ -343,6 +349,7 @@
             this.btnUltimo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnUltimo.TabIndex = 2;
             this.btnUltimo.TabStop = false;
+            this.btnUltimo.Click += new System.EventHandler(this.btnUltimo_Click);
             // 
             // btnExcluir
             // 
@@ -353,6 +360,7 @@
             this.btnExcluir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnExcluir.TabIndex = 2;
             this.btnExcluir.TabStop = false;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnCancelar
             // 
@@ -363,6 +371,7 @@
             this.btnCancelar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnCancelar.TabIndex = 2;
             this.btnCancelar.TabStop = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnSalvar
             // 
@@ -373,6 +382,7 @@
             this.btnSalvar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnSalvar.TabIndex = 2;
             this.btnSalvar.TabStop = false;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // btnPrimeiro
             // 
@@ -383,6 +393,27 @@
             this.btnPrimeiro.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnPrimeiro.TabIndex = 2;
             this.btnPrimeiro.TabStop = false;
+            this.btnPrimeiro.Click += new System.EventHandler(this.btnPrimeiro_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(396, 13);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(42, 31);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(215, 155);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(43, 13);
+            this.label2.TabIndex = 17;
+            this.label2.Text = "minutos";
             // 
             // frmCadastroAgendamento
             // 
@@ -393,6 +424,7 @@
             this.Controls.Add(this.btnPosterior);
             this.Controls.Add(this.btnAnterior);
             this.Controls.Add(this.btnPrimeiro);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnExcluir);
@@ -414,6 +446,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnCancelar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalvar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnPrimeiro)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -444,5 +477,7 @@
         private System.Windows.Forms.PictureBox btnCancelar;
         private System.Windows.Forms.PictureBox btnSalvar;
         private System.Windows.Forms.PictureBox btnPrimeiro;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label2;
     }
 }
