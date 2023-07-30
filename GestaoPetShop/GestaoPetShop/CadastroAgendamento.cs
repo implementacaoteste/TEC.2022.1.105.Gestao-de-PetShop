@@ -85,5 +85,14 @@ namespace GestaoPetShop
                 MessageBox.Show("Ocorreu um erro, verifique os valores informados");
             }
         }
+
+        private void frmCadastroAgendamento_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'petshopDataSet.Profissional' table. You can move, or remove it, as needed.
+            this.profissionalTableAdapter.Fill(this.petshopDataSet.Profissional);
+            agendamentoTableAdapter.Fill(petshopDataSet.Agendamento);
+            animalTableAdapter.Fill(petshopDataSet.Animal);
+
+        }
     }
 }

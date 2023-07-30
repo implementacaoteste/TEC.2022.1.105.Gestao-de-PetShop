@@ -90,6 +90,16 @@ namespace GestaoPetShop
                 frm.ShowDialog();
             }
         }
+
+        private void animalToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (FormCadastroAnimal frm = new FormCadastroAnimal())
+            {
+                frm.ShowDialog();
+                //frm.TopLevel = false;
+                //frm.Dock = DockStyle.Fill;
+            }
+        }
         /* ERA APENAS UM TESTE - DEIXEI AQUI SÓ PRA LEMBRAR
 //private void button_BuscarAgendamento_Click(object sender, EventArgs e)
 //{

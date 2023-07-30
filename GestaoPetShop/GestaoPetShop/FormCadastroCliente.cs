@@ -48,5 +48,10 @@ namespace GestaoPetShop
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void buttonCancelar_Click(object sender, EventArgs e)
+        {
+            clienteBindingSource.CancelEdit();
+        }
     }
 }

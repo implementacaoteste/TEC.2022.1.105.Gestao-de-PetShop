@@ -35,8 +35,9 @@
             this.gruposDeUsuáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.serviçosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dataGridView1FormsPrincipalBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.agendamentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dataGridView1FormsPrincipalBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.animalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1FormsPrincipalBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -60,7 +61,8 @@
             this.gruposDeUsuáriosToolStripMenuItem,
             this.clientesToolStripMenuItem,
             this.serviçosToolStripMenuItem,
-            this.agendamentoToolStripMenuItem});
+            this.agendamentoToolStripMenuItem,
+            this.animalToolStripMenuItem});
             this.cadastroToolStripMenuItem.Name = "cadastroToolStripMenuItem";
             this.cadastroToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
             this.cadastroToolStripMenuItem.Text = "Cadastro";
@@ -102,6 +104,13 @@
             this.agendamentoToolStripMenuItem.Text = "Agendamento";
             this.agendamentoToolStripMenuItem.Click += new System.EventHandler(this.agendamentoToolStripMenuItem_Click);
             // 
+            // animalToolStripMenuItem
+            // 
+            this.animalToolStripMenuItem.Name = "animalToolStripMenuItem";
+            this.animalToolStripMenuItem.Size = new System.Drawing.Size(217, 22);
+            this.animalToolStripMenuItem.Text = "Animal";
+            this.animalToolStripMenuItem.Click += new System.EventHandler(this.animalToolStripMenuItem_Click);
+            // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -141,6 +150,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn telClienteDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource dataGridView1FormsPrincipalBindingSource;
         private System.Windows.Forms.ToolStripMenuItem agendamentoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem animalToolStripMenuItem;
     }
 }
 
