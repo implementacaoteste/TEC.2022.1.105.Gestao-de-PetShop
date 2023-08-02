@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace GestaoPetShop
 {
-    public partial class FormCadastroAgendamento : Form
+    public partial class frmCadastroAgendamento : Form
     {
-        public FormCadastroAgendamento()
+        public frmCadastroAgendamento()
         {
             InitializeComponent();
         }
@@ -86,7 +86,7 @@ namespace GestaoPetShop
             }
         }
 
-        private void FormCadastroAgendamento_Load(object sender, EventArgs e)
+        private void frmCadastroAgendamento_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'petshopDataSet.Profissional' table. You can move, or remove it, as needed.
             this.profissionalTableAdapter.Fill(this.petshopDataSet.Profissional);

@@ -12,7 +12,7 @@ namespace GestaoPetShop
         {
             InitializeComponent();
         }
-        private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        private void usuáriosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             try
             {
@@ -46,7 +46,7 @@ namespace GestaoPetShop
             }
         }
         
-        private void gruposDeUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        private void gruposDeUsuáriosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             try
             {
@@ -74,7 +74,7 @@ namespace GestaoPetShop
             }
         }
 
-        private void servicosToolStripMenuItem_Click(object sender, EventArgs e)
+        private void serviçosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             using (FormConsultaServico frm = new FormConsultaServico())
             {
@@ -85,7 +85,7 @@ namespace GestaoPetShop
 
         private void agendamentoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            using (FormCadastroAgendamento frm = new FormCadastroAgendamento())
+            using (frmCadastroAgendamento frm = new frmCadastroAgendamento())
             {
                 frm.ShowDialog();
             }
