@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AgendamentoDAL.cs" />
+    <Compile Include="AnimalDAL.cs" />
     <Compile Include="ClienteDAL.cs" />
     <Compile Include="Conexao.cs" />
     <Compile Include="GrupoUsuarioDAL.cs" />
