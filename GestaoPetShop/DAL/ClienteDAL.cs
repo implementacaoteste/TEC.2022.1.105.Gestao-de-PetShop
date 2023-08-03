@@ -14,8 +14,8 @@ namespace DAL
             try
             {
                 SqlCommand cmd = cn.CreateCommand();
-                cmd.CommandText = @"INSERT INTO Cliente(Nome, CPF, Logradouro, Numero, Bairro, Cidade, UF, Pais, CEP, DataNascimento,Ativo) 
-                                    VALUES(@Nome, @CPF, @Logradouro, @Numero, @Bairro, @Cidade, @UF, @Pais, @CEP, @DataNascimento,@Ativo)";
+                cmd.CommandText = @"INSERT INTO Cliente(Nome, CPF, Logradouro, Numero, Bairro, Cidade, UF, Pais, CEP, DataNascimento,Foto,Ativo) 
+                                    VALUES(@Nome, @CPF, @Logradouro, @Numero, @Bairro, @Cidade, @UF, @Pais, @CEP, @DataNascimento,@Foto,@Ativo)";
 
                 cmd.CommandType = System.Data.CommandType.Text;
 
@@ -29,7 +29,7 @@ namespace DAL
                 cmd.Parameters.AddWithValue("@Pais", _cliente.Pais);
                 cmd.Parameters.AddWithValue("@CEP", _cliente.CEP);
                 cmd.Parameters.AddWithValue("@DataNascimento",_cliente.DataNascimento);
-               // cmd.Parameters.AddWithValue("@Foto", _cliente.Foto);
+                cmd.Parameters.AddWithValue("@Foto", _cliente.Foto);
                cmd.Parameters.AddWithValue("@Ativo",_cliente.Ativo);
 
                 cmd.Connection = cn;
@@ -63,7 +63,8 @@ namespace DAL
                                         UF= @UF,
                                         Pais = @Pais,
                                         CEP = @CEP,
-                                        DataNascimento = @DataNascimento,
+                                        DataNascimento = @DataNascimento,   
+                                        Foto = @Foto,            
                                         Ativo = @Ativo,
                                     WHERE Id = @Id";
                 cmd.CommandType = System.Data.CommandType.Text;
@@ -79,6 +80,7 @@ namespace DAL
                 cmd.Parameters.AddWithValue("@Pais",_cliente.Pais);
                 cmd.Parameters.AddWithValue("@CEP", _cliente.CEP);
                 cmd.Parameters.AddWithValue("@DataNascimento", _cliente.DataNascimento);
+                cmd.Parameters.AddWithValue("@Foto", _cliente.Foto);
                 cmd.Parameters.AddWithValue("@Ativo", _cliente.Ativo);
 
                 cmd.Connection = cn;
@@ -130,7 +132,7 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT Id, Nome, CPF, Logradouro, Numero, Bairro, Cidade, UF, Pais, CEP, DataNascimento,Ativo FROM Cliente";
+                cmd.CommandText = @"SELECT Id, Nome, CPF, Logradouro, Numero, Bairro, Cidade, UF, Pais, CEP, DataNascimento,Foto,Ativo FROM Cliente";
                 cmd.CommandType = System.Data.CommandType.Text;
 
                 cn.Open();
@@ -141,15 +143,16 @@ namespace DAL
                         cliente = new Cliente();
                         cliente.Id = (int)rd["Id"];
                         cliente.Nome = rd["Nome"].ToString();
-                        cliente.CPF = rd["CPF"].ToString();
+                        cliente.CPF = (int)rd["CPF"];
                         cliente.Logradouro = rd["Logradouro"].ToString();
-                        cliente.Numero = rd["Numero"].ToString();
+                        cliente.Numero = (int)rd["Numero"];
                         cliente.Bairro = rd["Bairro"].ToString();
                         cliente.Cidade = rd["Cidade"].ToString();
                         cliente.UF = rd["UF"].ToString();
                         cliente.Pais = rd["Pais"].ToString();
-                        cliente.CEP = rd["CEP"].ToString() ;
+                        cliente.CEP = (int)rd["CEP"];
                         cliente.DataNascimento = (int)rd["DataNascimento"]; //verificar
+                        cliente.Foto = (byte)rd["Foto"];
                         cliente.Ativo = (bool)rd["Ativo"]; //verificar
 
 
@@ -177,7 +180,7 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT Id, Nome, CPF, Logradouro, Numero, Bairro, Cidade, UF, Pais, CEP, DataNascimento,Ativo FROM Cliente WHERE Nome LIKE @Nome";
+                cmd.CommandText = @"SELECT Id, Nome, CPF, Logradouro, Numero, Bairro, Cidade, UF, Pais, CEP, DataNascimento,Foto,Ativo FROM Cliente WHERE Nome LIKE @Nome";
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@Nome", "%" + _nome + "%");
 
@@ -189,15 +192,16 @@ namespace DAL
                         cliente = new Cliente();
                         cliente.Id = (int)rd["Id"];
                         cliente.Nome = rd["Nome"].ToString();
-                        cliente.CPF = rd["CPF"].ToString();
+                        cliente.CPF = (int)rd["CPF"];
                         cliente.Logradouro = rd["Logradouro"].ToString();
-                        cliente.Numero = rd["Numero"].ToString();
+                        cliente.Numero = (int)rd["Numero"];
                         cliente.Bairro = rd["Bairro"].ToString();
                         cliente.Cidade = rd["Cidade"].ToString();
                         cliente.UF = rd["UF"].ToString();
                         cliente.Pais = rd["Pais"].ToString();
-                        cliente.CEP = rd["CEP"].ToString();
+                        cliente.CEP = (int)rd["CEP"];
                         cliente.DataNascimento = (int)rd["DataNascimento"]; //verificar
+                        cliente.Foto = (byte)rd["Foto"];
                         cliente.Ativo = (bool)rd["Ativo"]; //verificar
 
 
@@ -223,7 +227,7 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT Id,Nome, CPF, Logradouro, Numero, Bairro, Cidade, UF, Pais, CEP, DataNascimento,Ativo FROM Cliente WHERE Id = @Id";
+                cmd.CommandText = @"SELECT Id,Nome, CPF, Logradouro, Numero, Bairro, Cidade, UF, Pais, CEP, DataNascimento,Foto,Ativo FROM Cliente WHERE Id = @Id";
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@Id", _id);
 
@@ -234,15 +238,16 @@ namespace DAL
                     {
                         cliente.Id = (int)rd["Id"];
                         cliente.Nome = rd["Nome"].ToString();
-                        cliente.CPF = rd["CPF"].ToString();
+                        cliente.CPF = (int)rd["CPF"];
                         cliente.Logradouro = rd["Logradouro"].ToString();
-                        cliente.Numero = rd["Numero"].ToString();
+                        cliente.Numero =(int) rd["Numero"];
                         cliente.Bairro = rd["Bairro"].ToString();
                         cliente.Cidade = rd["Cidade"].ToString();
                         cliente.UF = rd["UF"].ToString();
                         cliente.Pais = rd["Pais"].ToString();
-                        cliente.CEP = rd["CEP"].ToString();
+                        cliente.CEP = (int)rd["CEP"];
                         cliente.DataNascimento = (int)rd["DataNascimento"]; //verificar
+                        cliente.Foto = (byte)rd["Foto"];
                         cliente.Ativo = (bool)rd["Ativo"]; //verificar
 
                     }
@@ -266,7 +271,7 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT Id,Nome, CPF, Logradouro, Numero, Bairro, Cidade, UF, Pais, CEP, DataNascimento,Ativo FROM Cliente WHERE CPF = @CPF";
+                cmd.CommandText = @"SELECT Id,Nome, CPF, Logradouro, Numero, Bairro, Cidade, UF, Pais, CEP, DataNascimento,Foto,Ativo FROM Cliente WHERE CPF = @CPF";
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@CPF", _CPF);
 
@@ -277,15 +282,16 @@ namespace DAL
                     {
                         cliente.Id = (int)rd["Id"];
                         cliente.Nome = rd["Nome"].ToString();
-                        cliente.CPF = rd["CPF"].ToString();
+                        cliente.CPF = (int)rd["CPF"];
                         cliente.Logradouro = rd["Logradouro"].ToString();
-                        cliente.Numero = rd["Numero"].ToString();
+                        cliente.Numero = (int)rd["Numero"];
                         cliente.Bairro = rd["Bairro"].ToString();
                         cliente.Cidade = rd["Cidade"].ToString();
                         cliente.UF = rd["UF"].ToString();
                         cliente.Pais = rd["Pais"].ToString();
-                        cliente.CEP = rd["CEP"].ToString();
+                        cliente.CEP = (int)rd["CEP"];
                         cliente.DataNascimento = (int)rd["DataNascimento"]; //verificar
+                        cliente.Foto = (byte)rd["Foto"];
                         cliente.Ativo = (bool)rd["Ativo"]; //verificar
 
                     }
@@ -301,6 +307,8 @@ namespace DAL
                 cn.Close();
             }
         }
+
+        
        
         
     }
