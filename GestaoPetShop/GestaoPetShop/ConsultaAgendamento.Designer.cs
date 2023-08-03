@@ -73,7 +73,9 @@
             this.comboBox_SelecionarTipoBusca.Items.AddRange(new object[] {
             "Todos",
             "Por Id",
-            "Por Nome"});
+            "Por Nome Animal",
+            "Por Nome Cliente",
+            "Por dia/mês/ano"});
             this.comboBox_SelecionarTipoBusca.Location = new System.Drawing.Point(12, 99);
             this.comboBox_SelecionarTipoBusca.Name = "comboBox_SelecionarTipoBusca";
             this.comboBox_SelecionarTipoBusca.Size = new System.Drawing.Size(121, 24);
@@ -144,13 +146,13 @@
             this.dataGridViewTextBoxColumn6,
             this.dataGridViewTextBoxColumn7});
             this.dataGridView1_FormsPrincipalDataGridView.DataSource = this.dataGridView1_FormsPrincipalBindingSource;
-            this.dataGridView1_FormsPrincipalDataGridView.Location = new System.Drawing.Point(12, 162);
+            this.dataGridView1_FormsPrincipalDataGridView.Location = new System.Drawing.Point(12, 220);
             this.dataGridView1_FormsPrincipalDataGridView.Name = "dataGridView1_FormsPrincipalDataGridView";
             this.dataGridView1_FormsPrincipalDataGridView.ReadOnly = true;
             this.dataGridView1_FormsPrincipalDataGridView.RowHeadersVisible = false;
             this.dataGridView1_FormsPrincipalDataGridView.RowHeadersWidth = 51;
             this.dataGridView1_FormsPrincipalDataGridView.RowTemplate.Height = 24;
-            this.dataGridView1_FormsPrincipalDataGridView.Size = new System.Drawing.Size(776, 308);
+            this.dataGridView1_FormsPrincipalDataGridView.Size = new System.Drawing.Size(758, 308);
             this.dataGridView1_FormsPrincipalDataGridView.TabIndex = 13;
             // 
             // dataGridViewTextBoxColumn1
@@ -237,7 +239,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 482);
+            this.ClientSize = new System.Drawing.Size(782, 553);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox_BuscarData);
             this.Controls.Add(this.dataGridView1_FormsPrincipalDataGridView);

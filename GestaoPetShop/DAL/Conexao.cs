@@ -10,7 +10,7 @@ namespace DAL
         {
             get
             {
-                return @"Server=localhost\SQLEXPRESS;Database=petshop;Trusted_Connection=True";
+               
 
                 if (String.IsNullOrEmpty(Constantes.StringDeConexao))
                 {
