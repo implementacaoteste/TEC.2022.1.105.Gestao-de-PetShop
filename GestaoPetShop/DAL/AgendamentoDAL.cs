@@ -188,5 +188,10 @@ namespace DAL
                 cn.Close();
             }
         }
+
+        public object BuscarPorNomeAnimal(string nomeAnimal)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
