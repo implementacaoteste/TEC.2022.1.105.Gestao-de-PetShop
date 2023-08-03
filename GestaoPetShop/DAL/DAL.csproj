@@ -224,6 +224,7 @@
     <Compile Include="AnimalDAL.cs" />
     <Compile Include="ClienteDAL.cs" />
     <Compile Include="Conexao.cs" />
+    <Compile Include="FuncaoDAL.cs" />
     <Compile Include="GrupoUsuarioDAL.cs" />
     <Compile Include="PermissaoDAL.cs" />
     <Compile Include="ProfissionalDAL.cs" />
