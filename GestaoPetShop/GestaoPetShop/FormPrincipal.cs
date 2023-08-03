@@ -29,8 +29,9 @@ namespace GestaoPetShop
         
         private void FormPrincipal_Load(object sender, EventArgs e)
         {
-            //dataGridView1_Agendamentos.DataSource = new DataGridView1_FormsPrincipal(); ERA APENAS UM TESTE - DEIXEI AQUI SÓ PRA LEMBRAR
-           
+            dataGridView1_FormsPrincipalDataGridView.DataSource = new DataGridView1_FormsPrincipal();// ERA APENAS UM TESTE -DEIXEI AQUI SÓ PRA LEMBRAR
+
+
             try
             {
                 using (FormLogin frm = new FormLogin())
@@ -85,39 +86,42 @@ namespace GestaoPetShop
 
         private void agendamentoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            using (FormCadastroAgendamento frm = new FormCadastroAgendamento())
-            {
-                frm.ShowDialog();
-            }
+
         }
 
         private void animalToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            using (FormCadastroAnimal frm = new FormCadastroAnimal())
-            {
-                frm.ShowDialog();
-                //frm.TopLevel = false;
-                //frm.Dock = DockStyle.Fill;
-            }
+
         }
-        /* ERA APENAS UM TESTE - DEIXEI AQUI SÓ PRA LEMBRAR
-//private void button_BuscarAgendamento_Click(object sender, EventArgs e)
-//{
-//    string dataag = monthCalendar1.SelectionStart.ToShortDateString();
 
-//    dataGridView1_Agendamentos.DataSource = new ServicoBLL().dataGridView(dataag);
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string dataag = monthCalendar1.SelectionStart.ToShortDateString();
+
+            dataGridView1_FormsPrincipalDataGridView.DataSource = new ServicoBLL().dataGridView(dataag);
 
 
 
-//    dataGridView1_Agendamentos.Visible = true;
-//    button1_FecharViewAgendamento.Visible = true;
-//}
+            dataGridView1_FormsPrincipalDataGridView.Visible = true;
+            button2.Visible = true;
+        }
 
-//private void button1_FecharViewAgendamento_Click(object sender, EventArgs e)
-//{
-//    dataGridView1_Agendamentos.Visible = false;
-//    button1_FecharViewAgendamento.Visible = false;
-//}
-*/
+        private void button2_Click(object sender, EventArgs e)
+        {
+            dataGridView1_FormsPrincipalDataGridView.Visible = false;
+            button2.Visible = false;
+        }
+
+
+
+        /* ERA APENAS UM TESTE - DEIXEI AQUI SÓ PRA LEMBRAR*/
+
+
+
+
+
+
+
+
     }
 }

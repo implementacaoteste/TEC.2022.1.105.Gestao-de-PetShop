@@ -224,17 +224,17 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConsultaAgendamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultaAgendamento.Designer.cs">
+      <DependentUpon>ConsultaAgendamento.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormBuscarCliente.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormBuscarCliente.Designer.cs">
       <DependentUpon>FormBuscarCliente.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormCadastroAgendamento.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormCadastroAgendamento.Designer.cs">
-      <DependentUpon>FormCadastroAgendamento.cs</DependentUpon>
     </Compile>
     <Compile Include="FormBuscarGrupoUsuario.cs">
       <SubType>Form</SubType>
@@ -247,12 +247,6 @@
     </Compile>
     <Compile Include="FormBuscarUsuario.Designer.cs">
       <DependentUpon>FormBuscarUsuario.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormCadastroAnimal.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormCadastroAnimal.Designer.cs">
-      <DependentUpon>FormCadastroAnimal.cs</DependentUpon>
     </Compile>
     <Compile Include="FormCadastroCliente.cs">
       <SubType>Form</SubType>
@@ -322,17 +316,14 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TratarErro.cs" />
-    <EmbeddedResource Include="FormCadastroAgendamento.resx">
-      <DependentUpon>FormCadastroAgendamento.cs</DependentUpon>
+    <EmbeddedResource Include="ConsultaAgendamento.resx">
+      <DependentUpon>ConsultaAgendamento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormBuscarGrupoUsuario.resx">
       <DependentUpon>FormBuscarGrupoUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormBuscarUsuario.resx">
       <DependentUpon>FormBuscarUsuario.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormCadastroAnimal.resx">
-      <DependentUpon>FormCadastroAnimal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormCadastroCliente.resx">
       <DependentUpon>FormCadastroCliente.cs</DependentUpon>
@@ -386,6 +377,7 @@
     <None Include="petshopDataSet.xss">
       <DependentUpon>petshopDataSet.xsd</DependentUpon>
     </None>
+    <None Include="Properties\DataSources\Models.Agendamento.datasource" />
     <None Include="Properties\DataSources\Models.Cliente.datasource" />
     <None Include="Properties\DataSources\Models.Constantes.datasource" />
     <None Include="Properties\DataSources\Models.DataGridView1_FormsPrincipal.datasource" />

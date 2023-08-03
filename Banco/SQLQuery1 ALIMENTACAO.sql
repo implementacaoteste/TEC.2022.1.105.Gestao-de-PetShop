@@ -261,21 +261,6 @@ EXEC SP_CAD_USUARIO 2,'AnaPaula','aten12341'
 GO
 
 /*******************************************************************************************************************************/
-
-/**************************************INSERIR AGENDAMENTO **************************************************************/
---use petshop
---select *from Agendamento
---cadastro de Agendamento
---select * from Animal
---select * from Profissional
-
-insert into Agendamento(IdAnimal,IdProfissional,IdSituacao,DataAg,Horario,Total,Ativo) values (1,2,1,'04/01/2005','09:30:00',0.00,1);
-insert into Agendamento(IdAnimal,IdProfissional,IdSituacao,DataAg,Horario,Total,Ativo) values (1,2,2,'04/01/2005','09:35:00',0.00,1);
-insert into Agendamento(IdAnimal,IdProfissional,IdSituacao,DataAg,Horario,Total,Ativo) values (1,2,3,'04/01/2005','09:40:00',0.00,1);
-
-
-/*******************************************************************************************************************************/
-
 /**************************************INSERIR SITUAÇÃO **************************************************************/
 --use petshop
 --select *from Situacao
@@ -287,7 +272,6 @@ insert into Situacao(Descricao) values ('Em Andamento');
 insert into Situacao(Descricao) values ('Finalizado');
 
 /*******************************************************************************************************************************/
-
 /**************************************INSERIR SERVIÇOS **************************************************************/
 --select *from Servico
 --cadastro de Servico
@@ -300,6 +284,22 @@ insert into Servico(Descricao,Preco,Tempo,Ativo) values ('Buscar DriverTur',10.0
 insert into Servico(Descricao,Preco,Tempo,Ativo) values ('Levar DriverTur',10.00,15,1);
 
 /*******************************************************************************************************************************/
+
+/**************************************INSERIR AGENDAMENTO **************************************************************/
+--use petshop
+--select *from Agendamento
+--cadastro de Agendamento
+--select * from Animal
+--select * from Profissional
+
+insert into Agendamento(IdAnimal,IdProfissional,IdSituacao,DataAg,Horario,Total,Ativo) values (1,2,1,'04/08/2023','09:30:00',0.00,1);
+insert into Agendamento(IdAnimal,IdProfissional,IdSituacao,DataAg,Horario,Total,Ativo) values (1,2,2,'04/09/2023','09:35:00',0.00,1);
+insert into Agendamento(IdAnimal,IdProfissional,IdSituacao,DataAg,Horario,Total,Ativo) values (1,2,3,'04/10/2023','09:40:00',0.00,1);
+
+
+/*******************************************************************************************************************************/
+
+
 
 /**************************************INSERIR AGENDAMENTO / SERVIÇOS **************************************************************/
 --select *from AgendamentoServicos
