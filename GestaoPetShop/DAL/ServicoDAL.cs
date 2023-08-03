@@ -258,12 +258,12 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT Ag.DataAg,Ag.Horario, Ani.Nome as N_Animal,Cli.Nome as N_Cliente,TC.Telefone, S.Descricao, P.Nome as N_Prof FROM Agendamento Ag LEFT JOIN Profissional P          ON Ag.IdProfissional = P.Id
-                                                                                                                                                                           LEFT JOIN Animal Ani              ON Ag.IdAnimal = Ani.Id
-                                                                                                                                                                           LEFT JOIN Cliente Cli             ON Ani.IdCliente = Cli.Id
-                                                                                                                                                                           LEFT JOIN TelefoneCliente TC      ON Cli.Id = TC.IdCliente
-                                                                                                                                                                           LEFT  JOIN AgendamentoServicos AGS ON Ag.Id = AGS.IdAgendamento
-                                                                                                                                                                           LEFT JOIN Servico S               ON AGS.IdServico = S.Id 
+                cmd.CommandText = @"SELECT Ag.DataAg,Ag.Horario, Ani.Nome as N_Animal,Cli.Nome as N_Cliente,TC.Telefone, S.Descricao, P.Nome as N_Prof FROM Agendamento Ag LEFT JOIN Profissional P             ON Ag.IdProfissional = P.Id
+                                                                                                                                                                           LEFT JOIN Animal Ani                 ON Ag.IdAnimal = Ani.Id
+                                                                                                                                                                           LEFT JOIN Cliente Cli                ON Ani.IdCliente = Cli.Id
+                                                                                                                                                                           LEFT JOIN TelefoneCliente TC         ON Cli.Id = TC.IdCliente
+                                                                                                                                                                           LEFT  JOIN AgendamentoServicos AGS   ON Ag.Id = AGS.IdAgendamento
+                                                                                                                                                                           LEFT JOIN Servico S                  ON AGS.IdServico = S.Id 
                                                                                                                                                                            WHERE Ag.DataAg = @data";
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@data", _date);
