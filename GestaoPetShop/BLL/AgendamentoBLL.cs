@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -35,6 +36,12 @@ namespace BLL
         {
             AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
             agendamentoDAL.Excluir(_id);
+        }
+
+        public object BuscarPorNomeAnimal(string _nomeAnimal)
+        {
+            AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
+            return agendamentoDAL.BuscarPorNomeAnimal(_nomeAnimal);
         }
     }
 }
