@@ -29,8 +29,9 @@ namespace GestaoPetShop
         
         private void FormPrincipal_Load(object sender, EventArgs e)
         {
-            //dataGridView1_Agendamentos.DataSource = new DataGridView1_FormsPrincipal(); ERA APENAS UM TESTE - DEIXEI AQUI SÓ PRA LEMBRAR
-           
+            dataGridView1_FormsPrincipalDataGridView.DataSource = new DataGridView1_FormsPrincipal();// ERA APENAS UM TESTE -DEIXEI AQUI SÓ PRA LEMBRAR
+
+
             try
             {
                 using (FormLogin frm = new FormLogin())
@@ -93,24 +94,34 @@ namespace GestaoPetShop
 
         }
 
-        /* ERA APENAS UM TESTE - DEIXEI AQUI SÓ PRA LEMBRAR
-//private void button_BuscarAgendamento_Click(object sender, EventArgs e)
-//{
-//    string dataag = monthCalendar1.SelectionStart.ToShortDateString();
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string dataag = monthCalendar1.SelectionStart.ToShortDateString();
 
-//    dataGridView1_Agendamentos.DataSource = new ServicoBLL().dataGridView(dataag);
-
+            dataGridView1_FormsPrincipalDataGridView.DataSource = new ServicoBLL().dataGridView(dataag);
 
 
-//    dataGridView1_Agendamentos.Visible = true;
-//    button1_FecharViewAgendamento.Visible = true;
-//}
 
-//private void button1_FecharViewAgendamento_Click(object sender, EventArgs e)
-//{
-//    dataGridView1_Agendamentos.Visible = false;
-//    button1_FecharViewAgendamento.Visible = false;
-//}
-*/
+            dataGridView1_FormsPrincipalDataGridView.Visible = true;
+            button2.Visible = true;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            dataGridView1_FormsPrincipalDataGridView.Visible = false;
+            button2.Visible = false;
+        }
+
+
+
+        /* ERA APENAS UM TESTE - DEIXEI AQUI SÓ PRA LEMBRAR*/
+
+
+
+
+
+
+
+
     }
 }
