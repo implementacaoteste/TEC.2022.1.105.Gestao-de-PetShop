@@ -127,7 +127,7 @@
             // 
             // monthCalendar1
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(453, 37);
+            this.monthCalendar1.Location = new System.Drawing.Point(413, 37);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 1;
             // 
@@ -148,11 +148,11 @@
             this.dataGridViewTextBoxColumn6,
             this.dataGridViewTextBoxColumn7});
             this.dataGridView1_FormsPrincipalDataGridView.DataSource = this.dataGridView1_FormsPrincipalBindingSource;
-            this.dataGridView1_FormsPrincipalDataGridView.Location = new System.Drawing.Point(0, 217);
+            this.dataGridView1_FormsPrincipalDataGridView.Location = new System.Drawing.Point(0, 256);
             this.dataGridView1_FormsPrincipalDataGridView.Name = "dataGridView1_FormsPrincipalDataGridView";
             this.dataGridView1_FormsPrincipalDataGridView.RowHeadersWidth = 51;
             this.dataGridView1_FormsPrincipalDataGridView.RowTemplate.Height = 24;
-            this.dataGridView1_FormsPrincipalDataGridView.Size = new System.Drawing.Size(827, 220);
+            this.dataGridView1_FormsPrincipalDataGridView.Size = new System.Drawing.Size(827, 181);
             this.dataGridView1_FormsPrincipalDataGridView.TabIndex = 3;
             this.dataGridView1_FormsPrincipalDataGridView.Visible = false;
             // 
@@ -214,7 +214,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(734, 71);
+            this.button1.Location = new System.Drawing.Point(752, 37);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 4;
@@ -224,7 +224,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(752, 188);
+            this.button2.Location = new System.Drawing.Point(752, 221);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 5;
