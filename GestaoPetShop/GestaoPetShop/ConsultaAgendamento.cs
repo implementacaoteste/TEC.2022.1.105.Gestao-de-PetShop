@@ -24,30 +24,30 @@ namespace GestaoPetShop
             {
                 AgendamentoBLL agendamentoBLL = new AgendamentoBLL();
 
-                //if (comboBox_SelecionarTipoBusca.SelectedIndex == 0)
-                //{
+                if (comboBox_SelecionarTipoBusca.SelectedIndex == 0)
+                {
 
-                //    servicoBindingSource.DataSource = servicoBLL.BuscarTodos();
-                //}
+                    dataGridView1_FormsPrincipalBindingSource.DataSource = agendamentoBLL.BuscarTodos();
+                }
 
-                //else if (comboBox_SelecionarTipoBusca.SelectedIndex == 1)
-                //{
-
-
-                //    servicoBindingSource.DataSource = servicoBLL.BuscarPorId(Convert.ToInt32(textBox_BuscarServico.Text));
-
-                //}
-                //else if (comboBox_SelecionarTipoBusca.SelectedIndex == 2)
-                //{
+                else if (comboBox_SelecionarTipoBusca.SelectedIndex == 1)
+                {
 
 
-                //    servicoBindingSource.DataSource = servicoBLL.BuscarPorNome(textBox_BuscarServico.Text);
+                    dataGridView1_FormsPrincipalBindingSource.DataSource = agendamentoBLL.BuscarPorId(Convert.ToInt32(textBox_BuscarAgendamento.Text));
 
-                //}
-                //else
-                //{
-                //    MessageBox.Show("Escolha a forma de busca");
-                //}
+                }
+                else if (comboBox_SelecionarTipoBusca.SelectedIndex == 2)
+                {
+
+
+                    dataGridView1_FormsPrincipalBindingSource.DataSource = agendamentoBLL.BuscarPorNomeAnimal(textBox_BuscarAgendamento.Text);
+
+                }
+                else
+                {
+                    MessageBox.Show("Escolha a forma de busca");
+                }
 
             }
             catch (Exception ex)

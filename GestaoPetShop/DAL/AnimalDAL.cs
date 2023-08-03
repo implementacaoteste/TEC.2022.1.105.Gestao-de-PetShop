@@ -1,4 +1,5 @@
 ﻿using Models;
+using RestSharp.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -175,9 +176,9 @@ namespace DAL
                         animal.Id = (int)rd["Id"];
                         animal.IdCliente = (int)rd["IdCliente"];
                         animal.Nome = rd["Nome"].ToString();
-                        //animal.Agressivo = rd["Agressivo"]
+                       /* animal.Agressivo = rd["Agressivo"].*/
                         animal.Cor = rd["Cor"].ToString();
-                        animal.Idade = (int)rd["Bairro"];
+                        animal.Idade = (int)rd["Idade"];
                         animal.Alergia = rd["Alergia"].ToString();
                         animal.DataNascimento = rd["DataNascimento"].ToString();
                         animal.Ativo = (bool)rd["Ativo"];
