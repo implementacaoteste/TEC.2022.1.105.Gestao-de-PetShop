@@ -248,6 +248,12 @@
     <Compile Include="FormBuscarUsuario.Designer.cs">
       <DependentUpon>FormBuscarUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormCadastroAgendamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCadastroAgendamento.Designer.cs">
+      <DependentUpon>FormCadastroAgendamento.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormCadastroCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -324,6 +330,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormBuscarUsuario.resx">
       <DependentUpon>FormBuscarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCadastroAgendamento.resx">
+      <DependentUpon>FormCadastroAgendamento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormCadastroCliente.resx">
       <DependentUpon>FormCadastroCliente.cs</DependentUpon>

@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -11,7 +12,7 @@ namespace DAL
 {
     public class AnimalDAL
     {
-        public void Inserir (Animal _animal)
+        public void Inserir(Animal _animal)
         {
             SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
             try
@@ -45,10 +46,10 @@ namespace DAL
             {
                 cn.Close();
             }
-        
+
         }
 
-        public void Alterar (Animal _animal)
+        public void Alterar(Animal _animal)
         {
             SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
             try
@@ -114,7 +115,7 @@ namespace DAL
                         animal.Alergia = rd["Alergia"].ToString();
                         animal.DataNascimento = rd["DataNascimento"].ToString();
                         //animal.Ativo = (bool)rd["Ativo"];
-          
+
                         animalList.Add(animal);
                     }
                 }
@@ -176,13 +177,13 @@ namespace DAL
                         animal.Id = (int)rd["Id"];
                         animal.IdCliente = (int)rd["IdCliente"];
                         animal.Nome = rd["Nome"].ToString();
-                       /* animal.Agressivo = rd["Agressivo"].*/
+                        /* animal.Agressivo = rd["Agressivo"].*/
                         animal.Cor = rd["Cor"].ToString();
                         animal.Idade = (int)rd["Idade"];
                         animal.Alergia = rd["Alergia"].ToString();
                         animal.DataNascimento = rd["DataNascimento"].ToString();
                         animal.Ativo = (bool)rd["Ativo"];
-                        
+
                         animalList.Add(animal);
                     }
                 }
@@ -197,6 +198,44 @@ namespace DAL
                 cn.Close();
             }
         }
+        public Animal BuscarPorId(int _id) //BuscarPorCodigo
+        {
+            Animal animal = new Animal();
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
 
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = cn;
+            cmd.CommandText = @"SELECT Id,Nome, Sexo, Agressivo, Cor, Alergia, DataNascimento ,Ativo FROM Cliente WHERE Id = @Id";
+            cmd.CommandType = System.Data.CommandType.Text;
+            cmd.Parameters.AddWithValue("@Id", _id);
+
+            cn.Open();
+            using (SqlDataReader rd = cmd.ExecuteReader())
+
+                try
+                {
+                    while (rd.Read())
+                    {
+                        animal.Id = (int)rd["Id"];
+                        animal.Nome = rd["Nome"].ToString();
+                        //animal.Sexo = rd["Sexo"].ToString();
+                        //animal.Agressivo = rd["Agressivo"].ToString();
+                        animal.Cor = rd["Cor"].ToString();
+                        animal.Alergia = rd["Alergia"].ToString();
+                        animal.DataNascimento = rd["DataNascimento"].ToString();
+                        animal.Ativo = (bool)rd["Ativo"];
+
+                    }
+                    return animal;
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception("Ocorreu um erro ao tentar buscar animal por id no banco de dados", ex) { Data = { { "Id", 15 } } };
+                }
+                finally
+                {
+                    cn.Close();
+                }
+        }
     }
 }
