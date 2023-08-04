@@ -37,29 +37,28 @@
             System.Windows.Forms.Label horarioLabel;
             System.Windows.Forms.Label totalLabel;
             System.Windows.Forms.Label ativoLabel;
-            this.petshopDataSet = new GestaoPetShop.petshopDataSet();
-            this.agendamentoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.agendamentoTableAdapter = new GestaoPetShop.petshopDataSetTableAdapters.AgendamentoTableAdapter();
-            this.tableAdapterManager = new GestaoPetShop.petshopDataSetTableAdapters.TableAdapterManager();
-            this.animalTableAdapter = new GestaoPetShop.petshopDataSetTableAdapters.AnimalTableAdapter();
-            this.profissionalTableAdapter = new GestaoPetShop.petshopDataSetTableAdapters.ProfissionalTableAdapter();
-            this.situacaoTableAdapter = new GestaoPetShop.petshopDataSetTableAdapters.SituacaoTableAdapter();
             this.label1 = new System.Windows.Forms.Label();
-            this.animalBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.idTextBox = new System.Windows.Forms.TextBox();
             this.idAnimalComboBox = new System.Windows.Forms.ComboBox();
-            this.animalBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.idProfissionalComboBox = new System.Windows.Forms.ComboBox();
-            this.profissionalBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idSituacaoComboBox = new System.Windows.Forms.ComboBox();
             this.dataAgMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
             this.horarioMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
             this.totalTextBox = new System.Windows.Forms.TextBox();
             this.ativoCheckBox = new System.Windows.Forms.CheckBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.agendamentoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.petshopDataSet = new GestaoPetShop.petshopDataSet();
+            this.animalBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.profissionalBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.agendamentoTableAdapter = new GestaoPetShop.petshopDataSetTableAdapters.AgendamentoTableAdapter();
+            this.tableAdapterManager = new GestaoPetShop.petshopDataSetTableAdapters.TableAdapterManager();
+            this.animalTableAdapter = new GestaoPetShop.petshopDataSetTableAdapters.AnimalTableAdapter();
+            this.profissionalTableAdapter = new GestaoPetShop.petshopDataSetTableAdapters.ProfissionalTableAdapter();
+            this.situacaoTableAdapter = new GestaoPetShop.petshopDataSetTableAdapters.SituacaoTableAdapter();
+            this.animalBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.situacaoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             idLabel = new System.Windows.Forms.Label();
             idAnimalLabel = new System.Windows.Forms.Label();
             idProfissionalLabel = new System.Windows.Forms.Label();
@@ -68,12 +67,12 @@
             horarioLabel = new System.Windows.Forms.Label();
             totalLabel = new System.Windows.Forms.Label();
             ativoLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.petshopDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.agendamentoBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.animalBindingSource)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.agendamentoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.petshopDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.animalBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.profissionalBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.animalBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.situacaoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -149,53 +148,6 @@
             ativoLabel.TabIndex = 14;
             ativoLabel.Text = "Ativo:";
             // 
-            // petshopDataSet
-            // 
-            this.petshopDataSet.DataSetName = "petshopDataSet";
-            this.petshopDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // agendamentoBindingSource
-            // 
-            this.agendamentoBindingSource.DataMember = "Agendamento";
-            this.agendamentoBindingSource.DataSource = this.petshopDataSet;
-            // 
-            // agendamentoTableAdapter
-            // 
-            this.agendamentoTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.AgendamentoServicosTableAdapter = null;
-            this.tableAdapterManager.AgendamentoTableAdapter = this.agendamentoTableAdapter;
-            this.tableAdapterManager.AnimalTableAdapter = this.animalTableAdapter;
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.ClienteTableAdapter = null;
-            this.tableAdapterManager.EmailClienteTableAdapter = null;
-            this.tableAdapterManager.EmailProfissionalTableAdapter = null;
-            this.tableAdapterManager.FuncaoPermissaoTableAdapter = null;
-            this.tableAdapterManager.FuncaoTableAdapter = null;
-            this.tableAdapterManager.PermissaoTableAdapter = null;
-            this.tableAdapterManager.ProfissionalTableAdapter = this.profissionalTableAdapter;
-            this.tableAdapterManager.RacaTableAdapter = null;
-            this.tableAdapterManager.ServicoTableAdapter = null;
-            this.tableAdapterManager.SituacaoTableAdapter = this.situacaoTableAdapter;
-            this.tableAdapterManager.TelefoneClienteTableAdapter = null;
-            this.tableAdapterManager.TelefoneProfissionalTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = GestaoPetShop.petshopDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            this.tableAdapterManager.UsuarioTableAdapter = null;
-            // 
-            // animalTableAdapter
-            // 
-            this.animalTableAdapter.ClearBeforeFill = true;
-            // 
-            // profissionalTableAdapter
-            // 
-            this.profissionalTableAdapter.ClearBeforeFill = true;
-            // 
-            // situacaoTableAdapter
-            // 
-            this.situacaoTableAdapter.ClearBeforeFill = true;
-            // 
             // label1
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -209,11 +161,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Cadastro de Agendamento";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // animalBindingSource
-            // 
-            this.animalBindingSource.DataMember = "Animal";
-            this.animalBindingSource.DataSource = this.petshopDataSet;
             // 
             // groupBox1
             // 
@@ -233,9 +180,9 @@
             this.groupBox1.Controls.Add(this.totalTextBox);
             this.groupBox1.Controls.Add(ativoLabel);
             this.groupBox1.Controls.Add(this.ativoCheckBox);
-            this.groupBox1.Location = new System.Drawing.Point(12, 61);
+            this.groupBox1.Location = new System.Drawing.Point(494, 61);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(758, 284);
+            this.groupBox1.Size = new System.Drawing.Size(276, 284);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
@@ -260,11 +207,6 @@
             this.idAnimalComboBox.TabIndex = 3;
             this.idAnimalComboBox.ValueMember = "Id";
             // 
-            // animalBindingSource1
-            // 
-            this.animalBindingSource1.DataMember = "Animal";
-            this.animalBindingSource1.DataSource = this.petshopDataSet;
-            // 
             // idProfissionalComboBox
             // 
             this.idProfissionalComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.agendamentoBindingSource, "IdProfissional", true));
@@ -276,11 +218,6 @@
             this.idProfissionalComboBox.Size = new System.Drawing.Size(121, 24);
             this.idProfissionalComboBox.TabIndex = 5;
             this.idProfissionalComboBox.ValueMember = "Id";
-            // 
-            // profissionalBindingSource
-            // 
-            this.profissionalBindingSource.DataMember = "Profissional";
-            this.profissionalBindingSource.DataSource = this.petshopDataSet;
             // 
             // idSituacaoComboBox
             // 
@@ -331,32 +268,85 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Location = new System.Drawing.Point(12, 368);
+            this.groupBox2.Location = new System.Drawing.Point(494, 368);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(758, 158);
+            this.groupBox2.Size = new System.Drawing.Size(276, 158);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "groupBox2";
+            // 
+            // agendamentoBindingSource
+            // 
+            this.agendamentoBindingSource.DataMember = "Agendamento";
+            this.agendamentoBindingSource.DataSource = this.petshopDataSet;
+            // 
+            // petshopDataSet
+            // 
+            this.petshopDataSet.DataSetName = "petshopDataSet";
+            this.petshopDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // animalBindingSource1
+            // 
+            this.animalBindingSource1.DataMember = "Animal";
+            this.animalBindingSource1.DataSource = this.petshopDataSet;
+            // 
+            // profissionalBindingSource
+            // 
+            this.profissionalBindingSource.DataMember = "Profissional";
+            this.profissionalBindingSource.DataSource = this.petshopDataSet;
+            // 
+            // agendamentoTableAdapter
+            // 
+            this.agendamentoTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.AgendamentoServicosTableAdapter = null;
+            this.tableAdapterManager.AgendamentoTableAdapter = this.agendamentoTableAdapter;
+            this.tableAdapterManager.AnimalTableAdapter = this.animalTableAdapter;
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.ClienteTableAdapter = null;
+            this.tableAdapterManager.EmailClienteTableAdapter = null;
+            this.tableAdapterManager.EmailProfissionalTableAdapter = null;
+            this.tableAdapterManager.FuncaoPermissaoTableAdapter = null;
+            this.tableAdapterManager.FuncaoTableAdapter = null;
+            this.tableAdapterManager.PermissaoTableAdapter = null;
+            this.tableAdapterManager.ProfissionalTableAdapter = this.profissionalTableAdapter;
+            this.tableAdapterManager.RacaTableAdapter = null;
+            this.tableAdapterManager.ServicoTableAdapter = null;
+            this.tableAdapterManager.SituacaoTableAdapter = this.situacaoTableAdapter;
+            this.tableAdapterManager.TelefoneClienteTableAdapter = null;
+            this.tableAdapterManager.TelefoneProfissionalTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = GestaoPetShop.petshopDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.UsuarioTableAdapter = null;
+            // 
+            // animalTableAdapter
+            // 
+            this.animalTableAdapter.ClearBeforeFill = true;
+            // 
+            // profissionalTableAdapter
+            // 
+            this.profissionalTableAdapter.ClearBeforeFill = true;
+            // 
+            // situacaoTableAdapter
+            // 
+            this.situacaoTableAdapter.ClearBeforeFill = true;
+            // 
+            // animalBindingSource
+            // 
+            this.animalBindingSource.DataMember = "Animal";
+            this.animalBindingSource.DataSource = this.petshopDataSet;
             // 
             // situacaoBindingSource
             // 
             this.situacaoBindingSource.DataMember = "Situacao";
             this.situacaoBindingSource.DataSource = this.petshopDataSet;
             // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(612, 12);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1.TabIndex = 3;
-            // 
             // FormCadastroAgendamento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(782, 553);
-            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
@@ -364,13 +354,13 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.FormCadastroAgendamento_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.petshopDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.agendamentoBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.animalBindingSource)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.agendamentoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.petshopDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.animalBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.profissionalBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.animalBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.situacaoBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -401,6 +391,5 @@
         private System.Windows.Forms.BindingSource profissionalBindingSource;
         private petshopDataSetTableAdapters.SituacaoTableAdapter situacaoTableAdapter;
         private System.Windows.Forms.BindingSource situacaoBindingSource;
-        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
