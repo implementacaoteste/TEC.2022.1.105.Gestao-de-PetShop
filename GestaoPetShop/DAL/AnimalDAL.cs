@@ -237,5 +237,41 @@ namespace DAL
                     cn.Close();
                 }
         }
+        public List<Raca> BuscarPorRaca(string _raca)
+        {
+            List<Raca> animalList = new List<Raca>();
+            Raca animal = new Raca();
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = cn;
+                cmd.CommandText = @"SELECT Id, Nome, Especie, PaisOrigem FROM Animal WHERE Nome LIKE @Raca";
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.Parameters.AddWithValue("@Raca", "%" + _raca + "%");
+
+                cn.Open();
+                using (SqlDataReader rd = cmd.ExecuteReader())
+                {
+                    animal = new Raca();
+                    animal.Id = (int)rd["Id"];
+                    animal.Nome= rd["Nome"].ToString();
+                    animal.Especie = rd["Cor"].ToString();
+                    animal.PaisOrigem = rd["Idade"].ToString();
+                  
+                    animalList.Add(animal);
+                }
+                return animalList;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu um erro ao tentar buscar animal por raça por nome no banco de dados", ex) { Data = { { "Id", 24 } } };
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
+        public 
     }
 }
