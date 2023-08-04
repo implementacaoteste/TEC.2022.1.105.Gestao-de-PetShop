@@ -27,14 +27,14 @@ namespace GestaoPetShop
 
         private void FormCadastroAgendamento_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'petshopDataSet.Situacao' table. You can move, or remove it, as needed.
-            this.situacaoTableAdapter.Fill(this.petshopDataSet.Situacao);
-            // TODO: This line of code loads data into the 'petshopDataSet.Profissional' table. You can move, or remove it, as needed.
-            this.profissionalTableAdapter.Fill(this.petshopDataSet.Profissional);
-            // TODO: This line of code loads data into the 'petshopDataSet.Animal' table. You can move, or remove it, as needed.
-            this.animalTableAdapter.Fill(this.petshopDataSet.Animal);
-            // TODO: This line of code loads data into the 'petshopDataSet.Agendamento' table. You can move, or remove it, as needed.
-            this.agendamentoTableAdapter.Fill(this.petshopDataSet.Agendamento);
+            //// TODO: This line of code loads data into the 'petshopDataSet.Situacao' table. You can move, or remove it, as needed.
+            //this.situacaoTableAdapter.Fill(this.petshopDataSet.Situacao);
+            //// TODO: This line of code loads data into the 'petshopDataSet.Profissional' table. You can move, or remove it, as needed.
+            //this.profissionalTableAdapter.Fill(this.petshopDataSet.Profissional);
+            //// TODO: This line of code loads data into the 'petshopDataSet.Animal' table. You can move, or remove it, as needed.
+            //this.animalTableAdapter.Fill(this.petshopDataSet.Animal);
+            //// TODO: This line of code loads data into the 'petshopDataSet.Agendamento' table. You can move, or remove it, as needed.
+            //this.agendamentoTableAdapter.Fill(this.petshopDataSet.Agendamento);
 
         }
     }

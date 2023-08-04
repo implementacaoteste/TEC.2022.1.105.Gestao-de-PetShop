@@ -37,8 +37,6 @@
             this.button_AlterarAgendamentos = new System.Windows.Forms.Button();
             this.button_ExcluirAgendamento = new System.Windows.Forms.Button();
             this.dataGridView1_FormsPrincipalDataGridView = new System.Windows.Forms.DataGridView();
-            this.textBox_BuscarData = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,6 +45,8 @@
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridView1_FormsPrincipalBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.textBox_BuscarData = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.agendamentoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1_FormsPrincipalDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1_FormsPrincipalBindingSource)).BeginInit();
@@ -101,6 +101,7 @@
             this.button_InserirAgendamentos.TabIndex = 11;
             this.button_InserirAgendamentos.Text = "Cadastrar";
             this.button_InserirAgendamentos.UseVisualStyleBackColor = true;
+            this.button_InserirAgendamentos.Click += new System.EventHandler(this.button_InserirAgendamentos_Click);
             // 
             // button_AlterarAgendamentos
             // 
@@ -144,22 +145,6 @@
             this.dataGridView1_FormsPrincipalDataGridView.RowTemplate.Height = 24;
             this.dataGridView1_FormsPrincipalDataGridView.Size = new System.Drawing.Size(758, 308);
             this.dataGridView1_FormsPrincipalDataGridView.TabIndex = 13;
-            // 
-            // textBox_BuscarData
-            // 
-            this.textBox_BuscarData.Location = new System.Drawing.Point(139, 130);
-            this.textBox_BuscarData.Name = "textBox_BuscarData";
-            this.textBox_BuscarData.Size = new System.Drawing.Size(100, 22);
-            this.textBox_BuscarData.TabIndex = 14;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(89, 133);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(36, 16);
-            this.label2.TabIndex = 15;
-            this.label2.Text = "Data";
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -228,6 +213,22 @@
             // dataGridView1_FormsPrincipalBindingSource
             // 
             this.dataGridView1_FormsPrincipalBindingSource.DataSource = typeof(Models.DataGridView1_FormsPrincipal);
+            // 
+            // textBox_BuscarData
+            // 
+            this.textBox_BuscarData.Location = new System.Drawing.Point(139, 130);
+            this.textBox_BuscarData.Name = "textBox_BuscarData";
+            this.textBox_BuscarData.Size = new System.Drawing.Size(100, 22);
+            this.textBox_BuscarData.TabIndex = 14;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(89, 133);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(36, 16);
+            this.label2.TabIndex = 15;
+            this.label2.Text = "Data";
             // 
             // agendamentoBindingSource
             // 
