@@ -86,7 +86,10 @@ namespace GestaoPetShop
 
         private void agendamentoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            using (ConsultaAgendamento frm = new ConsultaAgendamento())
+            {
+                frm.ShowDialog();
+            }
         }
 
         private void animalToolStripMenuItem_Click(object sender, EventArgs e)

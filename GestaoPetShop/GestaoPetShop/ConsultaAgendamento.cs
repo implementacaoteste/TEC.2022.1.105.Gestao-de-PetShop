@@ -27,14 +27,14 @@ namespace GestaoPetShop
                 if (comboBox_SelecionarTipoBusca.SelectedIndex == 0)
                 {
 
-                    dataGridView1_FormsPrincipalBindingSource.DataSource = agendamentoBLL.BuscarTodos();
+                    dataGridView1_FormsPrincipalBindingSource.DataSource = agendamentoBLL.DataGridViewBuscarTodos();
                 }
 
                 else if (comboBox_SelecionarTipoBusca.SelectedIndex == 1)
                 {
 
 
-                    dataGridView1_FormsPrincipalBindingSource.DataSource = agendamentoBLL.BuscarPorId(Convert.ToInt32(textBox_BuscarAgendamento.Text));
+                    dataGridView1_FormsPrincipalBindingSource.DataSource = agendamentoBLL.DataGridViewBuscarPorId(Convert.ToInt32(textBox_BuscarAgendamento.Text));
 
                 }
                 else if (comboBox_SelecionarTipoBusca.SelectedIndex == 2)
@@ -54,6 +54,14 @@ namespace GestaoPetShop
             {
 
                 MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void button_InserirAgendamentos_Click(object sender, EventArgs e)
+        {
+            using(FormCadastroAgendamento frm = new FormCadastroAgendamento())
+            {
+                frm.ShowDialog();
             }
         }
     }
