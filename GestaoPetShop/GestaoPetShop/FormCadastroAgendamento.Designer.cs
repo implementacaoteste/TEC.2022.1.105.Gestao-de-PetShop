@@ -59,7 +59,6 @@
             this.ativoCheckBox = new System.Windows.Forms.CheckBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.situacaoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             idLabel = new System.Windows.Forms.Label();
             idAnimalLabel = new System.Windows.Forms.Label();
             idProfissionalLabel = new System.Windows.Forms.Label();
@@ -233,9 +232,9 @@
             this.groupBox1.Controls.Add(this.totalTextBox);
             this.groupBox1.Controls.Add(ativoLabel);
             this.groupBox1.Controls.Add(this.ativoCheckBox);
-            this.groupBox1.Location = new System.Drawing.Point(12, 61);
+            this.groupBox1.Location = new System.Drawing.Point(494, 61);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(758, 284);
+            this.groupBox1.Size = new System.Drawing.Size(276, 284);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
@@ -331,9 +330,9 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Location = new System.Drawing.Point(12, 368);
+            this.groupBox2.Location = new System.Drawing.Point(494, 368);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(758, 158);
+            this.groupBox2.Size = new System.Drawing.Size(276, 158);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "groupBox2";
@@ -343,20 +342,11 @@
             this.situacaoBindingSource.DataMember = "Situacao";
             this.situacaoBindingSource.DataSource = this.petshopDataSet;
             // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(612, 12);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1.TabIndex = 3;
-            // 
             // FormCadastroAgendamento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(782, 553);
-            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
@@ -401,6 +391,5 @@
         private System.Windows.Forms.BindingSource profissionalBindingSource;
         private petshopDataSetTableAdapters.SituacaoTableAdapter situacaoTableAdapter;
         private System.Windows.Forms.BindingSource situacaoBindingSource;
-        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
