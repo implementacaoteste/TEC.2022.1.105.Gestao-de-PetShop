@@ -8,8 +8,8 @@ namespace Models
 {
     public class Raca
     {
-        public int id { get; set; }
-        public string nome { get; set; }
+        public int Id { get; set; }
+        public string Nome { get; set; }
         public string Especie { get; set; }
         public string PaisOrigem { get; set; }
 
