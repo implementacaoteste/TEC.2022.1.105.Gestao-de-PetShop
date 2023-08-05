@@ -333,6 +333,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormCadastroAgendamento.resx">
       <DependentUpon>FormCadastroAgendamento.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="FormCadastroCliente.resx">
       <DependentUpon>FormCadastroCliente.cs</DependentUpon>

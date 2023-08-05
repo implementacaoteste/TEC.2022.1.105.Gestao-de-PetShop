@@ -145,14 +145,14 @@ namespace DAL
                         cliente.Nome = rd["Nome"].ToString();
                         cliente.CPF = (int)rd["CPF"];
                         cliente.Logradouro = rd["Logradouro"].ToString();
-                        cliente.Numero = (int)rd["Numero"];
+                        cliente.Numero = rd["Numero"].ToString();
                         cliente.Bairro = rd["Bairro"].ToString();
                         cliente.Cidade = rd["Cidade"].ToString();
                         cliente.UF = rd["UF"].ToString();
                         cliente.Pais = rd["Pais"].ToString();
                         cliente.CEP = (int)rd["CEP"];
                         cliente.DataNascimento = (int)rd["DataNascimento"]; //verificar
-                        cliente.Foto = (byte)rd["Foto"];
+                        cliente.Foto = (byte[])rd["Foto"];
                         cliente.Ativo = (bool)rd["Ativo"]; //verificar
 
 
@@ -194,14 +194,14 @@ namespace DAL
                         cliente.Nome = rd["Nome"].ToString();
                         cliente.CPF = (int)rd["CPF"];
                         cliente.Logradouro = rd["Logradouro"].ToString();
-                        cliente.Numero = (int)rd["Numero"];
+                        cliente.Numero =rd["Numero"].ToString();
                         cliente.Bairro = rd["Bairro"].ToString();
                         cliente.Cidade = rd["Cidade"].ToString();
                         cliente.UF = rd["UF"].ToString();
                         cliente.Pais = rd["Pais"].ToString();
                         cliente.CEP = (int)rd["CEP"];
                         cliente.DataNascimento = (int)rd["DataNascimento"]; //verificar
-                        cliente.Foto = (byte)rd["Foto"];
+                        cliente.Foto = (byte[])rd["Foto"];
                         cliente.Ativo = (bool)rd["Ativo"]; //verificar
 
 
@@ -240,14 +240,14 @@ namespace DAL
                         cliente.Nome = rd["Nome"].ToString();
                         cliente.CPF = (int)rd["CPF"];
                         cliente.Logradouro = rd["Logradouro"].ToString();
-                        cliente.Numero =(int) rd["Numero"];
+                        cliente.Numero = rd["Numero"].ToString();
                         cliente.Bairro = rd["Bairro"].ToString();
                         cliente.Cidade = rd["Cidade"].ToString();
                         cliente.UF = rd["UF"].ToString();
                         cliente.Pais = rd["Pais"].ToString();
                         cliente.CEP = (int)rd["CEP"];
                         cliente.DataNascimento = (int)rd["DataNascimento"]; //verificar
-                        cliente.Foto = (byte)rd["Foto"];
+                        cliente.Foto = (byte[])rd["Foto"];
                         cliente.Ativo = (bool)rd["Ativo"]; //verificar
 
                     }
@@ -284,14 +284,14 @@ namespace DAL
                         cliente.Nome = rd["Nome"].ToString();
                         cliente.CPF = (int)rd["CPF"];
                         cliente.Logradouro = rd["Logradouro"].ToString();
-                        cliente.Numero = (int)rd["Numero"];
+                        cliente.Numero = rd["Numero"].ToString();
                         cliente.Bairro = rd["Bairro"].ToString();
                         cliente.Cidade = rd["Cidade"].ToString();
                         cliente.UF = rd["UF"].ToString();
                         cliente.Pais = rd["Pais"].ToString();
                         cliente.CEP = (int)rd["CEP"];
                         cliente.DataNascimento = (int)rd["DataNascimento"]; //verificar
-                        cliente.Foto = (byte)rd["Foto"];
+                        cliente.Foto = (byte[])rd["Foto"];
                         cliente.Ativo = (bool)rd["Ativo"]; //verificar
 
                     }
