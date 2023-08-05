@@ -230,6 +230,7 @@
     <Compile Include="ProfissionalDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ServicoDAL.cs" />
+    <Compile Include="SituacaoDAL.cs" />
     <Compile Include="UsuarioDAL.cs" />
   </ItemGroup>
   <ItemGroup>
