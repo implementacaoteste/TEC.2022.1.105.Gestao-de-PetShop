@@ -68,5 +68,45 @@ namespace DAL
                 cn.Close();
             }
         }
+        public List<Raca> BuscarTodos()
+        {
+            List<Raca> racas = new List<Raca>();
+            Raca raca;
+
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = cn;
+                cmd.CommandText = @"SELECT Id, Nome, Especie, PaisOrigem FROM Raca";
+                cmd.CommandType = System.Data.CommandType.Text;
+
+                cn.Open();
+
+                using (SqlDataReader rd = cmd.ExecuteReader())
+                {
+                    while (rd.Read())
+                    {
+                        raca = new Raca();
+                        raca.Id = Convert.ToInt32(rd["Id"]);
+                        raca.Nome = rd["Nome"].ToString();
+                        raca.Especie = rd["Especie"].ToString();
+                        raca.PaisOrigem = rd["PaisOrigem"].ToString();
+
+                        racas.Add(raca);
+                    }
+                }
+                return racas;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu um erro ao tentar buscar todos as raça no banco de dados.", ex) { Data = { { "Id", 200 } } };
+            }
+            finally
+            {
+                cn.Close();
+            }
+        
+        }
     }
 }
