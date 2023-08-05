@@ -51,5 +51,10 @@ namespace BLL
             return agendamentoDAL.DataGridViewBuscarPorId(_idAgendamento);
         }
 
+        public object BuscarPorNomeCliente(string _nomeCliente)
+        {
+            AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
+            return agendamentoDAL.BuscarPorNomeCliente(_nomeCliente);
+        }
     }
 }

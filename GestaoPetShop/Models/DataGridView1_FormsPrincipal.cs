@@ -15,6 +15,7 @@ namespace Models
         public string Horario { get; set; }
         public string Profissional { get; set; }
         public string TelCliente { get; set; }
+        public string Situacao { get; set; }
 
     }
 }
