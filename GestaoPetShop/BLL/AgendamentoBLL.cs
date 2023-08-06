@@ -2,6 +2,7 @@
 using Models;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Security.Cryptography;
@@ -51,10 +52,22 @@ namespace BLL
             return agendamentoDAL.DataGridViewBuscarPorId(_idAgendamento);
         }
 
-        public object BuscarPorNomeCliente(string _nomeCliente)
+        public List<DataGridView1_FormsPrincipal> BuscarPorNomeCliente(string _nomeCliente)
         {
             AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
             return agendamentoDAL.BuscarPorNomeCliente(_nomeCliente);
+        }
+
+        public List<DataGridView1_FormsPrincipal> BuscarPorDiaMesAno(string _diaMesAno)
+        {
+            AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
+            return agendamentoDAL.BuscarPorDiaMesAno(_diaMesAno);
+        }
+
+        public object BuscarPorMesAno(int _opc,string _mesAno)
+        {
+            AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
+            return agendamentoDAL.BuscarPorMesAno(_opc,_mesAno);
         }
     }
 }

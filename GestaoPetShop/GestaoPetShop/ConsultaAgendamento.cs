@@ -67,12 +67,59 @@ namespace GestaoPetShop
                 }
                 else if (comboBox_SelecionarTipoBusca.SelectedIndex == 4)
                 {
-                    if (textBox_BuscarAgendamento.Text == "")
+                    if (textBox_BuscarData.Text == "")
                     {
-                        MessageBox.Show("Insirar o Nome do Cliente para pesquisa");
+                        MessageBox.Show("Insirar o Data para pesquisa");
                         return;
                     }
-                    dataGridView1_FormsPrincipalBindingSource.DataSource = agendamentoBLL.BuscarPorNomeCliente(textBox_BuscarAgendamento.Text);
+                    dataGridView1_FormsPrincipalBindingSource.DataSource = agendamentoBLL.BuscarPorDiaMesAno(textBox_BuscarData.Text);
+
+                }
+                else if (comboBox_SelecionarTipoBusca.SelectedIndex == 5 )
+                {
+                    if (textBox_BuscarData.Text == "")
+                    {
+                        MessageBox.Show("Insirar o Data para pesquisa");
+                        return;
+                    }
+                    int opc = 5;
+                    string qtd = textBox_BuscarData.Text;
+                    int num = qtd.Count();
+                    if (num == 7)
+                    {
+                        qtd = "01/" + textBox_BuscarData.Text;
+                    }
+                    else
+                    {
+                        qtd = textBox_BuscarData.Text;
+                    }
+                    dataGridView1_FormsPrincipalBindingSource.DataSource = agendamentoBLL.BuscarPorMesAno(opc,qtd);
+
+                }
+                else if (comboBox_SelecionarTipoBusca.SelectedIndex == 6)
+                {
+                    if (textBox_BuscarData.Text == "")
+                    {
+                        MessageBox.Show("Insirar o Data para pesquisa");
+                        return;
+                    }
+                    int opc = 6;
+                    string qtd = textBox_BuscarData.Text;
+                    int num = qtd.Count();
+                    if (num == 4)
+                    {
+                        qtd = "01/01/" + textBox_BuscarData.Text;
+                    }
+                    else if(num > 4 && num < 10)
+                    {
+                        MessageBox.Show("Insira o ano que deseja pesquisar");
+                        textBox_BuscarData.Clear();
+                    }
+                    else
+                    {
+                        qtd = textBox_BuscarData.Text;
+                    }
+                    dataGridView1_FormsPrincipalBindingSource.DataSource = agendamentoBLL.BuscarPorMesAno(opc,qtd);
 
                 }
                 else

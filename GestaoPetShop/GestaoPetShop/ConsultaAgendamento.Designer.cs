@@ -38,9 +38,10 @@
             this.button_ExcluirAgendamento = new System.Windows.Forms.Button();
             this.textBox_BuscarData = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.dataGridView1_FormsPrincipalBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.agendamentoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridView1_FormsPrincipalDataGridView = new System.Windows.Forms.DataGridView();
+            this.button_AbrirCalendario = new System.Windows.Forms.Button();
+            this.monthCalendar_Agendamento = new System.Windows.Forms.MonthCalendar();
+            this.button_SelecionarData = new System.Windows.Forms.Button();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,21 +49,21 @@
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button_AbrirCalendario = new System.Windows.Forms.Button();
-            this.monthCalendar_Agendamento = new System.Windows.Forms.MonthCalendar();
-            this.button_SelecionarData = new System.Windows.Forms.Button();
+            this.dataGridView1_FormsPrincipalBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.agendamentoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1_FormsPrincipalDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1_FormsPrincipalBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.agendamentoBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1_FormsPrincipalDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(272, 9);
+            this.label1.Location = new System.Drawing.Point(258, 9);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(309, 29);
+            this.label1.Size = new System.Drawing.Size(244, 24);
             this.label1.TabIndex = 7;
             this.label1.Text = "Consulta de Agendamentos";
             // 
@@ -74,25 +75,30 @@
             "Id",
             "Nome Animal",
             "Nome Cliente",
-            "Dia/Mês/Ano"});
-            this.comboBox_SelecionarTipoBusca.Location = new System.Drawing.Point(12, 99);
+            "Dia/Mês/Ano",
+            "Mês/Ano",
+            "Ano"});
+            this.comboBox_SelecionarTipoBusca.Location = new System.Drawing.Point(9, 80);
+            this.comboBox_SelecionarTipoBusca.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBox_SelecionarTipoBusca.Name = "comboBox_SelecionarTipoBusca";
-            this.comboBox_SelecionarTipoBusca.Size = new System.Drawing.Size(121, 24);
+            this.comboBox_SelecionarTipoBusca.Size = new System.Drawing.Size(92, 21);
             this.comboBox_SelecionarTipoBusca.TabIndex = 8;
             this.comboBox_SelecionarTipoBusca.Text = "Buscar por";
             // 
             // textBox_BuscarAgendamento
             // 
-            this.textBox_BuscarAgendamento.Location = new System.Drawing.Point(139, 101);
+            this.textBox_BuscarAgendamento.Location = new System.Drawing.Point(104, 82);
+            this.textBox_BuscarAgendamento.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_BuscarAgendamento.Name = "textBox_BuscarAgendamento";
-            this.textBox_BuscarAgendamento.Size = new System.Drawing.Size(288, 22);
+            this.textBox_BuscarAgendamento.Size = new System.Drawing.Size(217, 20);
             this.textBox_BuscarAgendamento.TabIndex = 9;
             // 
             // button_BuscarAgendamentos
             // 
-            this.button_BuscarAgendamentos.Location = new System.Drawing.Point(433, 100);
+            this.button_BuscarAgendamentos.Location = new System.Drawing.Point(325, 81);
+            this.button_BuscarAgendamentos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button_BuscarAgendamentos.Name = "button_BuscarAgendamentos";
-            this.button_BuscarAgendamentos.Size = new System.Drawing.Size(75, 23);
+            this.button_BuscarAgendamentos.Size = new System.Drawing.Size(56, 19);
             this.button_BuscarAgendamentos.TabIndex = 10;
             this.button_BuscarAgendamentos.Text = "Buscar";
             this.button_BuscarAgendamentos.UseVisualStyleBackColor = true;
@@ -100,9 +106,10 @@
             // 
             // button_InserirAgendamentos
             // 
-            this.button_InserirAgendamentos.Location = new System.Drawing.Point(513, 101);
+            this.button_InserirAgendamentos.Location = new System.Drawing.Point(385, 82);
+            this.button_InserirAgendamentos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button_InserirAgendamentos.Name = "button_InserirAgendamentos";
-            this.button_InserirAgendamentos.Size = new System.Drawing.Size(75, 23);
+            this.button_InserirAgendamentos.Size = new System.Drawing.Size(56, 19);
             this.button_InserirAgendamentos.TabIndex = 11;
             this.button_InserirAgendamentos.Text = "Cadastrar";
             this.button_InserirAgendamentos.UseVisualStyleBackColor = true;
@@ -110,45 +117,41 @@
             // 
             // button_AlterarAgendamentos
             // 
-            this.button_AlterarAgendamentos.Location = new System.Drawing.Point(594, 101);
+            this.button_AlterarAgendamentos.Location = new System.Drawing.Point(446, 82);
+            this.button_AlterarAgendamentos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button_AlterarAgendamentos.Name = "button_AlterarAgendamentos";
-            this.button_AlterarAgendamentos.Size = new System.Drawing.Size(75, 23);
+            this.button_AlterarAgendamentos.Size = new System.Drawing.Size(56, 19);
             this.button_AlterarAgendamentos.TabIndex = 12;
             this.button_AlterarAgendamentos.Text = "Alterar";
             this.button_AlterarAgendamentos.UseVisualStyleBackColor = true;
             // 
             // button_ExcluirAgendamento
             // 
-            this.button_ExcluirAgendamento.Location = new System.Drawing.Point(675, 101);
+            this.button_ExcluirAgendamento.Location = new System.Drawing.Point(506, 82);
+            this.button_ExcluirAgendamento.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button_ExcluirAgendamento.Name = "button_ExcluirAgendamento";
-            this.button_ExcluirAgendamento.Size = new System.Drawing.Size(75, 23);
+            this.button_ExcluirAgendamento.Size = new System.Drawing.Size(56, 19);
             this.button_ExcluirAgendamento.TabIndex = 13;
             this.button_ExcluirAgendamento.Text = "Excluir";
             this.button_ExcluirAgendamento.UseVisualStyleBackColor = true;
             // 
             // textBox_BuscarData
             // 
-            this.textBox_BuscarData.Location = new System.Drawing.Point(139, 130);
+            this.textBox_BuscarData.Location = new System.Drawing.Point(104, 106);
+            this.textBox_BuscarData.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_BuscarData.Name = "textBox_BuscarData";
-            this.textBox_BuscarData.Size = new System.Drawing.Size(100, 22);
+            this.textBox_BuscarData.Size = new System.Drawing.Size(76, 20);
             this.textBox_BuscarData.TabIndex = 14;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(89, 133);
+            this.label2.Location = new System.Drawing.Point(67, 108);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(36, 16);
+            this.label2.Size = new System.Drawing.Size(30, 13);
             this.label2.TabIndex = 15;
             this.label2.Text = "Data";
-            // 
-            // dataGridView1_FormsPrincipalBindingSource
-            // 
-            this.dataGridView1_FormsPrincipalBindingSource.DataSource = typeof(Models.DataGridView1_FormsPrincipal);
-            // 
-            // agendamentoBindingSource
-            // 
-            this.agendamentoBindingSource.DataSource = typeof(Models.Agendamento);
             // 
             // dataGridView1_FormsPrincipalDataGridView
             // 
@@ -166,14 +169,45 @@
             this.dataGridViewTextBoxColumn6,
             this.dataGridViewTextBoxColumn8});
             this.dataGridView1_FormsPrincipalDataGridView.DataSource = this.dataGridView1_FormsPrincipalBindingSource;
-            this.dataGridView1_FormsPrincipalDataGridView.Location = new System.Drawing.Point(12, 175);
+            this.dataGridView1_FormsPrincipalDataGridView.Location = new System.Drawing.Point(11, 212);
+            this.dataGridView1_FormsPrincipalDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView1_FormsPrincipalDataGridView.Name = "dataGridView1_FormsPrincipalDataGridView";
             this.dataGridView1_FormsPrincipalDataGridView.ReadOnly = true;
             this.dataGridView1_FormsPrincipalDataGridView.RowHeadersVisible = false;
             this.dataGridView1_FormsPrincipalDataGridView.RowHeadersWidth = 51;
             this.dataGridView1_FormsPrincipalDataGridView.RowTemplate.Height = 24;
-            this.dataGridView1_FormsPrincipalDataGridView.Size = new System.Drawing.Size(758, 284);
+            this.dataGridView1_FormsPrincipalDataGridView.Size = new System.Drawing.Size(762, 338);
             this.dataGridView1_FormsPrincipalDataGridView.TabIndex = 15;
+            // 
+            // button_AbrirCalendario
+            // 
+            this.button_AbrirCalendario.Location = new System.Drawing.Point(194, 106);
+            this.button_AbrirCalendario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button_AbrirCalendario.Name = "button_AbrirCalendario";
+            this.button_AbrirCalendario.Size = new System.Drawing.Size(74, 19);
+            this.button_AbrirCalendario.TabIndex = 16;
+            this.button_AbrirCalendario.Text = "Calendário";
+            this.button_AbrirCalendario.UseVisualStyleBackColor = true;
+            this.button_AbrirCalendario.Click += new System.EventHandler(this.button_AbrirCalendario_Click);
+            // 
+            // monthCalendar_Agendamento
+            // 
+            this.monthCalendar_Agendamento.Location = new System.Drawing.Point(290, 106);
+            this.monthCalendar_Agendamento.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.monthCalendar_Agendamento.Name = "monthCalendar_Agendamento";
+            this.monthCalendar_Agendamento.TabIndex = 17;
+            this.monthCalendar_Agendamento.Visible = false;
+            // 
+            // button_SelecionarData
+            // 
+            this.button_SelecionarData.Location = new System.Drawing.Point(358, 275);
+            this.button_SelecionarData.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button_SelecionarData.Name = "button_SelecionarData";
+            this.button_SelecionarData.Size = new System.Drawing.Size(74, 19);
+            this.button_SelecionarData.TabIndex = 18;
+            this.button_SelecionarData.Text = "Selecionar";
+            this.button_SelecionarData.UseVisualStyleBackColor = true;
+            this.button_SelecionarData.Click += new System.EventHandler(this.button_SelecionarData_Click);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -244,38 +278,19 @@
             this.dataGridViewTextBoxColumn8.ReadOnly = true;
             this.dataGridViewTextBoxColumn8.Width = 125;
             // 
-            // button_AbrirCalendario
+            // dataGridView1_FormsPrincipalBindingSource
             // 
-            this.button_AbrirCalendario.Location = new System.Drawing.Point(258, 130);
-            this.button_AbrirCalendario.Name = "button_AbrirCalendario";
-            this.button_AbrirCalendario.Size = new System.Drawing.Size(99, 23);
-            this.button_AbrirCalendario.TabIndex = 16;
-            this.button_AbrirCalendario.Text = "Calendário";
-            this.button_AbrirCalendario.UseVisualStyleBackColor = true;
-            this.button_AbrirCalendario.Click += new System.EventHandler(this.button_AbrirCalendario_Click);
+            this.dataGridView1_FormsPrincipalBindingSource.DataSource = typeof(Models.DataGridView1_FormsPrincipal);
             // 
-            // monthCalendar_Agendamento
+            // agendamentoBindingSource
             // 
-            this.monthCalendar_Agendamento.Location = new System.Drawing.Point(386, 130);
-            this.monthCalendar_Agendamento.Name = "monthCalendar_Agendamento";
-            this.monthCalendar_Agendamento.TabIndex = 17;
-            this.monthCalendar_Agendamento.Visible = false;
-            // 
-            // button_SelecionarData
-            // 
-            this.button_SelecionarData.Location = new System.Drawing.Point(478, 338);
-            this.button_SelecionarData.Name = "button_SelecionarData";
-            this.button_SelecionarData.Size = new System.Drawing.Size(98, 23);
-            this.button_SelecionarData.TabIndex = 18;
-            this.button_SelecionarData.Text = "Selecionar";
-            this.button_SelecionarData.UseVisualStyleBackColor = true;
-            this.button_SelecionarData.Click += new System.EventHandler(this.button_SelecionarData_Click);
+            this.agendamentoBindingSource.DataSource = typeof(Models.Agendamento);
             // 
             // ConsultaAgendamento
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(782, 553);
+            this.ClientSize = new System.Drawing.Size(784, 561);
             this.Controls.Add(this.button_SelecionarData);
             this.Controls.Add(this.monthCalendar_Agendamento);
             this.Controls.Add(this.button_AbrirCalendario);
@@ -289,13 +304,14 @@
             this.Controls.Add(this.textBox_BuscarAgendamento);
             this.Controls.Add(this.comboBox_SelecionarTipoBusca);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ConsultaAgendamento";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consulta Agendamento";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1_FormsPrincipalDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1_FormsPrincipalBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.agendamentoBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1_FormsPrincipalDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

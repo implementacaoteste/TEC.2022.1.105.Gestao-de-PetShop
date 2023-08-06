@@ -4,11 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace Models
 {
     public class DataGridView1_FormsPrincipal
     {
-        public string DataAg { get; set; }
+        public DateTime DataAg { get; set; }
         public string NomeAnimal { get; set; }
         public string NomeCliente { get; set; }
         public string Servico { get; set; }

@@ -274,7 +274,7 @@ namespace DAL
                     while (rd.Read())
                     {
                         agendamentosView = new DataGridView1_FormsPrincipal();
-                        agendamentosView.DataAg = rd["DataAg"].ToString();
+                        agendamentosView.DataAg = Convert.ToDateTime(rd["DataAg"]);
                         agendamentosView.NomeAnimal = rd["N_Animal"].ToString();
                         agendamentosView.NomeCliente = rd["N_Cliente"].ToString();
                         agendamentosView.Situacao = rd["DescSituacao"].ToString();
