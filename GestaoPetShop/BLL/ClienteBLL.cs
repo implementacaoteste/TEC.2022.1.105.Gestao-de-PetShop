@@ -9,8 +9,16 @@ namespace BLL
     {
         public void Inserir(Cliente _cliente)
         {
+            ValidarDados(_cliente);
             new ClienteDAL().Inserir(_cliente);
         }
+
+        private void ValidarDados(Cliente _cliente)
+        {
+            if (String.IsNullOrEmpty(_cliente.Nome))
+                throw new Exception("Informe o nome do cliente.");
+        }
+
         public List<Cliente> BuscarTodos()
         {
             return new ClienteDAL().BuscarTodos();
@@ -21,7 +29,7 @@ namespace BLL
         }
         public Cliente BuscarPorId(int _id)
         {
-           return new ClienteDAL().BuscarPorId(_id);
+            return new ClienteDAL().BuscarPorId(_id);
         }
         public Cliente BuscarPorCPF(string _CPF)
         {

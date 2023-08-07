@@ -77,7 +77,7 @@
             // cPFLabel
             // 
             cPFLabel.AutoSize = true;
-            cPFLabel.Location = new System.Drawing.Point(6, 91);
+            cPFLabel.Location = new System.Drawing.Point(305, 49);
             cPFLabel.Name = "cPFLabel";
             cPFLabel.Size = new System.Drawing.Size(33, 16);
             cPFLabel.TabIndex = 3;
@@ -86,7 +86,7 @@
             // rGLabel
             // 
             rGLabel.AutoSize = true;
-            rGLabel.Location = new System.Drawing.Point(232, 92);
+            rGLabel.Location = new System.Drawing.Point(352, 134);
             rGLabel.Name = "rGLabel";
             rGLabel.Size = new System.Drawing.Size(34, 16);
             rGLabel.TabIndex = 5;
@@ -104,7 +104,7 @@
             // emailLabel
             // 
             emailLabel.AutoSize = true;
-            emailLabel.Location = new System.Drawing.Point(412, 92);
+            emailLabel.Location = new System.Drawing.Point(372, 191);
             emailLabel.Name = "emailLabel";
             emailLabel.Size = new System.Drawing.Size(25, 16);
             emailLabel.TabIndex = 9;
@@ -116,13 +116,13 @@
             this.nomeTextBox.Location = new System.Drawing.Point(7, 68);
             this.nomeTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.nomeTextBox.Name = "nomeTextBox";
-            this.nomeTextBox.Size = new System.Drawing.Size(412, 22);
+            this.nomeTextBox.Size = new System.Drawing.Size(294, 22);
             this.nomeTextBox.TabIndex = 2;
             // 
             // cPFTextBox
             // 
             this.cPFTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "CPF", true));
-            this.cPFTextBox.Location = new System.Drawing.Point(8, 110);
+            this.cPFTextBox.Location = new System.Drawing.Point(307, 68);
             this.cPFTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cPFTextBox.Name = "cPFTextBox";
             this.cPFTextBox.Size = new System.Drawing.Size(214, 22);
@@ -131,7 +131,7 @@
             // rGTextBox
             // 
             this.rGTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "CEP", true));
-            this.rGTextBox.Location = new System.Drawing.Point(235, 110);
+            this.rGTextBox.Location = new System.Drawing.Point(355, 152);
             this.rGTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rGTextBox.Name = "rGTextBox";
             this.rGTextBox.Size = new System.Drawing.Size(163, 22);
@@ -149,10 +149,10 @@
             // emailTextBox
             // 
             this.emailTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "UF", true));
-            this.emailTextBox.Location = new System.Drawing.Point(415, 110);
+            this.emailTextBox.Location = new System.Drawing.Point(376, 209);
             this.emailTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.emailTextBox.Name = "emailTextBox";
-            this.emailTextBox.Size = new System.Drawing.Size(50, 22);
+            this.emailTextBox.Size = new System.Drawing.Size(49, 22);
             this.emailTextBox.TabIndex = 10;
             // 
             // label1
@@ -200,6 +200,7 @@
             // 
             // textBox1
             // 
+            this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "Pais", true));
             this.textBox1.Location = new System.Drawing.Point(173, 152);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(176, 22);
@@ -207,16 +208,17 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(355, 152);
+            this.textBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "Bairro", true));
+            this.textBox2.Location = new System.Drawing.Point(215, 108);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(291, 22);
+            this.textBox2.Size = new System.Drawing.Size(269, 22);
             this.textBox2.TabIndex = 15;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(355, 134);
+            this.label3.Location = new System.Drawing.Point(215, 90);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(43, 16);
             this.label3.TabIndex = 16;
@@ -225,6 +227,7 @@
             // 
             // textBox3
             // 
+            this.textBox3.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "Numero", true));
             this.textBox3.Location = new System.Drawing.Point(7, 209);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(100, 22);
@@ -241,7 +244,8 @@
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(136, 208);
+            this.textBox4.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "Logradouro", true));
+            this.textBox4.Location = new System.Drawing.Point(122, 209);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(248, 22);
             this.textBox4.TabIndex = 19;
@@ -249,7 +253,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(134, 192);
+            this.label5.Location = new System.Drawing.Point(120, 193);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(77, 16);
             this.label5.TabIndex = 20;
@@ -257,7 +261,8 @@
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(439, 67);
+            this.textBox5.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "DataNascimento", true));
+            this.textBox5.Location = new System.Drawing.Point(7, 108);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(202, 22);
             this.textBox5.TabIndex = 21;
@@ -265,7 +270,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(444, 49);
+            this.label6.Location = new System.Drawing.Point(12, 90);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(132, 16);
             this.label6.TabIndex = 22;
@@ -274,7 +279,8 @@
             // AtivocheckBox1
             // 
             this.AtivocheckBox1.AutoSize = true;
-            this.AtivocheckBox1.Location = new System.Drawing.Point(7, 259);
+            this.AtivocheckBox1.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.clienteBindingSource, "Ativo", true));
+            this.AtivocheckBox1.Location = new System.Drawing.Point(7, 353);
             this.AtivocheckBox1.Name = "AtivocheckBox1";
             this.AtivocheckBox1.Size = new System.Drawing.Size(59, 20);
             this.AtivocheckBox1.TabIndex = 23;
@@ -284,7 +290,8 @@
             // pictureBoxFoto
             // 
             this.pictureBoxFoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBoxFoto.Location = new System.Drawing.Point(415, 193);
+            this.pictureBoxFoto.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.clienteBindingSource, "Foto", true));
+            this.pictureBoxFoto.Location = new System.Drawing.Point(532, 68);
             this.pictureBoxFoto.Name = "pictureBoxFoto";
             this.pictureBoxFoto.Size = new System.Drawing.Size(113, 125);
             this.pictureBoxFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -293,7 +300,7 @@
             // 
             // buttonBuscarFoto
             // 
-            this.buttonBuscarFoto.Location = new System.Drawing.Point(415, 315);
+            this.buttonBuscarFoto.Location = new System.Drawing.Point(532, 199);
             this.buttonBuscarFoto.Name = "buttonBuscarFoto";
             this.buttonBuscarFoto.Size = new System.Drawing.Size(113, 23);
             this.buttonBuscarFoto.TabIndex = 25;
