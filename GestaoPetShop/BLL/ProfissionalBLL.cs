@@ -14,9 +14,9 @@
         {
             return new ProfissionalDAL().BuscarPorNome(_nome);
         }
-        public void Alterar(Profissional _cliente)
+        public void Alterar(Profissional _profissional)
         {
-            new ProfissionalDAL().Alterar(_cliente);
+            new ProfissionalDAL().Alterar(_profissional);
         }
         public void Excluir(int _id)
         {
