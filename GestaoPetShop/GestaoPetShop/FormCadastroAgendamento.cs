@@ -1,4 +1,5 @@
 ﻿using BLL;
+using Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,27 +19,57 @@ namespace GestaoPetShop
             InitializeComponent();
         }
 
-        private void agendamentoBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.agendamentoBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.petshopDataSet);
+       
 
-        }
+       
 
         private void FormCadastroAgendamento_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'petshopDataSet.Situacao' table. You can move, or remove it, as needed.
-            this.situacaoTableAdapter.Fill(this.petshopDataSet.Situacao);
-            // TODO: This line of code loads data into the 'petshopDataSet.Profissional' table. You can move, or remove it, as needed.
-            this.profissionalTableAdapter.Fill(this.petshopDataSet.Profissional);
-            // TODO: This line of code loads data into the 'petshopDataSet.Animal' table. You can move, or remove it, as needed.
-            this.animalTableAdapter.Fill(this.petshopDataSet.Animal);
-            // TODO: This line of code loads data into the 'petshopDataSet.Agendamento' table. You can move, or remove it, as needed.
-            this.agendamentoTableAdapter.Fill(this.petshopDataSet.Agendamento);
+            try
+            {
 
+                List<DataGridView_Servico> listViewServico = new List<DataGridView_Servico>();
+
+                listViewServico = new AgendamentoBLL().BuscarsServicoPorNome(servicoComboBox.Text);
+                    
+
+                    int num = listViewServico.Count();
+                MessageBox.Show(Convert.ToString(num));
+                    for (int x = 0; x <= num; x++)
+                    {
+                        servicoComboBox.Items.Insert(x, listViewServico[x].Servico);
+                    }
+               
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
         }
 
-        
+        private void servicoComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int quant = 0;
+            quantidadeTextBox.Text = "0";
+            DataGridView_Servico viewServico = new DataGridView_Servico();
+            viewServico = new AgendamentoBLL().PorNome(servicoComboBox.SelectedText);
+            idTextBox.Text = Convert.ToString(viewServico.Id);
+            servicoComboBox.Text = viewServico.Servico;
+            valorUnitarioTextBox.Text = Convert.ToString(viewServico.ValorUnitario);
+            valorComDescontoTextBox.Text = valorUnitarioTextBox.Text;
+             quant = Convert.ToInt32(quantidadeTextBox.Text);
+            decimal valorUni = Convert.ToDecimal(valorComDescontoTextBox.Text);
+            decimal valorT = quant * valorUni;
+            valorTotalTextBox.Text = Convert.ToString(valorT);
+        }
+
+        private void quantidadeTextBox_TextChanged(object sender, EventArgs e)
+        {
+            int quant = Convert.ToInt32(quantidadeTextBox.Text);
+            decimal valorUni = Convert.ToDecimal(valorComDescontoTextBox.Text);
+            decimal valorT = quant * valorUni;
+            valorTotalTextBox.Text = Convert.ToString(valorT);
+        }
     }
 }

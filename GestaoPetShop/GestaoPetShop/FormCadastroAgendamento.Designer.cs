@@ -30,338 +30,563 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label idLabel;
-            System.Windows.Forms.Label idAnimalLabel;
-            System.Windows.Forms.Label idProfissionalLabel;
-            System.Windows.Forms.Label idSituacaoLabel;
-            System.Windows.Forms.Label dataAgLabel;
-            System.Windows.Forms.Label horarioLabel;
-            System.Windows.Forms.Label totalLabel;
-            System.Windows.Forms.Label ativoLabel;
-            this.label1 = new System.Windows.Forms.Label();
+            System.Windows.Forms.Label quantidadeLabel;
+            System.Windows.Forms.Label servicoLabel;
+            System.Windows.Forms.Label valorComDescontoLabel;
+            System.Windows.Forms.Label valorTotalLabel;
+            System.Windows.Forms.Label valorUnitarioLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCadastroAgendamento));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.idTextBox = new System.Windows.Forms.TextBox();
-            this.idAnimalComboBox = new System.Windows.Forms.ComboBox();
-            this.idProfissionalComboBox = new System.Windows.Forms.ComboBox();
-            this.idSituacaoComboBox = new System.Windows.Forms.ComboBox();
-            this.dataAgMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
-            this.horarioMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
-            this.totalTextBox = new System.Windows.Forms.TextBox();
-            this.ativoCheckBox = new System.Windows.Forms.CheckBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.agendamentoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.petshopDataSet = new GestaoPetShop.petshopDataSet();
-            this.animalBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.profissionalBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.agendamentoTableAdapter = new GestaoPetShop.petshopDataSetTableAdapters.AgendamentoTableAdapter();
-            this.tableAdapterManager = new GestaoPetShop.petshopDataSetTableAdapters.TableAdapterManager();
-            this.animalTableAdapter = new GestaoPetShop.petshopDataSetTableAdapters.AnimalTableAdapter();
-            this.profissionalTableAdapter = new GestaoPetShop.petshopDataSetTableAdapters.ProfissionalTableAdapter();
-            this.situacaoTableAdapter = new GestaoPetShop.petshopDataSetTableAdapters.SituacaoTableAdapter();
-            this.animalBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.situacaoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.servicoComboBox = new System.Windows.Forms.ComboBox();
+            this.dataGridView_ServicoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.button_InserirServicoAgendamento = new System.Windows.Forms.Button();
+            this.idTextBox = new System.Windows.Forms.TextBox();
+            this.quantidadeTextBox = new System.Windows.Forms.TextBox();
+            this.valorComDescontoTextBox = new System.Windows.Forms.TextBox();
+            this.valorTotalTextBox = new System.Windows.Forms.TextBox();
+            this.valorUnitarioTextBox = new System.Windows.Forms.TextBox();
+            this.dataGridView_ServicoDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridView_ServicoBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
+            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.dataGridView_ServicoBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             idLabel = new System.Windows.Forms.Label();
-            idAnimalLabel = new System.Windows.Forms.Label();
-            idProfissionalLabel = new System.Windows.Forms.Label();
-            idSituacaoLabel = new System.Windows.Forms.Label();
-            dataAgLabel = new System.Windows.Forms.Label();
-            horarioLabel = new System.Windows.Forms.Label();
-            totalLabel = new System.Windows.Forms.Label();
-            ativoLabel = new System.Windows.Forms.Label();
+            quantidadeLabel = new System.Windows.Forms.Label();
+            servicoLabel = new System.Windows.Forms.Label();
+            valorComDescontoLabel = new System.Windows.Forms.Label();
+            valorTotalLabel = new System.Windows.Forms.Label();
+            valorUnitarioLabel = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.agendamentoBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.petshopDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.animalBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.profissionalBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.animalBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.situacaoBindingSource)).BeginInit();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ServicoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ServicoDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ServicoBindingNavigator)).BeginInit();
+            this.dataGridView_ServicoBindingNavigator.SuspendLayout();
             this.SuspendLayout();
             // 
             // idLabel
             // 
             idLabel.AutoSize = true;
-            idLabel.Location = new System.Drawing.Point(9, 24);
+            idLabel.Location = new System.Drawing.Point(14, 31);
             idLabel.Name = "idLabel";
-            idLabel.Size = new System.Drawing.Size(21, 16);
-            idLabel.TabIndex = 0;
+            idLabel.Size = new System.Drawing.Size(19, 13);
+            idLabel.TabIndex = 1;
             idLabel.Text = "Id:";
             // 
-            // idAnimalLabel
+            // quantidadeLabel
             // 
-            idAnimalLabel.AutoSize = true;
-            idAnimalLabel.Location = new System.Drawing.Point(9, 52);
-            idAnimalLabel.Name = "idAnimalLabel";
-            idAnimalLabel.Size = new System.Drawing.Size(65, 16);
-            idAnimalLabel.TabIndex = 2;
-            idAnimalLabel.Text = "Id Animal:";
+            quantidadeLabel.AutoSize = true;
+            quantidadeLabel.Location = new System.Drawing.Point(273, 31);
+            quantidadeLabel.Name = "quantidadeLabel";
+            quantidadeLabel.Size = new System.Drawing.Size(65, 13);
+            quantidadeLabel.TabIndex = 3;
+            quantidadeLabel.Text = "Quantidade:";
             // 
-            // idProfissionalLabel
+            // servicoLabel
             // 
-            idProfissionalLabel.AutoSize = true;
-            idProfissionalLabel.Location = new System.Drawing.Point(9, 82);
-            idProfissionalLabel.Name = "idProfissionalLabel";
-            idProfissionalLabel.Size = new System.Drawing.Size(94, 16);
-            idProfissionalLabel.TabIndex = 4;
-            idProfissionalLabel.Text = "Id Profissional:";
+            servicoLabel.AutoSize = true;
+            servicoLabel.Location = new System.Drawing.Point(93, 31);
+            servicoLabel.Name = "servicoLabel";
+            servicoLabel.Size = new System.Drawing.Size(46, 13);
+            servicoLabel.TabIndex = 5;
+            servicoLabel.Text = "Servico:";
             // 
-            // idSituacaoLabel
+            // valorComDescontoLabel
             // 
-            idSituacaoLabel.AutoSize = true;
-            idSituacaoLabel.Location = new System.Drawing.Point(9, 112);
-            idSituacaoLabel.Name = "idSituacaoLabel";
-            idSituacaoLabel.Size = new System.Drawing.Size(77, 16);
-            idSituacaoLabel.TabIndex = 6;
-            idSituacaoLabel.Text = "Id Situacao:";
+            valorComDescontoLabel.AutoSize = true;
+            valorComDescontoLabel.Location = new System.Drawing.Point(459, 31);
+            valorComDescontoLabel.Name = "valorComDescontoLabel";
+            valorComDescontoLabel.Size = new System.Drawing.Size(107, 13);
+            valorComDescontoLabel.TabIndex = 7;
+            valorComDescontoLabel.Text = "Valor Com Desconto:";
             // 
-            // dataAgLabel
+            // valorTotalLabel
             // 
-            dataAgLabel.AutoSize = true;
-            dataAgLabel.Location = new System.Drawing.Point(9, 142);
-            dataAgLabel.Name = "dataAgLabel";
-            dataAgLabel.Size = new System.Drawing.Size(59, 16);
-            dataAgLabel.TabIndex = 8;
-            dataAgLabel.Text = "Data Ag:";
+            valorTotalLabel.AutoSize = true;
+            valorTotalLabel.Location = new System.Drawing.Point(577, 31);
+            valorTotalLabel.Name = "valorTotalLabel";
+            valorTotalLabel.Size = new System.Drawing.Size(61, 13);
+            valorTotalLabel.TabIndex = 9;
+            valorTotalLabel.Text = "Valor Total:";
             // 
-            // horarioLabel
+            // valorUnitarioLabel
             // 
-            horarioLabel.AutoSize = true;
-            horarioLabel.Location = new System.Drawing.Point(9, 170);
-            horarioLabel.Name = "horarioLabel";
-            horarioLabel.Size = new System.Drawing.Size(55, 16);
-            horarioLabel.TabIndex = 10;
-            horarioLabel.Text = "Horario:";
-            // 
-            // totalLabel
-            // 
-            totalLabel.AutoSize = true;
-            totalLabel.Location = new System.Drawing.Point(9, 198);
-            totalLabel.Name = "totalLabel";
-            totalLabel.Size = new System.Drawing.Size(41, 16);
-            totalLabel.TabIndex = 12;
-            totalLabel.Text = "Total:";
-            // 
-            // ativoLabel
-            // 
-            ativoLabel.AutoSize = true;
-            ativoLabel.Location = new System.Drawing.Point(9, 228);
-            ativoLabel.Name = "ativoLabel";
-            ativoLabel.Size = new System.Drawing.Size(40, 16);
-            ativoLabel.TabIndex = 14;
-            ativoLabel.Text = "Ativo:";
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(167, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(418, 37);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Cadastro de Agendamento";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            valorUnitarioLabel.AutoSize = true;
+            valorUnitarioLabel.Location = new System.Drawing.Point(368, 31);
+            valorUnitarioLabel.Name = "valorUnitarioLabel";
+            valorUnitarioLabel.Size = new System.Drawing.Size(73, 13);
+            valorUnitarioLabel.TabIndex = 11;
+            valorUnitarioLabel.Text = "Valor Unitario:";
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(idLabel);
-            this.groupBox1.Controls.Add(this.idTextBox);
-            this.groupBox1.Controls.Add(idAnimalLabel);
-            this.groupBox1.Controls.Add(this.idAnimalComboBox);
-            this.groupBox1.Controls.Add(idProfissionalLabel);
-            this.groupBox1.Controls.Add(this.idProfissionalComboBox);
-            this.groupBox1.Controls.Add(idSituacaoLabel);
-            this.groupBox1.Controls.Add(this.idSituacaoComboBox);
-            this.groupBox1.Controls.Add(dataAgLabel);
-            this.groupBox1.Controls.Add(this.dataAgMaskedTextBox);
-            this.groupBox1.Controls.Add(horarioLabel);
-            this.groupBox1.Controls.Add(this.horarioMaskedTextBox);
-            this.groupBox1.Controls.Add(totalLabel);
-            this.groupBox1.Controls.Add(this.totalTextBox);
-            this.groupBox1.Controls.Add(ativoLabel);
-            this.groupBox1.Controls.Add(this.ativoCheckBox);
-            this.groupBox1.Location = new System.Drawing.Point(494, 61);
+            this.groupBox1.Controls.Add(this.textBox3);
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.comboBox4);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.comboBox3);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.comboBox2);
+            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Location = new System.Drawing.Point(5, 25);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(276, 284);
-            this.groupBox1.TabIndex = 1;
+            this.groupBox1.Size = new System.Drawing.Size(771, 203);
+            this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
             // 
-            // idTextBox
+            // textBox3
             // 
-            this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agendamentoBindingSource, "Id", true));
-            this.idTextBox.Location = new System.Drawing.Point(109, 21);
-            this.idTextBox.Name = "idTextBox";
-            this.idTextBox.Size = new System.Drawing.Size(121, 22);
-            this.idTextBox.TabIndex = 1;
+            this.textBox3.Location = new System.Drawing.Point(648, 108);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(100, 20);
+            this.textBox3.TabIndex = 13;
             // 
-            // idAnimalComboBox
+            // label7
             // 
-            this.idAnimalComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.agendamentoBindingSource, "IdAnimal", true));
-            this.idAnimalComboBox.DataSource = this.animalBindingSource1;
-            this.idAnimalComboBox.DisplayMember = "Nome";
-            this.idAnimalComboBox.FormattingEnabled = true;
-            this.idAnimalComboBox.Location = new System.Drawing.Point(109, 49);
-            this.idAnimalComboBox.Name = "idAnimalComboBox";
-            this.idAnimalComboBox.Size = new System.Drawing.Size(121, 24);
-            this.idAnimalComboBox.TabIndex = 3;
-            this.idAnimalComboBox.ValueMember = "Id";
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(556, 111);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(78, 13);
+            this.label7.TabIndex = 12;
+            this.label7.Text = "Valor Total R$:";
             // 
-            // idProfissionalComboBox
+            // label6
             // 
-            this.idProfissionalComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.agendamentoBindingSource, "IdProfissional", true));
-            this.idProfissionalComboBox.DataSource = this.profissionalBindingSource;
-            this.idProfissionalComboBox.DisplayMember = "Nome";
-            this.idProfissionalComboBox.FormattingEnabled = true;
-            this.idProfissionalComboBox.Location = new System.Drawing.Point(109, 79);
-            this.idProfissionalComboBox.Name = "idProfissionalComboBox";
-            this.idProfissionalComboBox.Size = new System.Drawing.Size(121, 24);
-            this.idProfissionalComboBox.TabIndex = 5;
-            this.idProfissionalComboBox.ValueMember = "Id";
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(326, 111);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(85, 13);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "Nome do Cliente";
             // 
-            // idSituacaoComboBox
+            // comboBox4
             // 
-            this.idSituacaoComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agendamentoBindingSource, "IdSituacao", true));
-            this.idSituacaoComboBox.FormattingEnabled = true;
-            this.idSituacaoComboBox.Location = new System.Drawing.Point(109, 109);
-            this.idSituacaoComboBox.Name = "idSituacaoComboBox";
-            this.idSituacaoComboBox.Size = new System.Drawing.Size(121, 24);
-            this.idSituacaoComboBox.TabIndex = 7;
+            this.comboBox4.FormattingEnabled = true;
+            this.comboBox4.Location = new System.Drawing.Point(422, 108);
+            this.comboBox4.Name = "comboBox4";
+            this.comboBox4.Size = new System.Drawing.Size(121, 21);
+            this.comboBox4.TabIndex = 10;
             // 
-            // dataAgMaskedTextBox
+            // label5
             // 
-            this.dataAgMaskedTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agendamentoBindingSource, "DataAg", true));
-            this.dataAgMaskedTextBox.Location = new System.Drawing.Point(109, 139);
-            this.dataAgMaskedTextBox.Mask = "00/00/0000";
-            this.dataAgMaskedTextBox.Name = "dataAgMaskedTextBox";
-            this.dataAgMaskedTextBox.Size = new System.Drawing.Size(121, 22);
-            this.dataAgMaskedTextBox.TabIndex = 9;
-            this.dataAgMaskedTextBox.ValidatingType = typeof(System.DateTime);
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(9, 111);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(84, 13);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "Nome do Animal";
             // 
-            // horarioMaskedTextBox
+            // comboBox3
             // 
-            this.horarioMaskedTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agendamentoBindingSource, "Horario", true));
-            this.horarioMaskedTextBox.Location = new System.Drawing.Point(109, 167);
-            this.horarioMaskedTextBox.Mask = "00:00";
-            this.horarioMaskedTextBox.Name = "horarioMaskedTextBox";
-            this.horarioMaskedTextBox.Size = new System.Drawing.Size(121, 22);
-            this.horarioMaskedTextBox.TabIndex = 11;
-            this.horarioMaskedTextBox.ValidatingType = typeof(System.DateTime);
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(108, 108);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(163, 21);
+            this.comboBox3.TabIndex = 8;
             // 
-            // totalTextBox
+            // label4
             // 
-            this.totalTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agendamentoBindingSource, "Total", true));
-            this.totalTextBox.Location = new System.Drawing.Point(109, 195);
-            this.totalTextBox.Name = "totalTextBox";
-            this.totalTextBox.Size = new System.Drawing.Size(121, 22);
-            this.totalTextBox.TabIndex = 13;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(566, 47);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(49, 13);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Situação";
             // 
-            // ativoCheckBox
+            // comboBox2
             // 
-            this.ativoCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.agendamentoBindingSource, "Ativo", true));
-            this.ativoCheckBox.Location = new System.Drawing.Point(109, 223);
-            this.ativoCheckBox.Name = "ativoCheckBox";
-            this.ativoCheckBox.Size = new System.Drawing.Size(121, 24);
-            this.ativoCheckBox.TabIndex = 15;
-            this.ativoCheckBox.Text = "checkBox1";
-            this.ativoCheckBox.UseVisualStyleBackColor = true;
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(627, 44);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(121, 21);
+            this.comboBox2.TabIndex = 6;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(221, 44);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 20);
+            this.textBox2.TabIndex = 5;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(176, 47);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(41, 13);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Horário";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(360, 47);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(60, 13);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Profissional";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(65, 44);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(20, 47);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(30, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Data";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(421, 44);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 0;
             // 
             // groupBox2
             // 
-            this.groupBox2.Location = new System.Drawing.Point(494, 368);
+            this.groupBox2.Controls.Add(this.servicoComboBox);
+            this.groupBox2.Controls.Add(this.button_InserirServicoAgendamento);
+            this.groupBox2.Controls.Add(idLabel);
+            this.groupBox2.Controls.Add(this.idTextBox);
+            this.groupBox2.Controls.Add(quantidadeLabel);
+            this.groupBox2.Controls.Add(this.quantidadeTextBox);
+            this.groupBox2.Controls.Add(servicoLabel);
+            this.groupBox2.Controls.Add(valorComDescontoLabel);
+            this.groupBox2.Controls.Add(this.valorComDescontoTextBox);
+            this.groupBox2.Controls.Add(valorTotalLabel);
+            this.groupBox2.Controls.Add(this.valorTotalTextBox);
+            this.groupBox2.Controls.Add(valorUnitarioLabel);
+            this.groupBox2.Controls.Add(this.valorUnitarioTextBox);
+            this.groupBox2.Controls.Add(this.dataGridView_ServicoDataGridView);
+            this.groupBox2.Location = new System.Drawing.Point(5, 235);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(276, 158);
-            this.groupBox2.TabIndex = 2;
+            this.groupBox2.Size = new System.Drawing.Size(785, 356);
+            this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "groupBox2";
             // 
-            // agendamentoBindingSource
+            // servicoComboBox
             // 
-            this.agendamentoBindingSource.DataMember = "Agendamento";
-            this.agendamentoBindingSource.DataSource = this.petshopDataSet;
+            this.servicoComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dataGridView_ServicoBindingSource, "Servico", true));
+            this.servicoComboBox.FormattingEnabled = true;
+            this.servicoComboBox.Location = new System.Drawing.Point(56, 47);
+            this.servicoComboBox.Name = "servicoComboBox";
+            this.servicoComboBox.Size = new System.Drawing.Size(214, 21);
+            this.servicoComboBox.TabIndex = 15;
+            this.servicoComboBox.SelectedIndexChanged += new System.EventHandler(this.servicoComboBox_SelectedIndexChanged);
             // 
-            // petshopDataSet
+            // dataGridView_ServicoBindingSource
             // 
-            this.petshopDataSet.DataSetName = "petshopDataSet";
-            this.petshopDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.dataGridView_ServicoBindingSource.DataSource = typeof(Models.DataGridView_Servico);
             // 
-            // animalBindingSource1
+            // button_InserirServicoAgendamento
             // 
-            this.animalBindingSource1.DataMember = "Animal";
-            this.animalBindingSource1.DataSource = this.petshopDataSet;
+            this.button_InserirServicoAgendamento.Location = new System.Drawing.Point(685, 45);
+            this.button_InserirServicoAgendamento.Name = "button_InserirServicoAgendamento";
+            this.button_InserirServicoAgendamento.Size = new System.Drawing.Size(75, 23);
+            this.button_InserirServicoAgendamento.TabIndex = 13;
+            this.button_InserirServicoAgendamento.Text = "Inserir";
+            this.button_InserirServicoAgendamento.UseVisualStyleBackColor = true;
             // 
-            // profissionalBindingSource
+            // idTextBox
             // 
-            this.profissionalBindingSource.DataMember = "Profissional";
-            this.profissionalBindingSource.DataSource = this.petshopDataSet;
+            this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dataGridView_ServicoBindingSource, "Id", true));
+            this.idTextBox.Location = new System.Drawing.Point(6, 47);
+            this.idTextBox.Name = "idTextBox";
+            this.idTextBox.Size = new System.Drawing.Size(44, 20);
+            this.idTextBox.TabIndex = 2;
             // 
-            // agendamentoTableAdapter
+            // quantidadeTextBox
             // 
-            this.agendamentoTableAdapter.ClearBeforeFill = true;
+            this.quantidadeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dataGridView_ServicoBindingSource, "Quantidade", true));
+            this.quantidadeTextBox.Location = new System.Drawing.Point(276, 47);
+            this.quantidadeTextBox.Name = "quantidadeTextBox";
+            this.quantidadeTextBox.Size = new System.Drawing.Size(62, 20);
+            this.quantidadeTextBox.TabIndex = 4;
+            this.quantidadeTextBox.TextChanged += new System.EventHandler(this.quantidadeTextBox_TextChanged);
             // 
-            // tableAdapterManager
+            // valorComDescontoTextBox
             // 
-            this.tableAdapterManager.AgendamentoServicosTableAdapter = null;
-            this.tableAdapterManager.AgendamentoTableAdapter = this.agendamentoTableAdapter;
-            this.tableAdapterManager.AnimalTableAdapter = this.animalTableAdapter;
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.ClienteTableAdapter = null;
-            this.tableAdapterManager.EmailClienteTableAdapter = null;
-            this.tableAdapterManager.EmailProfissionalTableAdapter = null;
-            this.tableAdapterManager.FuncaoPermissaoTableAdapter = null;
-            this.tableAdapterManager.FuncaoTableAdapter = null;
-            this.tableAdapterManager.PermissaoTableAdapter = null;
-            this.tableAdapterManager.ProfissionalTableAdapter = this.profissionalTableAdapter;
-            this.tableAdapterManager.RacaTableAdapter = null;
-            this.tableAdapterManager.ServicoTableAdapter = null;
-            this.tableAdapterManager.SituacaoTableAdapter = this.situacaoTableAdapter;
-            this.tableAdapterManager.TelefoneClienteTableAdapter = null;
-            this.tableAdapterManager.TelefoneProfissionalTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = GestaoPetShop.petshopDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            this.tableAdapterManager.UsuarioTableAdapter = null;
+            this.valorComDescontoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dataGridView_ServicoBindingSource, "ValorComDesconto", true));
+            this.valorComDescontoTextBox.Location = new System.Drawing.Point(462, 47);
+            this.valorComDescontoTextBox.Name = "valorComDescontoTextBox";
+            this.valorComDescontoTextBox.Size = new System.Drawing.Size(100, 20);
+            this.valorComDescontoTextBox.TabIndex = 8;
             // 
-            // animalTableAdapter
+            // valorTotalTextBox
             // 
-            this.animalTableAdapter.ClearBeforeFill = true;
+            this.valorTotalTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dataGridView_ServicoBindingSource, "ValorTotal", true));
+            this.valorTotalTextBox.Location = new System.Drawing.Point(577, 47);
+            this.valorTotalTextBox.Name = "valorTotalTextBox";
+            this.valorTotalTextBox.Size = new System.Drawing.Size(100, 20);
+            this.valorTotalTextBox.TabIndex = 10;
             // 
-            // profissionalTableAdapter
+            // valorUnitarioTextBox
             // 
-            this.profissionalTableAdapter.ClearBeforeFill = true;
+            this.valorUnitarioTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dataGridView_ServicoBindingSource, "ValorUnitario", true));
+            this.valorUnitarioTextBox.Location = new System.Drawing.Point(371, 47);
+            this.valorUnitarioTextBox.Name = "valorUnitarioTextBox";
+            this.valorUnitarioTextBox.Size = new System.Drawing.Size(70, 20);
+            this.valorUnitarioTextBox.TabIndex = 12;
             // 
-            // situacaoTableAdapter
+            // dataGridView_ServicoDataGridView
             // 
-            this.situacaoTableAdapter.ClearBeforeFill = true;
+            this.dataGridView_ServicoDataGridView.AllowUserToAddRows = false;
+            this.dataGridView_ServicoDataGridView.AllowUserToDeleteRows = false;
+            this.dataGridView_ServicoDataGridView.AllowUserToOrderColumns = true;
+            this.dataGridView_ServicoDataGridView.AutoGenerateColumns = false;
+            this.dataGridView_ServicoDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_ServicoDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6});
+            this.dataGridView_ServicoDataGridView.DataSource = this.dataGridView_ServicoBindingSource;
+            this.dataGridView_ServicoDataGridView.Location = new System.Drawing.Point(7, 82);
+            this.dataGridView_ServicoDataGridView.Name = "dataGridView_ServicoDataGridView";
+            this.dataGridView_ServicoDataGridView.ReadOnly = true;
+            this.dataGridView_ServicoDataGridView.RowHeadersVisible = false;
+            this.dataGridView_ServicoDataGridView.Size = new System.Drawing.Size(753, 254);
+            this.dataGridView_ServicoDataGridView.TabIndex = 0;
             // 
-            // animalBindingSource
+            // dataGridViewTextBoxColumn1
             // 
-            this.animalBindingSource.DataMember = "Animal";
-            this.animalBindingSource.DataSource = this.petshopDataSet;
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Id";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 50;
             // 
-            // situacaoBindingSource
+            // dataGridViewTextBoxColumn2
             // 
-            this.situacaoBindingSource.DataMember = "Situacao";
-            this.situacaoBindingSource.DataSource = this.petshopDataSet;
+            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Servico";
+            this.dataGridViewTextBoxColumn2.FillWeight = 300F;
+            this.dataGridViewTextBoxColumn2.HeaderText = "Serviço";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Quantidade";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Quantidade";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "ValorUnitario";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Valor Unitário";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "ValorComDesconto";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Valor com Desconto";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "ValorTotal";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Subtotal";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            // 
+            // dataGridView_ServicoBindingNavigator
+            // 
+            this.dataGridView_ServicoBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.dataGridView_ServicoBindingNavigator.BindingSource = this.dataGridView_ServicoBindingSource;
+            this.dataGridView_ServicoBindingNavigator.CountItem = this.bindingNavigatorCountItem;
+            this.dataGridView_ServicoBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
+            this.dataGridView_ServicoBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bindingNavigatorMoveFirstItem,
+            this.bindingNavigatorMovePreviousItem,
+            this.bindingNavigatorSeparator,
+            this.bindingNavigatorPositionItem,
+            this.bindingNavigatorCountItem,
+            this.bindingNavigatorSeparator1,
+            this.bindingNavigatorMoveNextItem,
+            this.bindingNavigatorMoveLastItem,
+            this.bindingNavigatorSeparator2,
+            this.bindingNavigatorAddNewItem,
+            this.bindingNavigatorDeleteItem,
+            this.dataGridView_ServicoBindingNavigatorSaveItem});
+            this.dataGridView_ServicoBindingNavigator.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView_ServicoBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
+            this.dataGridView_ServicoBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
+            this.dataGridView_ServicoBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
+            this.dataGridView_ServicoBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
+            this.dataGridView_ServicoBindingNavigator.Name = "dataGridView_ServicoBindingNavigator";
+            this.dataGridView_ServicoBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
+            this.dataGridView_ServicoBindingNavigator.Size = new System.Drawing.Size(790, 25);
+            this.dataGridView_ServicoBindingNavigator.TabIndex = 2;
+            this.dataGridView_ServicoBindingNavigator.Text = "bindingNavigator1";
+            // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Text = "Adicionar novo";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 22);
+            this.bindingNavigatorCountItem.Text = "de {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Número total de itens";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Text = "Excluir";
+            // 
+            // bindingNavigatorMoveFirstItem
+            // 
+            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
+            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
+            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveFirstItem.Text = "Mover primeiro";
+            // 
+            // bindingNavigatorMovePreviousItem
+            // 
+            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
+            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
+            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMovePreviousItem.Text = "Mover anterior";
+            // 
+            // bindingNavigatorSeparator
+            // 
+            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
+            // 
+            // bindingNavigatorPositionItem
+            // 
+            this.bindingNavigatorPositionItem.AccessibleName = "Posição";
+            this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
+            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
+            this.bindingNavigatorPositionItem.Text = "0";
+            this.bindingNavigatorPositionItem.ToolTipText = "Posição atual";
+            // 
+            // bindingNavigatorSeparator1
+            // 
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
+            // 
+            // bindingNavigatorMoveNextItem
+            // 
+            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
+            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
+            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveNextItem.Text = "Mover próximo";
+            // 
+            // bindingNavigatorMoveLastItem
+            // 
+            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
+            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
+            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveLastItem.Text = "Mover último";
+            // 
+            // bindingNavigatorSeparator2
+            // 
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
+            // 
+            // dataGridView_ServicoBindingNavigatorSaveItem
+            // 
+            this.dataGridView_ServicoBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.dataGridView_ServicoBindingNavigatorSaveItem.Enabled = false;
+            this.dataGridView_ServicoBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("dataGridView_ServicoBindingNavigatorSaveItem.Image")));
+            this.dataGridView_ServicoBindingNavigatorSaveItem.Name = "dataGridView_ServicoBindingNavigatorSaveItem";
+            this.dataGridView_ServicoBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
+            this.dataGridView_ServicoBindingNavigatorSaveItem.Text = "Salvar Dados";
             // 
             // FormCadastroAgendamento
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(782, 553);
+            this.ClientSize = new System.Drawing.Size(790, 591);
+            this.Controls.Add(this.dataGridView_ServicoBindingNavigator);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.label1);
             this.Name = "FormCadastroAgendamento";
-            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Agendamento";
             this.Load += new System.EventHandler(this.FormCadastroAgendamento_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.agendamentoBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.petshopDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.animalBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.profissionalBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.animalBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.situacaoBindingSource)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ServicoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ServicoDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ServicoBindingNavigator)).EndInit();
+            this.dataGridView_ServicoBindingNavigator.ResumeLayout(false);
+            this.dataGridView_ServicoBindingNavigator.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -369,27 +594,49 @@
 
         #endregion
 
-        private petshopDataSet petshopDataSet;
-        private System.Windows.Forms.BindingSource agendamentoBindingSource;
-        private petshopDataSetTableAdapters.AgendamentoTableAdapter agendamentoTableAdapter;
-        private petshopDataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.Label label1;
-        private petshopDataSetTableAdapters.AnimalTableAdapter animalTableAdapter;
-        private System.Windows.Forms.BindingSource animalBindingSource;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private petshopDataSetTableAdapters.ProfissionalTableAdapter profissionalTableAdapter;
+        private System.Windows.Forms.Button button_InserirServicoAgendamento;
         private System.Windows.Forms.TextBox idTextBox;
-        private System.Windows.Forms.ComboBox idAnimalComboBox;
-        private System.Windows.Forms.BindingSource animalBindingSource1;
-        private System.Windows.Forms.ComboBox idProfissionalComboBox;
-        private System.Windows.Forms.ComboBox idSituacaoComboBox;
-        private System.Windows.Forms.MaskedTextBox dataAgMaskedTextBox;
-        private System.Windows.Forms.MaskedTextBox horarioMaskedTextBox;
-        private System.Windows.Forms.TextBox totalTextBox;
-        private System.Windows.Forms.CheckBox ativoCheckBox;
-        private System.Windows.Forms.BindingSource profissionalBindingSource;
-        private petshopDataSetTableAdapters.SituacaoTableAdapter situacaoTableAdapter;
-        private System.Windows.Forms.BindingSource situacaoBindingSource;
+        private System.Windows.Forms.BindingSource dataGridView_ServicoBindingSource;
+        private System.Windows.Forms.TextBox quantidadeTextBox;
+        private System.Windows.Forms.TextBox valorComDescontoTextBox;
+        private System.Windows.Forms.TextBox valorTotalTextBox;
+        private System.Windows.Forms.TextBox valorUnitarioTextBox;
+        private System.Windows.Forms.DataGridView dataGridView_ServicoDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.BindingNavigator dataGridView_ServicoBindingNavigator;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
+        private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator;
+        private System.Windows.Forms.ToolStripTextBox bindingNavigatorPositionItem;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator1;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
+        private System.Windows.Forms.ToolStripButton dataGridView_ServicoBindingNavigatorSaveItem;
+        private System.Windows.Forms.ComboBox servicoComboBox;
     }
 }

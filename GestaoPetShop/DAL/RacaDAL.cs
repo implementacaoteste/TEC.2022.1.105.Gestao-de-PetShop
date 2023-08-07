@@ -128,6 +128,85 @@ namespace DAL
                 throw new Exception("Ocorreu um erro ao tentar excluir raça no banco de dados.", ex) { Data = { { "Id", 201 } } };
             }
         }
+        public List<Raca> BuscarPorNome(string _nome)
+        {
+            List<Raca> racas = new List<Raca>();
+            Raca raca;
 
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = cn;
+                cmd.CommandText = @"SELECT Id,Nome, Especie, PaisOrigem FROM Raca WHERE UPPER (Nome) LIKE UPPER (@Nome)";
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.Parameters.AddWithValue("@Nome", "%" + _nome + "%");
+                cn.Open();
+
+                using (SqlDataReader rd = cmd.ExecuteReader())
+
+                    while (rd.Read())
+                    {
+                        raca = new Raca();
+                        raca.Id = Convert.ToInt32(rd["Id"]);
+                        raca.Nome = rd["Nome"].ToString();
+                        raca.Especie = rd["Especie"].ToString();
+                        raca.PaisOrigem = rd["PaisOrigem"].ToString();
+
+                        racas.Add(raca);
+                    }
+                return racas;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu um erro ao tentar buscar todos as raças no banco de dados.", ex) { Data = { { "Id", 202 } } };
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
+        public Raca BuscarPorId(int _id)
+        {
+            Raca raca = new Raca();
+
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = cn;
+                cmd.CommandText = @"SELECT Id, Nome, Especie, PaisOrigem, Ativo FROM Raca 
+                                    WHERE Id = @Id";
+                cmd.CommandType = System.Data.CommandType.Text;
+
+                cmd.Parameters.AddWithValue("@Id", _id);
+
+                cn.Open();
+
+                using (SqlDataReader rd = cmd.ExecuteReader())
+                {
+                        if (rd.Read())
+                        {
+                            raca.Id = Convert.ToInt32(rd["Id"]);
+                            raca.Nome = rd["Descricao"].ToString();
+                            raca.Especie = rd["Especie"].ToString();
+                            raca.PaisOrigem = rd["PaisOrigem"].ToString();
+                        }
+                }
+                return raca;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu um erro ao tentar buscar todos as raças no banco de dados ggggggg.", ex) { Data = { { "Id", 203 } } };
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
+        /*public List<Raca> BuscarPorEspecie()
+        {
+
+        }*/
     }
 }

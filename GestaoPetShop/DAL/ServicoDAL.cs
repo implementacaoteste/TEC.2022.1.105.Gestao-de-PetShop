@@ -258,10 +258,10 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT Ag.DataAg,Ag.Horario, Ani.Nome as N_Animal,Cli.Nome as N_Cliente,TC.Telefone, S.Descricao, P.Nome as N_Prof FROM Agendamento Ag LEFT JOIN Profissional P             ON Ag.IdProfissional = P.Id
+                cmd.CommandText = @"SELECT Ag.DataAg,Ag.Horario, Ani.Nome as N_Animal,Cli.Nome as N_Cliente, S.Descricao, P.Nome as N_Prof, Si.Descricao as DescSituacao FROM Agendamento Ag LEFT JOIN Profissional P             ON Ag.IdProfissional = P.Id
                                                                                                                                                                            LEFT JOIN Animal Ani                 ON Ag.IdAnimal = Ani.Id
                                                                                                                                                                            LEFT JOIN Cliente Cli                ON Ani.IdCliente = Cli.Id
-                                                                                                                                                                           LEFT JOIN TelefoneCliente TC         ON Cli.Id = TC.IdCliente
+                                                                                                                                                                           LEFT JOIN Situacao Si                ON Ag.IdSituacao = Si.Id
                                                                                                                                                                            LEFT  JOIN AgendamentoServicos AGS   ON Ag.Id = AGS.IdAgendamento
                                                                                                                                                                            LEFT JOIN Servico S                  ON AGS.IdServico = S.Id 
                                                                                                                                                                            WHERE Ag.DataAg = @data";
@@ -274,10 +274,10 @@ namespace DAL
                     while (rd.Read())
                     {
                         agendamentosView = new DataGridView1_FormsPrincipal();
-                        agendamentosView.DataAg = rd["DataAg"].ToString();
+                        agendamentosView.DataAg = Convert.ToDateTime(rd["DataAg"]);
                         agendamentosView.NomeAnimal = rd["N_Animal"].ToString();
                         agendamentosView.NomeCliente = rd["N_Cliente"].ToString();
-                        agendamentosView.TelCliente = rd["Telefone"].ToString();
+                        agendamentosView.Situacao = rd["DescSituacao"].ToString();
                         agendamentosView.Servico = rd["Descricao"].ToString();
                         agendamentosView.Profissional = rd["N_Prof"].ToString();
                         agendamentosView.Horario = rd["Horario"].ToString();
