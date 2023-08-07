@@ -25,7 +25,7 @@ namespace GestaoPetShop
         {
             try
             {
-                //new UsuarioBLL().Altenticar(textBoxUsuario.Text, textBoxSenha.Text);
+                new UsuarioBLL().Altenticar(textBoxUsuario.Text, textBoxSenha.Text);
                 Logou = true;
                 Close();
             }
@@ -53,5 +53,12 @@ namespace GestaoPetShop
                 buttonEntrar_Click(null, null);
         }
 
+        private void FormLogin_Load(object sender, EventArgs e)
+        {
+#if DEBUG
+            textBoxSenha.Text = "123";
+            textBoxUsuario.Text = "Erisvaldo";
+#endif
+        }
     }
 }

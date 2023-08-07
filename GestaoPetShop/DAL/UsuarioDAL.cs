@@ -84,18 +84,19 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = "SELECT Id, Login, Senha, IdProfissional FROM Usuario WHERE Login = @Login";
+                cmd.CommandText = "SELECT Id, UsuarioLogin, Senha, IdProfissional, Ativo FROM Usuario WHERE UsuarioLogin = @Login";
                 cmd.CommandType = System.Data.CommandType.Text;
-                cmd.Parameters.AddWithValue("@NomeUsuario", _login);
+                cmd.Parameters.AddWithValue("@Login", _login);
                 cn.Open();
                 using (SqlDataReader rd = cmd.ExecuteReader())
                 {
                     if (rd.Read())
                     {
                         usuario.Id = Convert.ToInt32(rd["Id"]);
-                        usuario.Login = rd["Login"].ToString();
+                        usuario.Login = rd["UsuarioLogin"].ToString();
                         usuario.Senha = rd["Senha"].ToString();
                         usuario.IdProfissional = Convert.ToInt32(rd["IdProfissional"]);
+                        usuario.Ativo = Convert.ToBoolean(rd["Ativo"]);
                     }
                 }
                 return usuario;
