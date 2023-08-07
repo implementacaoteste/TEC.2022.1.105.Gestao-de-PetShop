@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Models
+﻿namespace Models
 {
     internal class Profissional
     {
@@ -12,7 +6,7 @@ namespace Models
         public int IdFuncao  { get; set; } 
         public string Nome { get; set; }
         public int CPF { get; set; }
-        public string Largradouro { get; set; }
+        public string Logradouro { get; set; }
         public int Numero { get; set; }
         public string Bairro { get; set; }
         public string Cidade { get; set; }

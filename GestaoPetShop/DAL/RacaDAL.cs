@@ -204,9 +204,45 @@ namespace DAL
                 cn.Close();
             }
         }
-        /*public List<Raca> BuscarPorEspecie()
+        public List<Raca> BuscarPorEspecie(string _especie)
         {
+            List<Raca> racas = new List<Raca>();
+            Raca raca;
 
-        }*/
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = cn;
+                cmd.CommandText = @"SELECT Id, Nome, Especie, PaisOrigem FROM Servico WHERE UPPER (Especie) LIKE UPPER (@Especie)";
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.Parameters.AddWithValue("@Especie", "%" + _especie + "%");
+                cn.Open();
+
+                using (SqlDataReader rd = cmd.ExecuteReader())
+                {
+                    while (rd.Read())
+                    {
+                        raca = new Raca();
+                        raca.Id = Convert.ToInt32(rd["Id"]);
+                        raca.Nome = rd["Nome"].ToString();
+                        raca.Especie = rd["Especie"].ToString();
+                        raca.PaisOrigem = rd["PaisOrigem"].ToString();
+
+                        racas.Add(raca);
+                    }
+                }
+                return racas;
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu um erro ao tentar buscar todos as raças no banco de dados.", ex) { Data = { { "Id", 204 } } };
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
     }
 }
