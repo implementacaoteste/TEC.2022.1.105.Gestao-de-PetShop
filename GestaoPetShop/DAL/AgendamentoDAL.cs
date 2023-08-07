@@ -469,5 +469,93 @@ namespace DAL
                 cn.Close();
             }
         }
+
+        public List<DataGridView_Servico> BuscarsServicoPorNome(string _nomeServico)
+        {
+
+            List<DataGridView_Servico> listaServicos = new List<DataGridView_Servico>();
+           DataGridView_Servico servicoView;
+
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = cn;
+                cmd.CommandText = @"SELECT Id, Descricao, Preco FROM Servico   WHERE UPPER (Descricao) LIKE UPPER (@Nome)";
+
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.Parameters.AddWithValue("@Nome", "%"+_nomeServico+"%");
+                cn.Open();
+
+
+                using (SqlDataReader rd = cmd.ExecuteReader())
+                {
+                    while (rd.Read())
+                    {
+                        servicoView = new DataGridView_Servico();
+                        servicoView.Id = Convert.ToInt32(rd["Id"]);
+                        servicoView.Servico = rd["Descricao"].ToString();
+                        servicoView.ValorUnitario = Convert.ToDecimal (rd["Preco"]);
+                   
+
+
+                        listaServicos.Add(servicoView);
+                    }
+                }
+                return listaServicos;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu um erro ao tentar buscar todos os Serviços no banco de dados.", ex) { Data = { { "Id", 46 } } };
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
+
+        public DataGridView_Servico PorNome(string _selectedText)
+        {
+            
+            DataGridView_Servico servicoView;
+            servicoView = new DataGridView_Servico();
+
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = cn;
+                cmd.CommandText = @"SELECT Id, Descricao, Preco FROM Servico   WHERE UPPER (Descricao) LIKE UPPER (@Nome)";
+
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.Parameters.AddWithValue("@Nome", "%" + _selectedText + "%");
+                cn.Open();
+
+
+                using (SqlDataReader rd = cmd.ExecuteReader())
+                {
+                    while (rd.Read())
+                    {
+                        
+                        servicoView.Id = Convert.ToInt32(rd["Id"]);
+                        servicoView.Servico = rd["Descricao"].ToString();
+                        servicoView.ValorUnitario = Convert.ToDecimal(rd["Preco"]);
+
+
+
+                        
+                    }
+                }
+                return servicoView;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu um erro ao tentar buscar todos os Serviços no banco de dados.", ex) { Data = { { "Id", 46 } } };
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
     }
 }

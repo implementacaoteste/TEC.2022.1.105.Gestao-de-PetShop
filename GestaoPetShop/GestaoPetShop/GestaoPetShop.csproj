@@ -248,6 +248,12 @@
     <Compile Include="FormBuscarUsuario.Designer.cs">
       <DependentUpon>FormBuscarUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormCadastroAgendamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCadastroAgendamento.Designer.cs">
+      <DependentUpon>FormCadastroAgendamento.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormCadastroCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -325,6 +331,9 @@
     <EmbeddedResource Include="FormBuscarUsuario.resx">
       <DependentUpon>FormBuscarUsuario.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormCadastroAgendamento.resx">
+      <DependentUpon>FormCadastroAgendamento.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormCadastroCliente.resx">
       <DependentUpon>FormCadastroCliente.cs</DependentUpon>
     </EmbeddedResource>
@@ -381,6 +390,7 @@
     <None Include="Properties\DataSources\Models.Cliente.datasource" />
     <None Include="Properties\DataSources\Models.Constantes.datasource" />
     <None Include="Properties\DataSources\Models.DataGridView1_FormsPrincipal.datasource" />
+    <None Include="Properties\DataSources\Models.DataGridView_Servico.datasource" />
     <None Include="Properties\DataSources\Models.GrupoUsuario.datasource" />
     <None Include="Properties\DataSources\Models.Permissao.datasource" />
     <None Include="Properties\DataSources\Models.Servico.datasource" />

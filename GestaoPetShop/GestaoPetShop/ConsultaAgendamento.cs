@@ -137,10 +137,10 @@ namespace GestaoPetShop
 
         private void button_InserirAgendamentos_Click(object sender, EventArgs e)
         {
-            //using(FormCadastroAgendamento frm = new FormCadastroAgendamento())
-            //{
-            //    frm.ShowDialog();
-            //}
+            using (FormCadastroAgendamento frm = new FormCadastroAgendamento())
+            {
+                frm.ShowDialog();
+            }
         }
 
         private void button_AbrirCalendario_Click(object sender, EventArgs e)

@@ -17,5 +17,7 @@ namespace Models
         public int Horario { get; set; }
         public int Total { get; set; }
         public bool Ativo { get; set; }
+
+       
     }
 }
