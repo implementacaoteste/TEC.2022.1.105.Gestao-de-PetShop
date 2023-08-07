@@ -230,12 +230,6 @@
     <Compile Include="ConsultaAgendamento.Designer.cs">
       <DependentUpon>ConsultaAgendamento.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormBuscarCliente.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormBuscarCliente.Designer.cs">
-      <DependentUpon>FormBuscarCliente.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormBuscarGrupoUsuario.cs">
       <SubType>Form</SubType>
     </Compile>

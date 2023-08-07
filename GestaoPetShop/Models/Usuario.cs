@@ -8,5 +8,6 @@ namespace Models
         public string Login { get; set; }
         public string Senha { get; set; }
         public int IdProfissional { get; set; }
+        public bool Ativo { get; set; }
     }
 }

@@ -59,13 +59,13 @@ namespace DAL
                                         Logradouro = @Logradouro, 
                                         Numero = @Numero, 
                                         Bairro = @Bairro,
-                                        Cidade @Cidade,
+                                        Cidade = @Cidade,
                                         UF= @UF,
                                         Pais = @Pais,
                                         CEP = @CEP,
                                         DataNascimento = @DataNascimento,   
                                         Foto = @Foto,            
-                                        Ativo = @Ativo,
+                                        Ativo = @Ativo
                                     WHERE Id = @Id";
                 cmd.CommandType = System.Data.CommandType.Text;
 
@@ -143,15 +143,15 @@ namespace DAL
                         cliente = new Cliente();
                         cliente.Id = (int)rd["Id"];
                         cliente.Nome = rd["Nome"].ToString();
-                        cliente.CPF = (int)rd["CPF"];
+                        cliente.CPF = rd["CPF"].ToString();
                         cliente.Logradouro = rd["Logradouro"].ToString();
                         cliente.Numero = rd["Numero"].ToString();
                         cliente.Bairro = rd["Bairro"].ToString();
                         cliente.Cidade = rd["Cidade"].ToString();
                         cliente.UF = rd["UF"].ToString();
                         cliente.Pais = rd["Pais"].ToString();
-                        cliente.CEP = (int)rd["CEP"];
-                        cliente.DataNascimento = (int)rd["DataNascimento"]; //verificar
+                        cliente.CEP = rd["CEP"].ToString();
+                        cliente.DataNascimento = (DateTime)rd["DataNascimento"]; //verificar
                         cliente.Foto = (byte[])rd["Foto"];
                         cliente.Ativo = (bool)rd["Ativo"]; //verificar
 
@@ -192,15 +192,15 @@ namespace DAL
                         cliente = new Cliente();
                         cliente.Id = (int)rd["Id"];
                         cliente.Nome = rd["Nome"].ToString();
-                        cliente.CPF = (int)rd["CPF"];
+                        cliente.CPF = rd["CPF"].ToString();
                         cliente.Logradouro = rd["Logradouro"].ToString();
                         cliente.Numero =rd["Numero"].ToString();
                         cliente.Bairro = rd["Bairro"].ToString();
                         cliente.Cidade = rd["Cidade"].ToString();
                         cliente.UF = rd["UF"].ToString();
                         cliente.Pais = rd["Pais"].ToString();
-                        cliente.CEP = (int)rd["CEP"];
-                        cliente.DataNascimento = (int)rd["DataNascimento"]; //verificar
+                        cliente.CEP = rd["CEP"].ToString();
+                        cliente.DataNascimento = (DateTime)rd["DataNascimento"]; //verificar
                         cliente.Foto = (byte[])rd["Foto"];
                         cliente.Ativo = (bool)rd["Ativo"]; //verificar
 
@@ -238,15 +238,15 @@ namespace DAL
                     {
                         cliente.Id = (int)rd["Id"];
                         cliente.Nome = rd["Nome"].ToString();
-                        cliente.CPF = (int)rd["CPF"];
+                        cliente.CPF = rd["CPF"].ToString();
                         cliente.Logradouro = rd["Logradouro"].ToString();
                         cliente.Numero = rd["Numero"].ToString();
                         cliente.Bairro = rd["Bairro"].ToString();
                         cliente.Cidade = rd["Cidade"].ToString();
                         cliente.UF = rd["UF"].ToString();
                         cliente.Pais = rd["Pais"].ToString();
-                        cliente.CEP = (int)rd["CEP"];
-                        cliente.DataNascimento = (int)rd["DataNascimento"]; //verificar
+                        cliente.CEP = rd["CEP"].ToString();
+                        cliente.DataNascimento = (DateTime)rd["DataNascimento"]; //verificar
                         cliente.Foto = (byte[])rd["Foto"];
                         cliente.Ativo = (bool)rd["Ativo"]; //verificar
 
@@ -282,15 +282,15 @@ namespace DAL
                     {
                         cliente.Id = (int)rd["Id"];
                         cliente.Nome = rd["Nome"].ToString();
-                        cliente.CPF = (int)rd["CPF"];
+                        cliente.CPF = rd["CPF"].ToString();
                         cliente.Logradouro = rd["Logradouro"].ToString();
                         cliente.Numero = rd["Numero"].ToString();
                         cliente.Bairro = rd["Bairro"].ToString();
                         cliente.Cidade = rd["Cidade"].ToString();
                         cliente.UF = rd["UF"].ToString();
                         cliente.Pais = rd["Pais"].ToString();
-                        cliente.CEP = (int)rd["CEP"];
-                        cliente.DataNascimento = (int)rd["DataNascimento"]; //verificar
+                        cliente.CEP = rd["CEP"].ToString();
+                        cliente.DataNascimento = (DateTime)rd["DataNascimento"]; //verificar
                         cliente.Foto = (byte[])rd["Foto"];
                         cliente.Ativo = (bool)rd["Ativo"]; //verificar
 

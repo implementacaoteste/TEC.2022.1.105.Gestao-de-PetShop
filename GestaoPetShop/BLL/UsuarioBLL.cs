@@ -63,10 +63,10 @@ namespace BLL
         }
         public void Altenticar(string _nomeUsuario, string _senha)
         {
-           // Usuario usuario = new UsuarioDAL().BuscarPorNomeUsuario(_nomeUsuario);
-            //if (_senha == usuario.Senha && usuario.Ativo)
-            //    Constantes.IdUsuarioLogado = usuario.Id;
-            //else
+            Usuario usuario = new UsuarioDAL().BuscarPorLogin(_nomeUsuario);
+            if (_senha == usuario.Senha && usuario.Ativo)
+                Constantes.IdUsuarioLogado = usuario.Id;
+            else
                 throw new Exception("Usuario ou senha inválido.");
         }
 
