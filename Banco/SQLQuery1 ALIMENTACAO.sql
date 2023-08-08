@@ -326,8 +326,8 @@ GO
 --cadastro de Agendamento / Servicos
 
 insert into AgendamentoServicos(IdAgendamento,IdServico,Quantidade,ValorUnitario) values (1,2,1,30.00);
-insert into AgendamentoServicos(IdAgendamento,IdServico,Quantidade,ValorUnitario) values (10,4,1,50.00);
-insert into AgendamentoServicos(IdAgendamento,IdServico,Quantidade,ValorUnitario) values (11,6,1,10.00);
+insert into AgendamentoServicos(IdAgendamento,IdServico,Quantidade,ValorUnitario) values (2,1,1,50.00);
+insert into AgendamentoServicos(IdAgendamento,IdServico,Quantidade,ValorUnitario) values (3,3,1,10.00);
 GO
 --SELECT dbo.Cliente.Nome, dbo.Agendamento.IdSituacao, dbo.Animal.Nome AS Animal, dbo.Servico.Descricao, dbo.AgendamentoServicos.Quantidade, dbo.AgendamentoServicos.ValorUnitario, dbo.Agendamento.Total
 --	FROM dbo.Agendamento	INNER JOIN dbo.AgendamentoServicos ON dbo.Agendamento.Id = dbo.AgendamentoServicos.IdAgendamento 
