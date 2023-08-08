@@ -224,7 +224,7 @@
             this.dataGridViewTextBoxColumn14,
             this.dataGridViewImageColumn1,
             this.dataGridViewCheckBoxColumn1});
-            this.clienteDataGridView.DataSource = this.clienteBindingSource1;
+            this.clienteDataGridView.DataSource = this.clienteBindingSource;
             this.clienteDataGridView.Location = new System.Drawing.Point(8, 100);
             this.clienteDataGridView.Name = "clienteDataGridView";
             this.clienteDataGridView.ReadOnly = true;

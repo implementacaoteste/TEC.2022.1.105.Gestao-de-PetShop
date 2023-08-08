@@ -1,11 +1,32 @@
 ﻿using Models;
 using System;
+using System.Collections.Generic;
 using System.Data.SqlClient;
 
 namespace DAL
 {
-    internal class ProfissionalDAL
+    public class ProfissionalDAL
     {
+        public void Alterar(Profissional _profissional)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Profissional> BuscarPorNome(string _nome)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Profissional> BuscarTodos()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Excluir(int _id)
+        {
+            throw new NotImplementedException();
+        }
+
         public void Inserir(Profissional _profissional) 
         {
             SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
