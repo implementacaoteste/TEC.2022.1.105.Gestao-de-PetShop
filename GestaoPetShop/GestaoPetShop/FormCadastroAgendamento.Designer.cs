@@ -51,10 +51,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.descricaoComboBox = new System.Windows.Forms.ComboBox();
+            this.servicoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.textBox_Subtotal = new System.Windows.Forms.TextBox();
             this.textBox_PrecoAplicado = new System.Windows.Forms.TextBox();
             this.textBox_quantidade = new System.Windows.Forms.TextBox();
-            this.servicoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idTextBox = new System.Windows.Forms.TextBox();
             this.precoTextBox = new System.Windows.Forms.TextBox();
             this.button_InserirServicoAgendamento = new System.Windows.Forms.Button();
@@ -66,7 +67,6 @@
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridView_ServicoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.descricaoComboBox = new System.Windows.Forms.ComboBox();
             descricaoLabel = new System.Windows.Forms.Label();
             idLabel = new System.Windows.Forms.Label();
             label = new System.Windows.Forms.Label();
@@ -124,6 +124,15 @@
             label9.Size = new System.Drawing.Size(62, 13);
             label9.TabIndex = 24;
             label9.Text = "Quantidade";
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Location = new System.Drawing.Point(614, 33);
+            label10.Name = "label10";
+            label10.Size = new System.Drawing.Size(46, 13);
+            label10.TabIndex = 27;
+            label10.Text = "Subtotal";
             // 
             // groupBox1
             // 
@@ -287,12 +296,27 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "groupBox2";
             // 
+            // descricaoComboBox
+            // 
+            this.descricaoComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.servicoBindingSource, "Descricao", true));
+            this.descricaoComboBox.FormattingEnabled = true;
+            this.descricaoComboBox.Location = new System.Drawing.Point(69, 50);
+            this.descricaoComboBox.Name = "descricaoComboBox";
+            this.descricaoComboBox.Size = new System.Drawing.Size(221, 21);
+            this.descricaoComboBox.TabIndex = 26;
+            this.descricaoComboBox.SelectedIndexChanged += new System.EventHandler(this.descricaoComboBox_SelectedIndexChanged);
+            // 
+            // servicoBindingSource
+            // 
+            this.servicoBindingSource.DataSource = typeof(Models.Servico);
+            // 
             // textBox_Subtotal
             // 
             this.textBox_Subtotal.Location = new System.Drawing.Point(596, 49);
             this.textBox_Subtotal.Name = "textBox_Subtotal";
             this.textBox_Subtotal.Size = new System.Drawing.Size(83, 20);
             this.textBox_Subtotal.TabIndex = 25;
+            this.textBox_Subtotal.TextChanged += new System.EventHandler(this.textBox_Subtotal_TextChanged);
             // 
             // textBox_PrecoAplicado
             // 
@@ -308,10 +332,6 @@
             this.textBox_quantidade.Size = new System.Drawing.Size(69, 20);
             this.textBox_quantidade.TabIndex = 21;
             this.textBox_quantidade.Text = "1";
-            // 
-            // servicoBindingSource
-            // 
-            this.servicoBindingSource.DataSource = typeof(Models.Servico);
             // 
             // idTextBox
             // 
@@ -408,25 +428,6 @@
             // dataGridView_ServicoBindingSource
             // 
             this.dataGridView_ServicoBindingSource.DataSource = typeof(Models.DataGridView_Servico);
-            // 
-            // descricaoComboBox
-            // 
-            this.descricaoComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.servicoBindingSource, "Descricao", true));
-            this.descricaoComboBox.FormattingEnabled = true;
-            this.descricaoComboBox.Location = new System.Drawing.Point(69, 50);
-            this.descricaoComboBox.Name = "descricaoComboBox";
-            this.descricaoComboBox.Size = new System.Drawing.Size(221, 21);
-            this.descricaoComboBox.TabIndex = 26;
-            this.descricaoComboBox.SelectedIndexChanged += new System.EventHandler(this.descricaoComboBox_SelectedIndexChanged);
-            // 
-            // label10
-            // 
-            label10.AutoSize = true;
-            label10.Location = new System.Drawing.Point(614, 33);
-            label10.Name = "label10";
-            label10.Size = new System.Drawing.Size(46, 13);
-            label10.TabIndex = 27;
-            label10.Text = "Subtotal";
             // 
             // FormCadastroAgendamento
             // 

@@ -61,6 +61,11 @@ namespace GestaoPetShop
 
             servicoBindingSource.DataSource = new AgendamentoBLL().PorNome(descricaoComboBox.SelectedText);
             textBox_PrecoAplicado.Text = precoTextBox.Text;
+        }
+
+        private void textBox_Subtotal_TextChanged(object sender, EventArgs e)
+        {
+           
             precoAplicado = Convert.ToDecimal(textBox_PrecoAplicado.Text);
 
             subtotal = quatidade * precoAplicado;
