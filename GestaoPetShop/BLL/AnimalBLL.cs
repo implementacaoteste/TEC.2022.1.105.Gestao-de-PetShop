@@ -31,7 +31,10 @@ namespace BLL
         {
             return new AnimalDAL().BuscarPorId(_id);
         }
-
-
+        /*public List<Animal> BuscarPorEspecie(string especie)
+        {
+            return new AnimalDAL().BuscarPorEspecie(especie)
+        }*/
+        
     }
 }
