@@ -272,7 +272,7 @@ namespace DAL
                 cn.Close();
             }
         }
-        public List<Raca> BuscarPorEspecie(string _raca)
+        public List<Raca> BuscarPorEspecie(string _especie)
         {
             List<Raca> animalList = new List<Raca>();
             Raca animal = new Raca();
@@ -283,7 +283,7 @@ namespace DAL
                 cmd.Connection = cn;
                 cmd.CommandText = @"SELECT Id, Nome, Especie, PaisOrigem FROM Animal WHERE Nome LIKE @Raca";
                 cmd.CommandType = System.Data.CommandType.Text;
-                cmd.Parameters.AddWithValue("@Raca", "%" + _raca + "%");
+                cmd.Parameters.AddWithValue("@Raca", "%" + _especie + "%");
 
                 cn.Open();
                 using (SqlDataReader rd = cmd.ExecuteReader())
