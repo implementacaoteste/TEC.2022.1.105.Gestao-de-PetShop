@@ -124,6 +124,7 @@ namespace DAL
             }
         }
         public List<Cliente> BuscarTodos()
+
         {
             List<Cliente> clienteList = new List<Cliente>();
             Cliente cliente = new Cliente();
