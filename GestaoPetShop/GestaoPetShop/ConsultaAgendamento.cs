@@ -124,6 +124,19 @@ namespace GestaoPetShop
                     dataGridView1_FormsPrincipalBindingSource.DataSource = agendamentoBLL.BuscarPorMesAno(opc,qtd);
 
                 }
+                //else if (comboBox_SelecionarTipoBusca.SelectedIndex == 7)
+                //{
+                //    string quant = textBox_BuscarData.Text;
+                //    if (textBox_BuscarData.Text == "")
+                //    {
+                //        MessageBox.Show("Insirar o Data para pesquisa");
+                //        return;
+                //    }
+
+                //    dataGridView1_FormsPrincipalBindingSource.DataSource = agendamentoBLL.BuscarsServicoPorAno(textBox_BuscarData.Text);
+
+                //}
+
                 else
                 {
                     MessageBox.Show("Escolha a forma de busca");
