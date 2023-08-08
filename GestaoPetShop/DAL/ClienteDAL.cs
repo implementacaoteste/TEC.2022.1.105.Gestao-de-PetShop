@@ -28,9 +28,9 @@ namespace DAL
                 cmd.Parameters.AddWithValue("@UF", _cliente.UF);
                 cmd.Parameters.AddWithValue("@Pais", _cliente.Pais);
                 cmd.Parameters.AddWithValue("@CEP", _cliente.CEP);
-                cmd.Parameters.AddWithValue("@DataNascimento",_cliente.DataNascimento);
+                cmd.Parameters.AddWithValue("@DataNascimento", _cliente.DataNascimento);
                 cmd.Parameters.AddWithValue("@Foto", _cliente.Foto);
-               cmd.Parameters.AddWithValue("@Ativo",_cliente.Ativo);
+                cmd.Parameters.AddWithValue("@Ativo", _cliente.Ativo);
 
                 cmd.Connection = cn;
                 cn.Open();
@@ -75,9 +75,9 @@ namespace DAL
                 cmd.Parameters.AddWithValue("@Logradouro", _cliente.Logradouro);
                 cmd.Parameters.AddWithValue("@Numero", _cliente.Numero);
                 cmd.Parameters.AddWithValue("@Bairro", _cliente.Bairro);
-                cmd.Parameters.AddWithValue("@Cidade",_cliente.Cidade);
+                cmd.Parameters.AddWithValue("@Cidade", _cliente.Cidade);
                 cmd.Parameters.AddWithValue("@UF", _cliente.UF);
-                cmd.Parameters.AddWithValue("@Pais",_cliente.Pais);
+                cmd.Parameters.AddWithValue("@Pais", _cliente.Pais);
                 cmd.Parameters.AddWithValue("@CEP", _cliente.CEP);
                 cmd.Parameters.AddWithValue("@DataNascimento", _cliente.DataNascimento);
                 cmd.Parameters.AddWithValue("@Foto", _cliente.Foto);
@@ -152,7 +152,10 @@ namespace DAL
                         cliente.Pais = rd["Pais"].ToString();
                         cliente.CEP = rd["CEP"].ToString();
                         cliente.DataNascimento = (DateTime)rd["DataNascimento"]; //verificar
-                        cliente.Foto = (byte[])rd["Foto"];
+
+                        if (!String.IsNullOrEmpty(rd["Foto"].ToString()))
+                            cliente.Foto = (byte[])rd["Foto"];
+
                         cliente.Ativo = (bool)rd["Ativo"]; //verificar
 
 
@@ -194,14 +197,17 @@ namespace DAL
                         cliente.Nome = rd["Nome"].ToString();
                         cliente.CPF = rd["CPF"].ToString();
                         cliente.Logradouro = rd["Logradouro"].ToString();
-                        cliente.Numero =rd["Numero"].ToString();
+                        cliente.Numero = rd["Numero"].ToString();
                         cliente.Bairro = rd["Bairro"].ToString();
                         cliente.Cidade = rd["Cidade"].ToString();
                         cliente.UF = rd["UF"].ToString();
                         cliente.Pais = rd["Pais"].ToString();
                         cliente.CEP = rd["CEP"].ToString();
                         cliente.DataNascimento = (DateTime)rd["DataNascimento"]; //verificar
-                        cliente.Foto = (byte[])rd["Foto"];
+
+                        if (!String.IsNullOrEmpty(rd["Foto"].ToString()))
+                            cliente.Foto = (byte[])rd["Foto"];
+                        
                         cliente.Ativo = (bool)rd["Ativo"]; //verificar
 
 
@@ -212,7 +218,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu um erro ao tentar buscar clientes por nome no banco de dados", ex) { Data = { { "Id", 14  } } };
+                throw new Exception("Ocorreu um erro ao tentar buscar clientes por nome no banco de dados", ex) { Data = { { "Id", 14 } } };
             }
             finally
             {
@@ -247,7 +253,10 @@ namespace DAL
                         cliente.Pais = rd["Pais"].ToString();
                         cliente.CEP = rd["CEP"].ToString();
                         cliente.DataNascimento = (DateTime)rd["DataNascimento"]; //verificar
-                        cliente.Foto = (byte[])rd["Foto"];
+
+                        if (!String.IsNullOrEmpty(rd["Foto"].ToString()))
+                            cliente.Foto = (byte[])rd["Foto"];
+
                         cliente.Ativo = (bool)rd["Ativo"]; //verificar
 
                     }
@@ -291,7 +300,10 @@ namespace DAL
                         cliente.Pais = rd["Pais"].ToString();
                         cliente.CEP = rd["CEP"].ToString();
                         cliente.DataNascimento = (DateTime)rd["DataNascimento"]; //verificar
-                        cliente.Foto = (byte[])rd["Foto"];
+
+                        if (!String.IsNullOrEmpty(rd["Foto"].ToString()))
+                            cliente.Foto = (byte[])rd["Foto"];
+
                         cliente.Ativo = (bool)rd["Ativo"]; //verificar
 
                     }
@@ -307,9 +319,5 @@ namespace DAL
                 cn.Close();
             }
         }
-
-        
-       
-        
     }
 }

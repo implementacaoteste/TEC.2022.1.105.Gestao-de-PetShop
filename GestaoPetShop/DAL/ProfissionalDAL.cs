@@ -1,4 +1,8 @@
-﻿namespace DAL
+﻿using Models;
+using System;
+using System.Data.SqlClient;
+
+namespace DAL
 {
     internal class ProfissionalDAL
     {
@@ -12,7 +16,7 @@
                                     VALUES(@idfuncao, @Nome, @CPF, @Logradouro, @Numero, @Bairro, @Cidade, @UF, @Pais, @CEP, @DataNascimento,@Foto,@Ativo)";
 
                 cmd.CommandType = System.Data.CommandType.Text;
-                cmd.parameters.addwithvalue("@idfuncao", _profissional.idfuncao);
+                cmd.Parameters.AddWithValue("@idfuncao", _profissional.IdFuncao);
                 cmd.Parameters.AddWithValue("@Nome", _profissional.Nome);
                 cmd.Parameters.AddWithValue("@CPF", _profissional.CPF);
                 cmd.Parameters.AddWithValue("@Logradouro", _profissional.Logradouro);
