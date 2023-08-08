@@ -76,7 +76,7 @@ namespace BLL
             return agendamentoDAL.BuscarsServicoPorNome(_nomeServico);
         }
 
-        public DataGridView_Servico PorNome(string _selectedText)
+        public Servico PorNome(string _selectedText)
         {
             AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
             return agendamentoDAL.PorNome(_selectedText);

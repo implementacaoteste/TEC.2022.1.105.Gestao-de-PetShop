@@ -67,11 +67,13 @@ namespace GestaoPetShop
                 }
                 else if (comboBox_SelecionarTipoBusca.SelectedIndex == 4)
                 {
-                    if (textBox_BuscarData.Text == "")
+                    string quant= textBox_BuscarData.Text;
+                    if (textBox_BuscarData.Text == "" )
                     {
                         MessageBox.Show("Insirar o Data para pesquisa");
                         return;
                     }
+                    
                     dataGridView1_FormsPrincipalBindingSource.DataSource = agendamentoBLL.BuscarPorDiaMesAno(textBox_BuscarData.Text);
 
                 }

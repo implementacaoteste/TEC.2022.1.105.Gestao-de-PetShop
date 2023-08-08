@@ -29,13 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.Label descricaoLabel;
             System.Windows.Forms.Label idLabel;
-            System.Windows.Forms.Label quantidadeLabel;
-            System.Windows.Forms.Label servicoLabel;
-            System.Windows.Forms.Label valorComDescontoLabel;
-            System.Windows.Forms.Label valorTotalLabel;
-            System.Windows.Forms.Label valorUnitarioLabel;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCadastroAgendamento));
+            System.Windows.Forms.Label label;
+            System.Windows.Forms.Label label8;
+            System.Windows.Forms.Label label9;
+            System.Windows.Forms.Label label10;
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -52,14 +51,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.servicoComboBox = new System.Windows.Forms.ComboBox();
-            this.dataGridView_ServicoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.button_InserirServicoAgendamento = new System.Windows.Forms.Button();
+            this.textBox_Subtotal = new System.Windows.Forms.TextBox();
+            this.textBox_PrecoAplicado = new System.Windows.Forms.TextBox();
+            this.textBox_quantidade = new System.Windows.Forms.TextBox();
+            this.servicoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idTextBox = new System.Windows.Forms.TextBox();
-            this.quantidadeTextBox = new System.Windows.Forms.TextBox();
-            this.valorComDescontoTextBox = new System.Windows.Forms.TextBox();
-            this.valorTotalTextBox = new System.Windows.Forms.TextBox();
-            this.valorUnitarioTextBox = new System.Windows.Forms.TextBox();
+            this.precoTextBox = new System.Windows.Forms.TextBox();
+            this.button_InserirServicoAgendamento = new System.Windows.Forms.Button();
             this.dataGridView_ServicoDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -67,86 +65,65 @@
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridView_ServicoBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.dataGridView_ServicoBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+            this.dataGridView_ServicoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.descricaoComboBox = new System.Windows.Forms.ComboBox();
+            descricaoLabel = new System.Windows.Forms.Label();
             idLabel = new System.Windows.Forms.Label();
-            quantidadeLabel = new System.Windows.Forms.Label();
-            servicoLabel = new System.Windows.Forms.Label();
-            valorComDescontoLabel = new System.Windows.Forms.Label();
-            valorTotalLabel = new System.Windows.Forms.Label();
-            valorUnitarioLabel = new System.Windows.Forms.Label();
+            label = new System.Windows.Forms.Label();
+            label8 = new System.Windows.Forms.Label();
+            label9 = new System.Windows.Forms.Label();
+            label10 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ServicoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.servicoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ServicoDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ServicoBindingNavigator)).BeginInit();
-            this.dataGridView_ServicoBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ServicoBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // descricaoLabel
+            // 
+            descricaoLabel.AutoSize = true;
+            descricaoLabel.Location = new System.Drawing.Point(66, 34);
+            descricaoLabel.Name = "descricaoLabel";
+            descricaoLabel.Size = new System.Drawing.Size(58, 13);
+            descricaoLabel.TabIndex = 15;
+            descricaoLabel.Text = "Descricao:";
             // 
             // idLabel
             // 
             idLabel.AutoSize = true;
-            idLabel.Location = new System.Drawing.Point(14, 31);
+            idLabel.Location = new System.Drawing.Point(20, 34);
             idLabel.Name = "idLabel";
             idLabel.Size = new System.Drawing.Size(19, 13);
-            idLabel.TabIndex = 1;
+            idLabel.TabIndex = 17;
             idLabel.Text = "Id:";
             // 
-            // quantidadeLabel
+            // label
             // 
-            quantidadeLabel.AutoSize = true;
-            quantidadeLabel.Location = new System.Drawing.Point(273, 31);
-            quantidadeLabel.Name = "quantidadeLabel";
-            quantidadeLabel.Size = new System.Drawing.Size(65, 13);
-            quantidadeLabel.TabIndex = 3;
-            quantidadeLabel.Text = "Quantidade:";
+            label.AutoSize = true;
+            label.Location = new System.Drawing.Point(392, 34);
+            label.Name = "label";
+            label.Size = new System.Drawing.Size(70, 13);
+            label.TabIndex = 19;
+            label.Text = "Valor Unitário";
             // 
-            // servicoLabel
+            // label8
             // 
-            servicoLabel.AutoSize = true;
-            servicoLabel.Location = new System.Drawing.Point(93, 31);
-            servicoLabel.Name = "servicoLabel";
-            servicoLabel.Size = new System.Drawing.Size(46, 13);
-            servicoLabel.TabIndex = 5;
-            servicoLabel.Text = "Servico:";
+            label8.AutoSize = true;
+            label8.Location = new System.Drawing.Point(487, 34);
+            label8.Name = "label8";
+            label8.Size = new System.Drawing.Size(101, 13);
+            label8.TabIndex = 23;
+            label8.Text = "Valor Uni/Desconto";
             // 
-            // valorComDescontoLabel
+            // label9
             // 
-            valorComDescontoLabel.AutoSize = true;
-            valorComDescontoLabel.Location = new System.Drawing.Point(459, 31);
-            valorComDescontoLabel.Name = "valorComDescontoLabel";
-            valorComDescontoLabel.Size = new System.Drawing.Size(107, 13);
-            valorComDescontoLabel.TabIndex = 7;
-            valorComDescontoLabel.Text = "Valor Com Desconto:";
-            // 
-            // valorTotalLabel
-            // 
-            valorTotalLabel.AutoSize = true;
-            valorTotalLabel.Location = new System.Drawing.Point(577, 31);
-            valorTotalLabel.Name = "valorTotalLabel";
-            valorTotalLabel.Size = new System.Drawing.Size(61, 13);
-            valorTotalLabel.TabIndex = 9;
-            valorTotalLabel.Text = "Valor Total:";
-            // 
-            // valorUnitarioLabel
-            // 
-            valorUnitarioLabel.AutoSize = true;
-            valorUnitarioLabel.Location = new System.Drawing.Point(368, 31);
-            valorUnitarioLabel.Name = "valorUnitarioLabel";
-            valorUnitarioLabel.Size = new System.Drawing.Size(73, 13);
-            valorUnitarioLabel.TabIndex = 11;
-            valorUnitarioLabel.Text = "Valor Unitario:";
+            label9.AutoSize = true;
+            label9.Location = new System.Drawing.Point(293, 34);
+            label9.Name = "label9";
+            label9.Size = new System.Drawing.Size(62, 13);
+            label9.TabIndex = 24;
+            label9.Text = "Quantidade";
             // 
             // groupBox1
             // 
@@ -289,19 +266,19 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.servicoComboBox);
-            this.groupBox2.Controls.Add(this.button_InserirServicoAgendamento);
+            this.groupBox2.Controls.Add(label10);
+            this.groupBox2.Controls.Add(this.descricaoComboBox);
+            this.groupBox2.Controls.Add(this.textBox_Subtotal);
+            this.groupBox2.Controls.Add(label9);
+            this.groupBox2.Controls.Add(label8);
+            this.groupBox2.Controls.Add(this.textBox_PrecoAplicado);
+            this.groupBox2.Controls.Add(this.textBox_quantidade);
+            this.groupBox2.Controls.Add(descricaoLabel);
             this.groupBox2.Controls.Add(idLabel);
             this.groupBox2.Controls.Add(this.idTextBox);
-            this.groupBox2.Controls.Add(quantidadeLabel);
-            this.groupBox2.Controls.Add(this.quantidadeTextBox);
-            this.groupBox2.Controls.Add(servicoLabel);
-            this.groupBox2.Controls.Add(valorComDescontoLabel);
-            this.groupBox2.Controls.Add(this.valorComDescontoTextBox);
-            this.groupBox2.Controls.Add(valorTotalLabel);
-            this.groupBox2.Controls.Add(this.valorTotalTextBox);
-            this.groupBox2.Controls.Add(valorUnitarioLabel);
-            this.groupBox2.Controls.Add(this.valorUnitarioTextBox);
+            this.groupBox2.Controls.Add(label);
+            this.groupBox2.Controls.Add(this.precoTextBox);
+            this.groupBox2.Controls.Add(this.button_InserirServicoAgendamento);
             this.groupBox2.Controls.Add(this.dataGridView_ServicoDataGridView);
             this.groupBox2.Location = new System.Drawing.Point(5, 235);
             this.groupBox2.Name = "groupBox2";
@@ -310,69 +287,56 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "groupBox2";
             // 
-            // servicoComboBox
+            // textBox_Subtotal
             // 
-            this.servicoComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dataGridView_ServicoBindingSource, "Servico", true));
-            this.servicoComboBox.FormattingEnabled = true;
-            this.servicoComboBox.Location = new System.Drawing.Point(56, 47);
-            this.servicoComboBox.Name = "servicoComboBox";
-            this.servicoComboBox.Size = new System.Drawing.Size(214, 21);
-            this.servicoComboBox.TabIndex = 15;
-            this.servicoComboBox.SelectedIndexChanged += new System.EventHandler(this.servicoComboBox_SelectedIndexChanged);
+            this.textBox_Subtotal.Location = new System.Drawing.Point(596, 49);
+            this.textBox_Subtotal.Name = "textBox_Subtotal";
+            this.textBox_Subtotal.Size = new System.Drawing.Size(83, 20);
+            this.textBox_Subtotal.TabIndex = 25;
             // 
-            // dataGridView_ServicoBindingSource
+            // textBox_PrecoAplicado
             // 
-            this.dataGridView_ServicoBindingSource.DataSource = typeof(Models.DataGridView_Servico);
+            this.textBox_PrecoAplicado.Location = new System.Drawing.Point(490, 50);
+            this.textBox_PrecoAplicado.Name = "textBox_PrecoAplicado";
+            this.textBox_PrecoAplicado.Size = new System.Drawing.Size(100, 20);
+            this.textBox_PrecoAplicado.TabIndex = 22;
+            // 
+            // textBox_quantidade
+            // 
+            this.textBox_quantidade.Location = new System.Drawing.Point(296, 50);
+            this.textBox_quantidade.Name = "textBox_quantidade";
+            this.textBox_quantidade.Size = new System.Drawing.Size(69, 20);
+            this.textBox_quantidade.TabIndex = 21;
+            this.textBox_quantidade.Text = "1";
+            // 
+            // servicoBindingSource
+            // 
+            this.servicoBindingSource.DataSource = typeof(Models.Servico);
+            // 
+            // idTextBox
+            // 
+            this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.servicoBindingSource, "Id", true));
+            this.idTextBox.Location = new System.Drawing.Point(7, 50);
+            this.idTextBox.Name = "idTextBox";
+            this.idTextBox.Size = new System.Drawing.Size(56, 20);
+            this.idTextBox.TabIndex = 18;
+            // 
+            // precoTextBox
+            // 
+            this.precoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.servicoBindingSource, "Preco", true));
+            this.precoTextBox.Location = new System.Drawing.Point(380, 50);
+            this.precoTextBox.Name = "precoTextBox";
+            this.precoTextBox.Size = new System.Drawing.Size(104, 20);
+            this.precoTextBox.TabIndex = 20;
             // 
             // button_InserirServicoAgendamento
             // 
-            this.button_InserirServicoAgendamento.Location = new System.Drawing.Point(685, 45);
+            this.button_InserirServicoAgendamento.Location = new System.Drawing.Point(685, 47);
             this.button_InserirServicoAgendamento.Name = "button_InserirServicoAgendamento";
             this.button_InserirServicoAgendamento.Size = new System.Drawing.Size(75, 23);
             this.button_InserirServicoAgendamento.TabIndex = 13;
             this.button_InserirServicoAgendamento.Text = "Inserir";
             this.button_InserirServicoAgendamento.UseVisualStyleBackColor = true;
-            // 
-            // idTextBox
-            // 
-            this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dataGridView_ServicoBindingSource, "Id", true));
-            this.idTextBox.Location = new System.Drawing.Point(6, 47);
-            this.idTextBox.Name = "idTextBox";
-            this.idTextBox.Size = new System.Drawing.Size(44, 20);
-            this.idTextBox.TabIndex = 2;
-            // 
-            // quantidadeTextBox
-            // 
-            this.quantidadeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dataGridView_ServicoBindingSource, "Quantidade", true));
-            this.quantidadeTextBox.Location = new System.Drawing.Point(276, 47);
-            this.quantidadeTextBox.Name = "quantidadeTextBox";
-            this.quantidadeTextBox.Size = new System.Drawing.Size(62, 20);
-            this.quantidadeTextBox.TabIndex = 4;
-            this.quantidadeTextBox.TextChanged += new System.EventHandler(this.quantidadeTextBox_TextChanged);
-            // 
-            // valorComDescontoTextBox
-            // 
-            this.valorComDescontoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dataGridView_ServicoBindingSource, "ValorComDesconto", true));
-            this.valorComDescontoTextBox.Location = new System.Drawing.Point(462, 47);
-            this.valorComDescontoTextBox.Name = "valorComDescontoTextBox";
-            this.valorComDescontoTextBox.Size = new System.Drawing.Size(100, 20);
-            this.valorComDescontoTextBox.TabIndex = 8;
-            // 
-            // valorTotalTextBox
-            // 
-            this.valorTotalTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dataGridView_ServicoBindingSource, "ValorTotal", true));
-            this.valorTotalTextBox.Location = new System.Drawing.Point(577, 47);
-            this.valorTotalTextBox.Name = "valorTotalTextBox";
-            this.valorTotalTextBox.Size = new System.Drawing.Size(100, 20);
-            this.valorTotalTextBox.TabIndex = 10;
-            // 
-            // valorUnitarioTextBox
-            // 
-            this.valorUnitarioTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dataGridView_ServicoBindingSource, "ValorUnitario", true));
-            this.valorUnitarioTextBox.Location = new System.Drawing.Point(371, 47);
-            this.valorUnitarioTextBox.Name = "valorUnitarioTextBox";
-            this.valorUnitarioTextBox.Size = new System.Drawing.Size(70, 20);
-            this.valorUnitarioTextBox.TabIndex = 12;
             // 
             // dataGridView_ServicoDataGridView
             // 
@@ -441,137 +405,34 @@
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             this.dataGridViewTextBoxColumn6.ReadOnly = true;
             // 
-            // dataGridView_ServicoBindingNavigator
+            // dataGridView_ServicoBindingSource
             // 
-            this.dataGridView_ServicoBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
-            this.dataGridView_ServicoBindingNavigator.BindingSource = this.dataGridView_ServicoBindingSource;
-            this.dataGridView_ServicoBindingNavigator.CountItem = this.bindingNavigatorCountItem;
-            this.dataGridView_ServicoBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
-            this.dataGridView_ServicoBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.bindingNavigatorMoveFirstItem,
-            this.bindingNavigatorMovePreviousItem,
-            this.bindingNavigatorSeparator,
-            this.bindingNavigatorPositionItem,
-            this.bindingNavigatorCountItem,
-            this.bindingNavigatorSeparator1,
-            this.bindingNavigatorMoveNextItem,
-            this.bindingNavigatorMoveLastItem,
-            this.bindingNavigatorSeparator2,
-            this.bindingNavigatorAddNewItem,
-            this.bindingNavigatorDeleteItem,
-            this.dataGridView_ServicoBindingNavigatorSaveItem});
-            this.dataGridView_ServicoBindingNavigator.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView_ServicoBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
-            this.dataGridView_ServicoBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
-            this.dataGridView_ServicoBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            this.dataGridView_ServicoBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
-            this.dataGridView_ServicoBindingNavigator.Name = "dataGridView_ServicoBindingNavigator";
-            this.dataGridView_ServicoBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.dataGridView_ServicoBindingNavigator.Size = new System.Drawing.Size(790, 25);
-            this.dataGridView_ServicoBindingNavigator.TabIndex = 2;
-            this.dataGridView_ServicoBindingNavigator.Text = "bindingNavigator1";
+            this.dataGridView_ServicoBindingSource.DataSource = typeof(Models.DataGridView_Servico);
             // 
-            // bindingNavigatorAddNewItem
+            // descricaoComboBox
             // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Adicionar novo";
+            this.descricaoComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.servicoBindingSource, "Descricao", true));
+            this.descricaoComboBox.FormattingEnabled = true;
+            this.descricaoComboBox.Location = new System.Drawing.Point(69, 50);
+            this.descricaoComboBox.Name = "descricaoComboBox";
+            this.descricaoComboBox.Size = new System.Drawing.Size(221, 21);
+            this.descricaoComboBox.TabIndex = 26;
+            this.descricaoComboBox.SelectedIndexChanged += new System.EventHandler(this.descricaoComboBox_SelectedIndexChanged);
             // 
-            // bindingNavigatorCountItem
+            // label10
             // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 22);
-            this.bindingNavigatorCountItem.Text = "de {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Número total de itens";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorDeleteItem.Text = "Excluir";
-            // 
-            // bindingNavigatorMoveFirstItem
-            // 
-            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
-            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
-            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveFirstItem.Text = "Mover primeiro";
-            // 
-            // bindingNavigatorMovePreviousItem
-            // 
-            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
-            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
-            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMovePreviousItem.Text = "Mover anterior";
-            // 
-            // bindingNavigatorSeparator
-            // 
-            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorPositionItem
-            // 
-            this.bindingNavigatorPositionItem.AccessibleName = "Posição";
-            this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
-            this.bindingNavigatorPositionItem.Text = "0";
-            this.bindingNavigatorPositionItem.ToolTipText = "Posição atual";
-            // 
-            // bindingNavigatorSeparator1
-            // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorMoveNextItem
-            // 
-            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
-            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
-            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveNextItem.Text = "Mover próximo";
-            // 
-            // bindingNavigatorMoveLastItem
-            // 
-            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
-            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
-            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveLastItem.Text = "Mover último";
-            // 
-            // bindingNavigatorSeparator2
-            // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
-            // 
-            // dataGridView_ServicoBindingNavigatorSaveItem
-            // 
-            this.dataGridView_ServicoBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.dataGridView_ServicoBindingNavigatorSaveItem.Enabled = false;
-            this.dataGridView_ServicoBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("dataGridView_ServicoBindingNavigatorSaveItem.Image")));
-            this.dataGridView_ServicoBindingNavigatorSaveItem.Name = "dataGridView_ServicoBindingNavigatorSaveItem";
-            this.dataGridView_ServicoBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
-            this.dataGridView_ServicoBindingNavigatorSaveItem.Text = "Salvar Dados";
+            label10.AutoSize = true;
+            label10.Location = new System.Drawing.Point(614, 33);
+            label10.Name = "label10";
+            label10.Size = new System.Drawing.Size(46, 13);
+            label10.TabIndex = 27;
+            label10.Text = "Subtotal";
             // 
             // FormCadastroAgendamento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(790, 591);
-            this.Controls.Add(this.dataGridView_ServicoBindingNavigator);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "FormCadastroAgendamento";
@@ -582,13 +443,10 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ServicoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.servicoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ServicoDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ServicoBindingNavigator)).EndInit();
-            this.dataGridView_ServicoBindingNavigator.ResumeLayout(false);
-            this.dataGridView_ServicoBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ServicoBindingSource)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -611,12 +469,7 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button button_InserirServicoAgendamento;
-        private System.Windows.Forms.TextBox idTextBox;
         private System.Windows.Forms.BindingSource dataGridView_ServicoBindingSource;
-        private System.Windows.Forms.TextBox quantidadeTextBox;
-        private System.Windows.Forms.TextBox valorComDescontoTextBox;
-        private System.Windows.Forms.TextBox valorTotalTextBox;
-        private System.Windows.Forms.TextBox valorUnitarioTextBox;
         private System.Windows.Forms.DataGridView dataGridView_ServicoDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
@@ -624,19 +477,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.BindingNavigator dataGridView_ServicoBindingNavigator;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
-        private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator;
-        private System.Windows.Forms.ToolStripTextBox bindingNavigatorPositionItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator1;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
-        private System.Windows.Forms.ToolStripButton dataGridView_ServicoBindingNavigatorSaveItem;
-        private System.Windows.Forms.ComboBox servicoComboBox;
+        private System.Windows.Forms.TextBox textBox_Subtotal;
+        private System.Windows.Forms.TextBox textBox_PrecoAplicado;
+        private System.Windows.Forms.TextBox textBox_quantidade;
+        private System.Windows.Forms.BindingSource servicoBindingSource;
+        private System.Windows.Forms.TextBox idTextBox;
+        private System.Windows.Forms.TextBox precoTextBox;
+        private System.Windows.Forms.ComboBox descricaoComboBox;
     }
 }

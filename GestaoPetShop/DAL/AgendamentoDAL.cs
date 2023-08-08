@@ -505,11 +505,11 @@ namespace DAL
             }
         }
 
-        public DataGridView_Servico PorNome(string _selectedText)
+        public Servico PorNome(string _selectedText)
         {
             
-            DataGridView_Servico servicoView;
-            servicoView = new DataGridView_Servico();
+           Servico servicoView;
+            servicoView = new Servico();
 
             SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
             try
@@ -529,8 +529,8 @@ namespace DAL
                     {
                         
                         servicoView.Id = Convert.ToInt32(rd["Id"]);
-                        servicoView.Servico = rd["Descricao"].ToString();
-                        servicoView.ValorUnitario = Convert.ToDecimal(rd["Preco"]);
+                        servicoView.Descricao = rd["Descricao"].ToString();
+                        servicoView.Preco = Convert.ToDecimal(rd["Preco"]);
 
 
 
