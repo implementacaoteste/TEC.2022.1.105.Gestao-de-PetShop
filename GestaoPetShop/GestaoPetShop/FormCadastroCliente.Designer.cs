@@ -35,6 +35,7 @@
             System.Windows.Forms.Label foneLabel;
             System.Windows.Forms.Label emailLabel;
             this.nomeTextBox = new System.Windows.Forms.TextBox();
+            this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cPFTextBox = new System.Windows.Forms.TextBox();
             this.rGTextBox = new System.Windows.Forms.TextBox();
             this.foneTextBox = new System.Windows.Forms.TextBox();
@@ -55,20 +56,19 @@
             this.AtivocheckBox1 = new System.Windows.Forms.CheckBox();
             this.pictureBoxFoto = new System.Windows.Forms.PictureBox();
             this.buttonBuscarFoto = new System.Windows.Forms.Button();
-            this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             nomeLabel = new System.Windows.Forms.Label();
             cPFLabel = new System.Windows.Forms.Label();
             rGLabel = new System.Windows.Forms.Label();
             foneLabel = new System.Windows.Forms.Label();
             emailLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFoto)).BeginInit();
             this.SuspendLayout();
             // 
             // nomeLabel
             // 
             nomeLabel.AutoSize = true;
-            nomeLabel.Location = new System.Drawing.Point(8, 49);
+            nomeLabel.Location = new System.Drawing.Point(6, 49);
             nomeLabel.Name = "nomeLabel";
             nomeLabel.Size = new System.Drawing.Size(44, 16);
             nomeLabel.TabIndex = 1;
@@ -86,7 +86,7 @@
             // rGLabel
             // 
             rGLabel.AutoSize = true;
-            rGLabel.Location = new System.Drawing.Point(352, 134);
+            rGLabel.Location = new System.Drawing.Point(305, 102);
             rGLabel.Name = "rGLabel";
             rGLabel.Size = new System.Drawing.Size(34, 16);
             rGLabel.TabIndex = 5;
@@ -95,7 +95,7 @@
             // foneLabel
             // 
             foneLabel.AutoSize = true;
-            foneLabel.Location = new System.Drawing.Point(6, 134);
+            foneLabel.Location = new System.Drawing.Point(5, 153);
             foneLabel.Name = "foneLabel";
             foneLabel.Size = new System.Drawing.Size(51, 16);
             foneLabel.TabIndex = 7;
@@ -104,7 +104,7 @@
             // emailLabel
             // 
             emailLabel.AutoSize = true;
-            emailLabel.Location = new System.Drawing.Point(372, 191);
+            emailLabel.Location = new System.Drawing.Point(220, 102);
             emailLabel.Name = "emailLabel";
             emailLabel.Size = new System.Drawing.Size(25, 16);
             emailLabel.TabIndex = 9;
@@ -113,11 +113,15 @@
             // nomeTextBox
             // 
             this.nomeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "Nome", true));
-            this.nomeTextBox.Location = new System.Drawing.Point(7, 68);
+            this.nomeTextBox.Location = new System.Drawing.Point(4, 68);
             this.nomeTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.nomeTextBox.Name = "nomeTextBox";
             this.nomeTextBox.Size = new System.Drawing.Size(294, 22);
             this.nomeTextBox.TabIndex = 2;
+            // 
+            // clienteBindingSource
+            // 
+            this.clienteBindingSource.DataSource = typeof(Models.Cliente);
             // 
             // cPFTextBox
             // 
@@ -131,16 +135,16 @@
             // rGTextBox
             // 
             this.rGTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "CEP", true));
-            this.rGTextBox.Location = new System.Drawing.Point(355, 152);
+            this.rGTextBox.Location = new System.Drawing.Point(308, 120);
             this.rGTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rGTextBox.Name = "rGTextBox";
-            this.rGTextBox.Size = new System.Drawing.Size(163, 22);
+            this.rGTextBox.Size = new System.Drawing.Size(213, 22);
             this.rGTextBox.TabIndex = 6;
             // 
             // foneTextBox
             // 
             this.foneTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "Cidade", true));
-            this.foneTextBox.Location = new System.Drawing.Point(7, 152);
+            this.foneTextBox.Location = new System.Drawing.Point(4, 171);
             this.foneTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.foneTextBox.Name = "foneTextBox";
             this.foneTextBox.Size = new System.Drawing.Size(160, 22);
@@ -149,7 +153,7 @@
             // emailTextBox
             // 
             this.emailTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "UF", true));
-            this.emailTextBox.Location = new System.Drawing.Point(376, 209);
+            this.emailTextBox.Location = new System.Drawing.Point(220, 120);
             this.emailTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.emailTextBox.Name = "emailTextBox";
             this.emailTextBox.Size = new System.Drawing.Size(49, 22);
@@ -192,7 +196,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(173, 133);
+            this.label2.Location = new System.Drawing.Point(173, 152);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(34, 16);
             this.label2.TabIndex = 13;
@@ -201,24 +205,24 @@
             // textBox1
             // 
             this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "Pais", true));
-            this.textBox1.Location = new System.Drawing.Point(173, 152);
+            this.textBox1.Location = new System.Drawing.Point(169, 171);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(176, 22);
+            this.textBox1.Size = new System.Drawing.Size(112, 22);
             this.textBox1.TabIndex = 14;
             // 
             // textBox2
             // 
             this.textBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "Bairro", true));
-            this.textBox2.Location = new System.Drawing.Point(215, 108);
+            this.textBox2.Location = new System.Drawing.Point(287, 171);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(269, 22);
+            this.textBox2.Size = new System.Drawing.Size(238, 22);
             this.textBox2.TabIndex = 15;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(215, 90);
+            this.label3.Location = new System.Drawing.Point(285, 153);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(43, 16);
             this.label3.TabIndex = 16;
@@ -228,7 +232,7 @@
             // textBox3
             // 
             this.textBox3.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "Numero", true));
-            this.textBox3.Location = new System.Drawing.Point(7, 209);
+            this.textBox3.Location = new System.Drawing.Point(6, 226);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(100, 22);
             this.textBox3.TabIndex = 17;
@@ -236,7 +240,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(5, 193);
+            this.label4.Location = new System.Drawing.Point(4, 210);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(55, 16);
             this.label4.TabIndex = 18;
@@ -245,7 +249,7 @@
             // textBox4
             // 
             this.textBox4.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "Logradouro", true));
-            this.textBox4.Location = new System.Drawing.Point(122, 209);
+            this.textBox4.Location = new System.Drawing.Point(121, 226);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(248, 22);
             this.textBox4.TabIndex = 19;
@@ -253,7 +257,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(120, 193);
+            this.label5.Location = new System.Drawing.Point(119, 210);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(77, 16);
             this.label5.TabIndex = 20;
@@ -262,7 +266,7 @@
             // textBox5
             // 
             this.textBox5.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "DataNascimento", true));
-            this.textBox5.Location = new System.Drawing.Point(7, 108);
+            this.textBox5.Location = new System.Drawing.Point(4, 120);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(202, 22);
             this.textBox5.TabIndex = 21;
@@ -270,7 +274,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(12, 90);
+            this.label6.Location = new System.Drawing.Point(6, 102);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(132, 16);
             this.label6.TabIndex = 22;
@@ -308,10 +312,6 @@
             this.buttonBuscarFoto.UseVisualStyleBackColor = true;
             this.buttonBuscarFoto.Click += new System.EventHandler(this.buttonBuscarFoto_Click);
             // 
-            // clienteBindingSource
-            // 
-            this.clienteBindingSource.DataSource = typeof(Models.Cliente);
-            // 
             // FormCadastroCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -347,8 +347,8 @@
             this.Name = "FormCadastroCliente";
             this.Text = "FormCadastroCliente";
             this.Load += new System.EventHandler(this.FormCadastroCliente_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFoto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFoto)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
