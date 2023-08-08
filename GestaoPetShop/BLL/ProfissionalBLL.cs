@@ -1,6 +1,10 @@
-﻿namespace BLL
+﻿using DAL;
+using Models;
+using System.Collections.Generic;
+
+namespace BLL
 {
-    internal class ProfissionalBLL
+    public class ProfissionalBLL
     {
         public void Inserir(Profissional _profissional)
         {
