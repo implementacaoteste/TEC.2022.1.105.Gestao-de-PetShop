@@ -71,10 +71,6 @@
             this.grupoUsuarioDataGridView.Size = new System.Drawing.Size(559, 398);
             this.grupoUsuarioDataGridView.TabIndex = 7;
             // 
-            // grupoUsuarioBindingSource
-            // 
-            this.grupoUsuarioBindingSource.DataSource = typeof(Models.GrupoUsuario);
-            // 
             // permissoesDataGridView
             // 
             this.permissoesDataGridView.AllowUserToAddRows = false;

@@ -1,6 +1,6 @@
 ﻿namespace Models
 {
-    internal class Profissional
+    public class Profissional
     {
         public int Id { get; set; }
         public int IdFuncao  { get; set; } 

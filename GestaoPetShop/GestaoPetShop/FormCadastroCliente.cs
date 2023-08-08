@@ -22,13 +22,6 @@ namespace GestaoPetShop
             {
                 Cliente cliente = (Cliente)clienteBindingSource.Current;
 
-                //if (pictureBoxFoto.Image != null)
-                //    using (MemoryStream ms = new MemoryStream())
-                //    {
-                //        pictureBoxFoto.Image.Save(ms, pictureBoxFoto.Image.RawFormat);
-                //        cliente.Foto = ms.ToArray();
-                //    }
-
                 clienteBindingSource.EndEdit();
 
                 if (id == 0)

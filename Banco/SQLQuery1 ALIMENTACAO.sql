@@ -258,6 +258,7 @@ GO
 
 EXEC SP_CAD_USUARIO 1,'administrador','adm1234'
 EXEC SP_CAD_USUARIO 2,'AnaPaula','aten12341'
+EXEC SP_CAD_USUARIO 3, 'Erisvaldo','123'
 GO
 
 /*******************************************************************************************************************************/
