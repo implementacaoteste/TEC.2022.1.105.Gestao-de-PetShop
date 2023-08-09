@@ -60,10 +60,9 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(258, 9);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(344, 11);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(244, 24);
+            this.label1.Size = new System.Drawing.Size(309, 29);
             this.label1.TabIndex = 7;
             this.label1.Text = "Consulta de Agendamentos";
             // 
@@ -77,28 +76,29 @@
             "Nome Cliente",
             "Dia/Mês/Ano",
             "Mês/Ano",
-            "Ano"});
-            this.comboBox_SelecionarTipoBusca.Location = new System.Drawing.Point(9, 80);
-            this.comboBox_SelecionarTipoBusca.Margin = new System.Windows.Forms.Padding(2);
+            "Ano",
+            "Profissional"});
+            this.comboBox_SelecionarTipoBusca.Location = new System.Drawing.Point(12, 98);
+            this.comboBox_SelecionarTipoBusca.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox_SelecionarTipoBusca.Name = "comboBox_SelecionarTipoBusca";
-            this.comboBox_SelecionarTipoBusca.Size = new System.Drawing.Size(92, 21);
+            this.comboBox_SelecionarTipoBusca.Size = new System.Drawing.Size(121, 24);
             this.comboBox_SelecionarTipoBusca.TabIndex = 8;
             this.comboBox_SelecionarTipoBusca.Text = "Buscar por";
             // 
             // textBox_BuscarAgendamento
             // 
-            this.textBox_BuscarAgendamento.Location = new System.Drawing.Point(104, 82);
-            this.textBox_BuscarAgendamento.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_BuscarAgendamento.Location = new System.Drawing.Point(139, 101);
+            this.textBox_BuscarAgendamento.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox_BuscarAgendamento.Name = "textBox_BuscarAgendamento";
-            this.textBox_BuscarAgendamento.Size = new System.Drawing.Size(217, 20);
+            this.textBox_BuscarAgendamento.Size = new System.Drawing.Size(288, 22);
             this.textBox_BuscarAgendamento.TabIndex = 9;
             // 
             // button_BuscarAgendamentos
             // 
-            this.button_BuscarAgendamentos.Location = new System.Drawing.Point(325, 81);
-            this.button_BuscarAgendamentos.Margin = new System.Windows.Forms.Padding(2);
+            this.button_BuscarAgendamentos.Location = new System.Drawing.Point(433, 100);
+            this.button_BuscarAgendamentos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button_BuscarAgendamentos.Name = "button_BuscarAgendamentos";
-            this.button_BuscarAgendamentos.Size = new System.Drawing.Size(56, 19);
+            this.button_BuscarAgendamentos.Size = new System.Drawing.Size(75, 23);
             this.button_BuscarAgendamentos.TabIndex = 10;
             this.button_BuscarAgendamentos.Text = "Buscar";
             this.button_BuscarAgendamentos.UseVisualStyleBackColor = true;
@@ -106,10 +106,10 @@
             // 
             // button_InserirAgendamentos
             // 
-            this.button_InserirAgendamentos.Location = new System.Drawing.Point(385, 82);
-            this.button_InserirAgendamentos.Margin = new System.Windows.Forms.Padding(2);
+            this.button_InserirAgendamentos.Location = new System.Drawing.Point(513, 101);
+            this.button_InserirAgendamentos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button_InserirAgendamentos.Name = "button_InserirAgendamentos";
-            this.button_InserirAgendamentos.Size = new System.Drawing.Size(56, 19);
+            this.button_InserirAgendamentos.Size = new System.Drawing.Size(75, 23);
             this.button_InserirAgendamentos.TabIndex = 11;
             this.button_InserirAgendamentos.Text = "Cadastrar";
             this.button_InserirAgendamentos.UseVisualStyleBackColor = true;
@@ -117,39 +117,38 @@
             // 
             // button_AlterarAgendamentos
             // 
-            this.button_AlterarAgendamentos.Location = new System.Drawing.Point(446, 82);
-            this.button_AlterarAgendamentos.Margin = new System.Windows.Forms.Padding(2);
+            this.button_AlterarAgendamentos.Location = new System.Drawing.Point(595, 101);
+            this.button_AlterarAgendamentos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button_AlterarAgendamentos.Name = "button_AlterarAgendamentos";
-            this.button_AlterarAgendamentos.Size = new System.Drawing.Size(56, 19);
+            this.button_AlterarAgendamentos.Size = new System.Drawing.Size(75, 23);
             this.button_AlterarAgendamentos.TabIndex = 12;
             this.button_AlterarAgendamentos.Text = "Alterar";
             this.button_AlterarAgendamentos.UseVisualStyleBackColor = true;
             // 
             // button_ExcluirAgendamento
             // 
-            this.button_ExcluirAgendamento.Location = new System.Drawing.Point(506, 82);
-            this.button_ExcluirAgendamento.Margin = new System.Windows.Forms.Padding(2);
+            this.button_ExcluirAgendamento.Location = new System.Drawing.Point(675, 101);
+            this.button_ExcluirAgendamento.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button_ExcluirAgendamento.Name = "button_ExcluirAgendamento";
-            this.button_ExcluirAgendamento.Size = new System.Drawing.Size(56, 19);
+            this.button_ExcluirAgendamento.Size = new System.Drawing.Size(75, 23);
             this.button_ExcluirAgendamento.TabIndex = 13;
             this.button_ExcluirAgendamento.Text = "Excluir";
             this.button_ExcluirAgendamento.UseVisualStyleBackColor = true;
             // 
             // textBox_BuscarData
             // 
-            this.textBox_BuscarData.Location = new System.Drawing.Point(104, 106);
-            this.textBox_BuscarData.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_BuscarData.Location = new System.Drawing.Point(139, 130);
+            this.textBox_BuscarData.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox_BuscarData.Name = "textBox_BuscarData";
-            this.textBox_BuscarData.Size = new System.Drawing.Size(76, 20);
+            this.textBox_BuscarData.Size = new System.Drawing.Size(100, 22);
             this.textBox_BuscarData.TabIndex = 14;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(67, 108);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(89, 133);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(30, 13);
+            this.label2.Size = new System.Drawing.Size(36, 16);
             this.label2.TabIndex = 15;
             this.label2.Text = "Data";
             // 
@@ -169,14 +168,14 @@
             this.dataGridViewTextBoxColumn6,
             this.dataGridViewTextBoxColumn8});
             this.dataGridView1_FormsPrincipalDataGridView.DataSource = this.dataGridView1_FormsPrincipalBindingSource;
-            this.dataGridView1_FormsPrincipalDataGridView.Location = new System.Drawing.Point(11, 212);
-            this.dataGridView1_FormsPrincipalDataGridView.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridView1_FormsPrincipalDataGridView.Location = new System.Drawing.Point(15, 261);
+            this.dataGridView1_FormsPrincipalDataGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1_FormsPrincipalDataGridView.Name = "dataGridView1_FormsPrincipalDataGridView";
             this.dataGridView1_FormsPrincipalDataGridView.ReadOnly = true;
             this.dataGridView1_FormsPrincipalDataGridView.RowHeadersVisible = false;
             this.dataGridView1_FormsPrincipalDataGridView.RowHeadersWidth = 51;
             this.dataGridView1_FormsPrincipalDataGridView.RowTemplate.Height = 24;
-            this.dataGridView1_FormsPrincipalDataGridView.Size = new System.Drawing.Size(762, 338);
+            this.dataGridView1_FormsPrincipalDataGridView.Size = new System.Drawing.Size(1016, 416);
             this.dataGridView1_FormsPrincipalDataGridView.TabIndex = 15;
             // 
             // dataGridViewTextBoxColumn1
@@ -254,10 +253,10 @@
             // 
             // button_AbrirCalendario
             // 
-            this.button_AbrirCalendario.Location = new System.Drawing.Point(194, 106);
-            this.button_AbrirCalendario.Margin = new System.Windows.Forms.Padding(2);
+            this.button_AbrirCalendario.Location = new System.Drawing.Point(259, 130);
+            this.button_AbrirCalendario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button_AbrirCalendario.Name = "button_AbrirCalendario";
-            this.button_AbrirCalendario.Size = new System.Drawing.Size(74, 19);
+            this.button_AbrirCalendario.Size = new System.Drawing.Size(99, 23);
             this.button_AbrirCalendario.TabIndex = 16;
             this.button_AbrirCalendario.Text = "Calendário";
             this.button_AbrirCalendario.UseVisualStyleBackColor = true;
@@ -265,18 +264,17 @@
             // 
             // monthCalendar_Agendamento
             // 
-            this.monthCalendar_Agendamento.Location = new System.Drawing.Point(290, 106);
-            this.monthCalendar_Agendamento.Margin = new System.Windows.Forms.Padding(7);
+            this.monthCalendar_Agendamento.Location = new System.Drawing.Point(387, 130);
             this.monthCalendar_Agendamento.Name = "monthCalendar_Agendamento";
             this.monthCalendar_Agendamento.TabIndex = 17;
             this.monthCalendar_Agendamento.Visible = false;
             // 
             // button_SelecionarData
             // 
-            this.button_SelecionarData.Location = new System.Drawing.Point(358, 275);
-            this.button_SelecionarData.Margin = new System.Windows.Forms.Padding(2);
+            this.button_SelecionarData.Location = new System.Drawing.Point(477, 338);
+            this.button_SelecionarData.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button_SelecionarData.Name = "button_SelecionarData";
-            this.button_SelecionarData.Size = new System.Drawing.Size(74, 19);
+            this.button_SelecionarData.Size = new System.Drawing.Size(99, 23);
             this.button_SelecionarData.TabIndex = 18;
             this.button_SelecionarData.Text = "Selecionar";
             this.button_SelecionarData.UseVisualStyleBackColor = true;
@@ -289,9 +287,9 @@
             // 
             // ConsultaAgendamento
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 561);
+            this.ClientSize = new System.Drawing.Size(1045, 690);
             this.Controls.Add(this.button_SelecionarData);
             this.Controls.Add(this.monthCalendar_Agendamento);
             this.Controls.Add(this.button_AbrirCalendario);
@@ -305,7 +303,7 @@
             this.Controls.Add(this.textBox_BuscarAgendamento);
             this.Controls.Add(this.comboBox_SelecionarTipoBusca);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "ConsultaAgendamento";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

@@ -81,10 +81,10 @@ namespace BLL
             AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
             return agendamentoDAL.PorNome(_selectedText);
         }
-        //public List<DataGridView_Servico> BuscarsServicoPorAno(string _nomeAno)
-        //{
-        //    AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
-        //    return agendamentoDAL.BuscarsServicoPorAno(_nomeAno);
-        //}
+        public List<DataGridView1_FormsPrincipal> BuscarPorProfissional(string _nomeProfissional)
+        {
+            AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
+            return agendamentoDAL.BuscarPorProfissional(_nomeProfissional);
+        }
     }
 }

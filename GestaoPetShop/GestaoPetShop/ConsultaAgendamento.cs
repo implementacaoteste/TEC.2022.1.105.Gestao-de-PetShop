@@ -124,19 +124,16 @@ namespace GestaoPetShop
                     dataGridView1_FormsPrincipalBindingSource.DataSource = agendamentoBLL.BuscarPorMesAno(opc,qtd);
 
                 }
-                //else if (comboBox_SelecionarTipoBusca.SelectedIndex == 7)
-                //{
-                //    string quant = textBox_BuscarData.Text;
-                //    if (textBox_BuscarData.Text == "")
-                //    {
-                //        MessageBox.Show("Insirar o Data para pesquisa");
-                //        return;
-                //    }
 
-                //    dataGridView1_FormsPrincipalBindingSource.DataSource = agendamentoBLL.BuscarsServicoPorAno(textBox_BuscarData.Text);
-
-                //}
-
+                else if (comboBox_SelecionarTipoBusca.SelectedIndex == 7)
+                {
+                    if (textBox_BuscarAgendamento.Text == "")
+                    {
+                        MessageBox.Show("Insirar o Profissional para pesquisa");
+                        return;
+                    }
+                    dataGridView1_FormsPrincipalBindingSource.DataSource = agendamentoBLL.BuscarPorProfissional(textBox_BuscarAgendamento.Text);
+                }
                 else
                 {
                     MessageBox.Show("Escolha a forma de busca");
@@ -145,7 +142,6 @@ namespace GestaoPetShop
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show(ex.Message);
             }
         }
