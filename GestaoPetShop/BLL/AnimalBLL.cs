@@ -31,10 +31,22 @@ namespace BLL
         {
             return new AnimalDAL().BuscarPorId(_id);
         }
-        /*public List<Animal> BuscarPorEspecie(string especie)
+        public List<Raca> BuscarPorEspecie(string _animal)
         {
-            return new AnimalDAL().BuscarPorEspecie(especie)
+            return new AnimalDAL().BuscarPorEspecie(_animal);
+        }
+        public List<Animal> BuscarPorNome(string _nome)
+        {
+            return new AnimalDAL().BuscarPorNome(_nome);
+        }
+        public List<Raca> BuscarPorRaca(string _raca)
+        {
+            return new AnimalDAL().BuscarPorRaca(_raca);
+        }
+        /*public void ValidarAnimalAtivo(Animal)
+        {
+            return new AnimalDAL();
         }*/
-         
+
     }
 }

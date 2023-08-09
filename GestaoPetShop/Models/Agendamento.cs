@@ -17,7 +17,6 @@ namespace Models
         public int Horario { get; set; }
         public int Total { get; set; }
         public bool Ativo { get; set; }
-
-       
+        public List<AgendamentoServico> agendamentoServicos { get; set; }
     }
 }
