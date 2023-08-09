@@ -548,5 +548,24 @@ namespace DAL
                 cn.Close();
             }
         }
+
+        //public List<DataGridView_Servico> BuscarsServicoPorAno(string _nomeAno)
+        //{
+        //    List<DataGridView_Servico> listaAnos = new List<DataGridView_Servico>();
+        //    DataGridView_Servico servicoView;
+
+        //    SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+        //    try
+        //    {
+        //        SqlCommand cmd = new SqlCommand();
+        //        cmd.Connection = cn;
+
+        //    }
+        //    catch (Exception)
+        //    {
+
+        //        throw;
+        //    }
+        //}
     }
 }
