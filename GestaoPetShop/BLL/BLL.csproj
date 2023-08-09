@@ -223,6 +223,7 @@
     <Compile Include="AgendamentoBLL.cs" />
     <Compile Include="AnimalBLL.cs" />
     <Compile Include="ClienteBLL.cs" />
+    <Compile Include="FuncaoBLL.cs" />
     <Compile Include="GrupoUsuarioBLL.cs" />
     <Compile Include="PermissaoBLL.cs" />
     <Compile Include="ProfissionalBLL.cs" />
