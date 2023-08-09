@@ -2,7 +2,7 @@
 
 namespace Models
 {
-    public class DataGridView_Servico
+    public class AgendamentoServico
     {
         public int Id { get; set; }
         public string Servico { get; set; }
@@ -10,7 +10,6 @@ namespace Models
         public decimal ValorUnitario { get; set; }
         public decimal ValorComDesconto { get; set; }
         public decimal ValorTotal { get; set; }
-
-       
+        public int IdServico { get; set; }
     }
 }

@@ -70,7 +70,7 @@ namespace BLL
             return agendamentoDAL.BuscarPorMesAno(_opc,_mesAno);
         }
 
-        public List<DataGridView_Servico> BuscarsServicoPorNome(string _nomeServico)
+        public List<AgendamentoServico> BuscarsServicoPorNome(string _nomeServico)
         {
             AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
             return agendamentoDAL.BuscarsServicoPorNome(_nomeServico);

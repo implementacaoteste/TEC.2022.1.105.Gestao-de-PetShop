@@ -461,11 +461,11 @@ namespace DAL
             }
         }
 
-        public List<DataGridView_Servico> BuscarsServicoPorNome(string _nomeServico)
+        public List<AgendamentoServico> BuscarsServicoPorNome(string _nomeServico)
         {
 
-            List<DataGridView_Servico> listaServicos = new List<DataGridView_Servico>();
-           DataGridView_Servico servicoView;
+            List<AgendamentoServico> listaServicos = new List<AgendamentoServico>();
+           AgendamentoServico servicoView;
 
             SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
             try
@@ -483,7 +483,7 @@ namespace DAL
                 {
                     while (rd.Read())
                     {
-                        servicoView = new DataGridView_Servico();
+                        servicoView = new AgendamentoServico();
                         servicoView.Id = Convert.ToInt32(rd["Id"]);
                         servicoView.Servico = rd["Descricao"].ToString();
                         servicoView.ValorUnitario = Convert.ToDecimal (rd["Preco"]);
