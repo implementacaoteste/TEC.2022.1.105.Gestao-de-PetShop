@@ -43,6 +43,10 @@ namespace BLL
         {
             return new AnimalDAL().BuscarPorRaca(_raca);
         }
+        /*public void ValidarAnimalAtivo(Animal)
+        {
+            return new AnimalDAL();
+        }*/
 
     }
 }
