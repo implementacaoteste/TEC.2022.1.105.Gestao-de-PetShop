@@ -40,7 +40,7 @@ namespace DAL
                     cmd.Transaction = transaction;
                     cmd.Connection = transaction.Connection;
 
-                    int idagendamento = BuscarIdDoAgendamento(_agendamento, transaction,_idagendamento);
+                    int idagendamento = BuscarIdDoAgendamento(_agendamento, transaction, _idagendamento);
 
                     InserirAgendamentoServico(_agendamento, _idagendamento, transaction);
 
@@ -67,19 +67,28 @@ namespace DAL
             SqlTransaction transaction = _transaction;
             List<AgendamentoServico> agendamentoservico = new List<AgendamentoServico>();
             agendamentoservico = _agendamento.agendamentoServicos;
+            int quantidadeservicos = agendamentoservico.Count;
 
             using (SqlConnection cn = new SqlConnection(Conexao.StringDeConexao))
             {
                 using (SqlCommand cmd = new SqlCommand(@"INSERT INFO AgendamentoServico (IdAgendamento,IdServico, Quantidade, ValorUnitario)
                                                                                  VALUES (@IdAgendamento,@IdServico, @Quantidade,@ValorUnitario)", cn))
                 {
-                    cmd.Parameters.AddWithValue("@IdAgendamento", _idagendamento);
-                    cmd.Parameters.AddWithValue("@IdAgendamento", agendamentoservico);
 
-                    if (transaction == null)
+
+                    for (int x = 0; x < quantidadeservicos; x++)
                     {
-                        cn.Open();
-                        transaction = cn.BeginTransaction();
+                        cmd.Parameters.AddWithValue("@IdAgendamento", _idagendamento);
+                        cmd.Parameters.AddWithValue("@IdServico", agendamentoservico[x].IdServico);
+                        cmd.Parameters.AddWithValue("@IdQuantidade", agendamentoservico[x].Quantidade);
+                        cmd.Parameters.AddWithValue("@ValorUnitario", agendamentoservico[x].ValorUnitario);
+
+
+                        if (transaction == null)
+                        {
+                            cn.Open();
+                            transaction = cn.BeginTransaction();
+                        }
                     }
                     cmd.Transaction = transaction;
                     cmd.Connection = transaction.Connection;
@@ -100,9 +109,9 @@ namespace DAL
             }
         }
 
-        private int BuscarIdDoAgendamento(Agendamento _agendamento, SqlTransaction _transaction,int _idagendamento)
+        private int BuscarIdDoAgendamento(Agendamento _agendamento, SqlTransaction _transaction, int _idagendamento)
         {
-            
+
             SqlTransaction transaction = _transaction;
 
 

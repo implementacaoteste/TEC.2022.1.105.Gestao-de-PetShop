@@ -32,19 +32,20 @@ namespace GestaoPetShop
         {
             try
             {
-                //return;
-                List<AgendamentoServico> listViewServico = new List<AgendamentoServico>();
+               
+               List<AgendamentoServico> listViewServico = new List<AgendamentoServico>();
 
-                listViewServico = new AgendamentoBLL().BuscarsServicoPorNome(descricaoComboBox.Text);
-
+               listViewServico = new AgendamentoBLL().BuscarsServicoPorNome(descricaoComboBox.Text);
+           
+               
 
                 int num = listViewServico.Count();
                 MessageBox.Show(Convert.ToString(num));
-                for (int x = 0; x <= num; x++)
+                for (int x = 0; x < num; x++)
                 {
                     descricaoComboBox.Items.Insert(x, listViewServico[x].Servico);
                 }
-
+               
             }
             catch (Exception ex)
             {
