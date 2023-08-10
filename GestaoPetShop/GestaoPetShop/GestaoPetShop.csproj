@@ -392,6 +392,7 @@
     </None>
     <None Include="Properties\DataSources\Models.Agendamento.datasource" />
     <None Include="Properties\DataSources\Models.AgendamentoServico.datasource" />
+    <None Include="Properties\DataSources\Models.Animal2.datasource" />
     <None Include="Properties\DataSources\Models.Cliente.datasource" />
     <None Include="Properties\DataSources\Models.Constantes.datasource" />
     <None Include="Properties\DataSources\Models.DataGridView1_FormsPrincipal.datasource" />
