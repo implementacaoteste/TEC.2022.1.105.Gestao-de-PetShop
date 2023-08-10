@@ -113,6 +113,36 @@ namespace GestaoPetShop.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cancel_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("cancel-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cancelar {
+            get {
+                object obj = ResourceManager.GetObject("cancelar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap kitty {
+            get {
+                object obj = ResourceManager.GetObject("kitty", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pata {
             get {
                 object obj = ResourceManager.GetObject("pata", resourceCulture);
@@ -126,6 +156,46 @@ namespace GestaoPetShop.Properties {
         internal static System.Drawing.Bitmap pexels_snapwire_46024 {
             get {
                 object obj = ResourceManager.GetObject("pexels-snapwire-46024", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap png_transparent_computer_icons_save_miscellaneous_blue_rectangle {
+            get {
+                object obj = ResourceManager.GetObject("png-transparent-computer-icons-save-miscellaneous-blue-rectangle", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap save_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("save-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap save_transparente {
+            get {
+                object obj = ResourceManager.GetObject("save-transparente", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap save_transparente1 {
+            get {
+                object obj = ResourceManager.GetObject("save-transparente1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

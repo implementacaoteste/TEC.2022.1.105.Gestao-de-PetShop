@@ -438,6 +438,27 @@
   <ItemGroup>
     <None Include="Resources\pata.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancelar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save-transparente.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\png-transparent-computer-icons-save-miscellaneous-blue-rectangle1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save-transparente1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kitty1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Fody.4.0.2\build\Fody.targets" Condition="Exists('..\packages\Fody.4.0.2\build\Fody.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
