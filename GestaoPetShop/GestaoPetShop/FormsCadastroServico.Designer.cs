@@ -34,7 +34,6 @@
             System.Windows.Forms.Label idLabel;
             System.Windows.Forms.Label precoLabel;
             System.Windows.Forms.Label tempoLabel;
-            this.servicoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ativoCheckBox = new System.Windows.Forms.CheckBox();
             this.descricaoTextBox = new System.Windows.Forms.TextBox();
             this.idTextBox = new System.Windows.Forms.TextBox();
@@ -42,10 +41,11 @@
             this.tempoTextBox = new System.Windows.Forms.TextBox();
             this.label1CadastrarServico = new System.Windows.Forms.Label();
             this.label2_AlterarServico = new System.Windows.Forms.Label();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.button_SalvarServico = new System.Windows.Forms.Button();
+            this.buttonImagem = new System.Windows.Forms.Button();
             this.button_CancelarCadastroOuAlterar = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.servicoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ativoLabel = new System.Windows.Forms.Label();
             descricaoLabel = new System.Windows.Forms.Label();
             idLabel = new System.Windows.Forms.Label();
@@ -58,7 +58,7 @@
             // 
             ativoLabel.AutoSize = true;
             ativoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            ativoLabel.Location = new System.Drawing.Point(45, 196);
+            ativoLabel.Location = new System.Drawing.Point(31, 210);
             ativoLabel.Name = "ativoLabel";
             ativoLabel.Size = new System.Drawing.Size(44, 18);
             ativoLabel.TabIndex = 1;
@@ -68,54 +68,50 @@
             // 
             descricaoLabel.AutoSize = true;
             descricaoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            descricaoLabel.Location = new System.Drawing.Point(10, 93);
+            descricaoLabel.Location = new System.Drawing.Point(89, 86);
             descricaoLabel.Name = "descricaoLabel";
-            descricaoLabel.Size = new System.Drawing.Size(80, 18);
+            descricaoLabel.Size = new System.Drawing.Size(76, 18);
             descricaoLabel.TabIndex = 3;
-            descricaoLabel.Text = "Descriçao:";
+            descricaoLabel.Text = "Descriçao";
             // 
             // idLabel
             // 
             idLabel.AutoSize = true;
             idLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            idLabel.Location = new System.Drawing.Point(66, 56);
+            idLabel.Location = new System.Drawing.Point(24, 86);
             idLabel.Name = "idLabel";
-            idLabel.Size = new System.Drawing.Size(23, 18);
+            idLabel.Size = new System.Drawing.Size(19, 18);
             idLabel.TabIndex = 5;
-            idLabel.Text = "Id:";
+            idLabel.Text = "Id";
             // 
             // precoLabel
             // 
             precoLabel.AutoSize = true;
             precoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            precoLabel.Location = new System.Drawing.Point(37, 162);
+            precoLabel.Location = new System.Drawing.Point(145, 145);
             precoLabel.Name = "precoLabel";
-            precoLabel.Size = new System.Drawing.Size(52, 18);
+            precoLabel.Size = new System.Drawing.Size(48, 18);
             precoLabel.TabIndex = 7;
-            precoLabel.Text = "Preco:";
+            precoLabel.Text = "Preco";
             // 
             // tempoLabel
             // 
             tempoLabel.AutoSize = true;
             tempoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            tempoLabel.Location = new System.Drawing.Point(31, 127);
+            tempoLabel.Location = new System.Drawing.Point(24, 145);
             tempoLabel.Name = "tempoLabel";
-            tempoLabel.Size = new System.Drawing.Size(59, 18);
+            tempoLabel.Size = new System.Drawing.Size(55, 18);
             tempoLabel.TabIndex = 9;
-            tempoLabel.Text = "Tempo:";
-            // 
-            // servicoBindingSource
-            // 
-            this.servicoBindingSource.DataSource = typeof(Models.Servico);
+            tempoLabel.Text = "Tempo";
             // 
             // ativoCheckBox
             // 
             this.ativoCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.servicoBindingSource, "Ativo", true));
             this.ativoCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ativoCheckBox.Location = new System.Drawing.Point(92, 195);
+            this.ativoCheckBox.Location = new System.Drawing.Point(78, 209);
             this.ativoCheckBox.Name = "ativoCheckBox";
             this.ativoCheckBox.Size = new System.Drawing.Size(262, 24);
-            this.ativoCheckBox.TabIndex = 2;
+            this.ativoCheckBox.TabIndex = 4;
             this.ativoCheckBox.Text = "Define se esse serviço pode ser usado";
             this.ativoCheckBox.UseVisualStyleBackColor = true;
             // 
@@ -123,46 +119,46 @@
             // 
             this.descricaoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.servicoBindingSource, "Descricao", true));
             this.descricaoTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.descricaoTextBox.Location = new System.Drawing.Point(92, 89);
+            this.descricaoTextBox.Location = new System.Drawing.Point(92, 107);
             this.descricaoTextBox.Name = "descricaoTextBox";
-            this.descricaoTextBox.Size = new System.Drawing.Size(276, 24);
-            this.descricaoTextBox.TabIndex = 4;
+            this.descricaoTextBox.Size = new System.Drawing.Size(379, 24);
+            this.descricaoTextBox.TabIndex = 1;
             // 
             // idTextBox
             // 
             this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.servicoBindingSource, "Id", true));
             this.idTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.idTextBox.Location = new System.Drawing.Point(92, 53);
+            this.idTextBox.Location = new System.Drawing.Point(27, 107);
             this.idTextBox.Name = "idTextBox";
             this.idTextBox.ReadOnly = true;
-            this.idTextBox.Size = new System.Drawing.Size(100, 24);
-            this.idTextBox.TabIndex = 6;
+            this.idTextBox.Size = new System.Drawing.Size(53, 24);
+            this.idTextBox.TabIndex = 0;
             // 
             // precoTextBox
             // 
             this.precoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.servicoBindingSource, "Preco", true));
             this.precoTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.precoTextBox.Location = new System.Drawing.Point(92, 159);
+            this.precoTextBox.Location = new System.Drawing.Point(148, 166);
             this.precoTextBox.Name = "precoTextBox";
             this.precoTextBox.Size = new System.Drawing.Size(100, 24);
-            this.precoTextBox.TabIndex = 8;
+            this.precoTextBox.TabIndex = 3;
             // 
             // tempoTextBox
             // 
             this.tempoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.servicoBindingSource, "Tempo", true));
             this.tempoTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tempoTextBox.Location = new System.Drawing.Point(92, 124);
+            this.tempoTextBox.Location = new System.Drawing.Point(27, 166);
             this.tempoTextBox.Name = "tempoTextBox";
             this.tempoTextBox.Size = new System.Drawing.Size(100, 24);
-            this.tempoTextBox.TabIndex = 10;
+            this.tempoTextBox.TabIndex = 2;
             // 
             // label1CadastrarServico
             // 
             this.label1CadastrarServico.AutoSize = true;
-            this.label1CadastrarServico.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1CadastrarServico.Location = new System.Drawing.Point(129, 9);
+            this.label1CadastrarServico.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1CadastrarServico.Location = new System.Drawing.Point(118, 23);
             this.label1CadastrarServico.Name = "label1CadastrarServico";
-            this.label1CadastrarServico.Size = new System.Drawing.Size(207, 25);
+            this.label1CadastrarServico.Size = new System.Drawing.Size(218, 25);
             this.label1CadastrarServico.TabIndex = 11;
             this.label1CadastrarServico.Text = "Cadastro de Serviço";
             // 
@@ -170,7 +166,7 @@
             // 
             this.label2_AlterarServico.AutoSize = true;
             this.label2_AlterarServico.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2_AlterarServico.Location = new System.Drawing.Point(140, 9);
+            this.label2_AlterarServico.Location = new System.Drawing.Point(129, 23);
             this.label2_AlterarServico.Name = "label2_AlterarServico";
             this.label2_AlterarServico.Size = new System.Drawing.Size(183, 25);
             this.label2_AlterarServico.TabIndex = 12;
@@ -178,59 +174,61 @@
             // 
             // button_SalvarServico
             // 
-            this.button_SalvarServico.BackgroundImage = global::GestaoPetShop.Properties.Resources._04_pata_pretoEbranco;
-            this.button_SalvarServico.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button_SalvarServico.BackColor = System.Drawing.Color.Chocolate;
+            this.button_SalvarServico.BackgroundImage = global::GestaoPetShop.Properties.Resources.save_transparente1;
+            this.button_SalvarServico.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button_SalvarServico.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button_SalvarServico.Location = new System.Drawing.Point(344, 170);
+            this.button_SalvarServico.FlatAppearance.BorderSize = 0;
+            this.button_SalvarServico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_SalvarServico.Location = new System.Drawing.Point(379, 182);
             this.button_SalvarServico.Name = "button_SalvarServico";
-            this.button_SalvarServico.Size = new System.Drawing.Size(85, 81);
+            this.button_SalvarServico.Size = new System.Drawing.Size(38, 36);
             this.button_SalvarServico.TabIndex = 13;
-            this.button_SalvarServico.UseVisualStyleBackColor = true;
+            this.toolTip1.SetToolTip(this.button_SalvarServico, "Salvar");
+            this.button_SalvarServico.UseVisualStyleBackColor = false;
             this.button_SalvarServico.Click += new System.EventHandler(this.button_SalvarServico_Click);
+            // 
+            // buttonImagem
+            // 
+            this.buttonImagem.BackgroundImage = global::GestaoPetShop.Properties.Resources.kitty;
+            this.buttonImagem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonImagem.FlatAppearance.BorderSize = 0;
+            this.buttonImagem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonImagem.Location = new System.Drawing.Point(404, 23);
+            this.buttonImagem.Name = "buttonImagem";
+            this.buttonImagem.Size = new System.Drawing.Size(67, 61);
+            this.buttonImagem.TabIndex = 15;
+            this.buttonImagem.UseVisualStyleBackColor = true;
             // 
             // button_CancelarCadastroOuAlterar
             // 
-            this.button_CancelarCadastroOuAlterar.BackgroundImage = global::GestaoPetShop.Properties.Resources._04_pata_pretoEbranco;
-            this.button_CancelarCadastroOuAlterar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button_CancelarCadastroOuAlterar.BackColor = System.Drawing.Color.Chocolate;
+            this.button_CancelarCadastroOuAlterar.BackgroundImage = global::GestaoPetShop.Properties.Resources.cancel_removebg_preview;
+            this.button_CancelarCadastroOuAlterar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button_CancelarCadastroOuAlterar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button_CancelarCadastroOuAlterar.Location = new System.Drawing.Point(435, 172);
+            this.button_CancelarCadastroOuAlterar.FlatAppearance.BorderSize = 0;
+            this.button_CancelarCadastroOuAlterar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_CancelarCadastroOuAlterar.Location = new System.Drawing.Point(433, 182);
             this.button_CancelarCadastroOuAlterar.Name = "button_CancelarCadastroOuAlterar";
-            this.button_CancelarCadastroOuAlterar.Size = new System.Drawing.Size(85, 79);
+            this.button_CancelarCadastroOuAlterar.Size = new System.Drawing.Size(38, 36);
             this.button_CancelarCadastroOuAlterar.TabIndex = 14;
-            this.button_CancelarCadastroOuAlterar.UseVisualStyleBackColor = true;
+            this.toolTip1.SetToolTip(this.button_CancelarCadastroOuAlterar, "Cancelar");
+            this.button_CancelarCadastroOuAlterar.UseVisualStyleBackColor = false;
             this.button_CancelarCadastroOuAlterar.Click += new System.EventHandler(this.button_CancelarCadastroOuAlterar_Click);
             // 
-            // label1
+            // servicoBindingSource
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(439, 149);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(72, 20);
-            this.label1.TabIndex = 15;
-            this.label1.Text = "Cancelar";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(364, 149);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 20);
-            this.label2.TabIndex = 16;
-            this.label2.Text = "Salvar";
+            this.servicoBindingSource.DataSource = typeof(Models.Servico);
             // 
             // FormsCadastroServico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.BackgroundImage = global::GestaoPetShop.Properties.Resources.pexels_snapwire_46024;
+            this.BackColor = System.Drawing.Color.Chocolate;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.CancelButton = this.button_SalvarServico;
-            this.ClientSize = new System.Drawing.Size(523, 261);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(503, 261);
+            this.Controls.Add(this.buttonImagem);
             this.Controls.Add(this.button_CancelarCadastroOuAlterar);
             this.Controls.Add(this.button_SalvarServico);
             this.Controls.Add(this.label2_AlterarServico);
@@ -269,7 +267,7 @@
         private System.Windows.Forms.Label label2_AlterarServico;
         private System.Windows.Forms.Button button_SalvarServico;
         private System.Windows.Forms.Button button_CancelarCadastroOuAlterar;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Button buttonImagem;
     }
 }
