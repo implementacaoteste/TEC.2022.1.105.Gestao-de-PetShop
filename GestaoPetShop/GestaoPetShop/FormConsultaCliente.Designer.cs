@@ -367,6 +367,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "FormConsultaCliente";
+            this.ShowInTaskbar = false;
             this.Text = "FormConsultaCliente";
             this.Load += new System.EventHandler(this.FormConsultaCliente_Load);
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).EndInit();

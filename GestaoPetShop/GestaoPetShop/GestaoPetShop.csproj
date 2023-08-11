@@ -248,6 +248,12 @@
     <Compile Include="FormCadastroAgendamento.Designer.cs">
       <DependentUpon>FormCadastroAgendamento.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormCadastroAnimal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCadastroAnimal.Designer.cs">
+      <DependentUpon>FormCadastroAnimal.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormCadastroCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -308,6 +314,12 @@
     <Compile Include="FormsCadastroServico.Designer.cs">
       <DependentUpon>FormsCadastroServico.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormPesquisarSelecionarAnimalCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPesquisarSelecionarAnimalCliente.Designer.cs">
+      <DependentUpon>FormPesquisarSelecionarAnimalCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="petshopDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -328,6 +340,9 @@
     <EmbeddedResource Include="FormCadastroAgendamento.resx">
       <DependentUpon>FormCadastroAgendamento.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCadastroAnimal.resx">
+      <DependentUpon>FormCadastroAnimal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormCadastroCliente.resx">
       <DependentUpon>FormCadastroCliente.cs</DependentUpon>
@@ -359,6 +374,9 @@
     <EmbeddedResource Include="FormsCadastroServico.resx">
       <DependentUpon>FormsCadastroServico.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormPesquisarSelecionarAnimalCliente.resx">
+      <DependentUpon>FormPesquisarSelecionarAnimalCliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -382,6 +400,8 @@
       <DependentUpon>petshopDataSet.xsd</DependentUpon>
     </None>
     <None Include="Properties\DataSources\Models.Agendamento.datasource" />
+    <None Include="Properties\DataSources\Models.AgendamentoServico.datasource" />
+    <None Include="Properties\DataSources\Models.Animal2.datasource" />
     <None Include="Properties\DataSources\Models.Cliente.datasource" />
     <None Include="Properties\DataSources\Models.Constantes.datasource" />
     <None Include="Properties\DataSources\Models.DataGridView1_FormsPrincipal.datasource" />
@@ -436,6 +456,90 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\pata.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancelar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save-transparente.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\png-transparent-computer-icons-save-miscellaneous-blue-rectangle1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save-transparente1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kitty1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kitty.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="buttons\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\bicho-de-estimacao.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\system-administrator.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\papel-de-parede-1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\papel-de-parede-2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\png-transparent-pet-cat-animal-kitty-biological.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\png-transparent-pet-cat-animal-kitty-biological-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="buttons\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buscar-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editar-removebg-preview1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editar-removebg-preview2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\excluir1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\excluir-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\papel-de-parede-21.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cadeadosemfundo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cadeado2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cadeado3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gat-removebg-preview.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Fody.4.0.2\build\Fody.targets" Condition="Exists('..\packages\Fody.4.0.2\build\Fody.targets')" />

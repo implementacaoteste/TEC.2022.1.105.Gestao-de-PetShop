@@ -345,6 +345,7 @@
             this.Controls.Add(this.nomeTextBox);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormCadastroCliente";
+            this.ShowInTaskbar = false;
             this.Text = "FormCadastroCliente";
             this.Load += new System.EventHandler(this.FormCadastroCliente_Load);
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).EndInit();

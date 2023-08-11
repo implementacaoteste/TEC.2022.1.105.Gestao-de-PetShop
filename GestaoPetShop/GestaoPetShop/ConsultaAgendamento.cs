@@ -41,7 +41,8 @@ namespace GestaoPetShop
                         MessageBox.Show("Insirar um Id(código) do Agendamento para pesquisa");
                         return;
                     }
-                    dataGridView1_FormsPrincipalBindingSource.DataSource = agendamentoBLL.DataGridViewBuscarPorId(Convert.ToInt32(textBox_BuscarAgendamento.Text));
+                    int opc = 0;
+                    dataGridView1_FormsPrincipalBindingSource.DataSource = agendamentoBLL.DataGridViewBuscarPorId(Convert.ToInt32(textBox_BuscarAgendamento.Text),opc);
 
                 }
                 else if (comboBox_SelecionarTipoBusca.SelectedIndex == 2)

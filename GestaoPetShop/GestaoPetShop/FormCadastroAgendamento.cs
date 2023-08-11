@@ -18,6 +18,7 @@ namespace GestaoPetShop
         decimal precoAplicado;
         decimal subtotal;
         int quantidade;
+        decimal valortotalagendamento = 0;
 
         public FormCadastroAgendamento()
         {
@@ -32,15 +33,16 @@ namespace GestaoPetShop
         {
             try
             {
-                //return;
+
                 List<AgendamentoServico> listViewServico = new List<AgendamentoServico>();
 
                 listViewServico = new AgendamentoBLL().BuscarsServicoPorNome(descricaoComboBox.Text);
 
 
+
                 int num = listViewServico.Count();
                 MessageBox.Show(Convert.ToString(num));
-                for (int x = 0; x <= num; x++)
+                for (int x = 0; x < num; x++)
                 {
                     descricaoComboBox.Items.Insert(x, listViewServico[x].Servico);
                 }
@@ -88,6 +90,10 @@ namespace GestaoPetShop
             ((AgendamentoServico)dataGridView_ServicoBindingSource.Current).ValorTotal = Convert.ToDecimal(textBoxSubtotal.Text);
             dataGridView_ServicoBindingSource.EndEdit();
 
+            subtotal = Convert.ToDecimal(textBoxSubtotal.Text);
+            valortotalagendamento = valortotalagendamento + subtotal;
+            totalTextBox.Text = Convert.ToString(valortotalagendamento);
+
             //dataGridView_ServicoBindingSource.DataSource = listAgendamentoServico;
 
 
@@ -97,6 +103,44 @@ namespace GestaoPetShop
         {
 
 
+        }
+
+        private void buttonPesquisarAnimal_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                using (FormPesquisarSelecionarAnimalCliente frm = new FormPesquisarSelecionarAnimalCliente())
+                {
+                    try
+                    {
+                        frm.ShowDialog();
+                        if (frm.id < 1)
+                        {
+                            return;
+                        }
+                        int opc = frm.opc;
+                        int idpesquisa = frm.id;
+                        AgendamentoBLL agendamentoBLL = new AgendamentoBLL();
+                        Agendamento agendamento = new Agendamento();
+                          agendamento = agendamentoBLL.BuscarPorId(idpesquisa, opc);
+                        idAnimalTextBox.Text = Convert.ToString(((Agendamento)agendamentoBindingSource.Current).IdAnimal);
+                        nomeAnimalTextBox.Text = ((Agendamento)agendamentoBindingSource.Current).NomeAnimal;
+                        idClienteTextBox.Text = Convert.ToString(((Agendamento)agendamentoBindingSource.Current).IdCliente);
+                        nomeClienteTextBox.Text = ((Agendamento)agendamentoBindingSource.Current).NomeCliente;
+                        MessageBox.Show("Permissão adicionada com sucesso!");
+                    }
+                    catch (Exception ex)
+                    {
+
+                        MessageBox.Show("Erro ao vincular Usuário em um grupo\n" + ex.Message);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }
