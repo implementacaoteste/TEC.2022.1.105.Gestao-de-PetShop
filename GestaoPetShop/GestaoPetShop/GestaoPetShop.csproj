@@ -459,6 +459,33 @@
   <ItemGroup>
     <None Include="Resources\kitty1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kitty.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="buttons\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\bicho-de-estimacao.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\system-administrator.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\papel-de-parede-1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\papel-de-parede-2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\png-transparent-pet-cat-animal-kitty-biological.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\png-transparent-pet-cat-animal-kitty-biological-removebg-preview.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Fody.4.0.2\build\Fody.targets" Condition="Exists('..\packages\Fody.4.0.2\build\Fody.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

@@ -113,6 +113,16 @@ namespace GestaoPetShop.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bicho_de_estimacao {
+            get {
+                object obj = ResourceManager.GetObject("bicho-de-estimacao", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cancel_removebg_preview {
             get {
                 object obj = ResourceManager.GetObject("cancel-removebg-preview", resourceCulture);
@@ -133,9 +143,59 @@ namespace GestaoPetShop.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cat {
+            get {
+                object obj = ResourceManager.GetObject("cat", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap close {
+            get {
+                object obj = ResourceManager.GetObject("close", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap kitty {
             get {
                 object obj = ResourceManager.GetObject("kitty", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap kitty1 {
+            get {
+                object obj = ResourceManager.GetObject("kitty1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap papel_de_parede_1 {
+            get {
+                object obj = ResourceManager.GetObject("papel-de-parede-1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap papel_de_parede_2 {
+            get {
+                object obj = ResourceManager.GetObject("papel-de-parede-2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -173,6 +233,26 @@ namespace GestaoPetShop.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap png_transparent_pet_cat_animal_kitty_biological {
+            get {
+                object obj = ResourceManager.GetObject("png-transparent-pet-cat-animal-kitty-biological", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap png_transparent_pet_cat_animal_kitty_biological_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("png-transparent-pet-cat-animal-kitty-biological-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap save_removebg_preview {
             get {
                 object obj = ResourceManager.GetObject("save-removebg-preview", resourceCulture);
@@ -196,6 +276,16 @@ namespace GestaoPetShop.Properties {
         internal static System.Drawing.Bitmap save_transparente1 {
             get {
                 object obj = ResourceManager.GetObject("save-transparente1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap system_administrator {
+            get {
+                object obj = ResourceManager.GetObject("system-administrator", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

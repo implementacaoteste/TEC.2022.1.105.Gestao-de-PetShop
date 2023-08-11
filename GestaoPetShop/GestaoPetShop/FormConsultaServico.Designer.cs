@@ -61,7 +61,7 @@
             "Id",
             "Descrição"});
             this.comboBox_EscolhaBuscarServico.Location = new System.Drawing.Point(47, 81);
-            this.comboBox_EscolhaBuscarServico.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox_EscolhaBuscarServico.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox_EscolhaBuscarServico.Name = "comboBox_EscolhaBuscarServico";
             this.comboBox_EscolhaBuscarServico.Size = new System.Drawing.Size(175, 33);
             this.comboBox_EscolhaBuscarServico.TabIndex = 4;
@@ -71,7 +71,7 @@
             // 
             this.textBox_BuscarServico.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_BuscarServico.Location = new System.Drawing.Point(231, 82);
-            this.textBox_BuscarServico.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox_BuscarServico.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_BuscarServico.Name = "textBox_BuscarServico";
             this.textBox_BuscarServico.Size = new System.Drawing.Size(675, 30);
             this.textBox_BuscarServico.TabIndex = 5;
@@ -101,7 +101,7 @@
             this.servicoDataGridView.DefaultCellStyle = dataGridViewCellStyle1;
             this.servicoDataGridView.GridColor = System.Drawing.SystemColors.ButtonHighlight;
             this.servicoDataGridView.Location = new System.Drawing.Point(46, 122);
-            this.servicoDataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.servicoDataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.servicoDataGridView.Name = "servicoDataGridView";
             this.servicoDataGridView.ReadOnly = true;
             this.servicoDataGridView.RowHeadersVisible = false;
@@ -217,7 +217,7 @@
             // 
             this.button_ExcluirServico.Image = global::GestaoPetShop.Properties.Resources._04_pata_pretoEbranco;
             this.button_ExcluirServico.Location = new System.Drawing.Point(916, 572);
-            this.button_ExcluirServico.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button_ExcluirServico.Margin = new System.Windows.Forms.Padding(4);
             this.button_ExcluirServico.Name = "button_ExcluirServico";
             this.button_ExcluirServico.Size = new System.Drawing.Size(107, 103);
             this.button_ExcluirServico.TabIndex = 9;
@@ -228,7 +228,7 @@
             // 
             this.button_AlterarServico.Image = global::GestaoPetShop.Properties.Resources._04_pata_pretoEbranco;
             this.button_AlterarServico.Location = new System.Drawing.Point(916, 418);
-            this.button_AlterarServico.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button_AlterarServico.Margin = new System.Windows.Forms.Padding(4);
             this.button_AlterarServico.Name = "button_AlterarServico";
             this.button_AlterarServico.Size = new System.Drawing.Size(107, 103);
             this.button_AlterarServico.TabIndex = 8;
@@ -239,7 +239,7 @@
             // 
             this.button_InserirServico.Image = global::GestaoPetShop.Properties.Resources._04_pata_pretoEbranco;
             this.button_InserirServico.Location = new System.Drawing.Point(916, 268);
-            this.button_InserirServico.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button_InserirServico.Margin = new System.Windows.Forms.Padding(4);
             this.button_InserirServico.Name = "button_InserirServico";
             this.button_InserirServico.Size = new System.Drawing.Size(107, 103);
             this.button_InserirServico.TabIndex = 7;
@@ -250,7 +250,7 @@
             // 
             this.button_BucarServico.Image = global::GestaoPetShop.Properties.Resources._04_pata_pretoEbranco;
             this.button_BucarServico.Location = new System.Drawing.Point(916, 114);
-            this.button_BucarServico.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button_BucarServico.Margin = new System.Windows.Forms.Padding(4);
             this.button_BucarServico.Name = "button_BucarServico";
             this.button_BucarServico.Size = new System.Drawing.Size(107, 103);
             this.button_BucarServico.TabIndex = 6;
@@ -261,6 +261,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Chocolate;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(1056, 690);
             this.Controls.Add(this.label5);
@@ -275,7 +276,7 @@
             this.Controls.Add(this.button_BucarServico);
             this.Controls.Add(this.textBox_BuscarServico);
             this.Controls.Add(this.comboBox_EscolhaBuscarServico);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormConsultaServico";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
