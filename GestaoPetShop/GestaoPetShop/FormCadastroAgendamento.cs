@@ -123,7 +123,7 @@ namespace GestaoPetShop
                         int idpesquisa = frm.id;
                         AgendamentoBLL agendamentoBLL = new AgendamentoBLL();
                         Agendamento agendamento = new Agendamento();
-                      //  agendamento = agendamentoBLL.DataGridViewBuscarPorId(idpesquisa, opc);
+                          agendamento = agendamentoBLL.BuscarPorId(idpesquisa, opc);
                         idAnimalTextBox.Text = Convert.ToString(((Agendamento)agendamentoBindingSource.Current).IdAnimal);
                         nomeAnimalTextBox.Text = ((Agendamento)agendamentoBindingSource.Current).NomeAnimal;
                         idClienteTextBox.Text = Convert.ToString(((Agendamento)agendamentoBindingSource.Current).IdCliente);

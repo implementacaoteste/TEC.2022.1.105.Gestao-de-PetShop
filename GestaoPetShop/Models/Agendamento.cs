@@ -15,9 +15,10 @@ namespace Models
         public int IdProfissional { get; set; }
         public string NomeProfissional { get; set; }
         public int IdSituacao { get; set; }
+        public string DescricaoSituacao { get; set; }
         public DateTime  DataAg { get; set; }
         public int Horario { get; set; }
-        public int Total { get; set; }
+        public decimal Total { get; set; }
         public bool Ativo { get; set; }
         public int IdCliente { get; set; }
         public string NomeCliente { get; set; }

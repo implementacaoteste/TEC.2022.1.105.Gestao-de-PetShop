@@ -18,10 +18,10 @@ namespace BLL
             AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
             agendamentoDAL.Inserir(_agendamento);
         }
-        public Agendamento BuscarPorId(int _id)
+        public Agendamento BuscarPorId(int _id, int _opc)
         {
             AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
-            return agendamentoDAL.BuscarPorId(_id);
+            return agendamentoDAL.BuscarPorId(_id, _opc);
         }
         public void Alterar(Agendamento _agendamento)
         {

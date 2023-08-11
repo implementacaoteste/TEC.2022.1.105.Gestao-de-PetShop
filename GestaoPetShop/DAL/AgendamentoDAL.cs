@@ -282,8 +282,17 @@ namespace DAL
                 cn.Close();
             }
         }
-        public Agendamento BuscarPorId(int _id)
+        public Agendamento BuscarPorId(int _id, int opc)
         {
+            /*
+             *  try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = cn;
+               
+               
+
+             */
             Agendamento agendamento = new Agendamento();
 
             SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
@@ -291,8 +300,14 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT Id, IdAnimal, IdProfissional, IdSituacao, DataAg, Horario, Total, Ativo FROM Agendamento 
-                                    WHERE Id = @Id";
+                cmd.CommandText = @"SELECT Ag.DataAg,Ag.Horario, Ani.Nome as N_Animal,Cli.Nome as N_Cliente, S.Descricao, P.Nome as N_Prof,Si.Descricao as DescSituacao FROM Agendamento Ag LEFT JOIN Profissional P             ON Ag.IdProfissional = P.Id
+                                                                                                                                                                                            LEFT JOIN Animal Ani                 ON Ag.IdAnimal = Ani.Id
+                                                                                                                                                                                            LEFT JOIN Cliente Cli                ON Ani.IdCliente = Cli.Id
+                                                                                                                                                                                            LEFT JOIN AgendamentoServicos AGS    ON Ag.Id = AGS.IdAgendamento
+                                                                                                                                                                                            LEFT JOIN Servico S                  ON AGS.IdServico = S.Id
+                                                                                                                                                                                            LEFT JOIN Situacao Si                ON Ag.IdSituacao = Si.Id
+                                                                                                                                                                                            WHERE Ag.DataAg = @Data";
+
                 cmd.CommandType = System.Data.CommandType.Text;
 
                 cmd.Parameters.AddWithValue("@Id", _id);
