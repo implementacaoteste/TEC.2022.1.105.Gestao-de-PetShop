@@ -101,10 +101,12 @@
             this.servicoDataGridView.DefaultCellStyle = dataGridViewCellStyle1;
             this.servicoDataGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(190)))), ((int)(((byte)(255)))));
             this.servicoDataGridView.Location = new System.Drawing.Point(34, 99);
+            this.servicoDataGridView.MultiSelect = false;
             this.servicoDataGridView.Name = "servicoDataGridView";
             this.servicoDataGridView.ReadOnly = true;
             this.servicoDataGridView.RowHeadersVisible = false;
             this.servicoDataGridView.RowHeadersWidth = 51;
+            this.servicoDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.servicoDataGridView.Size = new System.Drawing.Size(645, 383);
             this.servicoDataGridView.TabIndex = 10;
             // 
