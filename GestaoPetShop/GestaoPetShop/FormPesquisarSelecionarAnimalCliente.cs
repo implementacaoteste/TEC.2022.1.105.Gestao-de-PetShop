@@ -13,10 +13,11 @@ using System.Windows.Forms;
 
 namespace GestaoPetShop
 {
-    public partial class PesquisarSelecionarAnimalCliente : Form
+    public partial class FormPesquisarSelecionarAnimalCliente : Form
     {
-        int opc;
-        public PesquisarSelecionarAnimalCliente()
+        public int opc;
+        public int id;
+        public FormPesquisarSelecionarAnimalCliente()
         {
             InitializeComponent();
         }
@@ -37,10 +38,10 @@ namespace GestaoPetShop
                         break;
                     case 2:
 
-                       // agendamentoBindingSource.DataSource.DataSource = new AgendamentoBLL().BuscarPorNomeAnimal(textBoxPesquisaAnimalCliente.Text);
+                        agendamentoBindingSource.DataSource = new AgendamentoBLL().BuscarPorNomeAnimal(textBoxPesquisaAnimalCliente.Text);
                         break;
                     case 3:
-                       // agendamentoBindingSource.DataSource.DataSource = new AgendamentoBLL().BuscarPorNomeCliente (textBoxPesquisaAnimalCliente.Text);
+                        agendamentoBindingSource.DataSource = new AgendamentoBLL().BuscarPorNomeCliente(textBoxPesquisaAnimalCliente.Text);
                         break;
                     default:
                         MessageBox.Show("Escolha Uma opção de busca");
@@ -64,8 +65,32 @@ namespace GestaoPetShop
         {
             try
             {
-               
+                if (agendamentoBindingSource.Count > 0)
 
+                {
+                    switch (comboBoxEscolherTipoPequisaAnimalCliente.SelectedIndex)
+                    {
+                        case 0:
+
+                             id = ((Agendamento)agendamentoBindingSource.Current).IdAnimal;
+                             opc = 1;
+                            break;
+                        case 1:
+                            id = ((Agendamento)agendamentoBindingSource.Current).IdCliente;
+                            opc = 2;
+                            break;
+                       
+                        default:
+                            MessageBox.Show("Escolha um Tipo de pesquisa");
+                            break;
+                    }
+
+                    Close();
+                }
+                else
+                {
+                    MessageBox.Show("Não tem Cliente/Animal selecionado");
+                }
             }
             catch (Exception ex)
             {

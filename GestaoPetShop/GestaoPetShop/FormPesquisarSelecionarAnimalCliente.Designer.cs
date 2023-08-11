@@ -1,6 +1,6 @@
 ﻿namespace GestaoPetShop
 {
-    partial class PesquisarSelecionarAnimalCliente
+    partial class FormPesquisarSelecionarAnimalCliente
     {
         /// <summary>
         /// Required designer variable.

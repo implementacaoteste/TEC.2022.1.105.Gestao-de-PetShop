@@ -377,7 +377,7 @@ namespace DAL
         }
 
 
-        public List<DataGridView1_FormsPrincipal> DataGridViewBuscarPorId(int _idAgendamento, int _opc = 0)
+        public List<DataGridView1_FormsPrincipal> DataGridViewBuscarPorId(int _idAgendamento, int _opc)
         {
             List<DataGridView1_FormsPrincipal> listaAgendamentos = new List<DataGridView1_FormsPrincipal>();
             DataGridView1_FormsPrincipal agendamentosView;
@@ -395,11 +395,11 @@ namespace DAL
                                                                                                                                                                                             LEFT JOIN Situacao Si                ON Ag.IdSituacao = Si.Id
                                                                                                                                                                                             WHERE ";
                 if (_opc == 0)
-                    cmd.CommandText = cmd.CommandText + "Ag.Id = @id";
+                    cmd.CommandText = cmd.CommandText + "Ag.Id = @id"; // Busca pelo ID do Agendamento
                 else if (_opc == 1)
-                    cmd.CommandText = cmd.CommandText + "Ani.Id = @Id";
+                    cmd.CommandText = cmd.CommandText + "Ani.Id = @Id";//Busca pelo ID do Animal
                 else if (_opc == 2)
-                    cmd.CommandText = cmd.CommandText + "Cli.Id = @Id";
+                    cmd.CommandText = cmd.CommandText + "Cli.Id = @Id";//Busca pelo ID do CLiente
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@id", _idAgendamento);
                 cn.Open();

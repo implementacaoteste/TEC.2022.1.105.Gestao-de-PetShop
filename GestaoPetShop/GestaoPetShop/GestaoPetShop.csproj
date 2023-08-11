@@ -314,11 +314,11 @@
     <Compile Include="FormsCadastroServico.Designer.cs">
       <DependentUpon>FormsCadastroServico.cs</DependentUpon>
     </Compile>
-    <Compile Include="PesquisarSelecionarAnimalCliente.cs">
+    <Compile Include="FormPesquisarSelecionarAnimalCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PesquisarSelecionarAnimalCliente.Designer.cs">
-      <DependentUpon>PesquisarSelecionarAnimalCliente.cs</DependentUpon>
+    <Compile Include="FormPesquisarSelecionarAnimalCliente.Designer.cs">
+      <DependentUpon>FormPesquisarSelecionarAnimalCliente.cs</DependentUpon>
     </Compile>
     <Compile Include="petshopDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -374,8 +374,8 @@
     <EmbeddedResource Include="FormsCadastroServico.resx">
       <DependentUpon>FormsCadastroServico.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PesquisarSelecionarAnimalCliente.resx">
-      <DependentUpon>PesquisarSelecionarAnimalCliente.cs</DependentUpon>
+    <EmbeddedResource Include="FormPesquisarSelecionarAnimalCliente.resx">
+      <DependentUpon>FormPesquisarSelecionarAnimalCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
