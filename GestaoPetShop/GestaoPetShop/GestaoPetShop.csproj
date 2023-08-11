@@ -248,6 +248,12 @@
     <Compile Include="FormCadastroAgendamento.Designer.cs">
       <DependentUpon>FormCadastroAgendamento.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormCadastroAnimal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCadastroAnimal.Designer.cs">
+      <DependentUpon>FormCadastroAnimal.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormCadastroCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -329,6 +335,9 @@
       <DependentUpon>FormCadastroAgendamento.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormCadastroAnimal.resx">
+      <DependentUpon>FormCadastroAnimal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormCadastroCliente.resx">
       <DependentUpon>FormCadastroCliente.cs</DependentUpon>
     </EmbeddedResource>
@@ -383,6 +392,7 @@
     </None>
     <None Include="Properties\DataSources\Models.Agendamento.datasource" />
     <None Include="Properties\DataSources\Models.AgendamentoServico.datasource" />
+    <None Include="Properties\DataSources\Models.Animal2.datasource" />
     <None Include="Properties\DataSources\Models.Cliente.datasource" />
     <None Include="Properties\DataSources\Models.Constantes.datasource" />
     <None Include="Properties\DataSources\Models.DataGridView1_FormsPrincipal.datasource" />

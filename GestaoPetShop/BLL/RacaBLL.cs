@@ -35,6 +35,40 @@ namespace BLL
             }
             return racas;
         }
+        public Raca BuscarPorId(int _id)
+        {
+            RacaDAL racaDAL = new RacaDAL();
+            Raca raca = racaDAL.BuscarPorId(_id);
+            if (raca.Id == 0)
+            {
+                throw new Exception("Raça não encontrada");
+            }
+
+            return raca;
+        }
+        /* public List<Animal>BuscarPorEspecie(string _especie)
+         {
+             RacaDAL racaDAL = new RacaDAL();
+
+             List<Raca> racas = racaDAL.BuscarPorNome(_especie);
+             if (racas.Count == 0)
+             {
+                 throw new Exception("Especie não encontrada");
+             }
+             return racas;
+         }*/
+
+        public List<Raca> BuscarPorNome(string _nome)
+        {
+            RacaDAL racaDAL = new RacaDAL();
+
+            List<Raca> racas = racaDAL.BuscarPorNome(_nome);
+            if (racas.Count == 0)
+            {
+                throw new Exception("Nome não encontrado");
+            }
+            return racas;
+        }
 
     }
 }
