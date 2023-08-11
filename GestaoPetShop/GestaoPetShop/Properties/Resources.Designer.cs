@@ -143,6 +143,36 @@ namespace GestaoPetShop.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cadeado2 {
+            get {
+                object obj = ResourceManager.GetObject("cadeado2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cadeado3 {
+            get {
+                object obj = ResourceManager.GetObject("cadeado3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Cadeadosemfundo {
+            get {
+                object obj = ResourceManager.GetObject("Cadeadosemfundo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cancel_removebg_preview {
             get {
                 object obj = ResourceManager.GetObject("cancel-removebg-preview", resourceCulture);
@@ -216,6 +246,16 @@ namespace GestaoPetShop.Properties {
         internal static System.Drawing.Bitmap excluir_removebg_preview {
             get {
                 object obj = ResourceManager.GetObject("excluir-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap gat_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("gat-removebg-preview", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

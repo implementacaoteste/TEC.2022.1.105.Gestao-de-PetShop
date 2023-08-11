@@ -529,6 +529,18 @@
   <ItemGroup>
     <None Include="Resources\papel-de-parede-21.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cadeadosemfundo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cadeado2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cadeado3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gat-removebg-preview.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Fody.4.0.2\build\Fody.targets" Condition="Exists('..\packages\Fody.4.0.2\build\Fody.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

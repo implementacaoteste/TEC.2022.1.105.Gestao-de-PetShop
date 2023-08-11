@@ -42,12 +42,16 @@
             this.label1CadastrarServico = new System.Windows.Forms.Label();
             this.label2_AlterarServico = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.button_SalvarServico = new System.Windows.Forms.Button();
-            this.button_CancelarCadastroOuAlterar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.splitter1 = new System.Windows.Forms.Splitter();
+            this.splitter2 = new System.Windows.Forms.Splitter();
+            this.splitter3 = new System.Windows.Forms.Splitter();
+            this.splitter4 = new System.Windows.Forms.Splitter();
+            this.button_SalvarServico = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBoxFechar = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button_CancelarCadastroOuAlterar = new System.Windows.Forms.Button();
             this.servicoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ativoLabel = new System.Windows.Forms.Label();
             descricaoLabel = new System.Windows.Forms.Label();
@@ -65,7 +69,7 @@
             // 
             ativoLabel.AutoSize = true;
             ativoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            ativoLabel.ForeColor = System.Drawing.Color.White;
+            ativoLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(107)))), ((int)(((byte)(62)))));
             ativoLabel.Location = new System.Drawing.Point(28, 250);
             ativoLabel.Name = "ativoLabel";
             ativoLabel.Size = new System.Drawing.Size(44, 18);
@@ -76,7 +80,7 @@
             // 
             descricaoLabel.AutoSize = true;
             descricaoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            descricaoLabel.ForeColor = System.Drawing.Color.White;
+            descricaoLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(107)))), ((int)(((byte)(62)))));
             descricaoLabel.Location = new System.Drawing.Point(87, 126);
             descricaoLabel.Name = "descricaoLabel";
             descricaoLabel.Size = new System.Drawing.Size(76, 18);
@@ -87,7 +91,7 @@
             // 
             idLabel.AutoSize = true;
             idLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            idLabel.ForeColor = System.Drawing.Color.White;
+            idLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(107)))), ((int)(((byte)(62)))));
             idLabel.Location = new System.Drawing.Point(22, 126);
             idLabel.Name = "idLabel";
             idLabel.Size = new System.Drawing.Size(19, 18);
@@ -98,7 +102,7 @@
             // 
             precoLabel.AutoSize = true;
             precoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            precoLabel.ForeColor = System.Drawing.Color.White;
+            precoLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(107)))), ((int)(((byte)(62)))));
             precoLabel.Location = new System.Drawing.Point(142, 185);
             precoLabel.Name = "precoLabel";
             precoLabel.Size = new System.Drawing.Size(48, 18);
@@ -109,7 +113,7 @@
             // 
             tempoLabel.AutoSize = true;
             tempoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            tempoLabel.ForeColor = System.Drawing.Color.White;
+            tempoLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(107)))), ((int)(((byte)(62)))));
             tempoLabel.Location = new System.Drawing.Point(22, 185);
             tempoLabel.Name = "tempoLabel";
             tempoLabel.Size = new System.Drawing.Size(55, 18);
@@ -120,7 +124,7 @@
             // 
             this.ativoCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.servicoBindingSource, "Ativo", true));
             this.ativoCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ativoCheckBox.ForeColor = System.Drawing.Color.White;
+            this.ativoCheckBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(107)))), ((int)(((byte)(62)))));
             this.ativoCheckBox.Location = new System.Drawing.Point(76, 249);
             this.ativoCheckBox.Name = "ativoCheckBox";
             this.ativoCheckBox.Size = new System.Drawing.Size(262, 24);
@@ -170,8 +174,8 @@
             // 
             this.label1CadastrarServico.AutoSize = true;
             this.label1CadastrarServico.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1CadastrarServico.ForeColor = System.Drawing.Color.White;
-            this.label1CadastrarServico.Location = new System.Drawing.Point(116, 57);
+            this.label1CadastrarServico.ForeColor = System.Drawing.Color.Black;
+            this.label1CadastrarServico.Location = new System.Drawing.Point(116, 47);
             this.label1CadastrarServico.Name = "label1CadastrarServico";
             this.label1CadastrarServico.Size = new System.Drawing.Size(218, 25);
             this.label1CadastrarServico.TabIndex = 11;
@@ -181,12 +185,65 @@
             // 
             this.label2_AlterarServico.AutoSize = true;
             this.label2_AlterarServico.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2_AlterarServico.ForeColor = System.Drawing.Color.White;
-            this.label2_AlterarServico.Location = new System.Drawing.Point(127, 57);
+            this.label2_AlterarServico.ForeColor = System.Drawing.Color.Black;
+            this.label2_AlterarServico.Location = new System.Drawing.Point(127, 47);
             this.label2_AlterarServico.Name = "label2_AlterarServico";
             this.label2_AlterarServico.Size = new System.Drawing.Size(183, 25);
             this.label2_AlterarServico.TabIndex = 12;
             this.label2_AlterarServico.Text = "Alterar de Serviço";
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.pictureBox3);
+            this.panel1.Controls.Add(this.pictureBoxFechar);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(503, 34);
+            this.panel1.TabIndex = 17;
+            // 
+            // splitter1
+            // 
+            this.splitter1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.splitter1.Location = new System.Drawing.Point(0, 0);
+            this.splitter1.Name = "splitter1";
+            this.splitter1.Padding = new System.Windows.Forms.Padding(7);
+            this.splitter1.Size = new System.Drawing.Size(3, 311);
+            this.splitter1.TabIndex = 18;
+            this.splitter1.TabStop = false;
+            // 
+            // splitter2
+            // 
+            this.splitter2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.splitter2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.splitter2.Location = new System.Drawing.Point(500, 0);
+            this.splitter2.Name = "splitter2";
+            this.splitter2.Padding = new System.Windows.Forms.Padding(7);
+            this.splitter2.Size = new System.Drawing.Size(3, 311);
+            this.splitter2.TabIndex = 19;
+            this.splitter2.TabStop = false;
+            // 
+            // splitter3
+            // 
+            this.splitter3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.splitter3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.splitter3.Location = new System.Drawing.Point(3, 0);
+            this.splitter3.Name = "splitter3";
+            this.splitter3.Padding = new System.Windows.Forms.Padding(7);
+            this.splitter3.Size = new System.Drawing.Size(497, 3);
+            this.splitter3.TabIndex = 20;
+            this.splitter3.TabStop = false;
+            // 
+            // splitter4
+            // 
+            this.splitter4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.splitter4.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.splitter4.Location = new System.Drawing.Point(3, 308);
+            this.splitter4.Name = "splitter4";
+            this.splitter4.Padding = new System.Windows.Forms.Padding(7);
+            this.splitter4.Size = new System.Drawing.Size(497, 3);
+            this.splitter4.TabIndex = 21;
+            this.splitter4.TabStop = false;
             // 
             // button_SalvarServico
             // 
@@ -204,6 +261,40 @@
             this.button_SalvarServico.UseVisualStyleBackColor = false;
             this.button_SalvarServico.Click += new System.EventHandler(this.button_SalvarServico_Click);
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::GestaoPetShop.Properties.Resources.bicho_de_estimacao;
+            this.pictureBox3.Location = new System.Drawing.Point(9, 6);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(22, 24);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 1;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBoxFechar
+            // 
+            this.pictureBoxFechar.Image = global::GestaoPetShop.Properties.Resources.close;
+            this.pictureBoxFechar.Location = new System.Drawing.Point(473, 6);
+            this.pictureBoxFechar.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBoxFechar.Name = "pictureBoxFechar";
+            this.pictureBoxFechar.Size = new System.Drawing.Size(22, 24);
+            this.pictureBoxFechar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxFechar.TabIndex = 0;
+            this.pictureBoxFechar.TabStop = false;
+            this.pictureBoxFechar.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::GestaoPetShop.Properties.Resources.png_transparent_pet_cat_animal_kitty_biological_removebg_preview;
+            this.pictureBox1.Location = new System.Drawing.Point(350, 45);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(154, 98);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 16;
+            this.pictureBox1.TabStop = false;
+            // 
             // button_CancelarCadastroOuAlterar
             // 
             this.button_CancelarCadastroOuAlterar.BackColor = System.Drawing.Color.Transparent;
@@ -220,51 +311,6 @@
             this.button_CancelarCadastroOuAlterar.UseVisualStyleBackColor = false;
             this.button_CancelarCadastroOuAlterar.Click += new System.EventHandler(this.button_CancelarCadastroOuAlterar_Click);
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.pictureBox3);
-            this.panel1.Controls.Add(this.pictureBoxFechar);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(503, 34);
-            this.panel1.TabIndex = 17;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::GestaoPetShop.Properties.Resources.bicho_de_estimacao;
-            this.pictureBox3.Location = new System.Drawing.Point(9, 6);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(22, 24);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 1;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBoxFechar
-            // 
-            this.pictureBoxFechar.Image = global::GestaoPetShop.Properties.Resources.close;
-            this.pictureBoxFechar.Location = new System.Drawing.Point(473, 6);
-            this.pictureBoxFechar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pictureBoxFechar.Name = "pictureBoxFechar";
-            this.pictureBoxFechar.Size = new System.Drawing.Size(22, 24);
-            this.pictureBoxFechar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxFechar.TabIndex = 0;
-            this.pictureBoxFechar.TabStop = false;
-            this.pictureBoxFechar.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::GestaoPetShop.Properties.Resources.png_transparent_pet_cat_animal_kitty_biological_removebg_preview;
-            this.pictureBox1.Location = new System.Drawing.Point(350, 45);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(154, 98);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 16;
-            this.pictureBox1.TabStop = false;
-            // 
             // servicoBindingSource
             // 
             this.servicoBindingSource.DataSource = typeof(Models.Servico);
@@ -273,10 +319,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(62)))), ((int)(((byte)(165)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(211)))), ((int)(((byte)(174)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.CancelButton = this.button_SalvarServico;
             this.ClientSize = new System.Drawing.Size(503, 311);
+            this.Controls.Add(this.splitter4);
+            this.Controls.Add(this.splitter3);
+            this.Controls.Add(this.splitter2);
+            this.Controls.Add(this.splitter1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button_CancelarCadastroOuAlterar);
@@ -294,6 +344,7 @@
             this.Controls.Add(ativoLabel);
             this.Controls.Add(this.ativoCheckBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.KeyPreview = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormsCadastroServico";
@@ -328,5 +379,9 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBoxFechar;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Splitter splitter1;
+        private System.Windows.Forms.Splitter splitter2;
+        private System.Windows.Forms.Splitter splitter3;
+        private System.Windows.Forms.Splitter splitter4;
     }
 }
