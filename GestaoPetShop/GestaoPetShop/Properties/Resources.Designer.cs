@@ -263,6 +263,16 @@ namespace GestaoPetShop.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap papel_de_parede_21 {
+            get {
+                object obj = ResourceManager.GetObject("papel-de-parede-21", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pata {
             get {
                 object obj = ResourceManager.GetObject("pata", resourceCulture);

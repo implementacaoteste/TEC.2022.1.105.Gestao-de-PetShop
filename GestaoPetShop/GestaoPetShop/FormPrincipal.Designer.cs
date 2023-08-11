@@ -175,9 +175,11 @@
             this.dataGridViewTextBoxColumn15});
             this.dataGridView1_FormsPrincipalDataGridView.DataSource = this.dataGridView1_FormsPrincipalBindingSource;
             this.dataGridView1_FormsPrincipalDataGridView.Location = new System.Drawing.Point(12, 227);
+            this.dataGridView1_FormsPrincipalDataGridView.MultiSelect = false;
             this.dataGridView1_FormsPrincipalDataGridView.Name = "dataGridView1_FormsPrincipalDataGridView";
             this.dataGridView1_FormsPrincipalDataGridView.ReadOnly = true;
             this.dataGridView1_FormsPrincipalDataGridView.RowHeadersVisible = false;
+            this.dataGridView1_FormsPrincipalDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1_FormsPrincipalDataGridView.Size = new System.Drawing.Size(618, 162);
             this.dataGridView1_FormsPrincipalDataGridView.TabIndex = 6;
             this.dataGridView1_FormsPrincipalDataGridView.Visible = false;
@@ -235,6 +237,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::GestaoPetShop.Properties.Resources.papel_de_parede_21;
             this.ClientSize = new System.Drawing.Size(642, 408);
             this.Controls.Add(this.dataGridView1_FormsPrincipalDataGridView);
             this.Controls.Add(this.button2);
