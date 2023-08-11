@@ -18,7 +18,8 @@ namespace GestaoPetShop
         decimal precoAplicado;
         decimal subtotal;
         int quantidade;
-
+        decimal valortotalagendamento=0;
+        
         public FormCadastroAgendamento()
         {
             InitializeComponent();
@@ -88,6 +89,10 @@ namespace GestaoPetShop
             ((AgendamentoServico)dataGridView_ServicoBindingSource.Current).ValorComDesconto = Convert.ToDecimal(textBoxPrecoAplicado.Text);
             ((AgendamentoServico)dataGridView_ServicoBindingSource.Current).ValorTotal = Convert.ToDecimal(textBoxSubtotal.Text);
             dataGridView_ServicoBindingSource.EndEdit();
+             
+            subtotal = Convert.ToDecimal(textBoxSubtotal.Text);
+            valortotalagendamento = valortotalagendamento + subtotal;
+            totalTextBox.Text = Convert.ToString(valortotalagendamento);
 
             //dataGridView_ServicoBindingSource.DataSource = listAgendamentoServico;
 
@@ -96,7 +101,7 @@ namespace GestaoPetShop
 
         private void buttonSalvar_Click(object sender, EventArgs e)
         {
-
+            
 
         }
     }

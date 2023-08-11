@@ -46,10 +46,10 @@ namespace BLL
             return agendamentoDAL.DataGridViewBuscarTodos();
 
         }
-        public List<DataGridView1_FormsPrincipal> DataGridViewBuscarPorId(int _idAgendamento)
+        public List<DataGridView1_FormsPrincipal> DataGridViewBuscarPorId(int _idAgendamento , int _opc)
         {
             AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
-            return agendamentoDAL.DataGridViewBuscarPorId(_idAgendamento);
+            return agendamentoDAL.DataGridViewBuscarPorId(_idAgendamento, _opc);
         }
 
         public List<DataGridView1_FormsPrincipal> BuscarPorNomeCliente(string _nomeCliente)

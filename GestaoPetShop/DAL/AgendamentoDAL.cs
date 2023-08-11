@@ -307,7 +307,7 @@ namespace DAL
                         agendamento.IdAnimal = Convert.ToInt32(rd["IdAnimal"]);
                         agendamento.IdProfissional = Convert.ToInt32(rd["IdProfissional"]);
                         agendamento.IdSituacao = Convert.ToInt32(rd["IdSituacao"]);
-                        agendamento.DataAg = Convert.ToInt32(rd["DataAg"]);
+                        agendamento.DataAg = Convert.ToDateTime(rd["DataAg"]);
                         agendamento.Horario = Convert.ToInt32(rd["Horario"]);
                         agendamento.Total = Convert.ToInt32(rd["Total"]);
                         agendamento.Ativo = Convert.ToBoolean(rd["Ativo"]);
@@ -377,7 +377,7 @@ namespace DAL
         }
 
 
-        public List<DataGridView1_FormsPrincipal> DataGridViewBuscarPorId(int _idAgendamento)
+        public List<DataGridView1_FormsPrincipal> DataGridViewBuscarPorId(int _idAgendamento, int _opc = 0)
         {
             List<DataGridView1_FormsPrincipal> listaAgendamentos = new List<DataGridView1_FormsPrincipal>();
             DataGridView1_FormsPrincipal agendamentosView;
@@ -393,8 +393,13 @@ namespace DAL
                                                                                                                                                                                             LEFT JOIN AgendamentoServicos AGS    ON Ag.Id = AGS.IdAgendamento
                                                                                                                                                                                             LEFT JOIN Servico S                  ON AGS.IdServico = S.Id
                                                                                                                                                                                             LEFT JOIN Situacao Si                ON Ag.IdSituacao = Si.Id
-                                                                                                                                                                                            WHERE Ag.Id = @id";
-
+                                                                                                                                                                                            WHERE ";
+                if (_opc == 0)
+                    cmd.CommandText = cmd.CommandText + "Ag.Id = @id";
+                else if (_opc == 1)
+                    cmd.CommandText = cmd.CommandText + "Ani.Id = @Id";
+                else if (_opc == 2)
+                    cmd.CommandText = cmd.CommandText + "Cli.Id = @Id";
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@id", _idAgendamento);
                 cn.Open();
