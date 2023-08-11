@@ -30,20 +30,22 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormConsultaServico));
             this.comboBox_EscolhaBuscarServico = new System.Windows.Forms.ComboBox();
             this.textBox_BuscarServico = new System.Windows.Forms.TextBox();
             this.servicoDataGridView = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.servicoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.button_ExcluirServico = new System.Windows.Forms.Button();
             this.button_AlterarServico = new System.Windows.Forms.Button();
             this.button_InserirServico = new System.Windows.Forms.Button();
@@ -61,7 +63,7 @@
             "Todos",
             "Id",
             "Descrição"});
-            this.comboBox_EscolhaBuscarServico.Location = new System.Drawing.Point(35, 66);
+            this.comboBox_EscolhaBuscarServico.Location = new System.Drawing.Point(35, 123);
             this.comboBox_EscolhaBuscarServico.Name = "comboBox_EscolhaBuscarServico";
             this.comboBox_EscolhaBuscarServico.Size = new System.Drawing.Size(132, 28);
             this.comboBox_EscolhaBuscarServico.TabIndex = 4;
@@ -71,9 +73,9 @@
             // 
             this.textBox_BuscarServico.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(190)))), ((int)(((byte)(255)))));
             this.textBox_BuscarServico.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_BuscarServico.Location = new System.Drawing.Point(173, 67);
+            this.textBox_BuscarServico.Location = new System.Drawing.Point(173, 124);
             this.textBox_BuscarServico.Name = "textBox_BuscarServico";
-            this.textBox_BuscarServico.Size = new System.Drawing.Size(507, 26);
+            this.textBox_BuscarServico.Size = new System.Drawing.Size(574, 26);
             this.textBox_BuscarServico.TabIndex = 5;
             // 
             // servicoDataGridView
@@ -100,15 +102,79 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.servicoDataGridView.DefaultCellStyle = dataGridViewCellStyle1;
             this.servicoDataGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(190)))), ((int)(((byte)(255)))));
-            this.servicoDataGridView.Location = new System.Drawing.Point(34, 99);
+            this.servicoDataGridView.Location = new System.Drawing.Point(34, 156);
             this.servicoDataGridView.MultiSelect = false;
             this.servicoDataGridView.Name = "servicoDataGridView";
             this.servicoDataGridView.ReadOnly = true;
             this.servicoDataGridView.RowHeadersVisible = false;
             this.servicoDataGridView.RowHeadersWidth = 51;
             this.servicoDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.servicoDataGridView.Size = new System.Drawing.Size(645, 383);
+            this.servicoDataGridView.Size = new System.Drawing.Size(713, 383);
             this.servicoDataGridView.TabIndex = 10;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(141, 96);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(60, 19);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Buscar";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(252, 96);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(85, 19);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "Cadastrar";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(409, 96);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(60, 19);
+            this.label3.TabIndex = 13;
+            this.label3.Text = "Alterar";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(565, 96);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(59, 19);
+            this.label4.TabIndex = 14;
+            this.label4.Text = "Excluir";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(237, 9);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(310, 36);
+            this.label5.TabIndex = 15;
+            this.label5.Text = "Consulta de Serviços";
+            // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "buscar-removebg-preview.png");
+            this.imageList1.Images.SetKeyName(1, "add-removebg-preview.png");
+            this.imageList1.Images.SetKeyName(2, "editar-removebg-preview.png");
+            this.imageList1.Images.SetKeyName(3, "excluir-removebg-preview.png");
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -159,95 +225,64 @@
             // 
             this.servicoBindingSource.DataSource = typeof(Models.Servico);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(699, 71);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(59, 20);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "Buscar";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(687, 195);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(79, 20);
-            this.label2.TabIndex = 12;
-            this.label2.Text = "Cadastrar";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(702, 317);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(56, 20);
-            this.label3.TabIndex = 13;
-            this.label3.Text = "Alterar";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(702, 442);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(55, 20);
-            this.label4.TabIndex = 14;
-            this.label4.Text = "Excluir";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(280, 9);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(254, 28);
-            this.label5.TabIndex = 15;
-            this.label5.Text = "Consulta de Serviços";
-            // 
             // button_ExcluirServico
             // 
-            this.button_ExcluirServico.Image = global::GestaoPetShop.Properties.Resources._04_pata_pretoEbranco;
-            this.button_ExcluirServico.Location = new System.Drawing.Point(687, 465);
+            this.button_ExcluirServico.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(62)))), ((int)(((byte)(165)))));
+            this.button_ExcluirServico.FlatAppearance.BorderSize = 0;
+            this.button_ExcluirServico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_ExcluirServico.ForeColor = System.Drawing.Color.Transparent;
+            this.button_ExcluirServico.ImageKey = "excluir-removebg-preview.png";
+            this.button_ExcluirServico.ImageList = this.imageList1;
+            this.button_ExcluirServico.Location = new System.Drawing.Point(565, 48);
             this.button_ExcluirServico.Name = "button_ExcluirServico";
-            this.button_ExcluirServico.Size = new System.Drawing.Size(80, 84);
+            this.button_ExcluirServico.Size = new System.Drawing.Size(55, 50);
             this.button_ExcluirServico.TabIndex = 9;
-            this.button_ExcluirServico.UseVisualStyleBackColor = true;
+            this.button_ExcluirServico.UseVisualStyleBackColor = false;
             this.button_ExcluirServico.Click += new System.EventHandler(this.button_ExcluirServico_Click);
             // 
             // button_AlterarServico
             // 
-            this.button_AlterarServico.Image = global::GestaoPetShop.Properties.Resources._04_pata_pretoEbranco;
-            this.button_AlterarServico.Location = new System.Drawing.Point(687, 340);
+            this.button_AlterarServico.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(62)))), ((int)(((byte)(165)))));
+            this.button_AlterarServico.FlatAppearance.BorderSize = 0;
+            this.button_AlterarServico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_AlterarServico.ForeColor = System.Drawing.Color.Transparent;
+            this.button_AlterarServico.ImageKey = "editar-removebg-preview.png";
+            this.button_AlterarServico.ImageList = this.imageList1;
+            this.button_AlterarServico.Location = new System.Drawing.Point(410, 48);
             this.button_AlterarServico.Name = "button_AlterarServico";
-            this.button_AlterarServico.Size = new System.Drawing.Size(80, 84);
+            this.button_AlterarServico.Size = new System.Drawing.Size(55, 50);
             this.button_AlterarServico.TabIndex = 8;
-            this.button_AlterarServico.UseVisualStyleBackColor = true;
+            this.button_AlterarServico.UseVisualStyleBackColor = false;
             this.button_AlterarServico.Click += new System.EventHandler(this.button_AlterarServico_Click);
             // 
             // button_InserirServico
             // 
-            this.button_InserirServico.Image = global::GestaoPetShop.Properties.Resources._04_pata_pretoEbranco;
-            this.button_InserirServico.Location = new System.Drawing.Point(687, 218);
+            this.button_InserirServico.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(62)))), ((int)(((byte)(165)))));
+            this.button_InserirServico.FlatAppearance.BorderSize = 0;
+            this.button_InserirServico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_InserirServico.ForeColor = System.Drawing.Color.Transparent;
+            this.button_InserirServico.ImageKey = "add-removebg-preview.png";
+            this.button_InserirServico.ImageList = this.imageList1;
+            this.button_InserirServico.Location = new System.Drawing.Point(264, 48);
             this.button_InserirServico.Name = "button_InserirServico";
-            this.button_InserirServico.Size = new System.Drawing.Size(80, 84);
+            this.button_InserirServico.Size = new System.Drawing.Size(55, 50);
             this.button_InserirServico.TabIndex = 7;
-            this.button_InserirServico.UseVisualStyleBackColor = true;
+            this.button_InserirServico.UseVisualStyleBackColor = false;
             this.button_InserirServico.Click += new System.EventHandler(this.button_InserirServico_Click);
             // 
             // button_BucarServico
             // 
-            this.button_BucarServico.Image = global::GestaoPetShop.Properties.Resources._04_pata_pretoEbranco;
-            this.button_BucarServico.Location = new System.Drawing.Point(687, 93);
+            this.button_BucarServico.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(62)))), ((int)(((byte)(165)))));
+            this.button_BucarServico.FlatAppearance.BorderSize = 0;
+            this.button_BucarServico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_BucarServico.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(190)))), ((int)(((byte)(255)))));
+            this.button_BucarServico.ImageKey = "buscar-removebg-preview.png";
+            this.button_BucarServico.ImageList = this.imageList1;
+            this.button_BucarServico.Location = new System.Drawing.Point(143, 48);
             this.button_BucarServico.Name = "button_BucarServico";
-            this.button_BucarServico.Size = new System.Drawing.Size(80, 84);
+            this.button_BucarServico.Size = new System.Drawing.Size(55, 50);
             this.button_BucarServico.TabIndex = 6;
-            this.button_BucarServico.UseVisualStyleBackColor = true;
+            this.button_BucarServico.UseVisualStyleBackColor = false;
             this.button_BucarServico.Click += new System.EventHandler(this.button_BucarServico_Click);
             // 
             // FormConsultaServico
@@ -299,5 +334,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
+        private System.Windows.Forms.ImageList imageList1;
     }
 }
