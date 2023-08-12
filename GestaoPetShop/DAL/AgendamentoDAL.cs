@@ -282,17 +282,9 @@ namespace DAL
                 cn.Close();
             }
         }
-        public Agendamento BuscarPorId(int _id, int opc)
+        public Agendamento BuscarPorIdAnimalCliente(int _id, int _opc)
         {
-            /*
-             *  try
-            {
-                SqlCommand cmd = new SqlCommand();
-                cmd.Connection = cn;
-               
-               
 
-             */
             Agendamento agendamento = new Agendamento();
 
             SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
@@ -300,32 +292,43 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT Ag.DataAg,Ag.Horario, Ani.Nome as N_Animal,Cli.Nome as N_Cliente, S.Descricao, P.Nome as N_Prof,Si.Descricao as DescSituacao FROM Agendamento Ag LEFT JOIN Profissional P             ON Ag.IdProfissional = P.Id
-                                                                                                                                                                                            LEFT JOIN Animal Ani                 ON Ag.IdAnimal = Ani.Id
-                                                                                                                                                                                            LEFT JOIN Cliente Cli                ON Ani.IdCliente = Cli.Id
-                                                                                                                                                                                            LEFT JOIN AgendamentoServicos AGS    ON Ag.Id = AGS.IdAgendamento
-                                                                                                                                                                                            LEFT JOIN Servico S                  ON AGS.IdServico = S.Id
-                                                                                                                                                                                            LEFT JOIN Situacao Si                ON Ag.IdSituacao = Si.Id
-                                                                                                                                                                                            WHERE Ag.DataAg = @Data";
 
+
+                cmd.CommandText = @"SELECT A.Id as AnimalId , A.Nome as AnimalNome ,C.Id as  ClienteId, C.Nome as ClienteNome 
+                                        FROM Animal A INNER JOIN Cliente C  ON A.IdCliente = C.Id WHERE ";
+
+                
+                if(_opc == 0)
+                {
+                cmd.CommandText = cmd.CommandText + "A.Id = @id";
+
+                }
+                if(_opc == 1)
+                {
+                    cmd.CommandText = cmd.CommandText + "C.Id = @id";
+                }
                 cmd.CommandType = System.Data.CommandType.Text;
 
+               
                 cmd.Parameters.AddWithValue("@Id", _id);
-
                 cn.Open();
 
                 using (SqlDataReader rd = cmd.ExecuteReader())
                 {
                     if (rd.Read())
                     {
-                        agendamento.Id = Convert.ToInt32(rd["Id"]);
-                        agendamento.IdAnimal = Convert.ToInt32(rd["IdAnimal"]);
-                        agendamento.IdProfissional = Convert.ToInt32(rd["IdProfissional"]);
-                        agendamento.IdSituacao = Convert.ToInt32(rd["IdSituacao"]);
-                        agendamento.DataAg = Convert.ToDateTime(rd["DataAg"]);
-                        agendamento.Horario = Convert.ToInt32(rd["Horario"]);
-                        agendamento.Total = Convert.ToInt32(rd["Total"]);
-                        agendamento.Ativo = Convert.ToBoolean(rd["Ativo"]);
+                        
+                        agendamento.IdAnimal = Convert.ToInt32(rd["AnimalId"]);
+                        agendamento.IdCliente = Convert.ToInt32(rd["ClienteId"]);
+                        agendamento.NomeAnimal = rd["AnimalNome"].ToString();
+                        agendamento.NomeCliente = rd["ClienteNome"].ToString();
+
+                        //agendamento.IdProfissional = Convert.ToInt32(rd["IdProfissional"]);
+                        //agendamento.IdSituacao = Convert.ToInt32(rd["IdSituacao"]);
+                        //agendamento.DataAg = Convert.ToDateTime(rd["DataAg"]);
+                        //agendamento.Horario = Convert.ToInt32(rd["Horario"]);
+                        //agendamento.Total = Convert.ToInt32(rd["Total"]);
+                        //agendamento.Ativo = Convert.ToBoolean(rd["Ativo"]);
                     }
                 }
                 return agendamento;
@@ -340,43 +343,46 @@ namespace DAL
             }
         }
 
-        public object BuscarPorNomeAnimal(string _nomeAnimal)
+        public List<Agendamento> BuscarPorNomeAnimalCliente(string _nomeAnimalCliente, int _opc)
         {
-            List<DataGridView1_FormsPrincipal> listaAgendamentos = new List<DataGridView1_FormsPrincipal>();
-            DataGridView1_FormsPrincipal agendamentosView;
+            List<Agendamento> listaAgendamentos = new List<Agendamento>();
+            Agendamento agendamento;
 
             SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
             try
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT Ag.DataAg,Ag.Horario, Ani.Nome as N_Animal,Cli.Nome as N_Cliente, S.Descricao, P.Nome as N_Prof,Si.Descricao as DescSituacao FROM Agendamento Ag LEFT JOIN Profissional P             ON Ag.IdProfissional = P.Id
-                                                                                                                                                                                            LEFT JOIN Animal Ani                 ON Ag.IdAnimal = Ani.Id
-                                                                                                                                                                                            LEFT JOIN Cliente Cli                ON Ani.IdCliente = Cli.Id
-                                                                                                                                                                                            LEFT JOIN AgendamentoServicos AGS    ON Ag.Id = AGS.IdAgendamento
-                                                                                                                                                                                            LEFT JOIN Servico S                  ON AGS.IdServico = S.Id
-                                                                                                                                                                                            LEFT JOIN Situacao Si                ON Ag.IdSituacao = Si.Id
-                                                                                                                                                                                            WHERE UPPER(Ani.Nome) LIKE UPPER(@nomeAnimal)";
+                cmd.CommandText = @"SELECT A.Id as AnimalId , A.Nome as AnimalNome ,C.Id as  ClienteId, C.Nome as ClienteNome 
+                                        FROM Animal A INNER JOIN Cliente C  ON A.IdCliente = C.Id WHERE ";
 
+
+                if (_opc == 2)
+                {
+                    cmd.CommandText = cmd.CommandText + "UPPER (A.Nome) LIKE UPPER (@Nome)";
+
+                }
+                if (_opc == 3)
+                {
+                    cmd.CommandText = cmd.CommandText + "UPPER (C.Nome) LIKE UPPER (@Nome)";
+                }
                 cmd.CommandType = System.Data.CommandType.Text;
-                cmd.Parameters.AddWithValue("@nomeAnimal", "%" + _nomeAnimal + "%");
+                cmd.Parameters.AddWithValue("@Nome","%" + _nomeAnimalCliente + "%");
                 cn.Open();
 
                 using (SqlDataReader rd = cmd.ExecuteReader())
                 {
-                    while (rd.Read())
+                   while (rd.Read())
                     {
-                        agendamentosView = new DataGridView1_FormsPrincipal();
-                        agendamentosView.DataAg = Convert.ToDateTime(rd["DataAg"]);
-                        agendamentosView.NomeAnimal = rd["N_Animal"].ToString();
-                        agendamentosView.NomeCliente = rd["N_Cliente"].ToString();
-                        agendamentosView.Servico = rd["Descricao"].ToString();
-                        agendamentosView.Profissional = rd["N_Prof"].ToString();
-                        agendamentosView.Horario = rd["Horario"].ToString();
-                        agendamentosView.Situacao = rd["DescSituacao"].ToString();
+                        agendamento = new Agendamento();
 
+                        agendamento.IdAnimal = Convert.ToInt32(rd["AnimalId"]);
+                        agendamento.IdCliente = Convert.ToInt32(rd["ClienteId"]);
+                        agendamento.NomeAnimal = rd["AnimalNome"].ToString();
+                        agendamento.NomeCliente = rd["ClienteNome"].ToString();
 
-                        listaAgendamentos.Add(agendamentosView);
+                        listaAgendamentos.Add(agendamento);
+                        
                     }
                 }
                 return listaAgendamentos;

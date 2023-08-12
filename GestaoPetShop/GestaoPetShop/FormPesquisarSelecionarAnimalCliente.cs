@@ -29,19 +29,20 @@ namespace GestaoPetShop
                 switch (comboBoxEscolherTipoPequisaAnimalCliente.SelectedIndex)
                 {
                     case 0:
-                        opc = 1;
-                        agendamentoBindingSource.DataSource = new AgendamentoBLL().DataGridViewBuscarPorId(Convert.ToInt32(textBoxPesquisaAnimalCliente.Text), opc);
+                        opc = 0;
+                        agendamentoBindingSource.DataSource = new AgendamentoBLL().BuscarPorIdAnimalCliente(Convert.ToInt32(textBoxPesquisaAnimalCliente.Text), opc);
                         break;
                     case 1:
-                        opc = 2;
-                        agendamentoBindingSource.DataSource = new AgendamentoBLL().DataGridViewBuscarPorId(Convert.ToInt32(textBoxPesquisaAnimalCliente.Text), opc);
+                        opc = 1;
+                        agendamentoBindingSource.DataSource = new AgendamentoBLL().BuscarPorIdAnimalCliente(Convert.ToInt32(textBoxPesquisaAnimalCliente.Text), opc);
                         break;
                     case 2:
-
-                        agendamentoBindingSource.DataSource = new AgendamentoBLL().BuscarPorNomeAnimal(textBoxPesquisaAnimalCliente.Text);
+                        opc = 2;
+                        agendamentoBindingSource.DataSource = new AgendamentoBLL().BuscarPorNomeAnimalCliente(textBoxPesquisaAnimalCliente.Text, opc);
                         break;
                     case 3:
-                        agendamentoBindingSource.DataSource = new AgendamentoBLL().BuscarPorNomeCliente(textBoxPesquisaAnimalCliente.Text);
+                        opc = 3;
+                        agendamentoBindingSource.DataSource = new AgendamentoBLL().BuscarPorNomeAnimalCliente(textBoxPesquisaAnimalCliente.Text, opc);
                         break;
                     default:
                         MessageBox.Show("Escolha Uma opção de busca");

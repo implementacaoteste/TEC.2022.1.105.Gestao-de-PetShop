@@ -53,7 +53,7 @@ namespace GestaoPetShop
                         MessageBox.Show("Insirar o Nome do Animal para pesquisa");
                         return;
                     }
-                    dataGridView1_FormsPrincipalBindingSource.DataSource = agendamentoBLL.BuscarPorNomeAnimal(textBox_BuscarAgendamento.Text);
+                   // dataGridView1_FormsPrincipalBindingSource.DataSource = agendamentoBLL.BuscarPorNomeAnimal(textBox_BuscarAgendamento.Text);
 
                 }
                 else if(comboBox_SelecionarTipoBusca.SelectedIndex == 3)

@@ -103,6 +103,7 @@ namespace GestaoPetShop
         {
 
 
+
         }
 
         private void buttonPesquisarAnimal_Click(object sender, EventArgs e)
@@ -123,12 +124,13 @@ namespace GestaoPetShop
                         int idpesquisa = frm.id;
                         AgendamentoBLL agendamentoBLL = new AgendamentoBLL();
                         Agendamento agendamento = new Agendamento();
-                          agendamento = agendamentoBLL.BuscarPorId(idpesquisa, opc);
-                        idAnimalTextBox.Text = Convert.ToString(((Agendamento)agendamentoBindingSource.Current).IdAnimal);
-                        nomeAnimalTextBox.Text = ((Agendamento)agendamentoBindingSource.Current).NomeAnimal;
-                        idClienteTextBox.Text = Convert.ToString(((Agendamento)agendamentoBindingSource.Current).IdCliente);
-                        nomeClienteTextBox.Text = ((Agendamento)agendamentoBindingSource.Current).NomeCliente;
-                        MessageBox.Show("Permissão adicionada com sucesso!");
+                       // agendamento = agendamentoBLL.BuscarPorId(idpesquisa, opc);
+
+                        idAnimalTextBox.Text = Convert.ToString(agendamento.IdAnimal);
+                        nomeAnimalTextBox.Text = Convert.ToString(agendamento.NomeAnimal);
+                        idClienteTextBox.Text = Convert.ToString(agendamento.IdCliente);
+                        nomeClienteTextBox.Text = Convert.ToString(agendamento.NomeCliente);
+                       
                     }
                     catch (Exception ex)
                     {
