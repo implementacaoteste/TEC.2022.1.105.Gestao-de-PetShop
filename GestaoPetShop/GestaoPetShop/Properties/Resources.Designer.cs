@@ -143,6 +143,16 @@ namespace GestaoPetShop.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap buscar_removebg_preview1 {
+            get {
+                object obj = ResourceManager.GetObject("buscar-removebg-preview1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cadeado2 {
             get {
                 object obj = ResourceManager.GetObject("cadeado2", resourceCulture);
@@ -246,6 +256,26 @@ namespace GestaoPetShop.Properties {
         internal static System.Drawing.Bitmap excluir_removebg_preview {
             get {
                 object obj = ResourceManager.GetObject("excluir-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fechar_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("fechar-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fechar_removebg_preview1 {
+            get {
+                object obj = ResourceManager.GetObject("fechar-removebg-preview1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

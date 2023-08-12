@@ -167,5 +167,10 @@ namespace GestaoPetShop
             monthCalendar_Agendamento.Visible = false;
             button_SelecionarData.Visible = false;
         }
+
+        private void btnFechar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

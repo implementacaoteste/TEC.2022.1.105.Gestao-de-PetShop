@@ -103,8 +103,6 @@ namespace GestaoPetShop
 
             dataGridView1_FormsPrincipalDataGridView.DataSource = new ServicoBLL().dataGridView(dataag);
 
-
-
             dataGridView1_FormsPrincipalDataGridView.Visible = true;
             button2.Visible = true;
         }
