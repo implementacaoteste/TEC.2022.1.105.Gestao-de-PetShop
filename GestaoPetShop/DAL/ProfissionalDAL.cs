@@ -29,7 +29,7 @@ namespace DAL
                                         Ativo = @Ativo
                                     WHERE Id = @Id";
                 cmd.CommandType = System.Data.CommandType.Text;
-                cmd.Parameters.AddWithValue("@Idfuncao", _profissional.Idfuncao);
+                cmd.Parameters.AddWithValue("@Idfuncao", _profissional.IdFuncao);
                 cmd.Parameters.AddWithValue("@Id", _profissional.Id);
                 cmd.Parameters.AddWithValue("@Nome", _profissional.Nome);
                 cmd.Parameters.AddWithValue("@CPF", _profissional.CPF);

@@ -69,28 +69,13 @@ namespace GestaoPetShop
                 if (agendamentoBindingSource.Count > 0)
 
                 {
-                    switch (comboBoxEscolherTipoPequisaAnimalCliente.SelectedIndex)
-                    {
-                        case 0:
-
-                             id = ((Agendamento)agendamentoBindingSource.Current).IdAnimal;
-                             opc = 1;
-                            break;
-                        case 1:
-                            id = ((Agendamento)agendamentoBindingSource.Current).IdCliente;
-                            opc = 2;
-                            break;
-                       
-                        default:
-                            MessageBox.Show("Escolha um Tipo de pesquisa");
-                            break;
-                    }
-
+                      id = ((Agendamento)agendamentoBindingSource.Current).IdAnimal;
+                      opc = 0;
                     Close();
                 }
                 else
                 {
-                    MessageBox.Show("Não tem Cliente/Animal selecionado");
+                    MessageBox.Show("Não tem Animal selecionado");
                 }
             }
             catch (Exception ex)

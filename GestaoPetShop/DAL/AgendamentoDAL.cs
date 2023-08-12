@@ -297,19 +297,19 @@ namespace DAL
                 cmd.CommandText = @"SELECT A.Id as AnimalId , A.Nome as AnimalNome ,C.Id as  ClienteId, C.Nome as ClienteNome 
                                         FROM Animal A INNER JOIN Cliente C  ON A.IdCliente = C.Id WHERE ";
 
-                
-                if(_opc == 0)
+
+                if (_opc == 0)
                 {
-                cmd.CommandText = cmd.CommandText + "A.Id = @id";
+                    cmd.CommandText = cmd.CommandText + "A.Id = @id";
 
                 }
-                if(_opc == 1)
+                if (_opc == 1)
                 {
                     cmd.CommandText = cmd.CommandText + "C.Id = @id";
                 }
                 cmd.CommandType = System.Data.CommandType.Text;
 
-               
+
                 cmd.Parameters.AddWithValue("@Id", _id);
                 cn.Open();
 
@@ -317,7 +317,7 @@ namespace DAL
                 {
                     if (rd.Read())
                     {
-                        
+
                         agendamento.IdAnimal = Convert.ToInt32(rd["AnimalId"]);
                         agendamento.IdCliente = Convert.ToInt32(rd["ClienteId"]);
                         agendamento.NomeAnimal = rd["AnimalNome"].ToString();
@@ -367,12 +367,12 @@ namespace DAL
                     cmd.CommandText = cmd.CommandText + "UPPER (C.Nome) LIKE UPPER (@Nome)";
                 }
                 cmd.CommandType = System.Data.CommandType.Text;
-                cmd.Parameters.AddWithValue("@Nome","%" + _nomeAnimalCliente + "%");
+                cmd.Parameters.AddWithValue("@Nome", "%" + _nomeAnimalCliente + "%");
                 cn.Open();
 
                 using (SqlDataReader rd = cmd.ExecuteReader())
                 {
-                   while (rd.Read())
+                    while (rd.Read())
                     {
                         agendamento = new Agendamento();
 
@@ -382,7 +382,7 @@ namespace DAL
                         agendamento.NomeCliente = rd["ClienteNome"].ToString();
 
                         listaAgendamentos.Add(agendamento);
-                        
+
                     }
                 }
                 return listaAgendamentos;
@@ -396,7 +396,64 @@ namespace DAL
                 cn.Close();
             }
         }
+        public List<Agendamento> BuscarPorNomeProfissional(string _nomeProfissional , int _idProfissional)
+        {
+            List<Agendamento> listaAgendamentos = new List<Agendamento>();
+            Agendamento agendamento;
 
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = cn;
+                cmd.CommandText = @"SELECT Id, Nome FROM Profissional";
+
+
+                if (_nomeProfissional != "" && _idProfissional == 0)
+                {
+                    cmd.CommandText = cmd.CommandText + "  WHERE UPPER (Nome) LIKE UPPER (@Nome)";
+
+                    cmd.CommandType = System.Data.CommandType.Text;
+                    cmd.Parameters.AddWithValue("@Nome", "%" + _nomeProfissional + "%");
+                }
+                if (_nomeProfissional == "" && _idProfissional != 0)
+                {
+                    cmd.CommandText = cmd.CommandText + " WHERE Id = @Id";
+                    cmd.CommandType = System.Data.CommandType.Text;
+                    cmd.Parameters.AddWithValue("@Id", _idProfissional);
+                }
+                if (_nomeProfissional == "" && _idProfissional == 0)
+                {
+                 
+                    cmd.CommandType = System.Data.CommandType.Text;
+                   
+                }
+                cn.Open();
+
+                using (SqlDataReader rd = cmd.ExecuteReader())
+                {
+                    while (rd.Read())
+                    {
+                        agendamento = new Agendamento();
+
+                        agendamento.IdProfissional = Convert.ToInt32(rd["Id"]);
+                        agendamento.NomeProfissional = rd["Nome"].ToString();
+
+                        listaAgendamentos.Add(agendamento);
+
+                    }
+                }
+                return listaAgendamentos;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu um erro ao tentar buscar todos os Serviços no banco de dados.", ex) { Data = { { "Id", 46 } } };
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
 
         public List<DataGridView1_FormsPrincipal> DataGridViewBuscarPorId(int _idAgendamento, int _opc)
         {
