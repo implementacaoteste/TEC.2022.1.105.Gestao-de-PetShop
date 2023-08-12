@@ -15,7 +15,7 @@ namespace GestaoPetShop
 {
     public partial class FormCadastroAgendamento : Form
     {
-        decimal precoAplicado;
+        internal decimal precoAplicado;
         decimal subtotal;
         int quantidade;
         decimal valortotalagendamento = 0;
@@ -33,7 +33,7 @@ namespace GestaoPetShop
 
                 List<AgendamentoServico> listViewServico = new List<AgendamentoServico>();
 
-                listViewServico = new AgendamentoBLL().BuscarsServicoPorNome(descricaoComboBox.Text);
+                listViewServico = new AgendamentoBLL().BuscarServicoPorNome(descricaoComboBox.Text);
                 List<Agendamento> agendamentoProfissinal = new List<Agendamento>();
                 List<Situacao> situacoes = new List<Situacao>();
 
@@ -95,14 +95,14 @@ namespace GestaoPetShop
             try
             {
 
-                dataGridView_ServicoBindingSource.AddNew();
-                ((AgendamentoServico)dataGridView_ServicoBindingSource.Current).IdServico = Convert.ToInt32(idTextBox.Text);
-                ((AgendamentoServico)dataGridView_ServicoBindingSource.Current).Servico = descricaoComboBox.Text;
-                ((AgendamentoServico)dataGridView_ServicoBindingSource.Current).Quantidade = Convert.ToInt32(textBoxQuantidade.Text);
-                ((AgendamentoServico)dataGridView_ServicoBindingSource.Current).ValorUnitario = Convert.ToDecimal(precoTextBox.Text);
-                ((AgendamentoServico)dataGridView_ServicoBindingSource.Current).ValorComDesconto = Convert.ToDecimal(textBoxPrecoAplicado.Text);
-                ((AgendamentoServico)dataGridView_ServicoBindingSource.Current).ValorTotal = Convert.ToDecimal(textBoxSubtotal.Text);
-                dataGridView_ServicoBindingSource.EndEdit();
+               agendamentoServicosBindingSource.AddNew();
+                ((AgendamentoServico)agendamentoServicosBindingSource.Current).IdServico = Convert.ToInt32(idTextBox.Text);
+                ((AgendamentoServico)agendamentoServicosBindingSource.Current).Servico = descricaoComboBox.Text;
+                ((AgendamentoServico)agendamentoServicosBindingSource.Current).Quantidade = Convert.ToInt32(textBoxQuantidade.Text);
+                ((AgendamentoServico)agendamentoServicosBindingSource.Current).ValorUnitario = Convert.ToDecimal(precoTextBox.Text);
+                ((AgendamentoServico)agendamentoServicosBindingSource.Current).ValorComDesconto = Convert.ToDecimal(textBoxPrecoAplicado.Text);
+                ((AgendamentoServico)agendamentoServicosBindingSource.Current).ValorTotal = Convert.ToDecimal(textBoxSubtotal.Text);
+                agendamentoServicosBindingSource.EndEdit();
 
                 subtotal = Convert.ToDecimal(textBoxSubtotal.Text);
                 valortotalagendamento = valortotalagendamento + subtotal;
@@ -165,7 +165,7 @@ namespace GestaoPetShop
             }
         }
 
-        
+       
     }
         
 }

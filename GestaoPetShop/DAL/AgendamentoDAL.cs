@@ -12,7 +12,7 @@ namespace DAL
 {
     public class AgendamentoDAL
     {
-        private int _idagendamento;
+        private int _idagendamento = 0;
 
         public void Inserir(Agendamento _agendamento, SqlTransaction _transaction = null)
         {
@@ -673,7 +673,7 @@ namespace DAL
             }
         }
 
-        public List<AgendamentoServico> BuscarsServicoPorNome(string _nomeServico)
+        public List<AgendamentoServico> BuscarServicoPorNome(string _nomeServico)
         {
 
             List<AgendamentoServico> listaServicos = new List<AgendamentoServico>();
