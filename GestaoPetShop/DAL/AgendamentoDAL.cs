@@ -23,12 +23,12 @@ namespace DAL
             {
                 using (SqlCommand cmd = new SqlCommand(@"INSERT INTO Agendamento(IdAnimal, IdProfissional, IdSituacao, DataAg, Horario, Total, Ativo)VALUES(@IdAnimal, @IdProfissional, @IdSituacao, @DataAg, @Horario, @Total,@Ativo)", cn))
                 {
-                    cmd.Parameters.AddWithValue("@IdAnimal", _agendamento.IdAnimal);
-                    cmd.Parameters.AddWithValue("@IdProfissional", _agendamento.IdProfissional);
-                    cmd.Parameters.AddWithValue("@IdSituacao", _agendamento.IdSituacao);
-                    cmd.Parameters.AddWithValue("@DataAg", _agendamento.DataAg);
+                    cmd.Parameters.AddWithValue("@IdAnimal",Convert.ToInt32( _agendamento.IdAnimal));
+                    cmd.Parameters.AddWithValue("@IdProfissional", Convert.ToInt32(_agendamento.IdProfissional));
+                    cmd.Parameters.AddWithValue("@IdSituacao", Convert.ToInt32(_agendamento.IdSituacao));
+                    cmd.Parameters.AddWithValue("@DataAg", Convert.ToInt32(_agendamento.DataAg));
                     cmd.Parameters.AddWithValue("@Horario", _agendamento.Horario);
-                    cmd.Parameters.AddWithValue("@Total", _agendamento.Total);
+                    cmd.Parameters.AddWithValue("@Total", Convert.ToDecimal(_agendamento.Total));
                     cmd.Parameters.AddWithValue("@Ativo", _agendamento.Ativo);
 
                     if (_transaction == null)
@@ -804,6 +804,49 @@ namespace DAL
             catch (Exception ex)
             {
                 throw new Exception("Ocorreu um erro ao tentar buscar todos os Profissionais no banco de dados.", ex) { Data = { { "Id", 132 } } };
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
+
+        public Agendamento BuscarProfissional(string _nomeProfissional)
+        {
+
+           
+            Agendamento agendamento = new Agendamento();
+
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = cn;
+                cmd.CommandText = @"SELECT Id, Nome FROM Profissional   WHERE UPPER (Nome) LIKE UPPER (@Nome)";
+
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.Parameters.AddWithValue("@Nome",_nomeProfissional);
+                cn.Open();
+
+
+                using (SqlDataReader rd = cmd.ExecuteReader())
+                {
+                   if (rd.Read())
+                    {
+                        agendamento.IdProfissional = Convert.ToInt32(rd["Id"]);
+                        agendamento.NomeProfissional = rd["Nome"].ToString();
+                        
+
+
+
+                       
+                    }
+                }
+                return agendamento;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu um erro ao tentar buscar todos os Serviços no banco de dados.", ex) { Data = { { "Id", 46 } } };
             }
             finally
             {

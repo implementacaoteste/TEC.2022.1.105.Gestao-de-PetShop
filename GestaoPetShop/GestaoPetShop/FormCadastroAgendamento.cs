@@ -2,6 +2,7 @@
 using Models;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
@@ -125,8 +126,19 @@ namespace GestaoPetShop
 
         private void buttonSalvar_Click(object sender, EventArgs e)
         {
+            Agendamento agendamento = new Agendamento();
+            List<AgendamentoServico> agendamentoServicos2 = new List<AgendamentoServico>();
+            int quant =  agendamentoBindingSource.Count;
+            agendamento = (Agendamento)agendamentoBindingSource.Current;
 
+            for (int x = 0; x<quant; x++)
+            {
+            agendamento.agendamentoServicos.Insert(x,(AgendamentoServico)agendamentoBindingSource1[x]);
 
+            }
+            //agendamento.agendamentoServicos = (List<AgendamentoServico>)agendamentoBindingSource1.;
+
+            new AgendamentoBLL().Inserir(agendamento);
 
         }
 
@@ -176,11 +188,19 @@ namespace GestaoPetShop
             List<Agendamento> agendamentoProfissional = new List<Agendamento>();
             Agendamento agendamento = new Agendamento();
             agendamentoProfissional = new AgendamentoBLL().BuscarPorNomeProfissional(_nomeProfissional, _idProfissional);
-            int num = agendamentoProfissional.Count();
+           
             
             //idProfissionalTextBox.Text = Convert.ToString(agendamentoProfissional.IdProfissional);
 
            
+        }
+
+        private void buttonAtualizarProfissional_Click(object sender, EventArgs e)
+        {
+            Agendamento agendamento = new Agendamento();
+            agendamento = new AgendamentoBLL().BuscarProfissional(nomeProfissionalComboBox.Text);
+            idProfissionalTextBox.Text = Convert.ToString(agendamento.IdProfissional);
+
         }
     }
 
