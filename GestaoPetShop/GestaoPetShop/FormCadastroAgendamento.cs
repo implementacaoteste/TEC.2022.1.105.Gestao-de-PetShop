@@ -25,7 +25,7 @@ namespace GestaoPetShop
             InitializeComponent();
         }
 
-        
+
         private void FormCadastroAgendamento_Load(object sender, EventArgs e)
         {
             try
@@ -38,7 +38,8 @@ namespace GestaoPetShop
                 List<Situacao> situacoes = new List<Situacao>();
 
                 int num = listViewServico.Count();
-                MessageBox.Show(Convert.ToString(num));
+
+
                 for (int x = 0; x < num; x++)
                 {
                     descricaoComboBox.Items.Insert(x, listViewServico[x].Servico);
@@ -73,8 +74,11 @@ namespace GestaoPetShop
         {
             try
             {
-
-                servicoBindingSource.DataSource = new AgendamentoBLL().PorNome(descricaoComboBox.Text);
+                Servico servico = new Servico();
+                servico = new AgendamentoBLL().PorNome(descricaoComboBox.Text);
+                idTextBox.Text = Convert.ToString(servico.Id);
+                descricaoComboBox.Text =servico.Descricao;
+                precoTextBox.Text = Convert.ToString(servico.Preco);
                 textBoxPrecoAplicado.Text = precoTextBox.Text;
                 precoAplicado = Convert.ToDecimal(textBoxPrecoAplicado.Text);
                 quantidade = Convert.ToInt32(textBoxQuantidade.Text);
@@ -94,15 +98,15 @@ namespace GestaoPetShop
 
             try
             {
-
-               agendamentoServicosBindingSource.AddNew();
-                ((AgendamentoServico)agendamentoServicosBindingSource.Current).IdServico = Convert.ToInt32(idTextBox.Text);
-                ((AgendamentoServico)agendamentoServicosBindingSource.Current).Servico = descricaoComboBox.Text;
-                ((AgendamentoServico)agendamentoServicosBindingSource.Current).Quantidade = Convert.ToInt32(textBoxQuantidade.Text);
-                ((AgendamentoServico)agendamentoServicosBindingSource.Current).ValorUnitario = Convert.ToDecimal(precoTextBox.Text);
-                ((AgendamentoServico)agendamentoServicosBindingSource.Current).ValorComDesconto = Convert.ToDecimal(textBoxPrecoAplicado.Text);
-                ((AgendamentoServico)agendamentoServicosBindingSource.Current).ValorTotal = Convert.ToDecimal(textBoxSubtotal.Text);
-                agendamentoServicosBindingSource.EndEdit();
+                
+                agendamentoServicosBindingSource1.AddNew();
+                ((AgendamentoServico)agendamentoServicosBindingSource1.Current).IdServico = Convert.ToInt32(idTextBox.Text);
+                ((AgendamentoServico)agendamentoServicosBindingSource1.Current).Servico = descricaoComboBox.Text;
+                ((AgendamentoServico)agendamentoServicosBindingSource1.Current).Quantidade = Convert.ToInt32(textBoxQuantidade.Text);
+                ((AgendamentoServico)agendamentoServicosBindingSource1.Current).ValorUnitario = Convert.ToDecimal(precoTextBox.Text);
+                ((AgendamentoServico)agendamentoServicosBindingSource1.Current).ValorComDesconto = Convert.ToDecimal(textBoxPrecoAplicado.Text);
+                ((AgendamentoServico)agendamentoServicosBindingSource1.Current).ValorTotal = Convert.ToDecimal(textBoxSubtotal.Text);
+                agendamentoServicosBindingSource1.EndEdit();
 
                 subtotal = Convert.ToDecimal(textBoxSubtotal.Text);
                 valortotalagendamento = valortotalagendamento + subtotal;
@@ -165,7 +169,19 @@ namespace GestaoPetShop
             }
         }
 
-       
+        private void nomeProfissionalComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string _nomeProfissional = nomeProfissionalComboBox.Text;
+            int _idProfissional = 0;
+            List<Agendamento> agendamentoProfissional = new List<Agendamento>();
+            Agendamento agendamento = new Agendamento();
+            agendamentoProfissional = new AgendamentoBLL().BuscarPorNomeProfissional(_nomeProfissional, _idProfissional);
+            int num = agendamentoProfissional.Count();
+            
+            //idProfissionalTextBox.Text = Convert.ToString(agendamentoProfissional.IdProfissional);
+
+           
+        }
     }
-        
+
 }

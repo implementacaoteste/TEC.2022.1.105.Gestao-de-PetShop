@@ -699,7 +699,7 @@ namespace DAL
                         servicoView.Id = Convert.ToInt32(rd["Id"]);
                         servicoView.Servico = rd["Descricao"].ToString();
                         servicoView.ValorUnitario = Convert.ToDecimal(rd["Preco"]);
-
+                       
 
 
                         listaServicos.Add(servicoView);
@@ -731,7 +731,7 @@ namespace DAL
                 cmd.CommandText = @"SELECT Id, Descricao, Preco FROM Servico   WHERE UPPER (Descricao) LIKE UPPER (@Nome)";
 
                 cmd.CommandType = System.Data.CommandType.Text;
-                cmd.Parameters.AddWithValue("@Nome", "%" + _selectedText + "%");
+                cmd.Parameters.AddWithValue("@Nome", _selectedText);
                 cn.Open();
 
 
