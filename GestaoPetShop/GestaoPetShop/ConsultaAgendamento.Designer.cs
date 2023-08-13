@@ -440,10 +440,10 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox_BuscarData);
             this.Controls.Add(this.button_InserirAgendamentos);
-            this.Controls.Add(this.button_BuscarAgendamentos);
             this.Controls.Add(this.textBox_BuscarAgendamento);
             this.Controls.Add(this.comboBox_SelecionarTipoBusca);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.button_BuscarAgendamentos);
             this.Controls.Add(this.button_AlterarAgendamentos);
             this.Controls.Add(this.button_ExcluirAgendamento);
             this.Controls.Add(this.label3);
