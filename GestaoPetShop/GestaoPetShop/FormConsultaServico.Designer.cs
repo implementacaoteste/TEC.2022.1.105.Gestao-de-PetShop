@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormConsultaServico));
             this.comboBox_EscolhaBuscarServico = new System.Windows.Forms.ComboBox();
             this.textBox_BuscarServico = new System.Windows.Forms.TextBox();
@@ -66,10 +66,9 @@
             "Todos",
             "Id",
             "Descrição"});
-            this.comboBox_EscolhaBuscarServico.Location = new System.Drawing.Point(47, 174);
-            this.comboBox_EscolhaBuscarServico.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBox_EscolhaBuscarServico.Location = new System.Drawing.Point(35, 141);
             this.comboBox_EscolhaBuscarServico.Name = "comboBox_EscolhaBuscarServico";
-            this.comboBox_EscolhaBuscarServico.Size = new System.Drawing.Size(175, 33);
+            this.comboBox_EscolhaBuscarServico.Size = new System.Drawing.Size(132, 28);
             this.comboBox_EscolhaBuscarServico.TabIndex = 4;
             this.comboBox_EscolhaBuscarServico.Text = "Buscar Por";
             // 
@@ -77,10 +76,9 @@
             // 
             this.textBox_BuscarServico.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(187)))), ((int)(((byte)(189)))));
             this.textBox_BuscarServico.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_BuscarServico.Location = new System.Drawing.Point(231, 176);
-            this.textBox_BuscarServico.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox_BuscarServico.Location = new System.Drawing.Point(173, 143);
             this.textBox_BuscarServico.Name = "textBox_BuscarServico";
-            this.textBox_BuscarServico.Size = new System.Drawing.Size(764, 30);
+            this.textBox_BuscarServico.Size = new System.Drawing.Size(574, 26);
             this.textBox_BuscarServico.TabIndex = 5;
             // 
             // servicoDataGridView
@@ -98,24 +96,23 @@
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewCheckBoxColumn1});
             this.servicoDataGridView.DataSource = this.servicoBindingSource;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.servicoDataGridView.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.servicoDataGridView.DefaultCellStyle = dataGridViewCellStyle2;
             this.servicoDataGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(190)))), ((int)(((byte)(255)))));
-            this.servicoDataGridView.Location = new System.Drawing.Point(45, 215);
-            this.servicoDataGridView.Margin = new System.Windows.Forms.Padding(4);
+            this.servicoDataGridView.Location = new System.Drawing.Point(34, 175);
             this.servicoDataGridView.MultiSelect = false;
             this.servicoDataGridView.Name = "servicoDataGridView";
             this.servicoDataGridView.ReadOnly = true;
             this.servicoDataGridView.RowHeadersVisible = false;
             this.servicoDataGridView.RowHeadersWidth = 51;
             this.servicoDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.servicoDataGridView.Size = new System.Drawing.Size(951, 471);
+            this.servicoDataGridView.Size = new System.Drawing.Size(713, 383);
             this.servicoDataGridView.TabIndex = 10;
             // 
             // dataGridViewTextBoxColumn1
@@ -172,10 +169,9 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(188, 141);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(141, 115);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 23);
+            this.label1.Size = new System.Drawing.Size(60, 19);
             this.label1.TabIndex = 11;
             this.label1.Text = "Buscar";
             // 
@@ -184,10 +180,9 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(336, 141);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(252, 115);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(105, 23);
+            this.label2.Size = new System.Drawing.Size(85, 19);
             this.label2.TabIndex = 12;
             this.label2.Text = "Cadastrar";
             // 
@@ -196,10 +191,9 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(545, 141);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(409, 115);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(74, 23);
+            this.label3.Size = new System.Drawing.Size(60, 19);
             this.label3.TabIndex = 13;
             this.label3.Text = "Alterar";
             // 
@@ -208,10 +202,9 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(753, 141);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(565, 115);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(72, 23);
+            this.label4.Size = new System.Drawing.Size(59, 19);
             this.label4.TabIndex = 14;
             this.label4.Text = "Excluir";
             // 
@@ -220,10 +213,9 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(316, 11);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(237, 9);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(393, 44);
+            this.label5.Size = new System.Drawing.Size(310, 36);
             this.label5.TabIndex = 15;
             this.label5.Text = "Consulta de Serviços";
             // 
@@ -245,10 +237,9 @@
             this.button_ExcluirServico.ForeColor = System.Drawing.Color.Transparent;
             this.button_ExcluirServico.ImageKey = "excluir-removebg-preview.png";
             this.button_ExcluirServico.ImageList = this.imageList1;
-            this.button_ExcluirServico.Location = new System.Drawing.Point(753, 86);
-            this.button_ExcluirServico.Margin = new System.Windows.Forms.Padding(4);
+            this.button_ExcluirServico.Location = new System.Drawing.Point(565, 70);
             this.button_ExcluirServico.Name = "button_ExcluirServico";
-            this.button_ExcluirServico.Size = new System.Drawing.Size(73, 62);
+            this.button_ExcluirServico.Size = new System.Drawing.Size(55, 50);
             this.button_ExcluirServico.TabIndex = 9;
             this.button_ExcluirServico.UseVisualStyleBackColor = false;
             this.button_ExcluirServico.Click += new System.EventHandler(this.button_ExcluirServico_Click);
@@ -261,10 +252,9 @@
             this.button_AlterarServico.ForeColor = System.Drawing.Color.Transparent;
             this.button_AlterarServico.ImageKey = "editar-removebg-preview.png";
             this.button_AlterarServico.ImageList = this.imageList1;
-            this.button_AlterarServico.Location = new System.Drawing.Point(547, 86);
-            this.button_AlterarServico.Margin = new System.Windows.Forms.Padding(4);
+            this.button_AlterarServico.Location = new System.Drawing.Point(410, 70);
             this.button_AlterarServico.Name = "button_AlterarServico";
-            this.button_AlterarServico.Size = new System.Drawing.Size(73, 62);
+            this.button_AlterarServico.Size = new System.Drawing.Size(55, 50);
             this.button_AlterarServico.TabIndex = 8;
             this.button_AlterarServico.UseVisualStyleBackColor = false;
             this.button_AlterarServico.Click += new System.EventHandler(this.button_AlterarServico_Click);
@@ -277,10 +267,9 @@
             this.button_InserirServico.ForeColor = System.Drawing.Color.Transparent;
             this.button_InserirServico.ImageKey = "add-removebg-preview.png";
             this.button_InserirServico.ImageList = this.imageList1;
-            this.button_InserirServico.Location = new System.Drawing.Point(352, 86);
-            this.button_InserirServico.Margin = new System.Windows.Forms.Padding(4);
+            this.button_InserirServico.Location = new System.Drawing.Point(264, 70);
             this.button_InserirServico.Name = "button_InserirServico";
-            this.button_InserirServico.Size = new System.Drawing.Size(73, 62);
+            this.button_InserirServico.Size = new System.Drawing.Size(55, 50);
             this.button_InserirServico.TabIndex = 7;
             this.button_InserirServico.UseVisualStyleBackColor = false;
             this.button_InserirServico.Click += new System.EventHandler(this.button_InserirServico_Click);
@@ -293,10 +282,9 @@
             this.button_BucarServico.ForeColor = System.Drawing.Color.Transparent;
             this.button_BucarServico.ImageKey = "buscar-removebg-preview.png";
             this.button_BucarServico.ImageList = this.imageList1;
-            this.button_BucarServico.Location = new System.Drawing.Point(191, 86);
-            this.button_BucarServico.Margin = new System.Windows.Forms.Padding(4);
+            this.button_BucarServico.Location = new System.Drawing.Point(143, 70);
             this.button_BucarServico.Name = "button_BucarServico";
-            this.button_BucarServico.Size = new System.Drawing.Size(73, 62);
+            this.button_BucarServico.Size = new System.Drawing.Size(55, 50);
             this.button_BucarServico.TabIndex = 6;
             this.button_BucarServico.UseVisualStyleBackColor = false;
             this.button_BucarServico.Click += new System.EventHandler(this.button_BucarServico_Click);
@@ -304,10 +292,10 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::GestaoPetShop.Properties.Resources.bicho_de_estimacao;
-            this.pictureBox3.Location = new System.Drawing.Point(10, 15);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox3.Location = new System.Drawing.Point(8, 12);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(34, 40);
+            this.pictureBox3.Size = new System.Drawing.Size(26, 32);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 22;
             this.pictureBox3.TabStop = false;
@@ -319,23 +307,23 @@
             this.btnFechar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFechar.ImageKey = "fechar-removebg-preview.png";
             this.btnFechar.ImageList = this.imageList1;
-            this.btnFechar.Location = new System.Drawing.Point(985, 11);
+            this.btnFechar.Location = new System.Drawing.Point(739, 9);
+            this.btnFechar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnFechar.Name = "btnFechar";
-            this.btnFechar.Size = new System.Drawing.Size(66, 50);
+            this.btnFechar.Size = new System.Drawing.Size(50, 41);
             this.btnFechar.TabIndex = 21;
             this.btnFechar.UseVisualStyleBackColor = true;
+            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
             // 
             // FormConsultaServico
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1043, 681);
+            this.ClientSize = new System.Drawing.Size(796, 590);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.btnFechar);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.servicoDataGridView);
@@ -345,13 +333,14 @@
             this.Controls.Add(this.button_AlterarServico);
             this.Controls.Add(this.button_InserirServico);
             this.Controls.Add(this.button_BucarServico);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(1061, 728);
+            this.MaximumSize = new System.Drawing.Size(796, 592);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(1061, 728);
+            this.MinimumSize = new System.Drawing.Size(796, 590);
             this.Name = "FormConsultaServico";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;

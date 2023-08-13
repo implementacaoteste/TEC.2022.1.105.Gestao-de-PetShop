@@ -158,7 +158,7 @@ namespace GestaoPetShop
 
         private void btnFechar_Click(object sender, EventArgs e)
         {
-            Close();
+            this.Close();
         }
 
         private void button1_Click(object sender, EventArgs e)
