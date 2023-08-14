@@ -62,6 +62,7 @@ namespace GestaoPetShop
 
         private void button_InserirServico_Click(object sender, EventArgs e)
         {
+            this.Hide();
             using (FormsCadastroServico frm = new FormsCadastroServico())
             {
                 try
@@ -129,6 +130,9 @@ namespace GestaoPetShop
             }
         }
 
-        
+        private void btnFechar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

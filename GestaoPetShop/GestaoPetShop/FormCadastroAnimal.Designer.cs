@@ -40,6 +40,7 @@
             this.buttonCancelar = new System.Windows.Forms.Button();
             this.buttonSalvar = new System.Windows.Forms.Button();
             this.checkBoxAtivo = new System.Windows.Forms.CheckBox();
+            this.animalBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.labelNomeDoAnimal = new System.Windows.Forms.Label();
             this.labelSexo = new System.Windows.Forms.Label();
             this.labelAgressivo = new System.Windows.Forms.Label();
@@ -47,7 +48,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.labelAlergia = new System.Windows.Forms.Label();
             this.labelDataNascimento = new System.Windows.Forms.Label();
-            this.animalBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.animalBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -142,6 +142,10 @@
             this.checkBoxAtivo.Text = "&Ativo";
             this.checkBoxAtivo.UseVisualStyleBackColor = true;
             // 
+            // animalBindingSource
+            // 
+            this.animalBindingSource.DataSource = typeof(Models.Animal);
+            // 
             // labelNomeDoAnimal
             // 
             this.labelNomeDoAnimal.AutoSize = true;
@@ -212,10 +216,6 @@
             this.labelDataNascimento.Size = new System.Drawing.Size(111, 16);
             this.labelDataNascimento.TabIndex = 29;
             this.labelDataNascimento.Text = "&Data Nascimento";
-            // 
-            // animalBindingSource
-            // 
-            this.animalBindingSource.DataSource = typeof(Models.Animal);
             // 
             // FormCadastroAnimal
             // 

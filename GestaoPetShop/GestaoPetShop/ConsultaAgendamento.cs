@@ -1,19 +1,13 @@
 ﻿using BLL;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GestaoPetShop
 {
     public partial class ConsultaAgendamento : Form
     {
-        string datahoje;
+        private string datahoje;
         public ConsultaAgendamento()
         {
             InitializeComponent();
@@ -26,7 +20,7 @@ namespace GestaoPetShop
             try
             {
                 AgendamentoBLL agendamentoBLL = new AgendamentoBLL();
-               
+
                 if (comboBox_SelecionarTipoBusca.SelectedIndex == 0)
                 {
 
@@ -41,21 +35,22 @@ namespace GestaoPetShop
                         MessageBox.Show("Insirar um Id(código) do Agendamento para pesquisa");
                         return;
                     }
-                    dataGridView1_FormsPrincipalBindingSource.DataSource = agendamentoBLL.DataGridViewBuscarPorId(Convert.ToInt32(textBox_BuscarAgendamento.Text));
+                    int opc = 0;
+                    dataGridView1_FormsPrincipalBindingSource.DataSource = agendamentoBLL.DataGridViewBuscarPorId(Convert.ToInt32(textBox_BuscarAgendamento.Text), opc);
 
                 }
                 else if (comboBox_SelecionarTipoBusca.SelectedIndex == 2)
                 {
 
-                    if(textBox_BuscarAgendamento.Text == "")
+                    if (textBox_BuscarAgendamento.Text == "")
                     {
                         MessageBox.Show("Insirar o Nome do Animal para pesquisa");
                         return;
                     }
-                    dataGridView1_FormsPrincipalBindingSource.DataSource = agendamentoBLL.BuscarPorNomeAnimal(textBox_BuscarAgendamento.Text);
+                    // dataGridView1_FormsPrincipalBindingSource.DataSource = agendamentoBLL.BuscarPorNomeAnimal(textBox_BuscarAgendamento.Text);
 
                 }
-                else if(comboBox_SelecionarTipoBusca.SelectedIndex == 3)
+                else if (comboBox_SelecionarTipoBusca.SelectedIndex == 3)
                 {
                     if (textBox_BuscarAgendamento.Text == "")
                     {
@@ -67,17 +62,17 @@ namespace GestaoPetShop
                 }
                 else if (comboBox_SelecionarTipoBusca.SelectedIndex == 4)
                 {
-                    string quant= textBox_BuscarData.Text;
-                    if (textBox_BuscarData.Text == "" )
+                    string quant = textBox_BuscarData.Text;
+                    if (textBox_BuscarData.Text == "")
                     {
                         MessageBox.Show("Insirar o Data para pesquisa");
                         return;
                     }
-                    
+
                     dataGridView1_FormsPrincipalBindingSource.DataSource = agendamentoBLL.BuscarPorDiaMesAno(textBox_BuscarData.Text);
 
                 }
-                else if (comboBox_SelecionarTipoBusca.SelectedIndex == 5 )
+                else if (comboBox_SelecionarTipoBusca.SelectedIndex == 5)
                 {
                     if (textBox_BuscarData.Text == "")
                     {
@@ -95,7 +90,7 @@ namespace GestaoPetShop
                     {
                         qtd = textBox_BuscarData.Text;
                     }
-                    dataGridView1_FormsPrincipalBindingSource.DataSource = agendamentoBLL.BuscarPorMesAno(opc,qtd);
+                    dataGridView1_FormsPrincipalBindingSource.DataSource = agendamentoBLL.BuscarPorMesAno(opc, qtd);
 
                 }
                 else if (comboBox_SelecionarTipoBusca.SelectedIndex == 6)
@@ -112,7 +107,7 @@ namespace GestaoPetShop
                     {
                         qtd = "01/01/" + textBox_BuscarData.Text;
                     }
-                    else if(num > 4 && num < 10)
+                    else if (num > 4 && num < 10)
                     {
                         MessageBox.Show("Insira o ano que deseja pesquisar");
                         textBox_BuscarData.Clear();
@@ -121,7 +116,7 @@ namespace GestaoPetShop
                     {
                         qtd = textBox_BuscarData.Text;
                     }
-                    dataGridView1_FormsPrincipalBindingSource.DataSource = agendamentoBLL.BuscarPorMesAno(opc,qtd);
+                    dataGridView1_FormsPrincipalBindingSource.DataSource = agendamentoBLL.BuscarPorMesAno(opc, qtd);
 
                 }
 
@@ -146,13 +141,7 @@ namespace GestaoPetShop
             }
         }
 
-        private void button_InserirAgendamentos_Click(object sender, EventArgs e)
-        {
-            using (FormCadastroAgendamento frm = new FormCadastroAgendamento())
-            {
-                frm.ShowDialog();
-            }
-        }
+       
 
         private void button_AbrirCalendario_Click(object sender, EventArgs e)
         {
@@ -165,6 +154,19 @@ namespace GestaoPetShop
             textBox_BuscarData.Text = monthCalendar_Agendamento.SelectionStart.ToShortDateString();
             monthCalendar_Agendamento.Visible = false;
             button_SelecionarData.Visible = false;
+        }
+
+        private void btnFechar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            using(FormCadastroAgendamento frm = new FormCadastroAgendamento())
+            {
+                frm.ShowDialog();
+            }
         }
     }
 }

@@ -18,11 +18,6 @@ namespace BLL
             AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
             agendamentoDAL.Inserir(_agendamento);
         }
-        public Agendamento BuscarPorId(int _id)
-        {
-            AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
-            return agendamentoDAL.BuscarPorId(_id);
-        }
         public void Alterar(Agendamento _agendamento)
         {
             AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
@@ -33,23 +28,33 @@ namespace BLL
             AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
             agendamentoDAL.Excluir(_id);
         }
-
-        public object BuscarPorNomeAnimal(string _nomeAnimal)
+        public Agendamento BuscarPorIdAnimalCliente(int _id, int _opc)
         {
             AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
-            return agendamentoDAL.BuscarPorNomeAnimal(_nomeAnimal);
+            return agendamentoDAL.BuscarPorIdAnimalCliente(_id, _opc);
         }
 
-        public List<DataGridView1_FormsPrincipal> DataGridViewBuscarTodos()
+        public List<Agendamento> BuscarPorNomeAnimalCliente(string _nomeAnimalCliente, int _opc)
+        {
+            AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
+            return agendamentoDAL.BuscarPorNomeAnimalCliente(_nomeAnimalCliente, _opc);
+        }
+        public List<Agendamento> BuscarPorNomeProfissional(string _nomeProfissional, int _idProfissional)
+        {
+            AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
+            return agendamentoDAL.BuscarPorNomeProfissional(_nomeProfissional, _idProfissional);
+        }
+
+            public List<DataGridView1_FormsPrincipal> DataGridViewBuscarTodos()
         {
             AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
             return agendamentoDAL.DataGridViewBuscarTodos();
 
         }
-        public List<DataGridView1_FormsPrincipal> DataGridViewBuscarPorId(int _idAgendamento)
+        public List<DataGridView1_FormsPrincipal> DataGridViewBuscarPorId(int _idAgendamento , int _opc)
         {
             AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
-            return agendamentoDAL.DataGridViewBuscarPorId(_idAgendamento);
+            return agendamentoDAL.DataGridViewBuscarPorId(_idAgendamento, _opc);
         }
 
         public List<DataGridView1_FormsPrincipal> BuscarPorNomeCliente(string _nomeCliente)
@@ -70,10 +75,10 @@ namespace BLL
             return agendamentoDAL.BuscarPorMesAno(_opc,_mesAno);
         }
 
-        public List<AgendamentoServico> BuscarsServicoPorNome(string _nomeServico)
+        public List<AgendamentoServico> BuscarServicoPorNome(string _nomeServico)
         {
             AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
-            return agendamentoDAL.BuscarsServicoPorNome(_nomeServico);
+            return agendamentoDAL.BuscarServicoPorNome(_nomeServico);
         }
 
         public Servico PorNome(string _selectedText)
@@ -85,6 +90,18 @@ namespace BLL
         {
             AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
             return agendamentoDAL.BuscarPorProfissional(_nomeProfissional);
+        }
+
+        public Agendamento BuscarProfissional(string _nomeProfissional)
+        {
+            AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
+            return agendamentoDAL.BuscarProfissional(_nomeProfissional);
+        }
+
+        public Situacao BuscarSituacaoPorNome(string _descricaoSituacao)
+        {
+            AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
+            return agendamentoDAL.BuscarSituacaoPorNome(_descricaoSituacao);
         }
     }
 }
