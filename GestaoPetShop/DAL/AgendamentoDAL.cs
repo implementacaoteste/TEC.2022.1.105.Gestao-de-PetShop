@@ -853,5 +853,46 @@ namespace DAL
                 cn.Close();
             }
         }
+
+        public Situacao BuscarSituacaoPorNome(string _descricaoSituacao)
+        {
+           Situacao situacao = new Situacao();
+
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = cn;
+                cmd.CommandText = @"SELECT Id, Descricao FROM Situacao   WHERE UPPER (Descricao) LIKE UPPER (@Descricao)";
+
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.Parameters.AddWithValue("@Descricao", _descricaoSituacao);
+                cn.Open();
+
+
+                using (SqlDataReader rd = cmd.ExecuteReader())
+                {
+                    if (rd.Read())
+                    {
+                        situacao.Id = Convert.ToInt32(rd["Id"]);
+                        situacao.Descricao = rd["Descricao"].ToString();
+
+
+
+
+
+                    }
+                }
+                return situacao;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu um erro ao tentar buscar todos os Serviços no banco de dados.", ex) { Data = { { "Id", 46 } } };
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
     }
 }

@@ -47,7 +47,10 @@
             System.Windows.Forms.Label descricaoSituacaoLabel;
             System.Windows.Forms.Label ativoLabel;
             System.Windows.Forms.Label dataAgLabel;
+            System.Windows.Forms.Label idSituacaoLabel;
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dataAgDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.buttonAtualizarProfissional = new System.Windows.Forms.Button();
             this.ativoCheckBox = new System.Windows.Forms.CheckBox();
             this.descricaoSituacaoComboBox = new System.Windows.Forms.ComboBox();
             this.nomeProfissionalComboBox = new System.Windows.Forms.ComboBox();
@@ -62,7 +65,6 @@
             this.buttonPesquisarAnimal = new System.Windows.Forms.Button();
             this.agendamentoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.descricaoComboBox = new System.Windows.Forms.ComboBox();
-            this.servicoBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.servicoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.textBoxSubtotal = new System.Windows.Forms.TextBox();
             this.textBoxPrecoAplicado = new System.Windows.Forms.TextBox();
@@ -74,8 +76,8 @@
             this.buttonSalvar = new System.Windows.Forms.Button();
             this.buttonEscluirServico = new System.Windows.Forms.Button();
             this.agendamentoServicosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.agendamentoServicosBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.agendamentoServicoDataGridView = new System.Windows.Forms.DataGridView();
+            this.idSituacaoTextBox = new System.Windows.Forms.TextBox();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -83,9 +85,9 @@
             this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.buttonAtualizarProfissional = new System.Windows.Forms.Button();
+            this.agendamentoServicosBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.agendamentoBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.dataAgDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.servicoBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             descricaoLabel = new System.Windows.Forms.Label();
             idLabel = new System.Windows.Forms.Label();
             label = new System.Windows.Forms.Label();
@@ -104,14 +106,15 @@
             descricaoSituacaoLabel = new System.Windows.Forms.Label();
             ativoLabel = new System.Windows.Forms.Label();
             dataAgLabel = new System.Windows.Forms.Label();
+            idSituacaoLabel = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.agendamentoBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.servicoBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.servicoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.agendamentoServicosBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.agendamentoServicosBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.agendamentoServicoDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.agendamentoServicosBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.agendamentoBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.servicoBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // descricaoLabel
@@ -252,7 +255,7 @@
             // descricaoSituacaoLabel
             // 
             descricaoSituacaoLabel.AutoSize = true;
-            descricaoSituacaoLabel.Location = new System.Drawing.Point(472, 31);
+            descricaoSituacaoLabel.Location = new System.Drawing.Point(619, 36);
             descricaoSituacaoLabel.Name = "descricaoSituacaoLabel";
             descricaoSituacaoLabel.Size = new System.Drawing.Size(103, 13);
             descricaoSituacaoLabel.TabIndex = 47;
@@ -261,14 +264,25 @@
             // ativoLabel
             // 
             ativoLabel.AutoSize = true;
-            ativoLabel.Location = new System.Drawing.Point(709, 32);
+            ativoLabel.Location = new System.Drawing.Point(743, 161);
             ativoLabel.Name = "ativoLabel";
             ativoLabel.Size = new System.Drawing.Size(34, 13);
             ativoLabel.TabIndex = 48;
             ativoLabel.Text = "Ativo:";
             // 
+            // dataAgLabel
+            // 
+            dataAgLabel.AutoSize = true;
+            dataAgLabel.Location = new System.Drawing.Point(99, 31);
+            dataAgLabel.Name = "dataAgLabel";
+            dataAgLabel.Size = new System.Drawing.Size(49, 13);
+            dataAgLabel.TabIndex = 51;
+            dataAgLabel.Text = "Data Ag:";
+            // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(idSituacaoLabel);
+            this.groupBox1.Controls.Add(this.idSituacaoTextBox);
             this.groupBox1.Controls.Add(dataAgLabel);
             this.groupBox1.Controls.Add(this.dataAgDateTimePicker);
             this.groupBox1.Controls.Add(this.buttonAtualizarProfissional);
@@ -297,14 +311,32 @@
             this.groupBox1.Controls.Add(this.buttonPesquisarAnimal);
             this.groupBox1.Location = new System.Drawing.Point(5, 25);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(912, 206);
+            this.groupBox1.Size = new System.Drawing.Size(924, 206);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
             // 
+            // dataAgDateTimePicker
+            // 
+            this.dataAgDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.agendamentoBindingSource1, "DataAg", true));
+            this.dataAgDateTimePicker.Location = new System.Drawing.Point(154, 27);
+            this.dataAgDateTimePicker.Name = "dataAgDateTimePicker";
+            this.dataAgDateTimePicker.Size = new System.Drawing.Size(150, 20);
+            this.dataAgDateTimePicker.TabIndex = 52;
+            // 
+            // buttonAtualizarProfissional
+            // 
+            this.buttonAtualizarProfissional.Location = new System.Drawing.Point(403, 121);
+            this.buttonAtualizarProfissional.Name = "buttonAtualizarProfissional";
+            this.buttonAtualizarProfissional.Size = new System.Drawing.Size(75, 23);
+            this.buttonAtualizarProfissional.TabIndex = 51;
+            this.buttonAtualizarProfissional.Text = "Atualizar";
+            this.buttonAtualizarProfissional.UseVisualStyleBackColor = true;
+            this.buttonAtualizarProfissional.Click += new System.EventHandler(this.buttonAtualizarProfissional_Click);
+            // 
             // ativoCheckBox
             // 
-            this.ativoCheckBox.Location = new System.Drawing.Point(749, 27);
+            this.ativoCheckBox.Location = new System.Drawing.Point(783, 156);
             this.ativoCheckBox.Name = "ativoCheckBox";
             this.ativoCheckBox.Size = new System.Drawing.Size(104, 24);
             this.ativoCheckBox.TabIndex = 49;
@@ -314,7 +346,7 @@
             // descricaoSituacaoComboBox
             // 
             this.descricaoSituacaoComboBox.FormattingEnabled = true;
-            this.descricaoSituacaoComboBox.Location = new System.Drawing.Point(581, 28);
+            this.descricaoSituacaoComboBox.Location = new System.Drawing.Point(732, 32);
             this.descricaoSituacaoComboBox.Name = "descricaoSituacaoComboBox";
             this.descricaoSituacaoComboBox.Size = new System.Drawing.Size(121, 21);
             this.descricaoSituacaoComboBox.TabIndex = 48;
@@ -330,6 +362,7 @@
             // 
             // horarioTextBox
             // 
+            this.horarioTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agendamentoBindingSource1, "Horario", true));
             this.horarioTextBox.Location = new System.Drawing.Point(360, 28);
             this.horarioTextBox.Name = "horarioTextBox";
             this.horarioTextBox.Size = new System.Drawing.Size(102, 20);
@@ -390,7 +423,7 @@
             this.buttonPesquisarAnimal.Location = new System.Drawing.Point(751, 83);
             this.buttonPesquisarAnimal.Margin = new System.Windows.Forms.Padding(2);
             this.buttonPesquisarAnimal.Name = "buttonPesquisarAnimal";
-            this.buttonPesquisarAnimal.Size = new System.Drawing.Size(29, 19);
+            this.buttonPesquisarAnimal.Size = new System.Drawing.Size(64, 19);
             this.buttonPesquisarAnimal.TabIndex = 22;
             this.buttonPesquisarAnimal.Text = "Pesq";
             this.buttonPesquisarAnimal.UseVisualStyleBackColor = true;
@@ -404,10 +437,6 @@
             this.descricaoComboBox.Name = "descricaoComboBox";
             this.descricaoComboBox.Size = new System.Drawing.Size(221, 21);
             this.descricaoComboBox.TabIndex = 1;
-            // 
-            // servicoBindingSource1
-            // 
-            this.servicoBindingSource1.DataSource = typeof(Models.Servico);
             // 
             // textBoxSubtotal
             // 
@@ -488,10 +517,6 @@
             this.buttonEscluirServico.Text = "Excluir Serviço";
             this.buttonEscluirServico.UseVisualStyleBackColor = true;
             // 
-            // agendamentoServicosBindingSource1
-            // 
-            this.agendamentoServicosBindingSource1.DataSource = typeof(Models.AgendamentoServico);
-            // 
             // agendamentoServicoDataGridView
             // 
             this.agendamentoServicoDataGridView.AllowUserToAddRows = false;
@@ -514,6 +539,23 @@
             this.agendamentoServicoDataGridView.RowHeadersVisible = false;
             this.agendamentoServicoDataGridView.Size = new System.Drawing.Size(795, 148);
             this.agendamentoServicoDataGridView.TabIndex = 29;
+            // 
+            // idSituacaoLabel
+            // 
+            idSituacaoLabel.AutoSize = true;
+            idSituacaoLabel.Location = new System.Drawing.Point(483, 35);
+            idSituacaoLabel.Name = "idSituacaoLabel";
+            idSituacaoLabel.Size = new System.Drawing.Size(64, 13);
+            idSituacaoLabel.TabIndex = 52;
+            idSituacaoLabel.Text = "Id Situacao:";
+            // 
+            // idSituacaoTextBox
+            // 
+            this.idSituacaoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agendamentoBindingSource1, "IdSituacao", true));
+            this.idSituacaoTextBox.Location = new System.Drawing.Point(553, 32);
+            this.idSituacaoTextBox.Name = "idSituacaoTextBox";
+            this.idSituacaoTextBox.Size = new System.Drawing.Size(46, 20);
+            this.idSituacaoTextBox.TabIndex = 53;
             // 
             // dataGridViewTextBoxColumn7
             // 
@@ -564,36 +606,17 @@
             this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
             this.dataGridViewTextBoxColumn13.ReadOnly = true;
             // 
-            // buttonAtualizarProfissional
+            // agendamentoServicosBindingSource1
             // 
-            this.buttonAtualizarProfissional.Location = new System.Drawing.Point(403, 121);
-            this.buttonAtualizarProfissional.Name = "buttonAtualizarProfissional";
-            this.buttonAtualizarProfissional.Size = new System.Drawing.Size(75, 23);
-            this.buttonAtualizarProfissional.TabIndex = 51;
-            this.buttonAtualizarProfissional.Text = "Atualizar";
-            this.buttonAtualizarProfissional.UseVisualStyleBackColor = true;
-            this.buttonAtualizarProfissional.Click += new System.EventHandler(this.buttonAtualizarProfissional_Click);
+            this.agendamentoServicosBindingSource1.DataSource = typeof(Models.AgendamentoServico);
             // 
             // agendamentoBindingSource1
             // 
             this.agendamentoBindingSource1.DataSource = typeof(Models.Agendamento);
             // 
-            // dataAgLabel
+            // servicoBindingSource1
             // 
-            dataAgLabel.AutoSize = true;
-            dataAgLabel.Location = new System.Drawing.Point(99, 31);
-            dataAgLabel.Name = "dataAgLabel";
-            dataAgLabel.Size = new System.Drawing.Size(49, 13);
-            dataAgLabel.TabIndex = 51;
-            dataAgLabel.Text = "Data Ag:";
-            // 
-            // dataAgDateTimePicker
-            // 
-            this.dataAgDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.agendamentoBindingSource1, "DataAg", true));
-            this.dataAgDateTimePicker.Location = new System.Drawing.Point(154, 27);
-            this.dataAgDateTimePicker.Name = "dataAgDateTimePicker";
-            this.dataAgDateTimePicker.Size = new System.Drawing.Size(150, 20);
-            this.dataAgDateTimePicker.TabIndex = 52;
+            this.servicoBindingSource1.DataSource = typeof(Models.Servico);
             // 
             // FormCadastroAgendamento
             // 
@@ -626,12 +649,12 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.agendamentoBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.servicoBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.servicoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.agendamentoServicosBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.agendamentoServicosBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.agendamentoServicoDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.agendamentoServicosBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.agendamentoBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.servicoBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -684,5 +707,6 @@
         private System.Windows.Forms.Button buttonAtualizarProfissional;
         private System.Windows.Forms.DateTimePicker dataAgDateTimePicker;
         private System.Windows.Forms.BindingSource agendamentoBindingSource1;
+        private System.Windows.Forms.TextBox idSituacaoTextBox;
     }
 }

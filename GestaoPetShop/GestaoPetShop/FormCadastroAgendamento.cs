@@ -20,6 +20,7 @@ namespace GestaoPetShop
         decimal subtotal;
         int quantidade;
         decimal valortotalagendamento = 0;
+        int quant = 0;
 
         public FormCadastroAgendamento()
         {
@@ -60,6 +61,7 @@ namespace GestaoPetShop
                 for (int x = 0; x < num3; x++)
                 {
                     descricaoSituacaoComboBox.Items.Insert(x, situacoes[x].Descricao);
+
                 }
 
 
@@ -78,7 +80,7 @@ namespace GestaoPetShop
                 Servico servico = new Servico();
                 servico = new AgendamentoBLL().PorNome(descricaoComboBox.Text);
                 idTextBox.Text = Convert.ToString(servico.Id);
-                descricaoComboBox.Text =servico.Descricao;
+                descricaoComboBox.Text = servico.Descricao;
                 precoTextBox.Text = Convert.ToString(servico.Preco);
                 textBoxPrecoAplicado.Text = precoTextBox.Text;
                 precoAplicado = Convert.ToDecimal(textBoxPrecoAplicado.Text);
@@ -96,10 +98,10 @@ namespace GestaoPetShop
 
         private void button_InserirServicoAgendamento_Click(object sender, EventArgs e)
         {
-
+            Agendamento agendamento = new Agendamento();
             try
             {
-                
+
                 agendamentoServicosBindingSource1.AddNew();
                 ((AgendamentoServico)agendamentoServicosBindingSource1.Current).IdServico = Convert.ToInt32(idTextBox.Text);
                 ((AgendamentoServico)agendamentoServicosBindingSource1.Current).Servico = descricaoComboBox.Text;
@@ -108,7 +110,7 @@ namespace GestaoPetShop
                 ((AgendamentoServico)agendamentoServicosBindingSource1.Current).ValorComDesconto = Convert.ToDecimal(textBoxPrecoAplicado.Text);
                 ((AgendamentoServico)agendamentoServicosBindingSource1.Current).ValorTotal = Convert.ToDecimal(textBoxSubtotal.Text);
                 agendamentoServicosBindingSource1.EndEdit();
-
+                quant = agendamentoBindingSource1.Count;
                 subtotal = Convert.ToDecimal(textBoxSubtotal.Text);
                 valortotalagendamento = valortotalagendamento + subtotal;
                 totalTextBox.Text = Convert.ToString(valortotalagendamento);
@@ -127,16 +129,17 @@ namespace GestaoPetShop
         private void buttonSalvar_Click(object sender, EventArgs e)
         {
             Agendamento agendamento = new Agendamento();
+            List<AgendamentoServico> agendamentosServicos2 = new List<AgendamentoServico>();
             List<AgendamentoServico> agendamentoServicos2 = new List<AgendamentoServico>();
-            int quant =  agendamentoBindingSource.Count;
-            agendamento = (Agendamento)agendamentoBindingSource.Current;
+            agendamento.DataAg = Convert.ToDateTime(dataAgDateTimePicker.Text);
+            agendamento.Horario = Convert.ToString(horarioTextBox.Text);
+            agendamento.IdSituacao = Convert.ToInt32(idSituacaoTextBox.Text);
+            agendamento.IdAnimal = Convert.ToInt32(idAnimalTextBox.Text);
+            agendamento.IdProfissional = Convert.ToInt32(idProfissionalTextBox.Text);
+            agendamento.Ativo = ativoCheckBox.Checked;
 
-            for (int x = 0; x<quant; x++)
-            {
-            agendamento.agendamentoServicos.Insert(x,(AgendamentoServico)agendamentoBindingSource1[x]);
-
-            }
-            //agendamento.agendamentoServicos = (List<AgendamentoServico>)agendamentoBindingSource1.;
+           // agendamentosServicos2.AddRange((AgendamentoServico)agendamentoServicosBindingSource1.Current);
+            
 
             new AgendamentoBLL().Inserir(agendamento);
 
@@ -188,11 +191,11 @@ namespace GestaoPetShop
             List<Agendamento> agendamentoProfissional = new List<Agendamento>();
             Agendamento agendamento = new Agendamento();
             agendamentoProfissional = new AgendamentoBLL().BuscarPorNomeProfissional(_nomeProfissional, _idProfissional);
-           
-            
+
+
             //idProfissionalTextBox.Text = Convert.ToString(agendamentoProfissional.IdProfissional);
 
-           
+
         }
 
         private void buttonAtualizarProfissional_Click(object sender, EventArgs e)
@@ -200,6 +203,9 @@ namespace GestaoPetShop
             Agendamento agendamento = new Agendamento();
             agendamento = new AgendamentoBLL().BuscarProfissional(nomeProfissionalComboBox.Text);
             idProfissionalTextBox.Text = Convert.ToString(agendamento.IdProfissional);
+            Situacao situacao = new Situacao();
+            situacao = new AgendamentoBLL().BuscarSituacaoPorNome(descricaoSituacaoComboBox.Text);
+            idSituacaoTextBox.Text = Convert.ToString(situacao.Id);
 
         }
     }
