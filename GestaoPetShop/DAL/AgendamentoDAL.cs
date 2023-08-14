@@ -23,10 +23,10 @@ namespace DAL
             {
                 using (SqlCommand cmd = new SqlCommand(@"INSERT INTO Agendamento(IdAnimal, IdProfissional, IdSituacao, DataAg, Horario, Total, Ativo)VALUES(@IdAnimal, @IdProfissional, @IdSituacao, @DataAg, @Horario, @Total,@Ativo)", cn))
                 {
-                    cmd.Parameters.AddWithValue("@IdAnimal",Convert.ToInt32( _agendamento.IdAnimal));
+                    cmd.Parameters.AddWithValue("@IdAnimal", Convert.ToInt32(_agendamento.IdAnimal));
                     cmd.Parameters.AddWithValue("@IdProfissional", Convert.ToInt32(_agendamento.IdProfissional));
                     cmd.Parameters.AddWithValue("@IdSituacao", Convert.ToInt32(_agendamento.IdSituacao));
-                    cmd.Parameters.AddWithValue("@DataAg", Convert.ToInt32(_agendamento.DataAg));
+                    cmd.Parameters.AddWithValue("@DataAg", _agendamento.DataAg); //Convert.ToDateTime
                     cmd.Parameters.AddWithValue("@Horario", _agendamento.Horario);
                     cmd.Parameters.AddWithValue("@Total", Convert.ToDecimal(_agendamento.Total));
                     cmd.Parameters.AddWithValue("@Ativo", _agendamento.Ativo);
@@ -130,23 +130,20 @@ namespace DAL
                     cmd.Parameters.AddWithValue("@DataAg", _agendamento.DataAg);
                     cmd.Parameters.AddWithValue("@Horario", _agendamento.Horario);
                     cmd.Parameters.AddWithValue("@Total", _agendamento.Total);
+
                     using (SqlDataReader rd = cmd.ExecuteReader())
                     {
                         while (rd.Read())
                         {
                             _idagendamento = Convert.ToInt32(rd["Id"]);
-
-
-
-
                         }
                     }
-
                     if (transaction == null)
                     {
                         cn.Open();
                         transaction = cn.BeginTransaction();
                     }
+
                     cmd.Transaction = transaction;
                     cmd.Connection = transaction.Connection;
 
@@ -396,7 +393,7 @@ namespace DAL
                 cn.Close();
             }
         }
-        public List<Agendamento> BuscarPorNomeProfissional(string _nomeProfissional , int _idProfissional)
+        public List<Agendamento> BuscarPorNomeProfissional(string _nomeProfissional, int _idProfissional)
         {
             List<Agendamento> listaAgendamentos = new List<Agendamento>();
             Agendamento agendamento;
@@ -424,9 +421,9 @@ namespace DAL
                 }
                 if (_nomeProfissional == "" && _idProfissional == 0)
                 {
-                 
+
                     cmd.CommandType = System.Data.CommandType.Text;
-                   
+
                 }
                 cn.Open();
 
@@ -699,7 +696,7 @@ namespace DAL
                         servicoView.Id = Convert.ToInt32(rd["Id"]);
                         servicoView.Servico = rd["Descricao"].ToString();
                         servicoView.ValorUnitario = Convert.ToDecimal(rd["Preco"]);
-                       
+
 
 
                         listaServicos.Add(servicoView);
@@ -814,7 +811,7 @@ namespace DAL
         public Agendamento BuscarProfissional(string _nomeProfissional)
         {
 
-           
+
             Agendamento agendamento = new Agendamento();
 
             SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
@@ -825,21 +822,21 @@ namespace DAL
                 cmd.CommandText = @"SELECT Id, Nome FROM Profissional   WHERE UPPER (Nome) LIKE UPPER (@Nome)";
 
                 cmd.CommandType = System.Data.CommandType.Text;
-                cmd.Parameters.AddWithValue("@Nome",_nomeProfissional);
+                cmd.Parameters.AddWithValue("@Nome", _nomeProfissional);
                 cn.Open();
 
 
                 using (SqlDataReader rd = cmd.ExecuteReader())
                 {
-                   if (rd.Read())
+                    if (rd.Read())
                     {
                         agendamento.IdProfissional = Convert.ToInt32(rd["Id"]);
                         agendamento.NomeProfissional = rd["Nome"].ToString();
-                        
 
 
 
-                       
+
+
                     }
                 }
                 return agendamento;
@@ -856,7 +853,7 @@ namespace DAL
 
         public Situacao BuscarSituacaoPorNome(string _descricaoSituacao)
         {
-           Situacao situacao = new Situacao();
+            Situacao situacao = new Situacao();
 
             SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
             try

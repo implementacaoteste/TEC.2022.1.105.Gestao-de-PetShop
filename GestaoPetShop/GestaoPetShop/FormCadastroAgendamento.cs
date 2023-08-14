@@ -128,9 +128,11 @@ namespace GestaoPetShop
 
         private void buttonSalvar_Click(object sender, EventArgs e)
         {
+           
             Agendamento agendamento = new Agendamento();
-            List<AgendamentoServico> agendamentosServicos2 = new List<AgendamentoServico>();
-            List<AgendamentoServico> agendamentoServicos2 = new List<AgendamentoServico>();
+            List<AgendamentoServico> agendamentoServicos = new List<AgendamentoServico>();
+            AgendamentoServico agendamentoServico = new AgendamentoServico();
+           
             agendamento.DataAg = Convert.ToDateTime(dataAgDateTimePicker.Text);
             agendamento.Horario = Convert.ToString(horarioTextBox.Text);
             agendamento.IdSituacao = Convert.ToInt32(idSituacaoTextBox.Text);
@@ -138,8 +140,19 @@ namespace GestaoPetShop
             agendamento.IdProfissional = Convert.ToInt32(idProfissionalTextBox.Text);
             agendamento.Ativo = ativoCheckBox.Checked;
 
-           // agendamentosServicos2.AddRange((AgendamentoServico)agendamentoServicosBindingSource1.Current);
-            
+            int quantidadeservicos = agendamentoServicosBindingSource1.Count;
+          for (int x = 0; x < quantidadeservicos; x++)
+            {
+                agendamentoServico.IdServico = ((AgendamentoServico)agendamentoServicosBindingSource1.Current).IdServico;
+                agendamentoServico.Quantidade = ((AgendamentoServico)agendamentoServicosBindingSource1.Current).Quantidade;
+                agendamentoServico.Servico = ((AgendamentoServico)agendamentoServicosBindingSource1.Current).Servico;
+                agendamentoServico.ValorComDesconto = ((AgendamentoServico)agendamentoServicosBindingSource1.Current).ValorComDesconto;
+                agendamentoServico.ValorTotal = ((AgendamentoServico)agendamentoServicosBindingSource1.Current).ValorTotal;
+                agendamentoServico.ValorUnitario = ((AgendamentoServico)agendamentoServicosBindingSource1.Current).ValorUnitario;
+
+                agendamentoServicos.Add(agendamentoServico);
+            }
+            agendamento.agendamentoServicos = agendamentoServicos;
 
             new AgendamentoBLL().Inserir(agendamento);
 
