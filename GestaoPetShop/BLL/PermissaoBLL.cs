@@ -1,5 +1,6 @@
 ﻿using DAL;
 using Models;
+using System;
 using System.Collections.Generic;
 
 namespace BLL
@@ -8,7 +9,7 @@ namespace BLL
     {
         public void Inserir(Permissao _permissao)
         {
-            if (_permissao.Nome.Length <= 10 || _permissao.Nome.Length >= 50)
+            //if (_permissao.Nome.Length <= 10 || _permissao.Nome.Length >= 50)
                 throw new Exception("A descrição da permissao de usuário deve ter ais de 10 caracteres.");
 
             PermissaoDAL permissaoDAL = new PermissaoDAL();
@@ -28,7 +29,7 @@ namespace BLL
         }
         public void Alterar(Permissao _permissao)
         {
-            if (_permissao.Nome.Length <= 3 || _permissao.Nome.Length >= 250)
+            //if (_permissao.Nome.Length <= 3 || _permissao.Nome.Length >= 250)
                 throw new Exception("A alteração informada deverá conter de 3 a 250 caracteres.");
 
             PermissaoDAL permissaoDAL = new PermissaoDAL();
@@ -37,7 +38,12 @@ namespace BLL
         public void Excluir(Permissao _permissao)
         {
             PermissaoDAL permissaoDAL = new PermissaoDAL();
-            permissaoDAL.Excluir(_permissao);
+            //permissaoDAL.Excluir(_permissao);
+        }
+
+        public object BuscarPorDescricao(string text)
+        {
+            throw new NotImplementedException();
         }
     }
 }

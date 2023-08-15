@@ -17,7 +17,7 @@ namespace DAL
                 cmd.CommandText = "INSERT INTO Permissao(Nome) VALUES(@Nome)";
                 cmd.CommandType = System.Data.CommandType.Text;
 
-                cmd.Parameters.AddWithValue("@Nome", _permissao.Nome);
+                //cmd.Parameters.AddWithValue("@Nome", _permissao.Nome);
 
                 cmd.Connection = cn;
                 cn.Open();
@@ -54,7 +54,7 @@ namespace DAL
                     {
                         permissao = new Permissao();
                         permissao.Id = Convert.ToInt32(rd["Id"]);
-                        permissao.Nome = rd["Nome"].ToString();
+                        //permissao.Nome = rd["Nome"].ToString();
                         permissoes.Add(permissao);
                     }
                 }
@@ -90,7 +90,7 @@ namespace DAL
                     {
                         permissao = new Permissao();
                         permissao.Id = Convert.ToInt32(rd["Id"]);
-                        permissao.Nome = rd["Nome"].ToString();
+                        //permissao.Nome = rd["Nome"].ToString();
                         permissoes.Add(permissao);
                     }
                 }
@@ -126,7 +126,7 @@ namespace DAL
                     {
                         permissao = new Permissao();
                         permissao.Id = Convert.ToInt32(rd["Id"]);
-                        permissao.Nome = rd["Nome"].ToString();
+                        //permissao.Nome = rd["Nome"].ToString();
                         permissoes.Add(permissao);
                     }
                 }
@@ -165,7 +165,7 @@ namespace DAL
                     {
                         permissao = new Permissao();
                         permissao.Id = Convert.ToInt32(rd["Id"]);
-                        permissao.Nome = rd["Nome"].ToString();
+                        //permissao.Nome = rd["Nome"].ToString();
                         permissoes.Add(permissao);
                     }
                 }
@@ -189,7 +189,7 @@ namespace DAL
                 cmd.CommandText = "UPDATE Permissao SET Nome = @Nome WHERE Id = @Id";
                 cmd.CommandType = System.Data.CommandType.Text;
 
-                cmd.Parameters.AddWithValue("@Nome", _permissao.Nome);
+                //cmd.Parameters.AddWithValue("@Nome", _permissao.Nome);
                 cmd.Parameters.AddWithValue("@Nome", _permissao.Id);
 
                 cmd.Connection = cn;
