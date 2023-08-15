@@ -69,6 +69,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(168, 13);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -89,7 +90,7 @@
             "Mês/Ano",
             "Ano",
             "Profissional"});
-            this.comboBox_SelecionarTipoBusca.Location = new System.Drawing.Point(12, 188);
+            this.comboBox_SelecionarTipoBusca.Location = new System.Drawing.Point(12, 187);
             this.comboBox_SelecionarTipoBusca.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox_SelecionarTipoBusca.Name = "comboBox_SelecionarTipoBusca";
             this.comboBox_SelecionarTipoBusca.Size = new System.Drawing.Size(92, 21);
@@ -98,7 +99,7 @@
             // 
             // textBox_BuscarAgendamento
             // 
-            this.textBox_BuscarAgendamento.Location = new System.Drawing.Point(107, 191);
+            this.textBox_BuscarAgendamento.Location = new System.Drawing.Point(107, 187);
             this.textBox_BuscarAgendamento.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_BuscarAgendamento.Name = "textBox_BuscarAgendamento";
             this.textBox_BuscarAgendamento.Size = new System.Drawing.Size(217, 20);
@@ -185,16 +186,16 @@
             // 
             // textBox_BuscarData
             // 
-            this.textBox_BuscarData.Location = new System.Drawing.Point(380, 190);
+            this.textBox_BuscarData.Location = new System.Drawing.Point(380, 187);
             this.textBox_BuscarData.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_BuscarData.Name = "textBox_BuscarData";
-            this.textBox_BuscarData.Size = new System.Drawing.Size(76, 20);
+            this.textBox_BuscarData.Size = new System.Drawing.Size(79, 20);
             this.textBox_BuscarData.TabIndex = 14;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(342, 193);
+            this.label2.Location = new System.Drawing.Point(342, 191);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(30, 13);
@@ -304,13 +305,17 @@
             // 
             // button_AbrirCalendario
             // 
-            this.button_AbrirCalendario.Location = new System.Drawing.Point(470, 190);
+            this.button_AbrirCalendario.BackColor = System.Drawing.Color.Transparent;
+            this.button_AbrirCalendario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_AbrirCalendario.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.button_AbrirCalendario.ForeColor = System.Drawing.Color.Black;
+            this.button_AbrirCalendario.Location = new System.Drawing.Point(470, 187);
             this.button_AbrirCalendario.Margin = new System.Windows.Forms.Padding(2);
             this.button_AbrirCalendario.Name = "button_AbrirCalendario";
-            this.button_AbrirCalendario.Size = new System.Drawing.Size(74, 19);
+            this.button_AbrirCalendario.Size = new System.Drawing.Size(89, 20);
             this.button_AbrirCalendario.TabIndex = 16;
             this.button_AbrirCalendario.Text = "Calendário";
-            this.button_AbrirCalendario.UseVisualStyleBackColor = true;
+            this.button_AbrirCalendario.UseVisualStyleBackColor = false;
             this.button_AbrirCalendario.Click += new System.EventHandler(this.button_AbrirCalendario_Click);
             // 
             // monthCalendar_Agendamento
@@ -340,6 +345,7 @@
             // 
             // btnFechar
             // 
+            this.btnFechar.BackColor = System.Drawing.Color.Transparent;
             this.btnFechar.FlatAppearance.BorderSize = 0;
             this.btnFechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFechar.ImageKey = "fechar-removebg-preview.png";
@@ -349,7 +355,7 @@
             this.btnFechar.Name = "btnFechar";
             this.btnFechar.Size = new System.Drawing.Size(50, 41);
             this.btnFechar.TabIndex = 19;
-            this.btnFechar.UseVisualStyleBackColor = true;
+            this.btnFechar.UseVisualStyleBackColor = false;
             this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
             // 
             // imageList2
@@ -360,6 +366,7 @@
             // 
             // pictureBox3
             // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Image = global::GestaoPetShop.Properties.Resources.bicho_de_estimacao;
             this.pictureBox3.Location = new System.Drawing.Point(9, 13);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
@@ -372,6 +379,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Black;
             this.label7.Location = new System.Drawing.Point(158, 137);
@@ -383,6 +391,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(485, 137);
@@ -394,6 +403,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(374, 137);
@@ -405,6 +415,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Location = new System.Drawing.Point(248, 137);
@@ -417,6 +428,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::GestaoPetShop.Properties.Resources.papel_de_parede_2;
             this.ClientSize = new System.Drawing.Size(771, 561);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label7);
