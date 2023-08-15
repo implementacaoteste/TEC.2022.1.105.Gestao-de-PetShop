@@ -204,7 +204,11 @@ namespace GestaoPetShop
             List<Agendamento> agendamentoProfissional = new List<Agendamento>();
             Agendamento agendamento = new Agendamento();
             agendamentoProfissional = new AgendamentoBLL().BuscarPorNomeProfissional(_nomeProfissional, _idProfissional);
-
+            foreach (Agendamento item in agendamentoProfissional)
+            {
+                idProfissionalTextBox.Text = item.IdProfissional.ToString();
+            }
+           // idProfissionalTextBox.Text = Convert.ToString (agendamentoProfissional.I
 
             //idProfissionalTextBox.Text = Convert.ToString(agendamentoProfissional.IdProfissional);
 

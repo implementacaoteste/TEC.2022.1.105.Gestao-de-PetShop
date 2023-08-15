@@ -60,7 +60,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1_FormsPrincipalDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1_FormsPrincipalBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.agendamentoBindingSource)).BeginInit();
@@ -144,10 +143,11 @@
             this.button_InserirAgendamentos.Location = new System.Drawing.Point(266, 86);
             this.button_InserirAgendamentos.Margin = new System.Windows.Forms.Padding(2);
             this.button_InserirAgendamentos.Name = "button_InserirAgendamentos";
-            this.button_InserirAgendamentos.Size = new System.Drawing.Size(44, 50);
+            this.button_InserirAgendamentos.Size = new System.Drawing.Size(58, 50);
             this.button_InserirAgendamentos.TabIndex = 11;
             this.button_InserirAgendamentos.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button_InserirAgendamentos.UseVisualStyleBackColor = false;
+            this.button_InserirAgendamentos.Click += new System.EventHandler(this.button_InserirAgendamentos_Click);
             // 
             // button_AlterarAgendamentos
             // 
@@ -327,7 +327,7 @@
             this.button_SelecionarData.Location = new System.Drawing.Point(524, 500);
             this.button_SelecionarData.Margin = new System.Windows.Forms.Padding(2);
             this.button_SelecionarData.Name = "button_SelecionarData";
-            this.button_SelecionarData.Size = new System.Drawing.Size(74, 19);
+            this.button_SelecionarData.Size = new System.Drawing.Size(74, 25);
             this.button_SelecionarData.TabIndex = 18;
             this.button_SelecionarData.Text = "Selecionar";
             this.button_SelecionarData.UseVisualStyleBackColor = true;
@@ -413,22 +413,11 @@
             this.label5.TabIndex = 26;
             this.label5.Text = "Cadastrar";
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(615, 137);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 29;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // ConsultaAgendamento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(771, 561);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.pictureBox3);
@@ -498,6 +487,5 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button1;
     }
 }

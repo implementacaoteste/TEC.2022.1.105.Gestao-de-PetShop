@@ -141,7 +141,7 @@ namespace GestaoPetShop
             }
         }
 
-       
+
 
         private void button_AbrirCalendario_Click(object sender, EventArgs e)
         {
@@ -161,11 +161,20 @@ namespace GestaoPetShop
             this.Close();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button_InserirAgendamentos_Click(object sender, EventArgs e)
         {
-            using(FormCadastroAgendamento frm = new FormCadastroAgendamento())
+            try
             {
-                frm.ShowDialog();
+                using (FormCadastroAgendamento frm = new FormCadastroAgendamento())
+                {
+                    frm.ShowDialog();
+                }
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
             }
         }
     }
