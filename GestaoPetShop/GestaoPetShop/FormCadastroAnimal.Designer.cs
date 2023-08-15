@@ -241,8 +241,7 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Name = "FormCadastroAnimal";
-            this.ShowInTaskbar = false;
-            this.Text = "FormCadastroAnimal";
+            this.Text = "Cadastro de Animal";
             this.Load += new System.EventHandler(this.FormCadastroAnimal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.animalBindingSource)).EndInit();
             this.ResumeLayout(false);
