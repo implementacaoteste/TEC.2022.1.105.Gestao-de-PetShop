@@ -155,7 +155,6 @@
             this.labelNomeDoAnimal.Size = new System.Drawing.Size(107, 16);
             this.labelNomeDoAnimal.TabIndex = 23;
             this.labelNomeDoAnimal.Text = "Nome do Animal";
-            this.labelNomeDoAnimal.Click += new System.EventHandler(this.labelNomeDoAnimal_Click);
             // 
             // labelSexo
             // 
@@ -242,7 +241,6 @@
             this.Controls.Add(this.label1);
             this.Name = "FormCadastroAnimal";
             this.Text = "Cadastro de Animal";
-            this.Load += new System.EventHandler(this.FormCadastroAnimal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.animalBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

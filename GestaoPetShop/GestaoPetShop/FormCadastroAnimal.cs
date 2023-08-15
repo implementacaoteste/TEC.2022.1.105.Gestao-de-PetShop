@@ -16,15 +16,5 @@ namespace GestaoPetShop
         {
             InitializeComponent();
         }
-
-        private void labelNomeDoAnimal_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void FormCadastroAnimal_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }
