@@ -226,6 +226,7 @@
     <Compile Include="Cliente.cs" />
     <Compile Include="Constantes.cs" />
     <Compile Include="DataGridView1_FormsPrincipal.cs" />
+    <Compile Include="EmailCliente.cs" />
     <Compile Include="Funcao.cs" />
     <Compile Include="GrupoUsuario.cs" />
     <Compile Include="Permissao.cs" />
@@ -234,6 +235,7 @@
     <Compile Include="Raca.cs" />
     <Compile Include="Servico.cs" />
     <Compile Include="Situacao.cs" />
+    <Compile Include="TelefoneCliente.cs" />
     <Compile Include="Usuario.cs" />
   </ItemGroup>
   <ItemGroup>

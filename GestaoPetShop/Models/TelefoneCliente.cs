@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace Models
 {
-    internal class TelefoneCliente
+    public class TelefoneCliente
     {
+        public int Id { get; set; }
+        public int IdTelefone { get; set; }
+        public string Telefone { get; set; }
     }
 }
