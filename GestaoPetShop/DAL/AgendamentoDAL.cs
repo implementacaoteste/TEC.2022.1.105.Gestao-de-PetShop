@@ -42,6 +42,7 @@ namespace DAL
                     try
                     {
                         cmd.ExecuteNonQuery();
+
                         int idagendamento = BuscarIdDoAgendamento(_agendamento, transaction, _idagendamento);
 
                         InserirAgendamentoServico(_agendamento, idagendamento, transaction);

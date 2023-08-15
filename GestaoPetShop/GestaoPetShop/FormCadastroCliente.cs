@@ -1,6 +1,7 @@
 ﻿using BLL;
 using Models;
 using System;
+using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
@@ -20,8 +21,37 @@ namespace GestaoPetShop
         {
             try
             {
+                Cliente clientes = new Cliente();
+                
                 Cliente cliente = (Cliente)clienteBindingSource.Current;
 
+                List<EmailCliente> emailClientes = new List<EmailCliente>();
+                EmailCliente emailCliente = new EmailCliente();
+                List<TelefoneCliente> telefoneClientes = new List<TelefoneCliente>();
+                TelefoneCliente telefoneCliente = new TelefoneCliente();
+                int quantidadeemail = emailClienteBindingSource.Count;
+                int quantidadetelefone = telefoneClientesBindingSource.Count;
+                
+                for (int x = 0; x < quantidadeemail; x++)
+                {
+                    emailCliente.Email = ((EmailCliente)emailClienteBindingSource.Current).Email;
+
+
+                    emailClientes.Add(emailCliente);
+
+                }
+                cliente.EmailCliente = emailClientes;
+
+                for (int x = 0; x < quantidadetelefone; x++)
+                {
+                    telefoneCliente.Telefone = ((TelefoneCliente)telefoneClientesBindingSource.Current).Telefone;
+
+
+                    telefoneClientes.Add(telefoneCliente);
+
+                }
+                cliente.TelefoneClientes = telefoneClientes;
+               
                 clienteBindingSource.EndEdit();
 
                 if (id == 0)
@@ -77,6 +107,22 @@ namespace GestaoPetShop
                 string caminhoDaImagem = openFileDialog.FileName;
                 pictureBoxFoto.Image = Image.FromFile(caminhoDaImagem);
             }
+        }
+
+        private void buttonInserirEmail_Click(object sender, EventArgs e)
+        {
+            emailClienteBindingSource.AddNew();
+            ((EmailCliente)emailClienteBindingSource.Current).Email = textBoxEmail.Text;
+
+            emailClienteBindingSource.EndEdit();
+        }
+
+        private void buttonInserirTelefone_Click(object sender, EventArgs e)
+        {
+           telefoneClientesBindingSource.AddNew();
+            ((TelefoneCliente)emailClienteBindingSource.Current).Telefone = textBoxTelefone.Text;
+
+            telefoneClientesBindingSource.EndEdit();
         }
     }
 }

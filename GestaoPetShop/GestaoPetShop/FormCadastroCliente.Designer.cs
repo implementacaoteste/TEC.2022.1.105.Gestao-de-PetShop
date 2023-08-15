@@ -56,6 +56,16 @@
             this.AtivocheckBox1 = new System.Windows.Forms.CheckBox();
             this.pictureBoxFoto = new System.Windows.Forms.PictureBox();
             this.buttonBuscarFoto = new System.Windows.Forms.Button();
+            this.emailClienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.emailClienteDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telefoneClientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.telefoneClientesDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.textBoxEmail = new System.Windows.Forms.TextBox();
+            this.textBoxTelefone = new System.Windows.Forms.TextBox();
+            this.buttonInserirEmail = new System.Windows.Forms.Button();
+            this.buttonInserirTelefone = new System.Windows.Forms.Button();
             nomeLabel = new System.Windows.Forms.Label();
             cPFLabel = new System.Windows.Forms.Label();
             rGLabel = new System.Windows.Forms.Label();
@@ -63,6 +73,10 @@
             emailLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFoto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emailClienteBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emailClienteDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.telefoneClientesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.telefoneClientesDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // nomeLabel
@@ -165,14 +179,14 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(669, 49);
+            this.label1.Size = new System.Drawing.Size(765, 49);
             this.label1.TabIndex = 11;
             this.label1.Text = "Cadastro de cliente";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // buttonSalvar
             // 
-            this.buttonSalvar.Location = new System.Drawing.Point(488, 353);
+            this.buttonSalvar.Location = new System.Drawing.Point(496, 501);
             this.buttonSalvar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonSalvar.Name = "buttonSalvar";
             this.buttonSalvar.Size = new System.Drawing.Size(75, 23);
@@ -184,7 +198,7 @@
             // buttonCancelar
             // 
             this.buttonCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonCancelar.Location = new System.Drawing.Point(582, 353);
+            this.buttonCancelar.Location = new System.Drawing.Point(590, 501);
             this.buttonCancelar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonCancelar.Name = "buttonCancelar";
             this.buttonCancelar.Size = new System.Drawing.Size(75, 23);
@@ -284,7 +298,7 @@
             // 
             this.AtivocheckBox1.AutoSize = true;
             this.AtivocheckBox1.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.clienteBindingSource, "Ativo", true));
-            this.AtivocheckBox1.Location = new System.Drawing.Point(7, 353);
+            this.AtivocheckBox1.Location = new System.Drawing.Point(416, 228);
             this.AtivocheckBox1.Name = "AtivocheckBox1";
             this.AtivocheckBox1.Size = new System.Drawing.Size(59, 20);
             this.AtivocheckBox1.TabIndex = 23;
@@ -312,11 +326,117 @@
             this.buttonBuscarFoto.UseVisualStyleBackColor = true;
             this.buttonBuscarFoto.Click += new System.EventHandler(this.buttonBuscarFoto_Click);
             // 
+            // emailClienteBindingSource
+            // 
+            this.emailClienteBindingSource.DataMember = "EmailCliente";
+            this.emailClienteBindingSource.DataSource = this.clienteBindingSource;
+            // 
+            // emailClienteDataGridView
+            // 
+            this.emailClienteDataGridView.AllowUserToAddRows = false;
+            this.emailClienteDataGridView.AllowUserToDeleteRows = false;
+            this.emailClienteDataGridView.AllowUserToOrderColumns = true;
+            this.emailClienteDataGridView.AutoGenerateColumns = false;
+            this.emailClienteDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.emailClienteDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn3});
+            this.emailClienteDataGridView.DataSource = this.emailClienteBindingSource;
+            this.emailClienteDataGridView.Location = new System.Drawing.Point(12, 304);
+            this.emailClienteDataGridView.Name = "emailClienteDataGridView";
+            this.emailClienteDataGridView.ReadOnly = true;
+            this.emailClienteDataGridView.RowHeadersVisible = false;
+            this.emailClienteDataGridView.RowHeadersWidth = 51;
+            this.emailClienteDataGridView.RowTemplate.Height = 24;
+            this.emailClienteDataGridView.Size = new System.Drawing.Size(316, 121);
+            this.emailClienteDataGridView.TabIndex = 26;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Email";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Email";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // telefoneClientesBindingSource
+            // 
+            this.telefoneClientesBindingSource.DataMember = "TelefoneClientes";
+            this.telefoneClientesBindingSource.DataSource = this.clienteBindingSource;
+            // 
+            // telefoneClientesDataGridView
+            // 
+            this.telefoneClientesDataGridView.AllowUserToAddRows = false;
+            this.telefoneClientesDataGridView.AllowUserToDeleteRows = false;
+            this.telefoneClientesDataGridView.AllowUserToOrderColumns = true;
+            this.telefoneClientesDataGridView.AutoGenerateColumns = false;
+            this.telefoneClientesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.telefoneClientesDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn4});
+            this.telefoneClientesDataGridView.DataSource = this.telefoneClientesBindingSource;
+            this.telefoneClientesDataGridView.Location = new System.Drawing.Point(441, 304);
+            this.telefoneClientesDataGridView.Name = "telefoneClientesDataGridView";
+            this.telefoneClientesDataGridView.ReadOnly = true;
+            this.telefoneClientesDataGridView.RowHeadersVisible = false;
+            this.telefoneClientesDataGridView.RowHeadersWidth = 51;
+            this.telefoneClientesDataGridView.RowTemplate.Height = 24;
+            this.telefoneClientesDataGridView.Size = new System.Drawing.Size(257, 124);
+            this.telefoneClientesDataGridView.TabIndex = 27;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Telefone";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Telefone";
+            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // textBoxEmail
+            // 
+            this.textBoxEmail.Location = new System.Drawing.Point(12, 276);
+            this.textBoxEmail.Name = "textBoxEmail";
+            this.textBoxEmail.Size = new System.Drawing.Size(257, 22);
+            this.textBoxEmail.TabIndex = 28;
+            // 
+            // textBoxTelefone
+            // 
+            this.textBoxTelefone.Location = new System.Drawing.Point(441, 276);
+            this.textBoxTelefone.Name = "textBoxTelefone";
+            this.textBoxTelefone.Size = new System.Drawing.Size(176, 22);
+            this.textBoxTelefone.TabIndex = 29;
+            // 
+            // buttonInserirEmail
+            // 
+            this.buttonInserirEmail.Location = new System.Drawing.Point(275, 275);
+            this.buttonInserirEmail.Name = "buttonInserirEmail";
+            this.buttonInserirEmail.Size = new System.Drawing.Size(53, 23);
+            this.buttonInserirEmail.TabIndex = 30;
+            this.buttonInserirEmail.Text = "Inserir";
+            this.buttonInserirEmail.UseVisualStyleBackColor = true;
+            this.buttonInserirEmail.Click += new System.EventHandler(this.buttonInserirEmail_Click);
+            // 
+            // buttonInserirTelefone
+            // 
+            this.buttonInserirTelefone.Location = new System.Drawing.Point(623, 275);
+            this.buttonInserirTelefone.Name = "buttonInserirTelefone";
+            this.buttonInserirTelefone.Size = new System.Drawing.Size(75, 23);
+            this.buttonInserirTelefone.TabIndex = 31;
+            this.buttonInserirTelefone.Text = "Inserir";
+            this.buttonInserirTelefone.UseVisualStyleBackColor = true;
+            this.buttonInserirTelefone.Click += new System.EventHandler(this.buttonInserirTelefone_Click);
+            // 
             // FormCadastroCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(669, 387);
+            this.ClientSize = new System.Drawing.Size(765, 619);
+            this.Controls.Add(this.buttonInserirTelefone);
+            this.Controls.Add(this.buttonInserirEmail);
+            this.Controls.Add(this.textBoxTelefone);
+            this.Controls.Add(this.textBoxEmail);
+            this.Controls.Add(this.telefoneClientesDataGridView);
+            this.Controls.Add(this.emailClienteDataGridView);
             this.Controls.Add(this.buttonBuscarFoto);
             this.Controls.Add(this.pictureBoxFoto);
             this.Controls.Add(this.AtivocheckBox1);
@@ -350,6 +470,10 @@
             this.Load += new System.EventHandler(this.FormCadastroCliente_Load);
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFoto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emailClienteBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emailClienteDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.telefoneClientesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.telefoneClientesDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -379,5 +503,15 @@
         private System.Windows.Forms.CheckBox AtivocheckBox1;
         private System.Windows.Forms.PictureBox pictureBoxFoto;
         private System.Windows.Forms.Button buttonBuscarFoto;
+        private System.Windows.Forms.BindingSource emailClienteBindingSource;
+        private System.Windows.Forms.DataGridView emailClienteDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.BindingSource telefoneClientesBindingSource;
+        private System.Windows.Forms.DataGridView telefoneClientesDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.TextBox textBoxEmail;
+        private System.Windows.Forms.TextBox textBoxTelefone;
+        private System.Windows.Forms.Button buttonInserirEmail;
+        private System.Windows.Forms.Button buttonInserirTelefone;
     }
 }
