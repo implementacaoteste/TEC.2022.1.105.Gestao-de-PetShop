@@ -430,6 +430,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+<<<<<<< HEAD
             this.ClientSize = new System.Drawing.Size(765, 619);
             this.Controls.Add(this.buttonInserirTelefone);
             this.Controls.Add(this.buttonInserirEmail);
@@ -437,6 +438,10 @@
             this.Controls.Add(this.textBoxEmail);
             this.Controls.Add(this.telefoneClientesDataGridView);
             this.Controls.Add(this.emailClienteDataGridView);
+=======
+            this.BackgroundImage = global::GestaoPetShop.Properties.Resources.papel_de_parede_2;
+            this.ClientSize = new System.Drawing.Size(669, 387);
+>>>>>>> a8b3426b3db00614b6bd61786b7afd75df7fcbff
             this.Controls.Add(this.buttonBuscarFoto);
             this.Controls.Add(this.pictureBoxFoto);
             this.Controls.Add(this.AtivocheckBox1);
