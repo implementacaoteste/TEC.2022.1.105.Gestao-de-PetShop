@@ -316,6 +316,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::GestaoPetShop.Properties.Resources.papel_de_parede_2;
             this.ClientSize = new System.Drawing.Size(669, 387);
             this.Controls.Add(this.buttonBuscarFoto);
             this.Controls.Add(this.pictureBoxFoto);
