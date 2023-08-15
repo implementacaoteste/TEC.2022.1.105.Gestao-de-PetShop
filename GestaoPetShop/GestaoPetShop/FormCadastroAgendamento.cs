@@ -152,7 +152,7 @@ namespace GestaoPetShop
 
                 agendamentoServicos.Add(agendamentoServico);
             }
-            agendamento.agendamentoServicos = agendamentoServicos;
+            agendamento.AgendamentoServicos = agendamentoServicos;
 
             new AgendamentoBLL().Inserir(agendamento);
 

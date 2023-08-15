@@ -23,6 +23,6 @@ namespace Models
         public bool Ativo { get; set; }
         public int IdCliente { get; set; }
         public string NomeCliente { get; set; }
-        public List<AgendamentoServico> agendamentoServicos { get; set; }
+        public List<AgendamentoServico> AgendamentoServicos { get; set; }
     }
 }

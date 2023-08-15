@@ -39,14 +39,12 @@ namespace DAL
 
                     cmd.Transaction = transaction;
                     cmd.Connection = transaction.Connection;
-
-                    int idagendamento = BuscarIdDoAgendamento(_agendamento, transaction, _idagendamento);
-
-                    InserirAgendamentoServico(_agendamento, _idagendamento, transaction);
-
                     try
                     {
                         cmd.ExecuteNonQuery();
+                        int idagendamento = BuscarIdDoAgendamento(_agendamento, transaction, _idagendamento);
+
+                        InserirAgendamentoServico(_agendamento, idagendamento, transaction);
 
                         if (_transaction == null)
                             transaction.Commit();
@@ -66,36 +64,35 @@ namespace DAL
         {
             SqlTransaction transaction = _transaction;
             List<AgendamentoServico> agendamentoservico = new List<AgendamentoServico>();
-            agendamentoservico = _agendamento.agendamentoServicos;
+            agendamentoservico = _agendamento.AgendamentoServicos;
             int quantidadeservicos = agendamentoservico.Count;
 
             using (SqlConnection cn = new SqlConnection(Conexao.StringDeConexao))
             {
-                using (SqlCommand cmd = new SqlCommand(@"INSERT INFO AgendamentoServico (IdAgendamento,IdServico, Quantidade, ValorUnitario)
+                using (SqlCommand cmd = new SqlCommand(@"INSERT INTO AgendamentoServicos (IdAgendamento,IdServico, Quantidade, ValorUnitario)
                                                                                  VALUES (@IdAgendamento,@IdServico, @Quantidade,@ValorUnitario)", cn))
                 {
-
-
-                    for (int x = 0; x < quantidadeservicos; x++)
+                    try
                     {
-                        cmd.Parameters.AddWithValue("@IdAgendamento", _idagendamento);
-                        cmd.Parameters.AddWithValue("@IdServico", agendamentoservico[x].IdServico);
-                        cmd.Parameters.AddWithValue("@IdQuantidade", agendamentoservico[x].Quantidade);
-                        cmd.Parameters.AddWithValue("@ValorUnitario", agendamentoservico[x].ValorUnitario);
-
-
                         if (transaction == null)
                         {
                             cn.Open();
                             transaction = cn.BeginTransaction();
                         }
-                    }
-                    cmd.Transaction = transaction;
-                    cmd.Connection = transaction.Connection;
 
-                    try
-                    {
-                        cmd.ExecuteNonQuery();
+                        cmd.Transaction = transaction;
+                        cmd.Connection = transaction.Connection;
+
+                        foreach (AgendamentoServico item in _agendamento.AgendamentoServicos)
+                        {
+                            cmd.Parameters.Clear();
+                            cmd.Parameters.AddWithValue("@IdAgendamento", _idagendamento);
+                            cmd.Parameters.AddWithValue("@IdServico", item.IdServico);
+                            cmd.Parameters.AddWithValue("@Quantidade", item.Quantidade);
+                            cmd.Parameters.AddWithValue("@ValorUnitario", item.ValorUnitario);
+
+                            cmd.ExecuteNonQuery();
+                        }
 
                         if (_transaction == null)
                             transaction.Commit();
@@ -111,9 +108,7 @@ namespace DAL
 
         private int BuscarIdDoAgendamento(Agendamento _agendamento, SqlTransaction _transaction, int _idagendamento)
         {
-
             SqlTransaction transaction = _transaction;
-
 
             using (SqlConnection cn = new SqlConnection(Conexao.StringDeConexao))
             {
@@ -123,36 +118,33 @@ namespace DAL
                                                                                                                AND Horario        = @Horario
                                                                                                                AND Total          = @Total", cn))
                 {
-                    cmd.CommandType = System.Data.CommandType.Text;
-                    cmd.Parameters.AddWithValue("@IdAnimal", _agendamento.IdAnimal);
-                    cmd.Parameters.AddWithValue("@IdProfissional", _agendamento.IdProfissional);
-                    cmd.Parameters.AddWithValue("@IdSituacao", _agendamento.IdSituacao);
-                    cmd.Parameters.AddWithValue("@DataAg", _agendamento.DataAg);
-                    cmd.Parameters.AddWithValue("@Horario", _agendamento.Horario);
-                    cmd.Parameters.AddWithValue("@Total", _agendamento.Total);
-
-                    using (SqlDataReader rd = cmd.ExecuteReader())
-                    {
-                        while (rd.Read())
-                        {
-                            _idagendamento = Convert.ToInt32(rd["Id"]);
-                        }
-                    }
-                    if (transaction == null)
-                    {
-                        cn.Open();
-                        transaction = cn.BeginTransaction();
-                    }
-
-                    cmd.Transaction = transaction;
-                    cmd.Connection = transaction.Connection;
-
                     try
                     {
-                        cmd.ExecuteNonQuery();
+                        cmd.CommandType = System.Data.CommandType.Text;
+                        cmd.Parameters.AddWithValue("@IdAnimal", _agendamento.IdAnimal);
+                        cmd.Parameters.AddWithValue("@IdProfissional", _agendamento.IdProfissional);
+                        cmd.Parameters.AddWithValue("@IdSituacao", _agendamento.IdSituacao);
+                        cmd.Parameters.AddWithValue("@DataAg", _agendamento.DataAg);
+                        cmd.Parameters.AddWithValue("@Horario", _agendamento.Horario);
+                        cmd.Parameters.AddWithValue("@Total", _agendamento.Total);
 
-                        if (_transaction == null)
-                            transaction.Commit();
+                        if (transaction == null)
+                        {
+                            cn.Open();
+                            transaction = cn.BeginTransaction();
+                        }
+
+                        cmd.Transaction = transaction;
+                        cmd.Connection = transaction.Connection;
+
+                        using (SqlDataReader rd = cmd.ExecuteReader())
+                        {
+                            while (rd.Read())
+                            {
+                                _idagendamento = Convert.ToInt32(rd["Id"]);
+                            }
+                        }
+
 
 
                     }
@@ -161,13 +153,9 @@ namespace DAL
                         transaction.Rollback();
                         throw new Exception("Ocorreu um erro ao tentar excluir todos os usuários do grupo no banco de dados.", ex) { Data = { { "Id", -1 } } };
                     }
-
-
                 }
             }
-
             return _idagendamento;
-
         }
 
         public void Alterar(Agendamento _agendamento)
