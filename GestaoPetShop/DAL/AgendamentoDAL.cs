@@ -65,8 +65,9 @@ namespace DAL
         {
             SqlTransaction transaction = _transaction;
             List<AgendamentoServico> agendamentoservico = new List<AgendamentoServico>();
-            agendamentoservico = _agendamento.AgendamentoServicos;
-            int quantidadeservicos = agendamentoservico.Count;
+           // agendamentoservico = _agendamento.AgendamentoServicos;
+
+          //  int quantidadeservicos = agendamentoservico.Count;
 
             using (SqlConnection cn = new SqlConnection(Conexao.StringDeConexao))
             {

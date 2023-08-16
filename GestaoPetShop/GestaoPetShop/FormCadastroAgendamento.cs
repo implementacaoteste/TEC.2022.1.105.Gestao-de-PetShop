@@ -227,8 +227,13 @@ namespace GestaoPetShop
         private void descricaoSituacaoComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             Situacao situacao = new Situacao();
+            List<Situacao> situacaos = new List<Situacao>();
             situacao = new AgendamentoBLL().BuscarSituacaoPorNome(descricaoSituacaoComboBox.Text);
-            idSituacaoTextBox.Text = Convert.ToString(situacao.Id);
+            //idSituacaoTextBox.Text = Convert.ToString(situacao.Id);
+            foreach (Situacao item in situacaos)
+            {
+                idSituacaoTextBox.Text = item.Id.ToString();
+            }
         }
     }
 
