@@ -179,7 +179,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(765, 49);
+            this.label1.Size = new System.Drawing.Size(759, 49);
             this.label1.TabIndex = 11;
             this.label1.Text = "Cadastro de cliente";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -309,7 +309,7 @@
             // 
             this.pictureBoxFoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBoxFoto.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.clienteBindingSource, "Foto", true));
-            this.pictureBoxFoto.Location = new System.Drawing.Point(532, 68);
+            this.pictureBoxFoto.Location = new System.Drawing.Point(544, 52);
             this.pictureBoxFoto.Name = "pictureBoxFoto";
             this.pictureBoxFoto.Size = new System.Drawing.Size(113, 125);
             this.pictureBoxFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -318,7 +318,7 @@
             // 
             // buttonBuscarFoto
             // 
-            this.buttonBuscarFoto.Location = new System.Drawing.Point(532, 199);
+            this.buttonBuscarFoto.Location = new System.Drawing.Point(544, 183);
             this.buttonBuscarFoto.Name = "buttonBuscarFoto";
             this.buttonBuscarFoto.Size = new System.Drawing.Size(113, 23);
             this.buttonBuscarFoto.TabIndex = 25;
@@ -430,18 +430,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-//<<<<<<< HEAD
-            this.ClientSize = new System.Drawing.Size(765, 619);
+            this.BackgroundImage = global::GestaoPetShop.Properties.Resources.papel_de_parede_2;
+            this.ClientSize = new System.Drawing.Size(759, 465);
             this.Controls.Add(this.buttonInserirTelefone);
             this.Controls.Add(this.buttonInserirEmail);
             this.Controls.Add(this.textBoxTelefone);
             this.Controls.Add(this.textBoxEmail);
             this.Controls.Add(this.telefoneClientesDataGridView);
             this.Controls.Add(this.emailClienteDataGridView);
-//=======
-            this.BackgroundImage = global::GestaoPetShop.Properties.Resources.papel_de_parede_2;
-            this.ClientSize = new System.Drawing.Size(669, 387);
-//>>>>>>> a8b3426b3db00614b6bd61786b7afd75df7fcbff
             this.Controls.Add(this.buttonBuscarFoto);
             this.Controls.Add(this.pictureBoxFoto);
             this.Controls.Add(this.AtivocheckBox1);

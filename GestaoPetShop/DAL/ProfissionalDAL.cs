@@ -58,7 +58,7 @@ namespace DAL
                 cn.Close();
             }
         }
-  
+
 
         public List<Profissional> BuscarPorNome(string _nome)
         {
@@ -75,7 +75,7 @@ namespace DAL
             throw new NotImplementedException();
         }
 
-        public void Inserir(Profissional _profissional) 
+        public void Inserir(Profissional _profissional)
         {
             SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
             try
@@ -113,7 +113,61 @@ namespace DAL
                 cn.Close();
             }
 
-            }
         }
+
+        //public List<Profissional> BuscarPorNomeProfissional(string _nomeProfissional, int _idProfissional)
+        //{
+        //    List<Profissional> listaProfissionais = new List<Profissional>();
+        //    Profissional profissional;
+
+        //    SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+        //    try
+        //    {
+        //        SqlCommand cmd = new SqlCommand();
+        //        cmd.Connection = cn;
+        //        cmd.CommandText = @"SELECT Id, Nome FROM Profissional";
+
+        //        if (_nomeProfissional != "" && _idProfissional == 0)
+        //        {
+        //            cmd.CommandText = cmd.CommandText + " WHERE UPPER (Nome) LIKE UPPER (@Nome)";
+        //            cmd.CommandType = System.Data.CommandType.Text;
+        //            cmd.Parameters.AddWithValue("@Nome", "%" + _nomeProfissional + "%");
+        //        }
+        //        if (_nomeProfissional == "" && _idProfissional == 0)
+        //        {
+        //            cmd.CommandText = cmd.CommandText + " WHERE Id = @Id";
+        //            cmd.CommandType = System.Data.CommandType.Text;
+        //            cmd.Parameters.AddWithValue("@Id", _idProfissional);
+        //        }
+        //        if (_nomeProfissional == "" && _idProfissional == 0)
+        //        {
+        //            cmd.CommandType = System.Data.CommandType.Text;
+        //        }
+        //        cn.Open();
+
+        //        using (SqlDataReader rd = cmd.ExecuteReader())
+        //        {
+        //            while (rd.Read())
+        //            {
+        //                profissional = new Profissional();
+
+        //                profissional.Id = Convert.ToInt32(rd["ID"]);
+        //                profissional.Nome = rd["Nome"].ToString();
+
+        //                listaProfissionais.Add(profissional);
+        //            }
+        //        }
+        //        return listaProfissionais;
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        throw new Exception("Ocorreu um erro ao tentar Listar todos os profissionais no banco de dados.", ex) { Data = { { "Id", 133 } } };
+        //    }
+        //    finally
+        //    {
+        //        cn.Close();
+        //    }
+        //}
     }
+}
 

@@ -26,5 +26,9 @@ namespace BLL
         {
             new ProfissionalDAL().Excluir(_id);
         }
+        //public List<Profissional> BuscarPorNomeProfissional(string _nomeProfissional, int _idProfissional)
+        //{
+        //    return new ProfissionalDAL.BuscarPorNomeProfissional(_nomeProfissional, _idProfissional);
+        //}
     }
 }
