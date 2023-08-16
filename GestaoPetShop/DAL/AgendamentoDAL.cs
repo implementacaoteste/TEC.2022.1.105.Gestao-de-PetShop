@@ -60,7 +60,6 @@ namespace DAL
             }
 
         }
-
         private void InserirAgendamentoServico(Agendamento _agendamento, int _idagendamento, SqlTransaction _transaction)
         {
             SqlTransaction transaction = _transaction;
@@ -107,7 +106,6 @@ namespace DAL
                 }
             }
         }
-
         private int BuscarIdDoAgendamento(Agendamento _agendamento, SqlTransaction _transaction, int _idagendamento)
         {
             SqlTransaction transaction = _transaction;
@@ -159,7 +157,6 @@ namespace DAL
             }
             return _idagendamento;
         }
-
         public void Alterar(Agendamento _agendamento)
         {
             SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
@@ -329,7 +326,6 @@ namespace DAL
                 cn.Close();
             }
         }
-
         public List<Agendamento> BuscarPorNomeAnimalCliente(string _nomeAnimalCliente, int _opc)
         {
             List<Agendamento> listaAgendamentos = new List<Agendamento>();
@@ -441,7 +437,6 @@ namespace DAL
                 cn.Close();
             }
         }
-
         public List<DataGridView1_FormsPrincipal> DataGridViewBuscarPorId(int _idAgendamento, int _opc)
         {
             List<DataGridView1_FormsPrincipal> listaAgendamentos = new List<DataGridView1_FormsPrincipal>();
@@ -497,7 +492,6 @@ namespace DAL
                 cn.Close();
             }
         }
-
         public List<DataGridView1_FormsPrincipal> BuscarPorNomeCliente(string _nomeCliente)
         {
             List<DataGridView1_FormsPrincipal> listaAgendamentos = new List<DataGridView1_FormsPrincipal>();
@@ -548,7 +542,6 @@ namespace DAL
                 cn.Close();
             }
         }
-
         public List<DataGridView1_FormsPrincipal> BuscarPorDiaMesAno(string _diaMesAno)
         {
 
@@ -601,7 +594,6 @@ namespace DAL
                 cn.Close();
             }
         }
-
         public object BuscarPorMesAno(int _opc, string _mesAno)
         {
             List<DataGridView1_FormsPrincipal> listaAgendamentos = new List<DataGridView1_FormsPrincipal>();
@@ -659,7 +651,6 @@ namespace DAL
                 cn.Close();
             }
         }
-
         public List<AgendamentoServico> BuscarServicoPorNome(string _nomeServico)
         {
 
@@ -703,7 +694,6 @@ namespace DAL
                 cn.Close();
             }
         }
-
         public Servico PorNome(string _selectedText)
         {
 
@@ -747,7 +737,6 @@ namespace DAL
                 cn.Close();
             }
         }
-
         public List<DataGridView1_FormsPrincipal> BuscarPorProfissional(string _nomeProfissional)
         {
             List<DataGridView1_FormsPrincipal> listaprofissionais = new List<DataGridView1_FormsPrincipal>();
@@ -798,7 +787,6 @@ namespace DAL
                 cn.Close();
             }
         }
-
         public Agendamento BuscarProfissional(string _nomeProfissional)
         {
 
@@ -836,7 +824,6 @@ namespace DAL
                 cn.Close();
             }
         }
-
         public Situacao BuscarSituacaoPorNome(string _descricaoSituacao)
         {
             Situacao situacao = new Situacao();

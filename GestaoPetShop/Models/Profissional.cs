@@ -18,7 +18,5 @@ namespace Models
         public int DataNascimento { get; set; }
         public byte Foto { get; set; }
         public bool Ativo { get; set; }
-        //public List<Profissional> Profissionais { get; set; }
-
     }
 }
