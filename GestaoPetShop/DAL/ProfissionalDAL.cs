@@ -58,7 +58,7 @@ namespace DAL
                 cn.Close();
             }
         }
-  
+
 
         public List<Profissional> BuscarPorNome(string _nome)
         {
@@ -75,7 +75,7 @@ namespace DAL
             throw new NotImplementedException();
         }
 
-        public void Inserir(Profissional _profissional) 
+        public void Inserir(Profissional _profissional)
         {
             SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
             try
@@ -112,8 +112,7 @@ namespace DAL
             {
                 cn.Close();
             }
-
-            }
         }
     }
+}
 

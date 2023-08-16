@@ -1,4 +1,6 @@
-﻿namespace Models
+﻿using System.Collections.Generic;
+
+namespace Models
 {
     public class Profissional
     {
@@ -16,7 +18,5 @@
         public int DataNascimento { get; set; }
         public byte Foto { get; set; }
         public bool Ativo { get; set; }
-
-
     }
 }

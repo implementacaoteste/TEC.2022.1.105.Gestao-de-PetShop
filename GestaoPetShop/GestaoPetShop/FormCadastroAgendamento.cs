@@ -152,7 +152,7 @@ namespace GestaoPetShop
 
                 agendamentoServicos.Add(agendamentoServico);
             }
-            agendamento.agendamentoServicos = agendamentoServicos;
+            agendamento.AgendamentoServicos = agendamentoServicos;
 
             new AgendamentoBLL().Inserir(agendamento);
 
@@ -201,25 +201,26 @@ namespace GestaoPetShop
         {
             string _nomeProfissional = nomeProfissionalComboBox.Text;
             int _idProfissional = 0;
+
             List<Agendamento> agendamentoProfissional = new List<Agendamento>();
-            Agendamento agendamento = new Agendamento();
+         
             agendamentoProfissional = new AgendamentoBLL().BuscarPorNomeProfissional(_nomeProfissional, _idProfissional);
-
-
-            //idProfissionalTextBox.Text = Convert.ToString(agendamentoProfissional.IdProfissional);
-
-
+           
+            foreach (Agendamento item in agendamentoProfissional)
+            {
+                idProfissionalTextBox.Text = item.IdProfissional.ToString();
+            }
         }
 
-        private void buttonAtualizarProfissional_Click(object sender, EventArgs e)
+       
+
+        private void descricaoSituacaoComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Agendamento agendamento = new Agendamento();
-            agendamento = new AgendamentoBLL().BuscarProfissional(nomeProfissionalComboBox.Text);
-            idProfissionalTextBox.Text = Convert.ToString(agendamento.IdProfissional);
             Situacao situacao = new Situacao();
+            List<Situacao> situacaos = new List<Situacao>();
             situacao = new AgendamentoBLL().BuscarSituacaoPorNome(descricaoSituacaoComboBox.Text);
             idSituacaoTextBox.Text = Convert.ToString(situacao.Id);
-
+           
         }
     }
 

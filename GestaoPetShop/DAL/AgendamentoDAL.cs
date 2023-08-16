@@ -39,14 +39,13 @@ namespace DAL
 
                     cmd.Transaction = transaction;
                     cmd.Connection = transaction.Connection;
-
-                    int idagendamento = BuscarIdDoAgendamento(_agendamento, transaction, _idagendamento);
-
-                    InserirAgendamentoServico(_agendamento, _idagendamento, transaction);
-
                     try
                     {
                         cmd.ExecuteNonQuery();
+
+                        int idagendamento = BuscarIdDoAgendamento(_agendamento, transaction, _idagendamento);
+
+                        InserirAgendamentoServico(_agendamento, idagendamento, transaction);
 
                         if (_transaction == null)
                             transaction.Commit();
@@ -61,41 +60,40 @@ namespace DAL
             }
 
         }
-
         private void InserirAgendamentoServico(Agendamento _agendamento, int _idagendamento, SqlTransaction _transaction)
         {
             SqlTransaction transaction = _transaction;
             List<AgendamentoServico> agendamentoservico = new List<AgendamentoServico>();
-            agendamentoservico = _agendamento.agendamentoServicos;
-            int quantidadeservicos = agendamentoservico.Count;
+           // agendamentoservico = _agendamento.AgendamentoServicos;
+
+          //  int quantidadeservicos = agendamentoservico.Count;
 
             using (SqlConnection cn = new SqlConnection(Conexao.StringDeConexao))
             {
-                using (SqlCommand cmd = new SqlCommand(@"INSERT INFO AgendamentoServico (IdAgendamento,IdServico, Quantidade, ValorUnitario)
+                using (SqlCommand cmd = new SqlCommand(@"INSERT INTO AgendamentoServicos (IdAgendamento,IdServico, Quantidade, ValorUnitario)
                                                                                  VALUES (@IdAgendamento,@IdServico, @Quantidade,@ValorUnitario)", cn))
                 {
-
-
-                    for (int x = 0; x < quantidadeservicos; x++)
+                    try
                     {
-                        cmd.Parameters.AddWithValue("@IdAgendamento", _idagendamento);
-                        cmd.Parameters.AddWithValue("@IdServico", agendamentoservico[x].IdServico);
-                        cmd.Parameters.AddWithValue("@IdQuantidade", agendamentoservico[x].Quantidade);
-                        cmd.Parameters.AddWithValue("@ValorUnitario", agendamentoservico[x].ValorUnitario);
-
-
                         if (transaction == null)
                         {
                             cn.Open();
                             transaction = cn.BeginTransaction();
                         }
-                    }
-                    cmd.Transaction = transaction;
-                    cmd.Connection = transaction.Connection;
 
-                    try
-                    {
-                        cmd.ExecuteNonQuery();
+                        cmd.Transaction = transaction;
+                        cmd.Connection = transaction.Connection;
+
+                        foreach (AgendamentoServico item in _agendamento.AgendamentoServicos)
+                        {
+                            cmd.Parameters.Clear();
+                            cmd.Parameters.AddWithValue("@IdAgendamento", _idagendamento);
+                            cmd.Parameters.AddWithValue("@IdServico", item.IdServico);
+                            cmd.Parameters.AddWithValue("@Quantidade", item.Quantidade);
+                            cmd.Parameters.AddWithValue("@ValorUnitario", item.ValorUnitario);
+
+                            cmd.ExecuteNonQuery();
+                        }
 
                         if (_transaction == null)
                             transaction.Commit();
@@ -108,12 +106,9 @@ namespace DAL
                 }
             }
         }
-
         private int BuscarIdDoAgendamento(Agendamento _agendamento, SqlTransaction _transaction, int _idagendamento)
         {
-
             SqlTransaction transaction = _transaction;
-
 
             using (SqlConnection cn = new SqlConnection(Conexao.StringDeConexao))
             {
@@ -123,36 +118,33 @@ namespace DAL
                                                                                                                AND Horario        = @Horario
                                                                                                                AND Total          = @Total", cn))
                 {
-                    cmd.CommandType = System.Data.CommandType.Text;
-                    cmd.Parameters.AddWithValue("@IdAnimal", _agendamento.IdAnimal);
-                    cmd.Parameters.AddWithValue("@IdProfissional", _agendamento.IdProfissional);
-                    cmd.Parameters.AddWithValue("@IdSituacao", _agendamento.IdSituacao);
-                    cmd.Parameters.AddWithValue("@DataAg", _agendamento.DataAg);
-                    cmd.Parameters.AddWithValue("@Horario", _agendamento.Horario);
-                    cmd.Parameters.AddWithValue("@Total", _agendamento.Total);
-
-                    using (SqlDataReader rd = cmd.ExecuteReader())
-                    {
-                        while (rd.Read())
-                        {
-                            _idagendamento = Convert.ToInt32(rd["Id"]);
-                        }
-                    }
-                    if (transaction == null)
-                    {
-                        cn.Open();
-                        transaction = cn.BeginTransaction();
-                    }
-
-                    cmd.Transaction = transaction;
-                    cmd.Connection = transaction.Connection;
-
                     try
                     {
-                        cmd.ExecuteNonQuery();
+                        cmd.CommandType = System.Data.CommandType.Text;
+                        cmd.Parameters.AddWithValue("@IdAnimal", _agendamento.IdAnimal);
+                        cmd.Parameters.AddWithValue("@IdProfissional", _agendamento.IdProfissional);
+                        cmd.Parameters.AddWithValue("@IdSituacao", _agendamento.IdSituacao);
+                        cmd.Parameters.AddWithValue("@DataAg", _agendamento.DataAg);
+                        cmd.Parameters.AddWithValue("@Horario", _agendamento.Horario);
+                        cmd.Parameters.AddWithValue("@Total", _agendamento.Total);
 
-                        if (_transaction == null)
-                            transaction.Commit();
+                        if (transaction == null)
+                        {
+                            cn.Open();
+                            transaction = cn.BeginTransaction();
+                        }
+
+                        cmd.Transaction = transaction;
+                        cmd.Connection = transaction.Connection;
+
+                        using (SqlDataReader rd = cmd.ExecuteReader())
+                        {
+                            while (rd.Read())
+                            {
+                                _idagendamento = Convert.ToInt32(rd["Id"]);
+                            }
+                        }
+
 
 
                     }
@@ -161,15 +153,10 @@ namespace DAL
                         transaction.Rollback();
                         throw new Exception("Ocorreu um erro ao tentar excluir todos os usuários do grupo no banco de dados.", ex) { Data = { { "Id", -1 } } };
                     }
-
-
                 }
             }
-
             return _idagendamento;
-
         }
-
         public void Alterar(Agendamento _agendamento)
         {
             SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
@@ -339,7 +326,6 @@ namespace DAL
                 cn.Close();
             }
         }
-
         public List<Agendamento> BuscarPorNomeAnimalCliente(string _nomeAnimalCliente, int _opc)
         {
             List<Agendamento> listaAgendamentos = new List<Agendamento>();
@@ -451,7 +437,6 @@ namespace DAL
                 cn.Close();
             }
         }
-
         public List<DataGridView1_FormsPrincipal> DataGridViewBuscarPorId(int _idAgendamento, int _opc)
         {
             List<DataGridView1_FormsPrincipal> listaAgendamentos = new List<DataGridView1_FormsPrincipal>();
@@ -507,7 +492,6 @@ namespace DAL
                 cn.Close();
             }
         }
-
         public List<DataGridView1_FormsPrincipal> BuscarPorNomeCliente(string _nomeCliente)
         {
             List<DataGridView1_FormsPrincipal> listaAgendamentos = new List<DataGridView1_FormsPrincipal>();
@@ -558,7 +542,6 @@ namespace DAL
                 cn.Close();
             }
         }
-
         public List<DataGridView1_FormsPrincipal> BuscarPorDiaMesAno(string _diaMesAno)
         {
 
@@ -611,7 +594,6 @@ namespace DAL
                 cn.Close();
             }
         }
-
         public object BuscarPorMesAno(int _opc, string _mesAno)
         {
             List<DataGridView1_FormsPrincipal> listaAgendamentos = new List<DataGridView1_FormsPrincipal>();
@@ -669,7 +651,6 @@ namespace DAL
                 cn.Close();
             }
         }
-
         public List<AgendamentoServico> BuscarServicoPorNome(string _nomeServico)
         {
 
@@ -713,7 +694,6 @@ namespace DAL
                 cn.Close();
             }
         }
-
         public Servico PorNome(string _selectedText)
         {
 
@@ -807,7 +787,6 @@ namespace DAL
                 cn.Close();
             }
         }
-
         public Agendamento BuscarProfissional(string _nomeProfissional)
         {
 
@@ -832,11 +811,6 @@ namespace DAL
                     {
                         agendamento.IdProfissional = Convert.ToInt32(rd["Id"]);
                         agendamento.NomeProfissional = rd["Nome"].ToString();
-
-
-
-
-
                     }
                 }
                 return agendamento;
@@ -850,7 +824,6 @@ namespace DAL
                 cn.Close();
             }
         }
-
         public Situacao BuscarSituacaoPorNome(string _descricaoSituacao)
         {
             Situacao situacao = new Situacao();
@@ -873,11 +846,6 @@ namespace DAL
                     {
                         situacao.Id = Convert.ToInt32(rd["Id"]);
                         situacao.Descricao = rd["Descricao"].ToString();
-
-
-
-
-
                     }
                 }
                 return situacao;
@@ -885,6 +853,166 @@ namespace DAL
             catch (Exception ex)
             {
                 throw new Exception("Ocorreu um erro ao tentar buscar todos os Serviços no banco de dados.", ex) { Data = { { "Id", 46 } } };
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
+
+        public List<DataGridView1_FormsPrincipal> BuscarPorNomeProfissional(string _nomeProfissional)
+        {
+            List<DataGridView1_FormsPrincipal> listaAgendamentos = new List<DataGridView1_FormsPrincipal>();
+            DataGridView1_FormsPrincipal agendamentosView;
+
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = cn;
+                cmd.CommandText = @"SELECT Ag.DataAg,Ag.Horario, Ani.Nome as N_Animal,Cli.Nome as N_Cliente, S.Descricao, P.Nome as N_Prof,Si.Descricao as DescSituacao FROM Agendamento Ag LEFT JOIN Profissional P             ON Ag.IdProfissional = P.Id
+                                                                                                                                                                                            LEFT JOIN Animal Ani                 ON Ag.IdAnimal = Ani.Id
+                                                                                                                                                                                            LEFT JOIN Cliente Cli                ON Ani.IdCliente = Cli.Id
+                                                                                                                                                                                            LEFT JOIN AgendamentoServicos AGS    ON Ag.Id = AGS.IdAgendamento
+                                                                                                                                                                                            LEFT JOIN Servico S                  ON AGS.IdServico = S.Id
+                                                                                                                                                                                            LEFT JOIN Situacao Si                ON Ag.IdSituacao = Si.Id
+                                                                                                                                                                                            WHERE UPPER(P.Nome) LIKE UPPER(@nomeProfissional)";
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.Parameters.AddWithValue("@nomeProfissional", "%" + _nomeProfissional + "%");
+                cn.Open();
+
+                using (SqlDataReader rd = cmd.ExecuteReader())
+                {
+                    while (rd.Read())
+                    {
+                        agendamentosView = new DataGridView1_FormsPrincipal();
+                        agendamentosView.DataAg = Convert.ToDateTime(rd["DataAg"]);
+                        agendamentosView.NomeAnimal = rd["N_Animal"].ToString();
+                        agendamentosView.NomeCliente = rd["N_Cliente"].ToString();
+                        agendamentosView.Servico = rd["Descricao"].ToString();
+                        agendamentosView.Profissional = rd["N_Prof"].ToString();
+                        agendamentosView.Horario = rd["Horario"].ToString();
+                        agendamentosView.Situacao = rd["DescSituacao"].ToString();
+
+                        listaAgendamentos.Add(agendamentosView);
+                    }
+                }
+                return listaAgendamentos;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu um erro ao tentar buscar todos os profissinais no banco de dados.", ex) { Data = { { "Id", 133 } } };
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
+
+        public List<DataGridView1_FormsPrincipal> BuscarPorProfissionalDiaMesAno(string _diaMesAno)
+        {
+
+            List<DataGridView1_FormsPrincipal> listaAgendamentos = new List<DataGridView1_FormsPrincipal>();
+            DataGridView1_FormsPrincipal agendamentosView;
+
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = cn;
+                cmd.CommandText = @"SELECT Ag.DataAg,Ag.Horario, Ani.Nome as N_Animal,Cli.Nome as N_Cliente, S.Descricao, P.Nome as N_Prof,Si.Descricao as DescSituacao FROM Agendamento Ag LEFT JOIN Profissional P             ON Ag.IdProfissional = P.Id
+                                                                                                                                                                                            LEFT JOIN Animal Ani                 ON Ag.IdAnimal = Ani.Id
+                                                                                                                                                                                            LEFT JOIN Cliente Cli                ON Ani.IdCliente = Cli.Id
+                                                                                                                                                                                            LEFT JOIN AgendamentoServicos AGS    ON Ag.Id = AGS.IdAgendamento
+                                                                                                                                                                                            LEFT JOIN Servico S                  ON AGS.IdServico = S.Id
+                                                                                                                                                                                            LEFT JOIN Situacao Si                ON Ag.IdSituacao = Si.Id
+                                                                                                                                                                                            WHERE Ag.DataAg = @Data";
+
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.Parameters.AddWithValue("@Data", Convert.ToDateTime(_diaMesAno));
+                cn.Open();
+
+
+                using (SqlDataReader rd = cmd.ExecuteReader())
+                {
+                    while (rd.Read())
+                    {
+                        agendamentosView = new DataGridView1_FormsPrincipal();
+                        agendamentosView.DataAg = Convert.ToDateTime(rd["DataAg"]);
+                        agendamentosView.NomeAnimal = rd["N_Animal"].ToString();
+                        agendamentosView.NomeCliente = rd["N_Cliente"].ToString();
+                        agendamentosView.Servico = rd["Descricao"].ToString();
+                        agendamentosView.Profissional = rd["N_Prof"].ToString();
+                        agendamentosView.Horario = rd["Horario"].ToString();
+                        agendamentosView.Situacao = rd["DescSituacao"].ToString();
+
+
+                        listaAgendamentos.Add(agendamentosView);
+                    }
+                }
+                return listaAgendamentos;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu um erro ao tentar buscar todos os Serviços no banco de dados.", ex) { Data = { { "Id", 134 } } };
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
+
+        public object BuscarProfissionalPorMesAno(int _opc, string _mesAno)
+        {
+            List<DataGridView1_FormsPrincipal> listaAgendamentos = new List<DataGridView1_FormsPrincipal>();
+            DataGridView1_FormsPrincipal agendamentosView;
+
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = cn;
+
+                cmd.CommandText = @"SELECT Ag.DataAg,Ag.Horario, Ani.Nome as N_Animal,Cli.Nome as N_Cliente, S.Descricao, P.Nome as N_Prof,Si.Descricao as DescSituacao FROM Agendamento Ag LEFT JOIN Profissional P             ON Ag.IdProfissional = P.Id
+                                                                                                                                                                                            LEFT JOIN Animal Ani                 ON Ag.IdAnimal = Ani.Id
+                                                                                                                                                                                            LEFT JOIN Cliente Cli                ON Ani.IdCliente = Cli.Id
+                                                                                                                                                                                            LEFT JOIN AgendamentoServicos AGS    ON Ag.Id = AGS.IdAgendamento
+                                                                                                                                                                                            LEFT JOIN Servico S                  ON AGS.IdServico = S.Id
+                                                                                                                                                                                            LEFT JOIN Situacao Si                ON Ag.IdSituacao = Si.Id
+                                                                                                                                                                                            WHERE ";
+
+                if (_opc == 5)
+                    cmd.CommandText = cmd.CommandText + "YEAR(Ag.DataAg) = YEAR(@Data) and MONTH(Ag.DataAg) = MONTH(@Data)";
+                else if (_opc == 6)
+                    cmd.CommandText = cmd.CommandText = cmd.CommandText + "YEAR(Ag.DataAg) = YEAR(@Data)";
+
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.Parameters.AddWithValue("@Data", Convert.ToDateTime(_mesAno));
+                cn.Open();
+
+
+                using (SqlDataReader rd = cmd.ExecuteReader())
+                {
+                    while (rd.Read())
+                    {
+                        agendamentosView = new DataGridView1_FormsPrincipal();
+                        agendamentosView.DataAg = Convert.ToDateTime(rd["DataAg"]);
+                        agendamentosView.NomeAnimal = rd["N_Animal"].ToString();
+                        agendamentosView.NomeCliente = rd["N_Cliente"].ToString();
+                        agendamentosView.Servico = rd["Descricao"].ToString();
+                        agendamentosView.Profissional = rd["N_Prof"].ToString();
+                        agendamentosView.Horario = rd["Horario"].ToString();
+                        agendamentosView.Situacao = rd["DescSituacao"].ToString();
+
+
+                        listaAgendamentos.Add(agendamentosView);
+                    }
+                }
+                return listaAgendamentos;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu um erro ao tentar buscar todos os Serviços no banco de dados.", ex) { Data = { { "Id", 135 } } };
             }
             finally
             {
