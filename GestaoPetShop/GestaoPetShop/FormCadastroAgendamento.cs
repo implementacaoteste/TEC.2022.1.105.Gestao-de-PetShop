@@ -220,10 +220,15 @@ namespace GestaoPetShop
             Agendamento agendamento = new Agendamento();
             agendamento = new AgendamentoBLL().BuscarProfissional(nomeProfissionalComboBox.Text);
             idProfissionalTextBox.Text = Convert.ToString(agendamento.IdProfissional);
+          
+
+        }
+
+        private void descricaoSituacaoComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
             Situacao situacao = new Situacao();
             situacao = new AgendamentoBLL().BuscarSituacaoPorNome(descricaoSituacaoComboBox.Text);
             idSituacaoTextBox.Text = Convert.ToString(situacao.Id);
-
         }
     }
 

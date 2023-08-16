@@ -21,7 +21,8 @@ namespace Models
         public DateTime DataNascimento { get; set; }
         public byte[] Foto { get; set; }
         public bool Ativo { get; set; }
-
+        public List<TelefoneCliente> TelefoneClientes { get; set; }
+        public List<EmailCliente> EmailCliente { get; set; }
 
     }
 }
