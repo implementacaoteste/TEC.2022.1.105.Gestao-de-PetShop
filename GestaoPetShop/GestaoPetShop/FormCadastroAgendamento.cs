@@ -201,39 +201,26 @@ namespace GestaoPetShop
         {
             string _nomeProfissional = nomeProfissionalComboBox.Text;
             int _idProfissional = 0;
+
             List<Agendamento> agendamentoProfissional = new List<Agendamento>();
-            Agendamento agendamento = new Agendamento();
+         
             agendamentoProfissional = new AgendamentoBLL().BuscarPorNomeProfissional(_nomeProfissional, _idProfissional);
+           
             foreach (Agendamento item in agendamentoProfissional)
             {
                 idProfissionalTextBox.Text = item.IdProfissional.ToString();
             }
-           // idProfissionalTextBox.Text = Convert.ToString (agendamentoProfissional.I
-
-            //idProfissionalTextBox.Text = Convert.ToString(agendamentoProfissional.IdProfissional);
-
-
         }
 
-        private void buttonAtualizarProfissional_Click(object sender, EventArgs e)
-        {
-            Agendamento agendamento = new Agendamento();
-            agendamento = new AgendamentoBLL().BuscarProfissional(nomeProfissionalComboBox.Text);
-            idProfissionalTextBox.Text = Convert.ToString(agendamento.IdProfissional);
-          
-
-        }
+       
 
         private void descricaoSituacaoComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             Situacao situacao = new Situacao();
             List<Situacao> situacaos = new List<Situacao>();
             situacao = new AgendamentoBLL().BuscarSituacaoPorNome(descricaoSituacaoComboBox.Text);
-            //idSituacaoTextBox.Text = Convert.ToString(situacao.Id);
-            foreach (Situacao item in situacaos)
-            {
-                idSituacaoTextBox.Text = item.Id.ToString();
-            }
+            idSituacaoTextBox.Text = Convert.ToString(situacao.Id);
+           
         }
     }
 
