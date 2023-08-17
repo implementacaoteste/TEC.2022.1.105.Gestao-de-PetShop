@@ -96,7 +96,7 @@ namespace DAL
                         usuario.Login = rd["UsuarioLogin"].ToString();
                         usuario.Senha = rd["Senha"].ToString();
                         usuario.IdProfissional = Convert.ToInt32(rd["IdProfissional"]);
-                        usuario.Ativo = Convert.ToBoolean(rd["Ativo"]);
+                        usuario.Ativo = rd["Ativo"] == DBNull.Value ? false : Convert.ToBoolean(rd["Ativo"]);
                     }
                 }
                 return usuario;
