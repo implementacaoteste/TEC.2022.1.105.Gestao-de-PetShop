@@ -50,7 +50,6 @@ namespace DAL
                         if (_transaction == null)
                             transaction.Commit();
                     }
-
                     catch (Exception ex)
                     {
                         transaction.Rollback();
@@ -80,7 +79,6 @@ namespace DAL
                             cn.Open();
                             transaction = cn.BeginTransaction();
                         }
-
                         cmd.Transaction = transaction;
                         cmd.Connection = transaction.Connection;
 
@@ -109,7 +107,6 @@ namespace DAL
         private int BuscarIdDoAgendamento(Agendamento _agendamento, SqlTransaction _transaction, int _idagendamento)
         {
             SqlTransaction transaction = _transaction;
-
             using (SqlConnection cn = new SqlConnection(Conexao.StringDeConexao))
             {
                 using (SqlCommand cmd = new SqlCommand(@"SELECT Id FROM Agendamento WHERE IdAnimal = @IdAnimal AND IdProfissional = @IdProfissional 
@@ -144,9 +141,6 @@ namespace DAL
                                 _idagendamento = Convert.ToInt32(rd["Id"]);
                             }
                         }
-
-
-
                     }
                     catch (Exception ex)
                     {
@@ -157,36 +151,51 @@ namespace DAL
             }
             return _idagendamento;
         }
-        public void Alterar(Agendamento _agendamento)
+        public void Alterar(Agendamento _agendamento, SqlTransaction _transaction = null)
         {
-            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
-            try
-            {
-                SqlCommand cmd = cn.CreateCommand();
-                cmd.CommandText = @"UPDATE Agendamento SET IdAnimal = @IdAnimal, IdProfissional = @IdProfissional, IdSituacao = @IdSituacao, DataAg = @DataAg, Horario = @Horario, Total = @Total, Ativo = @Ativo
-                                    WHERE Id = @Id";
-                cmd.CommandType = System.Data.CommandType.Text;
 
-                cmd.Parameters.AddWithValue("@IdAnimal", _agendamento.IdAnimal);
-                cmd.Parameters.AddWithValue("@IdProfissional", _agendamento.IdProfissional);
-                cmd.Parameters.AddWithValue("@IdSituacao", _agendamento.IdSituacao);
-                cmd.Parameters.AddWithValue("@DataAg", _agendamento.DataAg);
-                cmd.Parameters.AddWithValue("@Horario", _agendamento.Horario);
-                cmd.Parameters.AddWithValue("@Total", _agendamento.Total);
-                cmd.Parameters.AddWithValue("@Ativo", _agendamento.Ativo);
-                cmd.Connection = cn;
-                cn.Open();
+            SqlTransaction transaction = _transaction;
 
-                cmd.ExecuteNonQuery();
-            }
-            catch (Exception ex)
+            using (SqlConnection cn = new SqlConnection(Conexao.StringDeConexao))
             {
-                throw new Exception("Ocorreu erro ao tentar alterar um agendamento no banco de dados.", ex) { Data = { { "Id", 31 } } }; ;
+                using (SqlCommand cmd = new SqlCommand(@"UPDATE Agendamento SET
+                                                                               IdAnimal,IdProfissional, IdSituacao, DataAg, Horario, Total, Ativo)VALUES(@IdAnimal, @IdProfissional, @IdSituacao, @DataAg, @Horario, @Total,@Ativo)", cn))
+                {
+                    cmd.Parameters.AddWithValue("@IdAnimal", Convert.ToInt32(_agendamento.IdAnimal));
+                    cmd.Parameters.AddWithValue("@IdProfissional", Convert.ToInt32(_agendamento.IdProfissional));
+                    cmd.Parameters.AddWithValue("@IdSituacao", Convert.ToInt32(_agendamento.IdSituacao));
+                    cmd.Parameters.AddWithValue("@DataAg", _agendamento.DataAg); //Convert.ToDateTime
+                    cmd.Parameters.AddWithValue("@Horario", _agendamento.Horario);
+                    cmd.Parameters.AddWithValue("@Total", Convert.ToDecimal(_agendamento.Total));
+                    cmd.Parameters.AddWithValue("@Ativo", _agendamento.Ativo);
+
+                    if (_transaction == null)
+                    {
+                        cn.Open();
+                        transaction = cn.BeginTransaction();
+                    }
+
+                    cmd.Transaction = transaction;
+                    cmd.Connection = transaction.Connection;
+                    try
+                    {
+                        cmd.ExecuteNonQuery();
+
+                        int idagendamento = BuscarIdDoAgendamento(_agendamento, transaction, _idagendamento);
+
+                        InserirAgendamentoServico(_agendamento, idagendamento, transaction);
+
+                        if (_transaction == null)
+                            transaction.Commit();
+                    }
+                    catch (Exception ex)
+                    {
+                        transaction.Rollback();
+                        throw new Exception("Ocorreu um erro ao tentar excluir todas as permissões do grupo no banco de dados.", ex) { Data = { { "Id", -1 } } };
+                    }
+                }
             }
-            finally
-            {
-                cn.Close();
-            }
+
         }
         public void Excluir(int _id, SqlTransaction _transaction = null)
         {

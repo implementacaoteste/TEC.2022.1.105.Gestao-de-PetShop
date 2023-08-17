@@ -368,6 +368,8 @@
             // 
             // ativoCheckBox
             // 
+            this.ativoCheckBox.Checked = true;
+            this.ativoCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
             this.ativoCheckBox.Location = new System.Drawing.Point(1044, 192);
             this.ativoCheckBox.Margin = new System.Windows.Forms.Padding(4);
             this.ativoCheckBox.Name = "ativoCheckBox";
