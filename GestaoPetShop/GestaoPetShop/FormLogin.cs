@@ -18,9 +18,9 @@ namespace GestaoPetShop
         public FormLogin()
         {
             InitializeComponent();
-            Logou = false;
+           Logou = false;
         }
-
+        
         private void buttonEntrar_Click(object sender, EventArgs e)
         {
             try
@@ -31,7 +31,7 @@ namespace GestaoPetShop
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message,"Obrigatório preencher os campos login e senha", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(ex.Message);
             }
         }
 
