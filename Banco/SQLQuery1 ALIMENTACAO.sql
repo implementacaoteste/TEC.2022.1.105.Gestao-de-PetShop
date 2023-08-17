@@ -61,14 +61,14 @@ GO
 /***************************************************************CADASTRAR RAÇA *****************************************************************/
 --select *From Raca
 -- cadastro das raças
-insert into Raca(Nome, Especie,PaisOrigem) values ('Siberiano','Gato', 'Rússia');
-insert into Raca(Nome, Especie,PaisOrigem) values ('Ragdoll','Gato', 'Estados Unidos');
-insert into Raca(Nome, Especie,PaisOrigem) values ('Bombay','Gato', 'Asiático');
-insert into Raca(Nome, Especie,PaisOrigem) values ('Buldogue-campeiro','Cachorro', 'BrasilDogue brasileiro');
-insert into Raca(Nome, Especie,PaisOrigem) values ('Dogue brasileiro','Cachorro', 'Brasil');
-insert into Raca(Nome, Especie,PaisOrigem) values ('Dobermann','Cachorro', 'Alemanha');
-insert into Raca(Nome, Especie,PaisOrigem) values ('Poodle','Cachorro', 'França');
-insert into Raca(Nome, Especie,PaisOrigem) values ('Vira-Lata','Cachorro', 'Brasil');
+insert into Raca(Nome, Especie,PaisOrigem,Ativo) values ('Siberiano','Gato', 'Rússia',1);
+insert into Raca(Nome, Especie,PaisOrigem,Ativo) values ('Ragdoll','Gato', 'Estados Unidos',1);
+insert into Raca(Nome, Especie,PaisOrigem,Ativo) values ('Bombay','Gato', 'Asiático',1);
+insert into Raca(Nome, Especie,PaisOrigem,Ativo) values ('Buldogue-campeiro','Cachorro', 'BrasilDogue brasileiro',1);
+insert into Raca(Nome, Especie,PaisOrigem,Ativo) values ('Dogue brasileiro','Cachorro', 'Brasil',1);
+insert into Raca(Nome, Especie,PaisOrigem,Ativo) values ('Dobermann','Cachorro', 'Alemanha',1);
+insert into Raca(Nome, Especie,PaisOrigem,Ativo) values ('Poodle','Cachorro', 'França',1);
+insert into Raca(Nome, Especie,PaisOrigem,Ativo) values ('Vira-Lata','Cachorro', 'Brasil',1);
 GO
 
 /************************************************************************************************************************************/
