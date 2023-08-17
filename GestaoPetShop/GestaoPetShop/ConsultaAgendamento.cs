@@ -181,24 +181,32 @@ namespace GestaoPetShop
 
         private void button_AlterarAgendamentos_Click(object sender, EventArgs e)
         {
-
-
-
-            if (agendamentoBindingSource.Count <= 0)
+            try
             {
 
-                MessageBox.Show("Não foi selecionado o Agendamento para ser alterado.");
-                return;
+                if (dataGridView1_FormsPrincipalBindingSource.Count <= 0)
+                {
+
+                    MessageBox.Show("Não foi selecionado o Agendamento para ser alterado.");
+                    return;
+                }
+
+
+
+                int id = ((DataGridView1_FormsPrincipal)dataGridView1_FormsPrincipalBindingSource.Current).IdAgendamento;
+
+                using (FormCadastroAgendamento frm = new FormCadastroAgendamento(id))
+                {
+                    frm.ShowDialog();
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
             }
 
 
-
-            int id = ((Agendamento)agendamentoBindingSource.Current).Id;
-
-            using (FormCadastroAgendamento frm = new FormCadastroAgendamento(id))
-            { 
-                frm.ShowDialog();
-            }
 
         }
     }

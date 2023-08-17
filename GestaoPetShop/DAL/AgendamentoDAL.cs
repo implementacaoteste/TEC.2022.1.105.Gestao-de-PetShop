@@ -346,7 +346,7 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT Ag.DataAg,Ag.Horario, Ani.Nome as N_Animal,Cli.Nome as N_Cliente, S.Descricao, P.Nome as N_Prof,Si.Descricao as DescSituacao FROM Agendamento Ag LEFT JOIN Profissional P                         ON Ag.IdProfissional = P.Id
+                cmd.CommandText = @"SELECT Ag.Id,Ag.DataAg,Ag.Horario, Ani.Nome as N_Animal,Cli.Nome as N_Cliente, S.Descricao, P.Nome as N_Prof,Si.Descricao as DescSituacao FROM Agendamento Ag LEFT JOIN Profissional P                         ON Ag.IdProfissional = P.Id
                                                                                                                                                                            LEFT JOIN Animal Ani                 ON Ag.IdAnimal = Ani.Id
                                                                                                                                                                            LEFT JOIN Cliente Cli                ON Ani.IdCliente = Cli.Id
                                                                                                                                                                            LEFT JOIN AgendamentoServicos AGS    ON Ag.Id = AGS.IdAgendamento
@@ -360,6 +360,8 @@ namespace DAL
                     while (rd.Read())
                     {
                         agendamentosView = new DataGridView1_FormsPrincipal();
+
+                        agendamentosView.IdAgendamento = Convert.ToInt32(rd["Id"]);
                         agendamentosView.DataAg = Convert.ToDateTime(rd["DataAg"]);
                         agendamentosView.NomeAnimal = rd["N_Animal"].ToString();
                         agendamentosView.NomeCliente = rd["N_Cliente"].ToString();
