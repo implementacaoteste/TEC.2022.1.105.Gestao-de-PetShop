@@ -108,13 +108,13 @@ namespace DAL
                         animal = new Animal();
                         animal.Id = (int)rd["Id"];
                         animal.Nome = rd["Nome"].ToString();
-                        //animal.Sexo = rd["Sexo"].     validar 
-                        //animal.Agressivo = rd["Agressivo"].     validar
+                        animal.Sexo = (char)rd["Sexo"];
+                        animal.Agressivo = (char)rd["Agressivo"];
                         animal.Cor = rd["Cor"].ToString();
                         animal.Idade = (int)rd["Idade"];
                         animal.Alergia = rd["Alergia"].ToString();
                         animal.DataNascimento = rd["DataNascimento"].ToString();
-                        //animal.Ativo = (bool)rd["Ativo"];
+                        animal.Ativo = (bool)rd["Ativo"];
 
                         animalList.Add(animal);
                     }
@@ -177,7 +177,7 @@ namespace DAL
                         animal.Id = (int)rd["Id"];
                         animal.IdCliente = (int)rd["IdCliente"];
                         animal.Nome = rd["Nome"].ToString();
-                        /* animal.Agressivo = rd["Agressivo"].*/
+                        animal.Agressivo = (char)rd["Agressivo"];
                         animal.Cor = rd["Cor"].ToString();
                         animal.Idade = (int)rd["Idade"];
                         animal.Alergia = rd["Alergia"].ToString();
@@ -218,8 +218,8 @@ namespace DAL
                     {
                         animal.Id = (int)rd["Id"];
                         animal.Nome = rd["Nome"].ToString();
-                        //animal.Sexo = rd["Sexo"].ToString();
-                        //animal.Agressivo = rd["Agressivo"].ToString();
+                        animal.Sexo = (char)rd["Sexo"];
+                        animal.Agressivo = (char)rd["Agressivo"];
                         animal.Cor = rd["Cor"].ToString();
                         animal.Alergia = rd["Alergia"].ToString();
                         animal.DataNascimento = rd["DataNascimento"].ToString();
