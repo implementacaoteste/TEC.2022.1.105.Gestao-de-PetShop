@@ -1,4 +1,5 @@
 ﻿using BLL;
+using Models;
 using System;
 using System.Linq;
 using System.Windows.Forms;
@@ -177,5 +178,41 @@ namespace GestaoPetShop
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void button_AlterarAgendamentos_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                if (dataGridView1_FormsPrincipalBindingSource.Count <= 0)
+                {
+
+                    MessageBox.Show("Não foi selecionado o Agendamento para ser alterado.");
+                    return;
+                }
+
+
+
+                int id = ((DataGridView1_FormsPrincipal)dataGridView1_FormsPrincipalBindingSource.Current).IdAgendamento;
+
+                using (FormCadastroAgendamento frm = new FormCadastroAgendamento(id))
+                {
+                    frm.ShowDialog();
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+
+
+
+        }
     }
 }
+
+
+
+
+
