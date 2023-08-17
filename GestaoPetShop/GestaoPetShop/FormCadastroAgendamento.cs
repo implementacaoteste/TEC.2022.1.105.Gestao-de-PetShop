@@ -6,6 +6,7 @@ using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
+using System.Deployment.Internal;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -22,10 +23,12 @@ namespace GestaoPetShop
         decimal valortotalagendamento = 0;
         int quant = 0;
         bool atualizar = false;
-
-        public FormCadastroAgendamento()
+        int id = 0;
+        List<int> idservicoparaexcluir;
+        public FormCadastroAgendamento(int _id = 0)
         {
             InitializeComponent();
+            id = _id;
         }
 
 
@@ -35,7 +38,7 @@ namespace GestaoPetShop
             {
 
                 List<AgendamentoServico> listViewServico = new List<AgendamentoServico>();
-
+                Agendamento agendamento = new Agendamento();
                 listViewServico = new AgendamentoBLL().BuscarServicoPorNome(descricaoComboBox.Text);
                 List<Agendamento> agendamentoProfissinal = new List<Agendamento>();
                 List<Situacao> situacoes = new List<Situacao>();
@@ -63,6 +66,18 @@ namespace GestaoPetShop
                 {
                     descricaoSituacaoComboBox.Items.Insert(x, situacoes[x].Descricao);
 
+                }
+                if(id != 0)
+                {
+                    agendamento = new AgendamentoBLL().BuscarAgendamentoPorId(id);
+                    List<AgendamentoServico> agendamentoServicos = new List<AgendamentoServico>();
+                    agendamentoServicos = agendamento.AgendamentoServicos;
+                    agendamentoBindingSource1.DataSource = agendamento;
+                    agendamentoServicosBindingSource1.AddNew();
+                    foreach (AgendamentoServico item in agendamentoServicos)
+                    {
+                        agendamentoServicosBindingSource1.Add(item);
+                    }
                 }
 
 
@@ -272,10 +287,19 @@ namespace GestaoPetShop
         {
             try
             {
-                subtotal = ((AgendamentoServico)agendamentoServicosBindingSource1.Current).ValorTotal;
-                valortotalagendamento = valortotalagendamento - subtotal;
-                totalTextBox.Text = Convert.ToString(valortotalagendamento);
-                agendamentoServicosBindingSource1.Remove(agendamentoServicosBindingSource1.Current);
+                if(id != 0)
+                {
+                    foreach (int item in idservicoparaexcluir)
+                    {
+                        idservicoparaexcluir.Add(item);
+                    }
+                    
+                }
+                    subtotal = ((AgendamentoServico)agendamentoServicosBindingSource1.Current).ValorTotal;
+                    valortotalagendamento = valortotalagendamento - subtotal;
+                    totalTextBox.Text = Convert.ToString(valortotalagendamento);
+                    agendamentoServicosBindingSource1.Remove(agendamentoServicosBindingSource1.Current);
+              
             }
             catch (Exception ex)
             {
