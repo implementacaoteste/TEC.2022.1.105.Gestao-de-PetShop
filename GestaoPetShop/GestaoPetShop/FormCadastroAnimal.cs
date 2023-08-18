@@ -16,5 +16,15 @@ namespace GestaoPetShop
         {
             InitializeComponent();
         }
+
+        private void buttonSalvar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonCancelar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

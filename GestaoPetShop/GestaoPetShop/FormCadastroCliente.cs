@@ -124,5 +124,12 @@ namespace GestaoPetShop
 
             telefoneClientesBindingSource.EndEdit();
         }
+
+        private void nomeTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+       
     }
 }
