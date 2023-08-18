@@ -53,6 +53,7 @@
             this.dataGridView1_FormsPrincipalBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lblUsuarioLogado = new System.Windows.Forms.Label();
             this.lblUser = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1_FormsPrincipalDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1_FormsPrincipalBindingSource)).BeginInit();
@@ -66,7 +67,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(852, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(852, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -203,7 +204,7 @@
             this.dataGridView1_FormsPrincipalDataGridView.DataSource = this.dataGridView1_FormsPrincipalBindingSource;
             this.dataGridView1_FormsPrincipalDataGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(164)))), ((int)(((byte)(108)))));
             this.dataGridView1_FormsPrincipalDataGridView.Location = new System.Drawing.Point(16, 279);
-            this.dataGridView1_FormsPrincipalDataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1_FormsPrincipalDataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1_FormsPrincipalDataGridView.MultiSelect = false;
             this.dataGridView1_FormsPrincipalDataGridView.Name = "dataGridView1_FormsPrincipalDataGridView";
             this.dataGridView1_FormsPrincipalDataGridView.ReadOnly = true;
@@ -287,11 +288,11 @@
             this.lblUsuarioLogado.BackColor = System.Drawing.Color.Transparent;
             this.lblUsuarioLogado.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsuarioLogado.ForeColor = System.Drawing.Color.ForestGreen;
-            this.lblUsuarioLogado.Location = new System.Drawing.Point(12, 497);
+            this.lblUsuarioLogado.Location = new System.Drawing.Point(108, 497);
             this.lblUsuarioLogado.Name = "lblUsuarioLogado";
-            this.lblUsuarioLogado.Size = new System.Drawing.Size(167, 23);
+            this.lblUsuarioLogado.Size = new System.Drawing.Size(161, 23);
             this.lblUsuarioLogado.TabIndex = 7;
-            this.lblUsuarioLogado.Text = "Usuário Logado:";
+            this.lblUsuarioLogado.Text = "Usuário Logado";
             // 
             // lblUser
             // 
@@ -304,6 +305,18 @@
             this.lblUser.Size = new System.Drawing.Size(0, 23);
             this.lblUser.TabIndex = 7;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.ForestGreen;
+            this.label1.Location = new System.Drawing.Point(12, 497);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(90, 23);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Logado:";
+            // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -311,6 +324,7 @@
             this.BackgroundImage = global::GestaoPetShop.Properties.Resources.papel_de_parede_21;
             this.ClientSize = new System.Drawing.Size(852, 543);
             this.Controls.Add(this.lblUser);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.lblUsuarioLogado);
             this.Controls.Add(this.dataGridView1_FormsPrincipalDataGridView);
             this.Controls.Add(this.monthCalendar1);
@@ -377,6 +391,7 @@
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.Label lblUsuarioLogado;
         private System.Windows.Forms.Label lblUser;
+        private System.Windows.Forms.Label label1;
     }
 }
 

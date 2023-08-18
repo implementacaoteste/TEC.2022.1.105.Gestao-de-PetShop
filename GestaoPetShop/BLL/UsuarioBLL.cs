@@ -53,7 +53,7 @@ namespace BLL
             if (_usuario.Senha.Length <= 3)
                 throw new Exception("A senha deve ter mais de 3 caracteres.") { Data = { { "Id", 123 } } };
 
-            if (_usuario.Login.Length <= 2)
+            if (_usuario.UsuarioLogin.Length <= 2)
                 throw new Exception("O Login deve ter mais de 2 caracteres.");
         }
         public void ValidarPermissao(int _idPermissao)
@@ -67,7 +67,7 @@ namespace BLL
             if (_senha == usuario.Senha && usuario.Ativo)
             {
                 Constantes.IdUsuarioLogado = usuario.Id;
-                Constantes.UsuarioLogado = usuario.Login;
+                Constantes.UsuarioLogado = usuario.UsuarioLogin;
             }
             else
                 throw new Exception("Usuario ou senha inválido.");
