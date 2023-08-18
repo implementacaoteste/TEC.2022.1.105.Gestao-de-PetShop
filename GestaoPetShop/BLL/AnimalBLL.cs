@@ -13,7 +13,14 @@ namespace BLL
     {
         public void Inserir(Animal _animal)
         {
+            ValidarDados(_animal);
             new AnimalDAL().Inserir(_animal);
+        }
+        private void ValidarDados(Animal _animal)
+        {
+            if (String.IsNullOrEmpty(_animal.Nome))
+                throw new Exception("Informe o nome do Animal.");
+
         }
         public void Alterar(Animal _animal)
         {
@@ -43,7 +50,7 @@ namespace BLL
         {
             return new AnimalDAL().BuscarPorRaca(_raca);
         }
-        /*public void ValidarAnimalAtivo(Animal)
+       /* public void ValidarAnimalAtivo(Animal _animal)
         {
             return new AnimalDAL();
         }*/

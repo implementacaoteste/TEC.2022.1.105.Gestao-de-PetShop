@@ -12,6 +12,7 @@ namespace Models
         public string Nome { get; set; }
         public string Especie { get; set; }
         public string PaisOrigem { get; set; }
+        public bool Ativo { get; set; }
 
     }
 }
