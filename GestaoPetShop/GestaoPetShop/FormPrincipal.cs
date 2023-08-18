@@ -26,9 +26,10 @@ namespace GestaoPetShop
                 MessageBox.Show(ex.Message);
             }
         }
-        
+
         private void FormPrincipal_Load(object sender, EventArgs e)
         {
+
             dataGridView1_FormsPrincipalDataGridView.DataSource = new DataGridView1_FormsPrincipal();// ERA APENAS UM TESTE -DEIXEI AQUI SÓ PRA LEMBRAR
 
 
@@ -39,6 +40,7 @@ namespace GestaoPetShop
                     frm.ShowDialog();
                     if (!frm.Logou)
                         Application.Exit();
+                    lblUsuarioLogado.Text = Constantes.UsuarioLogado;
                 }
             }
             catch (Exception ex)
@@ -46,7 +48,7 @@ namespace GestaoPetShop
                 MessageBox.Show(ex.Message);
             }
         }
-        
+
         private void gruposDeUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             try
@@ -69,7 +71,7 @@ namespace GestaoPetShop
 
         private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            using (FormConsultaCliente frm  = new FormConsultaCliente())
+            using (FormConsultaCliente frm = new FormConsultaCliente())
             {
                 frm.ShowDialog();
             }

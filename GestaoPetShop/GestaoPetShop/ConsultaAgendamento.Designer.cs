@@ -220,7 +220,7 @@
             // 
             // monthCalendar_Agendamento
             // 
-            this.monthCalendar_Agendamento.Location = new System.Drawing.Point(608, 402);
+            this.monthCalendar_Agendamento.Location = new System.Drawing.Point(758, 73);
             this.monthCalendar_Agendamento.Name = "monthCalendar_Agendamento";
             this.monthCalendar_Agendamento.TabIndex = 17;
             this.monthCalendar_Agendamento.Visible = false;
@@ -228,7 +228,7 @@
             // button_SelecionarData
             // 
             this.button_SelecionarData.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_SelecionarData.Location = new System.Drawing.Point(699, 615);
+            this.button_SelecionarData.Location = new System.Drawing.Point(849, 286);
             this.button_SelecionarData.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button_SelecionarData.Name = "button_SelecionarData";
             this.button_SelecionarData.Size = new System.Drawing.Size(99, 31);
@@ -349,13 +349,14 @@
             this.dataGridViewTextBoxColumn20,
             this.dataGridViewTextBoxColumn21});
             this.dataGridView1_FormsPrincipalDataGridView.DataSource = this.dataGridView1_FormsPrincipalBindingSource;
-            this.dataGridView1_FormsPrincipalDataGridView.Location = new System.Drawing.Point(16, 332);
+            this.dataGridView1_FormsPrincipalDataGridView.Location = new System.Drawing.Point(16, 322);
             this.dataGridView1_FormsPrincipalDataGridView.Name = "dataGridView1_FormsPrincipalDataGridView";
             this.dataGridView1_FormsPrincipalDataGridView.ReadOnly = true;
             this.dataGridView1_FormsPrincipalDataGridView.RowHeadersVisible = false;
             this.dataGridView1_FormsPrincipalDataGridView.RowHeadersWidth = 51;
             this.dataGridView1_FormsPrincipalDataGridView.RowTemplate.Height = 24;
-            this.dataGridView1_FormsPrincipalDataGridView.Size = new System.Drawing.Size(961, 220);
+            this.dataGridView1_FormsPrincipalDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1_FormsPrincipalDataGridView.Size = new System.Drawing.Size(1031, 292);
             this.dataGridView1_FormsPrincipalDataGridView.TabIndex = 28;
             // 
             // dataGridViewTextBoxColumn13
@@ -444,7 +445,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::GestaoPetShop.Properties.Resources.papel_de_parede_2;
-            this.ClientSize = new System.Drawing.Size(1043, 907);
+            this.ClientSize = new System.Drawing.Size(1073, 647);
             this.Controls.Add(this.dataGridView1_FormsPrincipalDataGridView);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label7);

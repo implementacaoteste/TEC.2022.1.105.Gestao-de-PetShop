@@ -22,23 +22,23 @@ namespace BLL
             ValidarDados(_usuario, _confirmacaoDeSenha);
 
             UsuarioDAL usuarioDAL = new UsuarioDAL();
-        usuarioDAL.Alterar(_usuario);
+            usuarioDAL.Alterar(_usuario);
         }
-    public void Excluir(int _id)
-    {
+        public void Excluir(int _id)
+        {
             ValidarPermissao(4);
             new UsuarioDAL().Excluir(_id);
-    }
-    public List<Usuario> BuscarTodos()
-    {
-        ValidarPermissao(1);
-        return new UsuarioDAL().BuscarTodos();
-    }
-    public Usuario BuscarPorId(int _id)
-    {
-        ValidarPermissao(1);
-        return new UsuarioDAL().BuscarPorId(_id);
-    }
+        }
+        public List<Usuario> BuscarTodos()
+        {
+            ValidarPermissao(1);
+            return new UsuarioDAL().BuscarTodos();
+        }
+        public Usuario BuscarPorId(int _id)
+        {
+            ValidarPermissao(1);
+            return new UsuarioDAL().BuscarPorId(_id);
+        }
         public List<Usuario> BuscarPorLogin(string _login)
         {
             ValidarPermissao(1);
@@ -58,14 +58,17 @@ namespace BLL
         }
         public void ValidarPermissao(int _idPermissao)
         {
-           // if (!new UsuarioDAL().ValidarPermissao(Constantes.IdUsuarioLogado, _idPermissao))
-                throw new Exception("Você não tem permissão de realizar essa operação. Procure o administrador do sistema.");
+            // if (!new UsuarioDAL().ValidarPermissao(Constantes.IdUsuarioLogado, _idPermissao))
+            throw new Exception("Você não tem permissão de realizar essa operação. Procure o administrador do sistema.");
         }
         public void Altenticar(string _nomeUsuario, string _senha)
         {
             Usuario usuario = new UsuarioDAL().BuscarPorLogin(_nomeUsuario);
             if (_senha == usuario.Senha && usuario.Ativo)
+            {
                 Constantes.IdUsuarioLogado = usuario.Id;
+                Constantes.UsuarioLogado = usuario.Login;
+            }
             else
                 throw new Exception("Usuario ou senha inválido.");
         }
