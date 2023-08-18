@@ -11,6 +11,5 @@ namespace Models
         public int Id { get; set; } 
         public int IdCliente { get; set; }
         public string Email { get; set; }
-
     }
 }
