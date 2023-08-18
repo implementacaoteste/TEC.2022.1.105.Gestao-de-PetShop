@@ -121,15 +121,17 @@
             this.buttonCancelar.TabIndex = 20;
             this.buttonCancelar.Text = "&Cancelar";
             this.buttonCancelar.UseVisualStyleBackColor = true;
+            this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
             // 
             // buttonSalvar
             // 
-            this.buttonSalvar.Location = new System.Drawing.Point(613, 415);
+            this.buttonSalvar.Location = new System.Drawing.Point(615, 418);
             this.buttonSalvar.Name = "buttonSalvar";
             this.buttonSalvar.Size = new System.Drawing.Size(75, 23);
             this.buttonSalvar.TabIndex = 21;
             this.buttonSalvar.Text = "&Salvar";
             this.buttonSalvar.UseVisualStyleBackColor = true;
+            this.buttonSalvar.Click += new System.EventHandler(this.buttonSalvar_Click);
             // 
             // checkBoxAtivo
             // 
@@ -155,7 +157,6 @@
             this.labelNomeDoAnimal.Size = new System.Drawing.Size(107, 16);
             this.labelNomeDoAnimal.TabIndex = 23;
             this.labelNomeDoAnimal.Text = "Nome do Animal";
-            this.labelNomeDoAnimal.Click += new System.EventHandler(this.labelNomeDoAnimal_Click);
             // 
             // labelSexo
             // 
@@ -242,7 +243,6 @@
             this.Controls.Add(this.label1);
             this.Name = "FormCadastroAnimal";
             this.Text = "Cadastro de Animal";
-            this.Load += new System.EventHandler(this.FormCadastroAnimal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.animalBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

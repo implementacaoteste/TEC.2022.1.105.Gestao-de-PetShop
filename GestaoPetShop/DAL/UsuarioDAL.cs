@@ -16,11 +16,11 @@ namespace DAL
             try
             {
                 SqlCommand cmd = cn.CreateCommand();
-                cmd.CommandText = @"INSERT INTO Usuario(Login, IdProfissional, Senha) 
-                                    VALUES(@Login, @IdProfissional, @Senha)";
+                cmd.CommandText = @"INSERT INTO Usuario(UsuarioLogin, IdProfissional, Senha) 
+                                    VALUES(@UsuarioLogin, @IdProfissional, @Senha)";
                 cmd.CommandType = System.Data.CommandType.Text;
 
-                cmd.Parameters.AddWithValue("@Login", _usuario.Login);
+                cmd.Parameters.AddWithValue("@UsuarioLogin", _usuario.UsuarioLogin);
                 cmd.Parameters.AddWithValue("@IdProfissional", _usuario.IdProfissional);
                 cmd.Parameters.AddWithValue("@Senha", _usuario.Senha);
 
@@ -38,6 +38,43 @@ namespace DAL
                 cn.Close();
             }
         }
+        public List<Usuario> BuscarPorNome(string _UsuarioLogin)
+        {
+            List<Usuario> usuarios = new List<Usuario>();
+            Usuario usuario;
+
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = cn;
+                cmd.CommandText = @"SELECT Id,IdProfissional, UsuarioLogin, Senha FROM Usuario WHERE UPPER (UsuarioLogin) LIKE UPPER (@UsuarioLogin)";
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.Parameters.AddWithValue("@UsuarioLogin", "%" + _UsuarioLogin + "%");
+                cn.Open();
+
+                using (SqlDataReader rd = cmd.ExecuteReader())
+
+                    while (rd.Read())
+                    {
+                        usuario = new Usuario();
+                        usuario.Id = Convert.ToInt32(rd["Id"]);
+                        usuario.IdProfissional = Convert.ToInt32(rd["IdProfissional"]);
+                        usuario.UsuarioLogin = rd["UsuarioLogin"].ToString();
+                        usuario.Senha = rd["Senha"].ToString();
+                        usuarios.Add(usuario);
+                    }
+                return usuarios;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu um erro ao tentar buscar usuario no banco de dados.", ex) { Data = { { "Id", 58 } } };
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
         public List<Usuario> BuscarTodos()
         {
             List<Usuario> usuarios = new List<Usuario>();
@@ -48,7 +85,7 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = "SELECT Id, Login, IdProfissional, Senha FROM Usuario";
+                cmd.CommandText = "SELECT Id, UsuarioLogin, IdProfissional, Senha FROM Usuario";
                 cmd.CommandType = System.Data.CommandType.Text;
 
                 cn.Open();
@@ -59,7 +96,7 @@ namespace DAL
                     {
                         usuario = new Usuario();
                         usuario.Id = Convert.ToInt32(rd["Id"]);
-                        usuario.Login = rd["Login"].ToString();
+                        usuario.UsuarioLogin = rd["UsuarioLogin"].ToString();
                         usuario.IdProfissional = Convert.ToInt32(rd["IdProfissional"]);
                         usuario.Senha = rd["Senha"].ToString();
                         usuarios.Add(usuario);
@@ -93,7 +130,7 @@ namespace DAL
                     if (rd.Read())
                     {
                         usuario.Id = Convert.ToInt32(rd["Id"]);
-                        usuario.Login = rd["UsuarioLogin"].ToString();
+                        usuario.UsuarioLogin = rd["UsuarioLogin"].ToString();
                         usuario.Senha = rd["Senha"].ToString();
                         usuario.IdProfissional = Convert.ToInt32(rd["IdProfissional"]);
                         usuario.Ativo = rd["Ativo"] == DBNull.Value ? false : Convert.ToBoolean(rd["Ativo"]);
@@ -119,7 +156,7 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT Id, Login, IdProfissional, Senha FROM Usuario 
+                cmd.CommandText = @"SELECT Id, UsuarioLogin, IdProfissional, Senha FROM Usuario 
                                     WHERE Id = @Id";
                 cmd.CommandType = System.Data.CommandType.Text;
 
@@ -132,7 +169,7 @@ namespace DAL
                     if (rd.Read())
                     {
                         usuario.Id = Convert.ToInt32(rd["Id"]);
-                        usuario.Login = rd["Login"].ToString();
+                        usuario.UsuarioLogin = rd["UsuarioLogin"].ToString();
                         usuario.Senha = rd["Senha"].ToString();
                         usuario.IdProfissional = Convert.ToInt32(rd["IdProfissional"]);
                     }
@@ -154,11 +191,11 @@ namespace DAL
             try
             {
                 SqlCommand cmd = cn.CreateCommand();
-                cmd.CommandText = @"UPDATE Usuario SET Login = @Login, IdProfissional = @IdProfissional, Senha = @Senha 
+                cmd.CommandText = @"UPDATE Usuario SET Login = @UsuarioLogin, IdProfissional = @IdProfissional, Senha = @Senha 
                                     WHERE Id = @Id";
                 cmd.CommandType = System.Data.CommandType.Text;
 
-                cmd.Parameters.AddWithValue("@Login", _usuario.Login);
+                cmd.Parameters.AddWithValue("@UsuarioLogin", _usuario.UsuarioLogin);
                 cmd.Parameters.AddWithValue("@Senha", _usuario.Senha);
                 cmd.Parameters.AddWithValue("@Id", _usuario.Id);
                 cmd.Parameters.AddWithValue("@IdProfissional", _usuario.IdProfissional);
