@@ -348,7 +348,7 @@ namespace DAL
             try
             {
                 SqlCommand cmd = cn.CreateCommand();
-                cmd.CommandText = @"DELETE FROM EmailCliente WHERE Id = @Id";
+                cmd.CommandText = @"DELETE FROM EmailCliente WHERE IdCliente = @Id";
                 cmd.CommandType = System.Data.CommandType.Text;
 
                 cmd.Parameters.AddWithValue("@Id", _id);
@@ -373,7 +373,7 @@ namespace DAL
             try
             {
                 SqlCommand cmd = cn.CreateCommand();
-                cmd.CommandText = @"DELETE FROM TelefoneCliente WHERE Id = @Id";
+                cmd.CommandText = @"DELETE FROM TelefoneCliente WHERE IdCliente = @Id";
                 cmd.CommandType = System.Data.CommandType.Text;
 
                 cmd.Parameters.AddWithValue("@Id", _id);
