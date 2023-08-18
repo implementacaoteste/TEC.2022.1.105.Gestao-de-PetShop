@@ -24,6 +24,7 @@ namespace GestaoPetShop
         int quant = 0;
         bool atualizar = false;
         int id = 0;
+        
         List<int> idservicoparaexcluir;
         public FormCadastroAgendamento(int _id = 0)
         {
@@ -74,23 +75,26 @@ namespace GestaoPetShop
                     List<AgendamentoServico> agendamentoServicos = new List<AgendamentoServico>();
                     agendamentoServicos = agendamento.AgendamentoServicos;
 
-                    idTextBox.Text = Convert.ToString(agendamento.Id);
+                    idTextBox1.Text = Convert.ToString(agendamento.Id);
                     dataAgDateTimePicker.Value = agendamento.DataAg;
                     horarioTextBox.Text = Convert.ToString(agendamento.Horario);
                     idSituacaoTextBox.Text = Convert.ToString(agendamento.IdSituacao);
                     descricaoSituacaoComboBox.Text = Convert.ToString(agendamento.DescricaoSituacao);
                     idAnimalTextBox.Text = Convert.ToString(agendamento.IdAnimal);
                     nomeAnimalTextBox.Text = Convert.ToString(agendamento.NomeAnimal);
-                    idClienteTextBox.Text = Convert.ToString(agendamento.NomeCliente);
+                    idClienteTextBox.Text = Convert.ToString(agendamento.IdCliente);
                     nomeClienteTextBox.Text = Convert.ToString(agendamento.NomeCliente);
                     idProfissionalTextBox.Text = Convert.ToString(agendamento.NomeProfissional);
                     nomeProfissionalComboBox.Text = Convert.ToString(agendamento.NomeProfissional);
                     totalTextBox.Text = Convert.ToString(agendamento.Total);
-                    ativoCheckBox.Checked = Convert.ToBoolean(agendamento.Ativo);
+                    ativoCheckBox.Checked = true;
 
                     foreach (AgendamentoServico item in agendamentoServicos)
                     {
                         agendamentoServicosBindingSource1.Add(item);
+                       
+                      // (agendamentoServicosBindingSource1.Current).Va  Add(item) = ((AgendamentoServico)agendamentoServicosBindingSource1.Current)item.ValorUnitario;
+                      //  ((AgendamentoServico)agendamentoServicosBindingSource1.Current)item.ValorTotal = ((AgendamentoServico)agendamentoServicosBindingSource1.Current)item.Quantidade * ((AgendamentoServico)agendamentoServicosBindingSource1.Current)item.ValorComDesconto;
                     }
                    // agendamentoServicosBindingSource1.AddNew();
                 }
@@ -167,7 +171,7 @@ namespace GestaoPetShop
                 Agendamento agendamento = new Agendamento();
                 List<AgendamentoServico> agendamentoServicos = new List<AgendamentoServico>();
                 AgendamentoServico agendamentoServico = new AgendamentoServico();
-
+                agendamento.Id = Convert.ToInt32(idTextBox1.Text);
                 agendamento.DataAg = Convert.ToDateTime(dataAgDateTimePicker.Text);
                 agendamento.Horario = Convert.ToString(horarioTextBox.Text);
                 agendamento.IdSituacao = Convert.ToInt32(idSituacaoTextBox.Text);
@@ -191,7 +195,7 @@ namespace GestaoPetShop
 
                 if (id != 0)
                 {
-                    new AgendamentoBLL().Alterar(agendamento);
+                    new AgendamentoBLL().Alterar(agendamento, idservicoparaexcluir);
                 }
                 else
                 {
@@ -310,7 +314,9 @@ namespace GestaoPetShop
         {
             try
             {
-                int idagendamento = Convert.ToInt32(idTextBox.Text);
+               /// idservicoparaexcluir = new List<int>();
+               // int idagendamento = Convert.ToInt32(idTextBox1.Text);
+
                 int idservico = ((AgendamentoServico)agendamentoServicosBindingSource1.Current).IdServico;
                 if (idservico == 0)
                 {
@@ -320,8 +326,9 @@ namespace GestaoPetShop
                 if (id != 0)
                 {
 
+                    idservicoparaexcluir.Add(idservico);
 
-                    new AgendamentoBLL().ExcluirServicoDeAgendamento(idservico, idagendamento);
+                   // new AgendamentoBLL().ExcluirServicoDeAgendamento(idservico, idagendamento);
 
 
 

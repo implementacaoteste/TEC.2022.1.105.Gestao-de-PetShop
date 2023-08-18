@@ -157,7 +157,7 @@ namespace DAL
             }
             return _idagendamento;
         }
-        public void Alterar(Agendamento _agendamento,  SqlTransaction _transaction = null) //List<int> _idServicoParaExcluir,
+        public void Alterar(Agendamento _agendamento, List<int> _idServicoParaExcluir, SqlTransaction _transaction = null) //
         {
 
             SqlTransaction transaction = _transaction;
@@ -194,11 +194,11 @@ namespace DAL
                     {
                         cmd.ExecuteNonQuery();
 
-                        //if (_idServicoParaExcluir.Count > 0)
-                        //{
-                        //    AlterarExcluirServicoDeAgendamento(_agendamento, _idServicoParaExcluir, transaction);
+                        if (_idServicoParaExcluir.Count > 0)
+                        {
+                            AlterarExcluirServicoDeAgendamento(_agendamento, _idServicoParaExcluir, transaction);
 
-                        //}
+                        }
 
 
                         if (_agendamento.AgendamentoServicos.Count > 0)
@@ -1151,7 +1151,7 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT Ag.Id, Ag.DataAg,Ag.Horario, Ani.Id as AnimalId, Ani.Nome as NomeAnimal,Cli.Id as ClienteId, Cli.Nome as NomeCliente, P.Id as ProfissionalId, P.Nome as NomeProfissional,Si.Id as SituacaoId,Si.Descricao as DescSituacao FROM Agendamento Ag LEFT JOIN Profissional P             ON Ag.IdProfissional = P.Id
+                cmd.CommandText = @"SELECT Ag.Id, Ag.DataAg,Ag.Horario,Ag.Total, Ani.Id as AnimalId, Ani.Nome as NomeAnimal,Cli.Id as ClienteId, Cli.Nome as NomeCliente, P.Id as ProfissionalId, P.Nome as NomeProfissional,Si.Id as SituacaoId,Si.Descricao as DescSituacao FROM Agendamento Ag LEFT JOIN Profissional P             ON Ag.IdProfissional = P.Id
                                                                                                                                                                                             LEFT JOIN Animal Ani                 ON Ag.IdAnimal = Ani.Id
                                                                                                                                                                                             LEFT JOIN Cliente Cli                ON Ani.IdCliente = Cli.Id
                                                                                                                                                                                             LEFT JOIN AgendamentoServicos AGS    ON Ag.Id = AGS.IdAgendamento
@@ -1178,6 +1178,7 @@ namespace DAL
                         agendamento.Horario = rd["Horario"].ToString();
                         agendamento.IdSituacao = Convert.ToInt32(rd["SituacaoId"]);
                         agendamento.DescricaoSituacao = rd["DescSituacao"].ToString();
+                        agendamento.Total = Convert.ToDecimal (rd["Total"]);
                         agendamento.AgendamentoServicos = new AgendamentoDAL().BuscarAgendamentoServicosPorIdAgendamento(_idAgendamento);
 
                         //agendamentos.Add(agendamento);

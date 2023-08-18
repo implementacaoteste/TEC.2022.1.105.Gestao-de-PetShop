@@ -18,10 +18,10 @@ namespace BLL
             AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
             agendamentoDAL.Inserir(_agendamento);
         }
-        public void Alterar(Agendamento _agendamento)// List<int> _idServicoParaExcluir
+        public void Alterar(Agendamento _agendamento, List<int> _idServicoParaExcluir)//
         {
             AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
-            agendamentoDAL.Alterar(_agendamento);//, _idServicoParaExcluir
+            agendamentoDAL.Alterar(_agendamento, _idServicoParaExcluir);//
         }
         public void Excluir(int _id, SqlTransaction _transaction = null)
         {
