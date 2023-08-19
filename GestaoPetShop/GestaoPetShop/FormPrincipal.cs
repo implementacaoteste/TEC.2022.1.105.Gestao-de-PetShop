@@ -114,16 +114,6 @@ namespace GestaoPetShop
             dataGridView1_FormsPrincipalDataGridView.Visible = false;
             button2.Visible = false;
         }
-
-
         /* ERA APENAS UM TESTE - DEIXEI AQUI SÓ PRA LEMBRAR*/
-
-
-
-
-
-
-
-
     }
 }
