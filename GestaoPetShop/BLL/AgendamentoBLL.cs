@@ -105,7 +105,7 @@ namespace BLL
         public void ExcluirServicoDeAgendamento(int _idservico, int _idagendamento)
         {
             AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
-            agendamentoDAL.BuscarAgendamentoPorId(_idservico, _idagendamento);
+            agendamentoDAL.ExcluirServicoDeAgendamento(_idservico, _idagendamento);
         }
     }
 }

@@ -91,9 +91,10 @@ namespace GestaoPetShop
 
                     foreach (AgendamentoServico item in agendamentoServicos)
                     {
+
+                       // decimal x = item.Quantidade * item.ValorComDesconto;
+                        //agendamentoServicosBindingSource1.Add(item.ValorTotal = x );
                         agendamentoServicosBindingSource1.Add(item);
-                       
-                      // (agendamentoServicosBindingSource1.Current).Va  Add(item) = ((AgendamentoServico)agendamentoServicosBindingSource1.Current)item.ValorUnitario;
                       //  ((AgendamentoServico)agendamentoServicosBindingSource1.Current)item.ValorTotal = ((AgendamentoServico)agendamentoServicosBindingSource1.Current)item.Quantidade * ((AgendamentoServico)agendamentoServicosBindingSource1.Current)item.ValorComDesconto;
                     }
                    // agendamentoServicosBindingSource1.AddNew();
@@ -315,7 +316,7 @@ namespace GestaoPetShop
             try
             {
                /// idservicoparaexcluir = new List<int>();
-               // int idagendamento = Convert.ToInt32(idTextBox1.Text);
+                int idagendamento = Convert.ToInt32(idTextBox1.Text);
 
                 int idservico = ((AgendamentoServico)agendamentoServicosBindingSource1.Current).IdServico;
                 if (idservico == 0)
@@ -326,9 +327,9 @@ namespace GestaoPetShop
                 if (id != 0)
                 {
 
-                    idservicoparaexcluir.Add(idservico);
+                    //idservicoparaexcluir.Add(idservico);
 
-                   // new AgendamentoBLL().ExcluirServicoDeAgendamento(idservico, idagendamento);
+                    new AgendamentoBLL().ExcluirServicoDeAgendamento(idservico, idagendamento);
 
 
 
