@@ -359,7 +359,7 @@
             this.emailClienteDataGridView.RowHeadersWidth = 51;
             this.emailClienteDataGridView.RowTemplate.Height = 24;
             this.emailClienteDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.emailClienteDataGridView.Size = new System.Drawing.Size(316, 121);
+            this.emailClienteDataGridView.Size = new System.Drawing.Size(321, 121);
             this.emailClienteDataGridView.TabIndex = 26;
             // 
             // dataGridViewTextBoxColumn3
@@ -424,7 +424,7 @@
             // 
             // buttonInserirEmail
             // 
-            this.buttonInserirEmail.Location = new System.Drawing.Point(275, 274);
+            this.buttonInserirEmail.Location = new System.Drawing.Point(270, 274);
             this.buttonInserirEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonInserirEmail.Name = "buttonInserirEmail";
             this.buttonInserirEmail.Size = new System.Drawing.Size(63, 23);

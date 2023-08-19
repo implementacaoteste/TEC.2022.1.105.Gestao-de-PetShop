@@ -120,7 +120,7 @@ namespace GestaoPetShop
         private void buttonInserirTelefone_Click(object sender, EventArgs e)
         {
            telefoneClientesBindingSource.AddNew();
-            ((TelefoneCliente)emailClienteBindingSource.Current).Telefone = textBoxTelefone.Text;
+            ((TelefoneCliente)telefoneClientesBindingSource.Current).Telefone = textBoxTelefone.Text;
 
             telefoneClientesBindingSource.EndEdit();
         }

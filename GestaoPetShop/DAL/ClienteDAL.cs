@@ -35,7 +35,8 @@ namespace DAL
                     if (_cliente.Foto != null)
                         cmd.Parameters.AddWithValue("@Foto", _cliente.Foto);
                     else
-                        cmd.Parameters.AddWithValue("@Foto", DBNull.Value);
+                        cmd.Parameters.Add(new SqlParameter() { ParameterName = "@Foto", SqlDbType = System.Data.SqlDbType.Image, Value = DBNull.Value });
+
 
                     cmd.Parameters.AddWithValue("@Ativo", _cliente.Ativo);
 
@@ -276,7 +277,7 @@ namespace DAL
                 cmd.ExecuteNonQuery();
             }
             catch (Exception ex)
-            { 
+            {
                 throw new Exception("Erro ao tentar alterar Email no banco de dados", ex) { Data = { { "Id", 110 } } };
             }
             finally
@@ -347,7 +348,7 @@ namespace DAL
             try
             {
                 SqlCommand cmd = cn.CreateCommand();
-                cmd.CommandText = @"DELETE FROM EmailCliente WHERE Id = @Id";
+                cmd.CommandText = @"DELETE FROM EmailCliente WHERE IdCliente = @Id";
                 cmd.CommandType = System.Data.CommandType.Text;
 
                 cmd.Parameters.AddWithValue("@Id", _id);
@@ -372,7 +373,7 @@ namespace DAL
             try
             {
                 SqlCommand cmd = cn.CreateCommand();
-                cmd.CommandText = @"DELETE FROM TelefoneCliente WHERE Id = @Id";
+                cmd.CommandText = @"DELETE FROM TelefoneCliente WHERE IdCliente = @Id";
                 cmd.CommandType = System.Data.CommandType.Text;
 
                 cmd.Parameters.AddWithValue("@Id", _id);
@@ -494,7 +495,7 @@ namespace DAL
                 cn.Close();
             }
         }
-        public List<EmailCliente> BuscarEmailCliente (string _emailCliente)
+        public List<EmailCliente> BuscarEmailCliente(string _emailCliente)
 
         {
             List<EmailCliente> emailclienteList = new List<EmailCliente>();
@@ -532,7 +533,7 @@ namespace DAL
             }
 
         }
-        public List<TelefoneCliente> BuscarTelefoneCliente (string _telefoneCliente)
+        public List<TelefoneCliente> BuscarTelefoneCliente(string _telefoneCliente)
         {
             List<TelefoneCliente> telefoneclienteList = new List<TelefoneCliente>();
             TelefoneCliente telefonecliente = new TelefoneCliente();
@@ -568,7 +569,7 @@ namespace DAL
                 cn.Close();
             }
         }
-   
+
         public Cliente BuscarPorId(int _id)  // BuscarPorCodigo
         {
             Cliente cliente = new Cliente();
