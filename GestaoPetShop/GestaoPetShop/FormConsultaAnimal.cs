@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BLL;
+using Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -32,6 +34,28 @@ namespace GestaoPetShop
 
         }
 
-    
+        private void buttonExcluir_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (animalBindingSource.Count <= 0)
+                {
+                    MessageBox.Show("Não existe registro para ser excluído");
+                    return;
+                }
+
+                if (MessageBox.Show("Deseja realmente excluir este registro?", "Atenção", MessageBoxButtons.YesNo) == DialogResult.No)
+                    return;
+
+                int id = ((Animal)animalBindingSource.Current).Id;
+                new AnimalBLL().Excluir(id);
+                animalBindingSource.RemoveCurrent();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
     }
 }

@@ -66,6 +66,7 @@
             // 
             // textBox1
             // 
+            this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.animalBindingSource, "Nome", true));
             this.textBox1.Location = new System.Drawing.Point(30, 91);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(190, 22);
@@ -73,6 +74,7 @@
             // 
             // textBox2
             // 
+            this.textBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.animalBindingSource, "Sexo", true));
             this.textBox2.Location = new System.Drawing.Point(235, 91);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(95, 22);
@@ -80,6 +82,7 @@
             // 
             // textBox3
             // 
+            this.textBox3.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.animalBindingSource, "Agressivo", true));
             this.textBox3.Location = new System.Drawing.Point(348, 91);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(201, 22);
@@ -87,6 +90,7 @@
             // 
             // textBox4
             // 
+            this.textBox4.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.animalBindingSource, "Cor", true));
             this.textBox4.Location = new System.Drawing.Point(30, 151);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(190, 22);
@@ -94,6 +98,7 @@
             // 
             // textBox5
             // 
+            this.textBox5.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.animalBindingSource, "Idade", true));
             this.textBox5.Location = new System.Drawing.Point(230, 151);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(100, 22);
@@ -101,6 +106,7 @@
             // 
             // textBox6
             // 
+            this.textBox6.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.animalBindingSource, "Alergia", true));
             this.textBox6.Location = new System.Drawing.Point(351, 151);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(198, 22);
@@ -108,6 +114,7 @@
             // 
             // textBox7
             // 
+            this.textBox7.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.animalBindingSource, "DataNascimento", true));
             this.textBox7.Location = new System.Drawing.Point(30, 217);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(190, 22);
@@ -125,7 +132,7 @@
             // 
             // buttonSalvar
             // 
-            this.buttonSalvar.Location = new System.Drawing.Point(615, 418);
+            this.buttonSalvar.Location = new System.Drawing.Point(618, 415);
             this.buttonSalvar.Name = "buttonSalvar";
             this.buttonSalvar.Size = new System.Drawing.Size(75, 23);
             this.buttonSalvar.TabIndex = 21;
@@ -151,7 +158,6 @@
             // labelNomeDoAnimal
             // 
             this.labelNomeDoAnimal.AutoSize = true;
-            this.labelNomeDoAnimal.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.animalBindingSource, "Nome", true));
             this.labelNomeDoAnimal.Location = new System.Drawing.Point(27, 72);
             this.labelNomeDoAnimal.Name = "labelNomeDoAnimal";
             this.labelNomeDoAnimal.Size = new System.Drawing.Size(107, 16);
@@ -161,7 +167,6 @@
             // labelSexo
             // 
             this.labelSexo.AutoSize = true;
-            this.labelSexo.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.animalBindingSource, "Sexo", true));
             this.labelSexo.Location = new System.Drawing.Point(235, 72);
             this.labelSexo.Name = "labelSexo";
             this.labelSexo.Size = new System.Drawing.Size(38, 16);
@@ -171,7 +176,6 @@
             // labelAgressivo
             // 
             this.labelAgressivo.AutoSize = true;
-            this.labelAgressivo.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.animalBindingSource, "Agressivo", true));
             this.labelAgressivo.Location = new System.Drawing.Point(348, 72);
             this.labelAgressivo.Name = "labelAgressivo";
             this.labelAgressivo.Size = new System.Drawing.Size(68, 16);
@@ -181,7 +185,6 @@
             // labelCor
             // 
             this.labelCor.AutoSize = true;
-            this.labelCor.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.animalBindingSource, "Cor", true));
             this.labelCor.Location = new System.Drawing.Point(27, 132);
             this.labelCor.Name = "labelCor";
             this.labelCor.Size = new System.Drawing.Size(28, 16);
@@ -191,7 +194,6 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.animalBindingSource, "Idade", true));
             this.label2.Location = new System.Drawing.Point(235, 132);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(42, 16);
@@ -201,7 +203,6 @@
             // labelAlergia
             // 
             this.labelAlergia.AutoSize = true;
-            this.labelAlergia.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.animalBindingSource, "Alergia", true));
             this.labelAlergia.Location = new System.Drawing.Point(351, 132);
             this.labelAlergia.Name = "labelAlergia";
             this.labelAlergia.Size = new System.Drawing.Size(50, 16);
@@ -211,7 +212,6 @@
             // labelDataNascimento
             // 
             this.labelDataNascimento.AutoSize = true;
-            this.labelDataNascimento.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.animalBindingSource, "DataNascimento", true));
             this.labelDataNascimento.Location = new System.Drawing.Point(30, 200);
             this.labelDataNascimento.Name = "labelDataNascimento";
             this.labelDataNascimento.Size = new System.Drawing.Size(111, 16);
@@ -243,6 +243,7 @@
             this.Controls.Add(this.label1);
             this.Name = "FormCadastroAnimal";
             this.Text = "Cadastro de Animal";
+            this.Load += new System.EventHandler(this.FormCadastroAnimal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.animalBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

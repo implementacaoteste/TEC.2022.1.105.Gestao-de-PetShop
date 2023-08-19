@@ -118,7 +118,7 @@
             this.dataGridViewTextBoxColumn10,
             this.dataGridViewCheckBoxColumn1});
             this.animalDataGridView.DataSource = this.animalBindingSource;
-            this.animalDataGridView.Location = new System.Drawing.Point(0, 108);
+            this.animalDataGridView.Location = new System.Drawing.Point(8, 108);
             this.animalDataGridView.Name = "animalDataGridView";
             this.animalDataGridView.RowHeadersWidth = 51;
             this.animalDataGridView.RowTemplate.Height = 24;
@@ -208,6 +208,10 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Buscar Todos",
+            "Buscar por Nome",
+            "Buscar por Id"});
             this.comboBox1.Location = new System.Drawing.Point(8, 80);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(155, 24);
@@ -215,7 +219,7 @@
             // 
             // buttonBuscar
             // 
-            this.buttonBuscar.Location = new System.Drawing.Point(597, 80);
+            this.buttonBuscar.Location = new System.Drawing.Point(593, 82);
             this.buttonBuscar.Name = "buttonBuscar";
             this.buttonBuscar.Size = new System.Drawing.Size(75, 23);
             this.buttonBuscar.TabIndex = 5;
@@ -224,7 +228,7 @@
             // 
             // buttonAlterar
             // 
-            this.buttonAlterar.Location = new System.Drawing.Point(691, 79);
+            this.buttonAlterar.Location = new System.Drawing.Point(691, 82);
             this.buttonAlterar.Name = "buttonAlterar";
             this.buttonAlterar.Size = new System.Drawing.Size(75, 23);
             this.buttonAlterar.TabIndex = 6;
@@ -233,7 +237,7 @@
             // 
             // buttonIserir
             // 
-            this.buttonIserir.Location = new System.Drawing.Point(781, 79);
+            this.buttonIserir.Location = new System.Drawing.Point(785, 82);
             this.buttonIserir.Name = "buttonIserir";
             this.buttonIserir.Size = new System.Drawing.Size(75, 23);
             this.buttonIserir.TabIndex = 7;
@@ -242,12 +246,13 @@
             // 
             // buttonExcluir
             // 
-            this.buttonExcluir.Location = new System.Drawing.Point(883, 79);
+            this.buttonExcluir.Location = new System.Drawing.Point(883, 82);
             this.buttonExcluir.Name = "buttonExcluir";
             this.buttonExcluir.Size = new System.Drawing.Size(75, 23);
             this.buttonExcluir.TabIndex = 8;
             this.buttonExcluir.Text = "&Excluir";
             this.buttonExcluir.UseVisualStyleBackColor = true;
+            this.buttonExcluir.Click += new System.EventHandler(this.buttonExcluir_Click);
             // 
             // FormConsultaAnimal
             // 
