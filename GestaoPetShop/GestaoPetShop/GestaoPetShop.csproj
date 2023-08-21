@@ -559,24 +559,6 @@
   <ItemGroup>
     <None Include="Resources\fechar-removebg-preview1.png" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="Icons\user.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Icons\grupousuario.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Icons\client.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Icons\servico.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Icons\calendar.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Icons\animal.ico" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Fody.4.0.2\build\Fody.targets" Condition="Exists('..\packages\Fody.4.0.2\build\Fody.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

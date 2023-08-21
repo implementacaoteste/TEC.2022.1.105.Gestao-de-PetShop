@@ -66,8 +66,8 @@
             this.cadastroToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(639, 24);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(852, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -82,67 +82,60 @@
             this.animalToolStripMenuItem});
             this.cadastroToolStripMenuItem.Name = "cadastroToolStripMenuItem";
             this.cadastroToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.U)));
-            this.cadastroToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
+            this.cadastroToolStripMenuItem.Size = new System.Drawing.Size(82, 26);
             this.cadastroToolStripMenuItem.Text = "Cadastro";
             // 
             // usuariosToolStripMenuItem
             // 
-            this.usuariosToolStripMenuItem.Image = global::GestaoPetShop.Properties.Resources.user;
             this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
             this.usuariosToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.U)));
-            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(221, 26);
+            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(270, 26);
             this.usuariosToolStripMenuItem.Text = "Usuários";
             this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
             // 
             // gruposDeUsuariosToolStripMenuItem
             // 
-            this.gruposDeUsuariosToolStripMenuItem.Image = global::GestaoPetShop.Properties.Resources.grupousuario;
             this.gruposDeUsuariosToolStripMenuItem.Name = "gruposDeUsuariosToolStripMenuItem";
             this.gruposDeUsuariosToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.G)));
-            this.gruposDeUsuariosToolStripMenuItem.Size = new System.Drawing.Size(221, 26);
+            this.gruposDeUsuariosToolStripMenuItem.Size = new System.Drawing.Size(270, 26);
             this.gruposDeUsuariosToolStripMenuItem.Text = "Grupos de usuários";
             this.gruposDeUsuariosToolStripMenuItem.Click += new System.EventHandler(this.gruposDeUsuariosToolStripMenuItem_Click);
             // 
             // clientesToolStripMenuItem
             // 
-            this.clientesToolStripMenuItem.Image = global::GestaoPetShop.Properties.Resources.client;
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
             this.clientesToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(221, 26);
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(270, 26);
             this.clientesToolStripMenuItem.Text = "Clientes";
             this.clientesToolStripMenuItem.Click += new System.EventHandler(this.clientesToolStripMenuItem_Click);
             // 
             // servicosToolStripMenuItem
             // 
-            this.servicosToolStripMenuItem.Image = global::GestaoPetShop.Properties.Resources.servico;
             this.servicosToolStripMenuItem.Name = "servicosToolStripMenuItem";
             this.servicosToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.servicosToolStripMenuItem.Size = new System.Drawing.Size(221, 26);
+            this.servicosToolStripMenuItem.Size = new System.Drawing.Size(270, 26);
             this.servicosToolStripMenuItem.Text = "Serviços";
             this.servicosToolStripMenuItem.Click += new System.EventHandler(this.servicosToolStripMenuItem_Click);
             // 
             // agendamentoToolStripMenuItem
             // 
-            this.agendamentoToolStripMenuItem.Image = global::GestaoPetShop.Properties.Resources.calendar;
             this.agendamentoToolStripMenuItem.Name = "agendamentoToolStripMenuItem";
             this.agendamentoToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));
-            this.agendamentoToolStripMenuItem.Size = new System.Drawing.Size(221, 26);
+            this.agendamentoToolStripMenuItem.Size = new System.Drawing.Size(270, 26);
             this.agendamentoToolStripMenuItem.Text = "Agendamento";
             this.agendamentoToolStripMenuItem.Click += new System.EventHandler(this.agendamentoToolStripMenuItem_Click);
             // 
             // animalToolStripMenuItem
             // 
-            this.animalToolStripMenuItem.Image = global::GestaoPetShop.Properties.Resources.animal;
             this.animalToolStripMenuItem.Name = "animalToolStripMenuItem";
             this.animalToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
-            this.animalToolStripMenuItem.Size = new System.Drawing.Size(221, 26);
+            this.animalToolStripMenuItem.Size = new System.Drawing.Size(270, 26);
             this.animalToolStripMenuItem.Text = "Animal";
             this.animalToolStripMenuItem.Click += new System.EventHandler(this.animalToolStripMenuItem_Click);
             // 
             // monthCalendar1
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(310, 30);
-            this.monthCalendar1.Margin = new System.Windows.Forms.Padding(7);
+            this.monthCalendar1.Location = new System.Drawing.Point(413, 37);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 1;
             // 
@@ -155,10 +148,10 @@
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.ImageKey = "buscar-removebg-preview.png";
             this.button1.ImageList = this.imageList1;
-            this.button1.Location = new System.Drawing.Point(540, 30);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Location = new System.Drawing.Point(720, 37);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(80, 39);
+            this.button1.Size = new System.Drawing.Size(107, 48);
             this.button1.TabIndex = 4;
             this.button1.Text = "Buscar";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -181,10 +174,10 @@
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.ImageKey = "fechar-removebg-preview.png";
             this.button2.ImageList = this.imageList1;
-            this.button2.Location = new System.Drawing.Point(540, 161);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
+            this.button2.Location = new System.Drawing.Point(720, 198);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(80, 31);
+            this.button2.Size = new System.Drawing.Size(107, 38);
             this.button2.TabIndex = 5;
             this.button2.Text = "Fechar";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -210,14 +203,15 @@
             this.dataGridViewTextBoxColumn15});
             this.dataGridView1_FormsPrincipalDataGridView.DataSource = this.dataGridView1_FormsPrincipalBindingSource;
             this.dataGridView1_FormsPrincipalDataGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(164)))), ((int)(((byte)(108)))));
-            this.dataGridView1_FormsPrincipalDataGridView.Location = new System.Drawing.Point(12, 227);
+            this.dataGridView1_FormsPrincipalDataGridView.Location = new System.Drawing.Point(16, 279);
+            this.dataGridView1_FormsPrincipalDataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1_FormsPrincipalDataGridView.MultiSelect = false;
             this.dataGridView1_FormsPrincipalDataGridView.Name = "dataGridView1_FormsPrincipalDataGridView";
             this.dataGridView1_FormsPrincipalDataGridView.ReadOnly = true;
             this.dataGridView1_FormsPrincipalDataGridView.RowHeadersVisible = false;
             this.dataGridView1_FormsPrincipalDataGridView.RowHeadersWidth = 51;
             this.dataGridView1_FormsPrincipalDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1_FormsPrincipalDataGridView.Size = new System.Drawing.Size(618, 162);
+            this.dataGridView1_FormsPrincipalDataGridView.Size = new System.Drawing.Size(824, 199);
             this.dataGridView1_FormsPrincipalDataGridView.TabIndex = 6;
             this.dataGridView1_FormsPrincipalDataGridView.Visible = false;
             // 
@@ -294,10 +288,9 @@
             this.lblUsuarioLogado.BackColor = System.Drawing.Color.Transparent;
             this.lblUsuarioLogado.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsuarioLogado.ForeColor = System.Drawing.Color.ForestGreen;
-            this.lblUsuarioLogado.Location = new System.Drawing.Point(81, 404);
-            this.lblUsuarioLogado.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblUsuarioLogado.Location = new System.Drawing.Point(108, 497);
             this.lblUsuarioLogado.Name = "lblUsuarioLogado";
-            this.lblUsuarioLogado.Size = new System.Drawing.Size(129, 19);
+            this.lblUsuarioLogado.Size = new System.Drawing.Size(161, 23);
             this.lblUsuarioLogado.TabIndex = 7;
             this.lblUsuarioLogado.Text = "Usuário Logado";
             // 
@@ -307,10 +300,9 @@
             this.lblUser.BackColor = System.Drawing.Color.Transparent;
             this.lblUser.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUser.ForeColor = System.Drawing.Color.ForestGreen;
-            this.lblUser.Location = new System.Drawing.Point(148, 404);
-            this.lblUser.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblUser.Location = new System.Drawing.Point(197, 497);
             this.lblUser.Name = "lblUser";
-            this.lblUser.Size = new System.Drawing.Size(0, 19);
+            this.lblUser.Size = new System.Drawing.Size(0, 23);
             this.lblUser.TabIndex = 7;
             // 
             // label1
@@ -319,19 +311,18 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label1.Location = new System.Drawing.Point(9, 404);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(12, 497);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 19);
+            this.label1.Size = new System.Drawing.Size(90, 23);
             this.label1.TabIndex = 7;
             this.label1.Text = "Logado:";
             // 
             // FormPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::GestaoPetShop.Properties.Resources.papel_de_parede_21;
-            this.ClientSize = new System.Drawing.Size(639, 441);
+            this.ClientSize = new System.Drawing.Size(852, 543);
             this.Controls.Add(this.lblUser);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblUsuarioLogado);
@@ -343,7 +334,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormPrincipal";
