@@ -379,7 +379,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormPrincipal.resx">
       <DependentUpon>FormPrincipal.cs</DependentUpon>
-      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="FormsCadastroServico.resx">
       <DependentUpon>FormsCadastroServico.cs</DependentUpon>
