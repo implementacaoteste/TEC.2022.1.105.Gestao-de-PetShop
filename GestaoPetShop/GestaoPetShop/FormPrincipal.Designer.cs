@@ -66,13 +66,8 @@
             this.cadastroToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-<<<<<<< Updated upstream
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
             this.menuStrip1.Size = new System.Drawing.Size(639, 24);
-=======
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(861, 28);
->>>>>>> Stashed changes
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -87,11 +82,7 @@
             this.animalToolStripMenuItem});
             this.cadastroToolStripMenuItem.Name = "cadastroToolStripMenuItem";
             this.cadastroToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.U)));
-<<<<<<< Updated upstream
             this.cadastroToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
-=======
-            this.cadastroToolStripMenuItem.Size = new System.Drawing.Size(82, 24);
->>>>>>> Stashed changes
             this.cadastroToolStripMenuItem.Text = "Cadastro";
             // 
             // usuariosToolStripMenuItem
@@ -164,17 +155,10 @@
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.ImageKey = "buscar-removebg-preview.png";
             this.button1.ImageList = this.imageList1;
-<<<<<<< Updated upstream
             this.button1.Location = new System.Drawing.Point(540, 30);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(80, 39);
-=======
-            this.button1.Location = new System.Drawing.Point(713, 37);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(127, 48);
->>>>>>> Stashed changes
             this.button1.TabIndex = 4;
             this.button1.Text = "Buscar";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -197,19 +181,12 @@
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.ImageKey = "fechar-removebg-preview.png";
             this.button2.ImageList = this.imageList1;
-<<<<<<< Updated upstream
             this.button2.Location = new System.Drawing.Point(540, 161);
             this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(80, 31);
-=======
-            this.button2.Location = new System.Drawing.Point(713, 198);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(127, 38);
->>>>>>> Stashed changes
             this.button2.TabIndex = 5;
-            this.button2.Text = " Fechar";
+            this.button2.Text = "Fechar";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Visible = false;
@@ -233,12 +210,7 @@
             this.dataGridViewTextBoxColumn15});
             this.dataGridView1_FormsPrincipalDataGridView.DataSource = this.dataGridView1_FormsPrincipalBindingSource;
             this.dataGridView1_FormsPrincipalDataGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(164)))), ((int)(((byte)(108)))));
-<<<<<<< Updated upstream
             this.dataGridView1_FormsPrincipalDataGridView.Location = new System.Drawing.Point(12, 227);
-=======
-            this.dataGridView1_FormsPrincipalDataGridView.Location = new System.Drawing.Point(16, 253);
-            this.dataGridView1_FormsPrincipalDataGridView.Margin = new System.Windows.Forms.Padding(4);
->>>>>>> Stashed changes
             this.dataGridView1_FormsPrincipalDataGridView.MultiSelect = false;
             this.dataGridView1_FormsPrincipalDataGridView.Name = "dataGridView1_FormsPrincipalDataGridView";
             this.dataGridView1_FormsPrincipalDataGridView.ReadOnly = true;
@@ -322,12 +294,8 @@
             this.lblUsuarioLogado.BackColor = System.Drawing.Color.Transparent;
             this.lblUsuarioLogado.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsuarioLogado.ForeColor = System.Drawing.Color.ForestGreen;
-<<<<<<< Updated upstream
             this.lblUsuarioLogado.Location = new System.Drawing.Point(81, 404);
             this.lblUsuarioLogado.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-=======
-            this.lblUsuarioLogado.Location = new System.Drawing.Point(108, 464);
->>>>>>> Stashed changes
             this.lblUsuarioLogado.Name = "lblUsuarioLogado";
             this.lblUsuarioLogado.Size = new System.Drawing.Size(129, 19);
             this.lblUsuarioLogado.TabIndex = 7;
@@ -351,12 +319,8 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.ForestGreen;
-<<<<<<< Updated upstream
             this.label1.Location = new System.Drawing.Point(9, 404);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-=======
-            this.label1.Location = new System.Drawing.Point(12, 464);
->>>>>>> Stashed changes
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(73, 19);
             this.label1.TabIndex = 7;
@@ -367,11 +331,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::GestaoPetShop.Properties.Resources.papel_de_parede_21;
-<<<<<<< Updated upstream
             this.ClientSize = new System.Drawing.Size(639, 441);
-=======
-            this.ClientSize = new System.Drawing.Size(861, 503);
->>>>>>> Stashed changes
             this.Controls.Add(this.lblUser);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblUsuarioLogado);
