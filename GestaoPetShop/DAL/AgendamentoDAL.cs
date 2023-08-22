@@ -219,7 +219,6 @@ namespace DAL
                 }
             }
         }
-
         private void AlterarInserirAgendamentoServico(Agendamento _agendamento, SqlTransaction _transaction)
         {
 
@@ -272,8 +271,6 @@ namespace DAL
                 }
             }
         }
-
-
         public bool ExisteVinculo(int _idAgendamento, int _idServico)
         {
 
@@ -305,9 +302,6 @@ namespace DAL
             }
             
         }
-
-
-
         private void AlterarExcluirServicoDeAgendamento(Agendamento _agendamento, List<AgendamentoServico> _servicosParaExcluir, SqlTransaction _transaction)
         {
             
@@ -321,7 +315,7 @@ namespace DAL
                 {
                     try
                     {
-                        if (_transaction == null)
+                        if (transaction == null)
                         {
                             cn.Open();
                             transaction = cn.BeginTransaction();
@@ -333,7 +327,7 @@ namespace DAL
                         {
                             cmd.CommandType = System.Data.CommandType.Text;
                             cmd.Parameters.AddWithValue("@IdAgendamento", _agendamento.Id);
-                            cmd.Parameters.AddWithValue("@IdServico", item);
+                            cmd.Parameters.AddWithValue("@IdServico", item.IdServico);
                             cmd.ExecuteNonQuery();
                         }
                         if (_transaction == null)
@@ -347,7 +341,6 @@ namespace DAL
                 }
             }
         }
-
         public void Excluir(int _id, SqlTransaction _transaction = null)
         {
             SqlTransaction transaction = _transaction;
