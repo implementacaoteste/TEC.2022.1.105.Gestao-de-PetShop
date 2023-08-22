@@ -52,11 +52,11 @@ namespace DAL
                     {
                         cmd.ExecuteNonQuery();
 
-                        int idcliente = BuscarIdCliente(_cliente, transaction, _idcliente);
+                        foreach (EmailCliente emailCliente in _cliente.EmailCliente)
+                            new EmailClienteDAL().Inserir(emailCliente, transaction);
 
-                        InserirEmailCliente(_cliente, idcliente, transaction);
-
-                        InserirTelefoneCliente(_cliente, idcliente, transaction);
+                        foreach (TelefoneCliente telefoneCliente in _cliente.TelefoneClientes)
+                            new TelefoneClienteDAL().Inserir(telefoneCliente, transaction);
 
 
                         if (_transaction == null)
@@ -74,93 +74,6 @@ namespace DAL
                 }
             }
         }
-
-        private void InserirTelefoneCliente(Cliente _cliente, int _idcliente, SqlTransaction _transaction)
-        {
-            SqlTransaction transaction = _transaction;
-            List<Cliente> cliente = new List<Cliente>();
-
-            using (SqlConnection cn = new SqlConnection(Conexao.StringDeConexao))
-            {
-                using (SqlCommand cmd = new SqlCommand(@"INSERT INTO TelefoneCliente (IdCliente,Telefone)
-                                                                              VALUES (@IdTelefone,@Telefone)", cn))
-                {
-                    try
-                    {
-                        if (transaction == null)
-                        {
-                            cn.Open();
-                            transaction = cn.BeginTransaction();
-                        }
-
-                        cmd.Transaction = transaction;
-                        cmd.Connection = transaction.Connection;
-
-                        foreach (TelefoneCliente item in _cliente.TelefoneClientes)
-                        {
-                            cmd.Parameters.Clear();
-                            cmd.Parameters.AddWithValue("@IdTelefone", _idcliente);
-                            cmd.Parameters.AddWithValue("@Telefone", item.Telefone);
-
-
-                            cmd.ExecuteNonQuery();
-                        }
-
-                        if (_transaction == null)
-                            transaction.Commit();
-                    }
-                    catch (Exception ex)
-                    {
-                        transaction.Rollback();
-                        throw new Exception("Ocorreu um erro ao tentar inserir um telefone no banco de dados.", ex) { Data = { { "Id", 109 } } };
-                    }
-                }
-            }
-        }
-
-        private void InserirEmailCliente(Cliente _cliente, int _idcliente, SqlTransaction _transaction)
-        {
-            SqlTransaction transaction = _transaction;
-            List<Cliente> cliente = new List<Cliente>();
-
-            using (SqlConnection cn = new SqlConnection(Conexao.StringDeConexao))
-            {
-                using (SqlCommand cmd = new SqlCommand(@"INSERT INTO EmailCliente (IdCliente,Email)
-                                                                                 VALUES (@IdCliente,@Email)", cn))
-                {
-                    try
-                    {
-                        if (transaction == null)
-                        {
-                            cn.Open();
-                            transaction = cn.BeginTransaction();
-                        }
-
-                        cmd.Transaction = transaction;
-                        cmd.Connection = transaction.Connection;
-
-                        foreach (EmailCliente item in _cliente.EmailCliente)
-                        {
-                            cmd.Parameters.Clear();
-                            cmd.Parameters.AddWithValue("@IdCliente", _idcliente);
-                            cmd.Parameters.AddWithValue("@Email", item.Email);
-
-
-                            cmd.ExecuteNonQuery();
-                        }
-
-                        if (_transaction == null)
-                            transaction.Commit();
-                    }
-                    catch (Exception ex)
-                    {
-                        transaction.Rollback();
-                        throw new Exception("Ocorreu um erro ao tentar inserir um e-mail no banco de dados.", ex) { Data = { { "Id", 107 } } };
-                    }
-                }
-            }
-        }
-
         private int BuscarIdCliente(Cliente _cliente, SqlTransaction _transaction, int _idcliente)
         {
             SqlTransaction transaction = _transaction;
@@ -204,13 +117,13 @@ namespace DAL
             }
             return _idcliente;
         }
-
-        public void Alterar(Cliente _cliente)
+        public void Alterar(Cliente _cliente, SqlTransaction _transaction = null)
         {
-
+            SqlTransaction transaction = _transaction;
             SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
             try
             {
+
                 SqlCommand cmd = cn.CreateCommand();
                 cmd.CommandText = @"UPDATE Cliente SET 
                                         Nome = @Nome, 
@@ -242,73 +155,42 @@ namespace DAL
                 cmd.Parameters.AddWithValue("@Foto", _cliente.Foto);
                 cmd.Parameters.AddWithValue("@Ativo", _cliente.Ativo);
 
-                cmd.Connection = cn;
-                cn.Open();
+                if (transaction == null)
+                {
+                    cn.Open();
+                    transaction = cn.BeginTransaction();
+                }
+
+                cmd.Transaction = transaction;
+                cmd.Connection = transaction.Connection;
 
                 cmd.ExecuteNonQuery();
+
+                foreach (EmailCliente emailCliente in _cliente.EmailCliente)
+                {
+                    emailCliente.IdCliente = _cliente.Id;
+                    if (emailCliente.Id == 0)
+                        new EmailClienteDAL().Inserir(emailCliente, transaction);
+                    //else
+                    //    new EmailClienteDAL().Alterar(emailCliente, _transaction);
+                }
+
+                foreach (TelefoneCliente telefoneCliente in _cliente.TelefoneClientes)
+                {
+                    telefoneCliente.IdCliente = _cliente.Id;
+                    if (telefoneCliente.Id == 0)
+                        new TelefoneClienteDAL().Inserir(telefoneCliente, transaction);
+                    //else
+                    //    new TelefoneClienteDAL().Alterar(telefoneCliente, _transaction);
+                }
+
+                if (_transaction == null)
+                    transaction.Commit();
             }
             catch (Exception ex)
             {
+                transaction.Rollback();
                 throw new Exception("Erro ao tentar alterar cliente no banco de dados", ex) { Data = { { "Id", 11 } } };
-            }
-            finally
-            {
-                cn.Close();
-            }
-        }
-        public void AlterarEmailCliente(EmailCliente _emailCliente)
-        {
-            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
-            try
-            {
-                SqlCommand cmd = cn.CreateCommand();
-                cmd.CommandText = @"UPDATE Cliente SET 
-                                        Email = @Email, 
-                                        
-                                    WHERE Id = @Id";
-                cmd.CommandType = System.Data.CommandType.Text;
-
-                cmd.Parameters.AddWithValue("@Id", _emailCliente.Id);
-                cmd.Parameters.AddWithValue("@Email", _emailCliente.Email);
-
-                cmd.Connection = cn;
-                cn.Open();
-
-                cmd.ExecuteNonQuery();
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("Erro ao tentar alterar Email no banco de dados", ex) { Data = { { "Id", 110 } } };
-            }
-            finally
-            {
-                cn.Close();
-            }
-
-        }
-        public void AlterarTelefoneCliente(TelefoneCliente _telefoneCliente)
-        {
-            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
-            try
-            {
-                SqlCommand cmd = cn.CreateCommand();
-                cmd.CommandText = @"UPDATE Cliente SET 
-                                        Telefone = @Telefone, 
-                                        
-                                    WHERE Id = @Id";
-                cmd.CommandType = System.Data.CommandType.Text;
-
-                cmd.Parameters.AddWithValue("@Id", _telefoneCliente.Id);
-                cmd.Parameters.AddWithValue("@Telefone", _telefoneCliente.Telefone);
-
-                cmd.Connection = cn;
-                cn.Open();
-
-                cmd.ExecuteNonQuery();
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("Erro ao tentar alterar telefone no banco de dados", ex) { Data = { { "Id", 111 } } };
             }
             finally
             {
@@ -335,57 +217,6 @@ namespace DAL
             catch (Exception ex)
             {
                 throw new Exception("Ocorreu um erro ao tentar excluir cliente no banco de dados.", ex) { Data = { { "Id", 12 } } };
-            }
-            finally
-            {
-                cn.Close();
-            }
-        }
-        public void ExcluirEmailCliente(int _id)
-        {
-
-            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
-            try
-            {
-                SqlCommand cmd = cn.CreateCommand();
-                cmd.CommandText = @"DELETE FROM EmailCliente WHERE IdCliente = @Id";
-                cmd.CommandType = System.Data.CommandType.Text;
-
-                cmd.Parameters.AddWithValue("@Id", _id);
-
-                cmd.Connection = cn;
-                cn.Open();
-
-                cmd.ExecuteNonQuery();
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("Ocorreu um erro ao tentar excluir emailcliente no banco de dados.", ex) { Data = { { "Id", 115 } } };
-            }
-            finally
-            {
-                cn.Close();
-            }
-        }
-        public void ExcluirTelefoneEmail(int _id)
-        {
-            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
-            try
-            {
-                SqlCommand cmd = cn.CreateCommand();
-                cmd.CommandText = @"DELETE FROM TelefoneCliente WHERE IdCliente = @Id";
-                cmd.CommandType = System.Data.CommandType.Text;
-
-                cmd.Parameters.AddWithValue("@Id", _id);
-
-                cmd.Connection = cn;
-                cn.Open();
-
-                cmd.ExecuteNonQuery();
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("Ocorreu um erro ao tentar excluir telefonecliente no banco de dados.", ex) { Data = { { "Id", 116 } } };
             }
             finally
             {
@@ -427,7 +258,8 @@ namespace DAL
                             cliente.Foto = (byte[])rd["Foto"];
 
                         cliente.Ativo = (bool)rd["Ativo"];
-
+                        cliente.EmailCliente = new EmailClienteDAL().BuscarPorIdCliente(cliente.Id);
+                        cliente.TelefoneClientes = new TelefoneClienteDAL().BuscarPorIdCliente(cliente.Id);
 
                         clienteList.Add(cliente);
                     }
@@ -443,7 +275,6 @@ namespace DAL
                 cn.Close();
             }
         }
-
         public List<Cliente> BuscarPorNome(string _nome)
         {
             List<Cliente> clienteList = new List<Cliente>();
@@ -480,6 +311,8 @@ namespace DAL
 
                         cliente.Ativo = (bool)rd["Ativo"];
 
+                        cliente.EmailCliente = new EmailClienteDAL().BuscarPorIdCliente(cliente.Id);
+                        cliente.TelefoneClientes = new TelefoneClienteDAL().BuscarPorIdCliente(cliente.Id);
 
                         clienteList.Add(cliente);
                     }
@@ -495,81 +328,6 @@ namespace DAL
                 cn.Close();
             }
         }
-        public List<EmailCliente> BuscarEmailCliente(string _emailCliente)
-
-        {
-            List<EmailCliente> emailclienteList = new List<EmailCliente>();
-            EmailCliente emailcliente = new EmailCliente();
-            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
-            try
-            {
-                SqlCommand cmd = new SqlCommand();
-                cmd.Connection = cn;
-                cmd.CommandText = @"SELECT Id, Email FROM Cliente WHERE Email LIKE @Email";
-                cmd.CommandType = System.Data.CommandType.Text;
-                cmd.Parameters.AddWithValue("@Email", "%" + _emailCliente + "%");
-
-                cn.Open();
-                using (SqlDataReader rd = cmd.ExecuteReader())
-                {
-                    while (rd.Read())
-                    {
-                        emailcliente = new EmailCliente();
-                        emailcliente.Id = (int)rd["Id"];
-                        emailcliente.Email = rd["Email"].ToString();
-
-                        emailclienteList.Add(emailcliente);
-                    }
-                }
-                return emailclienteList;
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("Ocorreu um erro ao tentar buscar EmailCliente no banco de dados", ex) { Data = { { "Id", 114 } } };
-            }
-            finally
-            {
-                cn.Close();
-            }
-
-        }
-        public List<TelefoneCliente> BuscarTelefoneCliente(string _telefoneCliente)
-        {
-            List<TelefoneCliente> telefoneclienteList = new List<TelefoneCliente>();
-            TelefoneCliente telefonecliente = new TelefoneCliente();
-            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
-            try
-            {
-                SqlCommand cmd = new SqlCommand();
-                cmd.Connection = cn;
-                cmd.CommandText = @"SELECT Id, Telefone FROM Cliente WHERE Telefone LIKE @Telefone";
-                cmd.CommandType = System.Data.CommandType.Text;
-                cmd.Parameters.AddWithValue("@Telefone", "%" + _telefoneCliente + "%");
-
-                cn.Open();
-                using (SqlDataReader rd = cmd.ExecuteReader())
-                {
-                    while (rd.Read())
-                    {
-                        telefonecliente = new TelefoneCliente();
-                        telefonecliente.Id = (int)rd["Id"];
-                        telefonecliente.Telefone = rd["Telefone"].ToString();
-
-                        telefoneclienteList.Add(telefonecliente);
-                    }
-                }
-                return telefoneclienteList;
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("Ocorreu um erro ao tentar buscar TelefoneCliente no banco de dados", ex) { Data = { { "Id", 115 } } };
-            }
-            finally
-            {
-                cn.Close();
-            }
-        }
-
         public Cliente BuscarPorId(int _id)  // BuscarPorCodigo
         {
             Cliente cliente = new Cliente();
@@ -603,6 +361,8 @@ namespace DAL
                             cliente.Foto = (byte[])rd["Foto"];
 
                         cliente.Ativo = (bool)rd["Ativo"];
+                        cliente.EmailCliente = new EmailClienteDAL().BuscarPorIdCliente(cliente.Id);
+                        cliente.TelefoneClientes = new TelefoneClienteDAL().BuscarPorIdCliente(cliente.Id);
 
                     }
                 }
@@ -651,6 +411,8 @@ namespace DAL
 
                         cliente.Ativo = (bool)rd["Ativo"];
 
+                        cliente.EmailCliente = new EmailClienteDAL().BuscarPorIdCliente(cliente.Id);
+                        cliente.TelefoneClientes = new TelefoneClienteDAL().BuscarPorIdCliente(cliente.Id);
                     }
                 }
                 return cliente;
@@ -664,6 +426,5 @@ namespace DAL
                 cn.Close();
             }
         }
-
     }
 }

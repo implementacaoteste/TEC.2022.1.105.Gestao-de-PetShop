@@ -21,38 +21,38 @@ namespace GestaoPetShop
         {
             try
             {
-                Cliente clientes = new Cliente();
+               
+
+                //List<EmailCliente> emailClientes = new List<EmailCliente>();
+                //EmailCliente emailCliente = new EmailCliente();
+                //List<TelefoneCliente> telefoneClientes = new List<TelefoneCliente>();
+                //TelefoneCliente telefoneCliente = new TelefoneCliente();
+                //int quantidadeemail = emailClienteBindingSource.Count;
+                //int quantidadetelefone = telefoneClientesBindingSource.Count;
                 
-                Cliente cliente = (Cliente)clienteBindingSource.Current;
-
-                List<EmailCliente> emailClientes = new List<EmailCliente>();
-                EmailCliente emailCliente = new EmailCliente();
-                List<TelefoneCliente> telefoneClientes = new List<TelefoneCliente>();
-                TelefoneCliente telefoneCliente = new TelefoneCliente();
-                int quantidadeemail = emailClienteBindingSource.Count;
-                int quantidadetelefone = telefoneClientesBindingSource.Count;
-                
-                for (int x = 0; x < quantidadeemail; x++)
-                {
-                    emailCliente.Email = ((EmailCliente)emailClienteBindingSource.Current).Email;
+                //for (int x = 0; x < quantidadeemail; x++)
+                //{
+                //    emailCliente.Email = ((EmailCliente)emailClienteBindingSource.Current).Email;
 
 
-                    emailClientes.Add(emailCliente);
+                //    emailClientes.Add(emailCliente);
 
-                }
-                cliente.EmailCliente = emailClientes;
+                //}
+                //cliente.EmailCliente = emailClientes;
 
-                for (int x = 0; x < quantidadetelefone; x++)
-                {
-                    telefoneCliente.Telefone = ((TelefoneCliente)telefoneClientesBindingSource.Current).Telefone;
+                //for (int x = 0; x < quantidadetelefone; x++)
+                //{
+                //    telefoneCliente.Telefone = ((TelefoneCliente)telefoneClientesBindingSource.Current).Telefone;
 
 
-                    telefoneClientes.Add(telefoneCliente);
+                //    telefoneClientes.Add(telefoneCliente);
 
-                }
-                cliente.TelefoneClientes = telefoneClientes;
+                //}
+                //cliente.TelefoneClientes = telefoneClientes;
                
                 clienteBindingSource.EndEdit();
+                Cliente cliente = (Cliente)clienteBindingSource.Current;
+                //cliente.EmailCliente = (List<EmailCliente>)emailClienteBindingSource.DataSource;
 
                 if (id == 0)
                     new ClienteBLL().Inserir(cliente);
