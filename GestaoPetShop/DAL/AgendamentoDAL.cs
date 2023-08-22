@@ -157,7 +157,7 @@ namespace DAL
             }
             return _idagendamento;
         }
-        public void Alterar(Agendamento _agendamento, List<int> _idServicoParaExcluir, SqlTransaction _transaction = null) //
+        public void Alterar(Agendamento _agendamento, List<AgendamentoServico> _servicosParaExcluir, SqlTransaction _transaction = null) //
         {
 
             SqlTransaction transaction = _transaction;
@@ -194,9 +194,9 @@ namespace DAL
                     {
                         cmd.ExecuteNonQuery();
 
-                        if (_idServicoParaExcluir.Count > 0)
+                        if (_servicosParaExcluir.Count > 0)
                         {
-                            AlterarExcluirServicoDeAgendamento(_agendamento, _idServicoParaExcluir, transaction);
+                            AlterarExcluirServicoDeAgendamento(_agendamento, _servicosParaExcluir, transaction);
 
                         }
 
@@ -219,7 +219,6 @@ namespace DAL
                 }
             }
         }
-
         private void AlterarInserirAgendamentoServico(Agendamento _agendamento, SqlTransaction _transaction)
         {
 
@@ -227,14 +226,12 @@ namespace DAL
             List<AgendamentoServico> agendamentoservico = new List<AgendamentoServico>();
             // agendamentoservico = _agendamento.AgendamentoServicos;
 
-           
+
 
             using (SqlConnection cn = new SqlConnection(Conexao.StringDeConexao))
             {
-                using (SqlCommand cmd = new SqlCommand(@"UPDATE  AgendamentoServicos SET IdAgendamento = @IdAgendamento,
-                                                                                            IdServico = @IdServico ,
-                                                                                           Quantidade = @Quantidade,
-                                                                                           ValorUnitario = @ValorUnitario WHERE IdAgendamento = @IdAgendamento AND IdServico = @IdServico", cn))
+                using (SqlCommand cmd = new SqlCommand(@"INSERT INTO AgendamentoServicos (IdAgendamento,IdServico, Quantidade, ValorUnitario)
+                                                                                 VALUES (@IdAgendamento,@IdServico, @Quantidade,@ValorUnitario)", cn))
                 {
                     try
                     {
@@ -246,16 +243,21 @@ namespace DAL
 
                         cmd.Transaction = transaction;
                         cmd.Connection = transaction.Connection;
-                        
+
                         foreach (AgendamentoServico item in _agendamento.AgendamentoServicos)
                         {
-                            cmd.Parameters.Clear();
-                            cmd.Parameters.AddWithValue("@IdAgendamento", _agendamento.Id);
-                            cmd.Parameters.AddWithValue("@IdServico", item.IdServico);
-                            cmd.Parameters.AddWithValue("@Quantidade", item.Quantidade);
-                            cmd.Parameters.AddWithValue("@ValorUnitario", item.ValorUnitario);
+                           
+                            bool x = ExisteVinculo(_agendamento.Id, item.IdServico);
+                            if (!x)
+                            {
+                                cmd.Parameters.Clear();
+                                cmd.Parameters.AddWithValue("@IdAgendamento", _agendamento.Id);
+                                cmd.Parameters.AddWithValue("@IdServico", item.IdServico);
+                                cmd.Parameters.AddWithValue("@Quantidade", item.Quantidade);
+                                cmd.Parameters.AddWithValue("@ValorUnitario", item.ValorComDesconto);
 
-                            cmd.ExecuteNonQuery();
+                                cmd.ExecuteNonQuery();
+                            }
                         }
 
                         if (_transaction == null)
@@ -264,23 +266,56 @@ namespace DAL
                     catch (Exception ex)
                     {
                         transaction.Rollback();
-                        throw new Exception("Ocorreu um erro ao tentar excluir todas as permissões do grupo no banco de dados.", ex) { Data = { { "Id", -1 } } };
+                        throw new Exception("Ocorreu um erro ao tentar Alterar Serviços de um agendamnto no banco de dados.", ex) { Data = { { "Id", -1 } } };
                     }
                 }
             }
         }
-
-        private void AlterarExcluirServicoDeAgendamento(Agendamento _agendamento, List<int> _idServicoParaExcluir, SqlTransaction _transaction)
+        public bool ExisteVinculo(int _idAgendamento, int _idServico)
         {
+
+            
+
+            SqlConnection cn = new SqlConnection();
+            SqlCommand cmd = new SqlCommand();
+            try
+            {
+                cn.ConnectionString = Conexao.StringDeConexao;
+                cmd.Connection = cn;
+                cmd.CommandText = @"SELECT 1 AS retorno FROM AgendamentoServicos  WHERE  IdAgendamento = @IdAgendamento AND IdServico = @IdServico";
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.Parameters.AddWithValue("@IdAgendamento", _idAgendamento);
+                cmd.Parameters.AddWithValue("@IdServico", _idServico);
+                cn.Open();
+                using (SqlDataReader rd = cmd.ExecuteReader())
+                {
+                    if (rd.Read())
+                    {
+                        return true;
+                    }
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu um erro ao tentar buscar vínculos de Serviços com Agendamento: " + ex.Message) { Data = { { "Id", 45 } } };
+            }
+            
+        }
+        private void AlterarExcluirServicoDeAgendamento(Agendamento _agendamento, List<AgendamentoServico> _servicosParaExcluir, SqlTransaction _transaction)
+        {
+            
+
+            
             SqlTransaction transaction = _transaction;
 
             using (SqlConnection cn = new SqlConnection(Conexao.StringDeConexao))
             {
-                using (SqlCommand cmd = new SqlCommand("DELETE FROM AgendamentoServico WHERE IdAgendamento = @IdAgendamento AND IdServico = @IdServico", cn))
+                using (SqlCommand cmd = new SqlCommand("DELETE FROM AgendamentoServicos WHERE IdAgendamento = @IdAgendamento AND IdServico = @IdServico", cn))
                 {
                     try
                     {
-                        if (_transaction == null)
+                        if (transaction == null)
                         {
                             cn.Open();
                             transaction = cn.BeginTransaction();
@@ -288,11 +323,11 @@ namespace DAL
                         cmd.Transaction = transaction;
                         cmd.Connection = transaction.Connection;
 
-                        foreach (int item in _idServicoParaExcluir)
+                        foreach (AgendamentoServico item in _servicosParaExcluir)
                         {
                             cmd.CommandType = System.Data.CommandType.Text;
                             cmd.Parameters.AddWithValue("@IdAgendamento", _agendamento.Id);
-                            cmd.Parameters.AddWithValue("@IdServico", item);
+                            cmd.Parameters.AddWithValue("@IdServico", item.IdServico);
                             cmd.ExecuteNonQuery();
                         }
                         if (_transaction == null)
@@ -301,12 +336,11 @@ namespace DAL
                     catch (Exception ex)
                     {
                         transaction.Rollback();
-                        throw new Exception("Ocorreu um erro ao tentar excluir um agendamento no banco de dados.", ex) { Data = { { "Id", 32 } } };
+                        throw new Exception("Ocorreu um erro ao tentar excluir Serviços de um agendamento no banco de dados.", ex) { Data = { { "Id", 32 } } };
                     }
                 }
             }
         }
-
         public void Excluir(int _id, SqlTransaction _transaction = null)
         {
             SqlTransaction transaction = _transaction;
@@ -1178,7 +1212,7 @@ namespace DAL
                         agendamento.Horario = rd["Horario"].ToString();
                         agendamento.IdSituacao = Convert.ToInt32(rd["SituacaoId"]);
                         agendamento.DescricaoSituacao = rd["DescSituacao"].ToString();
-                        agendamento.Total = Convert.ToDecimal (rd["Total"]);
+                        agendamento.Total = Convert.ToDecimal(rd["Total"]);
                         agendamento.AgendamentoServicos = new AgendamentoDAL().BuscarAgendamentoServicosPorIdAgendamento(_idAgendamento);
 
                         //agendamentos.Add(agendamento);
@@ -1208,7 +1242,7 @@ namespace DAL
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
                 cmd.CommandText = @"SELECT AgeSer.idServico, Ser.Descricao, AgeSer.ValorUnitario, AgeSer.Quantidade, Ser.Preco, Ser.Tempo 
-                                    FROM AgendamentoServicos AgeSer INNER JOIN Servico Ser ON AgeSer.IdServico = Ser.Id  WHERE AgeSer.IdAgendamento = 1";
+                                    FROM AgendamentoServicos AgeSer INNER JOIN Servico Ser ON AgeSer.IdServico = Ser.Id  WHERE AgeSer.IdAgendamento = @Id";
 
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@Id", _idAgendamento);
@@ -1226,6 +1260,7 @@ namespace DAL
                         servico.Quantidade = Convert.ToInt32(rd["Quantidade"]);
                         servico.ValorUnitario = Convert.ToDecimal(rd["Preco"]);
                         servico.Tempo = Convert.ToInt32(rd["Tempo"]);
+                        servico.ValorTotal = Convert.ToDecimal(Convert.ToInt32(rd["Quantidade"]) * Convert.ToDecimal(rd["ValorUnitario"]));
 
 
 
@@ -1244,9 +1279,9 @@ namespace DAL
             }
         }
 
-        public void BuscarAgendamentoPorId(int _idservico, int _idagendamento)
+        public void ExcluirServicoDeAgendamento(int _idservico, int _idagendamento)
         {
-           
+
             Agendamento agendamento = new Agendamento();
 
             SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
@@ -1254,14 +1289,14 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"DELETE FROM AgendamentoServico WHERE IdServico = @IdServico AND IdAgendamento = @IdAgendamento ";
+                cmd.CommandText = @"DELETE FROM AgendamentoServicos WHERE IdServico = @IdServico AND IdAgendamento = @IdAgendamento ";
 
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@IdServico", _idservico);
                 cmd.Parameters.AddWithValue("@IdAgendamento", _idagendamento);
                 cn.Open();
 
-               
+
             }
             catch (Exception ex)
             {

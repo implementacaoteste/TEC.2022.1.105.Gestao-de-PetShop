@@ -24,8 +24,10 @@ namespace GestaoPetShop
         int quant = 0;
         bool atualizar = false;
         int id = 0;
-        
-        List<int> idservicoparaexcluir;
+      
+        AgendamentoServico agendamentoServicoExcluir = new AgendamentoServico();
+        List<AgendamentoServico> servicosParaExcluir = new List<AgendamentoServico>();
+
         public FormCadastroAgendamento(int _id = 0)
         {
             InitializeComponent();
@@ -86,14 +88,17 @@ namespace GestaoPetShop
                     nomeClienteTextBox.Text = Convert.ToString(agendamento.NomeCliente);
                     idProfissionalTextBox.Text = Convert.ToString(agendamento.NomeProfissional);
                     nomeProfissionalComboBox.Text = Convert.ToString(agendamento.NomeProfissional);
+
                     totalTextBox.Text = Convert.ToString(agendamento.Total);
+                    
                     ativoCheckBox.Checked = true;
 
                     foreach (AgendamentoServico item in agendamentoServicos)
                     {
+
+                       // decimal x = item.Quantidade * item.ValorComDesconto;
+                        //agendamentoServicosBindingSource1.Add(item.ValorTotal = x );
                         agendamentoServicosBindingSource1.Add(item);
-                       
-                      // (agendamentoServicosBindingSource1.Current).Va  Add(item) = ((AgendamentoServico)agendamentoServicosBindingSource1.Current)item.ValorUnitario;
                       //  ((AgendamentoServico)agendamentoServicosBindingSource1.Current)item.ValorTotal = ((AgendamentoServico)agendamentoServicosBindingSource1.Current)item.Quantidade * ((AgendamentoServico)agendamentoServicosBindingSource1.Current)item.ValorComDesconto;
                     }
                    // agendamentoServicosBindingSource1.AddNew();
@@ -171,17 +176,20 @@ namespace GestaoPetShop
                 Agendamento agendamento = new Agendamento();
                 List<AgendamentoServico> agendamentoServicos = new List<AgendamentoServico>();
                 AgendamentoServico agendamentoServico = new AgendamentoServico();
-                agendamento.Id = Convert.ToInt32(idTextBox1.Text);
+               
+               
                 agendamento.DataAg = Convert.ToDateTime(dataAgDateTimePicker.Text);
                 agendamento.Horario = Convert.ToString(horarioTextBox.Text);
                 agendamento.IdSituacao = Convert.ToInt32(idSituacaoTextBox.Text);
                 agendamento.IdAnimal = Convert.ToInt32(idAnimalTextBox.Text);
                 agendamento.IdProfissional = Convert.ToInt32(idProfissionalTextBox.Text);
+                agendamento.Total = Convert.ToDecimal(totalTextBox.Text);
                 agendamento.Ativo = ativoCheckBox.Checked;
 
                 int quantidadeservicos = agendamentoServicosBindingSource1.Count;
                 for (int x = 0; x < quantidadeservicos; x++)
                 {
+
                     agendamentoServico.IdServico = ((AgendamentoServico)agendamentoServicosBindingSource1.Current).IdServico;
                     agendamentoServico.Quantidade = ((AgendamentoServico)agendamentoServicosBindingSource1.Current).Quantidade;
                     agendamentoServico.Servico = ((AgendamentoServico)agendamentoServicosBindingSource1.Current).Servico;
@@ -191,11 +199,17 @@ namespace GestaoPetShop
 
                     agendamentoServicos.Add(agendamentoServico);
                 }
+               
+               
                 agendamento.AgendamentoServicos = agendamentoServicos;
 
                 if (id != 0)
                 {
-                    new AgendamentoBLL().Alterar(agendamento, idservicoparaexcluir);
+                    //  List<AgendamentoServico> servicosParaExcluir = new List<AgendamentoServico>();
+                    //servicosParaExcluir IdParaExcluir();
+                    agendamento.Id = Convert.ToInt32(idTextBox1.Text);
+
+                    new AgendamentoBLL().Alterar(agendamento,servicosParaExcluir);
                 }
                 else
                 {
@@ -314,8 +328,8 @@ namespace GestaoPetShop
         {
             try
             {
-               /// idservicoparaexcluir = new List<int>();
-               // int idagendamento = Convert.ToInt32(idTextBox1.Text);
+                
+                int idagendamento = Convert.ToInt32(idTextBox1.Text);
 
                 int idservico = ((AgendamentoServico)agendamentoServicosBindingSource1.Current).IdServico;
                 if (idservico == 0)
@@ -326,15 +340,22 @@ namespace GestaoPetShop
                 if (id != 0)
                 {
 
-                    idservicoparaexcluir.Add(idservico);
+                    //  new AgendamentoBLL().ExcluirServicoDeAgendamento(idservico, idagendamento);
+                   
+                    agendamentoServicoExcluir = (AgendamentoServico)agendamentoServicosBindingSource1.Current;
 
-                   // new AgendamentoBLL().ExcluirServicoDeAgendamento(idservico, idagendamento);
-
-
+                    servicosParaExcluir.Add(agendamentoServicoExcluir);
+                   
 
                 }
                 subtotal = ((AgendamentoServico)agendamentoServicosBindingSource1.Current).ValorTotal;
+               // decimal totalagendamento = Convert.ToInt32(totalTextBox.Text);
+               
                 valortotalagendamento = valortotalagendamento - subtotal;
+                if (valortotalagendamento < 0)
+                {
+                    valortotalagendamento = 0;
+                }
                 totalTextBox.Text = Convert.ToString(valortotalagendamento);
                 agendamentoServicosBindingSource1.Remove(agendamentoServicosBindingSource1.Current);
 
