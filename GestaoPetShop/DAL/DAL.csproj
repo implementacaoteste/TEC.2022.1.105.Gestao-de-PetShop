@@ -224,6 +224,7 @@
     <Compile Include="AnimalDAL.cs" />
     <Compile Include="ClienteDAL.cs" />
     <Compile Include="Conexao.cs" />
+    <Compile Include="EmailClienteDAL.cs" />
     <Compile Include="FuncaoDAL.cs" />
     <Compile Include="GrupoUsuarioDAL.cs" />
     <Compile Include="PermissaoDAL.cs" />
@@ -232,6 +233,7 @@
     <Compile Include="RacaDAL.cs" />
     <Compile Include="ServicoDAL.cs" />
     <Compile Include="SituacaoDAL.cs" />
+    <Compile Include="TelefoneClienteDAL.cs" />
     <Compile Include="UsuarioDAL.cs" />
   </ItemGroup>
   <ItemGroup>
