@@ -46,10 +46,10 @@
             // 
             // buttonBuscarAnimalCliente
             // 
-            this.buttonBuscarAnimalCliente.Location = new System.Drawing.Point(322, 54);
-            this.buttonBuscarAnimalCliente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonBuscarAnimalCliente.Location = new System.Drawing.Point(429, 66);
+            this.buttonBuscarAnimalCliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonBuscarAnimalCliente.Name = "buttonBuscarAnimalCliente";
-            this.buttonBuscarAnimalCliente.Size = new System.Drawing.Size(56, 19);
+            this.buttonBuscarAnimalCliente.Size = new System.Drawing.Size(75, 23);
             this.buttonBuscarAnimalCliente.TabIndex = 2;
             this.buttonBuscarAnimalCliente.Text = "Buscar";
             this.buttonBuscarAnimalCliente.UseVisualStyleBackColor = true;
@@ -57,10 +57,10 @@
             // 
             // buttonSelecionarAnimalCliente
             // 
-            this.buttonSelecionarAnimalCliente.Location = new System.Drawing.Point(382, 54);
-            this.buttonSelecionarAnimalCliente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonSelecionarAnimalCliente.Location = new System.Drawing.Point(509, 66);
+            this.buttonSelecionarAnimalCliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonSelecionarAnimalCliente.Name = "buttonSelecionarAnimalCliente";
-            this.buttonSelecionarAnimalCliente.Size = new System.Drawing.Size(71, 19);
+            this.buttonSelecionarAnimalCliente.Size = new System.Drawing.Size(95, 23);
             this.buttonSelecionarAnimalCliente.TabIndex = 3;
             this.buttonSelecionarAnimalCliente.Text = "Selecionar";
             this.buttonSelecionarAnimalCliente.UseVisualStyleBackColor = true;
@@ -68,10 +68,10 @@
             // 
             // textBoxPesquisaAnimalCliente
             // 
-            this.textBoxPesquisaAnimalCliente.Location = new System.Drawing.Point(113, 54);
-            this.textBoxPesquisaAnimalCliente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxPesquisaAnimalCliente.Location = new System.Drawing.Point(151, 66);
+            this.textBoxPesquisaAnimalCliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxPesquisaAnimalCliente.Name = "textBoxPesquisaAnimalCliente";
-            this.textBoxPesquisaAnimalCliente.Size = new System.Drawing.Size(205, 20);
+            this.textBoxPesquisaAnimalCliente.Size = new System.Drawing.Size(272, 22);
             this.textBoxPesquisaAnimalCliente.TabIndex = 4;
             // 
             // comboBoxEscolherTipoPequisaAnimalCliente
@@ -82,10 +82,10 @@
             "Id Cliente",
             "Nome Animal",
             "Nome Cliente"});
-            this.comboBoxEscolherTipoPequisaAnimalCliente.Location = new System.Drawing.Point(9, 54);
-            this.comboBoxEscolherTipoPequisaAnimalCliente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxEscolherTipoPequisaAnimalCliente.Location = new System.Drawing.Point(12, 66);
+            this.comboBoxEscolherTipoPequisaAnimalCliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxEscolherTipoPequisaAnimalCliente.Name = "comboBoxEscolherTipoPequisaAnimalCliente";
-            this.comboBoxEscolherTipoPequisaAnimalCliente.Size = new System.Drawing.Size(92, 21);
+            this.comboBoxEscolherTipoPequisaAnimalCliente.Size = new System.Drawing.Size(121, 24);
             this.comboBoxEscolherTipoPequisaAnimalCliente.TabIndex = 5;
             // 
             // agendamentoBindingSource
@@ -105,14 +105,15 @@
             this.dataGridViewTextBoxColumn10,
             this.dataGridViewTextBoxColumn11});
             this.agendamentoDataGridView.DataSource = this.agendamentoBindingSource;
-            this.agendamentoDataGridView.Location = new System.Drawing.Point(7, 92);
-            this.agendamentoDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.agendamentoDataGridView.Location = new System.Drawing.Point(9, 113);
+            this.agendamentoDataGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.agendamentoDataGridView.Name = "agendamentoDataGridView";
             this.agendamentoDataGridView.ReadOnly = true;
             this.agendamentoDataGridView.RowHeadersVisible = false;
             this.agendamentoDataGridView.RowHeadersWidth = 51;
             this.agendamentoDataGridView.RowTemplate.Height = 24;
-            this.agendamentoDataGridView.Size = new System.Drawing.Size(466, 179);
+            this.agendamentoDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.agendamentoDataGridView.Size = new System.Drawing.Size(621, 220);
             this.agendamentoDataGridView.TabIndex = 5;
             // 
             // dataGridViewTextBoxColumn2
@@ -153,25 +154,26 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(382, 298);
+            this.button1.Location = new System.Drawing.Point(509, 367);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(100, 28);
             this.button1.TabIndex = 6;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // FormPesquisarSelecionarAnimalCliente
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(484, 338);
+            this.ClientSize = new System.Drawing.Size(645, 416);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.agendamentoDataGridView);
             this.Controls.Add(this.comboBoxEscolherTipoPequisaAnimalCliente);
             this.Controls.Add(this.textBoxPesquisaAnimalCliente);
             this.Controls.Add(this.buttonSelecionarAnimalCliente);
             this.Controls.Add(this.buttonBuscarAnimalCliente);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormPesquisarSelecionarAnimalCliente";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
