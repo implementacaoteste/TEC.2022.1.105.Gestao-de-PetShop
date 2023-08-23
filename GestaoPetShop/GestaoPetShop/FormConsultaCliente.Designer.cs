@@ -45,7 +45,6 @@
             this.clienteTableAdapter = new GestaoPetShop.petshopDataSetTableAdapters.ClienteTableAdapter();
             this.tableAdapterManager = new GestaoPetShop.petshopDataSetTableAdapters.TableAdapterManager();
             this.clienteDataGridView = new System.Windows.Forms.DataGridView();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -58,6 +57,7 @@
             this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.petshopDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource1)).BeginInit();
@@ -79,6 +79,7 @@
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(12, 52);
             this.label2.Name = "label2";
@@ -88,6 +89,7 @@
             // 
             // textBoxBuscar
             // 
+            this.textBoxBuscar.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textBoxBuscar.Location = new System.Drawing.Point(163, 72);
             this.textBoxBuscar.Name = "textBoxBuscar";
             this.textBoxBuscar.Size = new System.Drawing.Size(349, 22);
@@ -95,6 +97,7 @@
             // 
             // buttonBuscar
             // 
+            this.buttonBuscar.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.buttonBuscar.Location = new System.Drawing.Point(518, 71);
             this.buttonBuscar.Name = "buttonBuscar";
             this.buttonBuscar.Size = new System.Drawing.Size(75, 23);
@@ -105,6 +108,7 @@
             // 
             // buttonSelecionar
             // 
+            this.buttonSelecionar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonSelecionar.Location = new System.Drawing.Point(664, 438);
             this.buttonSelecionar.Name = "buttonSelecionar";
             this.buttonSelecionar.Size = new System.Drawing.Size(91, 23);
@@ -115,6 +119,7 @@
             // 
             // buttonCancelar
             // 
+            this.buttonCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.buttonCancelar.Location = new System.Drawing.Point(761, 438);
             this.buttonCancelar.Name = "buttonCancelar";
@@ -125,6 +130,7 @@
             // 
             // buttonAlterar
             // 
+            this.buttonAlterar.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.buttonAlterar.Location = new System.Drawing.Point(599, 71);
             this.buttonAlterar.Name = "buttonAlterar";
             this.buttonAlterar.Size = new System.Drawing.Size(75, 23);
@@ -135,6 +141,7 @@
             // 
             // buttonInserir
             // 
+            this.buttonInserir.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.buttonInserir.Location = new System.Drawing.Point(680, 71);
             this.buttonInserir.Name = "buttonInserir";
             this.buttonInserir.Size = new System.Drawing.Size(75, 23);
@@ -145,6 +152,7 @@
             // 
             // buttonExcluir
             // 
+            this.buttonExcluir.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.buttonExcluir.Location = new System.Drawing.Point(761, 71);
             this.buttonExcluir.Name = "buttonExcluir";
             this.buttonExcluir.Size = new System.Drawing.Size(75, 23);
@@ -155,6 +163,7 @@
             // 
             // comboBoxBuscarPor
             // 
+            this.comboBoxBuscarPor.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.comboBoxBuscarPor.FormattingEnabled = true;
             this.comboBoxBuscarPor.Items.AddRange(new object[] {
             "Id",
@@ -210,6 +219,9 @@
             this.clienteDataGridView.AllowUserToAddRows = false;
             this.clienteDataGridView.AllowUserToDeleteRows = false;
             this.clienteDataGridView.AllowUserToOrderColumns = true;
+            this.clienteDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.clienteDataGridView.AutoGenerateColumns = false;
             this.clienteDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.clienteDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -232,22 +244,8 @@
             this.clienteDataGridView.RowHeadersWidth = 51;
             this.clienteDataGridView.RowTemplate.Height = 24;
             this.clienteDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.clienteDataGridView.Size = new System.Drawing.Size(848, 269);
+            this.clienteDataGridView.Size = new System.Drawing.Size(828, 269);
             this.clienteDataGridView.TabIndex = 10;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.ErrorImage = null;
-            this.pictureBox3.Image = global::GestaoPetShop.Properties.Resources.bicho_de_estimacao;
-            this.pictureBox3.InitialImage = null;
-            this.pictureBox3.Location = new System.Drawing.Point(14, 5);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(35, 39);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 21;
-            this.pictureBox3.TabStop = false;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -356,6 +354,20 @@
             this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
             this.dataGridViewCheckBoxColumn1.ReadOnly = true;
             this.dataGridViewCheckBoxColumn1.Width = 125;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.ErrorImage = null;
+            this.pictureBox3.Image = global::GestaoPetShop.Properties.Resources.bicho_de_estimacao;
+            this.pictureBox3.InitialImage = null;
+            this.pictureBox3.Location = new System.Drawing.Point(14, 5);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(35, 39);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 21;
+            this.pictureBox3.TabStop = false;
             // 
             // FormConsultaCliente
             // 

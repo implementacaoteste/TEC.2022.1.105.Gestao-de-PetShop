@@ -138,5 +138,41 @@ namespace DAL
                 cn.Close();
             }
         }
+        public List<TelefoneCliente> BuscarTelefoneCliente(string _telefoneCliente)
+        {
+            List<TelefoneCliente> telefoneclienteList = new List<TelefoneCliente>();
+            TelefoneCliente telefonecliente = new TelefoneCliente();
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = cn;
+                cmd.CommandText = @"SELECT Id,Telefone FROM TelefoneCliente WHERE Telefone LIKE @Telefone";
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.Parameters.AddWithValue("@Telefone", "%" + _telefoneCliente + "%");
+
+                cn.Open();
+                using (SqlDataReader rd = cmd.ExecuteReader())
+                {
+                    while (rd.Read())
+                    {
+                        telefonecliente = new TelefoneCliente();
+                        telefonecliente.Id = (int)rd["Id"];
+                        telefonecliente.Telefone = rd["Telefone"].ToString();
+
+                       telefoneclienteList.Add(telefonecliente);
+                    }
+                }
+                return telefoneclienteList;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu um erro ao tentar buscar telefone Cliente no banco de dados", ex) { Data = { { "Id", 1 } } };
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
     }
 }
