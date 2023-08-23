@@ -95,10 +95,10 @@ namespace BLL
             return agendamentoDAL.BuscarSituacaoPorNome(_descricaoSituacao);
         }
 
-        public Agendamento BuscarAgendamentoPorId(int _idAgendamento)
+        public Agendamento BuscarAgendamentoPorId(int _idAgendamento, int _opc)
         {
             AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
-            return agendamentoDAL.BuscarAgendamentoPorId(_idAgendamento);
+            return agendamentoDAL.BuscarAgendamentoPorId(_idAgendamento, _opc);
         }
 
 

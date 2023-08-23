@@ -23,7 +23,8 @@ namespace GestaoPetShop
         decimal valortotalagendamento = 0;
         int quant = 0;
         bool atualizar = false;
-        int id = 0;
+        int id = 0; // serve para selecionar se é alterar Agenamento ou Cadastrar
+        int opc = 0; //apenas para selecionar a opção correta de pequeisa em AgendamentoDAL
 
         AgendamentoServico agendamentoServicoExcluir = new AgendamentoServico();
         List<AgendamentoServico> servicosParaExcluir = new List<AgendamentoServico>();
@@ -43,7 +44,8 @@ namespace GestaoPetShop
                 if (id == 0)
                     agendamentoBindingSource.AddNew();
                 else
-                    agendamentoBindingSource.DataSource = new AgendamentoBLL().BuscarAgendamentoPorId(id);
+                    
+                    agendamentoBindingSource.DataSource = new AgendamentoBLL().BuscarAgendamentoPorId(id, opc);
                
                 List<AgendamentoServico> listViewServico = new List<AgendamentoServico>();
 
@@ -79,10 +81,10 @@ namespace GestaoPetShop
                 if (id != 0)
                 {
                     Agendamento agendamento = new Agendamento();
-                    agendamento = new AgendamentoBLL().BuscarAgendamentoPorId(id);
+                   
+                    agendamento = new AgendamentoBLL().BuscarAgendamentoPorId(id,opc);
                     List<AgendamentoServico> agendamentoServicos = new List<AgendamentoServico>();
                     agendamentoServicos = agendamento.AgendamentoServicos;
-
                     idTextBox1.Text = Convert.ToString(agendamento.Id);
                     dataAgDateTimePicker.Value = agendamento.DataAg;
                     horarioTextBox.Text = Convert.ToString(agendamento.Horario);
