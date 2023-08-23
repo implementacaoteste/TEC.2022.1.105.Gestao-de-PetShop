@@ -40,7 +40,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu um erro ao tentar buscar EmailCliente no banco de dados", ex) { Data = { { "Id", 114 } } };
+                throw new Exception("Ocorreu um erro ao tentar buscar E-mail Cliente no banco de dados", ex) { Data = { { "Id", 114 } } };
             }
             finally
             {
@@ -134,7 +134,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu um erro ao tentar excluir emailcliente no banco de dados.", ex) { Data = { { "Id", 115 } } };
+                throw new Exception("Ocorreu um erro ao tentar excluir e-mail cliente no banco de dados.", ex) { Data = { { "Id", 115 } } };
             }
             finally
             {

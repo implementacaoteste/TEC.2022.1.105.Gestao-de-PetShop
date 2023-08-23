@@ -130,6 +130,57 @@ namespace GestaoPetShop
 
         }
 
-       
+        private void emailClienteDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void buttonExcluirEmail_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+                if (clienteBindingSource.Count <= 0)
+                {
+                    MessageBox.Show("Não existe registro para ser excluído");
+                    return;
+                }
+
+                if (MessageBox.Show("Deseja realmente excluir este registro?", "Atenção", MessageBoxButtons.YesNo) == DialogResult.No)
+                    return;
+
+                int id = ((EmailCliente)emailClienteBindingSource.Current).Id;
+                new EmailClienteBLL().Excluir(id);
+                emailClienteBindingSource.RemoveCurrent();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void buttonExcluirTelefone_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+                if (clienteBindingSource.Count <= 0)
+                {
+                    MessageBox.Show("Não existe registro para ser excluído");
+                    return;
+                }
+
+                if (MessageBox.Show("Deseja realmente excluir este registro?", "Atenção", MessageBoxButtons.YesNo) == DialogResult.No)
+                    return;
+
+                int id = ((TelefoneCliente)telefoneClientesBindingSource.Current).Id;
+                new TelefoneClienteBLL().Excluir(id);
+                telefoneClientesBindingSource.RemoveCurrent();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }

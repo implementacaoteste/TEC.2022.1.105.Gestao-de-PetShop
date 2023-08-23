@@ -66,6 +66,8 @@
             this.emailClienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.emailClienteDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.buttonExcluirEmail = new System.Windows.Forms.Button();
+            this.buttonExcluirTelefone = new System.Windows.Forms.Button();
             nomeLabel = new System.Windows.Forms.Label();
             cPFLabel = new System.Windows.Forms.Label();
             rGLabel = new System.Windows.Forms.Label();
@@ -358,7 +360,7 @@
             this.telefoneClientesDataGridView.RowHeadersWidth = 51;
             this.telefoneClientesDataGridView.RowTemplate.Height = 24;
             this.telefoneClientesDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.telefoneClientesDataGridView.Size = new System.Drawing.Size(257, 124);
+            this.telefoneClientesDataGridView.Size = new System.Drawing.Size(323, 124);
             this.telefoneClientesDataGridView.TabIndex = 27;
             // 
             // dataGridViewTextBoxColumn4
@@ -375,7 +377,7 @@
             this.textBoxEmail.Location = new System.Drawing.Point(12, 276);
             this.textBoxEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxEmail.Name = "textBoxEmail";
-            this.textBoxEmail.Size = new System.Drawing.Size(257, 22);
+            this.textBoxEmail.Size = new System.Drawing.Size(208, 22);
             this.textBoxEmail.TabIndex = 28;
             // 
             // textBoxTelefone
@@ -388,7 +390,7 @@
             // 
             // buttonInserirEmail
             // 
-            this.buttonInserirEmail.Location = new System.Drawing.Point(270, 274);
+            this.buttonInserirEmail.Location = new System.Drawing.Point(223, 276);
             this.buttonInserirEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonInserirEmail.Name = "buttonInserirEmail";
             this.buttonInserirEmail.Size = new System.Drawing.Size(63, 23);
@@ -402,7 +404,7 @@
             this.buttonInserirTelefone.Location = new System.Drawing.Point(623, 274);
             this.buttonInserirTelefone.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonInserirTelefone.Name = "buttonInserirTelefone";
-            this.buttonInserirTelefone.Size = new System.Drawing.Size(75, 23);
+            this.buttonInserirTelefone.Size = new System.Drawing.Size(67, 23);
             this.buttonInserirTelefone.TabIndex = 31;
             this.buttonInserirTelefone.Text = "Inserir";
             this.buttonInserirTelefone.UseVisualStyleBackColor = true;
@@ -428,8 +430,9 @@
             this.emailClienteDataGridView.ReadOnly = true;
             this.emailClienteDataGridView.RowHeadersWidth = 51;
             this.emailClienteDataGridView.RowTemplate.Height = 24;
-            this.emailClienteDataGridView.Size = new System.Drawing.Size(321, 124);
+            this.emailClienteDataGridView.Size = new System.Drawing.Size(336, 124);
             this.emailClienteDataGridView.TabIndex = 31;
+            this.emailClienteDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.emailClienteDataGridView_CellContentClick);
             // 
             // dataGridViewTextBoxColumn3
             // 
@@ -440,12 +443,34 @@
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             this.dataGridViewTextBoxColumn3.ReadOnly = true;
             // 
+            // buttonExcluirEmail
+            // 
+            this.buttonExcluirEmail.Location = new System.Drawing.Point(288, 276);
+            this.buttonExcluirEmail.Name = "buttonExcluirEmail";
+            this.buttonExcluirEmail.Size = new System.Drawing.Size(60, 23);
+            this.buttonExcluirEmail.TabIndex = 32;
+            this.buttonExcluirEmail.Text = "Excluir";
+            this.buttonExcluirEmail.UseVisualStyleBackColor = true;
+            this.buttonExcluirEmail.Click += new System.EventHandler(this.buttonExcluirEmail_Click);
+            // 
+            // buttonExcluirTelefone
+            // 
+            this.buttonExcluirTelefone.Location = new System.Drawing.Point(696, 274);
+            this.buttonExcluirTelefone.Name = "buttonExcluirTelefone";
+            this.buttonExcluirTelefone.Size = new System.Drawing.Size(75, 23);
+            this.buttonExcluirTelefone.TabIndex = 33;
+            this.buttonExcluirTelefone.Text = "Excluir";
+            this.buttonExcluirTelefone.UseVisualStyleBackColor = true;
+            this.buttonExcluirTelefone.Click += new System.EventHandler(this.buttonExcluirTelefone_Click);
+            // 
             // FormCadastroCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::GestaoPetShop.Properties.Resources.papel_de_parede_2;
             this.ClientSize = new System.Drawing.Size(789, 602);
+            this.Controls.Add(this.buttonExcluirTelefone);
+            this.Controls.Add(this.buttonExcluirEmail);
             this.Controls.Add(this.emailClienteDataGridView);
             this.Controls.Add(this.buttonInserirTelefone);
             this.Controls.Add(this.buttonInserirEmail);
@@ -528,5 +553,7 @@
         private System.Windows.Forms.BindingSource emailClienteBindingSource;
         private System.Windows.Forms.DataGridView emailClienteDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.Button buttonExcluirEmail;
+        private System.Windows.Forms.Button buttonExcluirTelefone;
     }
 }
