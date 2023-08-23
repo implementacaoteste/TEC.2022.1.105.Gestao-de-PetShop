@@ -25,7 +25,7 @@ namespace GestaoPetShop
         {
             try
             {
-                
+
                 animalBindingSource.EndEdit();
                 Animal animal = (Animal)animalBindingSource.Current;
 

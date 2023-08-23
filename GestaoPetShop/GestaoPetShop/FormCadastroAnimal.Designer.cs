@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.animalBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -40,7 +41,6 @@
             this.buttonCancelar = new System.Windows.Forms.Button();
             this.buttonSalvar = new System.Windows.Forms.Button();
             this.checkBoxAtivo = new System.Windows.Forms.CheckBox();
-            this.animalBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.labelNomeDoAnimal = new System.Windows.Forms.Label();
             this.labelSexo = new System.Windows.Forms.Label();
             this.labelAgressivo = new System.Windows.Forms.Label();
@@ -71,6 +71,10 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(190, 22);
             this.textBox1.TabIndex = 12;
+            // 
+            // animalBindingSource
+            // 
+            this.animalBindingSource.DataSource = typeof(Models.Animal);
             // 
             // textBox2
             // 
@@ -150,10 +154,6 @@
             this.checkBoxAtivo.TabIndex = 22;
             this.checkBoxAtivo.Text = "&Ativo";
             this.checkBoxAtivo.UseVisualStyleBackColor = true;
-            // 
-            // animalBindingSource
-            // 
-            this.animalBindingSource.DataSource = typeof(Models.Animal);
             // 
             // labelNomeDoAnimal
             // 

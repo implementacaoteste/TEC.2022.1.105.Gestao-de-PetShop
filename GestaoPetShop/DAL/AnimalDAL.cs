@@ -19,7 +19,7 @@ namespace DAL
             {
                 SqlCommand cmd = cn.CreateCommand();
                 cmd.CommandText = @"INSERT INTO Animal(Id, IdCliente, Nome, Sexo, Agressivo, Cor, Idade, Alergia, DataNascimento, Ativo) 
-                                               VALUES (@Id, @IdCliente, @Nome, @Sexo, @Agresivo, @Cor, @Idade, @Alergia, @DataNascimento, @Ativo)";
+                                               VALUES (@Id, @IdCliente, @Nome, @Sexo, @Agressivo, @Cor, @Idade, @Alergia, @DataNascimento, @Ativo)";
                 cmd.CommandType = System.Data.CommandType.Text;
 
                 cmd.Parameters.AddWithValue("@Id", _animal.Id);
@@ -56,7 +56,7 @@ namespace DAL
             {
                 SqlCommand cmd = cn.CreateCommand();
                 cmd.CommandText = @"INSERT INTO Animal(Id, IdCliente, Nome, Sexo, Agressivo, Cor, Idade, Alergia, DataNascimento, Ativo) 
-                                               VALUES (@Id, @IdCliente, @Nome, @Sexo, @Agresivo, @Cor, @Idade, @Alergia, @DataNascimento, @Ativo)";
+                                               VALUES (@Id, @IdCliente, @Nome, @Sexo, @Agressivo, @Cor, @Idade, @Alergia, @DataNascimento, @Ativo)";
 
                 cmd.CommandType = System.Data.CommandType.Text;
 
