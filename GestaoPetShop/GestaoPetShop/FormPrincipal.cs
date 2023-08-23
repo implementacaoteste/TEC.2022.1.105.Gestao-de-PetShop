@@ -96,7 +96,7 @@ namespace GestaoPetShop
 
         private void animalToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            using (FormCadastroAnimal frm = new FormCadastroAnimal())
+            using (FormConsultaAnimal frm = new FormConsultaAnimal())
             {
                 frm.ShowDialog();
             }

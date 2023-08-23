@@ -118,7 +118,7 @@
             this.dataGridViewTextBoxColumn10,
             this.dataGridViewCheckBoxColumn1});
             this.animalDataGridView.DataSource = this.animalBindingSource;
-            this.animalDataGridView.Location = new System.Drawing.Point(8, 108);
+            this.animalDataGridView.Location = new System.Drawing.Point(8, 110);
             this.animalDataGridView.Name = "animalDataGridView";
             this.animalDataGridView.RowHeadersWidth = 51;
             this.animalDataGridView.RowTemplate.Height = 24;
@@ -243,6 +243,7 @@
             this.buttonIserir.TabIndex = 7;
             this.buttonIserir.Text = "&Inserir";
             this.buttonIserir.UseVisualStyleBackColor = true;
+            this.buttonIserir.Click += new System.EventHandler(this.buttonIserir_Click);
             // 
             // buttonExcluir
             // 

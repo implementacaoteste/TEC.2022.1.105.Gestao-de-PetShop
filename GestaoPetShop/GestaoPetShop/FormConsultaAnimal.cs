@@ -14,9 +14,11 @@ namespace GestaoPetShop
 {
     public partial class FormConsultaAnimal : Form
     {
+        int id;
         public FormConsultaAnimal()
         {
             InitializeComponent();
+            id = id;
         }
 
         private void animalBindingNavigatorSaveItem_Click(object sender, EventArgs e)
@@ -30,7 +32,18 @@ namespace GestaoPetShop
         private void FormConsultaAnimal_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'petshopDataSet.Animal' table. You can move, or remove it, as needed.
-            this.animalTableAdapter.Fill(this.petshopDataSet.Animal);
+            //   this.animalTableAdapter.Fill(this.petshopDataSet.Animal);
+            try
+            {
+                if (id == 0)
+                    animalBindingSource.AddNew();
+                else
+                    animalBindingSource.DataSource = new AnimalBLL().BuscarPorId(id);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
 
         }
 
@@ -57,5 +70,20 @@ namespace GestaoPetShop
             }
         }
 
+        private void buttonIserir_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (FormCadastroAnimal frm = new FormCadastroAnimal())
+                {
+                    frm.ShowDialog();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        
     }
 }
