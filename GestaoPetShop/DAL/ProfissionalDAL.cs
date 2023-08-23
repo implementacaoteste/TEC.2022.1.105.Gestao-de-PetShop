@@ -7,6 +7,7 @@ namespace DAL
 {
     public class ProfissionalDAL
     {
+        private int _idprofissional = 0;
         public void Alterar(Profissional _profissional)
         {
             SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
@@ -156,7 +157,65 @@ namespace DAL
                     cn.Close();
                 }
             }
-        
+
+        public List<Profissional> BuscarPorNome(string _nome)
+        {
+            List<Profissional> profissionalList = new List<Profissional>();
+            Profissional profissional = new Profissional();
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = cn;
+                cmd.CommandText = @"SELECT Id,IdFuncao, Nome, CPF, Logradouro, Numero, Bairro, Cidade, UF, Pais, CEP, DataNascimento,Foto,Ativo FROM Profissional WHERE Nome LIKE @Nome";
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.Parameters.AddWithValue("@Nome", "%" + _nome + "%");
+
+                cn.Open();
+                using (SqlDataReader rd = cmd.ExecuteReader())
+                {
+                    while (rd.Read())
+                    {
+                        profissional = new Profissional();
+                        profissional.Id = (int)rd["Id"];
+                        profissional.IdFuncao = (int)rd["IdFuncao"];
+                        profissional.Nome = rd["Nome"].ToString();
+                        profissional.CPF = rd["CPF"].ToString();
+                        profissional.Logradouro = rd["Logradouro"].ToString();
+                        profissional.Numero = rd["Numero"].ToString();
+                        profissional.Bairro = rd["Bairro"].ToString();
+                        profissional.Cidade = rd["Cidade"].ToString();
+                        profissional.UF = rd["UF"].ToString();
+                        profissional.Pais = rd["Pais"].ToString();
+                        profissional.CEP = rd["CEP"].ToString();
+                        profissional.DataNascimento = (DateTime)rd["DataNascimento"];
+
+                        if (!String.IsNullOrEmpty(rd["Foto"].ToString()))
+                            profissional.Foto = (byte[])rd["Foto"];
+
+                        profissional.Ativo = (bool)rd["Ativo"];
+
+                        profissional.EmailProfissional = new EmailProfissionalDAL().BuscarPorIdProfissional(profissional.Id);
+                        profissional.TelefoneProfissional = new TelefoneProfissionalDAL().BuscarPorIdProfissional(profissional.Id);
+
+                        profissionalList.Add(profissional);
+                    }
+                }
+                return profissionalList;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu um erro ao tentar buscar profissional por nome no banco de dados", ex) { Data = { { "Id", 54 } } };
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
+
+
+
+
     }
 }
 
