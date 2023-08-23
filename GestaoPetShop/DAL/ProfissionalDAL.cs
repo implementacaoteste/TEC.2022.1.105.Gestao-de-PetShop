@@ -180,23 +180,23 @@ namespace DAL
                         profissional.Id = (int)rd["Id"];
                         profissional.IdFuncao = (int)rd["IdFuncao"];
                         profissional.Nome = rd["Nome"].ToString();
-                        profissional.CPF = rd["CPF"].ToString();
-                        profissional.Logradouro = rd["Logradouro"].ToString();
-                        profissional.Numero = rd["Numero"].ToString();
-                        profissional.Bairro = rd["Bairro"].ToString();
-                        profissional.Cidade = rd["Cidade"].ToString();
-                        profissional.UF = rd["UF"].ToString();
-                        profissional.Pais = rd["Pais"].ToString();
-                        profissional.CEP = rd["CEP"].ToString();
-                        profissional.DataNascimento = (DateTime)rd["DataNascimento"];
+                        //profissional.CPF = rd["CPF"].ToString();
+                        //profissional.Logradouro = rd["Logradouro"].ToString();
+                        //profissional.Numero = rd["Numero"].ToString();
+                        //profissional.Bairro = rd["Bairro"].ToString();
+                        //profissional.Cidade = rd["Cidade"].ToString();
+                        //profissional.UF = rd["UF"].ToString();
+                        //profissional.Pais = rd["Pais"].ToString();
+                        //profissional.CEP = rd["CEP"].ToString();
+                        //profissional.DataNascimento = (DateTime)rd["DataNascimento"];
 
-                        if (!String.IsNullOrEmpty(rd["Foto"].ToString()))
-                            profissional.Foto = (byte[])rd["Foto"];
+                        //if (!String.IsNullOrEmpty(rd["Foto"].ToString()))
+                        //    profissional.Foto = (byte[])rd["Foto"];
 
-                        profissional.Ativo = (bool)rd["Ativo"];
+                        //profissional.Ativo = (bool)rd["Ativo"];
 
-                        profissional.EmailProfissional = new EmailProfissionalDAL().BuscarPorIdProfissional(profissional.Id);
-                        profissional.TelefoneProfissional = new TelefoneProfissionalDAL().BuscarPorIdProfissional(profissional.Id);
+                        //profissional.EmailProfissional = new EmailProfissionalDAL().BuscarPorIdProfissional(profissional.Id);
+                        //profissional.TelefoneProfissional = new TelefoneProfissionalDAL().BuscarPorIdProfissional(profissional.Id);
 
                         profissionalList.Add(profissional);
                     }

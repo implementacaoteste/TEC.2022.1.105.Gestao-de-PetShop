@@ -95,10 +95,10 @@ namespace BLL
             return agendamentoDAL.BuscarSituacaoPorNome(_descricaoSituacao);
         }
 
-        public Agendamento BuscarAgendamentoPorId(int _idAgendamento)
+        public Agendamento BuscarAgendamentoPorId(int _idAgendamento, int _opc)
         {
             AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
-            return agendamentoDAL.BuscarAgendamentoPorId(_idAgendamento);
+            return agendamentoDAL.BuscarAgendamentoPorId(_idAgendamento, _opc);
         }
 
 
@@ -106,6 +106,12 @@ namespace BLL
         {
             AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
             agendamentoDAL.ExcluirServicoDeAgendamento(_idservico, _idagendamento);
+        }
+
+        public List<Agendamento> BuscarTodos()
+        {
+            AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
+            return agendamentoDAL.BuscarTodos();
         }
     }
 }

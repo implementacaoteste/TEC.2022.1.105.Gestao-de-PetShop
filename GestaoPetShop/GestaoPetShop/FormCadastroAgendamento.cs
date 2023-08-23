@@ -23,8 +23,9 @@ namespace GestaoPetShop
         decimal valortotalagendamento = 0;
         int quant = 0;
         bool atualizar = false;
-        int id = 0;
-      
+        int id = 0; // serve para selecionar se é alterar Agenamento ou Cadastrar
+        int opc = 0; //apenas para selecionar a opção correta de pequeisa em AgendamentoDAL
+
         AgendamentoServico agendamentoServicoExcluir = new AgendamentoServico();
         List<AgendamentoServico> servicosParaExcluir = new List<AgendamentoServico>();
 
@@ -40,6 +41,12 @@ namespace GestaoPetShop
             try
             {
 
+                if (id == 0)
+                    agendamentoBindingSource.AddNew();
+                else
+                    
+                    agendamentoBindingSource.DataSource = new AgendamentoBLL().BuscarAgendamentoPorId(id, opc);
+               
                 List<AgendamentoServico> listViewServico = new List<AgendamentoServico>();
 
                 listViewServico = new AgendamentoBLL().BuscarServicoPorNome(descricaoComboBox.Text);
@@ -49,10 +56,10 @@ namespace GestaoPetShop
                 int num = listViewServico.Count();
 
 
-                for (int x = 0; x < num; x++)
-                {
-                    descricaoComboBox.Items.Insert(x, listViewServico[x].Servico);
-                }
+                //for (int x = 0; x < num; x++)
+                //{
+                //    descricaoComboBox.Items.Insert(x, listViewServico[x].Servico);
+                //}
                 // método para combobox Profissional
                 string _nomeProfissional = "";
                 int _idProfissional = 0;
@@ -70,13 +77,14 @@ namespace GestaoPetShop
                     descricaoSituacaoComboBox.Items.Insert(x, situacoes[x].Descricao);
 
                 }
+                return;
                 if (id != 0)
                 {
                     Agendamento agendamento = new Agendamento();
-                    agendamento = new AgendamentoBLL().BuscarAgendamentoPorId(id);
+                   
+                    agendamento = new AgendamentoBLL().BuscarAgendamentoPorId(id,opc);
                     List<AgendamentoServico> agendamentoServicos = new List<AgendamentoServico>();
                     agendamentoServicos = agendamento.AgendamentoServicos;
-
                     idTextBox1.Text = Convert.ToString(agendamento.Id);
                     dataAgDateTimePicker.Value = agendamento.DataAg;
                     horarioTextBox.Text = Convert.ToString(agendamento.Horario);
@@ -90,18 +98,18 @@ namespace GestaoPetShop
                     nomeProfissionalComboBox.Text = Convert.ToString(agendamento.NomeProfissional);
 
                     totalTextBox.Text = Convert.ToString(agendamento.Total);
-                    
+
                     ativoCheckBox.Checked = true;
 
                     foreach (AgendamentoServico item in agendamentoServicos)
                     {
 
-                       // decimal x = item.Quantidade * item.ValorComDesconto;
+                        // decimal x = item.Quantidade * item.ValorComDesconto;
                         //agendamentoServicosBindingSource1.Add(item.ValorTotal = x );
-                        agendamentoServicosBindingSource1.Add(item);
-                      //  ((AgendamentoServico)agendamentoServicosBindingSource1.Current)item.ValorTotal = ((AgendamentoServico)agendamentoServicosBindingSource1.Current)item.Quantidade * ((AgendamentoServico)agendamentoServicosBindingSource1.Current)item.ValorComDesconto;
+                        agendamentoServicosBindingSource.Add(item);
+                        //  ((AgendamentoServico)agendamentoServicosBindingSource1.Current)item.ValorTotal = ((AgendamentoServico)agendamentoServicosBindingSource1.Current)item.Quantidade * ((AgendamentoServico)agendamentoServicosBindingSource1.Current)item.ValorComDesconto;
                     }
-                   // agendamentoServicosBindingSource1.AddNew();
+                    // agendamentoServicosBindingSource1.AddNew();
                 }
 
 
@@ -137,26 +145,32 @@ namespace GestaoPetShop
         {
             try
             {
-                if (!atualizar)
-                {
-                    MessageBox.Show("Click em ATUALIZAR antes de INSERIR.");
-                    return;
-                }
+                //if (!atualizar)
+                //{
+                //    MessageBox.Show("Click em ATUALIZAR antes de INSERIR.");
+                //    return;
+                //}
 
-                Agendamento agendamento = new Agendamento();
-                agendamentoServicosBindingSource1.AddNew();
-                ((AgendamentoServico)agendamentoServicosBindingSource1.Current).IdServico = Convert.ToInt32(idTextBox.Text);
-                ((AgendamentoServico)agendamentoServicosBindingSource1.Current).Servico = descricaoComboBox.Text;
-                ((AgendamentoServico)agendamentoServicosBindingSource1.Current).Quantidade = Convert.ToInt32(textBoxQuantidade.Text);
-                ((AgendamentoServico)agendamentoServicosBindingSource1.Current).ValorUnitario = Convert.ToDecimal(precoTextBox.Text);
-                ((AgendamentoServico)agendamentoServicosBindingSource1.Current).ValorComDesconto = Convert.ToDecimal(textBoxPrecoAplicado.Text);
-                ((AgendamentoServico)agendamentoServicosBindingSource1.Current).ValorTotal = Convert.ToDecimal(textBoxSubtotal.Text);
-                agendamentoServicosBindingSource1.EndEdit();
-                quant = agendamentoBindingSource1.Count;
+                //Agendamento agendamento = new Agendamento();
+                //agendamentoServicosBindingSource.AddNew();
+                //((AgendamentoServico)agendamentoServicosBindingSource.Current).IdServico = Convert.ToInt32(idTextBox.Text);
+                ((AgendamentoServico)agendamentoServicosBindingSource.Current).Servico = descricaoComboBox.Text;
+                //((AgendamentoServico)agendamentoServicosBindingSource.Current).Quantidade = Convert.ToInt32(textBoxQuantidade.Text);
+                ((AgendamentoServico)agendamentoServicosBindingSource.Current).ValorUnitario = Convert.ToDecimal(precoTextBox.Text);
+                //((AgendamentoServico)agendamentoServicosBindingSource.Current).ValorComDesconto = Convert.ToDecimal(textBoxPrecoAplicado.Text);
+                //((AgendamentoServico)agendamentoServicosBindingSource.Current).ValorTotal = Convert.ToDecimal(textBoxSubtotal.Text);
+
+                agendamentoServicosBindingSource.EndEdit();
+                buttonNovo_Click(sender, e);
+                agendamentoServicoDataGridView.Refresh();
+                return;
+
+                //quant = agendamentoBindingSource.Count;
                 subtotal = Convert.ToDecimal(textBoxSubtotal.Text);
                 valortotalagendamento = valortotalagendamento + subtotal;
                 totalTextBox.Text = Convert.ToString(valortotalagendamento);
                 atualizar = false;
+
             }
             catch (Exception ex)
             {
@@ -173,48 +187,48 @@ namespace GestaoPetShop
         {
             try
             {
-                Agendamento agendamento = new Agendamento();
-                List<AgendamentoServico> agendamentoServicos = new List<AgendamentoServico>();
-                AgendamentoServico agendamentoServico = new AgendamentoServico();
-               
-               
-                agendamento.DataAg = Convert.ToDateTime(dataAgDateTimePicker.Text);
-                agendamento.Horario = Convert.ToString(horarioTextBox.Text);
-                agendamento.IdSituacao = Convert.ToInt32(idSituacaoTextBox.Text);
-                agendamento.IdAnimal = Convert.ToInt32(idAnimalTextBox.Text);
-                agendamento.IdProfissional = Convert.ToInt32(idProfissionalTextBox.Text);
-                agendamento.Total = Convert.ToDecimal(totalTextBox.Text);
-                agendamento.Ativo = ativoCheckBox.Checked;
+                agendamentoBindingSource.EndEdit();
+                Agendamento agendamento = (Agendamento)agendamentoBindingSource.Current;
+                //List<AgendamentoServico> agendamentoServicos = new List<AgendamentoServico>();
+                //AgendamentoServico agendamentoServico = new AgendamentoServico();
 
-                int quantidadeservicos = agendamentoServicosBindingSource1.Count;
-                for (int x = 0; x < quantidadeservicos; x++)
-                {
 
-                    agendamentoServico.IdServico = ((AgendamentoServico)agendamentoServicosBindingSource1.Current).IdServico;
-                    agendamentoServico.Quantidade = ((AgendamentoServico)agendamentoServicosBindingSource1.Current).Quantidade;
-                    agendamentoServico.Servico = ((AgendamentoServico)agendamentoServicosBindingSource1.Current).Servico;
-                    agendamentoServico.ValorComDesconto = ((AgendamentoServico)agendamentoServicosBindingSource1.Current).ValorComDesconto;
-                    agendamentoServico.ValorTotal = ((AgendamentoServico)agendamentoServicosBindingSource1.Current).ValorTotal;
-                    agendamentoServico.ValorUnitario = ((AgendamentoServico)agendamentoServicosBindingSource1.Current).ValorUnitario;
+                //agendamento.DataAg = Convert.ToDateTime(dataAgDateTimePicker.Text);
+                //agendamento.Horario = Convert.ToString(horarioTextBox.Text);
+                //agendamento.IdSituacao = Convert.ToInt32(idSituacaoTextBox.Text);
+                //agendamento.IdAnimal = Convert.ToInt32(idAnimalTextBox.Text);
+                //agendamento.IdProfissional = Convert.ToInt32(idProfissionalTextBox.Text);
+                //agendamento.Total = Convert.ToDecimal(totalTextBox.Text);
+                //agendamento.Ativo = ativoCheckBox.Checked;
 
-                    agendamentoServicos.Add(agendamentoServico);
-                }
-               
-               
-                agendamento.AgendamentoServicos = agendamentoServicos;
+                //int quantidadeservicos = agendamentoServicosBindingSource.Count;
+                //for (int x = 0; x < quantidadeservicos; x++)
+                //{
+
+                //    agendamentoServico.IdServico = ((AgendamentoServico)agendamentoServicosBindingSource.Current).IdServico;
+                //    agendamentoServico.Quantidade = ((AgendamentoServico)agendamentoServicosBindingSource.Current).Quantidade;
+                //    agendamentoServico.Servico = ((AgendamentoServico)agendamentoServicosBindingSource.Current).Servico;
+                //    agendamentoServico.ValorComDesconto = ((AgendamentoServico)agendamentoServicosBindingSource.Current).ValorComDesconto;
+                //    agendamentoServico.ValorTotal = ((AgendamentoServico)agendamentoServicosBindingSource.Current).ValorTotal;
+                //    agendamentoServico.ValorUnitario = ((AgendamentoServico)agendamentoServicosBindingSource.Current).ValorUnitario;
+
+                //    agendamentoServicos.Add(agendamentoServico);
+                //}
+
+
+                //agendamento.AgendamentoServicos = agendamentoServicos;
 
                 if (id != 0)
                 {
                     //  List<AgendamentoServico> servicosParaExcluir = new List<AgendamentoServico>();
                     //servicosParaExcluir IdParaExcluir();
-                    agendamento.Id = Convert.ToInt32(idTextBox1.Text);
+                    //agendamento.Id = Convert.ToInt32(idTextBox1.Text);
 
-                    new AgendamentoBLL().Alterar(agendamento,servicosParaExcluir);
+                    new AgendamentoBLL().Alterar(agendamento, servicosParaExcluir);
                 }
                 else
                 {
                     new AgendamentoBLL().Inserir(agendamento);
-
                 }
 
             }
@@ -310,11 +324,11 @@ namespace GestaoPetShop
             try
             {
 
-                Servico servico = new Servico();
-                servico = new AgendamentoBLL().PorNome(descricaoComboBox.Text);
-                idTextBox.Text = Convert.ToString(servico.Id);
-                descricaoComboBox.Text = servico.Descricao;
-                precoTextBox.Text = Convert.ToString(servico.Preco);
+                //Servico servico = new Servico();
+                //servico = new AgendamentoBLL().PorNome(descricaoComboBox.Text);
+                //idTextBox.Text = Convert.ToString(servico.Id);
+                //descricaoComboBox.Text = servico.Descricao;
+                //precoTextBox.Text = Convert.ToString(servico.Preco);
             }
             catch (Exception ex)
             {
@@ -328,10 +342,10 @@ namespace GestaoPetShop
         {
             try
             {
-                
+
                 int idagendamento = Convert.ToInt32(idTextBox1.Text);
 
-                int idservico = ((AgendamentoServico)agendamentoServicosBindingSource1.Current).IdServico;
+                int idservico = ((AgendamentoServico)agendamentoServicosBindingSource.Current).IdServico;
                 if (idservico == 0)
                 {
                     MessageBox.Show("Serviço inválido!");
@@ -341,29 +355,62 @@ namespace GestaoPetShop
                 {
 
                     //  new AgendamentoBLL().ExcluirServicoDeAgendamento(idservico, idagendamento);
-                   
-                    agendamentoServicoExcluir = (AgendamentoServico)agendamentoServicosBindingSource1.Current;
+
+                    agendamentoServicoExcluir = (AgendamentoServico)agendamentoServicosBindingSource.Current;
 
                     servicosParaExcluir.Add(agendamentoServicoExcluir);
-                   
+
 
                 }
-                subtotal = ((AgendamentoServico)agendamentoServicosBindingSource1.Current).ValorTotal;
-               // decimal totalagendamento = Convert.ToInt32(totalTextBox.Text);
-               
+                subtotal = ((AgendamentoServico)agendamentoServicosBindingSource.Current).ValorTotal;
+                // decimal totalagendamento = Convert.ToInt32(totalTextBox.Text);
+
                 valortotalagendamento = valortotalagendamento - subtotal;
                 if (valortotalagendamento < 0)
                 {
                     valortotalagendamento = 0;
                 }
                 totalTextBox.Text = Convert.ToString(valortotalagendamento);
-                agendamentoServicosBindingSource1.Remove(agendamentoServicosBindingSource1.Current);
+                agendamentoServicosBindingSource.Remove(agendamentoServicosBindingSource.Current);
 
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void buttonNovo_Click(object sender, EventArgs e)
+        {
+            groupBoxServico.Enabled = !groupBoxServico.Enabled;
+            buttonNovo.Enabled = !buttonNovo.Enabled;
+
+            if (!buttonNovo.Enabled)
+            {
+                agendamentoServicosBindingSource.AddNew();
+                textBoxQuantidade.Text = "1";
+                ((AgendamentoServico)agendamentoServicosBindingSource.Current).Quantidade = 1;
+                if (servicoBindingSource.Count == 0)
+                    servicoBindingSource.DataSource = new ServicoBLL().BuscarTodos();
+            }
+        }
+
+        private void textBoxPrecoAplicado_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                textBoxSubtotal.Text = Convert.ToString(Convert.ToDecimal(textBoxPrecoAplicado.Text) * Convert.ToDecimal(textBoxQuantidade.Text));
+                ((AgendamentoServico)agendamentoServicosBindingSource.Current).ValorTotal = Convert.ToDecimal(textBoxPrecoAplicado.Text) * Convert.ToDecimal(textBoxQuantidade.Text);
+            }
+            catch (Exception)
+            {
+
+            }
+        }
+
+        private void precoTextBox_TextChanged(object sender, EventArgs e)
+        {
+            ((AgendamentoServico)agendamentoServicosBindingSource.Current).ValorComDesconto = Convert.ToDecimal(precoTextBox.Text);
         }
     }
 
