@@ -185,6 +185,7 @@
             this.button_ExcluirAgendamento.TabIndex = 13;
             this.button_ExcluirAgendamento.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button_ExcluirAgendamento.UseVisualStyleBackColor = false;
+            this.button_ExcluirAgendamento.Click += new System.EventHandler(this.button_ExcluirAgendamento_Click);
             // 
             // textBox_BuscarData
             // 

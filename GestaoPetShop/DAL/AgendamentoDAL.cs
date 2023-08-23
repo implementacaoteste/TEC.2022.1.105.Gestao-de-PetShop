@@ -347,7 +347,7 @@ namespace DAL
 
             using (SqlConnection cn = new SqlConnection(Conexao.StringDeConexao))
             {
-                using (SqlCommand cmd = new SqlCommand("DELETE FROM Servico WHERE Id = @Id", cn))
+                using (SqlCommand cmd = new SqlCommand("DELETE FROM Agendamento WHERE Id = @Id", cn))
                 {
                     try
                     {
@@ -1014,7 +1014,6 @@ namespace DAL
                 cn.Close();
             }
         }
-
         public List<DataGridView1_FormsPrincipal> BuscarPorNomeProfissional(string _nomeProfissional)
         {
             List<DataGridView1_FormsPrincipal> listaAgendamentos = new List<DataGridView1_FormsPrincipal>();
@@ -1063,7 +1062,6 @@ namespace DAL
                 cn.Close();
             }
         }
-
         public List<DataGridView1_FormsPrincipal> BuscarPorProfissionalDiaMesAno(string _diaMesAno)
         {
 
@@ -1116,7 +1114,6 @@ namespace DAL
                 cn.Close();
             }
         }
-
         public object BuscarProfissionalPorMesAno(int _opc, string _mesAno)
         {
             List<DataGridView1_FormsPrincipal> listaAgendamentos = new List<DataGridView1_FormsPrincipal>();
@@ -1174,7 +1171,6 @@ namespace DAL
                 cn.Close();
             }
         }
-
         public Agendamento BuscarAgendamentoPorId(int _idAgendamento)
         {
             List<Agendamento> agendamentos = new List<Agendamento>();
@@ -1229,7 +1225,6 @@ namespace DAL
                 cn.Close();
             }
         }
-
         private List<AgendamentoServico> BuscarAgendamentoServicosPorIdAgendamento(int _idAgendamento)
         {
 
@@ -1278,7 +1273,6 @@ namespace DAL
                 cn.Close();
             }
         }
-
         public void ExcluirServicoDeAgendamento(int _idservico, int _idagendamento)
         {
 
