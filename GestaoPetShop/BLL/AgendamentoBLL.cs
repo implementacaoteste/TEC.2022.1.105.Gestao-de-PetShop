@@ -107,5 +107,11 @@ namespace BLL
             AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
             agendamentoDAL.ExcluirServicoDeAgendamento(_idservico, _idagendamento);
         }
+
+        public List<Agendamento> BuscarTodos()
+        {
+            AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
+            return agendamentoDAL.BuscarTodos();
+        }
     }
 }

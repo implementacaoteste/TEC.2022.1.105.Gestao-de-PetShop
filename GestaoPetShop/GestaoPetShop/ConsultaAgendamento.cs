@@ -25,7 +25,9 @@ namespace GestaoPetShop
                 if (comboBox_SelecionarTipoBusca.SelectedIndex == 0)
                 {
 
-                    dataGridView1_FormsPrincipalBindingSource.DataSource = agendamentoBLL.DataGridViewBuscarTodos();
+                    //dataGridView1_FormsPrincipalBindingSource.DataSource = agendamentoBLL.DataGridViewBuscarTodos();
+                    agendamentoBindingSource.DataSource = agendamentoBLL.BuscarTodos();
+
                 }
 
                 else if (comboBox_SelecionarTipoBusca.SelectedIndex == 1)
