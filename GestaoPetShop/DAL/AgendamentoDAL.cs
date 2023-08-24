@@ -246,7 +246,7 @@ namespace DAL
 
                         foreach (AgendamentoServico item in _agendamento.AgendamentoServicos)
                         {
-                           
+
                             bool x = ExisteVinculo(_agendamento.Id, item.IdServico);
                             if (!x)
                             {
@@ -274,7 +274,7 @@ namespace DAL
         public bool ExisteVinculo(int _idAgendamento, int _idServico)
         {
 
-            
+
 
             SqlConnection cn = new SqlConnection();
             SqlCommand cmd = new SqlCommand();
@@ -300,13 +300,13 @@ namespace DAL
             {
                 throw new Exception("Ocorreu um erro ao tentar buscar vínculos de Serviços com Agendamento: " + ex.Message) { Data = { { "Id", 45 } } };
             }
-            
+
         }
         private void AlterarExcluirServicoDeAgendamento(Agendamento _agendamento, List<AgendamentoServico> _servicosParaExcluir, SqlTransaction _transaction)
         {
-            
 
-            
+
+
             SqlTransaction transaction = _transaction;
 
             using (SqlConnection cn = new SqlConnection(Conexao.StringDeConexao))
@@ -323,9 +323,10 @@ namespace DAL
                         cmd.Transaction = transaction;
                         cmd.Connection = transaction.Connection;
 
+                        cmd.CommandType = System.Data.CommandType.Text;
                         foreach (AgendamentoServico item in _servicosParaExcluir)
                         {
-                            cmd.CommandType = System.Data.CommandType.Text;
+                            cmd.Parameters.Clear();
                             cmd.Parameters.AddWithValue("@IdAgendamento", _agendamento.Id);
                             cmd.Parameters.AddWithValue("@IdServico", item.IdServico);
                             cmd.ExecuteNonQuery();
@@ -492,17 +493,17 @@ namespace DAL
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
                 cmd.CommandText = @"SELECT A.Id as AnimalId , A.Nome as AnimalNome ,C.Id as  ClienteId, C.Nome as ClienteNome 
-                                        FROM Animal A INNER JOIN Cliente C  ON A.IdCliente = C.Id WHERE ";
+                                        FROM Animal A INNER JOIN Cliente C  ON A.IdCliente = C.Id  ";
 
 
                 if (_opc == 2)
                 {
-                    cmd.CommandText = cmd.CommandText + "UPPER (A.Nome) LIKE UPPER (@Nome)";
+                    cmd.CommandText = cmd.CommandText + " WHERE UPPER (A.Nome) LIKE UPPER (@Nome)";
 
                 }
                 if (_opc == 3)
                 {
-                    cmd.CommandText = cmd.CommandText + "UPPER (C.Nome) LIKE UPPER (@Nome)";
+                    cmd.CommandText = cmd.CommandText + "WHERE UPPER (C.Nome) LIKE UPPER (@Nome)";
                 }
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@Nome", "%" + _nomeAnimalCliente + "%");
@@ -942,11 +943,11 @@ namespace DAL
                 cn.Close();
             }
         }
-        public Agendamento BuscarProfissional(string _nomeProfissional)
+        public Profissional BuscarProfissional(string _nomeProfissional)
         {
 
 
-            Agendamento agendamento = new Agendamento();
+            Profissional profissional = new Profissional();
 
             SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
             try
@@ -964,11 +965,11 @@ namespace DAL
                 {
                     if (rd.Read())
                     {
-                        agendamento.IdProfissional = Convert.ToInt32(rd["Id"]);
-                        agendamento.NomeProfissional = rd["Nome"].ToString();
+                        profissional.Id = Convert.ToInt32(rd["Id"]);
+                        profissional.Nome = rd["Nome"].ToString();
                     }
                 }
-                return agendamento;
+                return profissional;
             }
             catch (Exception ex)
             {
@@ -1193,7 +1194,7 @@ namespace DAL
                     cmd.CommandText = cmd.CommandText + "Ani.Id = @Id";//Busca pelo ID do Animal
                 else if (_opc == 2)
                     cmd.CommandText = cmd.CommandText + "Cli.Id = @Id"; // bUSCAR POR ID DO CLIENTE
-                else if(_opc == 3)
+                else if (_opc == 3)
                     cmd.CommandText = cmd.CommandText + "P.Id = @Id"; // buscar por Id do Profissional
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@Id", _idAgendamento);
@@ -1325,7 +1326,7 @@ namespace DAL
                                                                                                                                                                                             LEFT JOIN Situacao Si                ON Ag.IdSituacao = Si.Id";//WHERE Ag.Id = @Id
 
                 cmd.CommandType = System.Data.CommandType.Text;
-               // cmd.Parameters.AddWithValue("@Id", _idAgendamento);
+                // cmd.Parameters.AddWithValue("@Id", _idAgendamento);
                 cn.Open();
 
                 using (SqlDataReader rd = cmd.ExecuteReader())

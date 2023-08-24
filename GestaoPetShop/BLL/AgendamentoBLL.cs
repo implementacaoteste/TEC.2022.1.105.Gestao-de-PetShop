@@ -84,7 +84,7 @@ namespace BLL
             AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
             return agendamentoDAL.BuscarPorProfissional(_nomeProfissional);
         }
-        public Agendamento BuscarProfissional(string _nomeProfissional)
+        public Profissional BuscarProfissional(string _nomeProfissional)
         {
             AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
             return agendamentoDAL.BuscarProfissional(_nomeProfissional);

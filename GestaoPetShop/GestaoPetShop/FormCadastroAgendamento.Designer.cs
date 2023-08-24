@@ -64,8 +64,9 @@
             this.totalTextBox = new System.Windows.Forms.TextBox();
             this.buttonPesquisarAnimal = new System.Windows.Forms.Button();
             this.descricaoComboBox = new System.Windows.Forms.ComboBox();
-            this.agendamentoServicosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.servicoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.agendamentoServicosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.agendamentoServicosBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.textBoxSubtotal = new System.Windows.Forms.TextBox();
             this.textBoxPrecoAplicado = new System.Windows.Forms.TextBox();
             this.textBoxQuantidade = new System.Windows.Forms.TextBox();
@@ -104,10 +105,10 @@
             descricaoSituacaoLabel = new System.Windows.Forms.Label();
             dataAgLabel = new System.Windows.Forms.Label();
             idSituacaoLabel = new System.Windows.Forms.Label();
-            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.agendamentoBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.agendamentoServicosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.servicoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.agendamentoServicosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.agendamentoServicosBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.agendamentoServicoDataGridView)).BeginInit();
             this.groupBoxServico.SuspendLayout();
             this.SuspendLayout();
@@ -175,7 +176,7 @@
             // horarioLabel
             // 
             horarioLabel.AutoSize = true;
-            horarioLabel.Location = new System.Drawing.Point(413, 38);
+            horarioLabel.Location = new System.Drawing.Point(430, 14);
             horarioLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             horarioLabel.Name = "horarioLabel";
             horarioLabel.Size = new System.Drawing.Size(55, 16);
@@ -185,7 +186,7 @@
             // idLabel1
             // 
             idLabel1.AutoSize = true;
-            idLabel1.Location = new System.Drawing.Point(15, 38);
+            idLabel1.Location = new System.Drawing.Point(32, 14);
             idLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             idLabel1.Name = "idLabel1";
             idLabel1.Size = new System.Drawing.Size(21, 16);
@@ -195,7 +196,7 @@
             // idAnimalLabel
             // 
             idAnimalLabel.AutoSize = true;
-            idAnimalLabel.Location = new System.Drawing.Point(12, 102);
+            idAnimalLabel.Location = new System.Drawing.Point(20, 114);
             idAnimalLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             idAnimalLabel.Name = "idAnimalLabel";
             idAnimalLabel.Size = new System.Drawing.Size(65, 16);
@@ -205,7 +206,7 @@
             // idClienteLabel
             // 
             idClienteLabel.AutoSize = true;
-            idClienteLabel.Location = new System.Drawing.Point(561, 102);
+            idClienteLabel.Location = new System.Drawing.Point(569, 114);
             idClienteLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             idClienteLabel.Name = "idClienteLabel";
             idClienteLabel.Size = new System.Drawing.Size(65, 16);
@@ -215,7 +216,7 @@
             // idProfissionalLabel
             // 
             idProfissionalLabel.AutoSize = true;
-            idProfissionalLabel.Location = new System.Drawing.Point(5, 155);
+            idProfissionalLabel.Location = new System.Drawing.Point(43, 160);
             idProfissionalLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             idProfissionalLabel.Name = "idProfissionalLabel";
             idProfissionalLabel.Size = new System.Drawing.Size(94, 16);
@@ -225,7 +226,7 @@
             // nomeAnimalLabel
             // 
             nomeAnimalLabel.AutoSize = true;
-            nomeAnimalLabel.Location = new System.Drawing.Point(169, 102);
+            nomeAnimalLabel.Location = new System.Drawing.Point(177, 114);
             nomeAnimalLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             nomeAnimalLabel.Name = "nomeAnimalLabel";
             nomeAnimalLabel.Size = new System.Drawing.Size(91, 16);
@@ -235,7 +236,7 @@
             // nomeClienteLabel
             // 
             nomeClienteLabel.AutoSize = true;
-            nomeClienteLabel.Location = new System.Drawing.Point(701, 102);
+            nomeClienteLabel.Location = new System.Drawing.Point(709, 114);
             nomeClienteLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             nomeClienteLabel.Name = "nomeClienteLabel";
             nomeClienteLabel.Size = new System.Drawing.Size(91, 16);
@@ -245,7 +246,7 @@
             // totalLabel
             // 
             totalLabel.AutoSize = true;
-            totalLabel.Location = new System.Drawing.Point(721, 155);
+            totalLabel.Location = new System.Drawing.Point(759, 160);
             totalLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             totalLabel.Name = "totalLabel";
             totalLabel.Size = new System.Drawing.Size(41, 16);
@@ -255,7 +256,7 @@
             // nomeProfissionalLabel1
             // 
             nomeProfissionalLabel1.AutoSize = true;
-            nomeProfissionalLabel1.Location = new System.Drawing.Point(235, 155);
+            nomeProfissionalLabel1.Location = new System.Drawing.Point(273, 160);
             nomeProfissionalLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             nomeProfissionalLabel1.Name = "nomeProfissionalLabel1";
             nomeProfissionalLabel1.Size = new System.Drawing.Size(120, 16);
@@ -265,7 +266,7 @@
             // descricaoSituacaoLabel
             // 
             descricaoSituacaoLabel.AutoSize = true;
-            descricaoSituacaoLabel.Location = new System.Drawing.Point(825, 44);
+            descricaoSituacaoLabel.Location = new System.Drawing.Point(842, 20);
             descricaoSituacaoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             descricaoSituacaoLabel.Name = "descricaoSituacaoLabel";
             descricaoSituacaoLabel.Size = new System.Drawing.Size(128, 16);
@@ -275,7 +276,7 @@
             // dataAgLabel
             // 
             dataAgLabel.AutoSize = true;
-            dataAgLabel.Location = new System.Drawing.Point(132, 38);
+            dataAgLabel.Location = new System.Drawing.Point(149, 14);
             dataAgLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             dataAgLabel.Name = "dataAgLabel";
             dataAgLabel.Size = new System.Drawing.Size(59, 16);
@@ -285,7 +286,7 @@
             // idSituacaoLabel
             // 
             idSituacaoLabel.AutoSize = true;
-            idSituacaoLabel.Location = new System.Drawing.Point(644, 43);
+            idSituacaoLabel.Location = new System.Drawing.Point(661, 19);
             idSituacaoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             idSituacaoLabel.Name = "idSituacaoLabel";
             idSituacaoLabel.Size = new System.Drawing.Size(77, 16);
@@ -295,44 +296,18 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.Control;
-            this.groupBox1.Controls.Add(idSituacaoLabel);
-            this.groupBox1.Controls.Add(this.idSituacaoTextBox);
-            this.groupBox1.Controls.Add(dataAgLabel);
-            this.groupBox1.Controls.Add(this.dataAgDateTimePicker);
-            this.groupBox1.Controls.Add(this.ativoCheckBox);
-            this.groupBox1.Controls.Add(descricaoSituacaoLabel);
-            this.groupBox1.Controls.Add(this.descricaoSituacaoComboBox);
-            this.groupBox1.Controls.Add(nomeProfissionalLabel1);
-            this.groupBox1.Controls.Add(this.nomeProfissionalComboBox);
-            this.groupBox1.Controls.Add(horarioLabel);
-            this.groupBox1.Controls.Add(this.horarioTextBox);
-            this.groupBox1.Controls.Add(idLabel1);
-            this.groupBox1.Controls.Add(this.idTextBox1);
-            this.groupBox1.Controls.Add(idAnimalLabel);
-            this.groupBox1.Controls.Add(this.idAnimalTextBox);
-            this.groupBox1.Controls.Add(idClienteLabel);
-            this.groupBox1.Controls.Add(this.idClienteTextBox);
-            this.groupBox1.Controls.Add(idProfissionalLabel);
-            this.groupBox1.Controls.Add(this.idProfissionalTextBox);
-            this.groupBox1.Controls.Add(nomeAnimalLabel);
-            this.groupBox1.Controls.Add(this.nomeAnimalTextBox);
-            this.groupBox1.Controls.Add(nomeClienteLabel);
-            this.groupBox1.Controls.Add(this.nomeClienteTextBox);
-            this.groupBox1.Controls.Add(totalLabel);
-            this.groupBox1.Controls.Add(this.totalTextBox);
-            this.groupBox1.Controls.Add(this.buttonPesquisarAnimal);
-            this.groupBox1.Location = new System.Drawing.Point(7, 31);
+            this.groupBox1.Location = new System.Drawing.Point(15, 47);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(1152, 204);
+            this.groupBox1.Size = new System.Drawing.Size(148, 35);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
             // idSituacaoTextBox
             // 
             this.idSituacaoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agendamentoBindingSource, "IdSituacao", true));
-            this.idSituacaoTextBox.Location = new System.Drawing.Point(737, 39);
+            this.idSituacaoTextBox.Location = new System.Drawing.Point(754, 15);
             this.idSituacaoTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.idSituacaoTextBox.Name = "idSituacaoTextBox";
             this.idSituacaoTextBox.Size = new System.Drawing.Size(60, 22);
@@ -345,7 +320,7 @@
             // dataAgDateTimePicker
             // 
             this.dataAgDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.agendamentoBindingSource, "DataAg", true));
-            this.dataAgDateTimePicker.Location = new System.Drawing.Point(205, 33);
+            this.dataAgDateTimePicker.Location = new System.Drawing.Point(222, 9);
             this.dataAgDateTimePicker.Margin = new System.Windows.Forms.Padding(4);
             this.dataAgDateTimePicker.Name = "dataAgDateTimePicker";
             this.dataAgDateTimePicker.Size = new System.Drawing.Size(199, 22);
@@ -354,8 +329,10 @@
             // ativoCheckBox
             // 
             this.ativoCheckBox.AutoSize = true;
+            this.ativoCheckBox.Checked = true;
+            this.ativoCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
             this.ativoCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.agendamentoBindingSource, "Ativo", true));
-            this.ativoCheckBox.Location = new System.Drawing.Point(955, 149);
+            this.ativoCheckBox.Location = new System.Drawing.Point(993, 154);
             this.ativoCheckBox.Margin = new System.Windows.Forms.Padding(4);
             this.ativoCheckBox.Name = "ativoCheckBox";
             this.ativoCheckBox.Size = new System.Drawing.Size(59, 20);
@@ -367,7 +344,7 @@
             // 
             this.descricaoSituacaoComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agendamentoBindingSource, "DescricaoSituacao", true));
             this.descricaoSituacaoComboBox.FormattingEnabled = true;
-            this.descricaoSituacaoComboBox.Location = new System.Drawing.Point(976, 39);
+            this.descricaoSituacaoComboBox.Location = new System.Drawing.Point(993, 15);
             this.descricaoSituacaoComboBox.Margin = new System.Windows.Forms.Padding(4);
             this.descricaoSituacaoComboBox.Name = "descricaoSituacaoComboBox";
             this.descricaoSituacaoComboBox.Size = new System.Drawing.Size(160, 24);
@@ -378,7 +355,7 @@
             // 
             this.nomeProfissionalComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agendamentoBindingSource, "NomeProfissional", true));
             this.nomeProfissionalComboBox.FormattingEnabled = true;
-            this.nomeProfissionalComboBox.Location = new System.Drawing.Point(368, 151);
+            this.nomeProfissionalComboBox.Location = new System.Drawing.Point(406, 156);
             this.nomeProfissionalComboBox.Margin = new System.Windows.Forms.Padding(4);
             this.nomeProfissionalComboBox.Name = "nomeProfissionalComboBox";
             this.nomeProfissionalComboBox.Size = new System.Drawing.Size(160, 24);
@@ -388,7 +365,7 @@
             // horarioTextBox
             // 
             this.horarioTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agendamentoBindingSource, "Horario", true));
-            this.horarioTextBox.Location = new System.Drawing.Point(480, 34);
+            this.horarioTextBox.Location = new System.Drawing.Point(497, 10);
             this.horarioTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.horarioTextBox.Name = "horarioTextBox";
             this.horarioTextBox.Size = new System.Drawing.Size(135, 22);
@@ -398,7 +375,7 @@
             // 
             this.idTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agendamentoBindingSource, "Id", true));
             this.idTextBox1.Enabled = false;
-            this.idTextBox1.Location = new System.Drawing.Point(48, 34);
+            this.idTextBox1.Location = new System.Drawing.Point(65, 10);
             this.idTextBox1.Margin = new System.Windows.Forms.Padding(4);
             this.idTextBox1.Name = "idTextBox1";
             this.idTextBox1.Size = new System.Drawing.Size(72, 22);
@@ -407,7 +384,7 @@
             // idAnimalTextBox
             // 
             this.idAnimalTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agendamentoBindingSource, "IdAnimal", true));
-            this.idAnimalTextBox.Location = new System.Drawing.Point(84, 98);
+            this.idAnimalTextBox.Location = new System.Drawing.Point(92, 110);
             this.idAnimalTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.idAnimalTextBox.Name = "idAnimalTextBox";
             this.idAnimalTextBox.Size = new System.Drawing.Size(71, 22);
@@ -416,7 +393,7 @@
             // idClienteTextBox
             // 
             this.idClienteTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agendamentoBindingSource, "IdCliente", true));
-            this.idClienteTextBox.Location = new System.Drawing.Point(633, 98);
+            this.idClienteTextBox.Location = new System.Drawing.Point(641, 110);
             this.idClienteTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.idClienteTextBox.Name = "idClienteTextBox";
             this.idClienteTextBox.Size = new System.Drawing.Size(43, 22);
@@ -425,7 +402,7 @@
             // idProfissionalTextBox
             // 
             this.idProfissionalTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agendamentoBindingSource, "IdProfissional", true));
-            this.idProfissionalTextBox.Location = new System.Drawing.Point(105, 151);
+            this.idProfissionalTextBox.Location = new System.Drawing.Point(143, 156);
             this.idProfissionalTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.idProfissionalTextBox.Name = "idProfissionalTextBox";
             this.idProfissionalTextBox.Size = new System.Drawing.Size(84, 22);
@@ -434,7 +411,7 @@
             // nomeAnimalTextBox
             // 
             this.nomeAnimalTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agendamentoBindingSource, "NomeAnimal", true));
-            this.nomeAnimalTextBox.Location = new System.Drawing.Point(268, 98);
+            this.nomeAnimalTextBox.Location = new System.Drawing.Point(276, 110);
             this.nomeAnimalTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.nomeAnimalTextBox.Name = "nomeAnimalTextBox";
             this.nomeAnimalTextBox.Size = new System.Drawing.Size(265, 22);
@@ -443,7 +420,7 @@
             // nomeClienteTextBox
             // 
             this.nomeClienteTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agendamentoBindingSource, "NomeCliente", true));
-            this.nomeClienteTextBox.Location = new System.Drawing.Point(805, 98);
+            this.nomeClienteTextBox.Location = new System.Drawing.Point(813, 110);
             this.nomeClienteTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.nomeClienteTextBox.Name = "nomeClienteTextBox";
             this.nomeClienteTextBox.Size = new System.Drawing.Size(192, 22);
@@ -452,7 +429,7 @@
             // totalTextBox
             // 
             this.totalTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agendamentoBindingSource, "Total", true));
-            this.totalTextBox.Location = new System.Drawing.Point(779, 151);
+            this.totalTextBox.Location = new System.Drawing.Point(817, 156);
             this.totalTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.totalTextBox.Name = "totalTextBox";
             this.totalTextBox.Size = new System.Drawing.Size(156, 22);
@@ -460,7 +437,7 @@
             // 
             // buttonPesquisarAnimal
             // 
-            this.buttonPesquisarAnimal.Location = new System.Drawing.Point(1009, 102);
+            this.buttonPesquisarAnimal.Location = new System.Drawing.Point(1017, 114);
             this.buttonPesquisarAnimal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonPesquisarAnimal.Name = "buttonPesquisarAnimal";
             this.buttonPesquisarAnimal.Size = new System.Drawing.Size(85, 23);
@@ -471,8 +448,8 @@
             // 
             // descricaoComboBox
             // 
-            this.descricaoComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.agendamentoServicosBindingSource, "IdServico", true));
             this.descricaoComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.servicoBindingSource, "Descricao", true));
+            this.descricaoComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.agendamentoServicosBindingSource, "IdServico", true));
             this.descricaoComboBox.DataSource = this.servicoBindingSource;
             this.descricaoComboBox.DisplayMember = "Descricao";
             this.descricaoComboBox.FormattingEnabled = true;
@@ -482,16 +459,19 @@
             this.descricaoComboBox.Size = new System.Drawing.Size(293, 24);
             this.descricaoComboBox.TabIndex = 1;
             this.descricaoComboBox.ValueMember = "Id";
-            this.descricaoComboBox.SelectedIndexChanged += new System.EventHandler(this.descricaoComboBox_SelectedIndexChanged);
-            // 
-            // agendamentoServicosBindingSource
-            // 
-            this.agendamentoServicosBindingSource.DataMember = "AgendamentoServicos";
-            this.agendamentoServicosBindingSource.DataSource = this.agendamentoBindingSource;
             // 
             // servicoBindingSource
             // 
             this.servicoBindingSource.DataSource = typeof(Models.Servico);
+            // 
+            // agendamentoServicosBindingSource
+            // 
+            this.agendamentoServicosBindingSource.DataSource = this.agendamentoServicosBindingSource1;
+            // 
+            // agendamentoServicosBindingSource1
+            // 
+            this.agendamentoServicosBindingSource1.DataMember = "AgendamentoServicos";
+            this.agendamentoServicosBindingSource1.DataSource = this.agendamentoBindingSource;
             // 
             // textBoxSubtotal
             // 
@@ -559,7 +539,7 @@
             // 
             // buttonAtualizar
             // 
-            this.buttonAtualizar.Location = new System.Drawing.Point(-17, 441);
+            this.buttonAtualizar.Location = new System.Drawing.Point(23, 355);
             this.buttonAtualizar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonAtualizar.Name = "buttonAtualizar";
             this.buttonAtualizar.Size = new System.Drawing.Size(79, 25);
@@ -726,30 +706,55 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::GestaoPetShop.Properties.Resources.papel_de_parede_2;
             this.ClientSize = new System.Drawing.Size(1180, 628);
+            this.Controls.Add(idAnimalLabel);
+            this.Controls.Add(this.idAnimalTextBox);
+            this.Controls.Add(this.ativoCheckBox);
+            this.Controls.Add(idClienteLabel);
+            this.Controls.Add(idSituacaoLabel);
+            this.Controls.Add(this.idClienteTextBox);
+            this.Controls.Add(nomeProfissionalLabel1);
+            this.Controls.Add(nomeAnimalLabel);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.nomeAnimalTextBox);
+            this.Controls.Add(this.nomeProfissionalComboBox);
+            this.Controls.Add(nomeClienteLabel);
+            this.Controls.Add(this.idSituacaoTextBox);
+            this.Controls.Add(this.nomeClienteTextBox);
             this.Controls.Add(this.groupBoxServico);
+            this.Controls.Add(this.buttonPesquisarAnimal);
+            this.Controls.Add(dataAgLabel);
             this.Controls.Add(this.button1RemoverServico);
+            this.Controls.Add(this.dataAgDateTimePicker);
+            this.Controls.Add(idProfissionalLabel);
+            this.Controls.Add(this.idProfissionalTextBox);
             this.Controls.Add(this.agendamentoServicoDataGridView);
             this.Controls.Add(this.buttonSalvar);
+            this.Controls.Add(descricaoSituacaoLabel);
             this.Controls.Add(this.buttonAtualizar);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.descricaoSituacaoComboBox);
+            this.Controls.Add(totalLabel);
             this.Controls.Add(this.buttonNovo);
+            this.Controls.Add(this.totalTextBox);
+            this.Controls.Add(this.idTextBox1);
+            this.Controls.Add(idLabel1);
+            this.Controls.Add(horarioLabel);
+            this.Controls.Add(this.horarioTextBox);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormCadastroAgendamento";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Agendamento";
             this.Load += new System.EventHandler(this.FormCadastroAgendamento_Load);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.agendamentoBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.agendamentoServicosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.servicoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.agendamentoServicosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.agendamentoServicosBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.agendamentoServicoDataGridView)).EndInit();
             this.groupBoxServico.ResumeLayout(false);
             this.groupBoxServico.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -788,6 +793,10 @@
         private System.Windows.Forms.TextBox idSituacaoTextBox;
         private System.Windows.Forms.Button button1RemoverServico;
         private System.Windows.Forms.BindingSource agendamentoBindingSource;
+        private System.Windows.Forms.BindingSource servicoBindingSource;
+        private System.Windows.Forms.GroupBox groupBoxServico;
+        private System.Windows.Forms.Button buttonNovo;
+        private System.Windows.Forms.BindingSource agendamentoServicosBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn servicoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn quantidadeDataGridViewTextBoxColumn;
@@ -796,9 +805,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn valorTotalDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn idServicoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tempoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource agendamentoServicosBindingSource;
-        private System.Windows.Forms.BindingSource servicoBindingSource;
-        private System.Windows.Forms.GroupBox groupBoxServico;
-        private System.Windows.Forms.Button buttonNovo;
+        private System.Windows.Forms.BindingSource agendamentoServicosBindingSource1;
     }
 }

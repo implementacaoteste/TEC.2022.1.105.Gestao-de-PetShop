@@ -205,9 +205,9 @@ namespace DAL
 
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = cn;
-            cmd.CommandText = @"SELECT Id,Nome, Sexo, Agressivo, Cor, Alergia, DataNascimento ,Ativo FROM Cliente WHERE Id = @Id";
+            cmd.CommandText = @"SELECT Id,Nome,IdCliente,Sexo,  Agressivo, Cor, Alergia, DataNascimento ,Ativo FROM Animal WHERE Id = @Id";
             cmd.CommandType = System.Data.CommandType.Text;
-            cmd.Parameters.AddWithValue("@Id", _id);
+            cmd.Parameters.AddWithValue("@Id", _id); //
 
             cn.Open();
             using (SqlDataReader rd = cmd.ExecuteReader())
@@ -219,6 +219,7 @@ namespace DAL
                         animal.Id = (int)rd["Id"];
                         animal.Nome = rd["Nome"].ToString();
                         animal.Sexo = (char)rd["Sexo"];
+                        animal.IdCliente = (int)rd["IdCliente"];
                         animal.Agressivo = (char)rd["Agressivo"];
                         animal.Cor = rd["Cor"].ToString();
                         animal.Alergia = rd["Alergia"].ToString();

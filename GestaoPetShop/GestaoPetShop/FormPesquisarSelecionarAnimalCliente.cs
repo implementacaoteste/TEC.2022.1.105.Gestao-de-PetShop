@@ -66,6 +66,8 @@ namespace GestaoPetShop
         {
             try
             {
+                agendamentoBindingSource.EndEdit();
+
                 if (agendamentoBindingSource.Count > 0)
 
                 {
@@ -83,6 +85,11 @@ namespace GestaoPetShop
 
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void FormPesquisarSelecionarAnimalCliente_Load(object sender, EventArgs e)
+        {
+            agendamentoBindingSource.AddNew();
         }
     }
 }
