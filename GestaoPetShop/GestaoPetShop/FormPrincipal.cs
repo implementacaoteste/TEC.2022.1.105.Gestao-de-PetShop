@@ -98,7 +98,7 @@ namespace GestaoPetShop
         {
             using (FormConsultaAnimal frm = new FormConsultaAnimal())
             {
-                frm.ShowDialog();
+                frm.ShowDialog(); 
             }
         }
 

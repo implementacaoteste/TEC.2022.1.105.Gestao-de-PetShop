@@ -269,7 +269,7 @@
             this.Controls.Add(this.animalDataGridView);
             this.Controls.Add(this.labelBuscarPorAnimal);
             this.Name = "FormConsultaAnimal";
-            this.Text = "Buscar Animal";
+            this.Text = "B";
             this.Load += new System.EventHandler(this.FormConsultaAnimal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.petshopDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.animalBindingSource)).EndInit();
