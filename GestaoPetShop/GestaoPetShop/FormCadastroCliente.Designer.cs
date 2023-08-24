@@ -336,6 +336,7 @@
             this.AtivocheckBox1.TabIndex = 23;
             this.AtivocheckBox1.Text = "Ativo";
             this.AtivocheckBox1.UseVisualStyleBackColor = true;
+            this.AtivocheckBox1.CheckedChanged += new System.EventHandler(this.AtivocheckBox1_CheckedChanged);
             // 
             // pictureBoxFoto
             // 
