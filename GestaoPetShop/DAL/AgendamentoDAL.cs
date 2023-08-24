@@ -535,10 +535,10 @@ namespace DAL
                 cn.Close();
             }
         }
-        public List<Agendamento> BuscarPorNomeProfissional(string _nomeProfissional, int _idProfissional)
+        public List<Profissional> BuscarPorNomeProfissional(string _nomeProfissional, int _idProfissional)
         {
-            List<Agendamento> listaAgendamentos = new List<Agendamento>();
-            Agendamento agendamento;
+            List<Profissional> profissionais = new List<Profissional>();
+            Profissional profissional;
 
             SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
             try
@@ -573,20 +573,20 @@ namespace DAL
                 {
                     while (rd.Read())
                     {
-                        agendamento = new Agendamento();
+                        profissional = new Profissional();
 
-                        agendamento.IdProfissional = Convert.ToInt32(rd["Id"]);
-                        agendamento.NomeProfissional = rd["Nome"].ToString();
+                        profissional.Id = Convert.ToInt32(rd["Id"]);
+                        profissional.Nome = rd["Nome"].ToString();
 
-                        listaAgendamentos.Add(agendamento);
+                        profissionais.Add(profissional);
 
                     }
                 }
-                return listaAgendamentos;
+                return profissionais;
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu um erro ao tentar buscar todos os Serviços no banco de dados.", ex) { Data = { { "Id", 46 } } };
+                throw new Exception("Ocorreu um erro ao tentar Buscar Por Nome Profissinais no banco de dados.", ex) { Data = { { "Id", 46 } } };
             }
             finally
             {

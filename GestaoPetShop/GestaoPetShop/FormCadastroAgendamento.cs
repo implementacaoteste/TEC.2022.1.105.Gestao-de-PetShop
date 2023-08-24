@@ -44,17 +44,18 @@ namespace GestaoPetShop
                 if (id == 0)
                     agendamentoBindingSource.AddNew();
                 else
-
                     agendamentoBindingSource.DataSource = new AgendamentoBLL().BuscarAgendamentoPorId(id, opc);
 
-                List<AgendamentoServico> listViewServico = new List<AgendamentoServico>();
+                //List<AgendamentoServico> listViewServico = new List<AgendamentoServico>();
 
-                listViewServico = new AgendamentoBLL().BuscarServicoPorNome(descricaoComboBox.Text);
-                List<Agendamento> agendamentoProfissinal = new List<Agendamento>();
+                //listViewServico = new AgendamentoBLL().BuscarServicoPorNome(descricaoComboBox.Text);
+
+                List<Profissional> agendamentoProfissinal = new List<Profissional>();
+
                 List<Situacao> situacoes = new List<Situacao>();
 
-                ativoCheckBox.Checked = true;
-                int num = listViewServico.Count();
+               
+                //int num = listViewServico.Count();
 
 
                 string _nomeProfissional = "";
@@ -63,7 +64,7 @@ namespace GestaoPetShop
                 int num2 = agendamentoProfissinal.Count();
                 for (int x = 0; x < num2; x++)
                 {
-                    nomeProfissionalComboBox.Items.Insert(x, agendamentoProfissinal[x].NomeProfissional);
+                    nomeProfissionalComboBox.Items.Insert(x, agendamentoProfissinal[x].Nome);
                 }
 
                 situacoes = new SituacaoBLL().BuscarTodos();
@@ -250,7 +251,6 @@ namespace GestaoPetShop
         {
             try
             {
-
                 Situacao situacao = new Situacao();
                 List<Situacao> situacaos = new List<Situacao>();
                 situacao = new AgendamentoBLL().BuscarSituacaoPorNome(descricaoSituacaoComboBox.Text);
@@ -264,10 +264,6 @@ namespace GestaoPetShop
             }
 
         }
-
-
-
-
         private void button1RemoverServico_Click(object sender, EventArgs e)
         {
             try

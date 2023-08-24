@@ -307,8 +307,6 @@
             // ativoCheckBox
             // 
             this.ativoCheckBox.AutoSize = true;
-            this.ativoCheckBox.Checked = true;
-            this.ativoCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
             this.ativoCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.agendamentoBindingSource, "Ativo", true));
             this.ativoCheckBox.Location = new System.Drawing.Point(750, 91);
             this.ativoCheckBox.Name = "ativoCheckBox";
@@ -405,7 +403,7 @@
             // buttonPesquisarAnimal
             // 
             this.buttonPesquisarAnimal.Location = new System.Drawing.Point(768, 59);
-            this.buttonPesquisarAnimal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonPesquisarAnimal.Margin = new System.Windows.Forms.Padding(2);
             this.buttonPesquisarAnimal.Name = "buttonPesquisarAnimal";
             this.buttonPesquisarAnimal.Size = new System.Drawing.Size(64, 19);
             this.buttonPesquisarAnimal.TabIndex = 22;
@@ -500,7 +498,7 @@
             // buttonAtualizar
             // 
             this.buttonAtualizar.Location = new System.Drawing.Point(18, 200);
-            this.buttonAtualizar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonAtualizar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonAtualizar.Name = "buttonAtualizar";
             this.buttonAtualizar.Size = new System.Drawing.Size(59, 20);
             this.buttonAtualizar.TabIndex = 6;
@@ -511,7 +509,7 @@
             // buttonSalvar
             // 
             this.buttonSalvar.Location = new System.Drawing.Point(791, 393);
-            this.buttonSalvar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonSalvar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSalvar.Name = "buttonSalvar";
             this.buttonSalvar.Size = new System.Drawing.Size(56, 20);
             this.buttonSalvar.TabIndex = 28;
@@ -644,9 +642,9 @@
             this.groupBoxServico.Controls.Add(this.textBoxPrecoAplicado);
             this.groupBoxServico.Enabled = false;
             this.groupBoxServico.Location = new System.Drawing.Point(54, 134);
-            this.groupBoxServico.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxServico.Margin = new System.Windows.Forms.Padding(2);
             this.groupBoxServico.Name = "groupBoxServico";
-            this.groupBoxServico.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxServico.Padding = new System.Windows.Forms.Padding(2);
             this.groupBoxServico.Size = new System.Drawing.Size(816, 63);
             this.groupBoxServico.TabIndex = 31;
             this.groupBoxServico.TabStop = false;
