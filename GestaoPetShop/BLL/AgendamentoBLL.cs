@@ -38,7 +38,7 @@ namespace BLL
             AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
             return agendamentoDAL.BuscarPorNomeAnimalCliente(_nomeAnimalCliente, _opc);
         }
-        public List<Agendamento> BuscarPorNomeProfissional(string _nomeProfissional, int _idProfissional)
+        public List<Profissional> BuscarPorNomeProfissional(string _nomeProfissional, int _idProfissional)
         {
             AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
             return agendamentoDAL.BuscarPorNomeProfissional(_nomeProfissional, _idProfissional);
@@ -84,7 +84,7 @@ namespace BLL
             AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
             return agendamentoDAL.BuscarPorProfissional(_nomeProfissional);
         }
-        public Agendamento BuscarProfissional(string _nomeProfissional)
+        public Profissional BuscarProfissional(string _nomeProfissional)
         {
             AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
             return agendamentoDAL.BuscarProfissional(_nomeProfissional);
@@ -112,6 +112,18 @@ namespace BLL
         {
             AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
             return agendamentoDAL.BuscarTodos();
+        }
+
+        public Animal BuscarPorIdAnimal(int _idpesquisa)
+        {
+            AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
+            return agendamentoDAL.BuscarPorIdAnimal(_idpesquisa);
+        }
+
+        public Cliente BuscarPorIdCliente(int _idCliente)
+        {
+            AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
+            return agendamentoDAL.BuscarPorIdCliente(_idCliente);
         }
     }
 }

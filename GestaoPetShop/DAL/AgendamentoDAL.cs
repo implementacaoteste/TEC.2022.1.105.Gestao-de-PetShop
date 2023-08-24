@@ -53,7 +53,8 @@ namespace DAL
 
                     catch (Exception ex)
                     {
-                        transaction.Rollback();
+                        if (transaction != null && transaction.Connection != null)
+                            transaction.Rollback();
                         throw new Exception("Ocorreu um erro ao tentar excluir todas as permissões do grupo no banco de dados.", ex) { Data = { { "Id", -1 } } };
                     }
                 }
@@ -100,7 +101,8 @@ namespace DAL
                     }
                     catch (Exception ex)
                     {
-                        transaction.Rollback();
+                        if (transaction != null && transaction.Connection != null)
+                            transaction.Rollback();
                         throw new Exception("Ocorreu um erro ao tentar excluir todas as permissões do grupo no banco de dados.", ex) { Data = { { "Id", -1 } } };
                     }
                 }
@@ -150,7 +152,8 @@ namespace DAL
                     }
                     catch (Exception ex)
                     {
-                        transaction.Rollback();
+                        if (transaction != null && transaction.Connection != null)
+                            transaction.Rollback();
                         throw new Exception("Ocorreu um erro ao tentar excluir todos os usuários do grupo no banco de dados.", ex) { Data = { { "Id", -1 } } };
                     }
                 }
@@ -210,10 +213,10 @@ namespace DAL
                         if (_transaction == null)
                             transaction.Commit();
                     }
-
                     catch (Exception ex)
                     {
-                        transaction.Rollback();
+                        if (transaction != null && transaction.Connection != null)
+                            transaction.Rollback();
                         throw new Exception("Ocorreu um erro ao tentar excluir todas as permissões do grupo no banco de dados.", ex) { Data = { { "Id", -1 } } };
                     }
                 }
@@ -246,7 +249,7 @@ namespace DAL
 
                         foreach (AgendamentoServico item in _agendamento.AgendamentoServicos)
                         {
-                           
+
                             bool x = ExisteVinculo(_agendamento.Id, item.IdServico);
                             if (!x)
                             {
@@ -265,7 +268,8 @@ namespace DAL
                     }
                     catch (Exception ex)
                     {
-                        transaction.Rollback();
+                        if (transaction != null && transaction.Connection != null)
+                            transaction.Rollback();
                         throw new Exception("Ocorreu um erro ao tentar Alterar Serviços de um agendamnto no banco de dados.", ex) { Data = { { "Id", -1 } } };
                     }
                 }
@@ -274,7 +278,7 @@ namespace DAL
         public bool ExisteVinculo(int _idAgendamento, int _idServico)
         {
 
-            
+
 
             SqlConnection cn = new SqlConnection();
             SqlCommand cmd = new SqlCommand();
@@ -300,13 +304,13 @@ namespace DAL
             {
                 throw new Exception("Ocorreu um erro ao tentar buscar vínculos de Serviços com Agendamento: " + ex.Message) { Data = { { "Id", 45 } } };
             }
-            
+
         }
         private void AlterarExcluirServicoDeAgendamento(Agendamento _agendamento, List<AgendamentoServico> _servicosParaExcluir, SqlTransaction _transaction)
         {
-            
 
-            
+
+
             SqlTransaction transaction = _transaction;
 
             using (SqlConnection cn = new SqlConnection(Conexao.StringDeConexao))
@@ -323,9 +327,10 @@ namespace DAL
                         cmd.Transaction = transaction;
                         cmd.Connection = transaction.Connection;
 
+                        cmd.CommandType = System.Data.CommandType.Text;
                         foreach (AgendamentoServico item in _servicosParaExcluir)
                         {
-                            cmd.CommandType = System.Data.CommandType.Text;
+                            cmd.Parameters.Clear();
                             cmd.Parameters.AddWithValue("@IdAgendamento", _agendamento.Id);
                             cmd.Parameters.AddWithValue("@IdServico", item.IdServico);
                             cmd.ExecuteNonQuery();
@@ -335,7 +340,8 @@ namespace DAL
                     }
                     catch (Exception ex)
                     {
-                        transaction.Rollback();
+                        if (transaction != null && transaction.Connection != null)
+                            transaction.Rollback();
                         throw new Exception("Ocorreu um erro ao tentar excluir Serviços de um agendamento no banco de dados.", ex) { Data = { { "Id", 32 } } };
                     }
                 }
@@ -365,7 +371,8 @@ namespace DAL
                     }
                     catch (Exception ex)
                     {
-                        transaction.Rollback();
+                        if (transaction != null && transaction.Connection != null)
+                            transaction.Rollback();
                         throw new Exception("Ocorreu um erro ao tentar excluir um agendamento no banco de dados.", ex) { Data = { { "Id", 32 } } };
                     }
                 }
@@ -492,17 +499,17 @@ namespace DAL
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
                 cmd.CommandText = @"SELECT A.Id as AnimalId , A.Nome as AnimalNome ,C.Id as  ClienteId, C.Nome as ClienteNome 
-                                        FROM Animal A INNER JOIN Cliente C  ON A.IdCliente = C.Id WHERE ";
+                                        FROM Animal A INNER JOIN Cliente C  ON A.IdCliente = C.Id  ";
 
 
                 if (_opc == 2)
                 {
-                    cmd.CommandText = cmd.CommandText + "UPPER (A.Nome) LIKE UPPER (@Nome)";
+                    cmd.CommandText = cmd.CommandText + " WHERE UPPER (A.Nome) LIKE UPPER (@Nome)";
 
                 }
                 if (_opc == 3)
                 {
-                    cmd.CommandText = cmd.CommandText + "UPPER (C.Nome) LIKE UPPER (@Nome)";
+                    cmd.CommandText = cmd.CommandText + "WHERE UPPER (C.Nome) LIKE UPPER (@Nome)";
                 }
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@Nome", "%" + _nomeAnimalCliente + "%");
@@ -534,10 +541,10 @@ namespace DAL
                 cn.Close();
             }
         }
-        public List<Agendamento> BuscarPorNomeProfissional(string _nomeProfissional, int _idProfissional)
+        public List<Profissional> BuscarPorNomeProfissional(string _nomeProfissional, int _idProfissional)
         {
-            List<Agendamento> listaAgendamentos = new List<Agendamento>();
-            Agendamento agendamento;
+            List<Profissional> profissionais = new List<Profissional>();
+            Profissional profissional;
 
             SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
             try
@@ -572,20 +579,20 @@ namespace DAL
                 {
                     while (rd.Read())
                     {
-                        agendamento = new Agendamento();
+                        profissional = new Profissional();
 
-                        agendamento.IdProfissional = Convert.ToInt32(rd["Id"]);
-                        agendamento.NomeProfissional = rd["Nome"].ToString();
+                        profissional.Id = Convert.ToInt32(rd["Id"]);
+                        profissional.Nome = rd["Nome"].ToString();
 
-                        listaAgendamentos.Add(agendamento);
+                        profissionais.Add(profissional);
 
                     }
                 }
-                return listaAgendamentos;
+                return profissionais;
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu um erro ao tentar buscar todos os Serviços no banco de dados.", ex) { Data = { { "Id", 46 } } };
+                throw new Exception("Ocorreu um erro ao tentar Buscar Por Nome Profissinais no banco de dados.", ex) { Data = { { "Id", 46 } } };
             }
             finally
             {
@@ -942,11 +949,11 @@ namespace DAL
                 cn.Close();
             }
         }
-        public Agendamento BuscarProfissional(string _nomeProfissional)
+        public Profissional BuscarProfissional(string _nomeProfissional)
         {
 
 
-            Agendamento agendamento = new Agendamento();
+            Profissional profissional = new Profissional();
 
             SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
             try
@@ -964,11 +971,11 @@ namespace DAL
                 {
                     if (rd.Read())
                     {
-                        agendamento.IdProfissional = Convert.ToInt32(rd["Id"]);
-                        agendamento.NomeProfissional = rd["Nome"].ToString();
+                        profissional.Id = Convert.ToInt32(rd["Id"]);
+                        profissional.Nome = rd["Nome"].ToString();
                     }
                 }
-                return agendamento;
+                return profissional;
             }
             catch (Exception ex)
             {
@@ -1185,15 +1192,15 @@ namespace DAL
                                                                                                                                                                                             LEFT JOIN Animal Ani                 ON Ag.IdAnimal = Ani.Id
                                                                                                                                                                                             LEFT JOIN Cliente Cli                ON Ani.IdCliente = Cli.Id
                                                                                                                                                                                             LEFT JOIN Situacao Si                ON Ag.IdSituacao = Si.Id
-                                                                                                                                                                                            WHERE Ag.Id = @Id";
+                                                                                                                                                                                            WHERE ";
 
                 if (_opc == 0)
-                    cmd.CommandText = cmd.CommandText + "Ag.Id = @id"; // Busca pelo ID do Agendamento
+                    cmd.CommandText = cmd.CommandText + "Ag.Id = @Id"; // Busca pelo ID do Agendamento
                 else if (_opc == 1)
                     cmd.CommandText = cmd.CommandText + "Ani.Id = @Id";//Busca pelo ID do Animal
                 else if (_opc == 2)
                     cmd.CommandText = cmd.CommandText + "Cli.Id = @Id"; // bUSCAR POR ID DO CLIENTE
-                else if(_opc == 3)
+                else if (_opc == 3)
                     cmd.CommandText = cmd.CommandText + "P.Id = @Id"; // buscar por Id do Profissional
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@Id", _idAgendamento);
@@ -1325,7 +1332,7 @@ namespace DAL
                                                                                                                                                                                             LEFT JOIN Situacao Si                ON Ag.IdSituacao = Si.Id";//WHERE Ag.Id = @Id
 
                 cmd.CommandType = System.Data.CommandType.Text;
-               // cmd.Parameters.AddWithValue("@Id", _idAgendamento);
+                // cmd.Parameters.AddWithValue("@Id", _idAgendamento);
                 cn.Open();
 
                 using (SqlDataReader rd = cmd.ExecuteReader())
@@ -1355,6 +1362,78 @@ namespace DAL
             catch (Exception ex)
             {
                 throw new Exception("Ocorreu um erro ao tentar buscar todos os Serviços no banco de dados.", ex) { Data = { { "Id", 46 } } };
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
+
+        public Animal BuscarPorIdAnimal(int _idpesquisa)
+        {
+            Animal animal = new Animal();
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = cn;
+                cmd.CommandText = @"SELECT Id, Nome , IdCliente FROM Animal WHERE Id = @Id";
+
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.Parameters.AddWithValue("@Id", _idpesquisa);
+                cn.Open();
+
+
+                using (SqlDataReader rd = cmd.ExecuteReader())
+                {
+                    if (rd.Read())
+                    {
+                        animal.Id = Convert.ToInt32(rd["Id"]);
+                        animal.Nome = rd["Nome"].ToString();
+                        animal.IdCliente = Convert.ToInt32(rd["IdCliente"]);
+                    }
+                }
+                return animal;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu um erro ao tentar buscar Animal no banco de dados.", ex) { Data = { { "Id", 46 } } };
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
+
+        public Cliente BuscarPorIdCliente(int _idCliente)
+        {
+            Cliente cliente = new Cliente();
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = cn;
+                cmd.CommandText = @"SELECT Id, Nome  FROM Cliente WHERE Id = @Id";
+
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.Parameters.AddWithValue("@Id", _idCliente);
+                cn.Open();
+
+
+                using (SqlDataReader rd = cmd.ExecuteReader())
+                {
+                    if (rd.Read())
+                    {
+                        cliente.Id = Convert.ToInt32(rd["Id"]);
+                        cliente.Nome = rd["Nome"].ToString();
+
+                    }
+                }
+                return cliente;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu um erro ao tentar buscar Animal no banco de dados.", ex) { Data = { { "Id", 46 } } };
             }
             finally
             {

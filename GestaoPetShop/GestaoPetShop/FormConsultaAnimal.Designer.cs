@@ -314,8 +314,11 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.animalDataGridView);
             this.Controls.Add(this.labelBuscarPorAnimal);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormConsultaAnimal";
-            this.Text = "Buscar por Animal";
+            this.ShowIcon = false;
+            this.Text = "B";
             this.Load += new System.EventHandler(this.FormConsultaAnimal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.petshopDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.animalBindingSource)).EndInit();

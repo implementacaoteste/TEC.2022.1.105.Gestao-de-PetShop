@@ -19,5 +19,9 @@ namespace Models
         public int IdCliente { get; set; }
         public string NomeCliente { get; set; }
         public List<AgendamentoServico> AgendamentoServicos { get; set; }
+        public Agendamento()
+        {
+            AgendamentoServicos = new List<AgendamentoServico>();
+        }
     }
 }

@@ -130,12 +130,10 @@ namespace GestaoPetShop
 
         }
 
-//<<<<<<< HEAD
         private void AtivocheckBox1_CheckedChanged(object sender, EventArgs e)
         {
 
         }
-//=======
         private void emailClienteDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
@@ -188,6 +186,5 @@ namespace GestaoPetShop
                 MessageBox.Show(ex.Message);
             }
         }
-//>>>>>>> f57025f6fc5eb7c3fbc83d8dddde2da77afa0824
     }
 }

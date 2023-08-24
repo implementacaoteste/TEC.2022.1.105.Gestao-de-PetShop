@@ -80,7 +80,8 @@ namespace DAL
                     }
                     catch (Exception ex)
                     {
-                        transaction.Rollback();
+                        if (transaction != null && transaction.Connection != null)
+                            transaction.Rollback();
                         throw new Exception("Ocorreu um erro ao tentar inserir um e-mail no banco de dados.", ex) { Data = { { "Id", 107 } } };
                     }
                 }

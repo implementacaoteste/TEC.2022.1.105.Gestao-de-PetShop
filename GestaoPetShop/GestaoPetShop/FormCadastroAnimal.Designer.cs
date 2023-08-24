@@ -244,7 +244,10 @@
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormCadastroAnimal";
+            this.ShowIcon = false;
             this.Text = "Cadastro de Animal";
             this.Load += new System.EventHandler(this.FormCadastroAnimal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.animalBindingSource)).EndInit();
