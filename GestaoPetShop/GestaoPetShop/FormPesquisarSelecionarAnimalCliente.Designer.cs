@@ -174,7 +174,10 @@
             this.Controls.Add(this.buttonSelecionarAnimalCliente);
             this.Controls.Add(this.buttonBuscarAnimalCliente);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormPesquisarSelecionarAnimalCliente";
+            this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PesquisarSelecionarAnimalCliente";
