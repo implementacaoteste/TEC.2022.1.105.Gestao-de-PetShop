@@ -182,7 +182,7 @@ namespace GestaoPetShop
             try
             {
 
-                if (dataGridView1_FormsPrincipalBindingSource.Count <= 0)
+                if (agendamentoBindingSource.Count <= 0)
                 {
 
                     MessageBox.Show("Não foi selecionado o Agendamento para ser alterado.");
@@ -191,7 +191,7 @@ namespace GestaoPetShop
 
 
 
-                int id = ((DataGridView1_FormsPrincipal)dataGridView1_FormsPrincipalBindingSource.Current).IdAgendamento;
+                int id = ((Agendamento)agendamentoBindingSource.Current).Id;
 
                 using (FormCadastroAgendamento frm = new FormCadastroAgendamento(id))
                 {

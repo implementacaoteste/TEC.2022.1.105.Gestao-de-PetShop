@@ -79,31 +79,31 @@ namespace GestaoPetShop
                 {
                     Agendamento agendamento = new Agendamento();
 
-                    agendamento = new AgendamentoBLL().BuscarAgendamentoPorId(id, opc);
-                    List<AgendamentoServico> agendamentoServicos = new List<AgendamentoServico>();
-                    agendamentoServicos = agendamento.AgendamentoServicos;
-                    idTextBox1.Text = Convert.ToString(agendamento.Id);
-                    dataAgDateTimePicker.Value = agendamento.DataAg;
-                    horarioTextBox.Text = Convert.ToString(agendamento.Horario);
-                    idSituacaoTextBox.Text = Convert.ToString(agendamento.IdSituacao);
-                    descricaoSituacaoComboBox.Text = Convert.ToString(agendamento.DescricaoSituacao);
-                    idAnimalTextBox.Text = Convert.ToString(agendamento.IdAnimal);
-                    nomeAnimalTextBox.Text = Convert.ToString(agendamento.NomeAnimal);
-                    idClienteTextBox.Text = Convert.ToString(agendamento.IdCliente);
-                    nomeClienteTextBox.Text = Convert.ToString(agendamento.NomeCliente);
-                    idProfissionalTextBox.Text = Convert.ToString(agendamento.NomeProfissional);
-                    nomeProfissionalComboBox.Text = Convert.ToString(agendamento.NomeProfissional);
+                    agendamentoBindingSource.DataSource = new AgendamentoBLL().BuscarAgendamentoPorId(id, opc);
+                    //List<AgendamentoServico> agendamentoServicos = new List<AgendamentoServico>();
+                    //agendamentoServicos = agendamento.AgendamentoServicos;
+                   
 
-                    totalTextBox.Text = Convert.ToString(agendamento.Total);
+                    //idTextBox1.Text = Convert.ToString(agendamento.Id);
+                    //dataAgDateTimePicker.Value = agendamento.DataAg;
+                    //horarioTextBox.Text = Convert.ToString(agendamento.Horario);
+                    //idSituacaoTextBox.Text = Convert.ToString(agendamento.IdSituacao);
+                    //descricaoSituacaoComboBox.Text = Convert.ToString(agendamento.DescricaoSituacao);
+                    //idAnimalTextBox.Text = Convert.ToString(agendamento.IdAnimal);
+                    //nomeAnimalTextBox.Text = Convert.ToString(agendamento.NomeAnimal);
+                    //idClienteTextBox.Text = Convert.ToString(agendamento.IdCliente);
+                    //nomeClienteTextBox.Text = Convert.ToString(agendamento.NomeCliente);
+                    //idProfissionalTextBox.Text = Convert.ToString(agendamento.NomeProfissional);
+                    //nomeProfissionalComboBox.Text = Convert.ToString(agendamento.NomeProfissional);
 
-                    ativoCheckBox.Checked = true;
+                    //totalTextBox.Text = Convert.ToString(agendamento.Total);
 
-                    foreach (AgendamentoServico item in agendamentoServicos)
-                    {
+                    //ativoCheckBox.Checked = true;
 
-
-                        agendamentoServicosBindingSource.Add(item);
-                    }
+                    //foreach (AgendamentoServico item in agendamentoServicos)
+                    //{
+                    //    agendamentoServicosBindingSource.Add(item);
+                    //}
                 }
 
 

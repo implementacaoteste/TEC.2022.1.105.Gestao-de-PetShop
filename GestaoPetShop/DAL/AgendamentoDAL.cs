@@ -1186,10 +1186,10 @@ namespace DAL
                                                                                                                                                                                             LEFT JOIN Animal Ani                 ON Ag.IdAnimal = Ani.Id
                                                                                                                                                                                             LEFT JOIN Cliente Cli                ON Ani.IdCliente = Cli.Id
                                                                                                                                                                                             LEFT JOIN Situacao Si                ON Ag.IdSituacao = Si.Id
-                                                                                                                                                                                            WHERE Ag.Id = @Id";
+                                                                                                                                                                                            WHERE ";
 
                 if (_opc == 0)
-                    cmd.CommandText = cmd.CommandText + "Ag.Id = @id"; // Busca pelo ID do Agendamento
+                    cmd.CommandText = cmd.CommandText + "Ag.Id = @Id"; // Busca pelo ID do Agendamento
                 else if (_opc == 1)
                     cmd.CommandText = cmd.CommandText + "Ani.Id = @Id";//Busca pelo ID do Animal
                 else if (_opc == 2)
