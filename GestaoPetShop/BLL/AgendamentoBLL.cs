@@ -113,5 +113,17 @@ namespace BLL
             AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
             return agendamentoDAL.BuscarTodos();
         }
+
+        public Animal BuscarPorIdAnimal(int _idpesquisa)
+        {
+            AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
+            return agendamentoDAL.BuscarPorIdAnimal(_idpesquisa);
+        }
+
+        public Cliente BuscarPorIdCliente(int _idCliente)
+        {
+            AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
+            return agendamentoDAL.BuscarPorIdCliente(_idCliente);
+        }
     }
 }

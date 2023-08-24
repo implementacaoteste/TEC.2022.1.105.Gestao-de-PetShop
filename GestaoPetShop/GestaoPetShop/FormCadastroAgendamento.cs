@@ -53,6 +53,7 @@ namespace GestaoPetShop
                 List<Agendamento> agendamentoProfissinal = new List<Agendamento>();
                 List<Situacao> situacoes = new List<Situacao>();
 
+                ativoCheckBox.Checked = true;
                 int num = listViewServico.Count();
 
 
@@ -201,14 +202,14 @@ namespace GestaoPetShop
                         int idpesquisa = frm.id;
                         AgendamentoBLL agendamentoBLL = new AgendamentoBLL();
                         Animal animal= new Animal();
-                        animal = new AnimalBLL().BuscarPorId(idpesquisa);
+                        animal = new AgendamentoBLL().BuscarPorIdAnimal(idpesquisa);
                         Cliente cliente = new Cliente();   
-                        cliente = new ClienteBLL().BuscarPorId(animal.IdCliente);
+                        cliente = new AgendamentoBLL().BuscarPorIdCliente(animal.IdCliente);
 
-                        idAnimalTextBox.Text = Convert.ToString(animal.Id);
-                        nomeAnimalTextBox.Text = Convert.ToString(animal.Nome);
-                        idClienteTextBox.Text = Convert.ToString(cliente.Id);
-                        nomeClienteTextBox.Text = Convert.ToString(cliente.Nome);
+                        ((Agendamento)agendamentoBindingSource.Current).IdAnimal = animal.Id;
+                        ((Agendamento)agendamentoBindingSource.Current).NomeAnimal = animal.Nome;
+                        ((Agendamento)agendamentoBindingSource.Current).IdCliente = cliente.Id;
+                        ((Agendamento)agendamentoBindingSource.Current).NomeCliente = cliente.Nome;
                     }
                     catch (Exception ex)
                     {
