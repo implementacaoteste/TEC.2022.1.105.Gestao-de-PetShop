@@ -42,7 +42,8 @@ namespace DAL
                     }
                     catch (Exception ex)
                     {
-                        transaction.Rollback();
+                        if (transaction != null && transaction.Connection != null)
+                            transaction.Rollback();
                         throw new Exception("Ocorreu um erro ao tentar inserir um telefone no banco de dados.", ex) { Data = { { "Id", 109 } } };
                     }
                 }
@@ -160,7 +161,7 @@ namespace DAL
                         telefonecliente.Id = (int)rd["Id"];
                         telefonecliente.Telefone = rd["Telefone"].ToString();
 
-                       telefoneclienteList.Add(telefonecliente);
+                        telefoneclienteList.Add(telefonecliente);
                     }
                 }
                 return telefoneclienteList;

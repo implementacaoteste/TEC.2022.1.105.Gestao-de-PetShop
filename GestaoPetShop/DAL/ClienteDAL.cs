@@ -67,7 +67,8 @@ namespace DAL
 
                     catch (Exception ex)
                     {
-                        transaction.Rollback();
+                        if (transaction != null && transaction.Connection != null)
+                            transaction.Rollback();
                         throw new Exception("Ocorreu um erro ao tentar inserir um cliente no banco de dados.", ex) { Data = { { "Id", 10 } } };
                     }
 
@@ -110,7 +111,8 @@ namespace DAL
                     }
                     catch (Exception ex)
                     {
-                        transaction.Rollback();
+                        if (transaction != null && transaction.Connection != null)
+                            transaction.Rollback();
                         throw new Exception("Ocorreu um erro ao tentar Buscar Idcliente no banco de dados.", ex) { Data = { { "Id", 106 } } };
                     }
                 }
@@ -189,7 +191,8 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                transaction.Rollback();
+                if (transaction != null && transaction.Connection != null)
+                    transaction.Rollback();
                 throw new Exception("Erro ao tentar alterar cliente no banco de dados", ex) { Data = { { "Id", 11 } } };
             }
             finally

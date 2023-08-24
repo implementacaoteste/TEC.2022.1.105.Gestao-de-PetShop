@@ -53,7 +53,8 @@ namespace DAL
 
                     catch (Exception ex)
                     {
-                        transaction.Rollback();
+                        if (transaction != null && transaction.Connection != null)
+                            transaction.Rollback();
                         throw new Exception("Ocorreu um erro ao tentar excluir todas as permissões do grupo no banco de dados.", ex) { Data = { { "Id", -1 } } };
                     }
                 }
@@ -100,7 +101,8 @@ namespace DAL
                     }
                     catch (Exception ex)
                     {
-                        transaction.Rollback();
+                        if (transaction != null && transaction.Connection != null)
+                            transaction.Rollback();
                         throw new Exception("Ocorreu um erro ao tentar excluir todas as permissões do grupo no banco de dados.", ex) { Data = { { "Id", -1 } } };
                     }
                 }
@@ -150,7 +152,8 @@ namespace DAL
                     }
                     catch (Exception ex)
                     {
-                        transaction.Rollback();
+                        if (transaction != null && transaction.Connection != null)
+                            transaction.Rollback();
                         throw new Exception("Ocorreu um erro ao tentar excluir todos os usuários do grupo no banco de dados.", ex) { Data = { { "Id", -1 } } };
                     }
                 }
@@ -210,10 +213,10 @@ namespace DAL
                         if (_transaction == null)
                             transaction.Commit();
                     }
-
                     catch (Exception ex)
                     {
-                        transaction.Rollback();
+                        if (transaction != null && transaction.Connection != null)
+                            transaction.Rollback();
                         throw new Exception("Ocorreu um erro ao tentar excluir todas as permissões do grupo no banco de dados.", ex) { Data = { { "Id", -1 } } };
                     }
                 }
@@ -265,7 +268,8 @@ namespace DAL
                     }
                     catch (Exception ex)
                     {
-                        transaction.Rollback();
+                        if (transaction != null && transaction.Connection != null)
+                            transaction.Rollback();
                         throw new Exception("Ocorreu um erro ao tentar Alterar Serviços de um agendamnto no banco de dados.", ex) { Data = { { "Id", -1 } } };
                     }
                 }
@@ -336,7 +340,8 @@ namespace DAL
                     }
                     catch (Exception ex)
                     {
-                        transaction.Rollback();
+                        if (transaction != null && transaction.Connection != null)
+                            transaction.Rollback();
                         throw new Exception("Ocorreu um erro ao tentar excluir Serviços de um agendamento no banco de dados.", ex) { Data = { { "Id", 32 } } };
                     }
                 }
@@ -366,7 +371,8 @@ namespace DAL
                     }
                     catch (Exception ex)
                     {
-                        transaction.Rollback();
+                        if (transaction != null && transaction.Connection != null)
+                            transaction.Rollback();
                         throw new Exception("Ocorreu um erro ao tentar excluir um agendamento no banco de dados.", ex) { Data = { { "Id", 32 } } };
                     }
                 }
@@ -1380,7 +1386,7 @@ namespace DAL
 
                 using (SqlDataReader rd = cmd.ExecuteReader())
                 {
-                   if (rd.Read())
+                    if (rd.Read())
                     {
                         animal.Id = Convert.ToInt32(rd["Id"]);
                         animal.Nome = rd["Nome"].ToString();
@@ -1420,7 +1426,7 @@ namespace DAL
                     {
                         cliente.Id = Convert.ToInt32(rd["Id"]);
                         cliente.Nome = rd["Nome"].ToString();
-                      
+
                     }
                 }
                 return cliente;
