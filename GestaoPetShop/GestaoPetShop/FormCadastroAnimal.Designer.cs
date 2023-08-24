@@ -53,6 +53,7 @@
             // 
             // label1
             // 
+            this.label1.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.label1.Dock = System.Windows.Forms.DockStyle.Top;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
@@ -223,6 +224,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::GestaoPetShop.Properties.Resources.papel_de_parede_2;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.labelDataNascimento);
             this.Controls.Add(this.labelAlergia);

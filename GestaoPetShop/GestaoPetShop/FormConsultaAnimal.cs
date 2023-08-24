@@ -12,6 +12,7 @@ using System.Windows.Forms;
 
 namespace GestaoPetShop
 {
+
     public partial class FormConsultaAnimal : Form
     {
         int id;
@@ -84,6 +85,10 @@ namespace GestaoPetShop
                 MessageBox.Show(ex.Message);
             }
         }
-        
+
+        private void buttonCancelar_Click(object sender, EventArgs e)
+        {
+            animalBindingSource.CancelEdit();
+        }
     }
 }

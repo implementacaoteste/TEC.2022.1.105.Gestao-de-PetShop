@@ -112,9 +112,6 @@ namespace GestaoPetShop
             //comboBoxBuscarPor.SelectedIndex = 3;
         }
 
-        private void buttonSelecionar_Click(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }

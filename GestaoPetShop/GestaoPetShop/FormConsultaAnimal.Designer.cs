@@ -36,6 +36,7 @@
             this.tableAdapterManager = new GestaoPetShop.petshopDataSetTableAdapters.TableAdapterManager();
             this.animalDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IdCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,6 +51,9 @@
             this.buttonAlterar = new System.Windows.Forms.Button();
             this.buttonIserir = new System.Windows.Forms.Button();
             this.buttonExcluir = new System.Windows.Forms.Button();
+            this.buttonSelecionar = new System.Windows.Forms.Button();
+            this.buttonCancelar = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.petshopDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.animalBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.animalDataGridView)).BeginInit();
@@ -62,7 +66,7 @@
             this.labelBuscarPorAnimal.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.labelBuscarPorAnimal.Location = new System.Drawing.Point(0, 0);
             this.labelBuscarPorAnimal.Name = "labelBuscarPorAnimal";
-            this.labelBuscarPorAnimal.Size = new System.Drawing.Size(1154, 59);
+            this.labelBuscarPorAnimal.Size = new System.Drawing.Size(1154, 55);
             this.labelBuscarPorAnimal.TabIndex = 0;
             this.labelBuscarPorAnimal.Text = "Buscar por Animal";
             this.labelBuscarPorAnimal.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -109,6 +113,7 @@
             this.animalDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.animalDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
+            this.IdCliente,
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn6,
@@ -122,7 +127,7 @@
             this.animalDataGridView.Name = "animalDataGridView";
             this.animalDataGridView.RowHeadersWidth = 51;
             this.animalDataGridView.RowTemplate.Height = 24;
-            this.animalDataGridView.Size = new System.Drawing.Size(1154, 413);
+            this.animalDataGridView.Size = new System.Drawing.Size(1154, 369);
             this.animalDataGridView.TabIndex = 2;
             // 
             // dataGridViewTextBoxColumn1
@@ -133,6 +138,14 @@
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
             this.dataGridViewTextBoxColumn1.Width = 125;
+            // 
+            // IdCliente
+            // 
+            this.IdCliente.DataPropertyName = "IdCliente";
+            this.IdCliente.HeaderText = "IdCliente";
+            this.IdCliente.MinimumWidth = 6;
+            this.IdCliente.Name = "IdCliente";
+            this.IdCliente.Width = 125;
             // 
             // dataGridViewTextBoxColumn4
             // 
@@ -200,7 +213,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(169, 82);
+            this.textBox1.Location = new System.Drawing.Point(169, 80);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(408, 22);
             this.textBox1.TabIndex = 3;
@@ -209,9 +222,9 @@
             // 
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
-            "Buscar Todos",
-            "Buscar por Nome",
-            "Buscar por Id"});
+            "Todos",
+            "Nome",
+            "Id"});
             this.comboBox1.Location = new System.Drawing.Point(8, 80);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(155, 24);
@@ -255,11 +268,44 @@
             this.buttonExcluir.UseVisualStyleBackColor = true;
             this.buttonExcluir.Click += new System.EventHandler(this.buttonExcluir_Click);
             // 
+            // buttonSelecionar
+            // 
+            this.buttonSelecionar.Location = new System.Drawing.Point(924, 487);
+            this.buttonSelecionar.Name = "buttonSelecionar";
+            this.buttonSelecionar.Size = new System.Drawing.Size(83, 23);
+            this.buttonSelecionar.TabIndex = 9;
+            this.buttonSelecionar.Text = "&Selecionar";
+            this.buttonSelecionar.UseVisualStyleBackColor = true;
+            // 
+            // buttonCancelar
+            // 
+            this.buttonCancelar.Location = new System.Drawing.Point(1043, 487);
+            this.buttonCancelar.Name = "buttonCancelar";
+            this.buttonCancelar.Size = new System.Drawing.Size(84, 23);
+            this.buttonCancelar.TabIndex = 10;
+            this.buttonCancelar.Text = "&Cancelar";
+            this.buttonCancelar.UseVisualStyleBackColor = true;
+            this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.label1.Location = new System.Drawing.Point(13, 59);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(73, 16);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Buscar Por";
+            // 
             // FormConsultaAnimal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::GestaoPetShop.Properties.Resources.papel_de_parede_2;
             this.ClientSize = new System.Drawing.Size(1154, 522);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.buttonCancelar);
+            this.Controls.Add(this.buttonSelecionar);
             this.Controls.Add(this.buttonExcluir);
             this.Controls.Add(this.buttonIserir);
             this.Controls.Add(this.buttonAlterar);
@@ -269,7 +315,7 @@
             this.Controls.Add(this.animalDataGridView);
             this.Controls.Add(this.labelBuscarPorAnimal);
             this.Name = "FormConsultaAnimal";
-            this.Text = "B";
+            this.Text = "Buscar por Animal";
             this.Load += new System.EventHandler(this.FormConsultaAnimal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.petshopDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.animalBindingSource)).EndInit();
@@ -280,14 +326,19 @@
         }
 
         #endregion
-
-        protected internal System.Windows.Forms.Label labelBuscarPorAnimal;
         private petshopDataSet petshopDataSet;
         private System.Windows.Forms.BindingSource animalBindingSource;
         private petshopDataSetTableAdapters.AnimalTableAdapter animalTableAdapter;
         private petshopDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.DataGridView animalDataGridView;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button buttonBuscar;
+        private System.Windows.Forms.Button buttonAlterar;
+        private System.Windows.Forms.Button buttonIserir;
+        private System.Windows.Forms.Button buttonExcluir;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IdCliente;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
@@ -296,11 +347,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
         private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button buttonBuscar;
-        private System.Windows.Forms.Button buttonAlterar;
-        private System.Windows.Forms.Button buttonIserir;
-        private System.Windows.Forms.Button buttonExcluir;
+        protected internal System.Windows.Forms.Label labelBuscarPorAnimal;
+        private System.Windows.Forms.Button buttonSelecionar;
+        private System.Windows.Forms.Button buttonCancelar;
+        private System.Windows.Forms.Label label1;
     }
 }

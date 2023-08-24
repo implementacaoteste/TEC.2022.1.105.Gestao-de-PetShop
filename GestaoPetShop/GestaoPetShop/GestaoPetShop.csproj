@@ -230,6 +230,12 @@
     <Compile Include="ConsultaAgendamento.Designer.cs">
       <DependentUpon>ConsultaAgendamento.cs</DependentUpon>
     </Compile>
+    <Compile Include="ConsultaRaca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultaRaca.Designer.cs">
+      <DependentUpon>ConsultaRaca.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormConsultaAnimal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -336,6 +342,9 @@
     <Compile Include="TratarErro.cs" />
     <EmbeddedResource Include="ConsultaAgendamento.resx">
       <DependentUpon>ConsultaAgendamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultaRaca.resx">
+      <DependentUpon>ConsultaRaca.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormConsultaAnimal.resx">
       <DependentUpon>FormConsultaAnimal.cs</DependentUpon>
