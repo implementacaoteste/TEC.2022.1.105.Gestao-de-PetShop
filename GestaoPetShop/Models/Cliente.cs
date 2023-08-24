@@ -23,6 +23,10 @@ namespace Models
         public bool Ativo { get; set; }
         public List<TelefoneCliente> TelefoneClientes { get; set; }
         public List<EmailCliente> EmailCliente { get; set; }
-
+        public Cliente()
+        {
+            TelefoneClientes = new List<TelefoneCliente>();
+            EmailCliente = new List<EmailCliente>();
+        }
     }
 }
