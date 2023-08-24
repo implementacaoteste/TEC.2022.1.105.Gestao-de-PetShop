@@ -116,201 +116,180 @@
             // descricaoLabel
             // 
             descricaoLabel.AutoSize = true;
-            descricaoLabel.Location = new System.Drawing.Point(72, 9);
-            descricaoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            descricaoLabel.Location = new System.Drawing.Point(54, 7);
             descricaoLabel.Name = "descricaoLabel";
-            descricaoLabel.Size = new System.Drawing.Size(72, 16);
+            descricaoLabel.Size = new System.Drawing.Size(58, 13);
             descricaoLabel.TabIndex = 15;
             descricaoLabel.Text = "Descricao:";
             // 
             // idLabel
             // 
             idLabel.AutoSize = true;
-            idLabel.Location = new System.Drawing.Point(26, 9);
-            idLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            idLabel.Location = new System.Drawing.Point(20, 7);
             idLabel.Name = "idLabel";
-            idLabel.Size = new System.Drawing.Size(21, 16);
+            idLabel.Size = new System.Drawing.Size(19, 13);
             idLabel.TabIndex = 17;
             idLabel.Text = "Id:";
             // 
             // label
             // 
             label.AutoSize = true;
-            label.Location = new System.Drawing.Point(466, 9);
-            label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label.Location = new System.Drawing.Point(350, 7);
             label.Name = "label";
-            label.Size = new System.Drawing.Size(96, 16);
+            label.Size = new System.Drawing.Size(79, 13);
             label.TabIndex = 19;
             label.Text = "Preço /Unitário";
             // 
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new System.Drawing.Point(587, 9);
-            label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label8.Location = new System.Drawing.Point(440, 7);
             label8.Name = "label8";
-            label8.Size = new System.Drawing.Size(100, 16);
+            label8.Size = new System.Drawing.Size(79, 13);
             label8.TabIndex = 23;
             label8.Text = "Preço Aplicado";
             // 
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new System.Drawing.Point(375, 9);
-            label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label9.Location = new System.Drawing.Point(281, 7);
             label9.Name = "label9";
-            label9.Size = new System.Drawing.Size(77, 16);
+            label9.Size = new System.Drawing.Size(62, 13);
             label9.TabIndex = 24;
             label9.Text = "Quantidade";
             // 
             // label10
             // 
             label10.AutoSize = true;
-            label10.Location = new System.Drawing.Point(708, 9);
-            label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label10.Location = new System.Drawing.Point(531, 7);
             label10.Name = "label10";
-            label10.Size = new System.Drawing.Size(56, 16);
+            label10.Size = new System.Drawing.Size(46, 13);
             label10.TabIndex = 27;
             label10.Text = "Subtotal";
             // 
             // horarioLabel
             // 
             horarioLabel.AutoSize = true;
-            horarioLabel.Location = new System.Drawing.Point(430, 14);
-            horarioLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            horarioLabel.Location = new System.Drawing.Point(322, 11);
             horarioLabel.Name = "horarioLabel";
-            horarioLabel.Size = new System.Drawing.Size(55, 16);
+            horarioLabel.Size = new System.Drawing.Size(44, 13);
             horarioLabel.TabIndex = 26;
             horarioLabel.Text = "Horario:";
             // 
             // idLabel1
             // 
             idLabel1.AutoSize = true;
-            idLabel1.Location = new System.Drawing.Point(32, 14);
-            idLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            idLabel1.Location = new System.Drawing.Point(24, 11);
             idLabel1.Name = "idLabel1";
-            idLabel1.Size = new System.Drawing.Size(21, 16);
+            idLabel1.Size = new System.Drawing.Size(19, 13);
             idLabel1.TabIndex = 28;
             idLabel1.Text = "Id:";
             // 
             // idAnimalLabel
             // 
             idAnimalLabel.AutoSize = true;
-            idAnimalLabel.Location = new System.Drawing.Point(20, 114);
-            idAnimalLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            idAnimalLabel.Location = new System.Drawing.Point(20, 59);
             idAnimalLabel.Name = "idAnimalLabel";
-            idAnimalLabel.Size = new System.Drawing.Size(65, 16);
+            idAnimalLabel.Size = new System.Drawing.Size(53, 13);
             idAnimalLabel.TabIndex = 30;
             idAnimalLabel.Text = "Id Animal:";
             // 
             // idClienteLabel
             // 
             idClienteLabel.AutoSize = true;
-            idClienteLabel.Location = new System.Drawing.Point(569, 114);
-            idClienteLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            idClienteLabel.Location = new System.Drawing.Point(432, 59);
             idClienteLabel.Name = "idClienteLabel";
-            idClienteLabel.Size = new System.Drawing.Size(65, 16);
+            idClienteLabel.Size = new System.Drawing.Size(54, 13);
             idClienteLabel.TabIndex = 32;
             idClienteLabel.Text = "Id Cliente:";
             // 
             // idProfissionalLabel
             // 
             idProfissionalLabel.AutoSize = true;
-            idProfissionalLabel.Location = new System.Drawing.Point(43, 160);
-            idProfissionalLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            idProfissionalLabel.Location = new System.Drawing.Point(37, 96);
             idProfissionalLabel.Name = "idProfissionalLabel";
-            idProfissionalLabel.Size = new System.Drawing.Size(94, 16);
+            idProfissionalLabel.Size = new System.Drawing.Size(75, 13);
             idProfissionalLabel.TabIndex = 34;
             idProfissionalLabel.Text = "Id Profissional:";
             // 
             // nomeAnimalLabel
             // 
             nomeAnimalLabel.AutoSize = true;
-            nomeAnimalLabel.Location = new System.Drawing.Point(177, 114);
-            nomeAnimalLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            nomeAnimalLabel.Location = new System.Drawing.Point(138, 59);
             nomeAnimalLabel.Name = "nomeAnimalLabel";
-            nomeAnimalLabel.Size = new System.Drawing.Size(91, 16);
+            nomeAnimalLabel.Size = new System.Drawing.Size(72, 13);
             nomeAnimalLabel.TabIndex = 38;
             nomeAnimalLabel.Text = "Nome Animal:";
             // 
             // nomeClienteLabel
             // 
             nomeClienteLabel.AutoSize = true;
-            nomeClienteLabel.Location = new System.Drawing.Point(709, 114);
-            nomeClienteLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            nomeClienteLabel.Location = new System.Drawing.Point(537, 59);
             nomeClienteLabel.Name = "nomeClienteLabel";
-            nomeClienteLabel.Size = new System.Drawing.Size(91, 16);
+            nomeClienteLabel.Size = new System.Drawing.Size(73, 13);
             nomeClienteLabel.TabIndex = 40;
             nomeClienteLabel.Text = "Nome Cliente:";
             // 
             // totalLabel
             // 
             totalLabel.AutoSize = true;
-            totalLabel.Location = new System.Drawing.Point(759, 160);
-            totalLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            totalLabel.Location = new System.Drawing.Point(574, 96);
             totalLabel.Name = "totalLabel";
-            totalLabel.Size = new System.Drawing.Size(41, 16);
+            totalLabel.Size = new System.Drawing.Size(34, 13);
             totalLabel.TabIndex = 44;
             totalLabel.Text = "Total:";
             // 
             // nomeProfissionalLabel1
             // 
             nomeProfissionalLabel1.AutoSize = true;
-            nomeProfissionalLabel1.Location = new System.Drawing.Point(273, 160);
-            nomeProfissionalLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            nomeProfissionalLabel1.Location = new System.Drawing.Point(210, 96);
             nomeProfissionalLabel1.Name = "nomeProfissionalLabel1";
-            nomeProfissionalLabel1.Size = new System.Drawing.Size(120, 16);
+            nomeProfissionalLabel1.Size = new System.Drawing.Size(94, 13);
             nomeProfissionalLabel1.TabIndex = 46;
             nomeProfissionalLabel1.Text = "Nome Profissional:";
             // 
             // descricaoSituacaoLabel
             // 
             descricaoSituacaoLabel.AutoSize = true;
-            descricaoSituacaoLabel.Location = new System.Drawing.Point(842, 20);
-            descricaoSituacaoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            descricaoSituacaoLabel.Location = new System.Drawing.Point(632, 16);
             descricaoSituacaoLabel.Name = "descricaoSituacaoLabel";
-            descricaoSituacaoLabel.Size = new System.Drawing.Size(128, 16);
+            descricaoSituacaoLabel.Size = new System.Drawing.Size(103, 13);
             descricaoSituacaoLabel.TabIndex = 47;
             descricaoSituacaoLabel.Text = "Descricao Situacao:";
             // 
             // dataAgLabel
             // 
             dataAgLabel.AutoSize = true;
-            dataAgLabel.Location = new System.Drawing.Point(149, 14);
-            dataAgLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            dataAgLabel.Location = new System.Drawing.Point(112, 11);
             dataAgLabel.Name = "dataAgLabel";
-            dataAgLabel.Size = new System.Drawing.Size(59, 16);
+            dataAgLabel.Size = new System.Drawing.Size(49, 13);
             dataAgLabel.TabIndex = 51;
             dataAgLabel.Text = "Data Ag:";
             // 
             // idSituacaoLabel
             // 
             idSituacaoLabel.AutoSize = true;
-            idSituacaoLabel.Location = new System.Drawing.Point(661, 19);
-            idSituacaoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            idSituacaoLabel.Location = new System.Drawing.Point(496, 15);
             idSituacaoLabel.Name = "idSituacaoLabel";
-            idSituacaoLabel.Size = new System.Drawing.Size(77, 16);
+            idSituacaoLabel.Size = new System.Drawing.Size(64, 13);
             idSituacaoLabel.TabIndex = 52;
             idSituacaoLabel.Text = "Id Situacao:";
             // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.Control;
-            this.groupBox1.Location = new System.Drawing.Point(15, 47);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Location = new System.Drawing.Point(15, 235);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(148, 35);
+            this.groupBox1.Size = new System.Drawing.Size(32, 40);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
             // idSituacaoTextBox
             // 
             this.idSituacaoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agendamentoBindingSource, "IdSituacao", true));
-            this.idSituacaoTextBox.Location = new System.Drawing.Point(754, 15);
-            this.idSituacaoTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.idSituacaoTextBox.Location = new System.Drawing.Point(566, 12);
             this.idSituacaoTextBox.Name = "idSituacaoTextBox";
-            this.idSituacaoTextBox.Size = new System.Drawing.Size(60, 22);
+            this.idSituacaoTextBox.Size = new System.Drawing.Size(46, 20);
             this.idSituacaoTextBox.TabIndex = 53;
             // 
             // agendamentoBindingSource
@@ -320,10 +299,9 @@
             // dataAgDateTimePicker
             // 
             this.dataAgDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.agendamentoBindingSource, "DataAg", true));
-            this.dataAgDateTimePicker.Location = new System.Drawing.Point(222, 9);
-            this.dataAgDateTimePicker.Margin = new System.Windows.Forms.Padding(4);
+            this.dataAgDateTimePicker.Location = new System.Drawing.Point(166, 7);
             this.dataAgDateTimePicker.Name = "dataAgDateTimePicker";
-            this.dataAgDateTimePicker.Size = new System.Drawing.Size(199, 22);
+            this.dataAgDateTimePicker.Size = new System.Drawing.Size(150, 20);
             this.dataAgDateTimePicker.TabIndex = 52;
             // 
             // ativoCheckBox
@@ -332,10 +310,9 @@
             this.ativoCheckBox.Checked = true;
             this.ativoCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
             this.ativoCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.agendamentoBindingSource, "Ativo", true));
-            this.ativoCheckBox.Location = new System.Drawing.Point(993, 154);
-            this.ativoCheckBox.Margin = new System.Windows.Forms.Padding(4);
+            this.ativoCheckBox.Location = new System.Drawing.Point(750, 91);
             this.ativoCheckBox.Name = "ativoCheckBox";
-            this.ativoCheckBox.Size = new System.Drawing.Size(59, 20);
+            this.ativoCheckBox.Size = new System.Drawing.Size(50, 17);
             this.ativoCheckBox.TabIndex = 49;
             this.ativoCheckBox.Text = "Ativo";
             this.ativoCheckBox.UseVisualStyleBackColor = true;
@@ -344,10 +321,9 @@
             // 
             this.descricaoSituacaoComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agendamentoBindingSource, "DescricaoSituacao", true));
             this.descricaoSituacaoComboBox.FormattingEnabled = true;
-            this.descricaoSituacaoComboBox.Location = new System.Drawing.Point(993, 15);
-            this.descricaoSituacaoComboBox.Margin = new System.Windows.Forms.Padding(4);
+            this.descricaoSituacaoComboBox.Location = new System.Drawing.Point(745, 12);
             this.descricaoSituacaoComboBox.Name = "descricaoSituacaoComboBox";
-            this.descricaoSituacaoComboBox.Size = new System.Drawing.Size(160, 24);
+            this.descricaoSituacaoComboBox.Size = new System.Drawing.Size(121, 21);
             this.descricaoSituacaoComboBox.TabIndex = 48;
             this.descricaoSituacaoComboBox.SelectedIndexChanged += new System.EventHandler(this.descricaoSituacaoComboBox_SelectedIndexChanged);
             // 
@@ -355,92 +331,83 @@
             // 
             this.nomeProfissionalComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agendamentoBindingSource, "NomeProfissional", true));
             this.nomeProfissionalComboBox.FormattingEnabled = true;
-            this.nomeProfissionalComboBox.Location = new System.Drawing.Point(406, 156);
-            this.nomeProfissionalComboBox.Margin = new System.Windows.Forms.Padding(4);
+            this.nomeProfissionalComboBox.Location = new System.Drawing.Point(309, 93);
             this.nomeProfissionalComboBox.Name = "nomeProfissionalComboBox";
-            this.nomeProfissionalComboBox.Size = new System.Drawing.Size(160, 24);
+            this.nomeProfissionalComboBox.Size = new System.Drawing.Size(121, 21);
             this.nomeProfissionalComboBox.TabIndex = 47;
             this.nomeProfissionalComboBox.SelectedIndexChanged += new System.EventHandler(this.nomeProfissionalComboBox_SelectedIndexChanged);
             // 
             // horarioTextBox
             // 
             this.horarioTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agendamentoBindingSource, "Horario", true));
-            this.horarioTextBox.Location = new System.Drawing.Point(497, 10);
-            this.horarioTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.horarioTextBox.Location = new System.Drawing.Point(373, 8);
             this.horarioTextBox.Name = "horarioTextBox";
-            this.horarioTextBox.Size = new System.Drawing.Size(135, 22);
+            this.horarioTextBox.Size = new System.Drawing.Size(102, 20);
             this.horarioTextBox.TabIndex = 27;
             // 
             // idTextBox1
             // 
             this.idTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agendamentoBindingSource, "Id", true));
             this.idTextBox1.Enabled = false;
-            this.idTextBox1.Location = new System.Drawing.Point(65, 10);
-            this.idTextBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.idTextBox1.Location = new System.Drawing.Point(49, 8);
             this.idTextBox1.Name = "idTextBox1";
-            this.idTextBox1.Size = new System.Drawing.Size(72, 22);
+            this.idTextBox1.Size = new System.Drawing.Size(55, 20);
             this.idTextBox1.TabIndex = 29;
             // 
             // idAnimalTextBox
             // 
             this.idAnimalTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agendamentoBindingSource, "IdAnimal", true));
-            this.idAnimalTextBox.Location = new System.Drawing.Point(92, 110);
-            this.idAnimalTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.idAnimalTextBox.Location = new System.Drawing.Point(74, 55);
             this.idAnimalTextBox.Name = "idAnimalTextBox";
-            this.idAnimalTextBox.Size = new System.Drawing.Size(71, 22);
+            this.idAnimalTextBox.Size = new System.Drawing.Size(54, 20);
             this.idAnimalTextBox.TabIndex = 31;
             // 
             // idClienteTextBox
             // 
             this.idClienteTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agendamentoBindingSource, "IdCliente", true));
-            this.idClienteTextBox.Location = new System.Drawing.Point(641, 110);
-            this.idClienteTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.idClienteTextBox.Location = new System.Drawing.Point(486, 55);
             this.idClienteTextBox.Name = "idClienteTextBox";
-            this.idClienteTextBox.Size = new System.Drawing.Size(43, 22);
+            this.idClienteTextBox.Size = new System.Drawing.Size(33, 20);
             this.idClienteTextBox.TabIndex = 33;
             // 
             // idProfissionalTextBox
             // 
             this.idProfissionalTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agendamentoBindingSource, "IdProfissional", true));
-            this.idProfissionalTextBox.Location = new System.Drawing.Point(143, 156);
-            this.idProfissionalTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.idProfissionalTextBox.Location = new System.Drawing.Point(112, 93);
             this.idProfissionalTextBox.Name = "idProfissionalTextBox";
-            this.idProfissionalTextBox.Size = new System.Drawing.Size(84, 22);
+            this.idProfissionalTextBox.Size = new System.Drawing.Size(64, 20);
             this.idProfissionalTextBox.TabIndex = 35;
             // 
             // nomeAnimalTextBox
             // 
             this.nomeAnimalTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agendamentoBindingSource, "NomeAnimal", true));
-            this.nomeAnimalTextBox.Location = new System.Drawing.Point(276, 110);
-            this.nomeAnimalTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.nomeAnimalTextBox.Location = new System.Drawing.Point(212, 55);
             this.nomeAnimalTextBox.Name = "nomeAnimalTextBox";
-            this.nomeAnimalTextBox.Size = new System.Drawing.Size(265, 22);
+            this.nomeAnimalTextBox.Size = new System.Drawing.Size(200, 20);
             this.nomeAnimalTextBox.TabIndex = 39;
             // 
             // nomeClienteTextBox
             // 
             this.nomeClienteTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agendamentoBindingSource, "NomeCliente", true));
-            this.nomeClienteTextBox.Location = new System.Drawing.Point(813, 110);
-            this.nomeClienteTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.nomeClienteTextBox.Location = new System.Drawing.Point(615, 55);
             this.nomeClienteTextBox.Name = "nomeClienteTextBox";
-            this.nomeClienteTextBox.Size = new System.Drawing.Size(192, 22);
+            this.nomeClienteTextBox.Size = new System.Drawing.Size(145, 20);
             this.nomeClienteTextBox.TabIndex = 41;
             // 
             // totalTextBox
             // 
             this.totalTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agendamentoBindingSource, "Total", true));
-            this.totalTextBox.Location = new System.Drawing.Point(817, 156);
-            this.totalTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.totalTextBox.Location = new System.Drawing.Point(618, 93);
             this.totalTextBox.Name = "totalTextBox";
-            this.totalTextBox.Size = new System.Drawing.Size(156, 22);
+            this.totalTextBox.Size = new System.Drawing.Size(118, 20);
             this.totalTextBox.TabIndex = 45;
             // 
             // buttonPesquisarAnimal
             // 
-            this.buttonPesquisarAnimal.Location = new System.Drawing.Point(1017, 114);
-            this.buttonPesquisarAnimal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonPesquisarAnimal.Location = new System.Drawing.Point(768, 59);
+            this.buttonPesquisarAnimal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonPesquisarAnimal.Name = "buttonPesquisarAnimal";
-            this.buttonPesquisarAnimal.Size = new System.Drawing.Size(85, 23);
+            this.buttonPesquisarAnimal.Size = new System.Drawing.Size(64, 19);
             this.buttonPesquisarAnimal.TabIndex = 22;
             this.buttonPesquisarAnimal.Text = "Pesq";
             this.buttonPesquisarAnimal.UseVisualStyleBackColor = true;
@@ -453,10 +420,9 @@
             this.descricaoComboBox.DataSource = this.servicoBindingSource;
             this.descricaoComboBox.DisplayMember = "Descricao";
             this.descricaoComboBox.FormattingEnabled = true;
-            this.descricaoComboBox.Location = new System.Drawing.Point(75, 29);
-            this.descricaoComboBox.Margin = new System.Windows.Forms.Padding(4);
+            this.descricaoComboBox.Location = new System.Drawing.Point(56, 24);
             this.descricaoComboBox.Name = "descricaoComboBox";
-            this.descricaoComboBox.Size = new System.Drawing.Size(293, 24);
+            this.descricaoComboBox.Size = new System.Drawing.Size(221, 21);
             this.descricaoComboBox.TabIndex = 1;
             this.descricaoComboBox.ValueMember = "Id";
             // 
@@ -477,30 +443,27 @@
             // 
             this.textBoxSubtotal.BackColor = System.Drawing.Color.White;
             this.textBoxSubtotal.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agendamentoServicosBindingSource, "ValorTotal", true));
-            this.textBoxSubtotal.Location = new System.Drawing.Point(706, 30);
-            this.textBoxSubtotal.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxSubtotal.Location = new System.Drawing.Point(530, 24);
             this.textBoxSubtotal.Name = "textBoxSubtotal";
             this.textBoxSubtotal.ReadOnly = true;
-            this.textBoxSubtotal.Size = new System.Drawing.Size(109, 22);
+            this.textBoxSubtotal.Size = new System.Drawing.Size(83, 20);
             this.textBoxSubtotal.TabIndex = 5;
             // 
             // textBoxPrecoAplicado
             // 
             this.textBoxPrecoAplicado.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agendamentoServicosBindingSource, "ValorComDesconto", true));
-            this.textBoxPrecoAplicado.Location = new System.Drawing.Point(591, 30);
-            this.textBoxPrecoAplicado.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxPrecoAplicado.Location = new System.Drawing.Point(443, 24);
             this.textBoxPrecoAplicado.Name = "textBoxPrecoAplicado";
-            this.textBoxPrecoAplicado.Size = new System.Drawing.Size(105, 22);
+            this.textBoxPrecoAplicado.Size = new System.Drawing.Size(80, 20);
             this.textBoxPrecoAplicado.TabIndex = 4;
             this.textBoxPrecoAplicado.TextChanged += new System.EventHandler(this.textBoxPrecoAplicado_TextChanged);
             // 
             // textBoxQuantidade
             // 
             this.textBoxQuantidade.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agendamentoServicosBindingSource, "Quantidade", true));
-            this.textBoxQuantidade.Location = new System.Drawing.Point(379, 30);
-            this.textBoxQuantidade.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxQuantidade.Location = new System.Drawing.Point(284, 24);
             this.textBoxQuantidade.Name = "textBoxQuantidade";
-            this.textBoxQuantidade.Size = new System.Drawing.Size(73, 22);
+            this.textBoxQuantidade.Size = new System.Drawing.Size(56, 20);
             this.textBoxQuantidade.TabIndex = 2;
             this.textBoxQuantidade.Text = "1";
             this.textBoxQuantidade.TextChanged += new System.EventHandler(this.textBoxPrecoAplicado_TextChanged);
@@ -508,30 +471,27 @@
             // idTextBox
             // 
             this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agendamentoServicosBindingSource, "IdServico", true));
-            this.idTextBox.Location = new System.Drawing.Point(7, 30);
-            this.idTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.idTextBox.Location = new System.Drawing.Point(5, 24);
             this.idTextBox.Name = "idTextBox";
-            this.idTextBox.Size = new System.Drawing.Size(59, 22);
+            this.idTextBox.Size = new System.Drawing.Size(45, 20);
             this.idTextBox.TabIndex = 0;
             // 
             // precoTextBox
             // 
             this.precoTextBox.BackColor = System.Drawing.Color.White;
             this.precoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.servicoBindingSource, "Preco", true));
-            this.precoTextBox.Location = new System.Drawing.Point(459, 30);
-            this.precoTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.precoTextBox.Location = new System.Drawing.Point(344, 24);
             this.precoTextBox.Name = "precoTextBox";
             this.precoTextBox.ReadOnly = true;
-            this.precoTextBox.Size = new System.Drawing.Size(123, 22);
+            this.precoTextBox.Size = new System.Drawing.Size(93, 20);
             this.precoTextBox.TabIndex = 3;
             this.precoTextBox.TextChanged += new System.EventHandler(this.precoTextBox_TextChanged);
             // 
             // button_InserirServicoAgendamento
             // 
-            this.button_InserirServicoAgendamento.Location = new System.Drawing.Point(823, 30);
-            this.button_InserirServicoAgendamento.Margin = new System.Windows.Forms.Padding(4);
+            this.button_InserirServicoAgendamento.Location = new System.Drawing.Point(617, 24);
             this.button_InserirServicoAgendamento.Name = "button_InserirServicoAgendamento";
-            this.button_InserirServicoAgendamento.Size = new System.Drawing.Size(85, 25);
+            this.button_InserirServicoAgendamento.Size = new System.Drawing.Size(64, 20);
             this.button_InserirServicoAgendamento.TabIndex = 7;
             this.button_InserirServicoAgendamento.Text = "Inserir";
             this.button_InserirServicoAgendamento.UseVisualStyleBackColor = true;
@@ -539,10 +499,10 @@
             // 
             // buttonAtualizar
             // 
-            this.buttonAtualizar.Location = new System.Drawing.Point(23, 355);
-            this.buttonAtualizar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonAtualizar.Location = new System.Drawing.Point(18, 200);
+            this.buttonAtualizar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonAtualizar.Name = "buttonAtualizar";
-            this.buttonAtualizar.Size = new System.Drawing.Size(79, 25);
+            this.buttonAtualizar.Size = new System.Drawing.Size(59, 20);
             this.buttonAtualizar.TabIndex = 6;
             this.buttonAtualizar.Text = "Atualizar";
             this.buttonAtualizar.UseVisualStyleBackColor = true;
@@ -550,10 +510,10 @@
             // 
             // buttonSalvar
             // 
-            this.buttonSalvar.Location = new System.Drawing.Point(1054, 592);
-            this.buttonSalvar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonSalvar.Location = new System.Drawing.Point(791, 393);
+            this.buttonSalvar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonSalvar.Name = "buttonSalvar";
-            this.buttonSalvar.Size = new System.Drawing.Size(75, 25);
+            this.buttonSalvar.Size = new System.Drawing.Size(56, 20);
             this.buttonSalvar.TabIndex = 28;
             this.buttonSalvar.Text = "Salvar";
             this.buttonSalvar.UseVisualStyleBackColor = true;
@@ -576,14 +536,13 @@
             this.idServicoDataGridViewTextBoxColumn,
             this.tempoDataGridViewTextBoxColumn});
             this.agendamentoServicoDataGridView.DataSource = this.agendamentoServicosBindingSource;
-            this.agendamentoServicoDataGridView.Location = new System.Drawing.Point(69, 398);
-            this.agendamentoServicoDataGridView.Margin = new System.Windows.Forms.Padding(4);
+            this.agendamentoServicoDataGridView.Location = new System.Drawing.Point(53, 235);
             this.agendamentoServicoDataGridView.Name = "agendamentoServicoDataGridView";
             this.agendamentoServicoDataGridView.ReadOnly = true;
             this.agendamentoServicoDataGridView.RowHeadersVisible = false;
             this.agendamentoServicoDataGridView.RowHeadersWidth = 51;
             this.agendamentoServicoDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.agendamentoServicoDataGridView.Size = new System.Drawing.Size(1090, 182);
+            this.agendamentoServicoDataGridView.Size = new System.Drawing.Size(818, 148);
             this.agendamentoServicoDataGridView.TabIndex = 29;
             // 
             // idDataGridViewTextBoxColumn
@@ -660,10 +619,9 @@
             // 
             // button1RemoverServico
             // 
-            this.button1RemoverServico.Location = new System.Drawing.Point(1032, 365);
-            this.button1RemoverServico.Margin = new System.Windows.Forms.Padding(4);
+            this.button1RemoverServico.Location = new System.Drawing.Point(775, 209);
             this.button1RemoverServico.Name = "button1RemoverServico";
-            this.button1RemoverServico.Size = new System.Drawing.Size(127, 25);
+            this.button1RemoverServico.Size = new System.Drawing.Size(95, 20);
             this.button1RemoverServico.TabIndex = 30;
             this.button1RemoverServico.Text = "Remover Serviço";
             this.button1RemoverServico.UseVisualStyleBackColor = true;
@@ -685,18 +643,19 @@
             this.groupBoxServico.Controls.Add(idLabel);
             this.groupBoxServico.Controls.Add(this.textBoxPrecoAplicado);
             this.groupBoxServico.Enabled = false;
-            this.groupBoxServico.Location = new System.Drawing.Point(71, 242);
+            this.groupBoxServico.Location = new System.Drawing.Point(54, 134);
+            this.groupBoxServico.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBoxServico.Name = "groupBoxServico";
-            this.groupBoxServico.Size = new System.Drawing.Size(1088, 78);
+            this.groupBoxServico.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxServico.Size = new System.Drawing.Size(816, 63);
             this.groupBoxServico.TabIndex = 31;
             this.groupBoxServico.TabStop = false;
             // 
             // buttonNovo
             // 
-            this.buttonNovo.Location = new System.Drawing.Point(939, 365);
-            this.buttonNovo.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonNovo.Location = new System.Drawing.Point(705, 209);
             this.buttonNovo.Name = "buttonNovo";
-            this.buttonNovo.Size = new System.Drawing.Size(85, 25);
+            this.buttonNovo.Size = new System.Drawing.Size(64, 20);
             this.buttonNovo.TabIndex = 7;
             this.buttonNovo.Text = "Novo";
             this.buttonNovo.UseVisualStyleBackColor = true;
@@ -704,9 +663,9 @@
             // 
             // FormCadastroAgendamento
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1180, 628);
+            this.ClientSize = new System.Drawing.Size(885, 429);
             this.Controls.Add(idAnimalLabel);
             this.Controls.Add(this.idAnimalTextBox);
             this.Controls.Add(this.ativoCheckBox);
@@ -740,7 +699,6 @@
             this.Controls.Add(idLabel1);
             this.Controls.Add(horarioLabel);
             this.Controls.Add(this.horarioTextBox);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormCadastroAgendamento";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
