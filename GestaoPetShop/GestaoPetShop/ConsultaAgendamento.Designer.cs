@@ -104,7 +104,7 @@
             "Ano",
             "Profissional"});
             this.comboBox_SelecionarTipoBusca.Location = new System.Drawing.Point(12, 187);
-            this.comboBox_SelecionarTipoBusca.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox_SelecionarTipoBusca.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox_SelecionarTipoBusca.Name = "comboBox_SelecionarTipoBusca";
             this.comboBox_SelecionarTipoBusca.Size = new System.Drawing.Size(92, 21);
             this.comboBox_SelecionarTipoBusca.TabIndex = 8;
@@ -113,7 +113,7 @@
             // textBox_BuscarAgendamento
             // 
             this.textBox_BuscarAgendamento.Location = new System.Drawing.Point(107, 187);
-            this.textBox_BuscarAgendamento.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox_BuscarAgendamento.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_BuscarAgendamento.Name = "textBox_BuscarAgendamento";
             this.textBox_BuscarAgendamento.Size = new System.Drawing.Size(217, 20);
             this.textBox_BuscarAgendamento.TabIndex = 9;
@@ -128,7 +128,7 @@
             this.button_BuscarAgendamentos.ImageKey = "buscar-removebg-preview.png";
             this.button_BuscarAgendamentos.ImageList = this.imageList1;
             this.button_BuscarAgendamentos.Location = new System.Drawing.Point(158, 91);
-            this.button_BuscarAgendamentos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button_BuscarAgendamentos.Margin = new System.Windows.Forms.Padding(2);
             this.button_BuscarAgendamentos.Name = "button_BuscarAgendamentos";
             this.button_BuscarAgendamentos.Size = new System.Drawing.Size(56, 50);
             this.button_BuscarAgendamentos.TabIndex = 10;
@@ -155,7 +155,7 @@
             this.button_InserirAgendamentos.ImageKey = "add-removebg-preview.png";
             this.button_InserirAgendamentos.ImageList = this.imageList1;
             this.button_InserirAgendamentos.Location = new System.Drawing.Point(266, 86);
-            this.button_InserirAgendamentos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button_InserirAgendamentos.Margin = new System.Windows.Forms.Padding(2);
             this.button_InserirAgendamentos.Name = "button_InserirAgendamentos";
             this.button_InserirAgendamentos.Size = new System.Drawing.Size(58, 50);
             this.button_InserirAgendamentos.TabIndex = 11;
@@ -173,7 +173,7 @@
             this.button_AlterarAgendamentos.ImageKey = "editar-removebg-preview.png";
             this.button_AlterarAgendamentos.ImageList = this.imageList1;
             this.button_AlterarAgendamentos.Location = new System.Drawing.Point(380, 81);
-            this.button_AlterarAgendamentos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button_AlterarAgendamentos.Margin = new System.Windows.Forms.Padding(2);
             this.button_AlterarAgendamentos.Name = "button_AlterarAgendamentos";
             this.button_AlterarAgendamentos.Size = new System.Drawing.Size(50, 50);
             this.button_AlterarAgendamentos.TabIndex = 12;
@@ -191,7 +191,7 @@
             this.button_ExcluirAgendamento.ImageKey = "excluir-removebg-preview.png";
             this.button_ExcluirAgendamento.ImageList = this.imageList1;
             this.button_ExcluirAgendamento.Location = new System.Drawing.Point(493, 81);
-            this.button_ExcluirAgendamento.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button_ExcluirAgendamento.Margin = new System.Windows.Forms.Padding(2);
             this.button_ExcluirAgendamento.Name = "button_ExcluirAgendamento";
             this.button_ExcluirAgendamento.Size = new System.Drawing.Size(46, 50);
             this.button_ExcluirAgendamento.TabIndex = 13;
@@ -202,7 +202,7 @@
             // textBox_BuscarData
             // 
             this.textBox_BuscarData.Location = new System.Drawing.Point(380, 187);
-            this.textBox_BuscarData.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox_BuscarData.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_BuscarData.Name = "textBox_BuscarData";
             this.textBox_BuscarData.Size = new System.Drawing.Size(79, 20);
             this.textBox_BuscarData.TabIndex = 14;
@@ -224,7 +224,7 @@
             this.button_AbrirCalendario.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.button_AbrirCalendario.ForeColor = System.Drawing.Color.Black;
             this.button_AbrirCalendario.Location = new System.Drawing.Point(470, 187);
-            this.button_AbrirCalendario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button_AbrirCalendario.Margin = new System.Windows.Forms.Padding(2);
             this.button_AbrirCalendario.Name = "button_AbrirCalendario";
             this.button_AbrirCalendario.Size = new System.Drawing.Size(89, 20);
             this.button_AbrirCalendario.TabIndex = 16;
@@ -235,7 +235,7 @@
             // monthCalendar_Agendamento
             // 
             this.monthCalendar_Agendamento.Location = new System.Drawing.Point(568, 59);
-            this.monthCalendar_Agendamento.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.monthCalendar_Agendamento.Margin = new System.Windows.Forms.Padding(7);
             this.monthCalendar_Agendamento.Name = "monthCalendar_Agendamento";
             this.monthCalendar_Agendamento.TabIndex = 17;
             this.monthCalendar_Agendamento.Visible = false;
@@ -244,7 +244,7 @@
             // 
             this.button_SelecionarData.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_SelecionarData.Location = new System.Drawing.Point(637, 232);
-            this.button_SelecionarData.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button_SelecionarData.Margin = new System.Windows.Forms.Padding(2);
             this.button_SelecionarData.Name = "button_SelecionarData";
             this.button_SelecionarData.Size = new System.Drawing.Size(74, 25);
             this.button_SelecionarData.TabIndex = 18;
@@ -260,8 +260,8 @@
             this.btnFechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFechar.ImageKey = "fechar-removebg-preview.png";
             this.btnFechar.ImageList = this.imageList2;
-            this.btnFechar.Location = new System.Drawing.Point(712, 10);
-            this.btnFechar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnFechar.Location = new System.Drawing.Point(768, 9);
+            this.btnFechar.Margin = new System.Windows.Forms.Padding(2);
             this.btnFechar.Name = "btnFechar";
             this.btnFechar.Size = new System.Drawing.Size(50, 41);
             this.btnFechar.TabIndex = 19;
@@ -279,7 +279,7 @@
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Image = global::GestaoPetShop.Properties.Resources.bicho_de_estimacao;
             this.pictureBox3.Location = new System.Drawing.Point(9, 13);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(26, 32);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -363,6 +363,7 @@
             this.agendamentoDataGridView.Name = "agendamentoDataGridView";
             this.agendamentoDataGridView.ReadOnly = true;
             this.agendamentoDataGridView.RowHeadersVisible = false;
+            this.agendamentoDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.agendamentoDataGridView.Size = new System.Drawing.Size(435, 220);
             this.agendamentoDataGridView.TabIndex = 28;
             // 
@@ -448,6 +449,7 @@
             this.agendamentoServicosDataGridView.Name = "agendamentoServicosDataGridView";
             this.agendamentoServicosDataGridView.ReadOnly = true;
             this.agendamentoServicosDataGridView.RowHeadersVisible = false;
+            this.agendamentoServicosDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.agendamentoServicosDataGridView.Size = new System.Drawing.Size(348, 220);
             this.agendamentoServicosDataGridView.TabIndex = 28;
             // 
@@ -511,7 +513,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::GestaoPetShop.Properties.Resources.papel_de_parede_2;
             this.ClientSize = new System.Drawing.Size(855, 573);
             this.Controls.Add(this.agendamentoServicosDataGridView);
             this.Controls.Add(this.agendamentoDataGridView);
@@ -534,7 +535,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ConsultaAgendamento";
