@@ -206,10 +206,10 @@ namespace GestaoPetShop
                         Cliente cliente = new Cliente();   
                         cliente = new AgendamentoBLL().BuscarPorIdCliente(animal.IdCliente);
 
-                        ((Agendamento)agendamentoBindingSource.Current).IdAnimal = animal.Id;
-                        ((Agendamento)agendamentoBindingSource.Current).NomeAnimal = animal.Nome;
-                        ((Agendamento)agendamentoBindingSource.Current).IdCliente = cliente.Id;
-                        ((Agendamento)agendamentoBindingSource.Current).NomeCliente = cliente.Nome;
+                       idAnimalTextBox.Text = Convert.ToString(animal.Id);
+                        nomeAnimalTextBox.Text = animal.Nome;
+                        idClienteTextBox.Text = Convert.ToString(cliente.Id);
+                        nomeClienteTextBox.Text = cliente.Nome;
                     }
                     catch (Exception ex)
                     {
@@ -255,6 +255,7 @@ namespace GestaoPetShop
                 List<Situacao> situacaos = new List<Situacao>();
                 situacao = new AgendamentoBLL().BuscarSituacaoPorNome(descricaoSituacaoComboBox.Text);
                 idSituacaoTextBox.Text = Convert.ToString(situacao.Id);
+                descricaoSituacaoComboBox.Text = situacao.Descricao;
             }
             catch (Exception ex)
             {
