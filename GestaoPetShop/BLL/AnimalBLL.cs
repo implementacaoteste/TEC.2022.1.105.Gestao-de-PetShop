@@ -50,10 +50,11 @@ namespace BLL
         {
             return new AnimalDAL().BuscarPorRaca(_raca);
         }
-       /* public void ValidarAnimalAtivo(Animal _animal)
+        public bool ExisteVinculo(int _id)
         {
-            return new AnimalDAL();
-        }*/
+            AnimalBLL animalBLL = new AnimalBLL();
+            return animalBLL.ExisteVinculo(_id);
+        }
 
     }
 }
