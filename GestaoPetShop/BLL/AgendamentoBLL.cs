@@ -53,7 +53,7 @@ namespace BLL
             AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
             return agendamentoDAL.BuscarPorDiaMesAno(_diaMesAno);
         }
-        public object BuscarPorMesAno(int _opc, string _mesAno)
+        public List<Agendamento> BuscarPorMesAno(int _opc, string _mesAno)
         {
             AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
             return agendamentoDAL.BuscarPorMesAno(_opc, _mesAno);
@@ -68,7 +68,7 @@ namespace BLL
             AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
             return agendamentoDAL.PorNome(_selectedText);
         }
-        public List<DataGridView1_FormsPrincipal> BuscarPorProfissional(string _nomeProfissional)
+        public List<Agendamento> BuscarPorProfissional(string _nomeProfissional)
         {
             AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
             return agendamentoDAL.BuscarPorProfissional(_nomeProfissional);
