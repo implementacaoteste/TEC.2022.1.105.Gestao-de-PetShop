@@ -34,8 +34,6 @@ namespace GestaoPetShop
             InitializeComponent();
             id = _id;
         }
-
-
         private void FormCadastroAgendamento_Load(object sender, EventArgs e)
         {
             try
@@ -46,13 +44,8 @@ namespace GestaoPetShop
                 else
                     agendamentoBindingSource.DataSource = new AgendamentoBLL().BuscarAgendamentoPorId(id, opc);
 
-            
-
                 List<Profissional> agendamentoProfissinal = new List<Profissional>();
-
                 List<Situacao> situacoes = new List<Situacao>();
-
-
                 string _nomeProfissional = "";
                 int _idProfissional = 0;
                 agendamentoProfissinal = new AgendamentoBLL().BuscarPorNomeProfissional(_nomeProfissional, _idProfissional);
@@ -61,50 +54,23 @@ namespace GestaoPetShop
                 {
                     nomeProfissionalComboBox.Items.Insert(x, agendamentoProfissinal[x].Nome);
                 }
-
                 situacoes = new SituacaoBLL().BuscarTodos();
                 int num3 = situacoes.Count();
                 for (int x = 0; x < num3; x++)
                 {
                     descricaoSituacaoComboBox.Items.Insert(x, situacoes[x].Descricao);
-
                 }
-            
                 if (id != 0)
                 {
                     Agendamento agendamento = new Agendamento();
-
                     agendamentoBindingSource.DataSource = new AgendamentoBLL().BuscarAgendamentoPorId(id, opc);
-                    
                 }
-
-
             }
             catch (Exception ex)
             {
 
                 MessageBox.Show(ex.Message);
             }
-        }
-
-        private void buttonAtualizar_Click(object sender, EventArgs e)
-        {
-            //    try
-            //    {
-
-            //        textBoxPrecoAplicado.Text = precoTextBox.Text;
-            //        precoAplicado = Convert.ToDecimal(textBoxPrecoAplicado.Text);
-            //        quantidade = Convert.ToInt32(textBoxQuantidade.Text);
-
-            //        subtotal = quantidade * precoAplicado;
-            //        textBoxSubtotal.Text = Convert.ToString(subtotal);
-            //        atualizar = true;
-            //    }
-            //    catch (Exception ex)
-            //    {
-
-            //        MessageBox.Show(ex.Message);
-            //    }
         }
 
         private void button_InserirServicoAgendamento_Click(object sender, EventArgs e)
@@ -113,26 +79,19 @@ namespace GestaoPetShop
             {
                 ((AgendamentoServico)agendamentoServicosBindingSource.Current).Servico = descricaoComboBox.Text;
                 ((AgendamentoServico)agendamentoServicosBindingSource.Current).ValorUnitario = Convert.ToDecimal(precoTextBox.Text);
-
                 agendamentoServicosBindingSource.EndEdit();
                 Agendamento agendamento = (Agendamento)agendamentoBindingSource.Current;
                 buttonNovo_Click(sender, e);
                 agendamentoServicoDataGridView.Refresh();
-                // return;
-
                 subtotal = Convert.ToDecimal(textBoxSubtotal.Text);
                 valortotalagendamento = valortotalagendamento + subtotal;
                 totalTextBox.Text = Convert.ToString(valortotalagendamento);
-                atualizar = false;
-
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show(ex.Message);
             }
         }
-
         private void buttonSalvar_Click(object sender, EventArgs e)
         {
             try
@@ -148,16 +107,12 @@ namespace GestaoPetShop
                 {
                     new AgendamentoBLL().Inserir(agendamento);
                 }
-
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show(ex.Message);
             }
-
         }
-
         private void buttonPesquisarAnimal_Click(object sender, EventArgs e)
         {
             try
@@ -191,13 +146,11 @@ namespace GestaoPetShop
                 MessageBox.Show(ex.Message);
             }
         }
-
         private void nomeProfissionalComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
             {
                 Profissional profissionais = new AgendamentoBLL().BuscarProfissional(nomeProfissionalComboBox.Text);
-
                 idProfissionalTextBox.Text = Convert.ToString(profissionais.Id);
                 ((Agendamento)agendamentoBindingSource.Current).IdProfissional = profissionais.Id;
                 nomeProfissionalComboBox.Text = profissionais.Nome;
@@ -205,7 +158,6 @@ namespace GestaoPetShop
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show(ex.Message);
             }
         }
@@ -221,17 +173,13 @@ namespace GestaoPetShop
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show(ex.Message);
             }
-
         }
         private void button1RemoverServico_Click(object sender, EventArgs e)
         {
             try
             {
-
-
                 int idservico = ((AgendamentoServico)agendamentoServicosBindingSource.Current).IdServico;
                 if (idservico == 0)
                 {
@@ -240,14 +188,9 @@ namespace GestaoPetShop
                 }
                 if (id != 0) // para alterar o serviço
                 {
-
-                    //  new AgendamentoBLL().ExcluirServicoDeAgendamento(idservico, idagendamento);
-
                     agendamentoServicoExcluir = (AgendamentoServico)agendamentoServicosBindingSource.Current;
-
                     servicosParaExcluir.Add(agendamentoServicoExcluir);
                     valortotalagendamento = Convert.ToDecimal(totalTextBox.Text);
-
                 }
                 subtotal = ((AgendamentoServico)agendamentoServicosBindingSource.Current).ValorTotal;
 
@@ -259,7 +202,6 @@ namespace GestaoPetShop
                 totalTextBox.Text = Convert.ToString(valortotalagendamento);
                 ((Agendamento)agendamentoBindingSource.Current).Total = valortotalagendamento;
                 agendamentoServicosBindingSource.Remove(agendamentoServicosBindingSource.Current);
-
             }
             catch (Exception ex)
             {

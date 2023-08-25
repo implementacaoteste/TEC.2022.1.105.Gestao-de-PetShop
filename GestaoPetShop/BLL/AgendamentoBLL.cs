@@ -43,23 +43,12 @@ namespace BLL
             AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
             return agendamentoDAL.BuscarPorNomeProfissional(_nomeProfissional, _idProfissional);
         }
-        public List<DataGridView1_FormsPrincipal> DataGridViewBuscarTodos()
-        {
-            AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
-            return agendamentoDAL.DataGridViewBuscarTodos();
-
-        }
-        public List<DataGridView1_FormsPrincipal> DataGridViewBuscarPorId(int _idAgendamento, int _opc)
-        {
-            AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
-            return agendamentoDAL.DataGridViewBuscarPorId(_idAgendamento, _opc);
-        }
-        public List<DataGridView1_FormsPrincipal> BuscarPorNomeCliente(string _nomeCliente)
+        public List<Agendamento> BuscarPorNomeCliente(string _nomeCliente)
         {
             AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
             return agendamentoDAL.BuscarPorNomeCliente(_nomeCliente);
         }
-        public List<DataGridView1_FormsPrincipal> BuscarPorDiaMesAno(string _diaMesAno)
+        public List<Agendamento> BuscarPorDiaMesAno(string _diaMesAno)
         {
             AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
             return agendamentoDAL.BuscarPorDiaMesAno(_diaMesAno);

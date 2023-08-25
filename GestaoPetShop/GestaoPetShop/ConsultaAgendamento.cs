@@ -48,7 +48,7 @@ namespace GestaoPetShop
                         MessageBox.Show("Insirar o Nome do Animal para pesquisa");
                         return;
                     }
-                    // dataGridView1_FormsPrincipalBindingSource.DataSource = agendamentoBLL.BuscarPorNomeAnimal(textBox_BuscarAgendamento.Text);
+                    //dataGridView1_FormsPrincipalBindingSource.DataSource = agendamentoBLL.BuscarPorNomeAnimal(textBox_BuscarAgendamento.Text);
 
                 }
                 else if (comboBox_SelecionarTipoBusca.SelectedIndex == 3)
@@ -58,19 +58,19 @@ namespace GestaoPetShop
                         MessageBox.Show("Insirar o Nome do Cliente para pesquisa");
                         return;
                     }
-                    dataGridView1_FormsPrincipalBindingSource.DataSource = agendamentoBLL.BuscarPorNomeCliente(textBox_BuscarAgendamento.Text);
+                    agendamentoBindingSource.DataSource = agendamentoBLL.BuscarPorNomeCliente(textBox_BuscarAgendamento.Text);
 
                 }
                 else if (comboBox_SelecionarTipoBusca.SelectedIndex == 4) // BUSCAR POR DIA/MÊS/ANO
                 {
                     string quant = textBox_BuscarData.Text;
                     if (textBox_BuscarData.Text == "")
-                    {
+                    {a
                         MessageBox.Show("Insirar o Data para pesquisa");
                         return;
                     }
 
-                    dataGridView1_FormsPrincipalBindingSource.DataSource = agendamentoBLL.BuscarPorDiaMesAno(textBox_BuscarData.Text);
+                    agendamentoBindingSource.DataSource = agendamentoBLL.BuscarPorDiaMesAno(textBox_BuscarData.Text);
 
                 }
                 else if (comboBox_SelecionarTipoBusca.SelectedIndex == 5) // BUSCAR POR MÊS E ANO
