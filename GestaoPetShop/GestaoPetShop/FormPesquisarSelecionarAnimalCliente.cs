@@ -15,12 +15,14 @@ namespace GestaoPetShop
 {
     public partial class FormPesquisarSelecionarAnimalCliente : Form
     {
-        public int opc;
-        public int id;
+        private int opc;
+        public Agendamento Agendamento { get; set; }
         public FormPesquisarSelecionarAnimalCliente()
         {
             InitializeComponent();
+            this.Agendamento = new Agendamento();
         }
+
 
         private void buttonBuscarAnimalCliente_Click(object sender, EventArgs e)
         {
@@ -66,13 +68,9 @@ namespace GestaoPetShop
         {
             try
             {
-                agendamentoBindingSource.EndEdit();
-
                 if (agendamentoBindingSource.Count > 0)
-
                 {
-                      id = ((Agendamento)agendamentoBindingSource.Current).IdAnimal;
-                      opc = 0;
+                    this.Agendamento = (Agendamento)agendamentoBindingSource.Current;
                     Close();
                 }
                 else
@@ -82,14 +80,8 @@ namespace GestaoPetShop
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show(ex.Message);
             }
-        }
-
-        private void FormPesquisarSelecionarAnimalCliente_Load(object sender, EventArgs e)
-        {
-            agendamentoBindingSource.AddNew();
         }
     }
 }

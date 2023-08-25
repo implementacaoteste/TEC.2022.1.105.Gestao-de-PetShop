@@ -181,7 +181,6 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PesquisarSelecionarAnimalCliente";
-            this.Load += new System.EventHandler(this.FormPesquisarSelecionarAnimalCliente_Load);
             ((System.ComponentModel.ISupportInitialize)(this.agendamentoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.agendamentoDataGridView)).EndInit();
             this.ResumeLayout(false);

@@ -21,7 +21,7 @@ namespace DAL
 
             using (SqlConnection cn = new SqlConnection(Conexao.StringDeConexao))
             {
-                using (SqlCommand cmd = new SqlCommand(@"INSERT INTO Agendamento(IdAnimal, IdProfissional, IdSituacao, DataAg, Horario, Total, Ativo)VALUES(@IdAnimal, @IdProfissional, @IdSituacao, @DataAg, @Horario, @Total,@Ativo)", cn))
+                using (SqlCommand cmd = new SqlCommand(@"INSERT INTO Agendamento(IdAnimal, IdProfissional, IdSituacao, DataAg, Horario, Total, Ativo)VALUES(@IdAnimal, @IdProfissional, @IdSituacao, @DataAg, @Horario, @Total,@Ativo) SELECT @@IDENTITY", cn))
                 {
                     cmd.Parameters.AddWithValue("@IdAnimal", Convert.ToInt32(_agendamento.IdAnimal));
                     cmd.Parameters.AddWithValue("@IdProfissional", Convert.ToInt32(_agendamento.IdProfissional));
@@ -41,9 +41,9 @@ namespace DAL
                     cmd.Connection = transaction.Connection;
                     try
                     {
-                        cmd.ExecuteNonQuery();
+                        int idagendamento = Convert.ToInt32(cmd.ExecuteScalar());
 
-                        int idagendamento = BuscarIdDoAgendamento(_agendamento, transaction, _idagendamento);
+                        //int idagendamento = BuscarIdDoAgendamento(_agendamento, transaction, _idagendamento);
 
                         InserirAgendamentoServico(_agendamento, idagendamento, transaction);
 
@@ -217,7 +217,7 @@ namespace DAL
                     {
                         if (transaction != null && transaction.Connection != null)
                             transaction.Rollback();
-                        throw new Exception("Ocorreu um erro ao tentar excluir todas as permissões do grupo no banco de dados.", ex) { Data = { { "Id", -1 } } };
+                        throw new Exception("Ocorreu um erro ao tentar alterar um cadastro no banco de dados.", ex) { Data = { { "Id", -1 } } };
                     }
                 }
             }
@@ -250,7 +250,7 @@ namespace DAL
                         foreach (AgendamentoServico item in _agendamento.AgendamentoServicos)
                         {
 
-                            bool x = ExisteVinculo(_agendamento.Id, item.IdServico);
+                            bool x = ExisteVinculo(_agendamento.Id, item.IdServico, transaction);
                             if (!x)
                             {
                                 cmd.Parameters.Clear();
@@ -275,7 +275,7 @@ namespace DAL
                 }
             }
         }
-        public bool ExisteVinculo(int _idAgendamento, int _idServico)
+        public bool ExisteVinculo(int _idAgendamento, int _idServico, SqlTransaction _transaction)
         {
 
 
@@ -290,7 +290,10 @@ namespace DAL
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@IdAgendamento", _idAgendamento);
                 cmd.Parameters.AddWithValue("@IdServico", _idServico);
-                cn.Open();
+
+                cmd.Transaction = _transaction;
+                cmd.Connection = _transaction.Connection;
+
                 using (SqlDataReader rd = cmd.ExecuteReader())
                 {
                     if (rd.Read())
@@ -315,7 +318,7 @@ namespace DAL
 
             using (SqlConnection cn = new SqlConnection(Conexao.StringDeConexao))
             {
-                using (SqlCommand cmd = new SqlCommand("DELETE FROM AgendamentoServicos WHERE IdAgendamento = @IdAgendamento AND IdServico = @IdServico", cn))
+                using (SqlCommand cmd = new SqlCommand("DELETE FROM AgendamentoServicos WHERE Id = @Id", cn))
                 {
                     try
                     {
@@ -331,8 +334,7 @@ namespace DAL
                         foreach (AgendamentoServico item in _servicosParaExcluir)
                         {
                             cmd.Parameters.Clear();
-                            cmd.Parameters.AddWithValue("@IdAgendamento", _agendamento.Id);
-                            cmd.Parameters.AddWithValue("@IdServico", item.IdServico);
+                            cmd.Parameters.AddWithValue("@Id", item.Id);
                             cmd.ExecuteNonQuery();
                         }
                         if (_transaction == null)
@@ -520,6 +522,7 @@ namespace DAL
                     while (rd.Read())
                     {
                         agendamento = new Agendamento();
+
 
                         agendamento.IdAnimal = Convert.ToInt32(rd["AnimalId"]);
                         agendamento.IdCliente = Convert.ToInt32(rd["ClienteId"]);
@@ -1250,7 +1253,7 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT AgeSer.idServico, Ser.Descricao, AgeSer.ValorUnitario, AgeSer.Quantidade, Ser.Preco, Ser.Tempo 
+                cmd.CommandText = @"SELECT AgeSer.Id,AgeSer.idServico, Ser.Descricao, AgeSer.ValorUnitario, AgeSer.Quantidade, Ser.Preco, Ser.Tempo 
                                     FROM AgendamentoServicos AgeSer INNER JOIN Servico Ser ON AgeSer.IdServico = Ser.Id  WHERE AgeSer.IdAgendamento = @Id";
 
                 cmd.CommandType = System.Data.CommandType.Text;
@@ -1263,6 +1266,7 @@ namespace DAL
                     while (rd.Read())
                     {
                         servico = new AgendamentoServico();
+                        servico.Id = Convert.ToInt32(rd["Id"]);
                         servico.IdServico = Convert.ToInt32(rd["IdServico"]);
                         servico.Servico = rd["Descricao"].ToString();
                         servico.ValorComDesconto = Convert.ToDecimal(rd["ValorUnitario"]);
