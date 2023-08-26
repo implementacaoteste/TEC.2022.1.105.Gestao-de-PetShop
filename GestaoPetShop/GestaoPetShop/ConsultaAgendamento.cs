@@ -140,8 +140,6 @@ namespace GestaoPetShop
             }
         }
 
-
-
         private void button_AbrirCalendario_Click(object sender, EventArgs e)
         {
             monthCalendar_Agendamento.Visible = true;
@@ -210,6 +208,27 @@ namespace GestaoPetShop
 
         private void button_ExcluirAgendamento_Click(object sender, EventArgs e)
         {
+            try
+            {
+                if(agendamentoBindingSource.Count < 1)
+                {
+                    MessageBox.Show("Selecione um Agendamento para ser excluido.");
+                }
+                if (MessageBox.Show("Deseja realmente excluir este registro?", "Atenção", MessageBoxButtons.YesNo) == DialogResult.No)
+                    return;
+
+                
+                Agendamento agendamento = (Agendamento)agendamentoBindingSource.Current;
+                new AgendamentoBLL().Excluir(agendamento);
+                agendamentoBindingSource.RemoveCurrent();
+                MessageBox.Show("Registro excluido com sucesso!");
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+
 
         }
     }

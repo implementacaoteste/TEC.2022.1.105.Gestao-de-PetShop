@@ -23,10 +23,10 @@ namespace BLL
             AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
             agendamentoDAL.Alterar(_agendamento, _servicosParaExcluir);//
         }
-        public void Excluir(int _id, SqlTransaction _transaction = null)
+        public void Excluir(Agendamento _agendamento)
         {
             AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
-            agendamentoDAL.Excluir(_id);
+            agendamentoDAL.Excluir(_agendamento);
         }
         public Agendamento BuscarPorIdAnimalCliente(int _id, int _opc)
         {

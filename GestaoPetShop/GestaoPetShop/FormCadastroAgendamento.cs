@@ -83,9 +83,11 @@ namespace GestaoPetShop
                 Agendamento agendamento = (Agendamento)agendamentoBindingSource.Current;
                 buttonNovo_Click(sender, e);
                 agendamentoServicoDataGridView.Refresh();
+                valortotalagendamento = Convert.ToDecimal(totalTextBox.Text);
                 subtotal = Convert.ToDecimal(textBoxSubtotal.Text);
                 valortotalagendamento = valortotalagendamento + subtotal;
                 totalTextBox.Text = Convert.ToString(valortotalagendamento);
+                ((Agendamento)agendamentoBindingSource.Current).Total = valortotalagendamento;
             }
             catch (Exception ex)
             {
@@ -102,10 +104,12 @@ namespace GestaoPetShop
                 if (id != 0)
                 {
                     new AgendamentoBLL().Alterar(agendamento, servicosParaExcluir);
+                    MessageBox.Show("Agendamento alterado com sucesso!");
                 }
                 else
                 {
                     new AgendamentoBLL().Inserir(agendamento);
+                    MessageBox.Show("Agendamento Cadastrado com sucesso!");
                 }
             }
             catch (Exception ex)
@@ -137,7 +141,7 @@ namespace GestaoPetShop
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("Erro ao vincular Usuário em um grupo\n" + ex.Message);
+                        MessageBox.Show("Erro ao tentar buscar Animal e Cliente no Banco de Dados\n" + ex.Message);
                     }
                 }
             }

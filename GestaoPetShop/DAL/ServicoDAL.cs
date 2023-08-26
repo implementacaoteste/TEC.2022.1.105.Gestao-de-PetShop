@@ -113,7 +113,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu um erro ao tentar buscar todos os usuários no banco de dados ggggggg.", ex) { Data = { { "Id", 42 } } };
+                throw new Exception("Ocorreu um erro ao tentar buscar todos os usuários no banco de dados.", ex) { Data = { { "Id", 42 } } };
             }
             finally
             {
