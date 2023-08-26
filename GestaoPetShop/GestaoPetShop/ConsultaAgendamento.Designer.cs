@@ -67,8 +67,6 @@
             this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn27 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.buttonFecharCalendario = new System.Windows.Forms.Button();
@@ -85,7 +83,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(168, 13);
+            this.label1.Location = new System.Drawing.Point(233, 20);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(381, 32);
@@ -261,7 +259,7 @@
             this.btnFechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFechar.ImageKey = "fechar-removebg-preview.png";
             this.btnFechar.ImageList = this.imageList2;
-            this.btnFechar.Location = new System.Drawing.Point(768, 9);
+            this.btnFechar.Location = new System.Drawing.Point(766, 13);
             this.btnFechar.Margin = new System.Windows.Forms.Padding(2);
             this.btnFechar.Name = "btnFechar";
             this.btnFechar.Size = new System.Drawing.Size(50, 41);
@@ -437,8 +435,6 @@
             this.dataGridViewTextBoxColumn15,
             this.dataGridViewTextBoxColumn16,
             this.dataGridViewTextBoxColumn18,
-            this.dataGridViewTextBoxColumn23,
-            this.dataGridViewTextBoxColumn25,
             this.dataGridViewTextBoxColumn26,
             this.dataGridViewTextBoxColumn27});
             this.agendamentoServicosDataGridView.DataSource = this.agendamentoServicosBindingSource;
@@ -478,20 +474,6 @@
             this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
             this.dataGridViewTextBoxColumn18.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn23
-            // 
-            this.dataGridViewTextBoxColumn23.DataPropertyName = "ValorComDesconto";
-            this.dataGridViewTextBoxColumn23.HeaderText = "ValorComDesconto";
-            this.dataGridViewTextBoxColumn23.Name = "dataGridViewTextBoxColumn23";
-            this.dataGridViewTextBoxColumn23.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn25
-            // 
-            this.dataGridViewTextBoxColumn25.DataPropertyName = "ValorTotal";
-            this.dataGridViewTextBoxColumn25.HeaderText = "ValorTotal";
-            this.dataGridViewTextBoxColumn25.Name = "dataGridViewTextBoxColumn25";
-            this.dataGridViewTextBoxColumn25.ReadOnly = true;
-            // 
             // dataGridViewTextBoxColumn26
             // 
             this.dataGridViewTextBoxColumn26.DataPropertyName = "IdServico";
@@ -508,13 +490,14 @@
             // 
             // buttonFecharCalendario
             // 
-            this.buttonFecharCalendario.BackColor = System.Drawing.Color.Red;
-            this.buttonFecharCalendario.Location = new System.Drawing.Point(789, 59);
+            this.buttonFecharCalendario.BackColor = System.Drawing.SystemColors.Control;
+            this.buttonFecharCalendario.Location = new System.Drawing.Point(766, 59);
             this.buttonFecharCalendario.Name = "buttonFecharCalendario";
             this.buttonFecharCalendario.Size = new System.Drawing.Size(29, 23);
             this.buttonFecharCalendario.TabIndex = 29;
             this.buttonFecharCalendario.Text = "X";
             this.buttonFecharCalendario.UseVisualStyleBackColor = false;
+            this.buttonFecharCalendario.Visible = false;
             this.buttonFecharCalendario.Click += new System.EventHandler(this.buttonFecharCalendario_Click);
             // 
             // ConsultaAgendamento

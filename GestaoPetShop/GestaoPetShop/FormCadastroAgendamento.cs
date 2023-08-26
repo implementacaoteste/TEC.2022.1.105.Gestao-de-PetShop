@@ -2,27 +2,15 @@
 using Models;
 using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.ComponentModel;
-using System.Data;
-using System.Data.SqlClient;
-using System.Deployment.Internal;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GestaoPetShop
 {
     public partial class FormCadastroAgendamento : Form
     {
-        internal decimal precoAplicado;
         decimal subtotal;
-        int quantidade;
         decimal valortotalagendamento = 0;
-        int quant = 0;
-        bool atualizar = false;
         int id = 0; // serve para selecionar se é alterar Agenamento ou Cadastrar
         int opc = 0; //apenas para selecionar a opção correta de pequeisa em AgendamentoDAL
 
@@ -38,11 +26,18 @@ namespace GestaoPetShop
         {
             try
             {
-
                 if (id == 0)
+                {
                     agendamentoBindingSource.AddNew();
+                    labelAlterarAgenda.Visible = false;
+                    labelCadastroAgenda.Visible = true;
+                }
                 else
+                {
                     agendamentoBindingSource.DataSource = new AgendamentoBLL().BuscarAgendamentoPorId(id, opc);
+                    labelAlterarAgenda.Visible = true;
+                    labelCadastroAgenda.Visible = false;
+                }
 
                 List<Profissional> agendamentoProfissinal = new List<Profissional>();
                 List<Situacao> situacoes = new List<Situacao>();
@@ -78,8 +73,11 @@ namespace GestaoPetShop
             try
             {
                 ((AgendamentoServico)agendamentoServicosBindingSource.Current).Servico = descricaoComboBox.Text;
+               ///* textBoxValorUnitario.Text = precoTextBox.Text;
                 ((AgendamentoServico)agendamentoServicosBindingSource.Current).ValorUnitario = Convert.ToDecimal(precoTextBox.Text);
+                ((AgendamentoServico)agendamentoServicosBindingSource.Current).IdServico = Convert.ToInt32(idTextBox.Text);
                 agendamentoServicosBindingSource.EndEdit();
+
                 Agendamento agendamento = (Agendamento)agendamentoBindingSource.Current;
                 buttonNovo_Click(sender, e);
                 agendamentoServicoDataGridView.Refresh();
@@ -196,7 +194,7 @@ namespace GestaoPetShop
                     servicosParaExcluir.Add(agendamentoServicoExcluir);
                     valortotalagendamento = Convert.ToDecimal(totalTextBox.Text);
                 }
-                subtotal = ((AgendamentoServico)agendamentoServicosBindingSource.Current).ValorTotal;
+                subtotal = ((AgendamentoServico)agendamentoServicosBindingSource.Current).Subtotal;
 
                 valortotalagendamento = valortotalagendamento - subtotal;
                 if (valortotalagendamento < 0)
@@ -228,12 +226,25 @@ namespace GestaoPetShop
             }
         }
 
-        private void textBoxPrecoAplicado_TextChanged(object sender, EventArgs e)
+
+        private void precoTextBox_TextChanged(object sender, EventArgs e)
+        {
+            ((AgendamentoServico)agendamentoServicosBindingSource.Current).ValorUnitario = Convert.ToDecimal(precoTextBox.Text);
+            textBoxValorUnitario.Text = precoTextBox.Text;
+
+        }
+
+        private void buttonCancelar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void textBoxValorUnitario_TextChanged(object sender, EventArgs e)
         {
             try
             {
-                textBoxSubtotal.Text = Convert.ToString(Convert.ToDecimal(textBoxPrecoAplicado.Text) * Convert.ToDecimal(textBoxQuantidade.Text));
-                ((AgendamentoServico)agendamentoServicosBindingSource.Current).ValorTotal = Convert.ToDecimal(textBoxPrecoAplicado.Text) * Convert.ToDecimal(textBoxQuantidade.Text);
+                textBoxSubtotal.Text = Convert.ToString(Convert.ToDecimal(textBoxValorUnitario.Text) * Convert.ToDecimal(textBoxQuantidade.Text));
+                ((AgendamentoServico)agendamentoServicosBindingSource.Current).Subtotal = Convert.ToDecimal(textBoxValorUnitario.Text) * Convert.ToDecimal(textBoxQuantidade.Text);
             }
             catch (Exception)
             {
@@ -241,9 +252,34 @@ namespace GestaoPetShop
             }
         }
 
-        private void precoTextBox_TextChanged(object sender, EventArgs e)
+        private void descricaoComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            ((AgendamentoServico)agendamentoServicosBindingSource.Current).ValorComDesconto = Convert.ToDecimal(precoTextBox.Text);
+            //try
+            //{
+            //    //  servicoBindingSource.DataSource = new AgendamentoBLL().B(descricaoComboBox.Text);
+
+            //    textBoxSubtotal.Text = Convert.ToString(Convert.ToDecimal(textBoxValorUnitario.Text) * Convert.ToDecimal(textBoxQuantidade.Text));
+            //    //  ((AgendamentoServico)agendamentoServicosBindingSource.Current).Subtotal = Convert.ToDecimal(textBoxValorUnitario.Text) * Convert.ToDecimal(textBoxQuantidade.Text);
+
+            //}
+            //catch (Exception ex)
+            //{
+
+            //    MessageBox.Show(ex.Message);
+            //}
+        }
+
+        private void textBoxQuantidade_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                textBoxSubtotal.Text = Convert.ToString(Convert.ToDecimal(textBoxValorUnitario.Text) * Convert.ToDecimal(textBoxQuantidade.Text));
+                ((AgendamentoServico)agendamentoServicosBindingSource.Current).Subtotal = Convert.ToDecimal(textBoxValorUnitario.Text) * Convert.ToDecimal(textBoxQuantidade.Text);
+            }
+            catch (Exception)
+            {
+
+            }
         }
     }
 

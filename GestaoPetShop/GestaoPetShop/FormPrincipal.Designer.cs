@@ -55,20 +55,21 @@
             this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.agendamentoServicosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.agendamentoServicosDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.agendamentoServicosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quantidadeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.valorUnitarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.subtotalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idServicoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tempoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.agendamentoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.agendamentoDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.agendamentoServicosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.agendamentoServicosDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.agendamentoServicosBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -78,8 +79,8 @@
             this.cadastroToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(860, 28);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(645, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -94,14 +95,14 @@
             this.animalToolStripMenuItem});
             this.cadastroToolStripMenuItem.Name = "cadastroToolStripMenuItem";
             this.cadastroToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.U)));
-            this.cadastroToolStripMenuItem.Size = new System.Drawing.Size(82, 24);
+            this.cadastroToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
             this.cadastroToolStripMenuItem.Text = "Cadastro";
             // 
             // usuariosToolStripMenuItem
             // 
             this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
             this.usuariosToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.U)));
-            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(270, 26);
+            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(217, 22);
             this.usuariosToolStripMenuItem.Text = "Usuários";
             this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
             // 
@@ -109,7 +110,7 @@
             // 
             this.gruposDeUsuariosToolStripMenuItem.Name = "gruposDeUsuariosToolStripMenuItem";
             this.gruposDeUsuariosToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.G)));
-            this.gruposDeUsuariosToolStripMenuItem.Size = new System.Drawing.Size(270, 26);
+            this.gruposDeUsuariosToolStripMenuItem.Size = new System.Drawing.Size(217, 22);
             this.gruposDeUsuariosToolStripMenuItem.Text = "Grupos de usuários";
             this.gruposDeUsuariosToolStripMenuItem.Click += new System.EventHandler(this.gruposDeUsuariosToolStripMenuItem_Click);
             // 
@@ -117,7 +118,7 @@
             // 
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
             this.clientesToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(270, 26);
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(217, 22);
             this.clientesToolStripMenuItem.Text = "Clientes";
             this.clientesToolStripMenuItem.Click += new System.EventHandler(this.clientesToolStripMenuItem_Click);
             // 
@@ -125,7 +126,7 @@
             // 
             this.servicosToolStripMenuItem.Name = "servicosToolStripMenuItem";
             this.servicosToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.servicosToolStripMenuItem.Size = new System.Drawing.Size(270, 26);
+            this.servicosToolStripMenuItem.Size = new System.Drawing.Size(217, 22);
             this.servicosToolStripMenuItem.Text = "Serviços";
             this.servicosToolStripMenuItem.Click += new System.EventHandler(this.servicosToolStripMenuItem_Click);
             // 
@@ -133,7 +134,7 @@
             // 
             this.agendamentoToolStripMenuItem.Name = "agendamentoToolStripMenuItem";
             this.agendamentoToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));
-            this.agendamentoToolStripMenuItem.Size = new System.Drawing.Size(270, 26);
+            this.agendamentoToolStripMenuItem.Size = new System.Drawing.Size(217, 22);
             this.agendamentoToolStripMenuItem.Text = "Agendamento";
             this.agendamentoToolStripMenuItem.Click += new System.EventHandler(this.agendamentoToolStripMenuItem_Click);
             // 
@@ -141,13 +142,14 @@
             // 
             this.animalToolStripMenuItem.Name = "animalToolStripMenuItem";
             this.animalToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
-            this.animalToolStripMenuItem.Size = new System.Drawing.Size(270, 26);
+            this.animalToolStripMenuItem.Size = new System.Drawing.Size(217, 22);
             this.animalToolStripMenuItem.Text = "Animal";
             this.animalToolStripMenuItem.Click += new System.EventHandler(this.animalToolStripMenuItem_Click);
             // 
             // monthCalendar1
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(452, 18);
+            this.monthCalendar1.Location = new System.Drawing.Point(339, 15);
+            this.monthCalendar1.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 1;
             // 
@@ -160,10 +162,10 @@
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.ImageKey = "buscar-removebg-preview.png";
             this.button1.ImageList = this.imageList1;
-            this.button1.Location = new System.Drawing.Point(720, 18);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Location = new System.Drawing.Point(540, 15);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(107, 48);
+            this.button1.Size = new System.Drawing.Size(80, 39);
             this.button1.TabIndex = 4;
             this.button1.Text = "Buscar";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -186,10 +188,10 @@
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.ImageKey = "fechar-removebg-preview.png";
             this.button2.ImageList = this.imageList1;
-            this.button2.Location = new System.Drawing.Point(720, 178);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button2.Location = new System.Drawing.Point(540, 145);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(107, 38);
+            this.button2.Size = new System.Drawing.Size(80, 31);
             this.button2.TabIndex = 5;
             this.button2.Text = "Fechar";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -203,9 +205,10 @@
             this.lblUsuarioLogado.BackColor = System.Drawing.Color.Transparent;
             this.lblUsuarioLogado.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsuarioLogado.ForeColor = System.Drawing.Color.ForestGreen;
-            this.lblUsuarioLogado.Location = new System.Drawing.Point(108, 565);
+            this.lblUsuarioLogado.Location = new System.Drawing.Point(81, 459);
+            this.lblUsuarioLogado.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblUsuarioLogado.Name = "lblUsuarioLogado";
-            this.lblUsuarioLogado.Size = new System.Drawing.Size(161, 23);
+            this.lblUsuarioLogado.Size = new System.Drawing.Size(129, 19);
             this.lblUsuarioLogado.TabIndex = 7;
             this.lblUsuarioLogado.Text = "Usuário Logado";
             // 
@@ -215,9 +218,10 @@
             this.lblUser.BackColor = System.Drawing.Color.Transparent;
             this.lblUser.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUser.ForeColor = System.Drawing.Color.ForestGreen;
-            this.lblUser.Location = new System.Drawing.Point(197, 497);
+            this.lblUser.Location = new System.Drawing.Point(148, 404);
+            this.lblUser.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblUser.Name = "lblUser";
-            this.lblUser.Size = new System.Drawing.Size(0, 23);
+            this.lblUser.Size = new System.Drawing.Size(0, 19);
             this.lblUser.TabIndex = 7;
             // 
             // label1
@@ -226,9 +230,10 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label1.Location = new System.Drawing.Point(12, 565);
+            this.label1.Location = new System.Drawing.Point(9, 459);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(90, 23);
+            this.label1.Size = new System.Drawing.Size(73, 19);
             this.label1.TabIndex = 7;
             this.label1.Text = "Logado:";
             // 
@@ -253,13 +258,14 @@
             this.dataGridViewTextBoxColumn12,
             this.dataGridViewTextBoxColumn17});
             this.agendamentoDataGridView.DataSource = this.agendamentoBindingSource;
-            this.agendamentoDataGridView.Location = new System.Drawing.Point(4, 246);
+            this.agendamentoDataGridView.Location = new System.Drawing.Point(3, 200);
+            this.agendamentoDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.agendamentoDataGridView.Name = "agendamentoDataGridView";
             this.agendamentoDataGridView.ReadOnly = true;
             this.agendamentoDataGridView.RowHeadersVisible = false;
             this.agendamentoDataGridView.RowHeadersWidth = 51;
             this.agendamentoDataGridView.RowTemplate.Height = 24;
-            this.agendamentoDataGridView.Size = new System.Drawing.Size(836, 136);
+            this.agendamentoDataGridView.Size = new System.Drawing.Size(627, 110);
             this.agendamentoDataGridView.TabIndex = 7;
             this.agendamentoDataGridView.Visible = false;
             // 
@@ -335,11 +341,6 @@
             this.dataGridViewTextBoxColumn17.ReadOnly = true;
             this.dataGridViewTextBoxColumn17.Width = 60;
             // 
-            // agendamentoServicosBindingSource
-            // 
-            this.agendamentoServicosBindingSource.DataMember = "AgendamentoServicos";
-            this.agendamentoServicosBindingSource.DataSource = this.agendamentoBindingSource;
-            // 
             // agendamentoServicosDataGridView
             // 
             this.agendamentoServicosDataGridView.AllowUserToAddRows = false;
@@ -348,93 +349,93 @@
             this.agendamentoServicosDataGridView.AutoGenerateColumns = false;
             this.agendamentoServicosDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.agendamentoServicosDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn22,
-            this.dataGridViewTextBoxColumn11,
-            this.dataGridViewTextBoxColumn13,
-            this.dataGridViewTextBoxColumn18,
-            this.dataGridViewTextBoxColumn20,
-            this.dataGridViewTextBoxColumn21,
-            this.dataGridViewTextBoxColumn23});
+            this.idDataGridViewTextBoxColumn,
+            this.dataGridViewTextBoxColumn9,
+            this.quantidadeDataGridViewTextBoxColumn,
+            this.precoDataGridViewTextBoxColumn,
+            this.valorUnitarioDataGridViewTextBoxColumn,
+            this.subtotalDataGridViewTextBoxColumn,
+            this.idServicoDataGridViewTextBoxColumn,
+            this.tempoDataGridViewTextBoxColumn});
             this.agendamentoServicosDataGridView.DataSource = this.agendamentoServicosBindingSource;
-            this.agendamentoServicosDataGridView.Location = new System.Drawing.Point(12, 398);
+            this.agendamentoServicosDataGridView.Location = new System.Drawing.Point(9, 323);
+            this.agendamentoServicosDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.agendamentoServicosDataGridView.Name = "agendamentoServicosDataGridView";
             this.agendamentoServicosDataGridView.ReadOnly = true;
             this.agendamentoServicosDataGridView.RowHeadersVisible = false;
             this.agendamentoServicosDataGridView.RowHeadersWidth = 51;
             this.agendamentoServicosDataGridView.RowTemplate.Height = 24;
-            this.agendamentoServicosDataGridView.Size = new System.Drawing.Size(815, 138);
+            this.agendamentoServicosDataGridView.Size = new System.Drawing.Size(611, 112);
             this.agendamentoServicosDataGridView.TabIndex = 8;
             this.agendamentoServicosDataGridView.Visible = false;
             // 
-            // dataGridViewTextBoxColumn22
+            // agendamentoServicosBindingSource
             // 
-            this.dataGridViewTextBoxColumn22.DataPropertyName = "IdServico";
-            this.dataGridViewTextBoxColumn22.HeaderText = "IdServico";
-            this.dataGridViewTextBoxColumn22.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
-            this.dataGridViewTextBoxColumn22.ReadOnly = true;
-            this.dataGridViewTextBoxColumn22.Width = 125;
+            this.agendamentoServicosBindingSource.DataMember = "AgendamentoServicos";
+            this.agendamentoServicosBindingSource.DataSource = this.agendamentoBindingSource;
             // 
-            // dataGridViewTextBoxColumn11
+            // idDataGridViewTextBoxColumn
             // 
-            this.dataGridViewTextBoxColumn11.DataPropertyName = "Servico";
-            this.dataGridViewTextBoxColumn11.HeaderText = "Servico";
-            this.dataGridViewTextBoxColumn11.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            this.dataGridViewTextBoxColumn11.ReadOnly = true;
-            this.dataGridViewTextBoxColumn11.Width = 125;
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn13
+            // dataGridViewTextBoxColumn9
             // 
-            this.dataGridViewTextBoxColumn13.DataPropertyName = "Quantidade";
-            this.dataGridViewTextBoxColumn13.HeaderText = "Quantidade";
-            this.dataGridViewTextBoxColumn13.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
-            this.dataGridViewTextBoxColumn13.ReadOnly = true;
-            this.dataGridViewTextBoxColumn13.Width = 125;
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "Servico";
+            this.dataGridViewTextBoxColumn9.HeaderText = "Servico";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn18
+            // quantidadeDataGridViewTextBoxColumn
             // 
-            this.dataGridViewTextBoxColumn18.DataPropertyName = "ValorUnitario";
-            this.dataGridViewTextBoxColumn18.HeaderText = "ValorUnitario";
-            this.dataGridViewTextBoxColumn18.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
-            this.dataGridViewTextBoxColumn18.ReadOnly = true;
-            this.dataGridViewTextBoxColumn18.Width = 125;
+            this.quantidadeDataGridViewTextBoxColumn.DataPropertyName = "Quantidade";
+            this.quantidadeDataGridViewTextBoxColumn.HeaderText = "Quantidade";
+            this.quantidadeDataGridViewTextBoxColumn.Name = "quantidadeDataGridViewTextBoxColumn";
+            this.quantidadeDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn20
+            // precoDataGridViewTextBoxColumn
             // 
-            this.dataGridViewTextBoxColumn20.DataPropertyName = "ValorComDesconto";
-            this.dataGridViewTextBoxColumn20.HeaderText = "ValorComDesconto";
-            this.dataGridViewTextBoxColumn20.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
-            this.dataGridViewTextBoxColumn20.ReadOnly = true;
-            this.dataGridViewTextBoxColumn20.Width = 125;
+            this.precoDataGridViewTextBoxColumn.DataPropertyName = "Preco";
+            this.precoDataGridViewTextBoxColumn.HeaderText = "Preco";
+            this.precoDataGridViewTextBoxColumn.Name = "precoDataGridViewTextBoxColumn";
+            this.precoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn21
+            // valorUnitarioDataGridViewTextBoxColumn
             // 
-            this.dataGridViewTextBoxColumn21.DataPropertyName = "ValorTotal";
-            this.dataGridViewTextBoxColumn21.HeaderText = "ValorTotal";
-            this.dataGridViewTextBoxColumn21.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
-            this.dataGridViewTextBoxColumn21.ReadOnly = true;
-            this.dataGridViewTextBoxColumn21.Width = 125;
+            this.valorUnitarioDataGridViewTextBoxColumn.DataPropertyName = "ValorUnitario";
+            this.valorUnitarioDataGridViewTextBoxColumn.HeaderText = "ValorUnitario";
+            this.valorUnitarioDataGridViewTextBoxColumn.Name = "valorUnitarioDataGridViewTextBoxColumn";
+            this.valorUnitarioDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn23
+            // subtotalDataGridViewTextBoxColumn
             // 
-            this.dataGridViewTextBoxColumn23.DataPropertyName = "Tempo";
-            this.dataGridViewTextBoxColumn23.HeaderText = "Tempo";
-            this.dataGridViewTextBoxColumn23.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn23.Name = "dataGridViewTextBoxColumn23";
-            this.dataGridViewTextBoxColumn23.ReadOnly = true;
-            this.dataGridViewTextBoxColumn23.Width = 125;
+            this.subtotalDataGridViewTextBoxColumn.DataPropertyName = "Subtotal";
+            this.subtotalDataGridViewTextBoxColumn.HeaderText = "Subtotal";
+            this.subtotalDataGridViewTextBoxColumn.Name = "subtotalDataGridViewTextBoxColumn";
+            this.subtotalDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // idServicoDataGridViewTextBoxColumn
+            // 
+            this.idServicoDataGridViewTextBoxColumn.DataPropertyName = "IdServico";
+            this.idServicoDataGridViewTextBoxColumn.HeaderText = "IdServico";
+            this.idServicoDataGridViewTextBoxColumn.Name = "idServicoDataGridViewTextBoxColumn";
+            this.idServicoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // tempoDataGridViewTextBoxColumn
+            // 
+            this.tempoDataGridViewTextBoxColumn.DataPropertyName = "Tempo";
+            this.tempoDataGridViewTextBoxColumn.HeaderText = "Tempo";
+            this.tempoDataGridViewTextBoxColumn.Name = "tempoDataGridViewTextBoxColumn";
+            this.tempoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // FormPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::GestaoPetShop.Properties.Resources.papel_de_parede_21;
-            this.ClientSize = new System.Drawing.Size(860, 710);
+            this.ClientSize = new System.Drawing.Size(645, 577);
             this.Controls.Add(this.agendamentoServicosDataGridView);
             this.Controls.Add(this.agendamentoDataGridView);
             this.Controls.Add(this.lblUser);
@@ -447,7 +448,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormPrincipal";
@@ -460,8 +461,8 @@
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.agendamentoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.agendamentoDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.agendamentoServicosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.agendamentoServicosDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.agendamentoServicosBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -508,15 +509,18 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn19;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
-        private System.Windows.Forms.BindingSource agendamentoServicosBindingSource;
         private System.Windows.Forms.DataGridView agendamentoServicosDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn22;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn20;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn23;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn quantidadeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn precoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn valorUnitarioDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn subtotalDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idServicoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tempoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource agendamentoServicosBindingSource;
     }
 }
 

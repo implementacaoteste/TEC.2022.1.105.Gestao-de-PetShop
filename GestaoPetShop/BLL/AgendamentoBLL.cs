@@ -83,32 +83,26 @@ namespace BLL
             AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
             return agendamentoDAL.BuscarSituacaoPorNome(_descricaoSituacao);
         }
-
         public Agendamento BuscarAgendamentoPorId(int _idAgendamento, int _opc)
         {
             AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
             return agendamentoDAL.BuscarAgendamentoPorId(_idAgendamento, _opc);
         }
-
-
         public void ExcluirServicoDeAgendamento(int _idservico, int _idagendamento)
         {
             AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
             agendamentoDAL.ExcluirServicoDeAgendamento(_idservico, _idagendamento);
         }
-
         public List<Agendamento> BuscarTodos()
         {
             AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
             return agendamentoDAL.BuscarTodos();
         }
-
         public Animal BuscarPorIdAnimal(int _idpesquisa)
         {
             AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
             return agendamentoDAL.BuscarPorIdAnimal(_idpesquisa);
         }
-
         public Cliente BuscarPorIdCliente(int _idCliente)
         {
             AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
