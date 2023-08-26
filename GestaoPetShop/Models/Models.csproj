@@ -225,7 +225,6 @@
     <Compile Include="Animal.cs" />
     <Compile Include="Cliente.cs" />
     <Compile Include="Constantes.cs" />
-    <Compile Include="DataGridView1_FormsPrincipal.cs" />
     <Compile Include="EmailCliente.cs" />
     <Compile Include="EmailProfissional.cs" />
     <Compile Include="Funcao.cs" />

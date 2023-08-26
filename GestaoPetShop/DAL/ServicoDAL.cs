@@ -2,16 +2,12 @@
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Security.Cryptography;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DAL
 {
     public class ServicoDAL
     {
-        public void Inserir(Servico _servico )
+        public void Inserir(Servico _servico)
         {
             SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
             try
@@ -22,7 +18,7 @@ namespace DAL
                 cmd.CommandType = System.Data.CommandType.Text;
 
                 cmd.Parameters.AddWithValue("@Descricao", _servico.Descricao);
-                cmd.Parameters.AddWithValue("@Preco",_servico.Preco);
+                cmd.Parameters.AddWithValue("@Preco", _servico.Preco);
                 cmd.Parameters.AddWithValue("@Tempo", _servico.Tempo);
                 cmd.Parameters.AddWithValue("@Ativo", _servico.Ativo);
 
@@ -200,8 +196,8 @@ namespace DAL
                 cmd.CommandText = @"DELETE FROM Servico WHERE Id = @Id";
                 cmd.CommandType = System.Data.CommandType.Text;
 
-                cmd.Parameters.AddWithValue("@Id",_id);
-                
+                cmd.Parameters.AddWithValue("@Id", _id);
+
                 cmd.Connection = cn;
                 cn.Open();
 
@@ -210,9 +206,9 @@ namespace DAL
             catch (Exception ex)
             {
 
-                throw new Exception("Ocorreu um erro ao tentar excluir usuário no banco de dados.", ex) { Data = { { "Id", 44 } } };
-                    
-                
+                throw new Exception("Ocorreu um erro ao tentar buscar vínculos de Serviços com Agendamento\n Primeiro tem que excluir este serviço de agendamento\n", ex) { Data = { { "Id", 44 } } };
+
+
             }
         }
         public bool ExisteVinculo(int _id)
@@ -240,7 +236,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu um erro ao tentar buscar vínculos de Serviços com Agendamento: " + ex.Message) { Data = { { "Id", 45 } } };
+                throw new Exception("Ocorreu um erro ao tentar verificar se o serviço está vinculado em um agendamento: " + ex.Message) { Data = { { "Id", 45 } } };
             }
             finally
             {
@@ -248,54 +244,5 @@ namespace DAL
             }
         }
 
-        public List<DataGridView1_FormsPrincipal> dataGridView(string _date)
-        {
-            List<DataGridView1_FormsPrincipal> listaAgendamentos = new List<DataGridView1_FormsPrincipal>();
-            DataGridView1_FormsPrincipal agendamentosView;
-
-            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
-            try
-            {
-                SqlCommand cmd = new SqlCommand();
-                cmd.Connection = cn;
-                cmd.CommandText = @"SELECT Ag.DataAg,Ag.Horario, Ani.Nome as N_Animal,Cli.Nome as N_Cliente, S.Descricao, P.Nome as N_Prof, Si.Descricao as DescSituacao FROM Agendamento Ag LEFT JOIN Profissional P             ON Ag.IdProfissional = P.Id
-                                                                                                                                                                           LEFT JOIN Animal Ani                 ON Ag.IdAnimal = Ani.Id
-                                                                                                                                                                           LEFT JOIN Cliente Cli                ON Ani.IdCliente = Cli.Id
-                                                                                                                                                                           LEFT JOIN Situacao Si                ON Ag.IdSituacao = Si.Id
-                                                                                                                                                                           LEFT  JOIN AgendamentoServicos AGS   ON Ag.Id = AGS.IdAgendamento
-                                                                                                                                                                           LEFT JOIN Servico S                  ON AGS.IdServico = S.Id 
-                                                                                                                                                                           WHERE Ag.DataAg = @data";
-                cmd.CommandType = System.Data.CommandType.Text;
-                cmd.Parameters.AddWithValue("@data", _date);
-                cn.Open();
-
-                using (SqlDataReader rd = cmd.ExecuteReader())
-                {
-                    while (rd.Read())
-                    {
-                        agendamentosView = new DataGridView1_FormsPrincipal();
-                        agendamentosView.DataAg = Convert.ToDateTime(rd["DataAg"]);
-                        agendamentosView.NomeAnimal = rd["N_Animal"].ToString();
-                        agendamentosView.NomeCliente = rd["N_Cliente"].ToString();
-                        agendamentosView.Situacao = rd["DescSituacao"].ToString();
-                        agendamentosView.Servico = rd["Descricao"].ToString();
-                        agendamentosView.Profissional = rd["N_Prof"].ToString();
-                        agendamentosView.Horario = rd["Horario"].ToString();
-
-
-                        listaAgendamentos.Add(agendamentosView);
-                    }
-                }
-                return listaAgendamentos;
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("Ocorreu um erro ao tentar buscar todos os Serviços no banco de dados.", ex) { Data = { { "Id", 46 } } };
-            }
-            finally
-            {
-                cn.Close();
-            }
-        }
     }
 }

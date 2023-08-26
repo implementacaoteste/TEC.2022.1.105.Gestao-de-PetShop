@@ -100,58 +100,7 @@ namespace DAL
                 }
             }
         }
-        private int BuscarIdDoAgendamento(Agendamento _agendamento, SqlTransaction _transaction, int _idagendamento)
-        {
-            SqlTransaction transaction = _transaction;
-
-            using (SqlConnection cn = new SqlConnection(Conexao.StringDeConexao))
-            {
-                using (SqlCommand cmd = new SqlCommand(@"SELECT Id FROM Agendamento WHERE IdAnimal = @IdAnimal AND IdProfissional = @IdProfissional 
-                                                                                                               AND IdSituacao     = @IdSituacao
-                                                                                                               AND DataAg         = @DataAg
-                                                                                                               AND Horario        = @Horario
-                                                                                                               AND Total          = @Total", cn))
-                {
-                    try
-                    {
-                        cmd.CommandType = System.Data.CommandType.Text;
-                        cmd.Parameters.AddWithValue("@IdAnimal", _agendamento.IdAnimal);
-                        cmd.Parameters.AddWithValue("@IdProfissional", _agendamento.IdProfissional);
-                        cmd.Parameters.AddWithValue("@IdSituacao", _agendamento.IdSituacao);
-                        cmd.Parameters.AddWithValue("@DataAg", _agendamento.DataAg);
-                        cmd.Parameters.AddWithValue("@Horario", _agendamento.Horario);
-                        cmd.Parameters.AddWithValue("@Total", _agendamento.Total);
-
-                        if (transaction == null)
-                        {
-                            cn.Open();
-                            transaction = cn.BeginTransaction();
-                        }
-
-                        cmd.Transaction = transaction;
-                        cmd.Connection = transaction.Connection;
-
-                        using (SqlDataReader rd = cmd.ExecuteReader())
-                        {
-                            while (rd.Read())
-                            {
-                                _idagendamento = Convert.ToInt32(rd["Id"]);
-                            }
-                        }
-
-
-
-                    }
-                    catch (Exception ex)
-                    {
-                        if (transaction != null && transaction.Connection != null)
-                            transaction.Rollback();
-                        throw new Exception("Ocorreu um erro ao tentar excluir todos os usuários do grupo no banco de dados.", ex) { Data = { { "Id", -1 } } };
-                    }
-                }
-            }
-            return _idagendamento;
-        }
+        
         public void Alterar(Agendamento _agendamento, List<AgendamentoServico> _servicosParaExcluir, SqlTransaction _transaction = null) //
         {
 

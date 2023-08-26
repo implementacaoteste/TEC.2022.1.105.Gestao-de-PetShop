@@ -36,7 +36,7 @@ namespace GestaoPetShop
                         return;
                     }
                     int opc = 0;
-                    agendamentoBindingSource.DataSource = agendamentoBLL.BuscarAgendamentoPorId (Convert.ToInt32(textBox_BuscarAgendamento.Text), opc);
+                    agendamentoBindingSource.DataSource = agendamentoBLL.BuscarAgendamentoPorId(Convert.ToInt32(textBox_BuscarAgendamento.Text), opc);
 
                 }
 
@@ -101,7 +101,7 @@ namespace GestaoPetShop
                         return;
                     }
                     int opc = 6;
-                    string dataconsulta= textBox_BuscarData.Text;
+                    string dataconsulta = textBox_BuscarData.Text;
                     if (dataconsulta.Count() == 4)
                     {
                         dataconsulta = "01/01/" + textBox_BuscarData.Text;
@@ -142,15 +142,35 @@ namespace GestaoPetShop
 
         private void button_AbrirCalendario_Click(object sender, EventArgs e)
         {
+            try
+            {
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Ocorreu um erro ao tentar abrir o calendário",ex.Message);
+            }
             monthCalendar_Agendamento.Visible = true;
             button_SelecionarData.Visible = true;
+            buttonFecharCalendario.Visible = true;
         }
 
         private void button_SelecionarData_Click(object sender, EventArgs e)
         {
+            try
+            {
+
             textBox_BuscarData.Text = monthCalendar_Agendamento.SelectionStart.ToShortDateString();
             monthCalendar_Agendamento.Visible = false;
             button_SelecionarData.Visible = false;
+            buttonFecharCalendario.Visible = false;
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Ocorreu um erro ao tentar selecionar uma data no calendário.",ex.Message);
+            }
         }
 
         private void btnFechar_Click(object sender, EventArgs e)
@@ -210,14 +230,14 @@ namespace GestaoPetShop
         {
             try
             {
-                if(agendamentoBindingSource.Count < 1)
+                if (agendamentoBindingSource.Count < 1)
                 {
                     MessageBox.Show("Selecione um Agendamento para ser excluido.");
                 }
                 if (MessageBox.Show("Deseja realmente excluir este registro?", "Atenção", MessageBoxButtons.YesNo) == DialogResult.No)
                     return;
 
-                
+
                 Agendamento agendamento = (Agendamento)agendamentoBindingSource.Current;
                 new AgendamentoBLL().Excluir(agendamento);
                 agendamentoBindingSource.RemoveCurrent();
@@ -230,6 +250,21 @@ namespace GestaoPetShop
             }
 
 
+        }
+
+        private void buttonFecharCalendario_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                monthCalendar_Agendamento.Visible = false;
+                button_SelecionarData.Visible = false;
+                buttonFecharCalendario.Visible = false;
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Ocorreu um erro ao tentar fecha o calendário.", ex.Message);
+            }
         }
     }
 }

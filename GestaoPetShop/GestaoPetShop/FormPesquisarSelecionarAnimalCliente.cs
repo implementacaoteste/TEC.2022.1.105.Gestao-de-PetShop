@@ -83,5 +83,10 @@ namespace GestaoPetShop
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void buttonCancelarPesquisaAnimalCliente_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
