@@ -42,15 +42,11 @@ namespace DAL
                     try
                     {
                         int idagendamento = Convert.ToInt32(cmd.ExecuteScalar());
-
-                        //int idagendamento = BuscarIdDoAgendamento(_agendamento, transaction, _idagendamento);
-
                         InserirAgendamentoServico(_agendamento, idagendamento, transaction);
 
                         if (_transaction == null)
                             transaction.Commit();
                     }
-
                     catch (Exception ex)
                     {
                         if (transaction != null && transaction.Connection != null)
@@ -59,7 +55,6 @@ namespace DAL
                     }
                 }
             }
-
         }
         private void InserirAgendamentoServico(Agendamento _agendamento, int _idagendamento, SqlTransaction _transaction)
         {
