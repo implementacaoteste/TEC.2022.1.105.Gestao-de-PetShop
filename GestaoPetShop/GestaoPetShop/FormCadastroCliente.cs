@@ -111,6 +111,11 @@ namespace GestaoPetShop
 
         private void buttonInserirEmail_Click(object sender, EventArgs e)
         {
+            if(textBoxEmail.Text == "")
+            {
+                MessageBox.Show("O campo de E-mail não foi preenchido");
+                return;
+            }
             emailClienteBindingSource.AddNew();
             ((EmailCliente)emailClienteBindingSource.Current).Email = textBoxEmail.Text;
 
@@ -119,6 +124,11 @@ namespace GestaoPetShop
 
         private void buttonInserirTelefone_Click(object sender, EventArgs e)
         {
+            if (textBoxTelefone.Text == "")
+            {
+                MessageBox.Show("O campo de Telefone não foi preenchido");
+                return;
+            }
            telefoneClientesBindingSource.AddNew();
             ((TelefoneCliente)telefoneClientesBindingSource.Current).Telefone = textBoxTelefone.Text;
 

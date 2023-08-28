@@ -375,6 +375,7 @@
             this.telefoneClientesDataGridView.AllowUserToOrderColumns = true;
             this.telefoneClientesDataGridView.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.telefoneClientesDataGridView.AutoGenerateColumns = false;
+            this.telefoneClientesDataGridView.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.telefoneClientesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.telefoneClientesDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn4});
@@ -453,6 +454,7 @@
             this.emailClienteDataGridView.AllowUserToOrderColumns = true;
             this.emailClienteDataGridView.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.emailClienteDataGridView.AutoGenerateColumns = false;
+            this.emailClienteDataGridView.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.emailClienteDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.emailClienteDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn3});
@@ -460,6 +462,7 @@
             this.emailClienteDataGridView.Location = new System.Drawing.Point(12, 306);
             this.emailClienteDataGridView.Name = "emailClienteDataGridView";
             this.emailClienteDataGridView.ReadOnly = true;
+            this.emailClienteDataGridView.RowHeadersVisible = false;
             this.emailClienteDataGridView.RowHeadersWidth = 51;
             this.emailClienteDataGridView.RowTemplate.Height = 24;
             this.emailClienteDataGridView.Size = new System.Drawing.Size(338, 125);
