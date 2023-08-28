@@ -30,7 +30,7 @@ namespace GestaoPetShop
         private void FormPrincipal_Load(object sender, EventArgs e)
         {
 
-            dataGridView1_FormsPrincipalDataGridView.DataSource = new DataGridView1_FormsPrincipal();// ERA APENAS UM TESTE -DEIXEI AQUI SÓ PRA LEMBRAR
+          //  agendamentoDataGridView.DataSource = new Agendamento();// ERA APENAS UM TESTE -DEIXEI AQUI SÓ PRA LEMBRAR
 
 
             try
@@ -106,28 +106,19 @@ namespace GestaoPetShop
         {
             string dataag = monthCalendar1.SelectionStart.ToShortDateString();
 
-            dataGridView1_FormsPrincipalDataGridView.DataSource = new ServicoBLL().dataGridView(dataag);
+            agendamentoBindingSource.DataSource = new AgendamentoBLL().BuscarPorDiaMesAno(dataag);
 
-            dataGridView1_FormsPrincipalDataGridView.Visible = true;
+            agendamentoDataGridView.Visible = true;
+            agendamentoServicosDataGridView.Visible = true;
             button2.Visible = true;
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            dataGridView1_FormsPrincipalDataGridView.Visible = false;
+            agendamentoDataGridView.Visible = false;
+            agendamentoServicosDataGridView.Visible = false;
             button2.Visible = false;
+            
         }
-
-       
-
-        /* ERA APENAS UM TESTE - DEIXEI AQUI SÓ PRA LEMBRAR*/
-
-
-
-
-
-
-
-
     }
 }
