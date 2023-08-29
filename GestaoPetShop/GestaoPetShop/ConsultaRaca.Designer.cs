@@ -1,6 +1,6 @@
 ﻿namespace GestaoPetShop
 {
-    partial class ConsultaPorRaca
+    partial class ConsultaRaca
     {
         /// <summary>
         /// Required designer variable.
@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConsultaRaca));
             this.buttonBuscar = new System.Windows.Forms.Button();
             this.buttonAlterar = new System.Windows.Forms.Button();
             this.buttonInserir = new System.Windows.Forms.Button();
@@ -212,6 +213,7 @@
             // 
             // buttonSelecionar
             // 
+            this.buttonSelecionar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonSelecionar.Location = new System.Drawing.Point(802, 594);
             this.buttonSelecionar.Name = "buttonSelecionar";
             this.buttonSelecionar.Size = new System.Drawing.Size(82, 23);
@@ -221,6 +223,7 @@
             // 
             // buttonCancelar
             // 
+            this.buttonCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonCancelar.Location = new System.Drawing.Point(909, 594);
             this.buttonCancelar.Name = "buttonCancelar";
             this.buttonCancelar.Size = new System.Drawing.Size(83, 23);
@@ -237,12 +240,12 @@
             this.label1.TabIndex = 11;
             this.label1.Text = "Buscar Por";
             // 
-            // ConsultaPorRaca
+            // ConsultaRaca
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.BackgroundImage = global::GestaoPetShop.Properties.Resources.papel_de_parede_2;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1024, 629);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonCancelar);
@@ -255,7 +258,7 @@
             this.Controls.Add(this.buttonInserir);
             this.Controls.Add(this.buttonAlterar);
             this.Controls.Add(this.buttonBuscar);
-            this.Name = "ConsultaPorRaca";
+            this.Name = "ConsultaRaca";
             this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds;
             this.Text = "Consulta Raca";
             this.Load += new System.EventHandler(this.ConsultaPorRaca_Load);

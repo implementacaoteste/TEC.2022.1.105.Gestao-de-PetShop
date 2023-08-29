@@ -236,6 +236,12 @@
     <Compile Include="ConsultaRaca.Designer.cs">
       <DependentUpon>ConsultaRaca.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormCadastroRaca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCadastroRaca.Designer.cs">
+      <DependentUpon>FormCadastroRaca.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormConsultaAnimal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -345,6 +351,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ConsultaRaca.resx">
       <DependentUpon>ConsultaRaca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCadastroRaca.resx">
+      <DependentUpon>FormCadastroRaca.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormConsultaAnimal.resx">
       <DependentUpon>FormConsultaAnimal.cs</DependentUpon>

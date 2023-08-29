@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BLL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,11 +11,13 @@ using System.Windows.Forms;
 
 namespace GestaoPetShop
 {
-    public partial class ConsultaPorRaca : Form
+    public partial class ConsultaRaca : Form
     {
-        public ConsultaPorRaca()
+        int id;
+        public ConsultaRaca()
         {
             InitializeComponent();
+            id = id;
         }
 
         private void racaBindingNavigatorSaveItem_Click(object sender, EventArgs e)
@@ -28,7 +31,19 @@ namespace GestaoPetShop
         private void ConsultaPorRaca_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'petshopDataSet.Raca' table. You can move, or remove it, as needed.
-            this.racaTableAdapter.Fill(this.petshopDataSet.Raca);
+            // this.racaTableAdapter.Fill(this.petshopDataSet.Raca);
+
+            try
+            {
+                if (id == 0)
+                    racaBindingSource.AddNew();
+                else
+                    racaBindingSource.DataSource = new AnimalBLL().BuscarPorId(id);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
 
         }
     }

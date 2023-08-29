@@ -120,5 +120,13 @@ namespace GestaoPetShop
             button2.Visible = false;
             
         }
+
+        private void raçaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (ConsultaRaca frm = new ConsultaRaca())
+            {
+                frm.ShowDialog();
+            }
+        }
     }
 }
