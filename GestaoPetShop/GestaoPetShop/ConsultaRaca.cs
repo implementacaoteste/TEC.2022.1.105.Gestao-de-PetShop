@@ -46,5 +46,20 @@ namespace GestaoPetShop
             }
 
         }
+
+        private void buttonInserir_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (FormCadastroRaca frm = new FormCadastroRaca())
+                {
+                    frm.ShowDialog();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }
