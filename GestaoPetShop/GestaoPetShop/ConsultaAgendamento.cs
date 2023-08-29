@@ -38,11 +38,12 @@ namespace GestaoPetShop
                 {
                     if (textBox_BuscarAgendamento.Text == "")
                     {
-                        MessageBox.Show("Insirar o Nome do Animal para pesquisa");
+                        MessageBox.Show("Insirar o Nome do Profissional para pesquisa");
                         return;
                     }
+                    agendamentoBindingSource.DataSource = agendamentoBLL.BuscarAgendamentoPorNomeProfissional(textBox_BuscarAgendamento.Text);
                 }
-                else if (comboBox_SelecionarTipoBusca.SelectedIndex == 3)
+                else if (comboBox_SelecionarTipoBusca.SelectedIndex == 3)//buscar agendamento nome cliente
                 {
                     if (textBox_BuscarAgendamento.Text == "")
                     {
@@ -104,14 +105,14 @@ namespace GestaoPetShop
                     }
                     agendamentoBindingSource.DataSource = agendamentoBLL.BuscarPorMesAno(opc, dataconsulta);
                 }
-                else if (comboBox_SelecionarTipoBusca.SelectedIndex == 7) // BUSCAR AGENDAMENTO POR PROFISSINAIS
+                else if (comboBox_SelecionarTipoBusca.SelectedIndex == 7) // BUSCAR AGENDAMENTO POR SERVICO DIA/MES/ANO
                 {
-                    if (textBox_BuscarAgendamento.Text == "")
+                    if (textBox_BuscarAgendamento.Text == "" || textBox_BuscarData.Text == "")
                     {
-                        MessageBox.Show("Insirar o Profissional para pesquisa");
+                        MessageBox.Show("Insirar Serviço e a Data para pesquisa");
                         return;
                     }
-                    agendamentoBindingSource.DataSource = agendamentoBLL.BuscarPorProfissional(textBox_BuscarAgendamento.Text);
+                    agendamentoBindingSource.DataSource = agendamentoBLL.BuscarAgendamentoPorServicoDiaMesAno(textBox_BuscarAgendamento.Text, textBox_BuscarData.Text);
                 }
                 else
                 {

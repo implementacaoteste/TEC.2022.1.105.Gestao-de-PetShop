@@ -108,5 +108,17 @@ namespace BLL
             AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
             return agendamentoDAL.BuscarPorIdCliente(_idCliente);
         }
+
+        public List<Agendamento> BuscarAgendamentoPorNomeProfissional(string _nomeProfissional)
+        {
+            AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
+            return agendamentoDAL.BuscarAgendamentoPorNomeProfissional(_nomeProfissional);
+        }
+
+        public List<Agendamento> BuscarAgendamentoPorServicoDiaMesAno(string _nomeServico, string _data)
+        {
+            AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
+            return agendamentoDAL.BuscarAgendamentoPorServicoDiaMesAno(_nomeServico, _data);
+        }
     }
 }
