@@ -144,7 +144,6 @@ namespace GestaoPetShop
         {
 
         }
-
         private void emailClienteDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
@@ -197,6 +196,5 @@ namespace GestaoPetShop
                 MessageBox.Show(ex.Message);
             }
         }
-
     }
 }

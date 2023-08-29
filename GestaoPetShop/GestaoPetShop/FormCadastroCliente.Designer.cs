@@ -85,7 +85,7 @@
             // 
             nomeLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             nomeLabel.AutoSize = true;
-            nomeLabel.Location = new System.Drawing.Point(5, 51);
+            nomeLabel.Location = new System.Drawing.Point(30, 57);
             nomeLabel.Name = "nomeLabel";
             nomeLabel.Size = new System.Drawing.Size(44, 16);
             nomeLabel.TabIndex = 1;
@@ -95,7 +95,7 @@
             // 
             cPFLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             cPFLabel.AutoSize = true;
-            cPFLabel.Location = new System.Drawing.Point(305, 51);
+            cPFLabel.Location = new System.Drawing.Point(330, 57);
             cPFLabel.Name = "cPFLabel";
             cPFLabel.Size = new System.Drawing.Size(33, 16);
             cPFLabel.TabIndex = 3;
@@ -105,7 +105,7 @@
             // 
             rGLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             rGLabel.AutoSize = true;
-            rGLabel.Location = new System.Drawing.Point(305, 104);
+            rGLabel.Location = new System.Drawing.Point(330, 110);
             rGLabel.Name = "rGLabel";
             rGLabel.Size = new System.Drawing.Size(34, 16);
             rGLabel.TabIndex = 5;
@@ -115,7 +115,7 @@
             // 
             foneLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             foneLabel.AutoSize = true;
-            foneLabel.Location = new System.Drawing.Point(5, 155);
+            foneLabel.Location = new System.Drawing.Point(30, 161);
             foneLabel.Name = "foneLabel";
             foneLabel.Size = new System.Drawing.Size(51, 16);
             foneLabel.TabIndex = 7;
@@ -125,7 +125,7 @@
             // 
             emailLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             emailLabel.AutoSize = true;
-            emailLabel.Location = new System.Drawing.Point(220, 104);
+            emailLabel.Location = new System.Drawing.Point(245, 110);
             emailLabel.Name = "emailLabel";
             emailLabel.Size = new System.Drawing.Size(25, 16);
             emailLabel.TabIndex = 9;
@@ -135,7 +135,7 @@
             // 
             this.nomeTextBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.nomeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "Nome", true));
-            this.nomeTextBox.Location = new System.Drawing.Point(4, 70);
+            this.nomeTextBox.Location = new System.Drawing.Point(29, 76);
             this.nomeTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.nomeTextBox.Name = "nomeTextBox";
             this.nomeTextBox.Size = new System.Drawing.Size(297, 22);
@@ -150,27 +150,27 @@
             // 
             this.cPFTextBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cPFTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "CPF", true));
-            this.cPFTextBox.Location = new System.Drawing.Point(307, 70);
+            this.cPFTextBox.Location = new System.Drawing.Point(332, 76);
             this.cPFTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cPFTextBox.Name = "cPFTextBox";
-            this.cPFTextBox.Size = new System.Drawing.Size(217, 22);
+            this.cPFTextBox.Size = new System.Drawing.Size(257, 22);
             this.cPFTextBox.TabIndex = 4;
             // 
             // rGTextBox
             // 
             this.rGTextBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.rGTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "CEP", true));
-            this.rGTextBox.Location = new System.Drawing.Point(308, 123);
+            this.rGTextBox.Location = new System.Drawing.Point(333, 129);
             this.rGTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rGTextBox.Name = "rGTextBox";
-            this.rGTextBox.Size = new System.Drawing.Size(215, 22);
+            this.rGTextBox.Size = new System.Drawing.Size(256, 22);
             this.rGTextBox.TabIndex = 6;
             // 
             // foneTextBox
             // 
             this.foneTextBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.foneTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "Cidade", true));
-            this.foneTextBox.Location = new System.Drawing.Point(4, 173);
+            this.foneTextBox.Location = new System.Drawing.Point(29, 179);
             this.foneTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.foneTextBox.Name = "foneTextBox";
             this.foneTextBox.Size = new System.Drawing.Size(162, 22);
@@ -180,7 +180,7 @@
             // 
             this.emailTextBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.emailTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "UF", true));
-            this.emailTextBox.Location = new System.Drawing.Point(220, 123);
+            this.emailTextBox.Location = new System.Drawing.Point(245, 129);
             this.emailTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.emailTextBox.Name = "emailTextBox";
             this.emailTextBox.Size = new System.Drawing.Size(51, 22);
@@ -200,7 +200,7 @@
             // buttonSalvar
             // 
             this.buttonSalvar.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.buttonSalvar.Location = new System.Drawing.Point(596, 434);
+            this.buttonSalvar.Location = new System.Drawing.Point(596, 440);
             this.buttonSalvar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonSalvar.Name = "buttonSalvar";
             this.buttonSalvar.Size = new System.Drawing.Size(77, 24);
@@ -213,7 +213,7 @@
             // 
             this.buttonCancelar.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.buttonCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonCancelar.Location = new System.Drawing.Point(689, 434);
+            this.buttonCancelar.Location = new System.Drawing.Point(689, 441);
             this.buttonCancelar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonCancelar.Name = "buttonCancelar";
             this.buttonCancelar.Size = new System.Drawing.Size(77, 24);
@@ -226,7 +226,7 @@
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(173, 155);
+            this.label2.Location = new System.Drawing.Point(198, 161);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(34, 16);
             this.label2.TabIndex = 13;
@@ -236,7 +236,7 @@
             // 
             this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "Pais", true));
-            this.textBox1.Location = new System.Drawing.Point(169, 173);
+            this.textBox1.Location = new System.Drawing.Point(194, 179);
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(114, 22);
@@ -246,10 +246,10 @@
             // 
             this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "Bairro", true));
-            this.textBox2.Location = new System.Drawing.Point(287, 173);
+            this.textBox2.Location = new System.Drawing.Point(312, 179);
             this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(241, 22);
+            this.textBox2.Size = new System.Drawing.Size(277, 22);
             this.textBox2.TabIndex = 15;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
@@ -257,7 +257,7 @@
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(285, 155);
+            this.label3.Location = new System.Drawing.Point(310, 161);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(43, 16);
             this.label3.TabIndex = 16;
@@ -268,7 +268,7 @@
             // 
             this.textBox3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textBox3.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "Numero", true));
-            this.textBox3.Location = new System.Drawing.Point(5, 228);
+            this.textBox3.Location = new System.Drawing.Point(30, 234);
             this.textBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(102, 22);
@@ -278,7 +278,7 @@
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(4, 212);
+            this.label4.Location = new System.Drawing.Point(29, 218);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(55, 16);
             this.label4.TabIndex = 18;
@@ -288,7 +288,7 @@
             // 
             this.textBox4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textBox4.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "Logradouro", true));
-            this.textBox4.Location = new System.Drawing.Point(121, 228);
+            this.textBox4.Location = new System.Drawing.Point(146, 234);
             this.textBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(250, 22);
@@ -298,7 +298,7 @@
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(119, 212);
+            this.label5.Location = new System.Drawing.Point(144, 218);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(77, 16);
             this.label5.TabIndex = 20;
@@ -308,7 +308,7 @@
             // 
             this.textBox5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textBox5.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "DataNascimento", true));
-            this.textBox5.Location = new System.Drawing.Point(4, 123);
+            this.textBox5.Location = new System.Drawing.Point(29, 129);
             this.textBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(203, 22);
@@ -318,7 +318,7 @@
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(5, 104);
+            this.label6.Location = new System.Drawing.Point(30, 110);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(132, 16);
             this.label6.TabIndex = 22;
@@ -329,7 +329,7 @@
             this.AtivocheckBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.AtivocheckBox1.AutoSize = true;
             this.AtivocheckBox1.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.clienteBindingSource, "Ativo", true));
-            this.AtivocheckBox1.Location = new System.Drawing.Point(416, 230);
+            this.AtivocheckBox1.Location = new System.Drawing.Point(439, 236);
             this.AtivocheckBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.AtivocheckBox1.Name = "AtivocheckBox1";
             this.AtivocheckBox1.Size = new System.Drawing.Size(59, 20);
@@ -343,7 +343,7 @@
             this.pictureBoxFoto.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBoxFoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBoxFoto.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.clienteBindingSource, "Foto", true));
-            this.pictureBoxFoto.Location = new System.Drawing.Point(544, 54);
+            this.pictureBoxFoto.Location = new System.Drawing.Point(635, 54);
             this.pictureBoxFoto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBoxFoto.Name = "pictureBoxFoto";
             this.pictureBoxFoto.Size = new System.Drawing.Size(115, 126);
@@ -354,7 +354,7 @@
             // buttonBuscarFoto
             // 
             this.buttonBuscarFoto.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.buttonBuscarFoto.Location = new System.Drawing.Point(544, 185);
+            this.buttonBuscarFoto.Location = new System.Drawing.Point(635, 185);
             this.buttonBuscarFoto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonBuscarFoto.Name = "buttonBuscarFoto";
             this.buttonBuscarFoto.Size = new System.Drawing.Size(115, 24);
@@ -380,7 +380,7 @@
             this.telefoneClientesDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn4});
             this.telefoneClientesDataGridView.DataSource = this.telefoneClientesBindingSource;
-            this.telefoneClientesDataGridView.Location = new System.Drawing.Point(441, 306);
+            this.telefoneClientesDataGridView.Location = new System.Drawing.Point(441, 312);
             this.telefoneClientesDataGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.telefoneClientesDataGridView.Name = "telefoneClientesDataGridView";
             this.telefoneClientesDataGridView.ReadOnly = true;
@@ -403,7 +403,7 @@
             // textBoxEmail
             // 
             this.textBoxEmail.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBoxEmail.Location = new System.Drawing.Point(12, 278);
+            this.textBoxEmail.Location = new System.Drawing.Point(23, 284);
             this.textBoxEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxEmail.Name = "textBoxEmail";
             this.textBoxEmail.Size = new System.Drawing.Size(210, 22);
@@ -412,7 +412,7 @@
             // textBoxTelefone
             // 
             this.textBoxTelefone.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBoxTelefone.Location = new System.Drawing.Point(441, 278);
+            this.textBoxTelefone.Location = new System.Drawing.Point(441, 284);
             this.textBoxTelefone.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxTelefone.Name = "textBoxTelefone";
             this.textBoxTelefone.Size = new System.Drawing.Size(178, 22);
@@ -421,7 +421,7 @@
             // buttonInserirEmail
             // 
             this.buttonInserirEmail.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.buttonInserirEmail.Location = new System.Drawing.Point(223, 278);
+            this.buttonInserirEmail.Location = new System.Drawing.Point(234, 284);
             this.buttonInserirEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonInserirEmail.Name = "buttonInserirEmail";
             this.buttonInserirEmail.Size = new System.Drawing.Size(65, 24);
@@ -433,7 +433,7 @@
             // buttonInserirTelefone
             // 
             this.buttonInserirTelefone.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.buttonInserirTelefone.Location = new System.Drawing.Point(623, 276);
+            this.buttonInserirTelefone.Location = new System.Drawing.Point(623, 284);
             this.buttonInserirTelefone.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonInserirTelefone.Name = "buttonInserirTelefone";
             this.buttonInserirTelefone.Size = new System.Drawing.Size(69, 24);
@@ -459,7 +459,7 @@
             this.emailClienteDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn3});
             this.emailClienteDataGridView.DataSource = this.emailClienteBindingSource;
-            this.emailClienteDataGridView.Location = new System.Drawing.Point(12, 306);
+            this.emailClienteDataGridView.Location = new System.Drawing.Point(23, 312);
             this.emailClienteDataGridView.Name = "emailClienteDataGridView";
             this.emailClienteDataGridView.ReadOnly = true;
             this.emailClienteDataGridView.RowHeadersVisible = false;
@@ -481,7 +481,7 @@
             // buttonExcluirEmail
             // 
             this.buttonExcluirEmail.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.buttonExcluirEmail.Location = new System.Drawing.Point(288, 278);
+            this.buttonExcluirEmail.Location = new System.Drawing.Point(299, 284);
             this.buttonExcluirEmail.Name = "buttonExcluirEmail";
             this.buttonExcluirEmail.Size = new System.Drawing.Size(62, 24);
             this.buttonExcluirEmail.TabIndex = 32;
@@ -492,7 +492,7 @@
             // buttonExcluirTelefone
             // 
             this.buttonExcluirTelefone.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.buttonExcluirTelefone.Location = new System.Drawing.Point(696, 276);
+            this.buttonExcluirTelefone.Location = new System.Drawing.Point(696, 284);
             this.buttonExcluirTelefone.Name = "buttonExcluirTelefone";
             this.buttonExcluirTelefone.Size = new System.Drawing.Size(77, 24);
             this.buttonExcluirTelefone.TabIndex = 33;
