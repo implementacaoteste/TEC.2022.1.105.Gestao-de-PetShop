@@ -84,7 +84,7 @@ namespace DAL
             try
             {
                 SqlCommand cmd = cn.CreateCommand();
-                cmd.CommandText = @"DELETE FROM TelefoneCliente WHERE IdCliente = @Id";
+                cmd.CommandText = @"DELETE FROM TelefoneCliente WHERE Id = @Id";
                 cmd.CommandType = System.Data.CommandType.Text;
 
                 cmd.Parameters.AddWithValue("@Id", _id);
@@ -112,7 +112,7 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT Id, Telefone FROM TelefoneCliente WHERE Telefone LIKE @IdCliente";
+                cmd.CommandText = @"SELECT Id, Telefone FROM TelefoneCliente WHERE IdCliente LIKE @IdCliente";
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@IdCliente", _idCliente);
 
