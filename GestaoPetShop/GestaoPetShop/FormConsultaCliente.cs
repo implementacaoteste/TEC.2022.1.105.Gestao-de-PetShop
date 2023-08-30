@@ -112,6 +112,5 @@ namespace GestaoPetShop
             //comboBoxBuscarPor.SelectedIndex = 3;
         }
 
-       
     }
 }

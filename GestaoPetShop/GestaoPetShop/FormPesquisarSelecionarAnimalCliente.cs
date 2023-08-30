@@ -32,19 +32,19 @@ namespace GestaoPetShop
                 {
                     case 0:
                         opc = 0;
-                        agendamentoBindingSource.DataSource = new AgendamentoBLL().BuscarPorIdAnimalCliente(Convert.ToInt32(textBoxPesquisaAnimalCliente.Text), opc);
+                        clienteBindingSource.DataSource = new AgendamentoBLL().BuscarPorIdAnimalCliente(Convert.ToInt32(textBoxPesquisaAnimalCliente.Text), opc);
                         break;
                     case 1:
                         opc = 1;
-                        agendamentoBindingSource.DataSource = new AgendamentoBLL().BuscarPorIdAnimalCliente(Convert.ToInt32(textBoxPesquisaAnimalCliente.Text), opc);
+                        clienteBindingSource.DataSource = new AgendamentoBLL().BuscarPorIdAnimalCliente(Convert.ToInt32(textBoxPesquisaAnimalCliente.Text), opc);
                         break;
                     case 2:
                         opc = 2;
-                        agendamentoBindingSource.DataSource = new AgendamentoBLL().BuscarPorNomeAnimalCliente(textBoxPesquisaAnimalCliente.Text, opc);
+                        clienteBindingSource.DataSource = new AgendamentoBLL().BuscarPorNomeAnimalCliente(textBoxPesquisaAnimalCliente.Text, opc);
                         break;
                     case 3:
                         opc = 3;
-                        agendamentoBindingSource.DataSource = new AgendamentoBLL().BuscarPorNomeAnimalCliente(textBoxPesquisaAnimalCliente.Text, opc);
+                        clienteBindingSource.DataSource = new AgendamentoBLL().BuscarPorNomeAnimalCliente(textBoxPesquisaAnimalCliente.Text, opc);
                         break;
                     default:
                         MessageBox.Show("Escolha Uma opção de busca");
@@ -68,9 +68,9 @@ namespace GestaoPetShop
         {
             try
             {
-                if (agendamentoBindingSource.Count > 0)
+                if (clienteBindingSource.Count > 0)
                 {
-                    this.Agendamento = (Agendamento)agendamentoBindingSource.Current;
+                    this.Agendamento = (Agendamento)clienteBindingSource.Current;
                     Close();
                 }
                 else

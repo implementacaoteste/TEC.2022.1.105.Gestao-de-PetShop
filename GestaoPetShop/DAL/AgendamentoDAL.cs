@@ -299,16 +299,16 @@ namespace DAL
                 }
             }
         }
-        public Agendamento BuscarPorIdAnimalCliente(int _id, int _opc)
+        public Cliente BuscarPorIdAnimalCliente(int _id, int _opc)
         {
-            Agendamento agendamento = new Agendamento();
+            Cliente cliente = new Cliente();
             SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
             try
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT A.Id as AnimalId , A.Nome as AnimalNome ,C.Id as  ClienteId, C.Nome as ClienteNome 
-                                        FROM Animal A INNER JOIN Cliente C  ON A.IdCliente = C.Id WHERE ";
+                cmd.CommandText = @"SELECT C.Id , C.Nome , A.Id 
+                                        FROM Cliente C INNER JOIN Animal A  ON C.Id = A.Id Cliente WHERE ";
                 if (_opc == 0)
                 {
                     cmd.CommandText = cmd.CommandText + "A.Id = @id";
@@ -324,13 +324,13 @@ namespace DAL
                 {
                     if (rd.Read())
                     {
-                        agendamento.IdAnimal = Convert.ToInt32(rd["AnimalId"]);
-                        agendamento.IdCliente = Convert.ToInt32(rd["ClienteId"]);
-                        agendamento.NomeAnimal = rd["AnimalNome"].ToString();
-                        agendamento.NomeCliente = rd["ClienteNome"].ToString();
+                        cliente.Id = Convert.ToInt32(rd["Id"]);
+                       
+                        cliente.Nome = rd["Nome"].ToString();
+                        //cliente.Animals = 
                     }
                 }
-                return agendamento;
+                return cliente;
             }
             catch (Exception ex)
             {
