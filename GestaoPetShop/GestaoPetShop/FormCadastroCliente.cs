@@ -120,6 +120,7 @@ namespace GestaoPetShop
             ((EmailCliente)emailClienteBindingSource.Current).Email = textBoxEmail.Text;
 
             emailClienteBindingSource.EndEdit();
+            textBoxEmail.Text = "";
         }
 
         private void buttonInserirTelefone_Click(object sender, EventArgs e)
@@ -133,6 +134,7 @@ namespace GestaoPetShop
             ((TelefoneCliente)telefoneClientesBindingSource.Current).Telefone = textBoxTelefone.Text;
 
             telefoneClientesBindingSource.EndEdit();
+            textBoxTelefone.Text = "";
         }
 
         private void nomeTextBox_TextChanged(object sender, EventArgs e)

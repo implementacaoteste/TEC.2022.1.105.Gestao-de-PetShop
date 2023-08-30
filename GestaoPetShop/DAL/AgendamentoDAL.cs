@@ -327,7 +327,7 @@ namespace DAL
                         cliente.Id = Convert.ToInt32(rd["Id"]);
                        
                         cliente.Nome = rd["Nome"].ToString();
-                        //cliente.Animals = 
+                       
                     }
                 }
                 return cliente;
