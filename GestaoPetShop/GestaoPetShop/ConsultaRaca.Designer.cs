@@ -55,7 +55,7 @@
             // 
             // buttonBuscar
             // 
-            this.buttonBuscar.Location = new System.Drawing.Point(470, 84);
+            this.buttonBuscar.Location = new System.Drawing.Point(470, 103);
             this.buttonBuscar.Name = "buttonBuscar";
             this.buttonBuscar.Size = new System.Drawing.Size(75, 23);
             this.buttonBuscar.TabIndex = 0;
@@ -64,7 +64,7 @@
             // 
             // buttonAlterar
             // 
-            this.buttonAlterar.Location = new System.Drawing.Point(551, 84);
+            this.buttonAlterar.Location = new System.Drawing.Point(551, 103);
             this.buttonAlterar.Name = "buttonAlterar";
             this.buttonAlterar.Size = new System.Drawing.Size(75, 23);
             this.buttonAlterar.TabIndex = 1;
@@ -73,7 +73,7 @@
             // 
             // buttonInserir
             // 
-            this.buttonInserir.Location = new System.Drawing.Point(632, 84);
+            this.buttonInserir.Location = new System.Drawing.Point(632, 103);
             this.buttonInserir.Name = "buttonInserir";
             this.buttonInserir.Size = new System.Drawing.Size(75, 23);
             this.buttonInserir.TabIndex = 2;
@@ -83,7 +83,7 @@
             // 
             // buttonExcluir
             // 
-            this.buttonExcluir.Location = new System.Drawing.Point(713, 84);
+            this.buttonExcluir.Location = new System.Drawing.Point(713, 103);
             this.buttonExcluir.Name = "buttonExcluir";
             this.buttonExcluir.Size = new System.Drawing.Size(75, 23);
             this.buttonExcluir.TabIndex = 3;
@@ -92,14 +92,14 @@
             // 
             // labelBuscraPorAnimal
             // 
-            this.labelBuscraPorAnimal.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.labelBuscraPorAnimal.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.labelBuscraPorAnimal.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.labelBuscraPorAnimal.Dock = System.Windows.Forms.DockStyle.Top;
             this.labelBuscraPorAnimal.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelBuscraPorAnimal.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.labelBuscraPorAnimal.Location = new System.Drawing.Point(0, 0);
             this.labelBuscraPorAnimal.Name = "labelBuscraPorAnimal";
-            this.labelBuscraPorAnimal.Size = new System.Drawing.Size(807, 58);
+            this.labelBuscraPorAnimal.Size = new System.Drawing.Size(807, 62);
             this.labelBuscraPorAnimal.TabIndex = 4;
             this.labelBuscraPorAnimal.Text = "Buscar por Raça";
             this.labelBuscraPorAnimal.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -155,13 +155,13 @@
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4});
             this.racaDataGridView.DataSource = this.racaBindingSource;
-            this.racaDataGridView.Location = new System.Drawing.Point(8, 113);
+            this.racaDataGridView.Location = new System.Drawing.Point(8, 139);
             this.racaDataGridView.Name = "racaDataGridView";
             this.racaDataGridView.ReadOnly = true;
             this.racaDataGridView.RowHeadersVisible = false;
             this.racaDataGridView.RowHeadersWidth = 51;
             this.racaDataGridView.RowTemplate.Height = 24;
-            this.racaDataGridView.Size = new System.Drawing.Size(780, 388);
+            this.racaDataGridView.Size = new System.Drawing.Size(780, 362);
             this.racaDataGridView.TabIndex = 6;
             // 
             // comboBox1
@@ -171,14 +171,14 @@
             "Todos",
             "Nome",
             "Id"});
-            this.comboBox1.Location = new System.Drawing.Point(12, 83);
+            this.comboBox1.Location = new System.Drawing.Point(12, 102);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 24);
             this.comboBox1.TabIndex = 7;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(139, 84);
+            this.textBox1.Location = new System.Drawing.Point(139, 103);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(325, 22);
             this.textBox1.TabIndex = 8;
@@ -206,9 +206,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 62);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(13, 81);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 16);
+            this.label1.Size = new System.Drawing.Size(83, 16);
             this.label1.TabIndex = 11;
             this.label1.Text = "Buscar Por";
             // 
