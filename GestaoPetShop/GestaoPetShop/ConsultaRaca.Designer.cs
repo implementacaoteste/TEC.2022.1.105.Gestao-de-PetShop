@@ -260,7 +260,7 @@
             this.Controls.Add(this.buttonAlterar);
             this.Controls.Add(this.buttonBuscar);
             this.Name = "ConsultaRaca";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consulta Raca";
             this.Load += new System.EventHandler(this.ConsultaPorRaca_Load);
             ((System.ComponentModel.ISupportInitialize)(this.petshopDataSet)).EndInit();
