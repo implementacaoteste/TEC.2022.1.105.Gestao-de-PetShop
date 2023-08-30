@@ -28,7 +28,7 @@ namespace BLL
             AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
             agendamentoDAL.Excluir(_agendamento);
         }
-        public Agendamento BuscarPorIdAnimalCliente(int _id, int _opc)
+        public Cliente BuscarPorIdAnimalCliente(int _id, int _opc)
         {
             AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
             return agendamentoDAL.BuscarPorIdAnimalCliente(_id, _opc);

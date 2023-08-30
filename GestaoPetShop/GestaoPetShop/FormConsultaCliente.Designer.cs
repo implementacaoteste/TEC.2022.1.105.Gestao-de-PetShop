@@ -115,7 +115,6 @@
             this.buttonSelecionar.TabIndex = 5;
             this.buttonSelecionar.Text = "&Selecionar";
             this.buttonSelecionar.UseVisualStyleBackColor = true;
-            this.buttonSelecionar.Click += new System.EventHandler(this.buttonSelecionar_Click);
             // 
             // buttonCancelar
             // 
