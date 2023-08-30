@@ -218,7 +218,7 @@
             // 
             this.button_AbrirCalendario.BackColor = System.Drawing.Color.Transparent;
             this.button_AbrirCalendario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_AbrirCalendario.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.button_AbrirCalendario.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_AbrirCalendario.ForeColor = System.Drawing.Color.Black;
             this.button_AbrirCalendario.Location = new System.Drawing.Point(627, 230);
             this.button_AbrirCalendario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -356,7 +356,7 @@
             this.dataGridViewTextBoxColumn24});
             this.agendamentoDataGridView.DataSource = this.agendamentoBindingSource;
             this.agendamentoDataGridView.Location = new System.Drawing.Point(16, 335);
-            this.agendamentoDataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.agendamentoDataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.agendamentoDataGridView.Name = "agendamentoDataGridView";
             this.agendamentoDataGridView.ReadOnly = true;
             this.agendamentoDataGridView.RowHeadersVisible = false;
@@ -458,7 +458,7 @@
             this.dataGridViewTextBoxColumn27});
             this.agendamentoServicosDataGridView.DataSource = this.agendamentoServicosBindingSource;
             this.agendamentoServicosDataGridView.Location = new System.Drawing.Point(627, 335);
-            this.agendamentoServicosDataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.agendamentoServicosDataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.agendamentoServicosDataGridView.Name = "agendamentoServicosDataGridView";
             this.agendamentoServicosDataGridView.ReadOnly = true;
             this.agendamentoServicosDataGridView.RowHeadersVisible = false;
@@ -525,7 +525,7 @@
             // 
             this.buttonFecharCalendario.BackColor = System.Drawing.SystemColors.Control;
             this.buttonFecharCalendario.Location = new System.Drawing.Point(987, 286);
-            this.buttonFecharCalendario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonFecharCalendario.Margin = new System.Windows.Forms.Padding(4);
             this.buttonFecharCalendario.Name = "buttonFecharCalendario";
             this.buttonFecharCalendario.Size = new System.Drawing.Size(39, 28);
             this.buttonFecharCalendario.TabIndex = 29;
@@ -538,6 +538,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1140, 705);
             this.Controls.Add(this.buttonFecharCalendario);
             this.Controls.Add(this.agendamentoServicosDataGridView);

@@ -58,7 +58,7 @@
             // nomeLabel
             // 
             nomeLabel.AutoSize = true;
-            nomeLabel.Location = new System.Drawing.Point(12, 58);
+            nomeLabel.Location = new System.Drawing.Point(12, 80);
             nomeLabel.Name = "nomeLabel";
             nomeLabel.Size = new System.Drawing.Size(44, 16);
             nomeLabel.TabIndex = 1;
@@ -67,7 +67,7 @@
             // cPFLabel
             // 
             cPFLabel.AutoSize = true;
-            cPFLabel.Location = new System.Drawing.Point(336, 58);
+            cPFLabel.Location = new System.Drawing.Point(336, 80);
             cPFLabel.Name = "cPFLabel";
             cPFLabel.Size = new System.Drawing.Size(33, 16);
             cPFLabel.TabIndex = 3;
@@ -76,7 +76,7 @@
             // emailLabel
             // 
             emailLabel.AutoSize = true;
-            emailLabel.Location = new System.Drawing.Point(445, 58);
+            emailLabel.Location = new System.Drawing.Point(445, 80);
             emailLabel.Name = "emailLabel";
             emailLabel.Size = new System.Drawing.Size(45, 16);
             emailLabel.TabIndex = 5;
@@ -85,7 +85,7 @@
             // nomeUsuarioLabel
             // 
             nomeUsuarioLabel.AutoSize = true;
-            nomeUsuarioLabel.Location = new System.Drawing.Point(12, 105);
+            nomeUsuarioLabel.Location = new System.Drawing.Point(12, 127);
             nomeUsuarioLabel.Name = "nomeUsuarioLabel";
             nomeUsuarioLabel.Size = new System.Drawing.Size(110, 16);
             nomeUsuarioLabel.TabIndex = 7;
@@ -94,7 +94,7 @@
             // senhaLabel
             // 
             senhaLabel.AutoSize = true;
-            senhaLabel.Location = new System.Drawing.Point(231, 105);
+            senhaLabel.Location = new System.Drawing.Point(231, 127);
             senhaLabel.Name = "senhaLabel";
             senhaLabel.Size = new System.Drawing.Size(46, 16);
             senhaLabel.TabIndex = 9;
@@ -103,7 +103,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new System.Drawing.Point(336, 102);
+            label1.Location = new System.Drawing.Point(336, 124);
             label1.Name = "label1";
             label1.Size = new System.Drawing.Size(104, 16);
             label1.TabIndex = 11;
@@ -116,7 +116,7 @@
             // nomeTextBox
             // 
             this.nomeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioBindingSource, "Nome", true));
-            this.nomeTextBox.Location = new System.Drawing.Point(15, 78);
+            this.nomeTextBox.Location = new System.Drawing.Point(15, 100);
             this.nomeTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.nomeTextBox.Name = "nomeTextBox";
             this.nomeTextBox.Size = new System.Drawing.Size(319, 22);
@@ -125,7 +125,7 @@
             // cPFTextBox
             // 
             this.cPFTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioBindingSource, "CPF", true));
-            this.cPFTextBox.Location = new System.Drawing.Point(339, 78);
+            this.cPFTextBox.Location = new System.Drawing.Point(339, 100);
             this.cPFTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cPFTextBox.Name = "cPFTextBox";
             this.cPFTextBox.Size = new System.Drawing.Size(100, 22);
@@ -134,7 +134,7 @@
             // emailTextBox
             // 
             this.emailTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioBindingSource, "Email", true));
-            this.emailTextBox.Location = new System.Drawing.Point(449, 78);
+            this.emailTextBox.Location = new System.Drawing.Point(449, 100);
             this.emailTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.emailTextBox.Name = "emailTextBox";
             this.emailTextBox.Size = new System.Drawing.Size(283, 22);
@@ -143,7 +143,7 @@
             // nomeUsuarioTextBox
             // 
             this.nomeUsuarioTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioBindingSource, "NomeUsuario", true));
-            this.nomeUsuarioTextBox.Location = new System.Drawing.Point(15, 124);
+            this.nomeUsuarioTextBox.Location = new System.Drawing.Point(15, 146);
             this.nomeUsuarioTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.nomeUsuarioTextBox.Name = "nomeUsuarioTextBox";
             this.nomeUsuarioTextBox.Size = new System.Drawing.Size(213, 22);
@@ -152,7 +152,7 @@
             // senhaTextBox
             // 
             this.senhaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioBindingSource, "Senha", true));
-            this.senhaTextBox.Location = new System.Drawing.Point(235, 124);
+            this.senhaTextBox.Location = new System.Drawing.Point(235, 146);
             this.senhaTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.senhaTextBox.Name = "senhaTextBox";
             this.senhaTextBox.Size = new System.Drawing.Size(100, 22);
@@ -162,7 +162,7 @@
             // 
             this.ativoCheckBox.AutoSize = true;
             this.ativoCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.usuarioBindingSource, "Ativo", true));
-            this.ativoCheckBox.Location = new System.Drawing.Point(449, 126);
+            this.ativoCheckBox.Location = new System.Drawing.Point(449, 148);
             this.ativoCheckBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ativoCheckBox.Name = "ativoCheckBox";
             this.ativoCheckBox.Size = new System.Drawing.Size(59, 20);
@@ -172,7 +172,7 @@
             // 
             // textBoxConfirmarSenha
             // 
-            this.textBoxConfirmarSenha.Location = new System.Drawing.Point(339, 124);
+            this.textBoxConfirmarSenha.Location = new System.Drawing.Point(339, 146);
             this.textBoxConfirmarSenha.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxConfirmarSenha.Name = "textBoxConfirmarSenha";
             this.textBoxConfirmarSenha.Size = new System.Drawing.Size(100, 22);
@@ -215,6 +215,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(744, 320);
             this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.buttonSalvar);
