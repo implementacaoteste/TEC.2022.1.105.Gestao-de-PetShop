@@ -163,7 +163,7 @@ namespace DAL
                 cmd.Parameters.AddWithValue("@Pais", _cliente.Pais);
                 cmd.Parameters.AddWithValue("@CEP", _cliente.CEP);
                 cmd.Parameters.AddWithValue("@DataNascimento", _cliente.DataNascimento);
-                // cmd.Parameters.AddWithValue("@Foto", _cliente.Foto);
+               // cmd.Parameters.AddWithValue("@Foto", _cliente.Foto);
                 if (_cliente.Foto != null)
                     cmd.Parameters.AddWithValue("@Foto", _cliente.Foto);
                 else
