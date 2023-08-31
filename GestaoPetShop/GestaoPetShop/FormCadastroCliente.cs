@@ -12,16 +12,20 @@ namespace GestaoPetShop
     public partial class FormCadastroCliente : Form
     {
         int id;
-        public FormCadastroCliente(int _id = 0)
+        bool permitirSalvar;
+        public FormCadastroCliente(int _id = 0, bool _permitirSalvar = true)
         {
             InitializeComponent();
             id = _id;
+            buttonSalvar.Visible = _permitirSalvar;
+            permitirSalvar = _permitirSalvar;
         }
         private void buttonSalvar_Click(object sender, EventArgs e)
         {
             try
             {
-               
+                if (!permitirSalvar)
+                    return;
 
                 //List<EmailCliente> emailClientes = new List<EmailCliente>();
                 //EmailCliente emailCliente = new EmailCliente();
@@ -29,7 +33,7 @@ namespace GestaoPetShop
                 //TelefoneCliente telefoneCliente = new TelefoneCliente();
                 //int quantidadeemail = emailClienteBindingSource.Count;
                 //int quantidadetelefone = telefoneClientesBindingSource.Count;
-                
+
                 //for (int x = 0; x < quantidadeemail; x++)
                 //{
                 //    emailCliente.Email = ((EmailCliente)emailClienteBindingSource.Current).Email;
@@ -49,7 +53,7 @@ namespace GestaoPetShop
 
                 //}
                 //cliente.TelefoneClientes = telefoneClientes;
-               
+
                 clienteBindingSource.EndEdit();
                 Cliente cliente = (Cliente)clienteBindingSource.Current;
                 //cliente.EmailCliente = (List<EmailCliente>)emailClienteBindingSource.DataSource;
@@ -75,6 +79,16 @@ namespace GestaoPetShop
                     clienteBindingSource.AddNew();
                 else
                     clienteBindingSource.DataSource = new ClienteBLL().BuscarPorId(id);
+
+
+                if (!permitirSalvar)
+                {
+                    foreach (Control item in this.Controls)
+                    {
+                        if (!item.Name.Contains("DataGridView"))
+                            item.Enabled = false;
+                    }
+                }
             }
             catch (Exception ex)
             {
@@ -111,7 +125,7 @@ namespace GestaoPetShop
 
         private void buttonInserirEmail_Click(object sender, EventArgs e)
         {
-            if(textBoxEmail.Text == "")
+            if (textBoxEmail.Text == "")
             {
                 MessageBox.Show("O campo de E-mail não foi preenchido");
                 return;
@@ -130,7 +144,7 @@ namespace GestaoPetShop
                 MessageBox.Show("O campo de Telefone não foi preenchido");
                 return;
             }
-           telefoneClientesBindingSource.AddNew();
+            telefoneClientesBindingSource.AddNew();
             ((TelefoneCliente)telefoneClientesBindingSource.Current).Telefone = textBoxTelefone.Text;
 
             telefoneClientesBindingSource.EndEdit();
