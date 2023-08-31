@@ -296,7 +296,7 @@
             // 
             this.idSituacaoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agendamentoBindingSource, "IdSituacao", true));
             this.idSituacaoTextBox.Location = new System.Drawing.Point(755, 66);
-            this.idSituacaoTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.idSituacaoTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.idSituacaoTextBox.Name = "idSituacaoTextBox";
             this.idSituacaoTextBox.Size = new System.Drawing.Size(60, 22);
             this.idSituacaoTextBox.TabIndex = 53;
@@ -310,7 +310,7 @@
             this.dataAgDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.agendamentoBindingSource, "DataAg", true));
             this.dataAgDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agendamentoBindingSource, "DataAg", true));
             this.dataAgDateTimePicker.Location = new System.Drawing.Point(221, 60);
-            this.dataAgDateTimePicker.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataAgDateTimePicker.Margin = new System.Windows.Forms.Padding(4);
             this.dataAgDateTimePicker.Name = "dataAgDateTimePicker";
             this.dataAgDateTimePicker.Size = new System.Drawing.Size(199, 22);
             this.dataAgDateTimePicker.TabIndex = 52;
@@ -319,8 +319,8 @@
             // 
             this.ativoCheckBox.AutoSize = true;
             this.ativoCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.agendamentoBindingSource, "Ativo", true));
-            this.ativoCheckBox.Location = new System.Drawing.Point(1000, 146);
-            this.ativoCheckBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ativoCheckBox.Location = new System.Drawing.Point(988, 149);
+            this.ativoCheckBox.Margin = new System.Windows.Forms.Padding(4);
             this.ativoCheckBox.Name = "ativoCheckBox";
             this.ativoCheckBox.Size = new System.Drawing.Size(59, 20);
             this.ativoCheckBox.TabIndex = 49;
@@ -332,7 +332,7 @@
             this.descricaoSituacaoComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agendamentoBindingSource, "DescricaoSituacao", true));
             this.descricaoSituacaoComboBox.FormattingEnabled = true;
             this.descricaoSituacaoComboBox.Location = new System.Drawing.Point(993, 66);
-            this.descricaoSituacaoComboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.descricaoSituacaoComboBox.Margin = new System.Windows.Forms.Padding(4);
             this.descricaoSituacaoComboBox.Name = "descricaoSituacaoComboBox";
             this.descricaoSituacaoComboBox.Size = new System.Drawing.Size(160, 24);
             this.descricaoSituacaoComboBox.TabIndex = 48;
@@ -343,7 +343,7 @@
             this.nomeProfissionalComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agendamentoBindingSource, "NomeProfissional", true));
             this.nomeProfissionalComboBox.FormattingEnabled = true;
             this.nomeProfissionalComboBox.Location = new System.Drawing.Point(412, 149);
-            this.nomeProfissionalComboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nomeProfissionalComboBox.Margin = new System.Windows.Forms.Padding(4);
             this.nomeProfissionalComboBox.Name = "nomeProfissionalComboBox";
             this.nomeProfissionalComboBox.Size = new System.Drawing.Size(160, 24);
             this.nomeProfissionalComboBox.TabIndex = 47;
@@ -353,7 +353,7 @@
             // 
             this.horarioTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agendamentoBindingSource, "Horario", true));
             this.horarioTextBox.Location = new System.Drawing.Point(497, 62);
-            this.horarioTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.horarioTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.horarioTextBox.Name = "horarioTextBox";
             this.horarioTextBox.Size = new System.Drawing.Size(135, 22);
             this.horarioTextBox.TabIndex = 27;
@@ -363,7 +363,7 @@
             this.idTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agendamentoBindingSource, "Id", true));
             this.idTextBox1.Enabled = false;
             this.idTextBox1.Location = new System.Drawing.Point(65, 62);
-            this.idTextBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.idTextBox1.Margin = new System.Windows.Forms.Padding(4);
             this.idTextBox1.Name = "idTextBox1";
             this.idTextBox1.Size = new System.Drawing.Size(72, 22);
             this.idTextBox1.TabIndex = 29;
@@ -372,7 +372,7 @@
             // 
             this.idAnimalTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agendamentoBindingSource, "IdAnimal", true));
             this.idAnimalTextBox.Location = new System.Drawing.Point(99, 112);
-            this.idAnimalTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.idAnimalTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.idAnimalTextBox.Name = "idAnimalTextBox";
             this.idAnimalTextBox.Size = new System.Drawing.Size(71, 22);
             this.idAnimalTextBox.TabIndex = 31;
@@ -381,7 +381,7 @@
             // 
             this.idClienteTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agendamentoBindingSource, "IdCliente", true));
             this.idClienteTextBox.Location = new System.Drawing.Point(648, 112);
-            this.idClienteTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.idClienteTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.idClienteTextBox.Name = "idClienteTextBox";
             this.idClienteTextBox.Size = new System.Drawing.Size(43, 22);
             this.idClienteTextBox.TabIndex = 33;
@@ -390,7 +390,7 @@
             // 
             this.idProfissionalTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agendamentoBindingSource, "IdProfissional", true));
             this.idProfissionalTextBox.Location = new System.Drawing.Point(129, 149);
-            this.idProfissionalTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.idProfissionalTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.idProfissionalTextBox.Name = "idProfissionalTextBox";
             this.idProfissionalTextBox.Size = new System.Drawing.Size(84, 22);
             this.idProfissionalTextBox.TabIndex = 35;
@@ -399,7 +399,7 @@
             // 
             this.nomeAnimalTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agendamentoBindingSource, "NomeAnimal", true));
             this.nomeAnimalTextBox.Location = new System.Drawing.Point(283, 112);
-            this.nomeAnimalTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nomeAnimalTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.nomeAnimalTextBox.Name = "nomeAnimalTextBox";
             this.nomeAnimalTextBox.Size = new System.Drawing.Size(265, 22);
             this.nomeAnimalTextBox.TabIndex = 39;
@@ -408,7 +408,7 @@
             // 
             this.nomeClienteTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agendamentoBindingSource, "NomeCliente", true));
             this.nomeClienteTextBox.Location = new System.Drawing.Point(820, 112);
-            this.nomeClienteTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nomeClienteTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.nomeClienteTextBox.Name = "nomeClienteTextBox";
             this.nomeClienteTextBox.Size = new System.Drawing.Size(192, 22);
             this.nomeClienteTextBox.TabIndex = 41;
@@ -417,19 +417,19 @@
             // 
             this.totalTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agendamentoBindingSource, "Total", true));
             this.totalTextBox.Location = new System.Drawing.Point(824, 149);
-            this.totalTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.totalTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.totalTextBox.Name = "totalTextBox";
             this.totalTextBox.Size = new System.Drawing.Size(156, 22);
             this.totalTextBox.TabIndex = 45;
             // 
             // buttonPesquisarAnimal
             // 
-            this.buttonPesquisarAnimal.Location = new System.Drawing.Point(1024, 117);
+            this.buttonPesquisarAnimal.Location = new System.Drawing.Point(1024, 110);
             this.buttonPesquisarAnimal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonPesquisarAnimal.Name = "buttonPesquisarAnimal";
-            this.buttonPesquisarAnimal.Size = new System.Drawing.Size(85, 23);
+            this.buttonPesquisarAnimal.Size = new System.Drawing.Size(129, 23);
             this.buttonPesquisarAnimal.TabIndex = 22;
-            this.buttonPesquisarAnimal.Text = "Pesq";
+            this.buttonPesquisarAnimal.Text = "Pesquisar";
             this.buttonPesquisarAnimal.UseVisualStyleBackColor = true;
             this.buttonPesquisarAnimal.Click += new System.EventHandler(this.buttonPesquisarAnimal_Click);
             // 
@@ -440,7 +440,7 @@
             this.descricaoComboBox.DisplayMember = "Descricao";
             this.descricaoComboBox.FormattingEnabled = true;
             this.descricaoComboBox.Location = new System.Drawing.Point(75, 30);
-            this.descricaoComboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.descricaoComboBox.Margin = new System.Windows.Forms.Padding(4);
             this.descricaoComboBox.Name = "descricaoComboBox";
             this.descricaoComboBox.Size = new System.Drawing.Size(293, 24);
             this.descricaoComboBox.TabIndex = 1;
@@ -455,7 +455,7 @@
             // 
             this.textBoxSubtotal.BackColor = System.Drawing.Color.White;
             this.textBoxSubtotal.Location = new System.Drawing.Point(707, 30);
-            this.textBoxSubtotal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxSubtotal.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxSubtotal.Name = "textBoxSubtotal";
             this.textBoxSubtotal.ReadOnly = true;
             this.textBoxSubtotal.Size = new System.Drawing.Size(109, 22);
@@ -464,7 +464,7 @@
             // textBoxValorUnitario
             // 
             this.textBoxValorUnitario.Location = new System.Drawing.Point(591, 30);
-            this.textBoxValorUnitario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxValorUnitario.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxValorUnitario.Name = "textBoxValorUnitario";
             this.textBoxValorUnitario.Size = new System.Drawing.Size(105, 22);
             this.textBoxValorUnitario.TabIndex = 4;
@@ -473,7 +473,7 @@
             // textBoxQuantidade
             // 
             this.textBoxQuantidade.Location = new System.Drawing.Point(379, 30);
-            this.textBoxQuantidade.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxQuantidade.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxQuantidade.Name = "textBoxQuantidade";
             this.textBoxQuantidade.Size = new System.Drawing.Size(73, 22);
             this.textBoxQuantidade.TabIndex = 2;
@@ -484,7 +484,7 @@
             // 
             this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.servicoBindingSource, "Id", true));
             this.idTextBox.Location = new System.Drawing.Point(7, 30);
-            this.idTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.idTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.idTextBox.Name = "idTextBox";
             this.idTextBox.Size = new System.Drawing.Size(59, 22);
             this.idTextBox.TabIndex = 0;
@@ -494,7 +494,7 @@
             this.precoTextBox.BackColor = System.Drawing.Color.White;
             this.precoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.servicoBindingSource, "Preco", true));
             this.precoTextBox.Location = new System.Drawing.Point(459, 30);
-            this.precoTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.precoTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.precoTextBox.Name = "precoTextBox";
             this.precoTextBox.ReadOnly = true;
             this.precoTextBox.Size = new System.Drawing.Size(123, 22);
@@ -504,7 +504,7 @@
             // button_InserirServicoAgendamento
             // 
             this.button_InserirServicoAgendamento.Location = new System.Drawing.Point(823, 30);
-            this.button_InserirServicoAgendamento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button_InserirServicoAgendamento.Margin = new System.Windows.Forms.Padding(4);
             this.button_InserirServicoAgendamento.Name = "button_InserirServicoAgendamento";
             this.button_InserirServicoAgendamento.Size = new System.Drawing.Size(85, 25);
             this.button_InserirServicoAgendamento.TabIndex = 7;
@@ -540,14 +540,14 @@
             this.idServicoDataGridViewTextBoxColumn,
             this.tempoDataGridViewTextBoxColumn});
             this.agendamentoServicoDataGridView.DataSource = this.agendamentoServicosBindingSource;
-            this.agendamentoServicoDataGridView.Location = new System.Drawing.Point(71, 289);
-            this.agendamentoServicoDataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.agendamentoServicoDataGridView.Location = new System.Drawing.Point(30, 289);
+            this.agendamentoServicoDataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.agendamentoServicoDataGridView.Name = "agendamentoServicoDataGridView";
             this.agendamentoServicoDataGridView.ReadOnly = true;
             this.agendamentoServicoDataGridView.RowHeadersVisible = false;
             this.agendamentoServicoDataGridView.RowHeadersWidth = 51;
             this.agendamentoServicoDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.agendamentoServicoDataGridView.Size = new System.Drawing.Size(1091, 182);
+            this.agendamentoServicoDataGridView.Size = new System.Drawing.Size(1132, 182);
             this.agendamentoServicoDataGridView.TabIndex = 29;
             // 
             // idDataGridViewTextBoxColumn
@@ -630,7 +630,7 @@
             // button1RemoverServico
             // 
             this.button1RemoverServico.Location = new System.Drawing.Point(1033, 257);
-            this.button1RemoverServico.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1RemoverServico.Margin = new System.Windows.Forms.Padding(4);
             this.button1RemoverServico.Name = "button1RemoverServico";
             this.button1RemoverServico.Size = new System.Drawing.Size(127, 25);
             this.button1RemoverServico.TabIndex = 30;
@@ -654,18 +654,18 @@
             this.groupBoxServico.Controls.Add(idLabel);
             this.groupBoxServico.Controls.Add(this.textBoxValorUnitario);
             this.groupBoxServico.Enabled = false;
-            this.groupBoxServico.Location = new System.Drawing.Point(72, 175);
+            this.groupBoxServico.Location = new System.Drawing.Point(32, 175);
             this.groupBoxServico.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBoxServico.Name = "groupBoxServico";
             this.groupBoxServico.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBoxServico.Size = new System.Drawing.Size(1088, 78);
+            this.groupBoxServico.Size = new System.Drawing.Size(1128, 78);
             this.groupBoxServico.TabIndex = 31;
             this.groupBoxServico.TabStop = false;
             // 
             // buttonNovo
             // 
             this.buttonNovo.Location = new System.Drawing.Point(940, 257);
-            this.buttonNovo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonNovo.Margin = new System.Windows.Forms.Padding(4);
             this.buttonNovo.Name = "buttonNovo";
             this.buttonNovo.Size = new System.Drawing.Size(85, 25);
             this.buttonNovo.TabIndex = 7;
@@ -698,7 +698,7 @@
             // buttonCancelar
             // 
             this.buttonCancelar.Location = new System.Drawing.Point(1060, 482);
-            this.buttonCancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonCancelar.Margin = new System.Windows.Forms.Padding(4);
             this.buttonCancelar.Name = "buttonCancelar";
             this.buttonCancelar.Size = new System.Drawing.Size(100, 28);
             this.buttonCancelar.TabIndex = 56;
@@ -746,7 +746,7 @@
             this.Controls.Add(idLabel1);
             this.Controls.Add(horarioLabel);
             this.Controls.Add(this.horarioTextBox);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormCadastroAgendamento";
