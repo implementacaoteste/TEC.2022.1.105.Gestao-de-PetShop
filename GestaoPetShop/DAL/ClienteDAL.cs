@@ -10,7 +10,7 @@ namespace DAL
 {
     public class ClienteDAL
     {
-        private int _idcliente = 0;
+       //private int _idcliente = 0;
         public void Inserir(Cliente _cliente, SqlTransaction _transaction = null)
         {
 
@@ -19,7 +19,7 @@ namespace DAL
             using (SqlConnection cn = new SqlConnection(Conexao.StringDeConexao))
             {
                 using (SqlCommand cmd = new SqlCommand(@"INSERT INTO Cliente(Nome, CPF, Logradouro, Numero, Bairro, Cidade, UF, Pais, CEP, DataNascimento,Foto,Ativo)
-                                    VALUES(@Nome, @CPF, @Logradouro, @Numero, @Bairro, @Cidade, @UF, @Pais, @CEP, @DataNascimento,@Foto,@Ativo)", cn))
+                                    VALUES(@Nome, @CPF, @Logradouro, @Numero, @Bairro, @Cidade, @UF, @Pais, @CEP, @DataNascimento,@Foto,@Ativo) SELECT @@IDENTITY", cn))
                 {
 
                     cmd.Parameters.AddWithValue("@Nome", _cliente.Nome);
@@ -50,13 +50,22 @@ namespace DAL
                     cmd.Connection = transaction.Connection;
                     try
                     {
-                        cmd.ExecuteNonQuery();
+                        // cmd.ExecuteNonQuery();
+                       int _idcliente =Convert.ToInt32(cmd.ExecuteScalar());
 
                         foreach (EmailCliente emailCliente in _cliente.EmailCliente)
+                        {
+                            emailCliente.IdCliente = _idcliente;
                             new EmailClienteDAL().Inserir(emailCliente, transaction);
 
+                        }
+
                         foreach (TelefoneCliente telefoneCliente in _cliente.TelefoneClientes)
+                        {
+                            telefoneCliente.IdCliente = _idcliente;
                             new TelefoneClienteDAL().Inserir(telefoneCliente, transaction);
+
+                        }
 
 
                         if (_transaction == null)
@@ -154,7 +163,12 @@ namespace DAL
                 cmd.Parameters.AddWithValue("@Pais", _cliente.Pais);
                 cmd.Parameters.AddWithValue("@CEP", _cliente.CEP);
                 cmd.Parameters.AddWithValue("@DataNascimento", _cliente.DataNascimento);
-                cmd.Parameters.AddWithValue("@Foto", _cliente.Foto);
+                // cmd.Parameters.AddWithValue("@Foto", _cliente.Foto);
+                if (_cliente.Foto != null)
+                    cmd.Parameters.AddWithValue("@Foto", _cliente.Foto);
+                else
+                    cmd.Parameters.Add(new SqlParameter() { ParameterName = "@Foto", SqlDbType = System.Data.SqlDbType.Image, Value = DBNull.Value });
+
                 cmd.Parameters.AddWithValue("@Ativo", _cliente.Ativo);
 
                 if (transaction == null)
