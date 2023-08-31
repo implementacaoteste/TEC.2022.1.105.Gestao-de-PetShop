@@ -8,6 +8,7 @@ using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace BLL
 {
@@ -108,17 +109,20 @@ namespace BLL
             AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
             return agendamentoDAL.BuscarPorIdCliente(_idCliente);
         }
-
         public List<Agendamento> BuscarAgendamentoPorNomeProfissional(string _nomeProfissional)
         {
             AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
             return agendamentoDAL.BuscarAgendamentoPorNomeProfissional(_nomeProfissional);
         }
-
         public List<Agendamento> BuscarAgendamentoPorServicoDiaMesAno(string _nomeServico, string _data)
         {
             AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
             return agendamentoDAL.BuscarAgendamentoPorServicoDiaMesAno(_nomeServico, _data);
+        }
+        public List<Agendamento> BuscarAgendamentoPorServicoAno(string _nomeServico, string _ano) //Givas
+        {
+            AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
+            return agendamentoDAL.BuscarAgendamentoPorServicoAno(_nomeServico, _ano);
         }
     }
 }

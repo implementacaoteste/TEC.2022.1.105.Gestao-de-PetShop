@@ -109,10 +109,20 @@ namespace GestaoPetShop
                 {
                     if (textBox_BuscarAgendamento.Text == "" || textBox_BuscarData.Text == "")
                     {
-                        MessageBox.Show("Insirar Serviço e a Data para pesquisa");
+                        MessageBox.Show("Insira Serviço e a Data para pesquisa");
                         return;
                     }
                     agendamentoBindingSource.DataSource = agendamentoBLL.BuscarAgendamentoPorServicoDiaMesAno(textBox_BuscarAgendamento.Text, textBox_BuscarData.Text);
+                }
+
+                else if(comboBox_SelecionarTipoBusca.SelectedIndex == 8) // BUSCAR AGENDAMENTO POR SERVICO ANO
+                {
+                    if(textBox_BuscarAgendamento.Text == "" || textBox_BuscarData.Text == "")
+                    {
+                        MessageBox.Show("Insira um Serviço e a Ano para pesquisa");
+                        return;
+                    }
+                    agendamentoBindingSource.DataSource = agendamentoBLL.BuscarAgendamentoPorServicoAno(textBox_BuscarAgendamento.Text, textBox_BuscarData.Text);
                 }
                 else
                 {

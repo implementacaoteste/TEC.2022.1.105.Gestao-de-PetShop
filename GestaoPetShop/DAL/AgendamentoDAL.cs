@@ -326,7 +326,7 @@ namespace DAL
                     if (rd.Read())
                     {
                         cliente.Id = Convert.ToInt32(rd["Id"]);
-                       
+
                         cliente.Nome = rd["Nome"].ToString();
                         cliente.Animais = new AgendamentoDAL().BuscarAnimalPorIdCliente(cliente.Id);
                        
@@ -478,7 +478,7 @@ namespace DAL
                                                                                                                                                                                             LEFT JOIN Situacao Si                ON Ag.IdSituacao = Si.Id WHERE  UPPER(Cli.Nome) LIKE UPPER(@Nome)";//WHERE Ag.Id = @Id
 
                 cmd.CommandType = System.Data.CommandType.Text;
-                cmd.Parameters.AddWithValue("@Nome", "%"+ _nomeCliente +"%");
+                cmd.Parameters.AddWithValue("@Nome", "%" + _nomeCliente + "%");
                 cn.Open();
                 using (SqlDataReader rd = cmd.ExecuteReader())
                 {
@@ -883,7 +883,7 @@ namespace DAL
                         servico.Quantidade = Convert.ToInt32(rd["Quantidade"]);
                         servico.ValorUnitario = Convert.ToDecimal(rd["Preco"]);
                         servico.Tempo = Convert.ToInt32(rd["Tempo"]);
-                        servico.Subtotal =  servico.ValorUnitario * servico.Quantidade;
+                        servico.Subtotal = servico.ValorUnitario * servico.Quantidade;
 
                         servicos.Add(servico);
                     }
@@ -1042,7 +1042,6 @@ namespace DAL
                 cn.Close();
             }
         }
-
         public List<Agendamento> BuscarAgendamentoPorNomeProfissional(string _nomeProfissional)
         {
             List<Agendamento> agendamentos = new List<Agendamento>();
@@ -1093,7 +1092,6 @@ namespace DAL
                 cn.Close();
             }
         }
-
         public List<Agendamento> BuscarAgendamentoPorServicoDiaMesAno(string _nomeServico, string _data)
         {
             List<Agendamento> agendamentos = new List<Agendamento>();
@@ -1141,6 +1139,63 @@ namespace DAL
             catch (Exception ex)
             {
                 throw new Exception("Ocorreu um erro ao tentar buscar Agendamento por Servico com Dia/Mês/Ano no banco de dados.", ex) { Data = { { "Id", 137 } } };
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
+        public List<Agendamento> BuscarAgendamentoPorServicoAno(string _nomeServico, string _ano) //Givas
+        {
+            List<Agendamento> agendamentos = new List<Agendamento>();
+            Agendamento agendamento;
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = cn;
+                cmd.CommandText = @"SELECT Ag.Id, Ag.DataAg, Ag.Horario, Ag.Total, Ani.Id as AnimalId, Ani.Nome as NomeAnimal, 
+                                        Cli.Id as ClienteId, Cli.Nome as NomeCliente, P.Id as ProfissionalId, P.Nome as
+                                        NomeProfissional, Si.Id as SituacaoId, Si.Descricao as DescSituacao FROM Agendamento Ag 
+                                        LEFT JOIN Profissional P            ON Ag.IdProfissional = P.Id
+                                        LEFT JOIN Animal Ani                ON Ag.IdAnimal = Ani.Id
+                                        LEFT JOIN Cliente Cli               ON Ani.IdCliente = Cli.Id
+                                        LEFT JOIN AgendamentoServicos AgSe  ON Ag.Id = AgSe.IdAgendamento
+                                        LEFT JOIN Servico Se                ON AgSe.IdServico = Se.Id
+                                        LEFT JOIN Situacao Si               ON Ag.IdSituacao = Si.Id 
+                                WHERE DataAg = @Data AND UPPER (Se.Descricao) LIKE UPPER (@NomeServico)";
+
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.Parameters.AddWithValue("@Data", Convert.ToDateTime(_ano));
+                cmd.Parameters.AddWithValue("@NomeServico", "%" + _nomeServico + "%");
+                cn.Open();
+                using (SqlDataReader rd = cmd.ExecuteReader())
+                {
+                    while (rd.Read())
+                    {
+                        agendamento = new Agendamento();
+                        agendamento.Id = Convert.ToInt32(rd["Id"]);
+                        agendamento.DataAg = Convert.ToDateTime(rd["DataAg"]);
+                        agendamento.IdAnimal = Convert.ToInt32(rd["AnimalId"]);
+                        agendamento.NomeAnimal = rd["NomeAnimal"].ToString();
+                        agendamento.IdCliente = Convert.ToInt32(rd["ClienteId"]);
+                        agendamento.NomeCliente = rd["NomeCliente"].ToString();
+                        agendamento.IdProfissional = Convert.ToInt32(rd["ProfissionalId"]);
+                        agendamento.NomeProfissional = rd["NomeProfissional"].ToString();
+                        agendamento.Horario = rd["Horario"].ToString();
+                        agendamento.IdSituacao = Convert.ToInt32(rd["SituacaoId"]);
+                        agendamento.DescricaoSituacao = rd["DescSituacao"].ToString();
+                        agendamento.Total = Convert.ToInt32(rd["Total"]);
+
+                        agendamento.AgendamentoServicos = new AgendamentoDAL().BuscarAgendamentoServicosPorIdAgendamento(agendamento.Id);
+                        agendamentos.Add(agendamento);
+                    }
+                }
+                return agendamentos;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu um erro ao tentar buscar Agendamento por Serviço com Ano no banco de dados.", ex) { Data = { { "Id", 138 } } };
             }
             finally
             {
