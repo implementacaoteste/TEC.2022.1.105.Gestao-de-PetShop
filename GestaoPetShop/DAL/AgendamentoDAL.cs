@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Security.Cryptography;
+using System.Security.Cryptography.Pkcs;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -308,7 +309,7 @@ namespace DAL
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
                 cmd.CommandText = @"SELECT C.Id , C.Nome , A.Id 
-                                        FROM Cliente C INNER JOIN Animal A  ON C.Id = A.Id Cliente WHERE ";
+                                        FROM Cliente C INNER JOIN Animal A  ON C.Id = A.IdCliente WHERE ";
                 if (_opc == 0)
                 {
                     cmd.CommandText = cmd.CommandText + "A.Id = @id";
@@ -327,6 +328,7 @@ namespace DAL
                         cliente.Id = Convert.ToInt32(rd["Id"]);
 
                         cliente.Nome = rd["Nome"].ToString();
+                        cliente.Animais = new AgendamentoDAL().BuscarAnimalPorIdCliente(cliente.Id);
                        
                     }
                 }
@@ -341,6 +343,31 @@ namespace DAL
                 cn.Close();
             }
         }
+
+        //private List<Animal> BuscarAnimalPorIdCliente(int _idCliente)
+        //{
+        //    List<Animal> animais = new List<Animal>();
+        //    Animal animal;
+        //    SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+        //    try
+        //    {
+        //    SqlCommand cmd = new SqlCommand();
+        //        cmd.Connection = cn;
+        //        cmd.CommandText = @"SELECT Id, Nome FROM Animal WHERE IdCliente = @Id";
+        //        cmd.CommandType = System.Data.CommandType.Text;
+        //        cmd.Parameters.AddWithValue("@Id", _idCliente);
+        //        cn.Open();
+
+        //    }
+        //    catch (Exception ex)
+        //    {
+
+        //        throw new Exception("Ocorreu um erro ao tentar buscar Animais por Id do Cliente no banco de dados.", ex) { Data = { { "Id", 34 } } };
+        //    }
+           
+            
+        //}
+
         public List<Agendamento> BuscarPorNomeAnimalCliente(string _nomeAnimalCliente, int _opc)
         {
             List<Agendamento> listaAgendamentos = new List<Agendamento>();
