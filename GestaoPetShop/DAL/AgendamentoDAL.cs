@@ -308,7 +308,7 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT C.Id , C.Nome , A.Id   FROM Cliente C INNER JOIN Animal A  ON C.Id = A.IdCliente WHERE ";
+                cmd.CommandText = @"SELECT C.Id , C.Nome , A.Id   FROM Cliente C INNER JOIN Animal A  ON C.Id = A.IdCliente WHERE Ativo = 1 AND ";
                 if (_opc == 0)
                 {
                     cmd.CommandText = cmd.CommandText + "A.Id = @id";
@@ -328,7 +328,7 @@ namespace DAL
 
                         cliente.Nome = rd["Nome"].ToString();
                         cliente.Animais = new AgendamentoDAL().BuscarAnimalPorIdCliente(cliente.Id);
-                       
+
                     }
                 }
                 return cliente;
@@ -342,7 +342,6 @@ namespace DAL
                 cn.Close();
             }
         }
-
         private List<Animal> BuscarAnimalPorIdCliente(int _idCliente)
         {
             List<Animal> animais = new List<Animal>();
@@ -352,7 +351,7 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT Id, Nome FROM Animal WHERE IdCliente = @Id";
+                cmd.CommandText = @"SELECT Id, Nome FROM Animal WHERE IdCliente = @Id AND Ativo = 1";
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@Id", _idCliente);
                 cn.Open();
@@ -382,7 +381,6 @@ namespace DAL
 
 
         }
-
         public List<Cliente> BuscarPorNomeAnimalCliente(string _nomeAnimalCliente, int _opc)
         {
             List<Cliente> clientes = new List<Cliente>();
@@ -392,28 +390,36 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT C.Id , C.Nome , A.Id   FROM Cliente C INNER JOIN Animal A  ON C.Id = A.IdCliente ";
-                
+
+
                 if (_opc == 2)
                 {
-                    cmd.CommandText = cmd.CommandText + " WHERE UPPER (A.Nome) LIKE UPPER (@Nome)";
+                    cmd.CommandText = @"SELECT C.Id , C.Nome   FROM Cliente C LEFT JOIN Animal A ON A.IdCliente = C.Id  WHERE UPPER(A.Nome) LIKE UPPER(@Nome) AND C.Ativo = 1 AND A.Ativo = 1";
                 }
                 if (_opc == 3)
                 {
-                    cmd.CommandText = cmd.CommandText + "WHERE UPPER (C.Nome) LIKE UPPER (@Nome)";
+                    cmd.CommandText = @"SELECT Id , Nome   FROM Cliente  WHERE UPPER (Nome) LIKE UPPER (@Nome) AND Ativo = 1";
                 }
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@Nome", "%" + _nomeAnimalCliente + "%");
                 cn.Open();
                 using (SqlDataReader rd = cmd.ExecuteReader())
                 {
-                   while (rd.Read())
+                    int id = 0;
+                    int id2 = 0; // não extrai
+                    while (rd.Read())
                     {
                         cliente = new Cliente();
-                        cliente.Id = Convert.ToInt32(rd["Id"]);
-                        cliente.Nome = rd["Nome"].ToString();
-                        cliente.Animais = new AgendamentoDAL().BuscarAnimalPorIdCliente(cliente.Id);
-                        clientes.Add(cliente);
+                        id2 = Convert.ToInt32(rd["Id"]);
+                        if (id != id2)
+                        {
+
+                            cliente.Id = Convert.ToInt32(rd["Id"]);
+                            cliente.Nome = rd["Nome"].ToString();
+                            cliente.Animais = new AgendamentoDAL().BuscarAnimalPorIdCliente(cliente.Id);
+                            clientes.Add(cliente);
+                            id = Convert.ToInt32(rd["Id"]);
+                        }
                     }
                 }
                 return clientes;
