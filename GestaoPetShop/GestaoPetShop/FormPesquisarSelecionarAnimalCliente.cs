@@ -17,10 +17,14 @@ namespace GestaoPetShop
     {
         private int opc;
         public Agendamento Agendamento { get; set; }
+        public Cliente Cliente { get; set; }
+        public Animal Animal { get; set; }
         public FormPesquisarSelecionarAnimalCliente()
         {
             InitializeComponent();
             this.Agendamento = new Agendamento();
+            this.Cliente = new Cliente();
+            this.Animal = new Animal();
         }
 
 
@@ -70,7 +74,8 @@ namespace GestaoPetShop
             {
                 if (clienteBindingSource.Count > 0)
                 {
-                    this.Agendamento = (Agendamento)clienteBindingSource.Current;
+                    this.Cliente = (Cliente)clienteBindingSource.Current;
+                    this.Animal = (Animal)animaisBindingSource.Current;
                     Close();
                 }
                 else

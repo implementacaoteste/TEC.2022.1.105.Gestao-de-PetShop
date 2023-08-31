@@ -308,8 +308,7 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT C.Id , C.Nome , A.Id 
-                                        FROM Cliente C INNER JOIN Animal A  ON C.Id = A.IdCliente WHERE ";
+                cmd.CommandText = @"SELECT C.Id , C.Nome , A.Id   FROM Cliente C INNER JOIN Animal A  ON C.Id = A.IdCliente WHERE ";
                 if (_opc == 0)
                 {
                     cmd.CommandText = cmd.CommandText + "A.Id = @id";
@@ -344,41 +343,57 @@ namespace DAL
             }
         }
 
-        //private List<Animal> BuscarAnimalPorIdCliente(int _idCliente)
-        //{
-        //    List<Animal> animais = new List<Animal>();
-        //    Animal animal;
-        //    SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
-        //    try
-        //    {
-        //    SqlCommand cmd = new SqlCommand();
-        //        cmd.Connection = cn;
-        //        cmd.CommandText = @"SELECT Id, Nome FROM Animal WHERE IdCliente = @Id";
-        //        cmd.CommandType = System.Data.CommandType.Text;
-        //        cmd.Parameters.AddWithValue("@Id", _idCliente);
-        //        cn.Open();
-
-        //    }
-        //    catch (Exception ex)
-        //    {
-
-        //        throw new Exception("Ocorreu um erro ao tentar buscar Animais por Id do Cliente no banco de dados.", ex) { Data = { { "Id", 34 } } };
-        //    }
-           
-            
-        //}
-
-        public List<Agendamento> BuscarPorNomeAnimalCliente(string _nomeAnimalCliente, int _opc)
+        private List<Animal> BuscarAnimalPorIdCliente(int _idCliente)
         {
-            List<Agendamento> listaAgendamentos = new List<Agendamento>();
-            Agendamento agendamento;
+            List<Animal> animais = new List<Animal>();
+            Animal animal;
             SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
             try
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT A.Id as AnimalId , A.Nome as AnimalNome ,C.Id as  ClienteId, C.Nome as ClienteNome 
-                                        FROM Animal A INNER JOIN Cliente C  ON A.IdCliente = C.Id  ";
+                cmd.CommandText = @"SELECT Id, Nome FROM Animal WHERE IdCliente = @Id";
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.Parameters.AddWithValue("@Id", _idCliente);
+                cn.Open();
+                using (SqlDataReader rd = cmd.ExecuteReader())
+                {
+                    while (rd.Read())
+                    {
+                        animal = new Animal();
+                        animal.Id = Convert.ToInt32(rd["Id"]);
+                        animal.Nome = rd["Nome"].ToString();
+                        animais.Add(animal);
+                    }
+                }
+                return animais;
+
+
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception("Ocorreu um erro ao tentar buscar Animais por Id do Cliente no banco de dados.", ex) { Data = { { "Id", 34 } } };
+            }
+            finally
+            {
+                cn.Close();
+            }
+
+
+        }
+
+        public List<Cliente> BuscarPorNomeAnimalCliente(string _nomeAnimalCliente, int _opc)
+        {
+            List<Cliente> clientes = new List<Cliente>();
+            Cliente cliente;
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = cn;
+                cmd.CommandText = @"SELECT C.Id , C.Nome , A.Id   FROM Cliente C INNER JOIN Animal A  ON C.Id = A.IdCliente ";
+                
                 if (_opc == 2)
                 {
                     cmd.CommandText = cmd.CommandText + " WHERE UPPER (A.Nome) LIKE UPPER (@Nome)";
@@ -392,22 +407,20 @@ namespace DAL
                 cn.Open();
                 using (SqlDataReader rd = cmd.ExecuteReader())
                 {
-                    while (rd.Read())
+                   while (rd.Read())
                     {
-                        agendamento = new Agendamento();
-                        agendamento.IdAnimal = Convert.ToInt32(rd["AnimalId"]);
-                        agendamento.IdCliente = Convert.ToInt32(rd["ClienteId"]);
-                        agendamento.NomeAnimal = rd["AnimalNome"].ToString();
-                        agendamento.NomeCliente = rd["ClienteNome"].ToString();
-
-                        listaAgendamentos.Add(agendamento);
+                        cliente = new Cliente();
+                        cliente.Id = Convert.ToInt32(rd["Id"]);
+                        cliente.Nome = rd["Nome"].ToString();
+                        cliente.Animais = new AgendamentoDAL().BuscarAnimalPorIdCliente(cliente.Id);
+                        clientes.Add(cliente);
                     }
                 }
-                return listaAgendamentos;
+                return clientes;
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu um erro ao tentar buscar todos os Serviços no banco de dados.", ex) { Data = { { "Id", 46 } } };
+                throw new Exception("Ocorreu um erro ao tentar buscar Cliente no banco de dados.", ex) { Data = { { "Id", 46 } } };
             }
             finally
             {

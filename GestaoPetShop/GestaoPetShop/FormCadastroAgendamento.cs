@@ -125,17 +125,17 @@ namespace GestaoPetShop
                     {
                         frm.ShowDialog();
 
-                        if (frm.Agendamento.IdCliente < 1)
+                        if (frm.Cliente.Id < 1)
                             return;
-
-                        idAnimalTextBox.Text = Convert.ToString(frm.Agendamento.IdAnimal);
-                        ((Agendamento)agendamentoBindingSource.Current).IdAnimal = frm.Agendamento.IdAnimal;
-                        nomeAnimalTextBox.Text = frm.Agendamento.NomeAnimal;
-                        ((Agendamento)agendamentoBindingSource.Current).NomeAnimal = frm.Agendamento.NomeAnimal;
-                        idClienteTextBox.Text = Convert.ToString(frm.Agendamento.IdCliente);
-                        ((Agendamento)agendamentoBindingSource.Current).IdCliente = frm.Agendamento.IdCliente;
-                        nomeClienteTextBox.Text = frm.Agendamento.NomeCliente;
-                        ((Agendamento)agendamentoBindingSource.Current).NomeCliente = frm.Agendamento.NomeCliente;
+                       
+                        idAnimalTextBox.Text = Convert.ToString(frm.Animal.Id);
+                        ((Agendamento)agendamentoBindingSource.Current).IdAnimal = frm.Animal.Id;
+                        nomeAnimalTextBox.Text = frm.Animal.Nome;
+                        ((Agendamento)agendamentoBindingSource.Current).NomeAnimal = frm.Animal.Nome;
+                        idClienteTextBox.Text = Convert.ToString(frm.Cliente.Id);
+                        ((Agendamento)agendamentoBindingSource.Current).IdCliente = frm.Cliente.Id;
+                        nomeClienteTextBox.Text = frm.Cliente.Nome;
+                        ((Agendamento)agendamentoBindingSource.Current).NomeCliente = frm.Cliente.Nome;
                     }
                     catch (Exception ex)
                     {

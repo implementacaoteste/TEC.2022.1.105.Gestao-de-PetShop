@@ -38,14 +38,14 @@
             this.clienteDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.animalsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.animalsDataGridView = new System.Windows.Forms.DataGridView();
+            this.animaisBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.animaisDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clienteDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.animalsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.animalsDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.animaisBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.animaisDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonBuscarAnimalCliente
@@ -94,8 +94,8 @@
             // 
             // buttonCancelarPesquisaAnimalCliente
             // 
-            this.buttonCancelarPesquisaAnimalCliente.Location = new System.Drawing.Point(509, 367);
-            this.buttonCancelarPesquisaAnimalCliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonCancelarPesquisaAnimalCliente.Location = new System.Drawing.Point(504, 391);
+            this.buttonCancelarPesquisaAnimalCliente.Margin = new System.Windows.Forms.Padding(4);
             this.buttonCancelarPesquisaAnimalCliente.Name = "buttonCancelarPesquisaAnimalCliente";
             this.buttonCancelarPesquisaAnimalCliente.Size = new System.Drawing.Size(100, 28);
             this.buttonCancelarPesquisaAnimalCliente.TabIndex = 6;
@@ -145,30 +145,30 @@
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.ReadOnly = true;
             // 
-            // animalsBindingSource
+            // animaisBindingSource
             // 
-            this.animalsBindingSource.DataMember = "Animals";
-            this.animalsBindingSource.DataSource = this.clienteBindingSource;
+            this.animaisBindingSource.DataMember = "Animais";
+            this.animaisBindingSource.DataSource = this.clienteBindingSource;
             // 
-            // animalsDataGridView
+            // animaisDataGridView
             // 
-            this.animalsDataGridView.AllowUserToAddRows = false;
-            this.animalsDataGridView.AllowUserToDeleteRows = false;
-            this.animalsDataGridView.AllowUserToOrderColumns = true;
-            this.animalsDataGridView.AutoGenerateColumns = false;
-            this.animalsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.animalsDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.animaisDataGridView.AllowUserToAddRows = false;
+            this.animaisDataGridView.AllowUserToDeleteRows = false;
+            this.animaisDataGridView.AllowUserToOrderColumns = true;
+            this.animaisDataGridView.AutoGenerateColumns = false;
+            this.animaisDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.animaisDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn6});
-            this.animalsDataGridView.DataSource = this.animalsBindingSource;
-            this.animalsDataGridView.Location = new System.Drawing.Point(369, 149);
-            this.animalsDataGridView.Name = "animalsDataGridView";
-            this.animalsDataGridView.ReadOnly = true;
-            this.animalsDataGridView.RowHeadersVisible = false;
-            this.animalsDataGridView.RowHeadersWidth = 51;
-            this.animalsDataGridView.RowTemplate.Height = 24;
-            this.animalsDataGridView.Size = new System.Drawing.Size(311, 220);
-            this.animalsDataGridView.TabIndex = 7;
+            this.animaisDataGridView.DataSource = this.animaisBindingSource;
+            this.animaisDataGridView.Location = new System.Drawing.Point(429, 149);
+            this.animaisDataGridView.Name = "animaisDataGridView";
+            this.animaisDataGridView.ReadOnly = true;
+            this.animaisDataGridView.RowHeadersVisible = false;
+            this.animaisDataGridView.RowHeadersWidth = 51;
+            this.animaisDataGridView.RowTemplate.Height = 24;
+            this.animaisDataGridView.Size = new System.Drawing.Size(300, 220);
+            this.animaisDataGridView.TabIndex = 7;
             // 
             // dataGridViewTextBoxColumn3
             // 
@@ -177,7 +177,7 @@
             this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            this.dataGridViewTextBoxColumn3.Width = 125;
+            this.dataGridViewTextBoxColumn3.Width = 60;
             // 
             // dataGridViewTextBoxColumn6
             // 
@@ -192,8 +192,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(761, 446);
-            this.Controls.Add(this.animalsDataGridView);
+            this.ClientSize = new System.Drawing.Size(816, 446);
+            this.Controls.Add(this.animaisDataGridView);
             this.Controls.Add(this.clienteDataGridView);
             this.Controls.Add(this.buttonCancelarPesquisaAnimalCliente);
             this.Controls.Add(this.comboBoxEscolherTipoPequisaAnimalCliente);
@@ -210,8 +210,8 @@
             this.Text = "PesquisarSelecionarAnimalCliente";
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clienteDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.animalsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.animalsDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.animaisBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.animaisDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -227,8 +227,8 @@
         private System.Windows.Forms.DataGridView clienteDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.BindingSource animalsBindingSource;
-        private System.Windows.Forms.DataGridView animalsDataGridView;
+        private System.Windows.Forms.BindingSource animaisBindingSource;
+        private System.Windows.Forms.DataGridView animaisDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
     }
