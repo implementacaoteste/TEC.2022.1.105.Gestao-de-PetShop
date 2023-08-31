@@ -122,6 +122,21 @@ namespace GestaoPetShop
                         MessageBox.Show("Insira um Serviço e a Ano para pesquisa");
                         return;
                     }
+                    //int opc = 8;
+                    string dataconsulta = textBox_BuscarData.Text;
+                    if (dataconsulta.Count() == 4)
+                    {
+                        dataconsulta = "01/01" + textBox_BuscarData.Text;
+                    }
+                    else if (dataconsulta.Count() > 4 && dataconsulta.Count() < 10)
+                    {
+                        MessageBox.Show("Insira o ano que deseja pesquisar");
+                        textBox_BuscarData.Clear();
+                    }
+                    else
+                    {
+                        dataconsulta = textBox_BuscarData.Text;
+                    }
                     agendamentoBindingSource.DataSource = agendamentoBLL.BuscarAgendamentoPorServicoAno(textBox_BuscarAgendamento.Text, textBox_BuscarData.Text);
                 }
                 else
