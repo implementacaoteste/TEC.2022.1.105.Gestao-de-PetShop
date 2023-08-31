@@ -122,7 +122,7 @@ namespace GestaoPetShop
                         MessageBox.Show("Insira um Serviço e a Ano para pesquisa");
                         return;
                     }
-                    int opc = 8;
+                    //int opc = 8;
                     string dataconsulta = textBox_BuscarData.Text;
                     if (dataconsulta.Count() == 4)
                     {
