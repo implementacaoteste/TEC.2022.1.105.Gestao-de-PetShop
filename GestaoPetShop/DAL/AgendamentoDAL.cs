@@ -328,7 +328,7 @@ namespace DAL
 
                         cliente.Nome = rd["Nome"].ToString();
                         cliente.Animais = new AgendamentoDAL().BuscarAnimalPorIdCliente(cliente.Id);
-                       
+
                     }
                 }
                 return cliente;
@@ -393,7 +393,7 @@ namespace DAL
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
                 cmd.CommandText = @"SELECT C.Id , C.Nome , A.Id   FROM Cliente C INNER JOIN Animal A  ON C.Id = A.IdCliente ";
-                
+
                 if (_opc == 2)
                 {
                     cmd.CommandText = @"SELECT C.Id , C.Nome   FROM Cliente C LEFT JOIN Animal A ON A.IdCliente = C.Id  WHERE UPPER(A.Nome) LIKE UPPER(@Nome) AND C.Ativo = 1 AND A.Ativo = 1";
@@ -1217,6 +1217,65 @@ namespace DAL
             catch (Exception ex)
             {
                 throw new Exception("Ocorreu um erro ao tentar buscar Agendamento por Serviço com Ano no banco de dados.", ex) { Data = { { "Id", 138 } } };
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
+        public List<Agendamento> BuscarAgendamentoPorServicoMesAno(string _nomeServico, string _mesAno) //Givas
+        {
+            List<Agendamento> agendamentos = new List<Agendamento>();
+            Agendamento agendamento;
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = cn;
+                cmd.CommandText = @"SELECT  Ag.Id, Ag.DataAg, Ag.Horario, Ag.Total,
+                                            Ani.Id as AnimalId, Ani.Nome as NomeAnimal, 
+                                            Cli.Id as ClienteId, Cli.Nome as NomeCliente,
+                                            P.Id as ProfissionalId, P.Nome as NomeProfissional,
+                                            Si.Id as SituacaoId, Si.Descricao as DescSituacao
+                                            FROM Agendamento Ag
+                                    LEFT JOIN Profissional P            ON Ag.IdProfissional = P.Id
+                                    LEFT JOIN Animal Ani                ON Ag.IdAnimal = Ani.Id
+                                    LEFT JOIN Cliente Cli               ON Ani.IdCliente = Cli.Id
+                                    LEFT JOIN AgendamentoServicos AgSe  ON Ag.Id = AgSe.IdAgendamento
+                                    LEFT JOIN Servico Se                ON AgSe.IdServico = Se.Id
+                                    LEFT JOIN Situacao Si               ON Ag.IdSituacao = Si.Id 
+                                    WHERE DataAg = @Data AND UPPER (Se.Descricao) LIKE UPPER (@NomeServico)";
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.Parameters.AddWithValue("@Data", Convert.ToDateTime(_mesAno));
+                cmd.Parameters.AddWithValue("@NomeServico", "%" + _nomeServico + "%");
+                cn.Open();
+                using (SqlDataReader rd = cmd.ExecuteReader())
+                {
+                    while (rd.Read())
+                    {
+                        agendamento = new Agendamento();
+                        agendamento.Id = Convert.ToInt32(rd["Id"]);
+                        agendamento.DataAg = Convert.ToDateTime(rd["DataAg"]);
+                        agendamento.IdAnimal = Convert.ToInt32(rd["AnimalId"]);
+                        agendamento.NomeAnimal = rd["NomeAnimal"].ToString();
+                        agendamento.IdCliente = Convert.ToInt32(rd["ClienteId"]);
+                        agendamento.NomeCliente = rd["NomeCliente"].ToString();
+                        agendamento.IdProfissional = Convert.ToInt32(rd["ProfissionalId"]);
+                        agendamento.NomeProfissional = rd["NomeProfissional"].ToString();
+                        agendamento.Horario = rd["Horario"].ToString();
+                        agendamento.IdSituacao = Convert.ToInt32(rd["SituacaoId"]);
+                        agendamento.DescricaoSituacao = rd["DescSituacao"].ToString();
+                        agendamento.Total = Convert.ToDecimal(rd["Total"]);
+                        agendamento.AgendamentoServicos = new AgendamentoDAL().BuscarAgendamentoServicosPorIdAgendamento(agendamento.Id);
+
+                        agendamentos.Add(agendamento);
+                    }
+                }
+                return agendamentos;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu um erro ao tentar buscar Agendamento por Serviço com Mês/Ano no banco de dados.", ex) { Data = { { "Id", 138 } } };
             }
             finally
             {
