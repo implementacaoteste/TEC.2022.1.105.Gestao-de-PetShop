@@ -112,5 +112,33 @@ namespace GestaoPetShop
             //comboBoxBuscarPor.SelectedIndex = 3;
         }
 
+        private void buttonVisualizar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (clienteBindingSource.Count == 0)
+                {
+                    MessageBox.Show("Não existe cliente para ser alterado.");
+                    return;
+                }
+
+                int id = ((Cliente)clienteBindingSource.Current).Id;
+
+                using (FormCadastroCliente frm = new FormCadastroCliente(id, false))
+                {
+                    frm.ShowDialog();
+                }
+                buttonBuscar_Click(null, null);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void buttonCancelar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
