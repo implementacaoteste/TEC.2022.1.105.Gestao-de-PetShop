@@ -392,13 +392,8 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-<<<<<<< HEAD
-
-
-=======
                 cmd.CommandText = @"SELECT C.Id , C.Nome , A.Id   FROM Cliente C INNER JOIN Animal A  ON C.Id = A.IdCliente ";
                 
->>>>>>> parent of eae677d (Construção dos métodos Dia Mês e Ano)
                 if (_opc == 2)
                 {
                     cmd.CommandText = @"SELECT C.Id , C.Nome   FROM Cliente C LEFT JOIN Animal A ON A.IdCliente = C.Id  WHERE UPPER(A.Nome) LIKE UPPER(@Nome) AND C.Ativo = 1 AND A.Ativo = 1";
@@ -412,13 +407,9 @@ namespace DAL
                 cn.Open();
                 using (SqlDataReader rd = cmd.ExecuteReader())
                 {
-<<<<<<< HEAD
                     int id = 0;
                     int id2 = 0; // não extrai
                     while (rd.Read())
-=======
-                   while (rd.Read())
->>>>>>> parent of eae677d (Construção dos métodos Dia Mês e Ano)
                     {
                         cliente = new Cliente();
                         id2 = Convert.ToInt32(rd["Id"]);
