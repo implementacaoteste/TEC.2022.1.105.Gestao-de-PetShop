@@ -14,10 +14,10 @@ namespace DAL
             try
             {
                 SqlCommand cmd = cn.CreateCommand();
-                cmd.CommandText = "INSERT INTO Permissao(Nome) VALUES(@Nome)";
+                cmd.CommandText = "INSERT INTO Permissao(Descricao) VALUES(@Descriao)";
                 cmd.CommandType = System.Data.CommandType.Text;
 
-                //cmd.Parameters.AddWithValue("@Nome", _permissao.Nome);
+                cmd.Parameters.AddWithValue("@Descricao", _permissao.Descricao);
 
                 cmd.Connection = cn;
                 cn.Open();
@@ -32,7 +32,7 @@ namespace DAL
             {
                 cn.Close();
             }
-        }
+        }//Givas
         public List<Permissao> BuscarTodos()
         {
             List<Permissao> permissoes = new List<Permissao>();
@@ -54,7 +54,7 @@ namespace DAL
                     {
                         permissao = new Permissao();
                         permissao.Id = Convert.ToInt32(rd["Id"]);
-                        //permissao.Nome = rd["Nome"].ToString();
+                        permissao.Descricao = rd["Descricao"].ToString();
                         permissoes.Add(permissao);
                     }
                 }
@@ -68,8 +68,8 @@ namespace DAL
             {
                 cn.Close();
             }
-        }
-        public List<Permissao> BuscarPorNome(string _Nome)
+        }//Givas
+        public List<Permissao> BuscarPorDescricao(string _descricao)
         {
             List<Permissao> permissoes = new List<Permissao>();
             Permissao permissao;
@@ -79,9 +79,9 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = "SELECT Id, Nome FROM Permissao WHERE Nome LIKE @Nome";
+                cmd.CommandText = "SELECT Id, Descricao FROM Permissao WHERE Descricao LIKE @Descricao";
                 cmd.CommandType = System.Data.CommandType.Text;
-                cmd.Parameters.AddWithValue("@Nome", "%" + _Nome + "%");
+                cmd.Parameters.AddWithValue("@Descricao", "%" + _descricao + "%");
                 cn.Open();
 
                 using (SqlDataReader rd = cmd.ExecuteReader())
@@ -90,7 +90,7 @@ namespace DAL
                     {
                         permissao = new Permissao();
                         permissao.Id = Convert.ToInt32(rd["Id"]);
-                        //permissao.Nome = rd["Nome"].ToString();
+                        permissao.Descricao = rd["Descricao"].ToString();
                         permissoes.Add(permissao);
                     }
                 }
@@ -104,8 +104,8 @@ namespace DAL
             {
                 cn.Close();
             }
-        }
-        public List<Permissao> BuscarPorId(int _id)
+        }//Givas
+        public List<Permissao> BuscarPorId(int _id)//Givas
         {
             List<Permissao> permissoes = new List<Permissao>();
             Permissao permissao;
@@ -126,7 +126,7 @@ namespace DAL
                     {
                         permissao = new Permissao();
                         permissao.Id = Convert.ToInt32(rd["Id"]);
-                        //permissao.Nome = rd["Nome"].ToString();
+                        permissao.Descricao = rd["Descricao"].ToString();
                         permissoes.Add(permissao);
                     }
                 }
@@ -141,7 +141,7 @@ namespace DAL
                 cn.Close();
             }
         }
-        internal List<Permissao> BuscarPorIdGrupo(int _idGrupoUsuario)
+        internal List<Permissao> BuscarPorIdGrupo(int _idGrupoUsuario)//Givas
         {
             List<Permissao> permissoes = new List<Permissao>();
             Permissao permissao;
@@ -151,10 +151,10 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT Permissao.Id, Permissao.Nome FROM Permissao
+                cmd.CommandText = @"SELECT Permissao.Id, Permissao.Descricao FROM Permissao
                                     INNER JOIN PermissaoGrupoUsuario ON Permissao.Id = PermissaoGrupoUsuario.IdPermissao
-                                    WHERE PermissaoGrupoUsuario.IdGrupoUsuario = @IdGrupoUsuario ORDER BY Permissao.Nome";
-                
+                                    WHERE PermissaoGrupoUsuario.IdGrupoUsuario = @IdGrupoUsuario ORDER BY Permissao.Descricao";
+
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@IdGrupoUsuario", _idGrupoUsuario);
                 cn.Open();
@@ -165,7 +165,7 @@ namespace DAL
                     {
                         permissao = new Permissao();
                         permissao.Id = Convert.ToInt32(rd["Id"]);
-                        //permissao.Nome = rd["Nome"].ToString();
+                        permissao.Descricao = rd["Descricao"].ToString();
                         permissoes.Add(permissao);
                     }
                 }
@@ -180,17 +180,17 @@ namespace DAL
                 cn.Close();
             }
         }
-        public void Alterar(Permissao _permissao)
+        public void Alterar(Permissao _permissao)//Givas
         {
             SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
             try
             {
                 SqlCommand cmd = cn.CreateCommand();
-                cmd.CommandText = "UPDATE Permissao SET Nome = @Nome WHERE Id = @Id";
+                cmd.CommandText = "UPDATE Permissao SET Descricao = @Descricao WHERE Id = @Id";
                 cmd.CommandType = System.Data.CommandType.Text;
 
-                //cmd.Parameters.AddWithValue("@Nome", _permissao.Nome);
-                cmd.Parameters.AddWithValue("@Nome", _permissao.Id);
+                cmd.Parameters.AddWithValue("@Descricao", _permissao.Descricao);
+                cmd.Parameters.AddWithValue("@Descricao", _permissao.Id);
 
                 cmd.Connection = cn;
                 cn.Open();
@@ -215,7 +215,7 @@ namespace DAL
                 cmd.CommandText = "DELETE FROM Permissao WHERE Id = @Id";
                 cmd.CommandType = System.Data.CommandType.Text;
 
-                cmd.Parameters.AddWithValue("@Nome", _id);
+                cmd.Parameters.AddWithValue("@Descricao", _id);
 
                 cmd.Connection = cn;
                 cn.Open();
@@ -230,6 +230,6 @@ namespace DAL
             {
                 cn.Close();
             }
-        }
+        }//Givas
     }
 }

@@ -7,43 +7,58 @@ namespace BLL
 {
     public class PermissaoBLL
     {
-        public void Inserir(Permissao _permissao)
+        public void Inserir(Permissao _permissao)//Givas
         {
-            //if (_permissao.Nome.Length <= 10 || _permissao.Nome.Length >= 50)
-                throw new Exception("A descrição da permissao de usuário deve ter ais de 10 caracteres.");
+            new PermissaoDAL().Inserir(_permissao);
+            ////if (_permissao.Nome.Length <= 10 || _permissao.Nome.Length >= 50)
+            //throw new Exception("A descrição da permissao de usuário deve ter ais de 10 caracteres.");
 
-            PermissaoDAL permissaoDAL = new PermissaoDAL();
-            permissaoDAL.Inserir(_permissao);
+            //PermissaoDAL permissaoDAL = new PermissaoDAL();
+            //permissaoDAL.Inserir(_permissao);
         }
         public List<Permissao> BuscarTodos()
         {
-            return new PermissaoDAL().BuscarTodos();
-        }
-        public List<Permissao> BuscarPorNome(string _nome)
+            PermissaoDAL permissaoDAL = new PermissaoDAL();
+            List<Permissao> permissaos = permissaoDAL.BuscarTodos();
+            if (permissaos.Count == 0)
+            {
+                throw new Exception("Permissão não cadastrado");
+            }
+            return permissaos;
+        }//Givas
+        public List<Permissao> BuscarPorDescricao(string _descricao)
         {
-            return new PermissaoDAL().BuscarPorNome(_nome);
-        }
+            return new PermissaoDAL().BuscarPorDescricao(_descricao);
+            //PermissaoDAL permissaoDAL = new PermissaoDAL();
+            //List<Permissao> permissaos = permissaoDAL.BuscarPorDescricao(_descricao);
+            //if (permissaos.Count == 0)
+            //{
+            //    throw new Exception("Serviço de buscar por nome não encontrado em permissão");
+            //}
+            //return permissaos;
+        }//Givas
         public List<Permissao> BuscarPorId(int _id)
         {
-            return new PermissaoDAL().BuscarPorId(_id);
-        }
+            PermissaoDAL permissaoDAL = new PermissaoDAL();
+            List<Permissao> permissaos = permissaoDAL.BuscarPorId(_id);
+            if (permissaos.Count == 0)
+            {
+                throw new Exception("Serviço de buscar por id não encontrado");
+            }
+            return permissaos;
+        }//Givas
         public void Alterar(Permissao _permissao)
         {
-            //if (_permissao.Nome.Length <= 3 || _permissao.Nome.Length >= 250)
-                throw new Exception("A alteração informada deverá conter de 3 a 250 caracteres.");
+            new PermissaoDAL().Alterar(_permissao);
+            ////if (_permissao.Nome.Length <= 3 || _permissao.Nome.Length >= 250)
+            //throw new Exception("A alteração informada deverá conter de 3 a 250 caracteres.");
 
-            PermissaoDAL permissaoDAL = new PermissaoDAL();
-            permissaoDAL.Alterar(_permissao);
-        }
-        public void Excluir(Permissao _permissao)
+            //PermissaoDAL permissaoDAL = new PermissaoDAL();
+            //permissaoDAL.Alterar(_permissao);
+        }//Givas
+        public void Excluir(int _id)
         {
-            PermissaoDAL permissaoDAL = new PermissaoDAL();
-            //permissaoDAL.Excluir(_permissao);
-        }
-
-        public object BuscarPorDescricao(string text)
-        {
-            throw new NotImplementedException();
-        }
+            new PermissaoDAL().Excluir(_id);
+        }//Givas
     }
 }

@@ -10,7 +10,7 @@ namespace DAL
 {
     public class ClienteDAL
     {
-       //private int _idcliente = 0;
+        private int _idcliente = 0;
         public void Inserir(Cliente _cliente, SqlTransaction _transaction = null)
         {
 
@@ -51,7 +51,7 @@ namespace DAL
                     try
                     {
                         // cmd.ExecuteNonQuery();
-                       int _idcliente =Convert.ToInt32(cmd.ExecuteScalar());
+                        int _idcliente = Convert.ToInt32(cmd.ExecuteScalar());
 
                         foreach (EmailCliente emailCliente in _cliente.EmailCliente)
                         {
@@ -114,9 +114,6 @@ namespace DAL
                                 _idcliente = Convert.ToInt32(rd["Id"]);
                             }
                         }
-
-
-
                     }
                     catch (Exception ex)
                     {
@@ -163,7 +160,7 @@ namespace DAL
                 cmd.Parameters.AddWithValue("@Pais", _cliente.Pais);
                 cmd.Parameters.AddWithValue("@CEP", _cliente.CEP);
                 cmd.Parameters.AddWithValue("@DataNascimento", _cliente.DataNascimento);
-               // cmd.Parameters.AddWithValue("@Foto", _cliente.Foto);
+                // cmd.Parameters.AddWithValue("@Foto", _cliente.Foto);
                 if (_cliente.Foto != null)
                     cmd.Parameters.AddWithValue("@Foto", _cliente.Foto);
                 else
