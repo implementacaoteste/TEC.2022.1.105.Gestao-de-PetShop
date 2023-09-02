@@ -60,60 +60,6 @@ namespace DAL
                 cn.Close();
             }
         }
-        /*
-                private void InserirTelefoneProfissional(Profissional _profissional, int _idprofissional, SqlTransaction _transaction)
-                {
-                    SqlTransaction transaction = _transaction;
-                    List<Profissional> profissional = new List<Profissional>();
-
-                    using (SqlConnection cn = new SqlConnection(Conexao.StringDeConexao))
-                    {
-                        using (SqlCommand cmd = new SqlCommand(@"INSERT INTO TelefoneProfissional (IdProfissional,Telefone)
-                                                                                      VALUES (@IdProfissional,@Telefone)", cn))
-                        {
-                            try
-                            {
-                                if (transaction == null)
-                                {
-                                    cn.Open();
-                                    transaction = cn.BeginTransaction();
-                                }
-
-                                cmd.Transaction = transaction;
-                                cmd.Connection = transaction.Connection;
-
-                                foreach (Profissional item in _profissional.TelefoneProfissional)
-
-                                    cmd.Parameters.Clear();
-                                cmd.Parameters.AddWithValue("@IdProfissional", _idprofissional);
-                                cmd.Parameters.AddWithValue("@Telefone", item.TelefoneProfissional);
-
-
-                                cmd.ExecuteNonQuery();
-
-
-                                if (_transaction == null)
-                                    transaction.Commit();
-                            }
-                            catch (Exception ex)
-                            {
-                                transaction.Rollback();
-                                throw new Exception("Ocorreu um erro ao tentar inserir um telefone no banco de dados.", ex) { Data = { { "Id", 57 } } };
-                            }
-                        }
-                    }
-                }
-
-                    public List<Profissional> BuscarPorNome(string _nome)
-                    {
-                        throw new NotImplementedException();
-                    }
-
-                    public void Excluir(int _id)
-                    {
-                        throw new NotImplementedException();
-                    }
-        */
         public void Inserir(Profissional _profissional)
         {
             SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);

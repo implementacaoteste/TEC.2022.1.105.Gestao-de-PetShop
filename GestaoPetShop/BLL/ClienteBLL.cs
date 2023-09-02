@@ -12,14 +12,12 @@ namespace BLL
             ValidarDados(_cliente);
             new ClienteDAL().Inserir(_cliente);
         }
-
         private void ValidarDados(Cliente _cliente)
         {
             if (String.IsNullOrEmpty(_cliente.Nome))
                 throw new Exception("Informe o nome do cliente.");
 
         }
-
         public List<Cliente> BuscarTodos()
         {
             return new ClienteDAL().BuscarTodos();
