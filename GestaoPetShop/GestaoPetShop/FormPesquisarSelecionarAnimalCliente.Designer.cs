@@ -50,7 +50,7 @@
             // 
             // buttonBuscarAnimalCliente
             // 
-            this.buttonBuscarAnimalCliente.Location = new System.Drawing.Point(429, 66);
+            this.buttonBuscarAnimalCliente.Location = new System.Drawing.Point(566, 38);
             this.buttonBuscarAnimalCliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonBuscarAnimalCliente.Name = "buttonBuscarAnimalCliente";
             this.buttonBuscarAnimalCliente.Size = new System.Drawing.Size(75, 23);
@@ -61,10 +61,10 @@
             // 
             // buttonSelecionarAnimalCliente
             // 
-            this.buttonSelecionarAnimalCliente.Location = new System.Drawing.Point(509, 66);
+            this.buttonSelecionarAnimalCliente.Location = new System.Drawing.Point(429, 346);
             this.buttonSelecionarAnimalCliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonSelecionarAnimalCliente.Name = "buttonSelecionarAnimalCliente";
-            this.buttonSelecionarAnimalCliente.Size = new System.Drawing.Size(95, 23);
+            this.buttonSelecionarAnimalCliente.Size = new System.Drawing.Size(100, 28);
             this.buttonSelecionarAnimalCliente.TabIndex = 3;
             this.buttonSelecionarAnimalCliente.Text = "Selecionar";
             this.buttonSelecionarAnimalCliente.UseVisualStyleBackColor = true;
@@ -72,10 +72,10 @@
             // 
             // textBoxPesquisaAnimalCliente
             // 
-            this.textBoxPesquisaAnimalCliente.Location = new System.Drawing.Point(151, 66);
+            this.textBoxPesquisaAnimalCliente.Location = new System.Drawing.Point(170, 38);
             this.textBoxPesquisaAnimalCliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxPesquisaAnimalCliente.Name = "textBoxPesquisaAnimalCliente";
-            this.textBoxPesquisaAnimalCliente.Size = new System.Drawing.Size(272, 22);
+            this.textBoxPesquisaAnimalCliente.Size = new System.Drawing.Size(390, 22);
             this.textBoxPesquisaAnimalCliente.TabIndex = 4;
             // 
             // comboBoxEscolherTipoPequisaAnimalCliente
@@ -86,15 +86,15 @@
             "Id Cliente",
             "Nome Animal",
             "Nome Cliente"});
-            this.comboBoxEscolherTipoPequisaAnimalCliente.Location = new System.Drawing.Point(12, 66);
+            this.comboBoxEscolherTipoPequisaAnimalCliente.Location = new System.Drawing.Point(12, 36);
             this.comboBoxEscolherTipoPequisaAnimalCliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxEscolherTipoPequisaAnimalCliente.Name = "comboBoxEscolherTipoPequisaAnimalCliente";
-            this.comboBoxEscolherTipoPequisaAnimalCliente.Size = new System.Drawing.Size(121, 24);
+            this.comboBoxEscolherTipoPequisaAnimalCliente.Size = new System.Drawing.Size(152, 24);
             this.comboBoxEscolherTipoPequisaAnimalCliente.TabIndex = 5;
             // 
             // buttonCancelarPesquisaAnimalCliente
             // 
-            this.buttonCancelarPesquisaAnimalCliente.Location = new System.Drawing.Point(504, 391);
+            this.buttonCancelarPesquisaAnimalCliente.Location = new System.Drawing.Point(541, 346);
             this.buttonCancelarPesquisaAnimalCliente.Margin = new System.Windows.Forms.Padding(4);
             this.buttonCancelarPesquisaAnimalCliente.Name = "buttonCancelarPesquisaAnimalCliente";
             this.buttonCancelarPesquisaAnimalCliente.Size = new System.Drawing.Size(100, 28);
@@ -113,12 +113,13 @@
             this.clienteDataGridView.AllowUserToDeleteRows = false;
             this.clienteDataGridView.AllowUserToOrderColumns = true;
             this.clienteDataGridView.AutoGenerateColumns = false;
+            this.clienteDataGridView.BackgroundColor = System.Drawing.Color.MintCream;
             this.clienteDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.clienteDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2});
             this.clienteDataGridView.DataSource = this.clienteBindingSource;
-            this.clienteDataGridView.Location = new System.Drawing.Point(12, 149);
+            this.clienteDataGridView.Location = new System.Drawing.Point(12, 93);
             this.clienteDataGridView.Name = "clienteDataGridView";
             this.clienteDataGridView.ReadOnly = true;
             this.clienteDataGridView.RowHeadersVisible = false;
@@ -156,18 +157,19 @@
             this.animaisDataGridView.AllowUserToDeleteRows = false;
             this.animaisDataGridView.AllowUserToOrderColumns = true;
             this.animaisDataGridView.AutoGenerateColumns = false;
+            this.animaisDataGridView.BackgroundColor = System.Drawing.Color.MintCream;
             this.animaisDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.animaisDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn6});
             this.animaisDataGridView.DataSource = this.animaisBindingSource;
-            this.animaisDataGridView.Location = new System.Drawing.Point(429, 149);
+            this.animaisDataGridView.Location = new System.Drawing.Point(369, 93);
             this.animaisDataGridView.Name = "animaisDataGridView";
             this.animaisDataGridView.ReadOnly = true;
             this.animaisDataGridView.RowHeadersVisible = false;
             this.animaisDataGridView.RowHeadersWidth = 51;
             this.animaisDataGridView.RowTemplate.Height = 24;
-            this.animaisDataGridView.Size = new System.Drawing.Size(300, 220);
+            this.animaisDataGridView.Size = new System.Drawing.Size(272, 220);
             this.animaisDataGridView.TabIndex = 7;
             // 
             // dataGridViewTextBoxColumn3
@@ -192,7 +194,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(816, 446);
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.ClientSize = new System.Drawing.Size(670, 386);
             this.Controls.Add(this.animaisDataGridView);
             this.Controls.Add(this.clienteDataGridView);
             this.Controls.Add(this.buttonCancelarPesquisaAnimalCliente);

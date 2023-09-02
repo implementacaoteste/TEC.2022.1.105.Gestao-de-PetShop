@@ -16,18 +16,16 @@ namespace GestaoPetShop
     public partial class FormPesquisarSelecionarAnimalCliente : Form
     {
         private int opc;
-        public Agendamento Agendamento { get; set; }
+     
         public Cliente Cliente { get; set; }
         public Animal Animal { get; set; }
         public FormPesquisarSelecionarAnimalCliente()
         {
             InitializeComponent();
-            this.Agendamento = new Agendamento();
+           
             this.Cliente = new Cliente();
             this.Animal = new Animal();
         }
-
-
         private void buttonBuscarAnimalCliente_Click(object sender, EventArgs e)
         {
             try
@@ -55,10 +53,6 @@ namespace GestaoPetShop
                         break;
 
                 }
-
-
-
-
             }
             catch (Exception ex)
             {
@@ -67,7 +61,6 @@ namespace GestaoPetShop
             }
 
         }
-
         private void buttonSelecionarAnimalCliente_Click(object sender, EventArgs e)
         {
             try
