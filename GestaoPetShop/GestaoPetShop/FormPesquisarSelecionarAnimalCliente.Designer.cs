@@ -113,7 +113,7 @@
             this.clienteDataGridView.AllowUserToDeleteRows = false;
             this.clienteDataGridView.AllowUserToOrderColumns = true;
             this.clienteDataGridView.AutoGenerateColumns = false;
-            this.clienteDataGridView.BackgroundColor = System.Drawing.Color.MintCream;
+            this.clienteDataGridView.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.clienteDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.clienteDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -157,12 +157,13 @@
             this.animaisDataGridView.AllowUserToDeleteRows = false;
             this.animaisDataGridView.AllowUserToOrderColumns = true;
             this.animaisDataGridView.AutoGenerateColumns = false;
-            this.animaisDataGridView.BackgroundColor = System.Drawing.Color.MintCream;
+            this.animaisDataGridView.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.animaisDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.animaisDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn6});
             this.animaisDataGridView.DataSource = this.animaisBindingSource;
+            this.animaisDataGridView.GridColor = System.Drawing.SystemColors.Highlight;
             this.animaisDataGridView.Location = new System.Drawing.Point(369, 93);
             this.animaisDataGridView.Name = "animaisDataGridView";
             this.animaisDataGridView.ReadOnly = true;
@@ -194,7 +195,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Control;
+            this.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.ClientSize = new System.Drawing.Size(670, 386);
             this.Controls.Add(this.animaisDataGridView);
             this.Controls.Add(this.clienteDataGridView);
@@ -204,13 +205,12 @@
             this.Controls.Add(this.buttonSelecionarAnimalCliente);
             this.Controls.Add(this.buttonBuscarAnimalCliente);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormPesquisarSelecionarAnimalCliente";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "PesquisarSelecionarAnimalCliente";
+            this.Text = "Pesquisar Animal";
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clienteDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.animaisBindingSource)).EndInit();
