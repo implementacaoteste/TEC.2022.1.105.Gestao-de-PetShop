@@ -225,6 +225,7 @@
     <Compile Include="ClienteDAL.cs" />
     <Compile Include="Conexao.cs" />
     <Compile Include="EmailClienteDAL.cs" />
+    <Compile Include="EmailProfissionalDAL.cs" />
     <Compile Include="FuncaoDAL.cs" />
     <Compile Include="GrupoUsuarioDAL.cs" />
     <Compile Include="PermissaoDAL.cs" />
