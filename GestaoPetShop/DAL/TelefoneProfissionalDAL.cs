@@ -50,7 +50,7 @@ namespace DAL
             }
         }
     }
-    public void Alterar (TelefoneProfissional _telefoneProfissional)
+    public void Alterar(TelefoneProfissional _telefoneProfissional)
     {
         SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
         try

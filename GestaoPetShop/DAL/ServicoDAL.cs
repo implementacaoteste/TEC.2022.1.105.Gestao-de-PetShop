@@ -149,7 +149,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu um erro ao tentar buscar todos os Serviços no banco de dados.", ex) { Data = { { "Id", 41 } } };
+                throw new Exception("Ocorreu um erro ao tentar buscar todos os Serviços no banco de dados.", ex) { Data = { { "Id", 43 } } };
             }
             finally
             {
@@ -179,7 +179,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu erro ao tentar alterar um usuário no banco de dados.", ex) { Data = { { "Id", 43 } } }; ;
+                throw new Exception("Ocorreu erro ao tentar alterar um usuário no banco de dados.", ex) { Data = { { "Id", 44 } } };
             }
             finally
             {
@@ -206,7 +206,7 @@ namespace DAL
             catch (Exception ex)
             {
 
-                throw new Exception("Ocorreu um erro ao tentar buscar vínculos de Serviços com Agendamento\n Primeiro tem que excluir este serviço de agendamento\n", ex) { Data = { { "Id", 44 } } };
+                throw new Exception("Ocorreu um erro ao tentar buscar vínculos de Serviços com Agendamento\n Primeiro tem que excluir este serviço de agendamento\n", ex) { Data = { { "Id", 45 } } };
 
 
             }
@@ -236,7 +236,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu um erro ao tentar verificar se o serviço está vinculado em um agendamento: " + ex.Message) { Data = { { "Id", 45 } } };
+                throw new Exception("Ocorreu um erro ao tentar verificar se o serviço está vinculado em um agendamento: " + ex.Message) { Data = { { "Id", 46 } } };
             }
             finally
             {
