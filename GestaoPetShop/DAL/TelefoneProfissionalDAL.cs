@@ -10,6 +10,16 @@ namespace DAL
 {
     public class TelefoneProfissionalDAL
     {
+        public void Alterar(TelefoneProfissional telefoneProfissional)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Excluir(int id)
+        {
+            throw new NotImplementedException();
+        }
+
         public void Inserir(TelefoneProfissional _telefoneProfissional, SqlTransaction _transaction = null)
         {
             SqlTransaction transaction = _transaction;
@@ -50,7 +60,7 @@ namespace DAL
             }
         }
     }
-    public void Alterar(TelefoneProfissional _telefoneProfissional)
+   /* public void Alterar(TelefoneProfissional _telefoneProfissional)
     {
         SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
         try
@@ -78,5 +88,5 @@ namespace DAL
         {
             cn.Close();
         }
-    }
+    }*/
 }
