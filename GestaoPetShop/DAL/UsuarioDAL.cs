@@ -244,5 +244,38 @@ namespace DAL
                 }
             }
         }
+        public void RemoverGrupoUsuario(int _idUsuario, int _idGrupoUsuario)//Givas
+        {
+            SqlConnection cn = new SqlConnection();
+            SqlCommand cmd = new SqlCommand();
+            Usuario usuario = new Usuario();
+            try
+            {
+                cn.ConnectionString = Conexao.StringDeConexao;
+                cmd.Connection = cn;
+                cmd.CommandText = @"DELETE FROM  UsuarioGrupoUsuario 
+                                    WHERE Id_Usuario = @Id_Usuario 
+                                    AND Id_GrupoUsuario = @Id_GrupoUsuario";
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.Parameters.AddWithValue("@Id_Usuario", _idUsuario);
+                cmd.Parameters.AddWithValue("@Id_GrupoUsuario", _idGrupoUsuario);
+
+                cn.Open();
+                cmd.ExecuteScalar();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu um erro ao tentar excluir um grupo: " + ex.Message);
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
+
+        public bool ValidarPermissao(int _idUsuarioLogado, int _idPermissao)//Givas
+        {
+            throw new NotImplementedException();
+        }
     }
 }

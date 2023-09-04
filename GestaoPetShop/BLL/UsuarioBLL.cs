@@ -58,10 +58,10 @@ namespace BLL
         }
         public void ValidarPermissao(int _idPermissao)
         {
-            // if (!new UsuarioDAL().ValidarPermissao(Constantes.IdUsuarioLogado, _idPermissao))
-            throw new Exception("Você não tem permissão de realizar essa operação. Procure o administrador do sistema.");
+            if (!new UsuarioDAL().ValidarPermissao(Constantes.IdUsuarioLogado, _idPermissao))
+                throw new Exception("Você não tem permissão de realizar essa operação. Procure o administrador do sistema.");
         }
-        public void Altenticar(string _nomeUsuario, string _senha)
+        public void Autenticar(string _nomeUsuario, string _senha)
         {
             Usuario usuario = new UsuarioDAL().BuscarPorLogin(_nomeUsuario);
             if (_senha == usuario.Senha && usuario.Ativo)
@@ -72,10 +72,10 @@ namespace BLL
             else
                 throw new Exception("Usuario ou senha inválido.");
         }
-
-        public void RemoverGrupoUsuario(int idUsuario, int idGrupoUsuario)
+        public void RemoverGrupoUsuario(int _idUsuario, int _idGrupoUsuario)//Givas
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+            new UsuarioDAL().RemoverGrupoUsuario(_idUsuario, _idGrupoUsuario);
         }
     }
 }

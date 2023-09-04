@@ -28,7 +28,7 @@ namespace GestaoPetShop
         {
             try
             {
-                new UsuarioBLL().Altenticar(textBoxUsuario.Text, textBoxSenha.Text);
+                new UsuarioBLL().Autenticar(textBoxUsuario.Text, textBoxSenha.Text);
                 Logou = true;
                 Close();
             }
