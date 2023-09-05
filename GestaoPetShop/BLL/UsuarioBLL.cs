@@ -39,11 +39,10 @@ namespace BLL
             ValidarPermissao(1);
             return new UsuarioDAL().BuscarPorId(_id);
         }
-        public List<Usuario> BuscarPorLogin(string _login)
+        public Usuario BuscarPorLogin(string _login)
         {
             ValidarPermissao(1);
-            //  return new UsuarioDAL().BuscarPorLogin(_login);
-            throw new NotImplementedException();// COLOQUEI SO PARA NAO DÁ ERRO
+            return new UsuarioDAL().BuscarPorLogin(_login);
         }
         private void ValidarDados(Usuario _usuario, string _confirmacaoDeSenha)
         {
@@ -74,7 +73,6 @@ namespace BLL
         }
         public void RemoverGrupoUsuario(int _idUsuario, int _idGrupoUsuario)//Givas
         {
-            //throw new NotImplementedException();
             new UsuarioDAL().RemoverGrupoUsuario(_idUsuario, _idGrupoUsuario);
         }
     }

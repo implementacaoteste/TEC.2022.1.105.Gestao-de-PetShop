@@ -48,7 +48,6 @@ namespace DAL
             }
 
         }
-
         public void Inserir(EmailCliente _emailCliente, SqlTransaction _transaction = null)
         {
             SqlTransaction transaction = _transaction;
@@ -142,7 +141,6 @@ namespace DAL
                 cn.Close();
             }
         }
-
         public List<EmailCliente> BuscarPorIdCliente(int _idCliente)
         {
             List<EmailCliente> emailClienteList = new List<EmailCliente>();

@@ -120,34 +120,23 @@ namespace DAL
                         profissional.Id = (int)rd["Id"];
                         profissional.IdFuncao = (int)rd["IdFuncao"];
                         profissional.Nome = rd["Nome"].ToString();
-                        profissional.CPF = (int)rd["CPF"];
+                        profissional.CPF = rd["CPF"].ToString();
                         profissional.Logradouro = rd["Logradouro"].ToString();
-                        profissional.Numero = (int)rd["Numero"];
+                        profissional.Numero = rd["Numero"].ToString();
                         profissional.Bairro = rd["Bairro"].ToString();
                         profissional.Cidade = rd["Cidade"].ToString();
                         profissional.UF = rd["UF"].ToString();
                         profissional.Pais = rd["Pais"].ToString();
-                        profissional.CEP = (int)rd["CEP"];
-                        profissional.DataNascimento = (int)rd["DataNascimento"];
+                        profissional.CEP = rd["CEP"].ToString();
+                        profissional.DataNascimento = (DateTime)rd["DataNascimento"];
 
-                        //profissional.Nome = rd["Nome"].ToString();
-                        //profissional.cpf = rd["cpf"].tostring();
-                        //profissional.logradouro = rd["logradouro"].tostring();
-                        //profissional.numero = rd["numero"].tostring();
-                        //profissional.bairro = rd["bairro"].tostring();
-                        //profissional.cidade = rd["cidade"].tostring();
-                        //profissional.uf = rd["uf"].tostring();
-                        //profissional.pais = rd["pais"].tostring();
-                        //profissional.cep = rd["cep"].tostring();
-                        //profissional.datanascimento = (datetime)rd["datanascimento"];
-
-                        //if (!string.isnullorempty(rd["foto"].tostring()))
-                        //    profissional.foto = (byte[])rd["foto"];
+                        if (!String.IsNullOrEmpty(rd["Foto"].ToString()))
+                            profissional.Foto = (byte[])rd["Foto"];
 
                         profissional.Ativo = (bool)rd["Ativo"];
 
-                        //profissional.emailprofissional = new emailprofissionaldal().buscarporidprofissional(profissional.id);
-                        //profissional.telefoneprofissional = new telefoneprofissionaldal().buscarporidprofissional(profissional.id);
+                        profissional.EmailProfissional = new EmailProfissionalDAL().BuscarPorIdProfissional(profissional.Id);
+                        profissional.TelefoneProfissional = new TelefoneProfissionalDAL().BuscarPorIdProfissional(profissional.Id);
 
                         profissionalList.Add(profissional);
                     }
@@ -184,22 +173,22 @@ namespace DAL
                         profissional.Id = (int)rd["Id"];
                         profissional.IdFuncao = (int)rd["IdFuncao"];
                         profissional.Nome = rd["Nome"].ToString();
-                        profissional.CPF = (int)rd["CPF"];
+                        profissional.CPF = rd["CPF"].ToString();
                         profissional.Logradouro = rd["Logradouro"].ToString();
-                        profissional.Numero = (int)rd["Numero"];
+                        profissional.Numero = rd["Numero"].ToString();
                         profissional.Bairro = rd["Bairro"].ToString();
                         profissional.Cidade = rd["Cidade"].ToString();
                         profissional.UF = rd["UF"].ToString();
                         profissional.Pais = rd["Pais"].ToString();
-                        profissional.CEP = (int)rd["CEP"];
-                        profissional.DataNascimento = (int)rd["DataNascimento"];
+                        profissional.CEP = rd["CEP"].ToString();
+                        profissional.DataNascimento = (DateTime)rd["DataNascimento"];
 
-                        // if (!String.IsNullOrEmpty(rd["Foto"].ToString()))
-                        //profissional.Foto = (byte[])rd["Foto"];
+                        if (!String.IsNullOrEmpty(rd["Foto"].ToString()))
+                            profissional.Foto = (byte[])rd["Foto"];
 
                         profissional.Ativo = (bool)rd["Ativo"];
-                        //profissional.emailprofissional = new emailclientedal().buscarporidcliente(profissional.id);
-                        //profissional.telefoneprofissional = new telefoneclientedal().buscarporidcliente(profissional.id);
+                        profissional.EmailProfissional = new EmailProfissionalDAL().BuscarPorIdProfissional(profissional.Id);
+                        profissional.TelefoneProfissional = new TelefoneProfissionalDAL().BuscarPorIdProfissional(profissional.Id);
 
                         profissionalList.Add(profissional);
                     }
@@ -236,22 +225,22 @@ namespace DAL
                         profissional.Id = (int)rd["Id"];
                         profissional.IdFuncao = (int)rd["IdFuncao"];
                         profissional.Nome = rd["Nome"].ToString();
-                        profissional.CPF = (int)rd["CPF"];
+                        profissional.CPF = rd["CPF"].ToString();
                         profissional.Logradouro = rd["Logradouro"].ToString();
-                        profissional.Numero = (int)rd["Numero"];
+                        profissional.Numero = rd["Numero"].ToString();
                         profissional.Bairro = rd["Bairro"].ToString();
                         profissional.Cidade = rd["Cidade"].ToString();
                         profissional.UF = rd["UF"].ToString();
                         profissional.Pais = rd["Pais"].ToString();
-                        profissional.CEP = (int)rd["CEP"];
-                        profissional.DataNascimento = (int)rd["DataNascimento"];
+                        profissional.CEP = rd["CEP"].ToString();
+                        profissional.DataNascimento = (DateTime)rd["DataNascimento"];
 
-                        // if (!String.IsNullOrEmpty(rd["Foto"].ToString()))
-                        //profissional.Foto = (byte[])rd["Foto"];
+                        if (!String.IsNullOrEmpty(rd["Foto"].ToString()))
+                            profissional.Foto = (byte[])rd["Foto"];
 
                         profissional.Ativo = (bool)rd["Ativo"];
-                        //profissional.emailprofissional = new emailclientedal().buscarporidcliente(profissional.id);
-                        //profissional.telefoneprofissional = new telefoneclientedal().buscarporidcliente(profissional.id);
+                        profissional.EmailProfissional = new EmailProfissionalDAL().BuscarPorIdProfissional(profissional.Id);
+                        profissional.TelefoneProfissional = new TelefoneProfissionalDAL().BuscarPorIdProfissional(profissional.Id);
                     }
                 }
                 return profissional;
@@ -287,22 +276,22 @@ namespace DAL
                         profissional.Id = (int)rd["Id"];
                         profissional.IdFuncao = (int)rd["IdFuncao"];
                         profissional.Nome = rd["Nome"].ToString();
-                        profissional.CPF = (int)rd["CPF"];
+                        profissional.CPF = rd["CPF"].ToString();
                         profissional.Logradouro = rd["Logradouro"].ToString();
-                        profissional.Numero = (int)rd["Numero"];
+                        profissional.Numero = rd["Numero"].ToString();
                         profissional.Bairro = rd["Bairro"].ToString();
                         profissional.Cidade = rd["Cidade"].ToString();
                         profissional.UF = rd["UF"].ToString();
                         profissional.Pais = rd["Pais"].ToString();
-                        profissional.CEP = (int)rd["CEP"];
-                        profissional.DataNascimento = (int)rd["DataNascimento"];
+                        profissional.CEP = rd["CEP"].ToString();
+                        profissional.DataNascimento = (DateTime)rd["DataNascimento"];
 
-                        // if (!String.IsNullOrEmpty(rd["Foto"].ToString()))
-                        //profissional.Foto = (byte[])rd["Foto"];
+                        if (!String.IsNullOrEmpty(rd["Foto"].ToString()))
+                            profissional.Foto = (byte[])rd["Foto"];
 
                         profissional.Ativo = (bool)rd["Ativo"];
-                        //profissional.emailprofissional = new emailclientedal().buscarporidcliente(profissional.id);
-                        //profissional.telefoneprofissional = new telefoneclientedal().buscarporidcliente(profissional.id);
+                        profissional.EmailProfissional = new EmailProfissionalDAL().BuscarPorIdProfissional(profissional.Id);
+                        profissional.TelefoneProfissional = new TelefoneProfissionalDAL().BuscarPorIdProfissional(profissional.Id);
                     }
                 }
                 return profissional;

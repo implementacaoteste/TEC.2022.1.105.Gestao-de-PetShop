@@ -272,42 +272,69 @@ namespace DAL
                 cn.Close();
             }
         }
-
         public bool ValidarPermissao(int _idUsuarioLogado, int _idPermissao)//Givas
         {
-            throw new NotImplementedException();
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = cn;
+                cmd.CommandText = @"SELECT 1 FROM  Usuario INNER JOIN Profissional ON Usuario.IdProfissional = Profissional.Id
+                                                INNER JOIN Funcao ON Profissional.IdFuncao = Funcao.Id
+                                                INNER JOIN FuncaoPermissao ON Funcao.Id = FuncaoPermissao.IdFuncao
+                                                INNER JOIN Permissao ON FuncaoPermissao.IdPermissao = Permissao.Id
+                                                WHERE Usuario.Id = @IdUsuario AND Permissao.Id = @IdPermissao";
 
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.Parameters.AddWithValue("@IdUsuario", _idUsuarioLogado);
+                cmd.Parameters.AddWithValue("@IdPermissao", _idPermissao);
 
-            //SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
-            //try
-            //{
-            //    SqlCommand cmd = new SqlCommand();
-            //    cmd.Connection = cn;
-            //    cmd.CommandText = @"SELECT 1 FROM  PermissaoGrupoUsuario 
-            //                        INNER JOIN UsuarioGrupoUsuario ON PermissaoGrupoUsuario.IdGrupoUsuario = UsuarioGrupoUsuario.IdGrupoUsuario
-            //                        WHERE UsuarioGrupoUsuario.IdUsuario = @IdUsuario AND PermissaoGrupoUsuario.IdPermissao = @IdPermissao";
+                cn.Open();
 
-            //    cmd.CommandType = System.Data.CommandType.Text;
-            //    cmd.Parameters.AddWithValue("@IdUsuario", _idUsuario);
-            //    cmd.Parameters.AddWithValue("@IdPermissao", _idPermissao);
+                using (SqlDataReader rd = cmd.ExecuteReader())
+                {
+                    if (rd.Read())
+                        return true;
+                }
+                return false;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu um erro ao tentar validar permissões do usuário no banco de dados.", ex);
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
+        public Usuario BuscarPorCPF(string _cPF)//verficar as ligações com INNER JOIN
+        {
+            Usuario usuario = new Usuario();
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = cn;
+                cmd.CommandText = "SELECT Id, IdFuncao, Nome, CPF, Logradouro, Numero, Bairro, Cidade, UF, Pais, CEP, DataNascimento, Foto, Ativo FROM Profissional WHERE CPF = @CPF";
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.Parameters.AddWithValue("@CPF" ,_cPF);
+                cn.Open();
+                using (SqlDataReader rd = cmd.ExecuteReader())
+                {
+                    if (rd.Read())
+                    {
+                        usuario.Id = Convert.ToInt32(rd["Id"]);
+                        usuario.IdProfissional = Convert.ToInt32(rd["IdProfissional"]);
 
-            //    cn.Open();
+                    }
+                }
 
-            //    using (SqlDataReader rd = cmd.ExecuteReader())
-            //    {
-            //        if (rd.Read())
-            //            return true;
-            //    }
-            //    return false;
-            //}
-            //catch (Exception ex)
-            //{
-            //    throw new Exception("Ocorreu um erro ao tentar validar permissões do usuário no banco de dados.", ex);
-            //}
-            //finally
-            //{
-            //    cn.Close();
-            //}
+            return usuario;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
     }
 }
