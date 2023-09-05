@@ -20,152 +20,152 @@ namespace GestaoPetShop
             try
             {
                 AgendamentoBLL agendamentoBLL = new AgendamentoBLL();
-                if (comboBox_SelecionarTipoBusca.SelectedIndex == 0) // BUSCAR TODOS OS AGENDAMENTOS
+                switch (comboBox_SelecionarTipoBusca.SelectedIndex)
                 {
-                    agendamentoBindingSource.DataSource = agendamentoBLL.BuscarTodos();
-                }
-                else if (comboBox_SelecionarTipoBusca.SelectedIndex == 1) // BUSCAR AGENDAMENTO POR ID
-                {
-                    if (textBox_BuscarAgendamento.Text == "")
-                    {
-                        MessageBox.Show("Insirar um Id(código) do Agendamento para pesquisa");
-                        return;
-                    }
-                    int opc = 0;
-                    agendamentoBindingSource.DataSource = agendamentoBLL.BuscarAgendamentoPorId(Convert.ToInt32(textBox_BuscarAgendamento.Text), opc);
-                }
-                else if (comboBox_SelecionarTipoBusca.SelectedIndex == 2)
-                {
-                    if (textBox_BuscarAgendamento.Text == "")
-                    {
-                        MessageBox.Show("Insirar o Nome do Profissional para pesquisa");
-                        return;
-                    }
-                    agendamentoBindingSource.DataSource = agendamentoBLL.BuscarAgendamentoPorNomeProfissional(textBox_BuscarAgendamento.Text);
-                }
-                else if (comboBox_SelecionarTipoBusca.SelectedIndex == 3)//buscar agendamento nome cliente
-                {
-                    if (textBox_BuscarAgendamento.Text == "")
-                    {
-                        MessageBox.Show("Insirar o Nome do Cliente para pesquisa");
-                        return;
-                    }
-                    agendamentoBindingSource.DataSource = agendamentoBLL.BuscarPorNomeCliente(textBox_BuscarAgendamento.Text);
-                }
-                else if (comboBox_SelecionarTipoBusca.SelectedIndex == 4) // BUSCAR POR DIA/MÊS/ANO
-                {
-                    string quant = textBox_BuscarData.Text;
-                    if (textBox_BuscarData.Text == "")
-                    {
-                        MessageBox.Show("Insirar o Data para pesquisa");
-                        return;
-                    }
-                    agendamentoBindingSource.DataSource = agendamentoBLL.BuscarPorDiaMesAno(textBox_BuscarData.Text);
-                }
-                else if (comboBox_SelecionarTipoBusca.SelectedIndex == 5) // BUSCAR POR MÊS E ANO
-                {
-                    if (textBox_BuscarData.Text == "")
-                    {
-                        MessageBox.Show("Insirar o Data para pesquisa");
-                        return;
-                    }
-                    int opc = 5;
-                    string dataconsulta = textBox_BuscarData.Text;
-                    if (dataconsulta.Count() == 7)
-                    {
-                        dataconsulta = "01/" + textBox_BuscarData.Text; // COMPLETAR O NUMERO DA DATA PARA A PESQUISA EM BD
-                    }
-                    else
-                    {
-                        dataconsulta = textBox_BuscarData.Text;
-                    }
-                    agendamentoBindingSource.DataSource = agendamentoBLL.BuscarPorMesAno(opc, dataconsulta);
-                }
-                else if (comboBox_SelecionarTipoBusca.SelectedIndex == 6) // BUSCAR POR ANO
-                {
-                    if (textBox_BuscarData.Text == "")
-                    {
-                        MessageBox.Show("Insirar o Data para pesquisa");
-                        return;
-                    }
-                    int opc = 6;
-                    string dataconsulta = textBox_BuscarData.Text;
-                    if (dataconsulta.Count() == 4)
-                    {
-                        dataconsulta = "01/01/" + textBox_BuscarData.Text;
-                    }
-                    else if (dataconsulta.Count() > 4 && dataconsulta.Count() < 10)
-                    {
-                        MessageBox.Show("Insira o ano que deseja pesquisar");
-                        textBox_BuscarData.Clear();
-                    }
-                    else
-                    {
-                        dataconsulta = textBox_BuscarData.Text;
-                    }
-                    agendamentoBindingSource.DataSource = agendamentoBLL.BuscarPorMesAno(opc, dataconsulta);
-                }
-                else if (comboBox_SelecionarTipoBusca.SelectedIndex == 7) // BUSCAR AGENDAMENTO POR SERVICO DIA/MES/ANO
-                {
-                    if (textBox_BuscarAgendamento.Text == "" || textBox_BuscarData.Text == "")
-                    {
-                        MessageBox.Show("Insira Serviço e a Data para pesquisa");
-                        return;
-                    }
-                    agendamentoBindingSource.DataSource = agendamentoBLL.BuscarAgendamentoPorServicoDiaMesAno(textBox_BuscarAgendamento.Text, textBox_BuscarData.Text);
-                }
+                    case 0: // BUSCAR TODOS OS AGENDAMENTOS
+                        int opc; // variavel usada para selecionar a forma de busca em AgenndamentoDAL
+                       
+                        string dataconsulta;
 
-                else if (comboBox_SelecionarTipoBusca.SelectedIndex == 8) // BUSCAR AGENDAMENTO POR SERVICO ANO
-                {
-                    if (textBox_BuscarAgendamento.Text == "" || textBox_BuscarData.Text == "")
-                    {
-                        MessageBox.Show("Insira um Serviço e a Ano para pesquisa");
-                        return;
-                    }
-                    //int opc = 8;
-                    string dataconsulta = textBox_BuscarData.Text;
-                    if (dataconsulta.Count() == 4)
-                    {
-                        dataconsulta = "01/01" + textBox_BuscarData.Text;
-                    }
-                    else if (dataconsulta.Count() > 4 && dataconsulta.Count() < 10)
-                    {
-                        MessageBox.Show("Insira o ano que deseja pesquisar");
-                        textBox_BuscarData.Clear();
-                    }
-                    else
-                    {
+                        agendamentoBindingSource.DataSource = agendamentoBLL.BuscarTodos();
+                        break;
+                    case 1: // BUSCAR AGENDAMENTO POR ID
+
+                        if (textBox_BuscarAgendamento.Text == "")
+                        {
+                            MessageBox.Show("Insirar um Id(código) do Agendamento para pesquisa");
+                            return;
+                        }
+                        opc = 0;
+                        agendamentoBindingSource.DataSource = agendamentoBLL.BuscarAgendamentoPorId(Convert.ToInt32(textBox_BuscarAgendamento.Text), opc);
+                        break;
+                    case 2:// BUSCAR AGENDAMENTO PELO NOME DO PROFISSIONAL
+                        if (textBox_BuscarAgendamento.Text == "")
+                        {
+                            MessageBox.Show("Insirar o Nome do Profissional para pesquisa");
+                            return;
+                        }
+                        agendamentoBindingSource.DataSource = agendamentoBLL.BuscarAgendamentoPorNomeProfissional(textBox_BuscarAgendamento.Text);
+                        break;
+                    case 3:// BUSCAR AGENDMAENTO PELO NOME DO CLIENTE CLIENTE
+                        if (textBox_BuscarAgendamento.Text == "")
+                        {
+                            MessageBox.Show("Insirar o Nome do Cliente para pesquisa");
+                            return;
+                        }
+                        agendamentoBindingSource.DataSource = agendamentoBLL.BuscarPorNomeCliente(textBox_BuscarAgendamento.Text);
+                        break;
+                    case 4: // BUSCAR AGENDAMENTO POR DIA/MÊS/ANO
+
+                        if (textBox_BuscarData.Text == "")
+                        {
+                            MessageBox.Show("Insirar o Data para pesquisa");
+                            return;
+                        }
+                        agendamentoBindingSource.DataSource = agendamentoBLL.BuscarPorDiaMesAno(textBox_BuscarData.Text);
+                        break;
+                    case 5:// BUSCAR POR MÊS E ANO
+                        if (textBox_BuscarData.Text == "")
+                        {
+                            MessageBox.Show("Insirar o Data para pesquisa");
+                            return;
+                        }
+                        opc = 5;
                         dataconsulta = textBox_BuscarData.Text;
-                    }
-                    agendamentoBindingSource.DataSource = agendamentoBLL.BuscarAgendamentoPorServicoAno(textBox_BuscarAgendamento.Text, textBox_BuscarData.Text);
-                }
-                else if (comboBox_SelecionarTipoBusca.SelectedIndex == 9) // BUSCAR AGENDAMENTO POR SERVICO E MÊS/ANO
-                {
-                    if (textBox_BuscarAgendamento.Text == "" || textBox_BuscarData.Text == "")
-                    {
-                        MessageBox.Show("Insira um Serviço, um mês e o Ano para pesquisa");
-                        return;
-                    }
-                    //int opc = 8;
-                    string dataconsulta = textBox_BuscarData.Text;
-                    if (dataconsulta.Count() == 4)
-                    {
-                        dataconsulta = "01/01" + textBox_BuscarData.Text;
-                    }
-                    else if (dataconsulta.Count() > 4 && dataconsulta.Count() < 10)
-                    {
-                        MessageBox.Show("Insira o mês e o ano que deseja pesquisar");
-                        textBox_BuscarData.Clear();
-                    }
-                    else
-                    {
+                        if (dataconsulta.Count() == 7)
+                        {
+                            dataconsulta = "01/" + textBox_BuscarData.Text; // COMPLETAR O NUMERO DA DATA PARA A PESQUISA EM BD
+                        }
+                        else
+                        {
+                            dataconsulta = textBox_BuscarData.Text;
+                        }
+                        agendamentoBindingSource.DataSource = agendamentoBLL.BuscarPorMesAno(opc, dataconsulta);
+                        break;
+                    case 6: // BUSCAR POR ANO
+                        if (textBox_BuscarData.Text == "")
+                        {
+                            MessageBox.Show("Insirar o Data para pesquisa");
+                            return;
+                        }
+                        opc = 6; // USADO PARA SELECIONAR EM AGENDAMENTODAL A FORMA DE BUSCA
                         dataconsulta = textBox_BuscarData.Text;
-                    }
-                    agendamentoBindingSource.DataSource = agendamentoBLL.BuscarAgendamentoPorServicoMesAno(textBox_BuscarAgendamento.Text, textBox_BuscarData.Text);
-                }
-                else
-                {
-                    MessageBox.Show("Escolha a forma de busca");
+                        if (dataconsulta.Count() == 4)
+                        {
+                            dataconsulta = "01/01/" + textBox_BuscarData.Text;
+                        }
+                        else if (dataconsulta.Count() > 4 && dataconsulta.Count() < 10)
+                        {
+                            MessageBox.Show("Insira o ano que deseja pesquisar");
+                            textBox_BuscarData.Clear();
+                        }
+                        else
+                        {
+                            dataconsulta = textBox_BuscarData.Text;
+                        }
+                        agendamentoBindingSource.DataSource = agendamentoBLL.BuscarPorMesAno(opc, dataconsulta);
+                        break;
+                    case 7:// BUSCAR AGENDAMENTO POR SERVICO DIA/MES/ANO
+                        if (textBox_BuscarAgendamento.Text == "" || textBox_BuscarData.Text == "")
+                        {
+                            MessageBox.Show("Insira Serviço e a Data para pesquisa");
+                            return;
+                        }
+                        agendamentoBindingSource.DataSource = agendamentoBLL.BuscarAgendamentoPorServicoDiaMesAno(textBox_BuscarAgendamento.Text, textBox_BuscarData.Text);
+                        break;
+                    case 8: // BUSCAR AGENDAMENTO POR SERVICO ANO
+                        if (textBox_BuscarAgendamento.Text == "" || textBox_BuscarData.Text == "")
+                        {
+                            MessageBox.Show("Insira um Serviço e a Ano para pesquisa");
+                            return;
+                        }
+
+                        dataconsulta = textBox_BuscarData.Text;
+                        if (dataconsulta.Count() == 4)
+                        {
+                            dataconsulta = "01/01" + textBox_BuscarData.Text;
+                        }
+                        else if (dataconsulta.Count() > 4 && dataconsulta.Count() < 10)
+                        {
+                            MessageBox.Show("Insira o ano que deseja pesquisar");
+                            textBox_BuscarData.Clear();
+                        }
+                        else
+                        {
+                            dataconsulta = textBox_BuscarData.Text;
+                        }
+                        agendamentoBindingSource.DataSource = agendamentoBLL.BuscarAgendamentoPorServicoAno(textBox_BuscarAgendamento.Text, dataconsulta);
+                        break;
+                    case 9: // BUSCAR AGENDAMENTO POR SERVICO E MÊS/ANO
+                        if (textBox_BuscarAgendamento.Text == "" || textBox_BuscarData.Text == "")
+                        {
+                            MessageBox.Show("Insira um Serviço, um mês e o Ano para pesquisa");
+                            return;
+                        }
+                        
+                        dataconsulta = textBox_BuscarData.Text;
+                        if (dataconsulta.Count() == 4)
+                        {
+                            dataconsulta = "01/01" + textBox_BuscarData.Text;
+                        }
+                        else if (dataconsulta.Count() > 4 && dataconsulta.Count() < 10)
+                        {
+                            MessageBox.Show("Insira o mês e o ano que deseja pesquisar");
+                            textBox_BuscarData.Clear();
+                        }
+                        else
+                        {
+                            dataconsulta = textBox_BuscarData.Text;
+                        }
+                        agendamentoBindingSource.DataSource = agendamentoBLL.BuscarAgendamentoPorServicoMesAno(textBox_BuscarAgendamento.Text, dataconsulta);
+                        break;
+                    case 10:
+
+                        break;
+                        default:
+                        MessageBox.Show("Escolha a forma de busca");
+                        break;
+
                 }
             }
             catch (Exception ex)

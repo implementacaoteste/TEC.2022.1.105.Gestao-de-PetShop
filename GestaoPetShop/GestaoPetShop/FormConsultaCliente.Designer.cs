@@ -92,9 +92,9 @@
             // textBoxBuscar
             // 
             this.textBoxBuscar.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBoxBuscar.Location = new System.Drawing.Point(179, 72);
+            this.textBoxBuscar.Location = new System.Drawing.Point(164, 72);
             this.textBoxBuscar.Name = "textBoxBuscar";
-            this.textBoxBuscar.Size = new System.Drawing.Size(349, 22);
+            this.textBoxBuscar.Size = new System.Drawing.Size(364, 22);
             this.textBoxBuscar.TabIndex = 4;
             // 
             // buttonBuscar
@@ -112,7 +112,7 @@
             // 
             this.buttonCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonCancelar.Location = new System.Drawing.Point(792, 332);
+            this.buttonCancelar.Location = new System.Drawing.Point(792, 329);
             this.buttonCancelar.Name = "buttonCancelar";
             this.buttonCancelar.Size = new System.Drawing.Size(75, 23);
             this.buttonCancelar.TabIndex = 5;
@@ -162,7 +162,7 @@
             "Nome",
             "CPF",
             "Todos"});
-            this.comboBoxBuscarPor.Location = new System.Drawing.Point(29, 71);
+            this.comboBoxBuscarPor.Location = new System.Drawing.Point(14, 71);
             this.comboBoxBuscarPor.Name = "comboBoxBuscarPor";
             this.comboBoxBuscarPor.Size = new System.Drawing.Size(144, 24);
             this.comboBoxBuscarPor.TabIndex = 6;
@@ -236,7 +236,7 @@
             this.clienteDataGridView.RowHeadersWidth = 51;
             this.clienteDataGridView.RowTemplate.Height = 24;
             this.clienteDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.clienteDataGridView.Size = new System.Drawing.Size(861, 226);
+            this.clienteDataGridView.Size = new System.Drawing.Size(861, 223);
             this.clienteDataGridView.TabIndex = 10;
             // 
             // dataGridViewTextBoxColumn1
@@ -369,7 +369,7 @@
             // buttonVisualizar
             // 
             this.buttonVisualizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonVisualizar.Location = new System.Drawing.Point(695, 332);
+            this.buttonVisualizar.Location = new System.Drawing.Point(695, 329);
             this.buttonVisualizar.Name = "buttonVisualizar";
             this.buttonVisualizar.Size = new System.Drawing.Size(91, 23);
             this.buttonVisualizar.TabIndex = 5;
@@ -381,7 +381,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(889, 438);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ClientSize = new System.Drawing.Size(889, 435);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.clienteDataGridView);
             this.Controls.Add(this.comboBoxBuscarPor);
