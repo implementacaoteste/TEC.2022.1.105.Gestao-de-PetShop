@@ -35,7 +35,6 @@
             System.Windows.Forms.Label foneLabel;
             System.Windows.Forms.Label emailLabel;
             this.nomeTextBox = new System.Windows.Forms.TextBox();
-            this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cPFTextBox = new System.Windows.Forms.TextBox();
             this.rGTextBox = new System.Windows.Forms.TextBox();
             this.foneTextBox = new System.Windows.Forms.TextBox();
@@ -58,27 +57,28 @@
             this.buttonBuscarFoto = new System.Windows.Forms.Button();
             this.telefoneClientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.telefoneClientesDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.textBoxEmail = new System.Windows.Forms.TextBox();
             this.textBoxTelefone = new System.Windows.Forms.TextBox();
             this.buttonInserirEmail = new System.Windows.Forms.Button();
             this.buttonInserirTelefone = new System.Windows.Forms.Button();
             this.emailClienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.emailClienteDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.buttonExcluirEmail = new System.Windows.Forms.Button();
             this.buttonExcluirTelefone = new System.Windows.Forms.Button();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             nomeLabel = new System.Windows.Forms.Label();
             cPFLabel = new System.Windows.Forms.Label();
             rGLabel = new System.Windows.Forms.Label();
             foneLabel = new System.Windows.Forms.Label();
             emailLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.telefoneClientesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.telefoneClientesDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emailClienteBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emailClienteDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // nomeLabel
@@ -139,12 +139,8 @@
             this.nomeTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.nomeTextBox.Name = "nomeTextBox";
             this.nomeTextBox.Size = new System.Drawing.Size(297, 22);
-            this.nomeTextBox.TabIndex = 2;
+            this.nomeTextBox.TabIndex = 0;
             this.nomeTextBox.TextChanged += new System.EventHandler(this.nomeTextBox_TextChanged);
-            // 
-            // clienteBindingSource
-            // 
-            this.clienteBindingSource.DataSource = typeof(Models.Cliente);
             // 
             // cPFTextBox
             // 
@@ -154,7 +150,7 @@
             this.cPFTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cPFTextBox.Name = "cPFTextBox";
             this.cPFTextBox.Size = new System.Drawing.Size(257, 22);
-            this.cPFTextBox.TabIndex = 4;
+            this.cPFTextBox.TabIndex = 1;
             // 
             // rGTextBox
             // 
@@ -164,7 +160,7 @@
             this.rGTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rGTextBox.Name = "rGTextBox";
             this.rGTextBox.Size = new System.Drawing.Size(256, 22);
-            this.rGTextBox.TabIndex = 6;
+            this.rGTextBox.TabIndex = 4;
             // 
             // foneTextBox
             // 
@@ -174,7 +170,7 @@
             this.foneTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.foneTextBox.Name = "foneTextBox";
             this.foneTextBox.Size = new System.Drawing.Size(162, 22);
-            this.foneTextBox.TabIndex = 8;
+            this.foneTextBox.TabIndex = 5;
             // 
             // emailTextBox
             // 
@@ -184,7 +180,7 @@
             this.emailTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.emailTextBox.Name = "emailTextBox";
             this.emailTextBox.Size = new System.Drawing.Size(51, 22);
-            this.emailTextBox.TabIndex = 10;
+            this.emailTextBox.TabIndex = 3;
             // 
             // label1
             // 
@@ -194,7 +190,7 @@
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(804, 49);
-            this.label1.TabIndex = 11;
+            this.label1.TabIndex = 0;
             this.label1.Text = "Cadastro de cliente";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -241,7 +237,7 @@
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(114, 22);
-            this.textBox1.TabIndex = 14;
+            this.textBox1.TabIndex = 6;
             // 
             // textBox2
             // 
@@ -251,7 +247,7 @@
             this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(277, 22);
-            this.textBox2.TabIndex = 15;
+            this.textBox2.TabIndex = 7;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label3
@@ -273,7 +269,7 @@
             this.textBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(102, 22);
-            this.textBox3.TabIndex = 17;
+            this.textBox3.TabIndex = 8;
             // 
             // label4
             // 
@@ -293,7 +289,7 @@
             this.textBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(250, 22);
-            this.textBox4.TabIndex = 19;
+            this.textBox4.TabIndex = 9;
             // 
             // label5
             // 
@@ -313,7 +309,7 @@
             this.textBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(203, 22);
-            this.textBox5.TabIndex = 21;
+            this.textBox5.TabIndex = 2;
             // 
             // label6
             // 
@@ -392,15 +388,6 @@
             this.telefoneClientesDataGridView.Size = new System.Drawing.Size(325, 125);
             this.telefoneClientesDataGridView.TabIndex = 27;
             // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "Telefone";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Telefone";
-            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            // 
             // textBoxEmail
             // 
             this.textBoxEmail.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -408,7 +395,7 @@
             this.textBoxEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxEmail.Name = "textBoxEmail";
             this.textBoxEmail.Size = new System.Drawing.Size(210, 22);
-            this.textBoxEmail.TabIndex = 28;
+            this.textBoxEmail.TabIndex = 10;
             // 
             // textBoxTelefone
             // 
@@ -417,7 +404,7 @@
             this.textBoxTelefone.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxTelefone.Name = "textBoxTelefone";
             this.textBoxTelefone.Size = new System.Drawing.Size(178, 22);
-            this.textBoxTelefone.TabIndex = 29;
+            this.textBoxTelefone.TabIndex = 11;
             // 
             // buttonInserirEmail
             // 
@@ -470,15 +457,6 @@
             this.emailClienteDataGridView.TabIndex = 31;
             this.emailClienteDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.emailClienteDataGridView_CellContentClick);
             // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "Email";
-            this.dataGridViewTextBoxColumn3.HeaderText = "E-mail";
-            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            // 
             // buttonExcluirEmail
             // 
             this.buttonExcluirEmail.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -500,6 +478,28 @@
             this.buttonExcluirTelefone.Text = "Excluir";
             this.buttonExcluirTelefone.UseVisualStyleBackColor = true;
             this.buttonExcluirTelefone.Click += new System.EventHandler(this.buttonExcluirTelefone_Click);
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Email";
+            this.dataGridViewTextBoxColumn3.HeaderText = "E-mail";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // clienteBindingSource
+            // 
+            this.clienteBindingSource.DataSource = typeof(Models.Cliente);
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Telefone";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Telefone";
+            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
             // 
             // FormCadastroCliente
             // 
@@ -551,12 +551,12 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.FormCadastroCliente_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFoto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.telefoneClientesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.telefoneClientesDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emailClienteBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emailClienteDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
