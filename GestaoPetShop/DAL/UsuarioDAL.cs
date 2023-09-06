@@ -416,7 +416,6 @@ namespace DAL
                         emailProfissional.Email = rd["Email"].ToString();
                     }
                 }
-                return emailProfissional;
             }
             catch (Exception ex)
             {
