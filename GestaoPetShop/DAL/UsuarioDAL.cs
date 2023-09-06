@@ -426,5 +426,36 @@ namespace DAL
                 cn.Close();
             }
         }//Givas
+        public void BuscarPorFuncao(string _nome)
+        {
+            Funcao funcao = new Funcao();
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = cn;
+                cmd.CommandText = @"SELECT Id, Nome FROM Funcao WHERE Nome = @Nome";
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.Parameters.AddWithValue("@Nome", _nome);
+                cn.Open();
+
+                using (SqlDataReader rd = cmd.ExecuteReader())
+                {
+                    if (rd.Read())
+                    {
+                        funcao.Id = Convert.ToInt32(rd["Id"]);
+                        funcao.Nome = rd["Nome"].ToString();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu um erro ao tentar buscar um Nome na Funcao do Profissional no banco de dados", ex) { Data = { { "Id", -1 } } };
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }//Givas
     }
 }

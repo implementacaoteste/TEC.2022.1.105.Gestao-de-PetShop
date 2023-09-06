@@ -88,5 +88,9 @@ namespace BLL
         {
             new UsuarioDAL().BuscarEmailProfissional(_id);
         }
+        public void BuscarPorFuncao(string _nome)
+        {
+            new UsuarioDAL().BuscarPorFuncao(_nome);
+        }//Givas
     }
 }
