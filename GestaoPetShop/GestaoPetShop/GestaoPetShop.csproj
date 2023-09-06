@@ -242,6 +242,12 @@
     <Compile Include="FormBuscarFuncao.Designer.cs">
       <DependentUpon>FormBuscarFuncao.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormCadastroFuncao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCadastroFuncao.Designer.cs">
+      <DependentUpon>FormCadastroFuncao.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormCadastroRaca.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -360,6 +366,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormBuscarFuncao.resx">
       <DependentUpon>FormBuscarFuncao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCadastroFuncao.resx">
+      <DependentUpon>FormCadastroFuncao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormCadastroRaca.resx">
       <DependentUpon>FormCadastroRaca.cs</DependentUpon>
