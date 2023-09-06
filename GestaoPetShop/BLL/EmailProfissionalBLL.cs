@@ -13,11 +13,15 @@ namespace BLL
         public void Inserir(EmailProfissional _emailProfissional)
         {
             new EmailProfissionalDAL().Inserir(_emailProfissional);
-        }
-       /* public void Alterar(EmailProfissional _emailProfissional)
+        }//Givas
+        public void Alterar(EmailProfissional _emailProfissional)
         {
             new EmailProfissionalDAL().Alterar(_emailProfissional);
-        }*/
+        }//Givas
+        public void Excluir(int _id)
+        {
+            new EmailProfissionalDAL().Excluir(_id);
+        }//Givas
     }
 
 }

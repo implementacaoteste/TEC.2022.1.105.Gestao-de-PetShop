@@ -16,7 +16,6 @@ namespace BLL
         {
             if (String.IsNullOrEmpty(_cliente.Nome))
                 throw new Exception("Informe o nome do cliente.");
-
         }
         public List<Cliente> BuscarTodos()
         {
