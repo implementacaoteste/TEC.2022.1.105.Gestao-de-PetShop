@@ -308,7 +308,7 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT C.Id , C.Nome , A.Id   FROM Cliente C INNER JOIN Animal A  ON C.Id = A.IdCliente WHERE Ativo = 1 AND ";
+                cmd.CommandText = "SELECT C.Id , C.Nome , A.Id   FROM Cliente C INNER JOIN Animal A  ON C.Id = A.IdCliente WHERE Ativo = 1 AND ";
                 if (_opc == 0)
                 {
                     cmd.CommandText = cmd.CommandText + "A.Id = @id";
@@ -342,7 +342,6 @@ namespace DAL
                 cn.Close();
             }
         }
-
         private List<Animal> BuscarAnimalPorIdCliente(int _idCliente)
         {
             List<Animal> animais = new List<Animal>();
@@ -382,7 +381,6 @@ namespace DAL
 
 
         }
-
         public List<Cliente> BuscarPorNomeAnimalCliente(string _nomeAnimalCliente, int _opc)
         {
             List<Cliente> clientes = new List<Cliente>();
@@ -1208,24 +1206,31 @@ namespace DAL
                 cn.Open();
                 using (SqlDataReader rd = cmd.ExecuteReader())
                 {
+                    int id = 0;
+                    int id2 = 0;
                     while (rd.Read())
                     {
-                        agendamento = new Agendamento();
-                        agendamento.Id = Convert.ToInt32(rd["Id"]);
-                        agendamento.DataAg = Convert.ToDateTime(rd["DataAg"]);
-                        agendamento.IdAnimal = Convert.ToInt32(rd["AnimalId"]);
-                        agendamento.NomeAnimal = rd["NomeAnimal"].ToString();
-                        agendamento.IdCliente = Convert.ToInt32(rd["ClienteId"]);
-                        agendamento.NomeCliente = rd["NomeCliente"].ToString();
-                        agendamento.IdProfissional = Convert.ToInt32(rd["ProfissionalId"]);
-                        agendamento.NomeProfissional = rd["NomeProfissional"].ToString();
-                        agendamento.Horario = rd["Horario"].ToString();
-                        agendamento.IdSituacao = Convert.ToInt32(rd["SituacaoId"]);
-                        agendamento.DescricaoSituacao = rd["DescSituacao"].ToString();
-                        agendamento.Total = Convert.ToInt32(rd["Total"]);
+                        id2 = Convert.ToInt32(rd["Id"]);
+                        if (id != id2)
+                        {
+                            agendamento = new Agendamento();
+                            agendamento.Id = Convert.ToInt32(rd["Id"]);
+                            agendamento.DataAg = Convert.ToDateTime(rd["DataAg"]);
+                            agendamento.IdAnimal = Convert.ToInt32(rd["AnimalId"]);
+                            agendamento.NomeAnimal = rd["NomeAnimal"].ToString();
+                            agendamento.IdCliente = Convert.ToInt32(rd["ClienteId"]);
+                            agendamento.NomeCliente = rd["NomeCliente"].ToString();
+                            agendamento.IdProfissional = Convert.ToInt32(rd["ProfissionalId"]);
+                            agendamento.NomeProfissional = rd["NomeProfissional"].ToString();
+                            agendamento.Horario = rd["Horario"].ToString();
+                            agendamento.IdSituacao = Convert.ToInt32(rd["SituacaoId"]);
+                            agendamento.DescricaoSituacao = rd["DescSituacao"].ToString();
+                            agendamento.Total = Convert.ToDecimal(rd["Total"]);
+                            agendamento.AgendamentoServicos = new AgendamentoDAL().BuscarAgendamentoServicosPorIdAgendamento(agendamento.Id);
 
-                        agendamento.AgendamentoServicos = new AgendamentoDAL().BuscarAgendamentoServicosPorIdAgendamento(agendamento.Id);
-                        agendamentos.Add(agendamento);
+                            agendamentos.Add(agendamento);
+                            id = agendamento.Id;
+                        }
                     }
                 }
                 return agendamentos;
@@ -1267,24 +1272,31 @@ namespace DAL
                 cn.Open();
                 using (SqlDataReader rd = cmd.ExecuteReader())
                 {
+                    int id = 0;
+                    int id2 = 0;
                     while (rd.Read())
                     {
-                        agendamento = new Agendamento();
-                        agendamento.Id = Convert.ToInt32(rd["Id"]);
-                        agendamento.DataAg = Convert.ToDateTime(rd["DataAg"]);
-                        agendamento.IdAnimal = Convert.ToInt32(rd["AnimalId"]);
-                        agendamento.NomeAnimal = rd["NomeAnimal"].ToString();
-                        agendamento.IdCliente = Convert.ToInt32(rd["ClienteId"]);
-                        agendamento.NomeCliente = rd["NomeCliente"].ToString();
-                        agendamento.IdProfissional = Convert.ToInt32(rd["ProfissionalId"]);
-                        agendamento.NomeProfissional = rd["NomeProfissional"].ToString();
-                        agendamento.Horario = rd["Horario"].ToString();
-                        agendamento.IdSituacao = Convert.ToInt32(rd["SituacaoId"]);
-                        agendamento.DescricaoSituacao = rd["DescSituacao"].ToString();
-                        agendamento.Total = Convert.ToDecimal(rd["Total"]);
-                        agendamento.AgendamentoServicos = new AgendamentoDAL().BuscarAgendamentoServicosPorIdAgendamento(agendamento.Id);
+                        id2 = Convert.ToInt32(rd["Id"]);
+                        if (id != id2)
+                        {
+                            agendamento = new Agendamento();
+                            agendamento.Id = Convert.ToInt32(rd["Id"]);
+                            agendamento.DataAg = Convert.ToDateTime(rd["DataAg"]);
+                            agendamento.IdAnimal = Convert.ToInt32(rd["AnimalId"]);
+                            agendamento.NomeAnimal = rd["NomeAnimal"].ToString();
+                            agendamento.IdCliente = Convert.ToInt32(rd["ClienteId"]);
+                            agendamento.NomeCliente = rd["NomeCliente"].ToString();
+                            agendamento.IdProfissional = Convert.ToInt32(rd["ProfissionalId"]);
+                            agendamento.NomeProfissional = rd["NomeProfissional"].ToString();
+                            agendamento.Horario = rd["Horario"].ToString();
+                            agendamento.IdSituacao = Convert.ToInt32(rd["SituacaoId"]);
+                            agendamento.DescricaoSituacao = rd["DescSituacao"].ToString();
+                            agendamento.Total = Convert.ToDecimal(rd["Total"]);
+                            agendamento.AgendamentoServicos = new AgendamentoDAL().BuscarAgendamentoServicosPorIdAgendamento(agendamento.Id);
 
-                        agendamentos.Add(agendamento);
+                            agendamentos.Add(agendamento);
+                            id = agendamento.Id;
+                        }
                     }
                 }
                 return agendamentos;
@@ -1292,6 +1304,140 @@ namespace DAL
             catch (Exception ex)
             {
                 throw new Exception("Ocorreu um erro ao tentar buscar Agendamento por Serviço com Mês/Ano no banco de dados.", ex) { Data = { { "Id", 138 } } };
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
+        public List<Agendamento> BuscarAgendamentoPorServico(string _nomeServico)
+        {
+            List<Agendamento> agendamentos = new List<Agendamento>();
+            Agendamento agendamento;
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = cn;
+                cmd.CommandText = @"SELECT  Ag.Id, Ag.DataAg, Ag.Horario, Ag.Total,
+                                            Ani.Id as AnimalId, Ani.Nome as NomeAnimal, 
+                                            Cli.Id as ClienteId, Cli.Nome as NomeCliente,
+                                            P.Id as ProfissionalId, P.Nome as NomeProfissional,
+                                            Si.Id as SituacaoId, Si.Descricao as DescSituacao
+                                            FROM Agendamento Ag
+                                    LEFT JOIN Profissional P            ON Ag.IdProfissional = P.Id
+                                    LEFT JOIN Animal Ani                ON Ag.IdAnimal = Ani.Id
+                                    LEFT JOIN Cliente Cli               ON Ani.IdCliente = Cli.Id
+                                    LEFT JOIN AgendamentoServicos AgSe  ON Ag.Id = AgSe.IdAgendamento
+                                    LEFT JOIN Servico Se                ON AgSe.IdServico = Se.Id
+                                    LEFT JOIN Situacao Si               ON Ag.IdSituacao = Si.Id 
+                                    WHERE UPPER (Se.Descricao) LIKE UPPER (@NomeServico)";
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.Parameters.AddWithValue("@NomeServico", "%" + _nomeServico + "%");
+                cn.Open();
+                using (SqlDataReader rd = cmd.ExecuteReader())
+                {
+                    int id = 0;
+                    int id2 = 0;
+                    while (rd.Read())
+                    {
+                       id2 = Convert.ToInt32(rd["Id"]);
+                        if (id != id2)
+                        {
+                            agendamento = new Agendamento();
+                            agendamento.Id = Convert.ToInt32(rd["Id"]);
+                            agendamento.DataAg = Convert.ToDateTime(rd["DataAg"]);
+                            agendamento.IdAnimal = Convert.ToInt32(rd["AnimalId"]);
+                            agendamento.NomeAnimal = rd["NomeAnimal"].ToString();
+                            agendamento.IdCliente = Convert.ToInt32(rd["ClienteId"]);
+                            agendamento.NomeCliente = rd["NomeCliente"].ToString();
+                            agendamento.IdProfissional = Convert.ToInt32(rd["ProfissionalId"]);
+                            agendamento.NomeProfissional = rd["NomeProfissional"].ToString();
+                            agendamento.Horario = rd["Horario"].ToString();
+                            agendamento.IdSituacao = Convert.ToInt32(rd["SituacaoId"]);
+                            agendamento.DescricaoSituacao = rd["DescSituacao"].ToString();
+                            agendamento.Total = Convert.ToDecimal(rd["Total"]);
+                            agendamento.AgendamentoServicos = new AgendamentoDAL().BuscarAgendamentoServicosPorIdAgendamento(agendamento.Id);
+
+                            agendamentos.Add(agendamento);
+                            id = agendamento.Id;
+                        }
+                    }
+                }
+                return agendamentos;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu um erro ao tentar buscar Agendamento por Serviço no banco de dados.", ex) { Data = { { "Id", 138 } } };
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
+        public List<Agendamento> BuscarAgendamentoPorProfissionalData(string _nomeProfissional, string _data, int _opc)
+        {
+            List<Agendamento> agendamentos = new List<Agendamento>();
+            Agendamento agendamento;
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = cn;
+                cmd.CommandText = @"SELECT Ag.Id, Ag.DataAg,Ag.Horario,Ag.Total,Ag.Ativo, Ani.Id as AnimalId, Ani.Nome as NomeAnimal,Cli.Id as ClienteId, Cli.Nome as NomeCliente, P.Id as ProfissionalId, P.Nome as NomeProfissional,Si.Id as SituacaoId,Si.Descricao as DescSituacao FROM Agendamento Ag LEFT JOIN Profissional P             ON Ag.IdProfissional = P.Id
+                                                                                                                                                                                            LEFT JOIN Animal Ani                 ON Ag.IdAnimal = Ani.Id
+                                                                                                                                                                                            LEFT JOIN Cliente Cli                ON Ani.IdCliente = Cli.Id
+                                                                                                                                                                                            LEFT JOIN AgendamentoServicos AgSe   ON Ag.Id = AgSe.IdAgendamento
+                                                                                                                                                                                            LEFT JOIN Servico Se                 ON AgSe.IdServico = Se.Id
+                                                                                                                                                                                            LEFT JOIN Situacao Si                ON Ag.IdSituacao = Si.Id WHERE   UPPER (P.Nome) LIKE UPPER (@NomeProfissional) AND ";
+
+                if(_opc == 1)
+                    cmd.CommandText = cmd.CommandText + "Ag.DataAg = @Data";
+                else if (_opc == 2)
+                    cmd.CommandText = cmd.CommandText + "YEAR(Ag.DataAg) = YEAR(@Data) and MONTH(Ag.DataAg) = MONTH(@Data)";
+                else if (_opc == 3)
+                    cmd.CommandText = cmd.CommandText = cmd.CommandText + "YEAR(Ag.DataAg) = YEAR(@Data)";
+
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.Parameters.AddWithValue("@Data", Convert.ToDateTime(_data));
+                cmd.Parameters.AddWithValue("@NomeProfissional", "%" + _nomeProfissional + "%");
+                cn.Open();
+                using (SqlDataReader rd = cmd.ExecuteReader())
+                {
+                    int id = 0;
+                    int id2 = 0;
+                    while (rd.Read())
+                    {
+                        id2 = Convert.ToInt32(rd["Id"]);
+                        agendamento = new Agendamento();
+                        if (id != id2)
+                        {
+
+                            agendamento.Id = Convert.ToInt32(rd["Id"]);
+                            agendamento.DataAg = Convert.ToDateTime(rd["DataAg"]);
+                            agendamento.IdAnimal = Convert.ToInt32(rd["AnimalId"]);
+                            agendamento.NomeAnimal = rd["NomeAnimal"].ToString();
+                            agendamento.IdCliente = Convert.ToInt32(rd["ClienteId"]);
+                            agendamento.NomeCliente = rd["NomeCliente"].ToString();
+                            agendamento.IdProfissional = Convert.ToInt32(rd["ProfissionalId"]);
+                            agendamento.NomeProfissional = rd["NomeProfissional"].ToString();
+                            agendamento.Horario = rd["Horario"].ToString();
+                            agendamento.IdSituacao = Convert.ToInt32(rd["SituacaoId"]);
+                            agendamento.DescricaoSituacao = rd["DescSituacao"].ToString();
+                            agendamento.Total = Convert.ToDecimal(rd["Total"]);
+                            agendamento.Ativo = Convert.ToBoolean(rd["Ativo"]);
+                            agendamento.AgendamentoServicos = new AgendamentoDAL().BuscarAgendamentoServicosPorIdAgendamento(agendamento.Id);
+
+                            agendamentos.Add(agendamento);
+                            id = agendamento.Id;
+                        }
+                    }
+                }
+                return agendamentos;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu um erro ao tentar buscar Agendamento por Profissional e Data (Dia/Mês/Ano) no banco de dados.", ex) { Data = { { "Id", 137 } } };
             }
             finally
             {

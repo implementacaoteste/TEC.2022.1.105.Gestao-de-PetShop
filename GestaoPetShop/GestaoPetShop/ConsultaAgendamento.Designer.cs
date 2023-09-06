@@ -102,20 +102,24 @@
             "Ano",
             "Serviço Dia/Mês/Ano",
             "Serviço Ano",
-            "Serviço Mês/Ano"});
+            "Serviço Mês/Ano",
+            "Serviço",
+            "Profissional Dia/Mês/Ano",
+            "Profissional Mês/Ano",
+            "Profissional Ano"});
             this.comboBox_SelecionarTipoBusca.Location = new System.Drawing.Point(16, 230);
             this.comboBox_SelecionarTipoBusca.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox_SelecionarTipoBusca.Name = "comboBox_SelecionarTipoBusca";
-            this.comboBox_SelecionarTipoBusca.Size = new System.Drawing.Size(140, 24);
+            this.comboBox_SelecionarTipoBusca.Size = new System.Drawing.Size(179, 24);
             this.comboBox_SelecionarTipoBusca.TabIndex = 8;
             this.comboBox_SelecionarTipoBusca.Text = "Buscar por";
             // 
             // textBox_BuscarAgendamento
             // 
-            this.textBox_BuscarAgendamento.Location = new System.Drawing.Point(162, 230);
+            this.textBox_BuscarAgendamento.Location = new System.Drawing.Point(201, 230);
             this.textBox_BuscarAgendamento.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox_BuscarAgendamento.Name = "textBox_BuscarAgendamento";
-            this.textBox_BuscarAgendamento.Size = new System.Drawing.Size(288, 22);
+            this.textBox_BuscarAgendamento.Size = new System.Drawing.Size(273, 22);
             this.textBox_BuscarAgendamento.TabIndex = 9;
             // 
             // button_BuscarAgendamentos
@@ -201,7 +205,7 @@
             // 
             // textBox_BuscarData
             // 
-            this.textBox_BuscarData.Location = new System.Drawing.Point(507, 230);
+            this.textBox_BuscarData.Location = new System.Drawing.Point(535, 230);
             this.textBox_BuscarData.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox_BuscarData.Name = "textBox_BuscarData";
             this.textBox_BuscarData.Size = new System.Drawing.Size(104, 22);
@@ -210,7 +214,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(456, 235);
+            this.label2.Location = new System.Drawing.Point(484, 235);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(36, 16);
             this.label2.TabIndex = 15;
@@ -222,7 +226,7 @@
             this.button_AbrirCalendario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_AbrirCalendario.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_AbrirCalendario.ForeColor = System.Drawing.Color.Black;
-            this.button_AbrirCalendario.Location = new System.Drawing.Point(627, 223);
+            this.button_AbrirCalendario.Location = new System.Drawing.Point(655, 223);
             this.button_AbrirCalendario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button_AbrirCalendario.Name = "button_AbrirCalendario";
             this.button_AbrirCalendario.Size = new System.Drawing.Size(119, 32);
@@ -233,7 +237,7 @@
             // 
             // monthCalendar_Agendamento
             // 
-            this.monthCalendar_Agendamento.Location = new System.Drawing.Point(757, 73);
+            this.monthCalendar_Agendamento.Location = new System.Drawing.Point(780, 73);
             this.monthCalendar_Agendamento.Name = "monthCalendar_Agendamento";
             this.monthCalendar_Agendamento.TabIndex = 17;
             this.monthCalendar_Agendamento.Visible = false;
@@ -241,7 +245,7 @@
             // button_SelecionarData
             // 
             this.button_SelecionarData.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_SelecionarData.Location = new System.Drawing.Point(849, 286);
+            this.button_SelecionarData.Location = new System.Drawing.Point(872, 286);
             this.button_SelecionarData.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button_SelecionarData.Name = "button_SelecionarData";
             this.button_SelecionarData.Size = new System.Drawing.Size(99, 31);
@@ -526,7 +530,7 @@
             // buttonFecharCalendario
             // 
             this.buttonFecharCalendario.BackColor = System.Drawing.SystemColors.Control;
-            this.buttonFecharCalendario.Location = new System.Drawing.Point(987, 286);
+            this.buttonFecharCalendario.Location = new System.Drawing.Point(1010, 286);
             this.buttonFecharCalendario.Margin = new System.Windows.Forms.Padding(4);
             this.buttonFecharCalendario.Name = "buttonFecharCalendario";
             this.buttonFecharCalendario.Size = new System.Drawing.Size(39, 28);
