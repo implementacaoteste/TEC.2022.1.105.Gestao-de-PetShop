@@ -66,7 +66,6 @@ namespace BLL
             ServicoDAL servicoDAL = new ServicoDAL();
             servicoDAL.Excluir(_id);
         }
-
         public bool ExisteVinculo(int _id)
         {
             ServicoDAL servicoDAL = new ServicoDAL();

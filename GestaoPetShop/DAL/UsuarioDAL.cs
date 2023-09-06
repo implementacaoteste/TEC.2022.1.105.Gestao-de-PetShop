@@ -307,34 +307,124 @@ namespace DAL
                 cn.Close();
             }
         }
-        public Usuario BuscarPorCPF(string _cPF)//verficar as ligações com INNER JOIN
+        public Profissional BuscarPorCPF(string _cPF)//verficar as ligações com INNER JOIN
         {
+            Profissional profissional = new Profissional();
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = cn;
+                cmd.CommandText = @"SELECT Usuario.Id, Usuario.IdProfissional FROM Profissional 
+                                        INNER JOIN Usuario ON Profissional.Id = Usuario.IdProfissional 
+                                    WHERE Profissional.CPF LIKE @CPF";
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.Parameters.AddWithValue("@CPF", _cPF);
+                cn.Open();
+                using (SqlDataReader rd = cmd.ExecuteReader())
+                {
+                    if (rd.Read())
+                    {
+                        profissional.Id = Convert.ToInt32(rd["Id"]);
+                        profissional.Nome = rd["Nome"].ToString();
+                        profissional.CPF = rd["CPF"].ToString();
+                        profissional.Logradouro = rd["Logradouro"].ToString();
+                        profissional.Numero = rd["Numero"].ToString();
+                        profissional.Bairro = rd["Bairro"].ToString();
+                        profissional.Cidade = rd["Cidade"].ToString();
+                        profissional.UF = rd["UF"].ToString();
+                        profissional.Pais = rd["Pais"].ToString();
+                        profissional.CEP = rd["CEP"].ToString();
+                        profissional.DataNascimento = (DateTime)rd["DataNascimento"];
+
+                        if (!String.IsNullOrEmpty(rd["Foto"].ToString()))
+                            profissional.Foto = (byte[])rd["Foto"];
+
+                        profissional.Ativo = (bool)rd["Ativo"];
+
+                    }
+                }
+
+                return profissional;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu um erro ao tentar buscar usuario no banco de dados.", ex) { Data = { { "Id", -1 } } };
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }//Givas
+        public List<Usuario> BuscarPorNome(string _nome)
+        {
+            List<Usuario> usuarios = new List<Usuario>();
             Usuario usuario = new Usuario();
             SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
             try
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = "SELECT Id, IdFuncao, Nome, CPF, Logradouro, Numero, Bairro, Cidade, UF, Pais, CEP, DataNascimento, Foto, Ativo FROM Profissional WHERE CPF = @CPF";
+                cmd.CommandText = @"SELECT Id, IdProfissional, UsuarioLogin, Senha, Ativo FROM Usuario 
+                                            WHERE UsuarioLogin LIKE @UsuarioLogin";
                 cmd.CommandType = System.Data.CommandType.Text;
-                cmd.Parameters.AddWithValue("@CPF" ,_cPF);
+                cmd.Parameters.AddWithValue("@UsuarioLogin", "%" + _nome + "%");
                 cn.Open();
+                using (SqlDataReader rd = cmd.ExecuteReader())
+                {
+                    while (rd.Read())
+                    {
+                        usuario.Id = Convert.ToInt32(rd["Id"]);
+                        usuario.IdProfissional = Convert.ToInt32(rd["IdProfissional"]);
+                        usuario.UsuarioLogin = rd["UsuarioLogin"].ToString();
+                        usuario.Senha = rd["Senha"].ToString();
+                        usuario.Ativo = Convert.ToBoolean(rd["Ativo"]);
+                        usuario.GrupoUsuarios = new GrupoUsuarioDAL().BuscarPorIdUsuario(usuario.Id);
+                        usuarios.Add(usuario);
+                    }
+                }
+                return usuarios;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu um erro ao tentar buscar nome de usuário do banco de dados", ex) { Data = { { "Id", -1 } } };
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }//Givas
+        public void BuscarEmailProfissional(int _id)
+        {
+            EmailProfissional emailProfissional = new EmailProfissional();
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = cn;
+                cmd.CommandText = @"SELECT Id, IdProfissional, Email FROM EmailProfissional WHERE Id = @Id";
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.Parameters.AddWithValue("@Id", _id);
+                cn.Open();
+
                 using (SqlDataReader rd = cmd.ExecuteReader())
                 {
                     if (rd.Read())
                     {
-                        usuario.Id = Convert.ToInt32(rd["Id"]);
-                        usuario.IdProfissional = Convert.ToInt32(rd["IdProfissional"]);
-
+                        emailProfissional.Id = Convert.ToInt32(rd["Id"]);
+                        emailProfissional.IdProfissional = Convert.ToInt32(rd["IdProfissional"]);
+                        emailProfissional.Email = rd["Email"].ToString();
                     }
                 }
-
-            return usuario;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                throw new Exception("Ocorreu um erro ao tentar buscar E-mail do Profissional no banco de dados", ex) { Data = { { "Id", -1 } } };
             }
-        }
+            finally
+            {
+                cn.Close();
+            }
+        }//Givas
     }
 }

@@ -9,12 +9,12 @@ namespace BLL
     {
         public void Inserir(Permissao _permissao)//Givas
         {
-            new PermissaoDAL().Inserir(_permissao);
-            ////if (_permissao.Nome.Length <= 10 || _permissao.Nome.Length >= 50)
-            //throw new Exception("A descrição da permissao de usuário deve ter ais de 10 caracteres.");
+            //new PermissaoDAL().Inserir(_permissao);
+            if (_permissao.Descricao.Length <= 10 || _permissao.Descricao.Length >= 50)
+                throw new Exception("A descrição da permissao de usuário deve ter ais de 10 caracteres.");
 
-            //PermissaoDAL permissaoDAL = new PermissaoDAL();
-            //permissaoDAL.Inserir(_permissao);
+            PermissaoDAL permissaoDAL = new PermissaoDAL();
+            permissaoDAL.Inserir(_permissao);
         }
         public List<Permissao> BuscarTodos()
         {
@@ -28,14 +28,14 @@ namespace BLL
         }//Givas
         public List<Permissao> BuscarPorDescricao(string _descricao)
         {
-            return new PermissaoDAL().BuscarPorDescricao(_descricao);
-            //PermissaoDAL permissaoDAL = new PermissaoDAL();
-            //List<Permissao> permissaos = permissaoDAL.BuscarPorDescricao(_descricao);
-            //if (permissaos.Count == 0)
-            //{
-            //    throw new Exception("Serviço de buscar por nome não encontrado em permissão");
-            //}
-            //return permissaos;
+            //return new PermissaoDAL().BuscarPorDescricao(_descricao);
+            PermissaoDAL permissaoDAL = new PermissaoDAL();
+            List<Permissao> permissaos = permissaoDAL.BuscarPorDescricao(_descricao);
+            if (permissaos.Count == 0)
+            {
+                throw new Exception("Serviço de buscar por nome não encontrado em permissão");
+            }
+            return permissaos;
         }//Givas
         public List<Permissao> BuscarPorId(int _id)
         {
@@ -50,11 +50,11 @@ namespace BLL
         public void Alterar(Permissao _permissao)
         {
             new PermissaoDAL().Alterar(_permissao);
-            ////if (_permissao.Nome.Length <= 3 || _permissao.Nome.Length >= 250)
-            //throw new Exception("A alteração informada deverá conter de 3 a 250 caracteres.");
+            if (_permissao.Descricao.Length <= 3 || _permissao.Descricao.Length >= 250)
+                throw new Exception("A alteração informada deverá conter de 3 a 250 caracteres.");
 
-            //PermissaoDAL permissaoDAL = new PermissaoDAL();
-            //permissaoDAL.Alterar(_permissao);
+            PermissaoDAL permissaoDAL = new PermissaoDAL();
+            permissaoDAL.Alterar(_permissao);
         }//Givas
         public void Excluir(int _id)
         {

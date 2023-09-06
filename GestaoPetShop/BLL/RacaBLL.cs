@@ -57,7 +57,6 @@ namespace BLL
              }
              return racas;
          }*/
-
         public List<Raca> BuscarPorNome(string _nome)
         {
             RacaDAL racaDAL = new RacaDAL();
