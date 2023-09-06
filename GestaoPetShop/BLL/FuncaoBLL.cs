@@ -15,7 +15,6 @@ namespace BLL
             FuncaoDAL funcaoDAL = new FuncaoDAL();
             funcaoDAL.Inserir(_funcao);
         }
-
         public void Alterar (Funcao _funcao)
         {
             FuncaoDAL funcaoDAL = new FuncaoDAL();
