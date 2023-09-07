@@ -38,6 +38,8 @@
             this.servicosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agendamentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.animalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.raçaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.profissionalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.button1 = new System.Windows.Forms.Button();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
@@ -46,15 +48,6 @@
             this.lblUser = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.agendamentoDataGridView = new System.Windows.Forms.DataGridView();
-            this.agendamentoServicosDataGridView = new System.Windows.Forms.DataGridView();
-            this.agendamentoServicosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quantidadeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.valorUnitarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idServicoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tempoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.agendamentoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -63,12 +56,20 @@
             this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.raçaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.agendamentoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.agendamentoServicosDataGridView = new System.Windows.Forms.DataGridView();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quantidadeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.valorUnitarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idServicoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tempoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.agendamentoServicosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.agendamentoDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.agendamentoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.agendamentoServicosDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.agendamentoServicosBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.agendamentoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -93,7 +94,8 @@
             this.servicosToolStripMenuItem,
             this.agendamentoToolStripMenuItem,
             this.animalToolStripMenuItem,
-            this.raçaToolStripMenuItem});
+            this.raçaToolStripMenuItem,
+            this.profissionalToolStripMenuItem});
             this.cadastroToolStripMenuItem.Name = "cadastroToolStripMenuItem";
             this.cadastroToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.U)));
             this.cadastroToolStripMenuItem.Size = new System.Drawing.Size(82, 24);
@@ -146,6 +148,22 @@
             this.animalToolStripMenuItem.Size = new System.Drawing.Size(270, 26);
             this.animalToolStripMenuItem.Text = "Animal";
             this.animalToolStripMenuItem.Click += new System.EventHandler(this.animalToolStripMenuItem_Click);
+            // 
+            // raçaToolStripMenuItem
+            // 
+            this.raçaToolStripMenuItem.Name = "raçaToolStripMenuItem";
+            this.raçaToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.R)));
+            this.raçaToolStripMenuItem.Size = new System.Drawing.Size(270, 26);
+            this.raçaToolStripMenuItem.Text = "Raça";
+            this.raçaToolStripMenuItem.Click += new System.EventHandler(this.raçaToolStripMenuItem_Click);
+            // 
+            // profissionalToolStripMenuItem
+            // 
+            this.profissionalToolStripMenuItem.Name = "profissionalToolStripMenuItem";
+            this.profissionalToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
+            this.profissionalToolStripMenuItem.Size = new System.Drawing.Size(270, 26);
+            this.profissionalToolStripMenuItem.Text = "Profissional";
+            this.profissionalToolStripMenuItem.Click += new System.EventHandler(this.profissionalToolStripMenuItem_Click);
             // 
             // monthCalendar1
             // 
@@ -205,7 +223,7 @@
             this.lblUsuarioLogado.BackColor = System.Drawing.Color.Transparent;
             this.lblUsuarioLogado.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsuarioLogado.ForeColor = System.Drawing.Color.ForestGreen;
-            this.lblUsuarioLogado.Location = new System.Drawing.Point(108, 565);
+            this.lblUsuarioLogado.Location = new System.Drawing.Point(108, 580);
             this.lblUsuarioLogado.Name = "lblUsuarioLogado";
             this.lblUsuarioLogado.Size = new System.Drawing.Size(161, 23);
             this.lblUsuarioLogado.TabIndex = 7;
@@ -228,7 +246,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label1.Location = new System.Drawing.Point(12, 565);
+            this.label1.Location = new System.Drawing.Point(12, 580);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(90, 23);
             this.label1.TabIndex = 7;
@@ -251,7 +269,7 @@
             this.dataGridViewTextBoxColumn12,
             this.dataGridViewTextBoxColumn17});
             this.agendamentoDataGridView.DataSource = this.agendamentoBindingSource;
-            this.agendamentoDataGridView.Location = new System.Drawing.Point(12, 246);
+            this.agendamentoDataGridView.Location = new System.Drawing.Point(12, 272);
             this.agendamentoDataGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.agendamentoDataGridView.Name = "agendamentoDataGridView";
             this.agendamentoDataGridView.ReadOnly = true;
@@ -261,95 +279,6 @@
             this.agendamentoDataGridView.Size = new System.Drawing.Size(828, 135);
             this.agendamentoDataGridView.TabIndex = 7;
             this.agendamentoDataGridView.Visible = false;
-            // 
-            // agendamentoServicosDataGridView
-            // 
-            this.agendamentoServicosDataGridView.AllowUserToAddRows = false;
-            this.agendamentoServicosDataGridView.AllowUserToDeleteRows = false;
-            this.agendamentoServicosDataGridView.AllowUserToOrderColumns = true;
-            this.agendamentoServicosDataGridView.AutoGenerateColumns = false;
-            this.agendamentoServicosDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.agendamentoServicosDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idDataGridViewTextBoxColumn,
-            this.dataGridViewTextBoxColumn9,
-            this.quantidadeDataGridViewTextBoxColumn,
-            this.valorUnitarioDataGridViewTextBoxColumn,
-            this.idServicoDataGridViewTextBoxColumn,
-            this.tempoDataGridViewTextBoxColumn});
-            this.agendamentoServicosDataGridView.DataSource = this.agendamentoServicosBindingSource;
-            this.agendamentoServicosDataGridView.Location = new System.Drawing.Point(12, 398);
-            this.agendamentoServicosDataGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.agendamentoServicosDataGridView.Name = "agendamentoServicosDataGridView";
-            this.agendamentoServicosDataGridView.ReadOnly = true;
-            this.agendamentoServicosDataGridView.RowHeadersVisible = false;
-            this.agendamentoServicosDataGridView.RowHeadersWidth = 51;
-            this.agendamentoServicosDataGridView.RowTemplate.Height = 24;
-            this.agendamentoServicosDataGridView.Size = new System.Drawing.Size(828, 138);
-            this.agendamentoServicosDataGridView.TabIndex = 8;
-            this.agendamentoServicosDataGridView.Visible = false;
-            // 
-            // agendamentoServicosBindingSource
-            // 
-            this.agendamentoServicosBindingSource.DataMember = "AgendamentoServicos";
-            this.agendamentoServicosBindingSource.DataSource = this.agendamentoBindingSource;
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idDataGridViewTextBoxColumn.Width = 50;
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "Servico";
-            this.dataGridViewTextBoxColumn9.HeaderText = "Servico";
-            this.dataGridViewTextBoxColumn9.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            this.dataGridViewTextBoxColumn9.ReadOnly = true;
-            this.dataGridViewTextBoxColumn9.Width = 125;
-            // 
-            // quantidadeDataGridViewTextBoxColumn
-            // 
-            this.quantidadeDataGridViewTextBoxColumn.DataPropertyName = "Quantidade";
-            this.quantidadeDataGridViewTextBoxColumn.HeaderText = "Quantidade";
-            this.quantidadeDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.quantidadeDataGridViewTextBoxColumn.Name = "quantidadeDataGridViewTextBoxColumn";
-            this.quantidadeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.quantidadeDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // valorUnitarioDataGridViewTextBoxColumn
-            // 
-            this.valorUnitarioDataGridViewTextBoxColumn.DataPropertyName = "ValorUnitario";
-            this.valorUnitarioDataGridViewTextBoxColumn.HeaderText = "ValorUnitario";
-            this.valorUnitarioDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.valorUnitarioDataGridViewTextBoxColumn.Name = "valorUnitarioDataGridViewTextBoxColumn";
-            this.valorUnitarioDataGridViewTextBoxColumn.ReadOnly = true;
-            this.valorUnitarioDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // idServicoDataGridViewTextBoxColumn
-            // 
-            this.idServicoDataGridViewTextBoxColumn.DataPropertyName = "IdServico";
-            this.idServicoDataGridViewTextBoxColumn.HeaderText = "IdServico";
-            this.idServicoDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idServicoDataGridViewTextBoxColumn.Name = "idServicoDataGridViewTextBoxColumn";
-            this.idServicoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idServicoDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // tempoDataGridViewTextBoxColumn
-            // 
-            this.tempoDataGridViewTextBoxColumn.DataPropertyName = "Tempo";
-            this.tempoDataGridViewTextBoxColumn.HeaderText = "Tempo";
-            this.tempoDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.tempoDataGridViewTextBoxColumn.Name = "tempoDataGridViewTextBoxColumn";
-            this.tempoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.tempoDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // agendamentoBindingSource
-            // 
-            this.agendamentoBindingSource.DataSource = typeof(Models.Agendamento);
             // 
             // dataGridViewTextBoxColumn8
             // 
@@ -423,13 +352,94 @@
             this.dataGridViewTextBoxColumn17.ReadOnly = true;
             this.dataGridViewTextBoxColumn17.Width = 60;
             // 
-            // raçaToolStripMenuItem
+            // agendamentoBindingSource
             // 
-            this.raçaToolStripMenuItem.Name = "raçaToolStripMenuItem";
-            this.raçaToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.R)));
-            this.raçaToolStripMenuItem.Size = new System.Drawing.Size(270, 26);
-            this.raçaToolStripMenuItem.Text = "Raça";
-            this.raçaToolStripMenuItem.Click += new System.EventHandler(this.raçaToolStripMenuItem_Click);
+            this.agendamentoBindingSource.DataSource = typeof(Models.Agendamento);
+            // 
+            // agendamentoServicosDataGridView
+            // 
+            this.agendamentoServicosDataGridView.AllowUserToAddRows = false;
+            this.agendamentoServicosDataGridView.AllowUserToDeleteRows = false;
+            this.agendamentoServicosDataGridView.AllowUserToOrderColumns = true;
+            this.agendamentoServicosDataGridView.AutoGenerateColumns = false;
+            this.agendamentoServicosDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.agendamentoServicosDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn,
+            this.dataGridViewTextBoxColumn9,
+            this.quantidadeDataGridViewTextBoxColumn,
+            this.valorUnitarioDataGridViewTextBoxColumn,
+            this.idServicoDataGridViewTextBoxColumn,
+            this.tempoDataGridViewTextBoxColumn});
+            this.agendamentoServicosDataGridView.DataSource = this.agendamentoServicosBindingSource;
+            this.agendamentoServicosDataGridView.Location = new System.Drawing.Point(12, 424);
+            this.agendamentoServicosDataGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.agendamentoServicosDataGridView.Name = "agendamentoServicosDataGridView";
+            this.agendamentoServicosDataGridView.ReadOnly = true;
+            this.agendamentoServicosDataGridView.RowHeadersVisible = false;
+            this.agendamentoServicosDataGridView.RowHeadersWidth = 51;
+            this.agendamentoServicosDataGridView.RowTemplate.Height = 24;
+            this.agendamentoServicosDataGridView.Size = new System.Drawing.Size(828, 138);
+            this.agendamentoServicosDataGridView.TabIndex = 8;
+            this.agendamentoServicosDataGridView.Visible = false;
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn.Width = 50;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "Servico";
+            this.dataGridViewTextBoxColumn9.HeaderText = "Servico";
+            this.dataGridViewTextBoxColumn9.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
+            this.dataGridViewTextBoxColumn9.Width = 125;
+            // 
+            // quantidadeDataGridViewTextBoxColumn
+            // 
+            this.quantidadeDataGridViewTextBoxColumn.DataPropertyName = "Quantidade";
+            this.quantidadeDataGridViewTextBoxColumn.HeaderText = "Quantidade";
+            this.quantidadeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.quantidadeDataGridViewTextBoxColumn.Name = "quantidadeDataGridViewTextBoxColumn";
+            this.quantidadeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.quantidadeDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // valorUnitarioDataGridViewTextBoxColumn
+            // 
+            this.valorUnitarioDataGridViewTextBoxColumn.DataPropertyName = "ValorUnitario";
+            this.valorUnitarioDataGridViewTextBoxColumn.HeaderText = "ValorUnitario";
+            this.valorUnitarioDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.valorUnitarioDataGridViewTextBoxColumn.Name = "valorUnitarioDataGridViewTextBoxColumn";
+            this.valorUnitarioDataGridViewTextBoxColumn.ReadOnly = true;
+            this.valorUnitarioDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // idServicoDataGridViewTextBoxColumn
+            // 
+            this.idServicoDataGridViewTextBoxColumn.DataPropertyName = "IdServico";
+            this.idServicoDataGridViewTextBoxColumn.HeaderText = "IdServico";
+            this.idServicoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idServicoDataGridViewTextBoxColumn.Name = "idServicoDataGridViewTextBoxColumn";
+            this.idServicoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idServicoDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // tempoDataGridViewTextBoxColumn
+            // 
+            this.tempoDataGridViewTextBoxColumn.DataPropertyName = "Tempo";
+            this.tempoDataGridViewTextBoxColumn.HeaderText = "Tempo";
+            this.tempoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.tempoDataGridViewTextBoxColumn.Name = "tempoDataGridViewTextBoxColumn";
+            this.tempoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.tempoDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // agendamentoServicosBindingSource
+            // 
+            this.agendamentoServicosBindingSource.DataMember = "AgendamentoServicos";
+            this.agendamentoServicosBindingSource.DataSource = this.agendamentoBindingSource;
             // 
             // FormPrincipal
             // 
@@ -461,9 +471,9 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.agendamentoDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.agendamentoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.agendamentoServicosDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.agendamentoServicosBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.agendamentoBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -523,6 +533,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
         private System.Windows.Forms.ToolStripMenuItem raçaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem profissionalToolStripMenuItem;
     }
 }
 
