@@ -104,9 +104,11 @@ namespace GestaoPetShop
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string dataag = monthCalendar1.SelectionStart.ToShortDateString();
-
-            agendamentoBindingSource.DataSource = new AgendamentoBLL().BuscarPorDiaMesAno(dataag);
+            string dataconsultaagendamento = monthCalendar1.SelectionStart.ToShortDateString();
+            int opcbusca = 4;
+            int opcativo = 0; 
+            int opcsituacao = 0;
+            agendamentoBindingSource.DataSource = new AgendamentoBLL().BuscarAgendamentoPorData(opcbusca, dataconsultaagendamento,opcativo,opcsituacao);
 
             agendamentoDataGridView.Visible = true;
             agendamentoServicosDataGridView.Visible = true;
