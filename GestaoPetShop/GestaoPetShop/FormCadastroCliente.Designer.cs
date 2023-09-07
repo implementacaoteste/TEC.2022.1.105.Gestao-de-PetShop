@@ -53,32 +53,32 @@
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.AtivocheckBox1 = new System.Windows.Forms.CheckBox();
-            this.pictureBoxFoto = new System.Windows.Forms.PictureBox();
             this.buttonBuscarFoto = new System.Windows.Forms.Button();
-            this.telefoneClientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.telefoneClientesDataGridView = new System.Windows.Forms.DataGridView();
             this.textBoxEmail = new System.Windows.Forms.TextBox();
             this.textBoxTelefone = new System.Windows.Forms.TextBox();
             this.buttonInserirEmail = new System.Windows.Forms.Button();
             this.buttonInserirTelefone = new System.Windows.Forms.Button();
-            this.emailClienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.emailClienteDataGridView = new System.Windows.Forms.DataGridView();
             this.buttonExcluirEmail = new System.Windows.Forms.Button();
             this.buttonExcluirTelefone = new System.Windows.Forms.Button();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emailClienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telefoneClientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pictureBoxFoto = new System.Windows.Forms.PictureBox();
             nomeLabel = new System.Windows.Forms.Label();
             cPFLabel = new System.Windows.Forms.Label();
             rGLabel = new System.Windows.Forms.Label();
             foneLabel = new System.Windows.Forms.Label();
             emailLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFoto)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.telefoneClientesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.telefoneClientesDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emailClienteBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emailClienteDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emailClienteBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.telefoneClientesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFoto)).BeginInit();
             this.SuspendLayout();
             // 
             // nomeLabel
@@ -335,19 +335,6 @@
             this.AtivocheckBox1.UseVisualStyleBackColor = true;
             this.AtivocheckBox1.CheckedChanged += new System.EventHandler(this.AtivocheckBox1_CheckedChanged);
             // 
-            // pictureBoxFoto
-            // 
-            this.pictureBoxFoto.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pictureBoxFoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBoxFoto.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.clienteBindingSource, "Foto", true));
-            this.pictureBoxFoto.Location = new System.Drawing.Point(635, 54);
-            this.pictureBoxFoto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBoxFoto.Name = "pictureBoxFoto";
-            this.pictureBoxFoto.Size = new System.Drawing.Size(115, 126);
-            this.pictureBoxFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxFoto.TabIndex = 24;
-            this.pictureBoxFoto.TabStop = false;
-            // 
             // buttonBuscarFoto
             // 
             this.buttonBuscarFoto.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -359,11 +346,6 @@
             this.buttonBuscarFoto.Text = "Buscar foto";
             this.buttonBuscarFoto.UseVisualStyleBackColor = true;
             this.buttonBuscarFoto.Click += new System.EventHandler(this.buttonBuscarFoto_Click);
-            // 
-            // telefoneClientesBindingSource
-            // 
-            this.telefoneClientesBindingSource.DataMember = "TelefoneClientes";
-            this.telefoneClientesBindingSource.DataSource = this.clienteBindingSource;
             // 
             // telefoneClientesDataGridView
             // 
@@ -430,11 +412,6 @@
             this.buttonInserirTelefone.UseVisualStyleBackColor = true;
             this.buttonInserirTelefone.Click += new System.EventHandler(this.buttonInserirTelefone_Click);
             // 
-            // emailClienteBindingSource
-            // 
-            this.emailClienteBindingSource.DataMember = "EmailCliente";
-            this.emailClienteBindingSource.DataSource = this.clienteBindingSource;
-            // 
             // emailClienteDataGridView
             // 
             this.emailClienteDataGridView.AllowUserToAddRows = false;
@@ -488,6 +465,11 @@
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             this.dataGridViewTextBoxColumn3.ReadOnly = true;
             // 
+            // emailClienteBindingSource
+            // 
+            this.emailClienteBindingSource.DataMember = "EmailCliente";
+            this.emailClienteBindingSource.DataSource = this.clienteBindingSource;
+            // 
             // clienteBindingSource
             // 
             this.clienteBindingSource.DataSource = typeof(Models.Cliente);
@@ -500,6 +482,24 @@
             this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // telefoneClientesBindingSource
+            // 
+            this.telefoneClientesBindingSource.DataMember = "TelefoneClientes";
+            this.telefoneClientesBindingSource.DataSource = this.clienteBindingSource;
+            // 
+            // pictureBoxFoto
+            // 
+            this.pictureBoxFoto.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pictureBoxFoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBoxFoto.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.clienteBindingSource, "Foto", true));
+            this.pictureBoxFoto.Location = new System.Drawing.Point(635, 54);
+            this.pictureBoxFoto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBoxFoto.Name = "pictureBoxFoto";
+            this.pictureBoxFoto.Size = new System.Drawing.Size(115, 126);
+            this.pictureBoxFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxFoto.TabIndex = 24;
+            this.pictureBoxFoto.TabStop = false;
             // 
             // FormCadastroCliente
             // 
@@ -551,12 +551,12 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.FormCadastroCliente_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFoto)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.telefoneClientesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.telefoneClientesDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emailClienteBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emailClienteDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emailClienteBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.telefoneClientesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFoto)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -8,13 +8,11 @@ namespace GestaoPetShop
     public partial class FormCadastroUsuario : Form
     {
         public int Id;
-
         public FormCadastroUsuario(int _id = 0)
         {
             InitializeComponent();
             Id = _id;
         }
-
         private void buttonSalvar_Click(object sender, EventArgs e)
         {
             try
@@ -52,7 +50,6 @@ namespace GestaoPetShop
                 MessageBox.Show(ex.Message);
             }
         }
-
         private void buttonCancelar_Click(object sender, EventArgs e)
         {
             try
@@ -64,7 +61,6 @@ namespace GestaoPetShop
                 MessageBox.Show(ex.Message);
             }
         }
-
         private void FormCadastroUsuario_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Escape)

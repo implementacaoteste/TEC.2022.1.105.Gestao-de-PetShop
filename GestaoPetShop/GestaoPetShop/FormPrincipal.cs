@@ -128,5 +128,13 @@ namespace GestaoPetShop
                 frm.ShowDialog();
             }
         }
+
+        private void profissionalToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (FormCadastroProfissional frm = new FormCadastroProfissional())
+            {
+                frm.ShowDialog();
+            }
+        }
     }
 }
