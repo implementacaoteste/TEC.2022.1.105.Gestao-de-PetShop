@@ -946,7 +946,7 @@ namespace DAL
                 cn.Close();
             }
         }
-        public List<Agendamento> BuscarTodos()
+        public List<Agendamento> BuscarTodos(int _opcSituacao, int _opcAtivo)
         {
             List<Agendamento> agendamentos = new List<Agendamento>();
             Agendamento agendamento = new Agendamento();
@@ -963,11 +963,54 @@ namespace DAL
                                            FROM Agendamento Ag LEFT JOIN Profissional P     ON Ag.IdProfissional = P.Id
                                                                LEFT JOIN Animal Ani         ON Ag.IdAnimal = Ani.Id
                                                                LEFT JOIN Cliente Cli        ON Ani.IdCliente = Cli.Id
-                                                               LEFT JOIN Situacao Si        ON Ag.IdSituacao = Si.Id";
+                                                               LEFT JOIN Situacao Si        ON Ag.IdSituacao = Si.Id ";
+
+                if (_opcAtivo == 1)
+                {
+                    cmd.CommandText = cmd.CommandText + " WHERE Ag.Ativo = 1";
+                }
+                else if (_opcAtivo == 2)
+                {
+                    cmd.CommandText = cmd.CommandText + " WHERE Ag.Ativo = 0";
+                }
+
+                if (_opcSituacao == 1)
+                {
+                    if (_opcAtivo == 0)
+                    {
+                        cmd.CommandText = cmd.CommandText + " WHERE UPPER(Si.Descricao) LIKE UPPER('Agendado')";
+                    }
+                    else
+                    {
+                        cmd.CommandText = cmd.CommandText = cmd.CommandText + " AND UPPER(Si.Descricao) LIKE UPPER('Agendado')";
+                    }
+
+                }
+                else if (_opcSituacao == 2)
+                {
+                    if (_opcAtivo == 0)
+                    {
+                        cmd.CommandText = cmd.CommandText + " WHERE UPPER(Si.Descricao) LIKE UPPER('Em Andamento')";
+                    }
+                    else
+                    {
+                        cmd.CommandText = cmd.CommandText = cmd.CommandText + " AND UPPER(Si.Descricao) LIKE UPPER('Em Andamento')";
+                    }
+                }
+                else if(_opcSituacao == 3)
+                {
+                    if (_opcAtivo == 0)
+                    {
+                        cmd.CommandText = cmd.CommandText + " WHERE UPPER(Si.Descricao) LIKE UPPER('Finalizado')";
+                    }
+                    else
+                    {
+                        cmd.CommandText = cmd.CommandText = cmd.CommandText + " AND UPPER(Si.Descricao) LIKE UPPER('Finalizado')";
+                    }
+                }
 
                 cmd.CommandType = System.Data.CommandType.Text;
                 cn.Open();
-
                 using (SqlDataReader rd = cmd.ExecuteReader())
                 {
                     while (rd.Read())
@@ -1341,7 +1384,7 @@ namespace DAL
                     int id2 = 0;
                     while (rd.Read())
                     {
-                       id2 = Convert.ToInt32(rd["Id"]);
+                        id2 = Convert.ToInt32(rd["Id"]);
                         if (id != id2)
                         {
                             agendamento = new Agendamento();
@@ -1391,7 +1434,7 @@ namespace DAL
                                                                                                                                                                                             LEFT JOIN Servico Se                 ON AgSe.IdServico = Se.Id
                                                                                                                                                                                             LEFT JOIN Situacao Si                ON Ag.IdSituacao = Si.Id WHERE   UPPER (P.Nome) LIKE UPPER (@NomeProfissional) AND ";
 
-                if(_opc == 1)
+                if (_opc == 1)
                     cmd.CommandText = cmd.CommandText + "Ag.DataAg = @Data";
                 else if (_opc == 2)
                     cmd.CommandText = cmd.CommandText + "YEAR(Ag.DataAg) = YEAR(@Data) and MONTH(Ag.DataAg) = MONTH(@Data)";
