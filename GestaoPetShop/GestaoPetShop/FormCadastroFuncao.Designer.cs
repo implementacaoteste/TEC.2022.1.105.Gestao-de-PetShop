@@ -45,6 +45,28 @@
             ((System.ComponentModel.ISupportInitialize)(this.funcaoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
+            // idLabel
+            // 
+            idLabel.AutoSize = true;
+            idLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            idLabel.ForeColor = System.Drawing.Color.Black;
+            idLabel.Location = new System.Drawing.Point(16, 127);
+            idLabel.Name = "idLabel";
+            idLabel.Size = new System.Drawing.Size(21, 18);
+            idLabel.TabIndex = 21;
+            idLabel.Text = "Id";
+            // 
+            // descricaoLabel
+            // 
+            descricaoLabel.AutoSize = true;
+            descricaoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            descricaoLabel.ForeColor = System.Drawing.Color.Black;
+            descricaoLabel.Location = new System.Drawing.Point(81, 127);
+            descricaoLabel.Name = "descricaoLabel";
+            descricaoLabel.Size = new System.Drawing.Size(53, 18);
+            descricaoLabel.TabIndex = 20;
+            descricaoLabel.Text = "Nome";
+            // 
             // pictureBox3
             // 
             this.pictureBox3.Image = global::GestaoPetShop.Properties.Resources.bicho_de_estimacao;
@@ -108,17 +130,6 @@
             this.btnCancelarCadastroOuAlterar.UseVisualStyleBackColor = false;
             this.btnCancelarCadastroOuAlterar.Click += new System.EventHandler(this.btnCancelarCadastroOuAlterar_Click);
             // 
-            // idLabel
-            // 
-            idLabel.AutoSize = true;
-            idLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            idLabel.ForeColor = System.Drawing.Color.Black;
-            idLabel.Location = new System.Drawing.Point(16, 127);
-            idLabel.Name = "idLabel";
-            idLabel.Size = new System.Drawing.Size(21, 18);
-            idLabel.TabIndex = 21;
-            idLabel.Text = "Id";
-            // 
             // idTextBox
             // 
             this.idTextBox.BackColor = System.Drawing.SystemColors.Window;
@@ -128,17 +139,6 @@
             this.idTextBox.ReadOnly = true;
             this.idTextBox.Size = new System.Drawing.Size(53, 24);
             this.idTextBox.TabIndex = 18;
-            // 
-            // descricaoLabel
-            // 
-            descricaoLabel.AutoSize = true;
-            descricaoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            descricaoLabel.ForeColor = System.Drawing.Color.Black;
-            descricaoLabel.Location = new System.Drawing.Point(81, 127);
-            descricaoLabel.Name = "descricaoLabel";
-            descricaoLabel.Size = new System.Drawing.Size(53, 18);
-            descricaoLabel.TabIndex = 20;
-            descricaoLabel.Text = "Nome";
             // 
             // nomeTextBox
             // 
