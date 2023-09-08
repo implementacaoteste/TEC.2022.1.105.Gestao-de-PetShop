@@ -156,7 +156,8 @@ namespace GestaoPetShop
                                 MessageBox.Show("Insira Serviço e a Data para pesquisa");
                                 return;
                             }
-                            agendamentoBindingSource.DataSource = agendamentoBLL.BuscarAgendamentoPorServicoDiaMesAno(textBox_BuscarAgendamento.Text, textBox_BuscarData.Text);
+                            opcbusca = 1;
+                            agendamentoBindingSource.DataSource = agendamentoBLL.BuscarAgendamentoPorServicoData(textBox_BuscarAgendamento.Text, textBox_BuscarData.Text,opcbusca,opcativo,opcsituacao);
                             break;
                         }
                     case 8: // BUSCAR AGENDAMENTO POR SERVICO ANO
@@ -182,7 +183,8 @@ namespace GestaoPetShop
                             {
                                 dataconsulta = textBox_BuscarData.Text;
                             }
-                            agendamentoBindingSource.DataSource = agendamentoBLL.BuscarAgendamentoPorServicoAno(textBox_BuscarAgendamento.Text, dataconsulta);
+                            opcbusca = 3;
+                            agendamentoBindingSource.DataSource = agendamentoBLL.BuscarAgendamentoPorServicoData(textBox_BuscarAgendamento.Text, dataconsulta, opcbusca, opcativo, opcsituacao);
                             break;
                         }
                     case 9: // BUSCAR AGENDAMENTO POR SERVICO E MÊS/ANO
@@ -208,7 +210,8 @@ namespace GestaoPetShop
                             {
                                 dataconsulta = textBox_BuscarData.Text;
                             }
-                            agendamentoBindingSource.DataSource = agendamentoBLL.BuscarAgendamentoPorServicoMesAno(textBox_BuscarAgendamento.Text, dataconsulta);
+                            opcbusca = 2;
+                            agendamentoBindingSource.DataSource = agendamentoBLL.BuscarAgendamentoPorServicoData(textBox_BuscarAgendamento.Text, dataconsulta, opcbusca, opcativo, opcsituacao);
                             break;
                         }
                     case 10: // Busca por nome do serviço
@@ -219,7 +222,7 @@ namespace GestaoPetShop
                                 textBox_BuscarAgendamento.Focus();
                                 return;
                             }
-                            agendamentoBindingSource.DataSource = agendamentoBLL.BuscarAgendamentoPorServico(textBox_BuscarAgendamento.Text);
+                            agendamentoBindingSource.DataSource = agendamentoBLL.BuscarAgendamentoPorServico(textBox_BuscarAgendamento.Text, opcativo, opcsituacao);
                             break;
                         }
                     case 11: // BUSCAR POR PROFISSIONAL E DIA/MÊS/ANO

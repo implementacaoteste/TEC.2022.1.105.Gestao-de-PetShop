@@ -106,25 +106,16 @@ namespace BLL
             AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
             return agendamentoDAL.BuscarAgendamentoPorNomeProfissional(_nomeProfissional, _opcAtivo, _opcSituacao);
         }
-        public List<Agendamento> BuscarAgendamentoPorServicoDiaMesAno(string _nomeServico, string _data)
+        public List<Agendamento> BuscarAgendamentoPorServicoData(string _nomeServico, string _data, int _opc, int _opcAtivo, int _opcSituacao)
         {
             AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
-            return agendamentoDAL.BuscarAgendamentoPorServicoDiaMesAno(_nomeServico, _data);
+            return agendamentoDAL.BuscarAgendamentoPorServicoData(_nomeServico, _data,_opc,_opcAtivo,_opcSituacao);
         }
-        public List<Agendamento> BuscarAgendamentoPorServicoAno(string _nomeServico, string _ano) //Givas
+       
+        public List<Agendamento> BuscarAgendamentoPorServico(string _nomeServico, int _opcAtivo, int _opcSituacao)
         {
             AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
-            return agendamentoDAL.BuscarAgendamentoPorServicoAno(_nomeServico, _ano);
-        }
-        public List<Agendamento> BuscarAgendamentoPorServicoMesAno(string _nomeServico, string _mesAno)
-        {
-            AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
-            return agendamentoDAL.BuscarAgendamentoPorServicoMesAno(_nomeServico, _mesAno);
-        }
-        public List<Agendamento> BuscarAgendamentoPorServico(string _nomeServico)
-        {
-            AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
-            return agendamentoDAL.BuscarAgendamentoPorServico(_nomeServico);
+            return agendamentoDAL.BuscarAgendamentoPorServico(_nomeServico, _opcAtivo, _opcSituacao);
         }
         public List<Agendamento> BuscarAgendamentoPorProfissionalData(string _nomeProfissional, string _data, int _opc,int _opcAtivo, int _opcSituacao)
         {
