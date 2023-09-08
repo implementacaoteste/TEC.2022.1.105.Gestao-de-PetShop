@@ -326,6 +326,12 @@
     <Compile Include="FormConsultaPermissao.Designer.cs">
       <DependentUpon>FormConsultaPermissao.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormConsultaProfissional.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormConsultaProfissional.Designer.cs">
+      <DependentUpon>FormConsultaProfissional.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormConsultaServico.cs">
       <SubType>Form</SubType>
     </Compile>

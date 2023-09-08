@@ -9,7 +9,13 @@ namespace BLL
     {
         public void Inserir(Profissional _profissional)
         {
+            ValidarDados(_profissional);
             new ProfissionalDAL().Inserir(_profissional);
+        }
+        private void ValidarDados(Profissional _profissional)//Givas
+        {
+            if (String.IsNullOrEmpty(_profissional.Nome))
+                throw new Exception("Informe o nome do cliente.");
         }
         public List<Profissional> BuscarTodos()
         {

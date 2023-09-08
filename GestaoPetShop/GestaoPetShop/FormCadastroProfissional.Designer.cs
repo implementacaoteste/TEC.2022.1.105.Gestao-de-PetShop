@@ -30,60 +30,56 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label bairroLabel;
-            System.Windows.Forms.Label cEPLabel;
             System.Windows.Forms.Label cidadeLabel;
-            System.Windows.Forms.Label cPFLabel;
             System.Windows.Forms.Label dataNascimentoLabel;
             System.Windows.Forms.Label logradouroLabel;
             System.Windows.Forms.Label nomeLabel;
             System.Windows.Forms.Label numeroLabel;
             System.Windows.Forms.Label paisLabel;
             System.Windows.Forms.Label uFLabel;
+            System.Windows.Forms.Label cPFLabel1;
+            System.Windows.Forms.Label cEPLabel1;
             this.profissionalBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ativoCheckBox = new System.Windows.Forms.CheckBox();
             this.bairroTextBox = new System.Windows.Forms.TextBox();
-            this.cEPMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
             this.cidadeTextBox = new System.Windows.Forms.TextBox();
-            this.cPFMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
-            this.dataNascimentoDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.logradouroTextBox = new System.Windows.Forms.TextBox();
             this.nomeTextBox = new System.Windows.Forms.TextBox();
             this.numeroTextBox = new System.Windows.Forms.TextBox();
             this.paisTextBox = new System.Windows.Forms.TextBox();
             this.uFTextBox = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.pictureBoxFoto = new System.Windows.Forms.PictureBox();
+            this.buttonBuscarFoto = new System.Windows.Forms.Button();
+            this.textBoxEmail = new System.Windows.Forms.TextBox();
+            this.textBoxTelefone = new System.Windows.Forms.TextBox();
+            this.buttonInserirEmail = new System.Windows.Forms.Button();
+            this.buttonExcluirEmail = new System.Windows.Forms.Button();
+            this.buttonInserirTelefone = new System.Windows.Forms.Button();
+            this.buttonExcluirTelefone = new System.Windows.Forms.Button();
             this.emailProfissionalBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.emailProfissionalDataGridView = new System.Windows.Forms.DataGridView();
             this.telefoneProfissionalBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.telefoneProfissionalDataGridView = new System.Windows.Forms.DataGridView();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
+            this.buttonSalvar = new System.Windows.Forms.Button();
+            this.buttonCancelar = new System.Windows.Forms.Button();
             this.lblProfissional = new System.Windows.Forms.Label();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cPFTextBox = new System.Windows.Forms.TextBox();
+            this.cEPTextBox = new System.Windows.Forms.TextBox();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.textBoxDataNascimento = new System.Windows.Forms.TextBox();
             bairroLabel = new System.Windows.Forms.Label();
-            cEPLabel = new System.Windows.Forms.Label();
             cidadeLabel = new System.Windows.Forms.Label();
-            cPFLabel = new System.Windows.Forms.Label();
             dataNascimentoLabel = new System.Windows.Forms.Label();
             logradouroLabel = new System.Windows.Forms.Label();
             nomeLabel = new System.Windows.Forms.Label();
             numeroLabel = new System.Windows.Forms.Label();
             paisLabel = new System.Windows.Forms.Label();
             uFLabel = new System.Windows.Forms.Label();
+            cPFLabel1 = new System.Windows.Forms.Label();
+            cEPLabel1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.profissionalBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emailProfissionalBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emailProfissionalDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.telefoneProfissionalBindingSource)).BeginInit();
@@ -93,92 +89,100 @@
             // bairroLabel
             // 
             bairroLabel.AutoSize = true;
-            bairroLabel.Location = new System.Drawing.Point(117, 158);
+            bairroLabel.Location = new System.Drawing.Point(88, 128);
+            bairroLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             bairroLabel.Name = "bairroLabel";
-            bairroLabel.Size = new System.Drawing.Size(46, 16);
+            bairroLabel.Size = new System.Drawing.Size(37, 13);
             bairroLabel.TabIndex = 3;
             bairroLabel.Text = "Bairro:";
-            // 
-            // cEPLabel
-            // 
-            cEPLabel.AutoSize = true;
-            cEPLabel.Location = new System.Drawing.Point(27, 205);
-            cEPLabel.Name = "cEPLabel";
-            cEPLabel.Size = new System.Drawing.Size(37, 16);
-            cEPLabel.TabIndex = 5;
-            cEPLabel.Text = "CEP:";
             // 
             // cidadeLabel
             // 
             cidadeLabel.AutoSize = true;
-            cidadeLabel.Location = new System.Drawing.Point(355, 158);
+            cidadeLabel.Location = new System.Drawing.Point(266, 128);
+            cidadeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             cidadeLabel.Name = "cidadeLabel";
-            cidadeLabel.Size = new System.Drawing.Size(54, 16);
+            cidadeLabel.Size = new System.Drawing.Size(43, 13);
             cidadeLabel.TabIndex = 7;
             cidadeLabel.Text = "Cidade:";
-            // 
-            // cPFLabel
-            // 
-            cPFLabel.AutoSize = true;
-            cPFLabel.Location = new System.Drawing.Point(454, 65);
-            cPFLabel.Name = "cPFLabel";
-            cPFLabel.Size = new System.Drawing.Size(36, 16);
-            cPFLabel.TabIndex = 9;
-            cPFLabel.Text = "CPF:";
             // 
             // dataNascimentoLabel
             // 
             dataNascimentoLabel.AutoSize = true;
-            dataNascimentoLabel.Location = new System.Drawing.Point(27, 110);
+            dataNascimentoLabel.Location = new System.Drawing.Point(20, 89);
+            dataNascimentoLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             dataNascimentoLabel.Name = "dataNascimentoLabel";
-            dataNascimentoLabel.Size = new System.Drawing.Size(114, 16);
+            dataNascimentoLabel.Size = new System.Drawing.Size(92, 13);
             dataNascimentoLabel.TabIndex = 11;
             dataNascimentoLabel.Text = "Data Nascimento:";
             // 
             // logradouroLabel
             // 
             logradouroLabel.AutoSize = true;
-            logradouroLabel.Location = new System.Drawing.Point(151, 110);
+            logradouroLabel.Location = new System.Drawing.Point(113, 89);
+            logradouroLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             logradouroLabel.Name = "logradouroLabel";
-            logradouroLabel.Size = new System.Drawing.Size(80, 16);
+            logradouroLabel.Size = new System.Drawing.Size(64, 13);
             logradouroLabel.TabIndex = 17;
             logradouroLabel.Text = "Logradouro:";
             // 
             // nomeLabel
             // 
             nomeLabel.AutoSize = true;
-            nomeLabel.Location = new System.Drawing.Point(27, 65);
+            nomeLabel.Location = new System.Drawing.Point(20, 53);
+            nomeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             nomeLabel.Name = "nomeLabel";
-            nomeLabel.Size = new System.Drawing.Size(47, 16);
+            nomeLabel.Size = new System.Drawing.Size(38, 13);
             nomeLabel.TabIndex = 19;
             nomeLabel.Text = "Nome:";
             // 
             // numeroLabel
             // 
             numeroLabel.AutoSize = true;
-            numeroLabel.Location = new System.Drawing.Point(27, 158);
+            numeroLabel.Location = new System.Drawing.Point(20, 128);
+            numeroLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             numeroLabel.Name = "numeroLabel";
-            numeroLabel.Size = new System.Drawing.Size(58, 16);
+            numeroLabel.Size = new System.Drawing.Size(47, 13);
             numeroLabel.TabIndex = 21;
             numeroLabel.Text = "Numero:";
             // 
             // paisLabel
             // 
             paisLabel.AutoSize = true;
-            paisLabel.Location = new System.Drawing.Point(236, 205);
+            paisLabel.Location = new System.Drawing.Point(177, 167);
+            paisLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             paisLabel.Name = "paisLabel";
-            paisLabel.Size = new System.Drawing.Size(37, 16);
+            paisLabel.Size = new System.Drawing.Size(30, 13);
             paisLabel.TabIndex = 23;
             paisLabel.Text = "Pais:";
             // 
             // uFLabel
             // 
             uFLabel.AutoSize = true;
-            uFLabel.Location = new System.Drawing.Point(156, 202);
+            uFLabel.Location = new System.Drawing.Point(117, 164);
+            uFLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             uFLabel.Name = "uFLabel";
-            uFLabel.Size = new System.Drawing.Size(28, 16);
+            uFLabel.Size = new System.Drawing.Size(24, 13);
             uFLabel.TabIndex = 25;
             uFLabel.Text = "UF:";
+            // 
+            // cPFLabel1
+            // 
+            cPFLabel1.AutoSize = true;
+            cPFLabel1.Location = new System.Drawing.Point(341, 52);
+            cPFLabel1.Name = "cPFLabel1";
+            cPFLabel1.Size = new System.Drawing.Size(30, 13);
+            cPFLabel1.TabIndex = 37;
+            cPFLabel1.Text = "CPF:";
+            // 
+            // cEPLabel1
+            // 
+            cEPLabel1.AutoSize = true;
+            cEPLabel1.Location = new System.Drawing.Point(19, 166);
+            cEPLabel1.Name = "cEPLabel1";
+            cEPLabel1.Size = new System.Drawing.Size(31, 13);
+            cEPLabel1.TabIndex = 38;
+            cEPLabel1.Text = "CEP:";
             // 
             // profissionalBindingSource
             // 
@@ -187,162 +191,157 @@
             // ativoCheckBox
             // 
             this.ativoCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.profissionalBindingSource, "Ativo", true));
-            this.ativoCheckBox.Location = new System.Drawing.Point(450, 222);
+            this.ativoCheckBox.Location = new System.Drawing.Point(338, 180);
+            this.ativoCheckBox.Margin = new System.Windows.Forms.Padding(2);
             this.ativoCheckBox.Name = "ativoCheckBox";
-            this.ativoCheckBox.Size = new System.Drawing.Size(61, 24);
-            this.ativoCheckBox.TabIndex = 2;
+            this.ativoCheckBox.Size = new System.Drawing.Size(58, 20);
+            this.ativoCheckBox.TabIndex = 10;
             this.ativoCheckBox.Text = "Ativo";
             this.ativoCheckBox.UseVisualStyleBackColor = true;
             // 
             // bairroTextBox
             // 
             this.bairroTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.profissionalBindingSource, "Bairro", true));
-            this.bairroTextBox.Location = new System.Drawing.Point(120, 177);
+            this.bairroTextBox.Location = new System.Drawing.Point(90, 144);
+            this.bairroTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.bairroTextBox.Name = "bairroTextBox";
-            this.bairroTextBox.Size = new System.Drawing.Size(224, 22);
-            this.bairroTextBox.TabIndex = 4;
-            // 
-            // cEPMaskedTextBox
-            // 
-            this.cEPMaskedTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.profissionalBindingSource, "CEP", true));
-            this.cEPMaskedTextBox.Location = new System.Drawing.Point(30, 224);
-            this.cEPMaskedTextBox.Mask = "00000-999";
-            this.cEPMaskedTextBox.Name = "cEPMaskedTextBox";
-            this.cEPMaskedTextBox.Size = new System.Drawing.Size(111, 22);
-            this.cEPMaskedTextBox.TabIndex = 6;
+            this.bairroTextBox.Size = new System.Drawing.Size(169, 20);
+            this.bairroTextBox.TabIndex = 5;
             // 
             // cidadeTextBox
             // 
             this.cidadeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.profissionalBindingSource, "Cidade", true));
-            this.cidadeTextBox.Location = new System.Drawing.Point(358, 177);
+            this.cidadeTextBox.Location = new System.Drawing.Point(268, 144);
+            this.cidadeTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.cidadeTextBox.Name = "cidadeTextBox";
-            this.cidadeTextBox.Size = new System.Drawing.Size(224, 22);
-            this.cidadeTextBox.TabIndex = 8;
-            // 
-            // cPFMaskedTextBox
-            // 
-            this.cPFMaskedTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.profissionalBindingSource, "CPF", true));
-            this.cPFMaskedTextBox.Location = new System.Drawing.Point(457, 84);
-            this.cPFMaskedTextBox.Mask = "999.999.999-99";
-            this.cPFMaskedTextBox.Name = "cPFMaskedTextBox";
-            this.cPFMaskedTextBox.Size = new System.Drawing.Size(125, 22);
-            this.cPFMaskedTextBox.TabIndex = 10;
-            // 
-            // dataNascimentoDateTimePicker
-            // 
-            this.dataNascimentoDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.profissionalBindingSource, "DataNascimento", true));
-            this.dataNascimentoDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dataNascimentoDateTimePicker.Location = new System.Drawing.Point(30, 129);
-            this.dataNascimentoDateTimePicker.Name = "dataNascimentoDateTimePicker";
-            this.dataNascimentoDateTimePicker.Size = new System.Drawing.Size(118, 22);
-            this.dataNascimentoDateTimePicker.TabIndex = 12;
+            this.cidadeTextBox.Size = new System.Drawing.Size(169, 20);
+            this.cidadeTextBox.TabIndex = 6;
             // 
             // logradouroTextBox
             // 
             this.logradouroTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.profissionalBindingSource, "Logradouro", true));
-            this.logradouroTextBox.Location = new System.Drawing.Point(154, 129);
+            this.logradouroTextBox.Location = new System.Drawing.Point(116, 105);
+            this.logradouroTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.logradouroTextBox.Name = "logradouroTextBox";
-            this.logradouroTextBox.Size = new System.Drawing.Size(428, 22);
-            this.logradouroTextBox.TabIndex = 18;
+            this.logradouroTextBox.Size = new System.Drawing.Size(322, 20);
+            this.logradouroTextBox.TabIndex = 3;
             // 
             // nomeTextBox
             // 
             this.nomeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.profissionalBindingSource, "Nome", true));
-            this.nomeTextBox.Location = new System.Drawing.Point(30, 84);
+            this.nomeTextBox.Location = new System.Drawing.Point(22, 68);
+            this.nomeTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.nomeTextBox.Name = "nomeTextBox";
-            this.nomeTextBox.Size = new System.Drawing.Size(421, 22);
-            this.nomeTextBox.TabIndex = 20;
+            this.nomeTextBox.Size = new System.Drawing.Size(317, 20);
+            this.nomeTextBox.TabIndex = 0;
             // 
             // numeroTextBox
             // 
             this.numeroTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.profissionalBindingSource, "Numero", true));
-            this.numeroTextBox.Location = new System.Drawing.Point(30, 177);
+            this.numeroTextBox.Location = new System.Drawing.Point(22, 144);
+            this.numeroTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.numeroTextBox.Name = "numeroTextBox";
-            this.numeroTextBox.Size = new System.Drawing.Size(73, 22);
-            this.numeroTextBox.TabIndex = 22;
+            this.numeroTextBox.Size = new System.Drawing.Size(56, 20);
+            this.numeroTextBox.TabIndex = 4;
             // 
             // paisTextBox
             // 
             this.paisTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.profissionalBindingSource, "Pais", true));
-            this.paisTextBox.Location = new System.Drawing.Point(239, 224);
+            this.paisTextBox.Location = new System.Drawing.Point(179, 182);
+            this.paisTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.paisTextBox.Name = "paisTextBox";
-            this.paisTextBox.Size = new System.Drawing.Size(158, 22);
-            this.paisTextBox.TabIndex = 24;
+            this.paisTextBox.Size = new System.Drawing.Size(120, 20);
+            this.paisTextBox.TabIndex = 9;
             // 
             // uFTextBox
             // 
             this.uFTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.profissionalBindingSource, "UF", true));
-            this.uFTextBox.Location = new System.Drawing.Point(159, 224);
+            this.uFTextBox.Location = new System.Drawing.Point(119, 182);
+            this.uFTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.uFTextBox.Name = "uFTextBox";
-            this.uFTextBox.Size = new System.Drawing.Size(72, 22);
-            this.uFTextBox.TabIndex = 26;
+            this.uFTextBox.Size = new System.Drawing.Size(55, 20);
+            this.uFTextBox.TabIndex = 8;
             // 
-            // pictureBox1
+            // pictureBoxFoto
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(648, 52);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(125, 136);
-            this.pictureBox1.TabIndex = 27;
-            this.pictureBox1.TabStop = false;
+            this.pictureBoxFoto.Location = new System.Drawing.Point(486, 42);
+            this.pictureBoxFoto.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBoxFoto.Name = "pictureBoxFoto";
+            this.pictureBoxFoto.Size = new System.Drawing.Size(94, 110);
+            this.pictureBoxFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxFoto.TabIndex = 27;
+            this.pictureBoxFoto.TabStop = false;
             // 
-            // button1
+            // buttonBuscarFoto
             // 
-            this.button1.Location = new System.Drawing.Point(648, 194);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(125, 23);
-            this.button1.TabIndex = 28;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonBuscarFoto.Location = new System.Drawing.Point(486, 158);
+            this.buttonBuscarFoto.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonBuscarFoto.Name = "buttonBuscarFoto";
+            this.buttonBuscarFoto.Size = new System.Drawing.Size(94, 21);
+            this.buttonBuscarFoto.TabIndex = 15;
+            this.buttonBuscarFoto.Text = "Buscar Foto";
+            this.buttonBuscarFoto.UseVisualStyleBackColor = true;
+            this.buttonBuscarFoto.Click += new System.EventHandler(this.buttonBuscarFoto_Click);
             // 
-            // textBox1
+            // textBoxEmail
             // 
-            this.textBox1.Location = new System.Drawing.Point(30, 286);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(203, 22);
-            this.textBox1.TabIndex = 29;
+            this.textBoxEmail.Location = new System.Drawing.Point(22, 232);
+            this.textBoxEmail.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxEmail.Name = "textBoxEmail";
+            this.textBoxEmail.Size = new System.Drawing.Size(153, 20);
+            this.textBoxEmail.TabIndex = 11;
             // 
-            // textBox2
+            // textBoxTelefone
             // 
-            this.textBox2.Location = new System.Drawing.Point(406, 286);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(203, 22);
-            this.textBox2.TabIndex = 30;
+            this.textBoxTelefone.Location = new System.Drawing.Point(304, 232);
+            this.textBoxTelefone.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxTelefone.Name = "textBoxTelefone";
+            this.textBoxTelefone.Size = new System.Drawing.Size(153, 20);
+            this.textBoxTelefone.TabIndex = 13;
             // 
-            // button2
+            // buttonInserirEmail
             // 
-            this.button2.Location = new System.Drawing.Point(239, 286);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(76, 23);
-            this.button2.TabIndex = 31;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.buttonInserirEmail.Location = new System.Drawing.Point(179, 232);
+            this.buttonInserirEmail.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonInserirEmail.Name = "buttonInserirEmail";
+            this.buttonInserirEmail.Size = new System.Drawing.Size(57, 21);
+            this.buttonInserirEmail.TabIndex = 12;
+            this.buttonInserirEmail.Text = "Inserir";
+            this.buttonInserirEmail.UseVisualStyleBackColor = true;
+            this.buttonInserirEmail.Click += new System.EventHandler(this.buttonInserirEmail_Click);
             // 
-            // button3
+            // buttonExcluirEmail
             // 
-            this.button3.Location = new System.Drawing.Point(321, 286);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(76, 23);
-            this.button3.TabIndex = 32;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.buttonExcluirEmail.Location = new System.Drawing.Point(241, 232);
+            this.buttonExcluirEmail.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonExcluirEmail.Name = "buttonExcluirEmail";
+            this.buttonExcluirEmail.Size = new System.Drawing.Size(57, 21);
+            this.buttonExcluirEmail.TabIndex = 18;
+            this.buttonExcluirEmail.Text = "Excluir";
+            this.buttonExcluirEmail.UseVisualStyleBackColor = true;
+            this.buttonExcluirEmail.Click += new System.EventHandler(this.buttonExcluirEmail_Click);
             // 
-            // button4
+            // buttonInserirTelefone
             // 
-            this.button4.Location = new System.Drawing.Point(615, 286);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(76, 23);
-            this.button4.TabIndex = 33;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
+            this.buttonInserirTelefone.Location = new System.Drawing.Point(461, 232);
+            this.buttonInserirTelefone.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonInserirTelefone.Name = "buttonInserirTelefone";
+            this.buttonInserirTelefone.Size = new System.Drawing.Size(57, 21);
+            this.buttonInserirTelefone.TabIndex = 14;
+            this.buttonInserirTelefone.Text = "Inserir";
+            this.buttonInserirTelefone.UseVisualStyleBackColor = true;
+            this.buttonInserirTelefone.Click += new System.EventHandler(this.buttonInserirTelefone_Click);
             // 
-            // button5
+            // buttonExcluirTelefone
             // 
-            this.button5.Location = new System.Drawing.Point(696, 286);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(76, 23);
-            this.button5.TabIndex = 34;
-            this.button5.Text = "button5";
-            this.button5.UseVisualStyleBackColor = true;
+            this.buttonExcluirTelefone.Location = new System.Drawing.Point(522, 232);
+            this.buttonExcluirTelefone.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonExcluirTelefone.Name = "buttonExcluirTelefone";
+            this.buttonExcluirTelefone.Size = new System.Drawing.Size(57, 21);
+            this.buttonExcluirTelefone.TabIndex = 19;
+            this.buttonExcluirTelefone.Text = "Excluir";
+            this.buttonExcluirTelefone.UseVisualStyleBackColor = true;
+            this.buttonExcluirTelefone.Click += new System.EventHandler(this.buttonExcluirTelefone_Click);
             // 
             // emailProfissionalBindingSource
             // 
@@ -358,18 +357,17 @@
             this.emailProfissionalDataGridView.BackgroundColor = System.Drawing.SystemColors.Control;
             this.emailProfissionalDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.emailProfissionalDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3});
             this.emailProfissionalDataGridView.DataSource = this.emailProfissionalBindingSource;
-            this.emailProfissionalDataGridView.Location = new System.Drawing.Point(30, 315);
+            this.emailProfissionalDataGridView.Location = new System.Drawing.Point(22, 256);
+            this.emailProfissionalDataGridView.Margin = new System.Windows.Forms.Padding(2);
             this.emailProfissionalDataGridView.Name = "emailProfissionalDataGridView";
             this.emailProfissionalDataGridView.ReadOnly = true;
             this.emailProfissionalDataGridView.RowHeadersVisible = false;
             this.emailProfissionalDataGridView.RowHeadersWidth = 51;
             this.emailProfissionalDataGridView.RowTemplate.Height = 24;
             this.emailProfissionalDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.emailProfissionalDataGridView.Size = new System.Drawing.Size(367, 140);
+            this.emailProfissionalDataGridView.Size = new System.Drawing.Size(275, 114);
             this.emailProfissionalDataGridView.TabIndex = 34;
             // 
             // telefoneProfissionalBindingSource
@@ -386,37 +384,41 @@
             this.telefoneProfissionalDataGridView.BackgroundColor = System.Drawing.SystemColors.Control;
             this.telefoneProfissionalDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.telefoneProfissionalDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn6});
             this.telefoneProfissionalDataGridView.DataSource = this.telefoneProfissionalBindingSource;
-            this.telefoneProfissionalDataGridView.Location = new System.Drawing.Point(406, 315);
+            this.telefoneProfissionalDataGridView.Location = new System.Drawing.Point(304, 256);
+            this.telefoneProfissionalDataGridView.Margin = new System.Windows.Forms.Padding(2);
             this.telefoneProfissionalDataGridView.Name = "telefoneProfissionalDataGridView";
             this.telefoneProfissionalDataGridView.ReadOnly = true;
             this.telefoneProfissionalDataGridView.RowHeadersVisible = false;
             this.telefoneProfissionalDataGridView.RowHeadersWidth = 51;
             this.telefoneProfissionalDataGridView.RowTemplate.Height = 24;
             this.telefoneProfissionalDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.telefoneProfissionalDataGridView.Size = new System.Drawing.Size(367, 140);
+            this.telefoneProfissionalDataGridView.Size = new System.Drawing.Size(275, 114);
             this.telefoneProfissionalDataGridView.TabIndex = 34;
             // 
-            // button6
+            // buttonSalvar
             // 
-            this.button6.Location = new System.Drawing.Point(593, 467);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 23);
-            this.button6.TabIndex = 35;
-            this.button6.Text = "button6";
-            this.button6.UseVisualStyleBackColor = true;
+            this.buttonSalvar.Location = new System.Drawing.Point(445, 379);
+            this.buttonSalvar.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonSalvar.Name = "buttonSalvar";
+            this.buttonSalvar.Size = new System.Drawing.Size(57, 21);
+            this.buttonSalvar.TabIndex = 16;
+            this.buttonSalvar.Text = "Salvar";
+            this.buttonSalvar.UseVisualStyleBackColor = true;
+            this.buttonSalvar.Click += new System.EventHandler(this.buttonSalvar_Click);
             // 
-            // button7
+            // buttonCancelar
             // 
-            this.button7.Location = new System.Drawing.Point(674, 467);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(75, 23);
-            this.button7.TabIndex = 36;
-            this.button7.Text = "button7";
-            this.button7.UseVisualStyleBackColor = true;
+            this.buttonCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.buttonCancelar.Location = new System.Drawing.Point(506, 379);
+            this.buttonCancelar.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonCancelar.Name = "buttonCancelar";
+            this.buttonCancelar.Size = new System.Drawing.Size(57, 21);
+            this.buttonCancelar.TabIndex = 17;
+            this.buttonCancelar.Text = "Cancelar";
+            this.buttonCancelar.UseVisualStyleBackColor = true;
+            this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
             // 
             // lblProfissional
             // 
@@ -424,28 +426,28 @@
             this.lblProfissional.Dock = System.Windows.Forms.DockStyle.Top;
             this.lblProfissional.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProfissional.Location = new System.Drawing.Point(0, 0);
+            this.lblProfissional.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblProfissional.Name = "lblProfissional";
-            this.lblProfissional.Size = new System.Drawing.Size(804, 49);
+            this.lblProfissional.Size = new System.Drawing.Size(603, 40);
             this.lblProfissional.TabIndex = 37;
             this.lblProfissional.Text = "Cadastro de Profissional";
             this.lblProfissional.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // dataGridViewTextBoxColumn1
+            // cPFTextBox
             // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Id";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 40;
+            this.cPFTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.profissionalBindingSource, "CPF", true));
+            this.cPFTextBox.Location = new System.Drawing.Point(344, 68);
+            this.cPFTextBox.Name = "cPFTextBox";
+            this.cPFTextBox.Size = new System.Drawing.Size(94, 20);
+            this.cPFTextBox.TabIndex = 1;
             // 
-            // dataGridViewTextBoxColumn2
+            // cEPTextBox
             // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "IdProfissional";
-            this.dataGridViewTextBoxColumn2.HeaderText = "IdProfissional";
-            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.cEPTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.profissionalBindingSource, "CEP", true));
+            this.cEPTextBox.Location = new System.Drawing.Point(22, 182);
+            this.cEPTextBox.Name = "cEPTextBox";
+            this.cEPTextBox.Size = new System.Drawing.Size(90, 20);
+            this.cEPTextBox.TabIndex = 7;
             // 
             // dataGridViewTextBoxColumn3
             // 
@@ -456,23 +458,6 @@
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             this.dataGridViewTextBoxColumn3.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "Id";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Id";
-            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            this.dataGridViewTextBoxColumn4.Width = 40;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "IdProfissional";
-            this.dataGridViewTextBoxColumn5.HeaderText = "IdProfissional";
-            this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            // 
             // dataGridViewTextBoxColumn6
             // 
             this.dataGridViewTextBoxColumn6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -482,36 +467,44 @@
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             this.dataGridViewTextBoxColumn6.ReadOnly = true;
             // 
+            // textBoxDataNascimento
+            // 
+            this.textBoxDataNascimento.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.profissionalBindingSource, "DataNascimento", true));
+            this.textBoxDataNascimento.Location = new System.Drawing.Point(22, 105);
+            this.textBoxDataNascimento.Name = "textBoxDataNascimento";
+            this.textBoxDataNascimento.Size = new System.Drawing.Size(89, 20);
+            this.textBoxDataNascimento.TabIndex = 2;
+            // 
             // FormCadastroProfissional
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(804, 503);
+            this.ClientSize = new System.Drawing.Size(603, 420);
+            this.Controls.Add(this.textBoxDataNascimento);
+            this.Controls.Add(cEPLabel1);
+            this.Controls.Add(this.cEPTextBox);
+            this.Controls.Add(cPFLabel1);
+            this.Controls.Add(this.cPFTextBox);
             this.Controls.Add(this.lblProfissional);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.button6);
+            this.Controls.Add(this.buttonCancelar);
+            this.Controls.Add(this.buttonSalvar);
             this.Controls.Add(this.telefoneProfissionalDataGridView);
             this.Controls.Add(this.emailProfissionalDataGridView);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.buttonExcluirTelefone);
+            this.Controls.Add(this.buttonInserirTelefone);
+            this.Controls.Add(this.buttonExcluirEmail);
+            this.Controls.Add(this.buttonInserirEmail);
+            this.Controls.Add(this.textBoxTelefone);
+            this.Controls.Add(this.textBoxEmail);
+            this.Controls.Add(this.buttonBuscarFoto);
+            this.Controls.Add(this.pictureBoxFoto);
             this.Controls.Add(this.ativoCheckBox);
             this.Controls.Add(bairroLabel);
             this.Controls.Add(this.bairroTextBox);
-            this.Controls.Add(cEPLabel);
-            this.Controls.Add(this.cEPMaskedTextBox);
             this.Controls.Add(cidadeLabel);
             this.Controls.Add(this.cidadeTextBox);
-            this.Controls.Add(cPFLabel);
-            this.Controls.Add(this.cPFMaskedTextBox);
             this.Controls.Add(dataNascimentoLabel);
-            this.Controls.Add(this.dataNascimentoDateTimePicker);
             this.Controls.Add(logradouroLabel);
             this.Controls.Add(this.logradouroTextBox);
             this.Controls.Add(nomeLabel);
@@ -522,13 +515,15 @@
             this.Controls.Add(this.paisTextBox);
             this.Controls.Add(uFLabel);
             this.Controls.Add(this.uFTextBox);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormCadastroProfissional";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.FormCadastroProfissional_Load);
             ((System.ComponentModel.ISupportInitialize)(this.profissionalBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFoto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emailProfissionalBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emailProfissionalDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.telefoneProfissionalBindingSource)).EndInit();
@@ -543,35 +538,31 @@
         private System.Windows.Forms.BindingSource profissionalBindingSource;
         private System.Windows.Forms.CheckBox ativoCheckBox;
         private System.Windows.Forms.TextBox bairroTextBox;
-        private System.Windows.Forms.MaskedTextBox cEPMaskedTextBox;
         private System.Windows.Forms.TextBox cidadeTextBox;
-        private System.Windows.Forms.MaskedTextBox cPFMaskedTextBox;
-        private System.Windows.Forms.DateTimePicker dataNascimentoDateTimePicker;
         private System.Windows.Forms.TextBox logradouroTextBox;
         private System.Windows.Forms.TextBox nomeTextBox;
         private System.Windows.Forms.TextBox numeroTextBox;
         private System.Windows.Forms.TextBox paisTextBox;
         private System.Windows.Forms.TextBox uFTextBox;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.PictureBox pictureBoxFoto;
+        private System.Windows.Forms.Button buttonBuscarFoto;
+        private System.Windows.Forms.TextBox textBoxEmail;
+        private System.Windows.Forms.TextBox textBoxTelefone;
+        private System.Windows.Forms.Button buttonInserirEmail;
+        private System.Windows.Forms.Button buttonExcluirEmail;
+        private System.Windows.Forms.Button buttonInserirTelefone;
+        private System.Windows.Forms.Button buttonExcluirTelefone;
         private System.Windows.Forms.BindingSource emailProfissionalBindingSource;
         private System.Windows.Forms.DataGridView emailProfissionalDataGridView;
         private System.Windows.Forms.BindingSource telefoneProfissionalBindingSource;
         private System.Windows.Forms.DataGridView telefoneProfissionalDataGridView;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button buttonSalvar;
+        private System.Windows.Forms.Button buttonCancelar;
         private System.Windows.Forms.Label lblProfissional;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.TextBox cPFTextBox;
+        private System.Windows.Forms.TextBox cEPTextBox;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.TextBox textBoxDataNascimento;
     }
 }
