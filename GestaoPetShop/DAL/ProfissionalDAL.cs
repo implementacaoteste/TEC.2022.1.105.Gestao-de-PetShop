@@ -60,44 +60,70 @@ namespace DAL
                 cn.Close();
             }
         }
-        public void Inserir(Profissional _profissional)
+        public void Inserir(Profissional _profissional, SqlTransaction _transaction = null)
         {
-            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
-            try
-            {
-                SqlCommand cmd = cn.CreateCommand();
-                cmd.CommandText = @"INSERT INTO Profissonal(idfuncao, Nome, CPF, Logradouro, Numero, Bairro, Cidade, UF, Pais, CEP, DataNascimento,Foto,Ativo) 
-                                    VALUES(@idfuncao, @Nome, @CPF, @Logradouro, @Numero, @Bairro, @Cidade, @UF, @Pais, @CEP, @DataNascimento,@Foto,@Ativo)";
+            SqlTransaction transaction = _transaction;
 
-                cmd.CommandType = System.Data.CommandType.Text;
-                cmd.Parameters.AddWithValue("@idfuncao", _profissional.IdFuncao);
-                cmd.Parameters.AddWithValue("@Nome", _profissional.Nome);
-                cmd.Parameters.AddWithValue("@CPF", _profissional.CPF);
-                cmd.Parameters.AddWithValue("@Logradouro", _profissional.Logradouro);
-                cmd.Parameters.AddWithValue("@Numero", _profissional.Numero);
-                cmd.Parameters.AddWithValue("@Bairro", _profissional.Bairro);
-                cmd.Parameters.AddWithValue("@Cidade", _profissional.Cidade);
-                cmd.Parameters.AddWithValue("@UF", _profissional.UF);
-                cmd.Parameters.AddWithValue("@Pais", _profissional.Pais);
-                cmd.Parameters.AddWithValue("@CEP", _profissional.CEP);
-                cmd.Parameters.AddWithValue("@DataNascimento", _profissional.DataNascimento);
-                cmd.Parameters.AddWithValue("@Foto", _profissional.Foto);
-                cmd.Parameters.AddWithValue("@Ativo", _profissional.Ativo);
-
-                cmd.Connection = cn;
-                cn.Open();
-
-                cmd.ExecuteNonQuery();
-            }
-            catch (Exception ex)
+            using (SqlConnection cn = new SqlConnection(Conexao.StringDeConexao))
             {
-                throw new Exception("Ocorreu um erro ao tentar inserir um Profissional no banco de dados.", ex) { Data = { { "Id", 50 } } };
+                using (SqlCommand cmd = new SqlCommand(@"INSERT INTO Profissional(Nome, CPF, Logradouro, Numero, Bairro, Cidade, UF, Pais, CEP, DataNascimento, Foto, Ativo)
+                                                                VALUES (@Nome, @CPF, @Logradouro, @Numero, @Bairro, @Cidade, @UF, @Pais, @CEP, @DataNascimento, @Foto, @Ativo) SELECT @@IDENTITY", cn))
+                {
+                    cmd.Parameters.AddWithValue("@Nome", _profissional.Nome);
+                    cmd.Parameters.AddWithValue("@CPF", _profissional.CPF);
+                    cmd.Parameters.AddWithValue("@Logradouro", _profissional.Logradouro);
+                    cmd.Parameters.AddWithValue("@Numero", _profissional.Numero);
+                    cmd.Parameters.AddWithValue("@Bairro", _profissional.Bairro);
+                    cmd.Parameters.AddWithValue("@Cidade", _profissional.Cidade);
+                    cmd.Parameters.AddWithValue("@UF", _profissional.UF);
+                    cmd.Parameters.AddWithValue("@Pais", _profissional.Pais);
+                    cmd.Parameters.AddWithValue("@CEP", _profissional.CEP);
+                    cmd.Parameters.AddWithValue("@DataNascimento", _profissional.DataNascimento);
+
+                    if (_profissional.Foto != null)
+                        cmd.Parameters.AddWithValue("@Foto", _profissional.Foto);
+                    else
+                        cmd.Parameters.Add(new SqlParameter() { ParameterName = "@Foto", SqlDbType = System.Data.SqlDbType.Image, Value = DBNull.Value });
+
+                    cmd.Parameters.AddWithValue("@Ativo", _profissional.Ativo);
+
+                    if (_transaction == null)
+                    {
+                        cn.Open();
+                        transaction = cn.BeginTransaction();
+                    }
+                    cmd.Transaction = transaction;
+                    cmd.Connection = transaction.Connection;
+                    try
+                    {
+                        int _idprofissional = Convert.ToInt32(cmd.ExecuteScalar());
+
+                        foreach (EmailProfissional emailProfissional in _profissional.EmailProfissional)
+                        {
+                            emailProfissional.IdProfissional = _idprofissional;
+                            new EmailProfissionalDAL().Inserir(emailProfissional, transaction);
+                        }
+
+                        foreach (TelefoneProfissional telefoneProfissional in _profissional.TelefoneProfissional)
+                        {
+                            telefoneProfissional.IdProfissional = _idprofissional;
+                            new TelefoneProfissionalDAL().Inserir(telefoneProfissional, transaction);
+                        }
+
+                        if (_transaction == null)
+                        {
+                            transaction.Commit();
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        if (transaction != null && transaction.Connection != null)
+                            transaction.Rollback();
+                        throw new Exception("Ocorreu um erro ao tentar Inserir um Profissional no banco de dados.", ex) { Data = { { "Id", -1 } } };
+                    }
+                }
             }
-            finally
-            {
-                cn.Close();
-            }
-        }
+        }//Givas
         public List<Profissional> BuscarPorNome(string _nome)//Givas
         {
             List<Profissional> profissionalList = new List<Profissional>();
