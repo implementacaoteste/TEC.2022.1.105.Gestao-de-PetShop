@@ -422,6 +422,9 @@
     <EmbeddedResource Include="FormConsultaPermissao.resx">
       <DependentUpon>FormConsultaPermissao.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormConsultaProfissional.resx">
+      <DependentUpon>FormConsultaProfissional.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormConsultaServico.resx">
       <DependentUpon>FormConsultaServico.cs</DependentUpon>
     </EmbeddedResource>

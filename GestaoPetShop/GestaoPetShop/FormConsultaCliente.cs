@@ -107,9 +107,9 @@ namespace GestaoPetShop
 
         private void FormConsultaCliente_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'petshopDataSet.Cliente' table. You can move, or remove it, as needed.
-            //this.clienteTableAdapter.Fill(this.petshopDataSet.Cliente);
-            //comboBoxBuscarPor.SelectedIndex = 3;
+        //TODO: This line of code loads data into the 'petshopDataSet.Cliente' table.You can move, or remove it, as needed.
+        //    this.clienteTableAdapter.Fill(this.petshopDataSet.Cliente);
+        //    comboBoxBuscarPor.SelectedIndex = 3;
         }
 
         private void buttonVisualizar_Click(object sender, EventArgs e)

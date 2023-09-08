@@ -133,7 +133,7 @@ namespace GestaoPetShop
 
         private void profissionalToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            using (FormCadastroProfissional frm = new FormCadastroProfissional())
+            using (FormConsultaProfissional frm = new FormConsultaProfissional())
             {
                 frm.ShowDialog();
             }
