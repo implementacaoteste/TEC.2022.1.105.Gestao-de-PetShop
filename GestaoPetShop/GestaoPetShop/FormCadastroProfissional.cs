@@ -19,7 +19,7 @@ namespace GestaoPetShop
         public FormCadastroProfissional(int _id = 0, bool _permitirSalvar = true)
         {
             InitializeComponent();
-            this.id = _id;
+            id = _id;
             buttonSalvar.Visible = _permitirSalvar;
             permitirSalvar = _permitirSalvar;
         }
@@ -36,6 +36,7 @@ namespace GestaoPetShop
                     new ProfissionalBLL().Inserir(profissional);
                 else
                     new ProfissionalBLL().Alterar(profissional);
+
                 MessageBox.Show("Registro salvo com sucesso.");
                 this.Close();
             }

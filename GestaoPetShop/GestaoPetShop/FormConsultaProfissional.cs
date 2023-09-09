@@ -28,6 +28,7 @@ namespace GestaoPetShop
                     case 0:
                         if (String.IsNullOrEmpty(textBoxBuscar.Text))
                             throw new Exception("Informe um Id para fazer a busca.") { Data = { { "Id", -1 } } };
+
                         profissionalBindingSource.DataSource = new ProfissionalBLL().BuscarPorId(Convert.ToInt32(textBoxBuscar.Text));
                         break;
                     case 1:
@@ -119,7 +120,7 @@ namespace GestaoPetShop
                     return;
                 }
                 int id = ((Profissional)profissionalBindingSource.Current).Id;
-                using (FormCadastroProfissional frm = new FormCadastroProfissional())
+                using (FormCadastroProfissional frm = new FormCadastroProfissional(id))
                 {
                     frm.ShowDialog();
                 }
