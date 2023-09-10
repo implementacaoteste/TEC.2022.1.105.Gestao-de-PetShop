@@ -76,7 +76,8 @@ namespace GestaoPetShop
         {
             try
             {
-                using (FormCadastroProfissional frm = new FormCadastroProfissional())
+                int id = ((Profissional)profissionalBindingSource.Current).Id;
+                using (FormCadastroProfissional frm = new FormCadastroProfissional(id))
                 {
                     frm.ShowDialog();
                 }
