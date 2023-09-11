@@ -2,6 +2,8 @@
 using RestSharp.Extensions;
 using System;
 using System.Collections.Generic;
+using System.Data.Common;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Security.Cryptography;
@@ -96,7 +98,7 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT Id, IdCliente, Nome, Sexo, Agressivo, Cor, Idade, Alergia, DataNascimento, Ativo FROM Animal WHERE Nome LIKE @Nome";
+                cmd.CommandText = @"SELECT Id, IdRaca,  IdCliente, Nome, Sexo, Agressivo, Cor, Idade, Alergia, DataNascimento, Ativo FROM Animal WHERE Nome LIKE @Nome";
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@Nome", "%" + _nome + "%");
 
@@ -107,6 +109,8 @@ namespace DAL
                     {
                         animal = new Animal();
                         animal.Id = (int)rd["Id"];
+                        animal.IdRaca = (int)rd["IdRaca"];
+                        animal.IdCliente = (int)rd["IdCliente"];
                         animal.Nome = rd["Nome"].ToString();
                         animal.Sexo = (char)rd["Sexo"];
                         animal.Agressivo = (char)rd["Agressivo"];
@@ -165,7 +169,7 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT Id, IdCliente, Nome, Sexo, Agressivo, Cor, Idade, Alergia, DataNascimento, Ativo FROM Animal";
+                cmd.CommandText = @"SELECT Id, IdRaca, IdCliente, Nome, Sexo, Agressivo, Cor, Idade, Alergia, DataNascimento, Ativo FROM Animal";
                 cmd.CommandType = System.Data.CommandType.Text;
 
                 cn.Open();
@@ -175,6 +179,7 @@ namespace DAL
                     {
                         animal = new Animal();
                         animal.Id = (int)rd["Id"];
+                        animal.IdRaca = (int)rd["IdRaca"];
                         animal.IdCliente = (int)rd["IdCliente"];
                         animal.Nome = rd["Nome"].ToString();
                         animal.Agressivo = (char)rd["Agressivo"];
@@ -205,9 +210,9 @@ namespace DAL
 
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = cn;
-            cmd.CommandText = @"SELECT Id,Nome,IdCliente,Sexo,  Agressivo, Cor, Alergia, DataNascimento ,Ativo FROM Animal WHERE Id = @Id";
+            cmd.CommandText = @"SELECT Id,IdRaca, IdCliente, Nome, Sexo,  Agressivo, Cor, Alergia, DataNascimento ,Ativo FROM Animal WHERE Id = @Id";
             cmd.CommandType = System.Data.CommandType.Text;
-            cmd.Parameters.AddWithValue("@Id", _id); //
+            cmd.Parameters.AddWithValue("@Id", _id);
 
             cn.Open();
             using (SqlDataReader rd = cmd.ExecuteReader())
@@ -217,9 +222,10 @@ namespace DAL
                     while (rd.Read())
                     {
                         animal.Id = (int)rd["Id"];
+                        animal.IdRaca = (int)rd["IdRaca"];
+                        animal.IdCliente = (int)rd["IdCliente"];
                         animal.Nome = rd["Nome"].ToString();
                         animal.Sexo = (char)rd["Sexo"];
-                        animal.IdCliente = (int)rd["IdCliente"];
                         animal.Agressivo = (char)rd["Agressivo"];
                         animal.Cor = rd["Cor"].ToString();
                         animal.Alergia = rd["Alergia"].ToString();
@@ -256,10 +262,10 @@ namespace DAL
                 {
                     animal = new Raca();
                     animal.Id = (int)rd["Id"];
-                    animal.Nome= rd["Nome"].ToString();
+                    animal.Nome = rd["Nome"].ToString();
                     animal.Especie = rd["Cor"].ToString();
                     animal.PaisOrigem = rd["Idade"].ToString();
-                  
+
                     animalList.Add(animal);
                 }
                 return animalList;
@@ -310,3 +316,4 @@ namespace DAL
         }
     }
 }
+

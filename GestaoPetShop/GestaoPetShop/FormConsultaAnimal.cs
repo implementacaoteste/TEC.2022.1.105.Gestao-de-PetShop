@@ -15,13 +15,39 @@ namespace GestaoPetShop
 
     public partial class FormConsultaAnimal : Form
     {
-        int id;
+      
         public FormConsultaAnimal()
         {
             InitializeComponent();
-            id = id;
+           
         }
 
+        private void buttonBuscar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                switch (comboBox1.SelectedIndex)
+                {
+                    case 0:
+                        animalBindingSource.DataSource = new AnimalBLL().BuscarTodos();
+                        break;
+                    case 1:
+                        animalBindingSource.DataSource = new AnimalBLL().BuscarPorNome(textBoxBuscar.Text);
+                        break;
+                    case 2:
+                        animalBindingSource.DataSource = new AnimalBLL().BuscarPorId(Convert.ToInt32(textBoxBuscar.Text));
+                        if (String.IsNullOrEmpty(textBoxBuscar.Text))
+                            throw new Exception("Informe um Id para fazer a busca.") { Data = { { "Id", 21 } } };
+                        break;
+                    default:
+                        break;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
         private void animalBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             this.Validate();
@@ -34,17 +60,10 @@ namespace GestaoPetShop
         {
             // TODO: This line of code loads data into the 'petshopDataSet.Animal' table. You can move, or remove it, as needed.
             // this.animalTableAdapter.Fill(this.petshopDataSet.Animal);
-            try
-            {
-                if (id == 0)
-                    animalBindingSource.AddNew();
-                else
-                    animalBindingSource.DataSource = new AnimalBLL().BuscarPorId(id);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+             comboBox1.SelectedIndex = 0;
+
+
+
 
         }
 
@@ -91,6 +110,6 @@ namespace GestaoPetShop
             animalBindingSource.CancelEdit();
         }
 
-        
+       
     }
 }
