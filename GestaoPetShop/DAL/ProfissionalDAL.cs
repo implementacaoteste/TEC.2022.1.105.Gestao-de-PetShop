@@ -16,7 +16,7 @@ namespace DAL
             try
             {
                 SqlCommand cmd = cn.CreateCommand();
-                cmd.CommandText = @"UPDATE Profissional SET Nome = @Nome, CPF = @CPF, 
+                cmd.CommandText = @"UPDATE Profissional SET IdFuncao = @IdFuncao, Nome = @Nome, CPF = @CPF, 
                                         Logradouro = @Logradouro, Numero = @Numero, Bairro = @Bairro,
                                         Cidade = @Cidade, UF= @UF, Pais = @Pais, CEP = @CEP, DataNascimento = @DataNascimento,
                                         Foto = @Foto, Ativo = @Ativo WHERE Id = @Id";
@@ -28,8 +28,8 @@ namespace DAL
 
                 cmd.CommandType = System.Data.CommandType.Text;
 
-                //cmd.Parameters.AddWithValue("@Idfuncao", _profissional.IdFuncao);
                 cmd.Parameters.AddWithValue("@Id", _profissional.Id);
+                cmd.Parameters.AddWithValue("@Idfuncao", _profissional.IdFuncao);
                 cmd.Parameters.AddWithValue("@Nome", _profissional.Nome);
                 cmd.Parameters.AddWithValue("@CPF", _profissional.CPF);
                 cmd.Parameters.AddWithValue("@Logradouro", _profissional.Logradouro);
@@ -75,7 +75,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                if(transaction != null && transaction.Connection != null)
+                if (transaction != null && transaction.Connection != null)
                     transaction.Rollback();
                 throw new Exception("Erro ao tentar Alterar um Profissonal no banco de dados", ex) { Data = { { "Id", -1 } } };
             }
@@ -90,9 +90,10 @@ namespace DAL
 
             using (SqlConnection cn = new SqlConnection(Conexao.StringDeConexao))
             {
-                using (SqlCommand cmd = new SqlCommand(@"INSERT INTO Profissional(Nome, CPF, Logradouro, Numero, Bairro, Cidade, UF, Pais, CEP, DataNascimento, Foto, Ativo)
-                                                                VALUES (@Nome, @CPF, @Logradouro, @Numero, @Bairro, @Cidade, @UF, @Pais, @CEP, @DataNascimento, @Foto, @Ativo) SELECT @@IDENTITY", cn))
+                using (SqlCommand cmd = new SqlCommand(@"INSERT INTO Profissional(IdFuncao, Nome, CPF, Logradouro, Numero, Bairro, Cidade, UF, Pais, CEP, DataNascimento, Foto, Ativo)
+                                                                VALUES (@IdFuncao, @Nome, @CPF, @Logradouro, @Numero, @Bairro, @Cidade, @UF, @Pais, @CEP, @DataNascimento, @Foto, @Ativo) SELECT @@IDENTITY", cn))
                 {
+                    cmd.Parameters.AddWithValue("@IdFuncao", _profissional.IdFuncao);
                     cmd.Parameters.AddWithValue("@Nome", _profissional.Nome);
                     cmd.Parameters.AddWithValue("@CPF", _profissional.CPF);
                     cmd.Parameters.AddWithValue("@Logradouro", _profissional.Logradouro);
@@ -262,7 +263,12 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT Id,IdFuncao, Nome, CPF, Logradouro, Numero, Bairro, Cidade, UF, Pais, CEP, DataNascimento, Foto, Ativo FROM Profissional WHERE Id = @Id";
+                cmd.CommandText = @"SELECT Profissional.Id, Profissional.IdFuncao, Profissional.Nome, Profissional.CPF, 
+                                            Profissional.Logradouro, Profissional.Numero, Profissional.Bairro, 
+                                            Profissional.Cidade, Profissional.UF, Profissional.Pais, Profissional.CEP, 
+                                            Profissional.DataNascimento, Profissional.Foto, Profissional.Ativo, 
+                                                Funcao.Nome AS NomeFuncao FROM Profissional 
+                                            INNER JOIN Funcao ON Profissional.IdFuncao = Funcao.Id WHERE Id = @Id";
                 //cmd.CommandText = @"SELECT Id,IdFuncao, Nome, CPF, Logradouro, Numero, Bairro, Cidade, UF, Pais, CEP, DataNascimento, Foto, Ativo FROM Profissional WHERE Id LIKE @Id";
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@Id", _id);
@@ -273,9 +279,13 @@ namespace DAL
                 {
                     while (rd.Read())
                     {
-                        //profissional = new Profissional();
                         profissional.Id = (int)rd["Id"];
-                        profissional.IdFuncao = (int)rd["IdFuncao"];
+                        if (rd["IdFuncao"] != null)
+                            profissional.IdFuncao = (int)rd["IdFuncao"];
+                        else
+                            profissional.IdFuncao = 0;
+
+                        profissional.NomeFuncao = rd["NomeFuncao"].ToString();
                         profissional.Nome = rd["Nome"].ToString();
                         profissional.CPF = rd["CPF"].ToString();
                         profissional.Logradouro = rd["Logradouro"].ToString();
