@@ -300,29 +300,6 @@ namespace DAL
                 }
             }
         }
-        public void ExcluirServicoDeAgendamento(int _idservico, int _idagendamento)
-        {
-            Agendamento agendamento = new Agendamento();
-            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
-            try
-            {
-                SqlCommand cmd = new SqlCommand();
-                cmd.Connection = cn;
-                cmd.CommandText = @"DELETE FROM AgendamentoServicos WHERE IdServico = @IdServico AND IdAgendamento = @IdAgendamento ";
-                cmd.CommandType = System.Data.CommandType.Text;
-                cmd.Parameters.AddWithValue("@IdServico", _idservico);
-                cmd.Parameters.AddWithValue("@IdAgendamento", _idagendamento);
-                cn.Open();
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("Ocorreu um erro ao tentar Excluit Serviços de Agendamento no banco de dados.", ex) { Data = { { "Id", 46 } } };
-            }
-            finally
-            {
-                cn.Close();
-            }
-        }
 
         public List<Agendamento> BuscarTodos(int _opcSituacao, int _opcAtivo)
         {
@@ -480,7 +457,6 @@ namespace DAL
                 cn.Close();
             }
         }
-      
         public List<Agendamento> BuscarAgendamentoPorData(int _opc, string _mesAno, int _opcAtivo = 0,int _opcSituacao = 0)
         {
             List<Agendamento> agendamentos = new List<Agendamento>();
@@ -883,7 +859,6 @@ namespace DAL
                 cn.Close();
             }
         }
-       
         public List<Agendamento> BuscarAgendamentoPorServico(string _nomeServico, int _opcAtivo, int _opcSituacao)
         {
             List<Agendamento> agendamentos = new List<Agendamento>();
@@ -1105,42 +1080,7 @@ namespace DAL
             }
         }
        
-        public List<AgendamentoServico> BuscarServicoPorNome(string _nomeServico)
-        {
-            List<AgendamentoServico> listaServicos = new List<AgendamentoServico>();
-            AgendamentoServico servicoView;
-            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
-            try
-            {
-                SqlCommand cmd = new SqlCommand();
-                cmd.Connection = cn;
-                cmd.CommandText = @"SELECT Id, Descricao, Preco FROM Servico   WHERE UPPER (Descricao) LIKE UPPER (@Nome)";
-                cmd.CommandType = System.Data.CommandType.Text;
-                cmd.Parameters.AddWithValue("@Nome", "%" + _nomeServico + "%");
-                cn.Open();
-                using (SqlDataReader rd = cmd.ExecuteReader())
-                {
-                    while (rd.Read())
-                    {
-                        servicoView = new AgendamentoServico();
-                        servicoView.Id = Convert.ToInt32(rd["Id"]);
-                        servicoView.Servico = rd["Descricao"].ToString();
-                        servicoView.ValorUnitario = Convert.ToDecimal(rd["Preco"]);
 
-                        listaServicos.Add(servicoView);
-                    }
-                }
-                return listaServicos;
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("Ocorreu um erro ao tentar buscar todos os Serviços no banco de dados.", ex) { Data = { { "Id", 46 } } };
-            }
-            finally
-            {
-                cn.Close();
-            }
-        }
         private List<AgendamentoServico> BuscarAgendamentoServicosPorIdAgendamento(int _idAgendamento)
         {
             List<AgendamentoServico> servicos = new List<AgendamentoServico>();
@@ -1186,39 +1126,6 @@ namespace DAL
         }
 
 
-        public Animal BuscarPorIdAnimal(int _idpesquisa)
-        {
-            Animal animal = new Animal();
-            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
-            try
-            {
-                SqlCommand cmd = new SqlCommand();
-                cmd.Connection = cn;
-                cmd.CommandText = @"SELECT Id, Nome , IdCliente FROM Animal WHERE Id = @Id";
-
-                cmd.CommandType = System.Data.CommandType.Text;
-                cmd.Parameters.AddWithValue("@Id", _idpesquisa);
-                cn.Open();
-                using (SqlDataReader rd = cmd.ExecuteReader())
-                {
-                    if (rd.Read())
-                    {
-                        animal.Id = Convert.ToInt32(rd["Id"]);
-                        animal.Nome = rd["Nome"].ToString();
-                        animal.IdCliente = Convert.ToInt32(rd["IdCliente"]);
-                    }
-                }
-                return animal;
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("Ocorreu um erro ao tentar buscar Animal no banco de dados.", ex) { Data = { { "Id", 46 } } };
-            }
-            finally
-            {
-                cn.Close();
-            }
-        }
         public Cliente BuscarPorIdAnimalCliente(int _id, int _opc)
         {
             Cliente cliente = new Cliente();
@@ -1362,39 +1269,6 @@ namespace DAL
                 cn.Close();
             }
         }
-        public Servico PorNome(string _selectedText)
-        {
-            Servico servicoView;
-            servicoView = new Servico();
-            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
-            try
-            {
-                SqlCommand cmd = new SqlCommand();
-                cmd.Connection = cn;
-                cmd.CommandText = @"SELECT Id, Descricao, Preco FROM Servico   WHERE UPPER (Descricao) LIKE UPPER (@Nome)";
-                cmd.CommandType = System.Data.CommandType.Text;
-                cmd.Parameters.AddWithValue("@Nome", _selectedText);
-                cn.Open();
-                using (SqlDataReader rd = cmd.ExecuteReader())
-                {
-                    while (rd.Read())
-                    {
-                        servicoView.Id = Convert.ToInt32(rd["Id"]);
-                        servicoView.Descricao = rd["Descricao"].ToString();
-                        servicoView.Preco = Convert.ToDecimal(rd["Preco"]);
-                    }
-                }
-                return servicoView;
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("Ocorreu um erro ao tentar buscar todos os Serviços no banco de dados.", ex) { Data = { { "Id", 46 } } };
-            }
-            finally
-            {
-                cn.Close();
-            }
-        }
         public Profissional BuscarProfissional(string _nomeProfissional)
         {
             Profissional profissional = new Profissional();
@@ -1497,37 +1371,6 @@ namespace DAL
 
 
         }
-        public Cliente BuscarPorIdCliente(int _idCliente)
-        {
-            Cliente cliente = new Cliente();
-            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
-            try
-            {
-                SqlCommand cmd = new SqlCommand();
-                cmd.Connection = cn;
-                cmd.CommandText = @"SELECT Id, Nome  FROM Cliente WHERE Id = @Id";
-
-                cmd.CommandType = System.Data.CommandType.Text;
-                cmd.Parameters.AddWithValue("@Id", _idCliente);
-                cn.Open();
-                using (SqlDataReader rd = cmd.ExecuteReader())
-                {
-                    if (rd.Read())
-                    {
-                        cliente.Id = Convert.ToInt32(rd["Id"]);
-                        cliente.Nome = rd["Nome"].ToString();
-                    }
-                }
-                return cliente;
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("Ocorreu um erro ao tentar buscar Animal no banco de dados.", ex) { Data = { { "Id", 46 } } };
-            }
-            finally
-            {
-                cn.Close();
-            }
-        }
+       
     }
 }

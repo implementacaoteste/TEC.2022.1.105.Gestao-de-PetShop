@@ -29,6 +29,53 @@ namespace BLL
             AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
             agendamentoDAL.Excluir(_agendamento);
         }
+        //______________________________________________________________________
+
+        public List<Agendamento> BuscarTodos(int _opcSituacao,int _opcAtivo)
+        {
+            AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
+            return agendamentoDAL.BuscarTodos(_opcSituacao, _opcAtivo);
+        }
+        public Agendamento BuscarAgendamentoPorId(int _idAgendamento, int _opc)
+        {
+            AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
+            return agendamentoDAL.BuscarAgendamentoPorId(_idAgendamento, _opc);
+        }
+        public List<Agendamento> BuscarAgendamentoPorData(int _opc, string _mesAno, int _opcAtivo, int _opcSituacao)
+        {
+            AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
+            return agendamentoDAL.BuscarAgendamentoPorData(_opc, _mesAno,_opcAtivo,_opcSituacao);
+        }
+        public List<Agendamento> BuscarAgendamentoPorNomeCliente(string _nomeCliente, int _opcAtivo, int _opcSituacao)
+        {
+            AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
+            return agendamentoDAL.BuscarAgendamentoPorNomeCliente(_nomeCliente, _opcAtivo,_opcSituacao);
+        }
+        public List<Agendamento> BuscarAgendamentoPorNomeProfissional(string _nomeProfissional, int _opcAtivo, int _opcSituacao)
+        {
+            AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
+            return agendamentoDAL.BuscarAgendamentoPorNomeProfissional(_nomeProfissional, _opcAtivo, _opcSituacao);
+        }
+        public List<Agendamento> BuscarAgendamentoPorServicoData(string _nomeServico, string _data, int _opc, int _opcAtivo, int _opcSituacao)
+        {
+            AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
+            return agendamentoDAL.BuscarAgendamentoPorServicoData(_nomeServico, _data,_opc,_opcAtivo,_opcSituacao);
+        }
+        public List<Agendamento> BuscarAgendamentoPorServico(string _nomeServico, int _opcAtivo, int _opcSituacao)
+        {
+            AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
+            return agendamentoDAL.BuscarAgendamentoPorServico(_nomeServico, _opcAtivo, _opcSituacao);
+        }
+        public List<Agendamento> BuscarAgendamentoPorProfissionalData(string _nomeProfissional, string _data, int _opc,int _opcAtivo, int _opcSituacao)
+        {
+            AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
+            return agendamentoDAL.BuscarAgendamentoPorProfissionalData(_nomeProfissional, _data, _opc, _opcAtivo, _opcSituacao);
+        }
+
+
+
+        //----------------------------------------------------------------------
+        
         public Cliente BuscarPorIdAnimalCliente(int _id, int _opc)
         {
             AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
@@ -44,28 +91,6 @@ namespace BLL
             AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
             return agendamentoDAL.BuscarPorNomeProfissional(_nomeProfissional, _idProfissional);
         }
-        public List<Agendamento> BuscarAgendamentoPorNomeCliente(string _nomeCliente, int _opcAtivo, int _opcSituacao)
-        {
-            AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
-            return agendamentoDAL.BuscarAgendamentoPorNomeCliente(_nomeCliente, _opcAtivo,_opcSituacao);
-        }
-       
-        public List<Agendamento> BuscarAgendamentoPorData(int _opc, string _mesAno, int _opcAtivo, int _opcSituacao)
-        {
-            AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
-            return agendamentoDAL.BuscarAgendamentoPorData(_opc, _mesAno,_opcAtivo,_opcSituacao);
-        }
-        public List<AgendamentoServico> BuscarServicoPorNome(string _nomeServico)
-        {
-            AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
-            return agendamentoDAL.BuscarServicoPorNome(_nomeServico);
-        }
-        public Servico PorNome(string _selectedText)
-        {
-            AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
-            return agendamentoDAL.PorNome(_selectedText);
-        }
-      
         public Profissional BuscarProfissional(string _nomeProfissional)
         {
             AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
@@ -76,51 +101,8 @@ namespace BLL
             AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
             return agendamentoDAL.BuscarSituacaoPorNome(_descricaoSituacao);
         }
-        public Agendamento BuscarAgendamentoPorId(int _idAgendamento, int _opc)
-        {
-            AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
-            return agendamentoDAL.BuscarAgendamentoPorId(_idAgendamento, _opc);
-        }
-        public void ExcluirServicoDeAgendamento(int _idservico, int _idagendamento)
-        {
-            AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
-            agendamentoDAL.ExcluirServicoDeAgendamento(_idservico, _idagendamento);
-        }
-        public List<Agendamento> BuscarTodos(int _opcSituacao,int _opcAtivo)
-        {
-            AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
-            return agendamentoDAL.BuscarTodos(_opcSituacao, _opcAtivo);
-        }
-        public Animal BuscarPorIdAnimal(int _idpesquisa)
-        {
-            AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
-            return agendamentoDAL.BuscarPorIdAnimal(_idpesquisa);
-        }
-        public Cliente BuscarPorIdCliente(int _idCliente)
-        {
-            AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
-            return agendamentoDAL.BuscarPorIdCliente(_idCliente);
-        }
-        public List<Agendamento> BuscarAgendamentoPorNomeProfissional(string _nomeProfissional, int _opcAtivo, int _opcSituacao)
-        {
-            AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
-            return agendamentoDAL.BuscarAgendamentoPorNomeProfissional(_nomeProfissional, _opcAtivo, _opcSituacao);
-        }
-        public List<Agendamento> BuscarAgendamentoPorServicoData(string _nomeServico, string _data, int _opc, int _opcAtivo, int _opcSituacao)
-        {
-            AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
-            return agendamentoDAL.BuscarAgendamentoPorServicoData(_nomeServico, _data,_opc,_opcAtivo,_opcSituacao);
-        }
+
+      
        
-        public List<Agendamento> BuscarAgendamentoPorServico(string _nomeServico, int _opcAtivo, int _opcSituacao)
-        {
-            AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
-            return agendamentoDAL.BuscarAgendamentoPorServico(_nomeServico, _opcAtivo, _opcSituacao);
-        }
-        public List<Agendamento> BuscarAgendamentoPorProfissionalData(string _nomeProfissional, string _data, int _opc,int _opcAtivo, int _opcSituacao)
-        {
-            AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
-            return agendamentoDAL.BuscarAgendamentoPorProfissionalData(_nomeProfissional, _data, _opc, _opcAtivo, _opcSituacao);
-        }
     }
 }
