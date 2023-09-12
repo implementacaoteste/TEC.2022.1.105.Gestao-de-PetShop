@@ -60,9 +60,8 @@ namespace GestaoPetShop
         {
             // TODO: This line of code loads data into the 'petshopDataSet.Animal' table. You can move, or remove it, as needed.
             // this.animalTableAdapter.Fill(this.petshopDataSet.Animal);
+
              comboBox1.SelectedIndex = 0;
-
-
 
 
         }

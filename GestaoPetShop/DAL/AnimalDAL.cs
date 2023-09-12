@@ -20,12 +20,13 @@ namespace DAL
             try
             {
                 SqlCommand cmd = cn.CreateCommand();
-                cmd.CommandText = @"INSERT INTO Animal(Id, IdCliente, Nome, Sexo, Agressivo, Cor, Idade, Alergia, DataNascimento, Ativo) 
-                                               VALUES (@Id, @IdCliente, @Nome, @Sexo, @Agressivo, @Cor, @Idade, @Alergia, @DataNascimento, @Ativo)";
+                cmd.CommandText = @"INSERT INTO Animal( IdCliente, IdRaca, Nome, Sexo, Agressivo, Cor, Idade, Alergia, DataNascimento, Ativo) 
+                                               VALUES ( @IdCliente, @IdRaca, @Nome, @Sexo, @Agressivo, @Cor, @Idade, @Alergia, @DataNascimento, @Ativo)";
                 cmd.CommandType = System.Data.CommandType.Text;
 
-                cmd.Parameters.AddWithValue("@Id", _animal.Id);
+                //cmd.Parameters.AddWithValue("@Id", _animal.Id);
                 cmd.Parameters.AddWithValue("@IdCliente", _animal.IdCliente);
+                cmd.Parameters.AddWithValue("@IdRaca", _animal.IdRaca); 
                 cmd.Parameters.AddWithValue("@Nome", _animal.Nome);
                 cmd.Parameters.AddWithValue("@Sexo", _animal.Sexo);
                 cmd.Parameters.AddWithValue("@Agressivo", _animal.Agressivo);
@@ -112,12 +113,12 @@ namespace DAL
                         animal.IdRaca = (int)rd["IdRaca"];
                         animal.IdCliente = (int)rd["IdCliente"];
                         animal.Nome = rd["Nome"].ToString();
-                        animal.Sexo = (char)rd["Sexo"];
-                        animal.Agressivo = (char)rd["Agressivo"];
+                        animal.Sexo = Convert.ToChar(rd["Sexo"]);
+                        animal.Agressivo = Convert.ToChar(rd["Agressivo"]);
                         animal.Cor = rd["Cor"].ToString();
                         animal.Idade = (int)rd["Idade"];
                         animal.Alergia = rd["Alergia"].ToString();
-                        animal.DataNascimento = rd["DataNascimento"].ToString();
+                        animal.DataNascimento = Convert.ToDateTime(rd["DataNascimento"]);
                         animal.Ativo = (bool)rd["Ativo"];
 
                         animalList.Add(animal);
@@ -182,11 +183,12 @@ namespace DAL
                         animal.IdRaca = (int)rd["IdRaca"];
                         animal.IdCliente = (int)rd["IdCliente"];
                         animal.Nome = rd["Nome"].ToString();
-                        animal.Agressivo = (char)rd["Agressivo"];
+                        animal.Sexo = Convert.ToChar(rd["Sexo"]);
+                        animal.Agressivo = Convert.ToChar(rd["Agressivo"]);
                         animal.Cor = rd["Cor"].ToString();
                         animal.Idade = (int)rd["Idade"];
                         animal.Alergia = rd["Alergia"].ToString();
-                        animal.DataNascimento = rd["DataNascimento"].ToString();
+                        animal.DataNascimento = Convert.ToDateTime(rd["DataNascimento"]);
                         animal.Ativo = (bool)rd["Ativo"];
 
                         animalList.Add(animal);
@@ -225,11 +227,11 @@ namespace DAL
                         animal.IdRaca = (int)rd["IdRaca"];
                         animal.IdCliente = (int)rd["IdCliente"];
                         animal.Nome = rd["Nome"].ToString();
-                        animal.Sexo = (char)rd["Sexo"];
-                        animal.Agressivo = (char)rd["Agressivo"];
+                        animal.Sexo = Convert.ToChar(rd["Sexo"]);
+                        animal.Agressivo = Convert.ToChar(rd["Agressivo"]);
                         animal.Cor = rd["Cor"].ToString();
                         animal.Alergia = rd["Alergia"].ToString();
-                        animal.DataNascimento = rd["DataNascimento"].ToString();
+                        animal.DataNascimento = Convert.ToDateTime(rd["DataNascimento"]);
                         animal.Ativo = (bool)rd["Ativo"];
 
                     }
