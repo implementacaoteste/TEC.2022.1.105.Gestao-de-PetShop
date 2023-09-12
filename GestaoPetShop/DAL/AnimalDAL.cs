@@ -2,6 +2,8 @@
 using RestSharp.Extensions;
 using System;
 using System.Collections.Generic;
+using System.Data.Common;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Security.Cryptography;
@@ -18,12 +20,13 @@ namespace DAL
             try
             {
                 SqlCommand cmd = cn.CreateCommand();
-                cmd.CommandText = @"INSERT INTO Animal(Id, IdCliente, Nome, Sexo, Agressivo, Cor, Idade, Alergia, DataNascimento, Ativo) 
-                                               VALUES (@Id, @IdCliente, @Nome, @Sexo, @Agressivo, @Cor, @Idade, @Alergia, @DataNascimento, @Ativo)";
+                cmd.CommandText = @"INSERT INTO Animal( IdCliente, IdRaca, Nome, Sexo, Agressivo, Cor, Idade, Alergia, DataNascimento, Ativo) 
+                                               VALUES ( @IdCliente, @IdRaca, @Nome, @Sexo, @Agressivo, @Cor, @Idade, @Alergia, @DataNascimento, @Ativo)";
                 cmd.CommandType = System.Data.CommandType.Text;
 
-                cmd.Parameters.AddWithValue("@Id", _animal.Id);
+                //cmd.Parameters.AddWithValue("@Id", _animal.Id);
                 cmd.Parameters.AddWithValue("@IdCliente", _animal.IdCliente);
+                cmd.Parameters.AddWithValue("@IdRaca", _animal.IdRaca); 
                 cmd.Parameters.AddWithValue("@Nome", _animal.Nome);
                 cmd.Parameters.AddWithValue("@Sexo", _animal.Sexo);
                 cmd.Parameters.AddWithValue("@Agressivo", _animal.Agressivo);
@@ -96,7 +99,7 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT Id, IdCliente, Nome, Sexo, Agressivo, Cor, Idade, Alergia, DataNascimento, Ativo FROM Animal WHERE Nome LIKE @Nome";
+                cmd.CommandText = @"SELECT Id, IdRaca,  IdCliente, Nome, Sexo, Agressivo, Cor, Idade, Alergia, DataNascimento, Ativo FROM Animal WHERE Nome LIKE @Nome";
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@Nome", "%" + _nome + "%");
 
@@ -107,13 +110,15 @@ namespace DAL
                     {
                         animal = new Animal();
                         animal.Id = (int)rd["Id"];
+                        animal.IdRaca = (int)rd["IdRaca"];
+                        animal.IdCliente = (int)rd["IdCliente"];
                         animal.Nome = rd["Nome"].ToString();
-                        animal.Sexo = (char)rd["Sexo"];
-                        animal.Agressivo = (char)rd["Agressivo"];
+                        animal.Sexo = Convert.ToChar(rd["Sexo"]);
+                        animal.Agressivo = Convert.ToChar(rd["Agressivo"]);
                         animal.Cor = rd["Cor"].ToString();
                         animal.Idade = (int)rd["Idade"];
                         animal.Alergia = rd["Alergia"].ToString();
-                        animal.DataNascimento = rd["DataNascimento"].ToString();
+                        animal.DataNascimento = Convert.ToDateTime(rd["DataNascimento"]);
                         animal.Ativo = (bool)rd["Ativo"];
 
                         animalList.Add(animal);
@@ -165,7 +170,7 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT Id, IdCliente, Nome, Sexo, Agressivo, Cor, Idade, Alergia, DataNascimento, Ativo FROM Animal";
+                cmd.CommandText = @"SELECT Id, IdRaca, IdCliente, Nome, Sexo, Agressivo, Cor, Idade, Alergia, DataNascimento, Ativo FROM Animal";
                 cmd.CommandType = System.Data.CommandType.Text;
 
                 cn.Open();
@@ -175,13 +180,15 @@ namespace DAL
                     {
                         animal = new Animal();
                         animal.Id = (int)rd["Id"];
+                        animal.IdRaca = (int)rd["IdRaca"];
                         animal.IdCliente = (int)rd["IdCliente"];
                         animal.Nome = rd["Nome"].ToString();
-                        animal.Agressivo = (char)rd["Agressivo"];
+                        animal.Sexo = Convert.ToChar(rd["Sexo"]);
+                        animal.Agressivo = Convert.ToChar(rd["Agressivo"]);
                         animal.Cor = rd["Cor"].ToString();
                         animal.Idade = (int)rd["Idade"];
                         animal.Alergia = rd["Alergia"].ToString();
-                        animal.DataNascimento = rd["DataNascimento"].ToString();
+                        animal.DataNascimento = Convert.ToDateTime(rd["DataNascimento"]);
                         animal.Ativo = (bool)rd["Ativo"];
 
                         animalList.Add(animal);
@@ -205,9 +212,9 @@ namespace DAL
 
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = cn;
-            cmd.CommandText = @"SELECT Id,Nome,IdCliente,Sexo,  Agressivo, Cor, Alergia, DataNascimento ,Ativo FROM Animal WHERE Id = @Id";
+            cmd.CommandText = @"SELECT Id,IdRaca, IdCliente, Nome, Sexo,  Agressivo, Cor, Alergia, DataNascimento ,Ativo FROM Animal WHERE Id = @Id";
             cmd.CommandType = System.Data.CommandType.Text;
-            cmd.Parameters.AddWithValue("@Id", _id); //
+            cmd.Parameters.AddWithValue("@Id", _id);
 
             cn.Open();
             using (SqlDataReader rd = cmd.ExecuteReader())
@@ -217,13 +224,14 @@ namespace DAL
                     while (rd.Read())
                     {
                         animal.Id = (int)rd["Id"];
-                        animal.Nome = rd["Nome"].ToString();
-                        animal.Sexo = (char)rd["Sexo"];
+                        animal.IdRaca = (int)rd["IdRaca"];
                         animal.IdCliente = (int)rd["IdCliente"];
-                        animal.Agressivo = (char)rd["Agressivo"];
+                        animal.Nome = rd["Nome"].ToString();
+                        animal.Sexo = Convert.ToChar(rd["Sexo"]);
+                        animal.Agressivo = Convert.ToChar(rd["Agressivo"]);
                         animal.Cor = rd["Cor"].ToString();
                         animal.Alergia = rd["Alergia"].ToString();
-                        animal.DataNascimento = rd["DataNascimento"].ToString();
+                        animal.DataNascimento = Convert.ToDateTime(rd["DataNascimento"]);
                         animal.Ativo = (bool)rd["Ativo"];
 
                     }
@@ -256,10 +264,10 @@ namespace DAL
                 {
                     animal = new Raca();
                     animal.Id = (int)rd["Id"];
-                    animal.Nome= rd["Nome"].ToString();
+                    animal.Nome = rd["Nome"].ToString();
                     animal.Especie = rd["Cor"].ToString();
                     animal.PaisOrigem = rd["Idade"].ToString();
-                  
+
                     animalList.Add(animal);
                 }
                 return animalList;
@@ -310,3 +318,4 @@ namespace DAL
         }
     }
 }
+

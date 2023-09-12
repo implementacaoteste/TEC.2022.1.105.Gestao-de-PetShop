@@ -19,7 +19,7 @@ namespace Models
         public string Cor { get; set; }
         public int Idade { get; set; }
         public string Alergia { get; set; }
-        public string DataNascimento { get; set; }
+        public DateTime DataNascimento { get; set; }
         public bool Ativo { get; set; }
 
     }
