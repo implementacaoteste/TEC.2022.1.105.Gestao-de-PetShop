@@ -268,7 +268,7 @@ namespace DAL
                                             Profissional.Cidade, Profissional.UF, Profissional.Pais, Profissional.CEP, 
                                             Profissional.DataNascimento, Profissional.Foto, Profissional.Ativo, 
                                                 Funcao.Nome AS NomeFuncao FROM Profissional 
-                                            INNER JOIN Funcao ON Profissional.IdFuncao = Funcao.Id WHERE Id = @Id";
+                                            INNER JOIN Funcao ON Profissional.IdFuncao = Funcao.Id WHERE Profissional.Id = @Id";
                 //cmd.CommandText = @"SELECT Id,IdFuncao, Nome, CPF, Logradouro, Numero, Bairro, Cidade, UF, Pais, CEP, DataNascimento, Foto, Ativo FROM Profissional WHERE Id LIKE @Id";
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@Id", _id);
@@ -280,11 +280,7 @@ namespace DAL
                     while (rd.Read())
                     {
                         profissional.Id = (int)rd["Id"];
-                        if (rd["IdFuncao"] != null)
-                            profissional.IdFuncao = (int)rd["IdFuncao"];
-                        else
-                            profissional.IdFuncao = 0;
-
+                        profissional.IdFuncao = (int)rd["IdFuncao"];
                         profissional.NomeFuncao = rd["NomeFuncao"].ToString();
                         profissional.Nome = rd["Nome"].ToString();
                         profissional.CPF = rd["CPF"].ToString();
