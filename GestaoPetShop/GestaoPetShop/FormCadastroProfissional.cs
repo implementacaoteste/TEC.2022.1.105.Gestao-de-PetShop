@@ -62,6 +62,15 @@ namespace GestaoPetShop
                             item.Enabled = false;
                     }
                 }
+
+                List<Funcao> funcoes = new List<Funcao>();
+                funcoes = new FuncaoBLL().BuscarTodos();
+
+                int num2 = funcoes.Count();
+                for (int x = 0; x < num2; x++)
+                {
+                    nomeFuncaoComboBox.Items.Insert(x, funcoes[x].Nome);
+                }
             }
             catch (Exception ex)
             {
@@ -139,16 +148,28 @@ namespace GestaoPetShop
                     MessageBox.Show("Não existe registro para ser excluído.");
                     return;
                 }
-                if(MessageBox.Show("Deseja realmente excluir este registro ?", "Atenção !", MessageBoxButtons.YesNo)==DialogResult.No)
+                if (MessageBox.Show("Deseja realmente excluir este registro ?", "Atenção !", MessageBoxButtons.YesNo) == DialogResult.No)
                     return;
 
                 int id = ((TelefoneProfissional)telefoneProfissionalBindingSource.Current).Id;
-                new TelefoneProfissionalBLL() .Excluir(id);
+                new TelefoneProfissionalBLL().Excluir(id);
                 telefoneProfissionalBindingSource.RemoveCurrent();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+            }
+        }
+        private void nomeFuncaoComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            List<Funcao> funcoes = new List<Funcao>();
+            funcoes = new FuncaoBLL().BuscarPorNome(nomeFuncaoComboBox.Text);
+
+            int num2 = funcoes.Count();
+            for (int x = 0; x < num2; x++)
+            {
+                idFuncaoTextBox.Text = funcoes[x].Id.ToString();
+                    //Insert(x, Convert.ToString(funcoes[x].Id));
             }
         }
     }

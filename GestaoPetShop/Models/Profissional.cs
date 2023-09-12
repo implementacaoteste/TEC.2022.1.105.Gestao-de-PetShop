@@ -6,7 +6,8 @@ namespace Models
     public class Profissional
     {
         public int Id { get; set; }
-        public int IdFuncao  { get; set; } 
+        public int IdFuncao  { get; set; }
+        public string NomeFuncao { get; set; }
         public string Nome { get; set; }
         public string CPF { get; set; }
         public string Logradouro { get; set; }
