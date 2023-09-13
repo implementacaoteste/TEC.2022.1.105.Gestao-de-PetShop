@@ -65,8 +65,9 @@ namespace GestaoPetShop
         {
             try
             {
-                if (clienteBindingSource.Count > 0)
+                if (clienteBindingSource.Count > 0 & animaisBindingSource.Count > 0)
                 {
+                   
                     this.Cliente = (Cliente)clienteBindingSource.Current;
                     this.Animal = (Animal)animaisBindingSource.Current;
                     Close();

@@ -43,12 +43,14 @@ namespace GestaoPetShop
                 List<Situacao> situacoes = new List<Situacao>();
                 string _nomeProfissional = "";
                 int _idProfissional = 0;
+
                 agendamentoProfissinal = new AgendamentoBLL().BuscarPorNomeProfissional(_nomeProfissional, _idProfissional);
                 int num2 = agendamentoProfissinal.Count();
                 for (int x = 0; x < num2; x++)
                 {
                     nomeProfissionalComboBox.Items.Insert(x, agendamentoProfissinal[x].Nome);
                 }
+
                 situacoes = new SituacaoBLL().BuscarTodos();
                 int num3 = situacoes.Count();
                 for (int x = 0; x < num3; x++)
@@ -108,11 +110,11 @@ namespace GestaoPetShop
                 }
                 else
                 {
-                    if (dataagendamento.Date < datahoje.Date)
-                    {
-                        MessageBox.Show("Data inválida! \n Menor que a data atual.");
-                        return;
-                    }
+                    //if (dataagendamento.Date < datahoje.Date)
+                    //{
+                    //    MessageBox.Show("Data inválida! \n Menor que a data atual.");
+                    //    return;
+                    //}
 
                     new AgendamentoBLL().Inserir(agendamento);
                     MessageBox.Show("Agendamento Cadastrado com sucesso!");
