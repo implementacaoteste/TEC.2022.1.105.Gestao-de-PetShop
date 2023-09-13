@@ -169,6 +169,7 @@ namespace GestaoPetShop
             for (int x = 0; x < num2; x++)
             {
                 idFuncaoTextBox.Text = funcoes[x].Id.ToString();
+                ((Profissional)profissionalBindingSource.Current).IdFuncao = Convert.ToInt32(funcoes[x].Id);
                     //Insert(x, Convert.ToString(funcoes[x].Id));
             }
         }

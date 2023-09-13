@@ -50,7 +50,7 @@
             // 
             nomeUsuarioLabel.AutoSize = true;
             nomeUsuarioLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            nomeUsuarioLabel.Location = new System.Drawing.Point(5, 70);
+            nomeUsuarioLabel.Location = new System.Drawing.Point(9, 58);
             nomeUsuarioLabel.Name = "nomeUsuarioLabel";
             nomeUsuarioLabel.Size = new System.Drawing.Size(122, 18);
             nomeUsuarioLabel.TabIndex = 7;
@@ -60,7 +60,7 @@
             // 
             senhaLabel.AutoSize = true;
             senhaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            senhaLabel.Location = new System.Drawing.Point(5, 129);
+            senhaLabel.Location = new System.Drawing.Point(9, 107);
             senhaLabel.Name = "senhaLabel";
             senhaLabel.Size = new System.Drawing.Size(50, 18);
             senhaLabel.TabIndex = 9;
@@ -70,7 +70,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label1.Location = new System.Drawing.Point(163, 129);
+            label1.Location = new System.Drawing.Point(139, 107);
             label1.Name = "label1";
             label1.Size = new System.Drawing.Size(118, 18);
             label1.TabIndex = 11;
@@ -83,16 +83,16 @@
             // nomeUsuarioTextBox
             // 
             this.nomeUsuarioTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioBindingSource, "NomeUsuario", true));
-            this.nomeUsuarioTextBox.Location = new System.Drawing.Point(8, 90);
+            this.nomeUsuarioTextBox.Location = new System.Drawing.Point(12, 78);
             this.nomeUsuarioTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.nomeUsuarioTextBox.Name = "nomeUsuarioTextBox";
-            this.nomeUsuarioTextBox.Size = new System.Drawing.Size(391, 22);
+            this.nomeUsuarioTextBox.Size = new System.Drawing.Size(192, 22);
             this.nomeUsuarioTextBox.TabIndex = 8;
             // 
             // senhaTextBox
             // 
             this.senhaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioBindingSource, "Senha", true));
-            this.senhaTextBox.Location = new System.Drawing.Point(8, 151);
+            this.senhaTextBox.Location = new System.Drawing.Point(12, 129);
             this.senhaTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.senhaTextBox.Name = "senhaTextBox";
             this.senhaTextBox.Size = new System.Drawing.Size(115, 22);
@@ -102,7 +102,7 @@
             // 
             this.ativoCheckBox.AutoSize = true;
             this.ativoCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.usuarioBindingSource, "Ativo", true));
-            this.ativoCheckBox.Location = new System.Drawing.Point(340, 151);
+            this.ativoCheckBox.Location = new System.Drawing.Point(227, 80);
             this.ativoCheckBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ativoCheckBox.Name = "ativoCheckBox";
             this.ativoCheckBox.Size = new System.Drawing.Size(59, 20);
@@ -112,7 +112,7 @@
             // 
             // textBoxConfirmarSenha
             // 
-            this.textBoxConfirmarSenha.Location = new System.Drawing.Point(166, 151);
+            this.textBoxConfirmarSenha.Location = new System.Drawing.Point(142, 129);
             this.textBoxConfirmarSenha.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxConfirmarSenha.Name = "textBoxConfirmarSenha";
             this.textBoxConfirmarSenha.Size = new System.Drawing.Size(115, 22);
@@ -124,14 +124,14 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(0, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(411, 58);
+            this.label2.Size = new System.Drawing.Size(336, 58);
             this.label2.TabIndex = 0;
             this.label2.Text = "Cadastro de Usuários";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // buttonSalvar
             // 
-            this.buttonSalvar.Location = new System.Drawing.Point(243, 202);
+            this.buttonSalvar.Location = new System.Drawing.Point(101, 166);
             this.buttonSalvar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonSalvar.Name = "buttonSalvar";
             this.buttonSalvar.Size = new System.Drawing.Size(75, 31);
@@ -142,7 +142,7 @@
             // 
             // buttonCancelar
             // 
-            this.buttonCancelar.Location = new System.Drawing.Point(324, 202);
+            this.buttonCancelar.Location = new System.Drawing.Point(182, 166);
             this.buttonCancelar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonCancelar.Name = "buttonCancelar";
             this.buttonCancelar.Size = new System.Drawing.Size(75, 31);
@@ -156,7 +156,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(411, 256);
+            this.ClientSize = new System.Drawing.Size(336, 210);
             this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.buttonSalvar);
             this.Controls.Add(this.label2);
