@@ -193,6 +193,15 @@
             nomeFuncaoLabel.TabIndex = 38;
             nomeFuncaoLabel.Text = "Nome Funcao:";
             // 
+            // idFuncaoLabel
+            // 
+            idFuncaoLabel.AutoSize = true;
+            idFuncaoLabel.Location = new System.Drawing.Point(363, 206);
+            idFuncaoLabel.Name = "idFuncaoLabel";
+            idFuncaoLabel.Size = new System.Drawing.Size(69, 16);
+            idFuncaoLabel.TabIndex = 39;
+            idFuncaoLabel.Text = "Id Funcao:";
+            // 
             // ativoCheckBox
             // 
             this.ativoCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.profissionalBindingSource, "Ativo", true));
@@ -273,6 +282,7 @@
             // 
             // pictureBoxFoto
             // 
+            this.pictureBoxFoto.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.profissionalBindingSource, "Foto", true));
             this.pictureBoxFoto.Location = new System.Drawing.Point(648, 52);
             this.pictureBoxFoto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBoxFoto.Name = "pictureBoxFoto";
@@ -287,7 +297,7 @@
             this.buttonBuscarFoto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonBuscarFoto.Name = "buttonBuscarFoto";
             this.buttonBuscarFoto.Size = new System.Drawing.Size(125, 26);
-            this.buttonBuscarFoto.TabIndex = 15;
+            this.buttonBuscarFoto.TabIndex = 14;
             this.buttonBuscarFoto.Text = "Buscar Foto";
             this.buttonBuscarFoto.UseVisualStyleBackColor = true;
             this.buttonBuscarFoto.Click += new System.EventHandler(this.buttonBuscarFoto_Click);
@@ -298,7 +308,7 @@
             this.textBoxEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxEmail.Name = "textBoxEmail";
             this.textBoxEmail.Size = new System.Drawing.Size(203, 22);
-            this.textBoxEmail.TabIndex = 11;
+            this.textBoxEmail.TabIndex = 12;
             // 
             // textBoxTelefone
             // 
@@ -493,17 +503,8 @@
             this.nomeFuncaoComboBox.Location = new System.Drawing.Point(448, 222);
             this.nomeFuncaoComboBox.Name = "nomeFuncaoComboBox";
             this.nomeFuncaoComboBox.Size = new System.Drawing.Size(135, 24);
-            this.nomeFuncaoComboBox.TabIndex = 39;
+            this.nomeFuncaoComboBox.TabIndex = 11;
             this.nomeFuncaoComboBox.SelectedIndexChanged += new System.EventHandler(this.nomeFuncaoComboBox_SelectedIndexChanged);
-            // 
-            // idFuncaoLabel
-            // 
-            idFuncaoLabel.AutoSize = true;
-            idFuncaoLabel.Location = new System.Drawing.Point(363, 206);
-            idFuncaoLabel.Name = "idFuncaoLabel";
-            idFuncaoLabel.Size = new System.Drawing.Size(69, 16);
-            idFuncaoLabel.TabIndex = 39;
-            idFuncaoLabel.Text = "Id Funcao:";
             // 
             // idFuncaoTextBox
             // 
