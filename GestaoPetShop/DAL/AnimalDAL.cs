@@ -58,11 +58,17 @@ namespace DAL
             try
             {
                 SqlCommand cmd = cn.CreateCommand();
-                cmd.CommandText = @"INSERT INTO Animal(Id, IdCliente, Nome, Sexo, Agressivo, Cor, Idade, Alergia, DataNascimento, Ativo) 
-                                               VALUES (@Id, @IdCliente, @Nome, @Sexo, @Agressivo, @Cor, @Idade, @Alergia, @DataNascimento, @Ativo)";
-
+                cmd.CommandText = @"UPDATE Animal SET 
+                                                  Nome = @Nome,
+                                                  Sexo = @Sexo,
+                                                  Agressivo = @Agressivo,
+                                                  Cor = @Cor,
+                                                  Idade = @Idade,
+                                                  Alergia = @Alergia,
+                                                  DataNascimento = DataNascimento,
+                                                  Ativo = @Ativo
+                                                  WHERE Id = @Id";
                 cmd.CommandType = System.Data.CommandType.Text;
-
 
                 cmd.Parameters.AddWithValue("@Id", _animal.Id);
                 cmd.Parameters.AddWithValue("@IdCliente", _animal.IdCliente);
