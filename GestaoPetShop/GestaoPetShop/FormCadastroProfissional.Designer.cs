@@ -72,6 +72,7 @@
             this.textBoxDataNascimento = new System.Windows.Forms.TextBox();
             this.nomeFuncaoComboBox = new System.Windows.Forms.ComboBox();
             this.idFuncaoTextBox = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             bairroLabel = new System.Windows.Forms.Label();
             cidadeLabel = new System.Windows.Forms.Label();
             dataNascimentoLabel = new System.Windows.Forms.Label();
@@ -193,6 +194,15 @@
             nomeFuncaoLabel.TabIndex = 38;
             nomeFuncaoLabel.Text = "Nome Funcao:";
             // 
+            // idFuncaoLabel
+            // 
+            idFuncaoLabel.AutoSize = true;
+            idFuncaoLabel.Location = new System.Drawing.Point(363, 206);
+            idFuncaoLabel.Name = "idFuncaoLabel";
+            idFuncaoLabel.Size = new System.Drawing.Size(69, 16);
+            idFuncaoLabel.TabIndex = 39;
+            idFuncaoLabel.Text = "Id Funcao:";
+            // 
             // ativoCheckBox
             // 
             this.ativoCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.profissionalBindingSource, "Ativo", true));
@@ -273,7 +283,8 @@
             // 
             // pictureBoxFoto
             // 
-            this.pictureBoxFoto.Location = new System.Drawing.Point(648, 52);
+            this.pictureBoxFoto.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.profissionalBindingSource, "Foto", true));
+            this.pictureBoxFoto.Location = new System.Drawing.Point(648, 41);
             this.pictureBoxFoto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBoxFoto.Name = "pictureBoxFoto";
             this.pictureBoxFoto.Size = new System.Drawing.Size(125, 135);
@@ -283,11 +294,11 @@
             // 
             // buttonBuscarFoto
             // 
-            this.buttonBuscarFoto.Location = new System.Drawing.Point(648, 194);
+            this.buttonBuscarFoto.Location = new System.Drawing.Point(648, 183);
             this.buttonBuscarFoto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonBuscarFoto.Name = "buttonBuscarFoto";
             this.buttonBuscarFoto.Size = new System.Drawing.Size(125, 26);
-            this.buttonBuscarFoto.TabIndex = 15;
+            this.buttonBuscarFoto.TabIndex = 14;
             this.buttonBuscarFoto.Text = "Buscar Foto";
             this.buttonBuscarFoto.UseVisualStyleBackColor = true;
             this.buttonBuscarFoto.Click += new System.EventHandler(this.buttonBuscarFoto_Click);
@@ -298,7 +309,7 @@
             this.textBoxEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxEmail.Name = "textBoxEmail";
             this.textBoxEmail.Size = new System.Drawing.Size(203, 22);
-            this.textBoxEmail.TabIndex = 11;
+            this.textBoxEmail.TabIndex = 12;
             // 
             // textBoxTelefone
             // 
@@ -493,17 +504,8 @@
             this.nomeFuncaoComboBox.Location = new System.Drawing.Point(448, 222);
             this.nomeFuncaoComboBox.Name = "nomeFuncaoComboBox";
             this.nomeFuncaoComboBox.Size = new System.Drawing.Size(135, 24);
-            this.nomeFuncaoComboBox.TabIndex = 39;
+            this.nomeFuncaoComboBox.TabIndex = 11;
             this.nomeFuncaoComboBox.SelectedIndexChanged += new System.EventHandler(this.nomeFuncaoComboBox_SelectedIndexChanged);
-            // 
-            // idFuncaoLabel
-            // 
-            idFuncaoLabel.AutoSize = true;
-            idFuncaoLabel.Location = new System.Drawing.Point(363, 206);
-            idFuncaoLabel.Name = "idFuncaoLabel";
-            idFuncaoLabel.Size = new System.Drawing.Size(69, 16);
-            idFuncaoLabel.TabIndex = 39;
-            idFuncaoLabel.Text = "Id Funcao:";
             // 
             // idFuncaoTextBox
             // 
@@ -513,12 +515,27 @@
             this.idFuncaoTextBox.Size = new System.Drawing.Size(66, 22);
             this.idFuncaoTextBox.TabIndex = 40;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(637, 214);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(136, 35);
+            this.button1.TabIndex = 41;
+            this.button1.Text = "Cadastrar Usuário";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
             // FormCadastroProfissional
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(804, 517);
+            this.Controls.Add(this.pictureBoxFoto);
+            this.Controls.Add(this.button1);
             this.Controls.Add(idFuncaoLabel);
             this.Controls.Add(this.idFuncaoTextBox);
             this.Controls.Add(nomeFuncaoLabel);
@@ -540,7 +557,6 @@
             this.Controls.Add(this.textBoxTelefone);
             this.Controls.Add(this.textBoxEmail);
             this.Controls.Add(this.buttonBuscarFoto);
-            this.Controls.Add(this.pictureBoxFoto);
             this.Controls.Add(this.ativoCheckBox);
             this.Controls.Add(bairroLabel);
             this.Controls.Add(this.bairroTextBox);
@@ -608,5 +624,6 @@
         private System.Windows.Forms.TextBox textBoxDataNascimento;
         private System.Windows.Forms.ComboBox nomeFuncaoComboBox;
         private System.Windows.Forms.TextBox idFuncaoTextBox;
+        private System.Windows.Forms.Button button1;
     }
 }
