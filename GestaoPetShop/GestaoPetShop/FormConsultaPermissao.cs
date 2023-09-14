@@ -46,7 +46,7 @@ namespace GestaoPetShop
         {
             try
             {
-                permissaoBindingSource.DataSource = new PermissaoBLL().BuscarPorDescricao(textBoxBuscar.Text);
+                permissaoBindingSource.DataSource = new PermissaoBLL().BuscarPermissaoPorNome(textBoxBuscar.Text);
             }
             catch (Exception ex)
             {

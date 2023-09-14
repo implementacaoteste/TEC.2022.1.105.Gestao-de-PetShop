@@ -266,18 +266,6 @@
     <Compile Include="FormConsultaAnimal.Designer.cs">
       <DependentUpon>FormConsultaAnimal.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormBuscarGrupoUsuario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormBuscarGrupoUsuario.Designer.cs">
-      <DependentUpon>FormBuscarGrupoUsuario.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormBuscarUsuario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormBuscarUsuario.Designer.cs">
-      <DependentUpon>FormBuscarUsuario.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormCadastroAgendamento.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -296,12 +284,6 @@
     <Compile Include="FormCadastroCliente.Designer.cs">
       <DependentUpon>FormCadastroCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormCadastroGrupoUsuario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormCadastroGrupoUsuario.Designer.cs">
-      <DependentUpon>FormCadastroGrupoUsuario.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormCadastroUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -313,12 +295,6 @@
     </Compile>
     <Compile Include="FormConsultaCliente.Designer.cs">
       <DependentUpon>FormConsultaCliente.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormConsultaGrupoUsuario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormConsultaGrupoUsuario.Designer.cs">
-      <DependentUpon>FormConsultaGrupoUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="FormConsultaPermissao.cs">
       <SubType>Form</SubType>
@@ -362,6 +338,12 @@
     <Compile Include="FormPesquisarSelecionarAnimalCliente.Designer.cs">
       <DependentUpon>FormPesquisarSelecionarAnimalCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormVincularPermissaoEmFuncao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormVincularPermissaoEmFuncao.Designer.cs">
+      <DependentUpon>FormVincularPermissaoEmFuncao.cs</DependentUpon>
+    </Compile>
     <Compile Include="petshopDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -391,12 +373,6 @@
     <EmbeddedResource Include="FormConsultaAnimal.resx">
       <DependentUpon>FormConsultaAnimal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormBuscarGrupoUsuario.resx">
-      <DependentUpon>FormBuscarGrupoUsuario.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormBuscarUsuario.resx">
-      <DependentUpon>FormBuscarUsuario.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FormCadastroAgendamento.resx">
       <DependentUpon>FormCadastroAgendamento.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -407,17 +383,11 @@
     <EmbeddedResource Include="FormCadastroCliente.resx">
       <DependentUpon>FormCadastroCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormCadastroGrupoUsuario.resx">
-      <DependentUpon>FormCadastroGrupoUsuario.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FormCadastroUsuario.resx">
       <DependentUpon>FormCadastroUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormConsultaCliente.resx">
       <DependentUpon>FormConsultaCliente.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormConsultaGrupoUsuario.resx">
-      <DependentUpon>FormConsultaGrupoUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormConsultaPermissao.resx">
       <DependentUpon>FormConsultaPermissao.cs</DependentUpon>
@@ -440,6 +410,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormPesquisarSelecionarAnimalCliente.resx">
       <DependentUpon>FormPesquisarSelecionarAnimalCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormVincularPermissaoEmFuncao.resx">
+      <DependentUpon>FormVincularPermissaoEmFuncao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

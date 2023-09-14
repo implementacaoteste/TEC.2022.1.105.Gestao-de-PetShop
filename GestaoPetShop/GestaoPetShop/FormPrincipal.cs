@@ -14,17 +14,7 @@ namespace GestaoPetShop
         }
         private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            try
-            {
-                using (FormBuscarUsuario frm = new FormBuscarUsuario())
-                {
-                    frm.ShowDialog();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+           
         }
 
         private void FormPrincipal_Load(object sender, EventArgs e)
@@ -49,20 +39,7 @@ namespace GestaoPetShop
             }
         }
 
-        private void gruposDeUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                using (FormBuscarGrupoUsuario frm = new FormBuscarGrupoUsuario())
-                {
-                    frm.ShowDialog();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
+       
         private void FormPrincipal_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Escape)
@@ -136,6 +113,24 @@ namespace GestaoPetShop
             using (FormConsultaProfissional frm = new FormConsultaProfissional())
             {
                 frm.ShowDialog();
+            }
+        }
+
+        private void funçãoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using(FormBuscarFuncao frm = new FormBuscarFuncao())
+                {
+                    frm.ShowDialog();
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
             }
         }
     }

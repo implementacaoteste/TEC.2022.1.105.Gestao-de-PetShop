@@ -27,9 +27,17 @@ namespace GestaoPetShop
             {
                 if (id == 0)
                 {
+                    funcaoBindingSource.AddNew();
+                    lblCadastrarFuncao.Visible = true;
+                    lblAlterarFuncao.Visible = false;
+
+                }
+                else
+                {
                     lblCadastrarFuncao.Visible = false;
                     lblAlterarFuncao.Visible = true;
                     funcaoBindingSource.DataSource = new FuncaoBLL().BuscarPorId(id);
+
                 }
             }
             catch (Exception ex)

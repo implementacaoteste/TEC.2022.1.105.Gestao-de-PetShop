@@ -33,7 +33,7 @@ namespace DAL
                 cn.Close();
             }
         }//Givas
-        public List<Permissao> BuscarTodos()
+        public List<Permissao> BuscarTodos() /// OK não mexer
         {
             List<Permissao> permissoes = new List<Permissao>();
             Permissao permissao;
@@ -43,7 +43,7 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = "SELECT Id, NomeGrupo FROM GrupoUsuario";
+                cmd.CommandText = "SELECT Id, Nome FROM Permissao";
                 cmd.CommandType = System.Data.CommandType.Text;
 
                 cn.Open();
@@ -54,7 +54,7 @@ namespace DAL
                     {
                         permissao = new Permissao();
                         permissao.Id = Convert.ToInt32(rd["Id"]);
-                        permissao.Descricao = rd["Descricao"].ToString();
+                        permissao.Descricao = rd["Nome"].ToString();
                         permissoes.Add(permissao);
                     }
                 }
@@ -69,7 +69,7 @@ namespace DAL
                 cn.Close();
             }
         }//Givas
-        public List<Permissao> BuscarPorDescricao(string _descricao)
+        public List<Permissao> BuscarPermissaoPorNome(string _nomePermissao)
         {
             List<Permissao> permissoes = new List<Permissao>();
             Permissao permissao;
@@ -79,9 +79,9 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = "SELECT Id, Descricao FROM Permissao WHERE Descricao LIKE @Descricao";
+                cmd.CommandText = "SELECT Id, Nome FROM Permissao WHERE UPPER(Nome) LIKE UPPER(@nomePermissao)";
                 cmd.CommandType = System.Data.CommandType.Text;
-                cmd.Parameters.AddWithValue("@Descricao", "%" + _descricao + "%");
+                cmd.Parameters.AddWithValue("@nomePermissao", "%" + _nomePermissao + "%");
                 cn.Open();
 
                 using (SqlDataReader rd = cmd.ExecuteReader())
@@ -90,7 +90,7 @@ namespace DAL
                     {
                         permissao = new Permissao();
                         permissao.Id = Convert.ToInt32(rd["Id"]);
-                        permissao.Descricao = rd["Descricao"].ToString();
+                        permissao.Descricao = rd["Nome"].ToString();
                         permissoes.Add(permissao);
                     }
                 }
@@ -98,14 +98,14 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu um erro ao tentar buscar todas as permissoes no banco de dados.", ex);
+                throw new Exception("Ocorreu um erro ao tentar buscar as permissões no banco de dados.", ex);
             }
             finally
             {
                 cn.Close();
             }
         }//Givas
-        public List<Permissao> BuscarPorId(int _id)//Givas
+        public List<Permissao> BuscarPorId(int _id)//Givas  OK não mexer
         {
             List<Permissao> permissoes = new List<Permissao>();
             Permissao permissao;
@@ -115,7 +115,7 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = "SELECT Id, NomeGrupo FROM GrupoUsuario WHERE Id LIKE @Id";
+                cmd.CommandText = "SELECT Id, Nome FROM Permissao WHERE Id = @Id";
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@Id", _id);
                 cn.Open();
@@ -126,7 +126,7 @@ namespace DAL
                     {
                         permissao = new Permissao();
                         permissao.Id = Convert.ToInt32(rd["Id"]);
-                        permissao.Descricao = rd["Descricao"].ToString();
+                        permissao.Descricao = rd["Nome"].ToString();
                         permissoes.Add(permissao);
                     }
                 }
@@ -141,7 +141,7 @@ namespace DAL
                 cn.Close();
             }
         }
-        internal List<Permissao> BuscarPorIdGrupo(int _idGrupoUsuario)//Givas
+        internal List<Permissao> BuscarPermissaoPorIdFuncao(int _id)//Givas
         {
             List<Permissao> permissoes = new List<Permissao>();
             Permissao permissao;
@@ -151,12 +151,13 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT Permissao.Id, Permissao.Descricao FROM Permissao
-                                    INNER JOIN PermissaoGrupoUsuario ON Permissao.Id = PermissaoGrupoUsuario.IdPermissao
-                                    WHERE PermissaoGrupoUsuario.IdGrupoUsuario = @IdGrupoUsuario ORDER BY Permissao.Descricao";
+                cmd.CommandText = @"SELECT Permissao.Id, Permissao.Nome FROM Permissao
+                                    INNER JOIN FuncaoPermissao ON Permissao.Id = FuncaoPermissao.IdPermissao
+                                    INNER JOIN Funcao ON FuncaoPermissao.IdFuncao = Funcao.Id
+                                    WHERE Funcao.Id = @Id";
 
                 cmd.CommandType = System.Data.CommandType.Text;
-                cmd.Parameters.AddWithValue("@IdGrupoUsuario", _idGrupoUsuario);
+                cmd.Parameters.AddWithValue("@Id", _id);
                 cn.Open();
 
                 using (SqlDataReader rd = cmd.ExecuteReader())
@@ -165,7 +166,7 @@ namespace DAL
                     {
                         permissao = new Permissao();
                         permissao.Id = Convert.ToInt32(rd["Id"]);
-                        permissao.Descricao = rd["Descricao"].ToString();
+                        permissao.Descricao = rd["Nome"].ToString();
                         permissoes.Add(permissao);
                     }
                 }

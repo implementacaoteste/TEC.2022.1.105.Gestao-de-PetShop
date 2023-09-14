@@ -10,5 +10,6 @@ namespace Models
     {
         public int Id { get; set; }
         public string Nome { get; set; }
+        public List<Permissao> Permissoes { get; set; }
     }
 }

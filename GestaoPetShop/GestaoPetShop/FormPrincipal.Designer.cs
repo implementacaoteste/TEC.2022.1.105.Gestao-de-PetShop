@@ -33,13 +33,13 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.cadastroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.gruposDeUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.servicosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agendamentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.animalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.raçaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.profissionalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.funçãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.button1 = new System.Windows.Forms.Button();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
@@ -89,13 +89,13 @@
             // 
             this.cadastroToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.usuariosToolStripMenuItem,
-            this.gruposDeUsuariosToolStripMenuItem,
             this.clientesToolStripMenuItem,
             this.servicosToolStripMenuItem,
             this.agendamentoToolStripMenuItem,
             this.animalToolStripMenuItem,
             this.raçaToolStripMenuItem,
-            this.profissionalToolStripMenuItem});
+            this.profissionalToolStripMenuItem,
+            this.funçãoToolStripMenuItem});
             this.cadastroToolStripMenuItem.Name = "cadastroToolStripMenuItem";
             this.cadastroToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.U)));
             this.cadastroToolStripMenuItem.Size = new System.Drawing.Size(82, 24);
@@ -105,23 +105,15 @@
             // 
             this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
             this.usuariosToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.U)));
-            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(270, 26);
+            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(239, 26);
             this.usuariosToolStripMenuItem.Text = "Usuários";
             this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
-            // 
-            // gruposDeUsuariosToolStripMenuItem
-            // 
-            this.gruposDeUsuariosToolStripMenuItem.Name = "gruposDeUsuariosToolStripMenuItem";
-            this.gruposDeUsuariosToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.G)));
-            this.gruposDeUsuariosToolStripMenuItem.Size = new System.Drawing.Size(270, 26);
-            this.gruposDeUsuariosToolStripMenuItem.Text = "Grupos de usuários";
-            this.gruposDeUsuariosToolStripMenuItem.Click += new System.EventHandler(this.gruposDeUsuariosToolStripMenuItem_Click);
             // 
             // clientesToolStripMenuItem
             // 
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
             this.clientesToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(270, 26);
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(239, 26);
             this.clientesToolStripMenuItem.Text = "Clientes";
             this.clientesToolStripMenuItem.Click += new System.EventHandler(this.clientesToolStripMenuItem_Click);
             // 
@@ -129,7 +121,7 @@
             // 
             this.servicosToolStripMenuItem.Name = "servicosToolStripMenuItem";
             this.servicosToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.servicosToolStripMenuItem.Size = new System.Drawing.Size(270, 26);
+            this.servicosToolStripMenuItem.Size = new System.Drawing.Size(239, 26);
             this.servicosToolStripMenuItem.Text = "Serviços";
             this.servicosToolStripMenuItem.Click += new System.EventHandler(this.servicosToolStripMenuItem_Click);
             // 
@@ -137,7 +129,7 @@
             // 
             this.agendamentoToolStripMenuItem.Name = "agendamentoToolStripMenuItem";
             this.agendamentoToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));
-            this.agendamentoToolStripMenuItem.Size = new System.Drawing.Size(270, 26);
+            this.agendamentoToolStripMenuItem.Size = new System.Drawing.Size(239, 26);
             this.agendamentoToolStripMenuItem.Text = "Agendamento";
             this.agendamentoToolStripMenuItem.Click += new System.EventHandler(this.agendamentoToolStripMenuItem_Click);
             // 
@@ -145,7 +137,7 @@
             // 
             this.animalToolStripMenuItem.Name = "animalToolStripMenuItem";
             this.animalToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
-            this.animalToolStripMenuItem.Size = new System.Drawing.Size(270, 26);
+            this.animalToolStripMenuItem.Size = new System.Drawing.Size(239, 26);
             this.animalToolStripMenuItem.Text = "Animal";
             this.animalToolStripMenuItem.Click += new System.EventHandler(this.animalToolStripMenuItem_Click);
             // 
@@ -153,7 +145,7 @@
             // 
             this.raçaToolStripMenuItem.Name = "raçaToolStripMenuItem";
             this.raçaToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.R)));
-            this.raçaToolStripMenuItem.Size = new System.Drawing.Size(270, 26);
+            this.raçaToolStripMenuItem.Size = new System.Drawing.Size(239, 26);
             this.raçaToolStripMenuItem.Text = "Raça";
             this.raçaToolStripMenuItem.Click += new System.EventHandler(this.raçaToolStripMenuItem_Click);
             // 
@@ -161,9 +153,16 @@
             // 
             this.profissionalToolStripMenuItem.Name = "profissionalToolStripMenuItem";
             this.profissionalToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
-            this.profissionalToolStripMenuItem.Size = new System.Drawing.Size(270, 26);
+            this.profissionalToolStripMenuItem.Size = new System.Drawing.Size(239, 26);
             this.profissionalToolStripMenuItem.Text = "Profissional";
             this.profissionalToolStripMenuItem.Click += new System.EventHandler(this.profissionalToolStripMenuItem_Click);
+            // 
+            // funçãoToolStripMenuItem
+            // 
+            this.funçãoToolStripMenuItem.Name = "funçãoToolStripMenuItem";
+            this.funçãoToolStripMenuItem.Size = new System.Drawing.Size(239, 26);
+            this.funçãoToolStripMenuItem.Text = "Função";
+            this.funçãoToolStripMenuItem.Click += new System.EventHandler(this.funçãoToolStripMenuItem_Click);
             // 
             // monthCalendar1
             // 
@@ -484,7 +483,6 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem cadastroToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem gruposDeUsuariosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem clientesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem servicosToolStripMenuItem;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataAgDataGridViewTextBoxColumn;
@@ -534,6 +532,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
         private System.Windows.Forms.ToolStripMenuItem raçaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem profissionalToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem funçãoToolStripMenuItem;
     }
 }
 
