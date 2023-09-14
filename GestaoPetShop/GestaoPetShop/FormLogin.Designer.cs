@@ -109,7 +109,7 @@
             this.label4.Location = new System.Drawing.Point(0, 0);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(403, 47);
+            this.label4.Size = new System.Drawing.Size(399, 47);
             this.label4.TabIndex = 0;
             this.label4.Text = "Tela de Login";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -129,7 +129,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(403, 203);
+            this.ClientSize = new System.Drawing.Size(399, 200);
             this.ControlBox = false;
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
