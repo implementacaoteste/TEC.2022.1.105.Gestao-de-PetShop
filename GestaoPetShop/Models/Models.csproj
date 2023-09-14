@@ -233,6 +233,7 @@
     <Compile Include="Profissional.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Raca.cs" />
+    <Compile Include="Senha.cs" />
     <Compile Include="Servico.cs" />
     <Compile Include="Situacao.cs" />
     <Compile Include="TelefoneCliente.cs" />
