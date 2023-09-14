@@ -48,30 +48,28 @@
             // idLabel
             // 
             idLabel.AutoSize = true;
-            idLabel.Location = new System.Drawing.Point(9, 154);
-            idLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            idLabel.Location = new System.Drawing.Point(12, 190);
             idLabel.Name = "idLabel";
-            idLabel.Size = new System.Drawing.Size(19, 13);
+            idLabel.Size = new System.Drawing.Size(21, 16);
             idLabel.TabIndex = 18;
             idLabel.Text = "Id:";
             // 
             // nomeLabel
             // 
             nomeLabel.AutoSize = true;
-            nomeLabel.Location = new System.Drawing.Point(140, 151);
-            nomeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            nomeLabel.Location = new System.Drawing.Point(187, 186);
             nomeLabel.Name = "nomeLabel";
-            nomeLabel.Size = new System.Drawing.Size(38, 13);
+            nomeLabel.Size = new System.Drawing.Size(47, 16);
             nomeLabel.TabIndex = 19;
             nomeLabel.Text = "Nome:";
             // 
             // pictureBox3
             // 
             this.pictureBox3.Image = global::GestaoPetShop.Properties.Resources.bicho_de_estimacao;
-            this.pictureBox3.Location = new System.Drawing.Point(11, 11);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox3.Location = new System.Drawing.Point(15, 14);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(29, 33);
+            this.pictureBox3.Size = new System.Drawing.Size(39, 41);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 2;
             this.pictureBox3.TabStop = false;
@@ -80,9 +78,10 @@
             // 
             this.lblAlterarFuncao.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAlterarFuncao.ForeColor = System.Drawing.Color.Black;
-            this.lblAlterarFuncao.Location = new System.Drawing.Point(142, 39);
+            this.lblAlterarFuncao.Location = new System.Drawing.Point(189, 48);
+            this.lblAlterarFuncao.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAlterarFuncao.Name = "lblAlterarFuncao";
-            this.lblAlterarFuncao.Size = new System.Drawing.Size(201, 26);
+            this.lblAlterarFuncao.Size = new System.Drawing.Size(268, 32);
             this.lblAlterarFuncao.TabIndex = 13;
             this.lblAlterarFuncao.Text = "Alterar Função";
             this.lblAlterarFuncao.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -91,9 +90,10 @@
             // 
             this.lblCadastrarFuncao.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCadastrarFuncao.ForeColor = System.Drawing.Color.Black;
-            this.lblCadastrarFuncao.Location = new System.Drawing.Point(115, 39);
+            this.lblCadastrarFuncao.Location = new System.Drawing.Point(153, 48);
+            this.lblCadastrarFuncao.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCadastrarFuncao.Name = "lblCadastrarFuncao";
-            this.lblCadastrarFuncao.Size = new System.Drawing.Size(255, 26);
+            this.lblCadastrarFuncao.Size = new System.Drawing.Size(340, 32);
             this.lblCadastrarFuncao.TabIndex = 14;
             this.lblCadastrarFuncao.Text = "Cadastrar Função";
             this.lblCadastrarFuncao.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -106,10 +106,12 @@
             this.btnSalvarServico.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnSalvarServico.FlatAppearance.BorderSize = 0;
             this.btnSalvarServico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalvarServico.Location = new System.Drawing.Point(367, 247);
+            this.btnSalvarServico.Location = new System.Drawing.Point(489, 304);
+            this.btnSalvarServico.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSalvarServico.Name = "btnSalvarServico";
-            this.btnSalvarServico.Size = new System.Drawing.Size(38, 36);
+            this.btnSalvarServico.Size = new System.Drawing.Size(51, 44);
             this.btnSalvarServico.TabIndex = 16;
+            this.btnSalvarServico.Tag = "Salvar";
             this.btnSalvarServico.UseVisualStyleBackColor = false;
             this.btnSalvarServico.Click += new System.EventHandler(this.btnSalvarServico_Click);
             // 
@@ -121,9 +123,10 @@
             this.btnCancelarCadastroOuAlterar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancelarCadastroOuAlterar.FlatAppearance.BorderSize = 0;
             this.btnCancelarCadastroOuAlterar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelarCadastroOuAlterar.Location = new System.Drawing.Point(425, 247);
+            this.btnCancelarCadastroOuAlterar.Location = new System.Drawing.Point(567, 304);
+            this.btnCancelarCadastroOuAlterar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCancelarCadastroOuAlterar.Name = "btnCancelarCadastroOuAlterar";
-            this.btnCancelarCadastroOuAlterar.Size = new System.Drawing.Size(38, 36);
+            this.btnCancelarCadastroOuAlterar.Size = new System.Drawing.Size(51, 44);
             this.btnCancelarCadastroOuAlterar.TabIndex = 17;
             this.btnCancelarCadastroOuAlterar.UseVisualStyleBackColor = false;
             this.btnCancelarCadastroOuAlterar.Click += new System.EventHandler(this.btnCancelarCadastroOuAlterar_Click);
@@ -135,27 +138,27 @@
             // idTextBox
             // 
             this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcaoBindingSource, "Id", true));
-            this.idTextBox.Location = new System.Drawing.Point(29, 151);
-            this.idTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.idTextBox.Location = new System.Drawing.Point(39, 186);
+            this.idTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.idTextBox.Name = "idTextBox";
-            this.idTextBox.Size = new System.Drawing.Size(76, 20);
+            this.idTextBox.Size = new System.Drawing.Size(100, 22);
             this.idTextBox.TabIndex = 19;
             // 
             // nomeTextBox
             // 
             this.nomeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcaoBindingSource, "Nome", true));
-            this.nomeTextBox.Location = new System.Drawing.Point(179, 149);
-            this.nomeTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.nomeTextBox.Location = new System.Drawing.Point(239, 183);
+            this.nomeTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.nomeTextBox.Name = "nomeTextBox";
-            this.nomeTextBox.Size = new System.Drawing.Size(279, 20);
+            this.nomeTextBox.Size = new System.Drawing.Size(371, 22);
             this.nomeTextBox.TabIndex = 20;
             // 
             // FormCadastroFuncao
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(487, 311);
+            this.ClientSize = new System.Drawing.Size(649, 383);
             this.Controls.Add(nomeLabel);
             this.Controls.Add(this.nomeTextBox);
             this.Controls.Add(idLabel);
@@ -166,6 +169,7 @@
             this.Controls.Add(this.lblAlterarFuncao);
             this.Controls.Add(this.pictureBox3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormCadastroFuncao";
