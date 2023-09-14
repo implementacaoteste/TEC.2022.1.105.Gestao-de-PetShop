@@ -7,6 +7,8 @@ namespace GestaoPetShop
 {
     public partial class FormConsultaCliente : Form
     {
+        public Cliente Cliente { get; set; }
+
         public FormConsultaCliente()
         {
             InitializeComponent();
@@ -136,5 +138,24 @@ namespace GestaoPetShop
             }
         }
 
+        private void buttonSelecionar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (clienteBindingSource.Count == 0)
+                    throw new Exception("Selecione um Cliente!");
+
+                this.Cliente = (Cliente)clienteBindingSource.Current;
+
+                Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        
     }
+    
 }

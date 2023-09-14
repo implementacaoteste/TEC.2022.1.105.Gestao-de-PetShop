@@ -105,6 +105,7 @@
             this.labelBuscraPorAnimal.TabIndex = 4;
             this.labelBuscraPorAnimal.Text = "Buscar por Raça";
             this.labelBuscraPorAnimal.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.labelBuscraPorAnimal.Click += new System.EventHandler(this.labelBuscraPorAnimal_Click);
             // 
             // petshopDataSet
             // 
@@ -230,6 +231,7 @@
             this.buttonSelecionar.TabIndex = 9;
             this.buttonSelecionar.Text = "&Selecionar";
             this.buttonSelecionar.UseVisualStyleBackColor = true;
+            this.buttonSelecionar.Click += new System.EventHandler(this.buttonSelecionar_Click);
             // 
             // buttonCancelar
             // 

@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -15,6 +16,8 @@ namespace GestaoPetShop
 {
     public partial class FormCadastroAnimal : Form
     {
+        
+
         int id;
         bool permitirSalvar;
         public FormCadastroAnimal(int _id = 0, bool _permitirSalvar = true)
@@ -35,7 +38,7 @@ namespace GestaoPetShop
 
                 animalBindingSource.EndEdit();
                 Animal animal = (Animal)animalBindingSource.Current;
-               
+
 
                 if (id == 0)
                     new AnimalBLL().Inserir(animal);
@@ -78,6 +81,12 @@ namespace GestaoPetShop
                 using (FormConsultaCliente frm = new FormConsultaCliente())
                 {
                     frm.ShowDialog();
+
+                    if (frm.Cliente != null)
+                    {
+                        ((Animal)animalBindingSource.Current).Cliente = frm.Cliente;
+                        textBox8.Text = frm.Cliente.Nome;
+                    }
                 }
             }
             catch (Exception ex)
@@ -93,6 +102,12 @@ namespace GestaoPetShop
                 using (ConsultaRaca frm = new ConsultaRaca())
                 {
                     frm.ShowDialog();
+
+                    if (frm.Raca != null)
+                    {
+                        ((Animal)animalBindingSource.Current).Raca = frm.Raca;
+                        textBox9.Text = frm.Raca.Nome;
+                    }
                 }
             }
             catch (Exception ex)

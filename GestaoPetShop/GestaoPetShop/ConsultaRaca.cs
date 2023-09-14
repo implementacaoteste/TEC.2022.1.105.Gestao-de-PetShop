@@ -14,12 +14,15 @@ namespace GestaoPetShop
 {
     public partial class ConsultaRaca : Form
     {
+
+
         int id;
         public ConsultaRaca()
         {
             InitializeComponent();
             id = id;
         }
+        public Raca Raca { get; set; }
 
         private void racaBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
@@ -71,13 +74,13 @@ namespace GestaoPetShop
                 switch (comboBox1.SelectedIndex)
                 {
                     case 0:
-                        racaBindingSource.DataSource = new AnimalBLL().BuscarTodos();
+                        racaBindingSource.DataSource = new RacaBLL().BuscarTodos();
                         break;
                     case 1:
-                        racaBindingSource.DataSource = new AnimalBLL().BuscarPorNome(textBoxBuscar.Text);
+                        racaBindingSource.DataSource = new RacaBLL().BuscarPorNome(textBoxBuscar.Text);
                         break;
                     case 2:
-                        racaBindingSource.DataSource = new AnimalBLL().BuscarPorId(Convert.ToInt32(textBoxBuscar.Text));
+                        racaBindingSource.DataSource = new RacaBLL().BuscarPorId(Convert.ToInt32(textBoxBuscar.Text));
                         if (String.IsNullOrEmpty(textBoxBuscar.Text))
                             throw new Exception("Informe um Id para fazer a busca.") { Data = { { "Id", 21 } } };
                         break;
@@ -116,6 +119,28 @@ namespace GestaoPetShop
         }
 
         private void buttonCancelar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonSelecionar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (racaBindingSource.Count  == 0)
+                    throw new Exception("Selecione uma Raça!");
+
+                this.Raca = (Raca)racaBindingSource.Current;
+
+                Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void labelBuscraPorAnimal_Click(object sender, EventArgs e)
         {
 
         }
