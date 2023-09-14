@@ -63,6 +63,15 @@ namespace GestaoPetShop
                 MessageBox.Show("A senha nova digitada não é igual da redigitação.");
                 txtNovaSenha.Focus();
             }
+
+            txtNovaSenha.Text = "";
+            txtNovaSenha2.Text = "";
+            txtSenhaAtual.Text = "";
+            txtSenhaAtual.Focus();
+
+            txtNovaSenha.Enabled = false;
+            txtNovaSenha2.Enabled = false;
+            btnOK.Enabled = false;
         }
     }
 }
