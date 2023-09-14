@@ -173,5 +173,13 @@ namespace GestaoPetShop
                     //Insert(x, Convert.ToString(funcoes[x].Id));
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            using (FormGerarSenha frm = new FormGerarSenha())
+            {
+                frm.ShowDialog();
+            }
+        }
     }
 }
