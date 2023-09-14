@@ -76,9 +76,9 @@
             this.lblConsultaFuncao.BackColor = System.Drawing.Color.Transparent;
             this.lblConsultaFuncao.Dock = System.Windows.Forms.DockStyle.Top;
             this.lblConsultaFuncao.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblConsultaFuncao.Location = new System.Drawing.Point(2, 2);
+            this.lblConsultaFuncao.Location = new System.Drawing.Point(0, 0);
             this.lblConsultaFuncao.Name = "lblConsultaFuncao";
-            this.lblConsultaFuncao.Size = new System.Drawing.Size(547, 41);
+            this.lblConsultaFuncao.Size = new System.Drawing.Size(551, 41);
             this.lblConsultaFuncao.TabIndex = 25;
             this.lblConsultaFuncao.Text = "Consulta de Função";
             this.lblConsultaFuncao.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -99,7 +99,7 @@
             // 
             this.lblBuscar.AutoSize = true;
             this.lblBuscar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBuscar.Location = new System.Drawing.Point(101, 113);
+            this.lblBuscar.Location = new System.Drawing.Point(99, 111);
             this.lblBuscar.Name = "lblBuscar";
             this.lblBuscar.Size = new System.Drawing.Size(60, 19);
             this.lblBuscar.TabIndex = 29;
@@ -116,7 +116,7 @@
             // 
             this.lblCadastrar.AutoSize = true;
             this.lblCadastrar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCadastrar.Location = new System.Drawing.Point(183, 113);
+            this.lblCadastrar.Location = new System.Drawing.Point(181, 111);
             this.lblCadastrar.Name = "lblCadastrar";
             this.lblCadastrar.Size = new System.Drawing.Size(85, 19);
             this.lblCadastrar.TabIndex = 34;
@@ -126,7 +126,7 @@
             // 
             this.lblAlterar.AutoSize = true;
             this.lblAlterar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAlterar.Location = new System.Drawing.Point(289, 113);
+            this.lblAlterar.Location = new System.Drawing.Point(287, 111);
             this.lblAlterar.Name = "lblAlterar";
             this.lblAlterar.Size = new System.Drawing.Size(60, 19);
             this.lblAlterar.TabIndex = 36;
@@ -136,7 +136,7 @@
             // 
             this.lblExcluir.AutoSize = true;
             this.lblExcluir.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblExcluir.Location = new System.Drawing.Point(386, 113);
+            this.lblExcluir.Location = new System.Drawing.Point(384, 111);
             this.lblExcluir.Name = "lblExcluir";
             this.lblExcluir.Size = new System.Drawing.Size(59, 19);
             this.lblExcluir.TabIndex = 38;
@@ -379,7 +379,6 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormBuscarFuncao";
-            this.Padding = new System.Windows.Forms.Padding(2);
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
