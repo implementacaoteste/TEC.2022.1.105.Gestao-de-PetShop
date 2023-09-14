@@ -36,8 +36,8 @@ namespace GestaoPetShop
                     return;
 
 
-                animalBindingSource.EndEdit();
                 Animal animal = (Animal)animalBindingSource.Current;
+                animalBindingSource.EndEdit();
 
 
                 if (id == 0)
