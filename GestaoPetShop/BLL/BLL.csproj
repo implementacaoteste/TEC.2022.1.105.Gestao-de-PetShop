@@ -226,7 +226,6 @@
     <Compile Include="EmailClienteBLL.cs" />
     <Compile Include="EmailProfissionalBLL.cs" />
     <Compile Include="FuncaoBLL.cs" />
-    <Compile Include="GrupoUsuarioBLL.cs" />
     <Compile Include="PermissaoBLL.cs" />
     <Compile Include="ProfissionalBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -26,11 +26,11 @@ namespace BLL
             }
             return permissaos;
         }//Givas
-        public List<Permissao> BuscarPorDescricao(string _descricao)
+        public List<Permissao> BuscarPermissaoPorNome(string _nomePermissao)
         {
             //return new PermissaoDAL().BuscarPorDescricao(_descricao);
             PermissaoDAL permissaoDAL = new PermissaoDAL();
-            List<Permissao> permissaos = permissaoDAL.BuscarPorDescricao(_descricao);
+            List<Permissao> permissaos = permissaoDAL.BuscarPermissaoPorNome(_nomePermissao);
             if (permissaos.Count == 0)
             {
                 throw new Exception("Serviço de buscar por nome não encontrado em permissão");

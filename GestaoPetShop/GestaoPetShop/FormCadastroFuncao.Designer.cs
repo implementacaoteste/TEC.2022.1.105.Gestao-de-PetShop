@@ -30,17 +30,17 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label idLabel;
-            System.Windows.Forms.Label descricaoLabel;
+            System.Windows.Forms.Label nomeLabel;
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.lblAlterarFuncao = new System.Windows.Forms.Label();
             this.lblCadastrarFuncao = new System.Windows.Forms.Label();
             this.btnSalvarServico = new System.Windows.Forms.Button();
             this.btnCancelarCadastroOuAlterar = new System.Windows.Forms.Button();
+            this.funcaoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idTextBox = new System.Windows.Forms.TextBox();
             this.nomeTextBox = new System.Windows.Forms.TextBox();
-            this.funcaoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             idLabel = new System.Windows.Forms.Label();
-            descricaoLabel = new System.Windows.Forms.Label();
+            nomeLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.funcaoBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -48,30 +48,28 @@
             // idLabel
             // 
             idLabel.AutoSize = true;
-            idLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            idLabel.ForeColor = System.Drawing.Color.Black;
-            idLabel.Location = new System.Drawing.Point(16, 127);
+            idLabel.Location = new System.Drawing.Point(9, 154);
+            idLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             idLabel.Name = "idLabel";
-            idLabel.Size = new System.Drawing.Size(21, 18);
-            idLabel.TabIndex = 21;
-            idLabel.Text = "Id";
+            idLabel.Size = new System.Drawing.Size(19, 13);
+            idLabel.TabIndex = 18;
+            idLabel.Text = "Id:";
             // 
-            // descricaoLabel
+            // nomeLabel
             // 
-            descricaoLabel.AutoSize = true;
-            descricaoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            descricaoLabel.ForeColor = System.Drawing.Color.Black;
-            descricaoLabel.Location = new System.Drawing.Point(81, 127);
-            descricaoLabel.Name = "descricaoLabel";
-            descricaoLabel.Size = new System.Drawing.Size(53, 18);
-            descricaoLabel.TabIndex = 20;
-            descricaoLabel.Text = "Nome";
+            nomeLabel.AutoSize = true;
+            nomeLabel.Location = new System.Drawing.Point(140, 151);
+            nomeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            nomeLabel.Name = "nomeLabel";
+            nomeLabel.Size = new System.Drawing.Size(38, 13);
+            nomeLabel.TabIndex = 19;
+            nomeLabel.Text = "Nome:";
             // 
             // pictureBox3
             // 
             this.pictureBox3.Image = global::GestaoPetShop.Properties.Resources.bicho_de_estimacao;
             this.pictureBox3.Location = new System.Drawing.Point(11, 11);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(29, 33);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -130,27 +128,27 @@
             this.btnCancelarCadastroOuAlterar.UseVisualStyleBackColor = false;
             this.btnCancelarCadastroOuAlterar.Click += new System.EventHandler(this.btnCancelarCadastroOuAlterar_Click);
             // 
-            // idTextBox
-            // 
-            this.idTextBox.BackColor = System.Drawing.SystemColors.Window;
-            this.idTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.idTextBox.Location = new System.Drawing.Point(19, 149);
-            this.idTextBox.Name = "idTextBox";
-            this.idTextBox.ReadOnly = true;
-            this.idTextBox.Size = new System.Drawing.Size(53, 24);
-            this.idTextBox.TabIndex = 18;
-            // 
-            // nomeTextBox
-            // 
-            this.nomeTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nomeTextBox.Location = new System.Drawing.Point(84, 149);
-            this.nomeTextBox.Name = "nomeTextBox";
-            this.nomeTextBox.Size = new System.Drawing.Size(379, 24);
-            this.nomeTextBox.TabIndex = 19;
-            // 
             // funcaoBindingSource
             // 
             this.funcaoBindingSource.DataSource = typeof(Models.Funcao);
+            // 
+            // idTextBox
+            // 
+            this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcaoBindingSource, "Id", true));
+            this.idTextBox.Location = new System.Drawing.Point(29, 151);
+            this.idTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.idTextBox.Name = "idTextBox";
+            this.idTextBox.Size = new System.Drawing.Size(76, 20);
+            this.idTextBox.TabIndex = 19;
+            // 
+            // nomeTextBox
+            // 
+            this.nomeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcaoBindingSource, "Nome", true));
+            this.nomeTextBox.Location = new System.Drawing.Point(179, 149);
+            this.nomeTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.nomeTextBox.Name = "nomeTextBox";
+            this.nomeTextBox.Size = new System.Drawing.Size(279, 20);
+            this.nomeTextBox.TabIndex = 20;
             // 
             // FormCadastroFuncao
             // 
@@ -158,10 +156,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(487, 311);
+            this.Controls.Add(nomeLabel);
+            this.Controls.Add(this.nomeTextBox);
             this.Controls.Add(idLabel);
             this.Controls.Add(this.idTextBox);
-            this.Controls.Add(descricaoLabel);
-            this.Controls.Add(this.nomeTextBox);
             this.Controls.Add(this.btnCancelarCadastroOuAlterar);
             this.Controls.Add(this.btnSalvarServico);
             this.Controls.Add(this.lblCadastrarFuncao);
@@ -187,8 +185,8 @@
         private System.Windows.Forms.Label lblCadastrarFuncao;
         private System.Windows.Forms.Button btnSalvarServico;
         private System.Windows.Forms.Button btnCancelarCadastroOuAlterar;
+        private System.Windows.Forms.BindingSource funcaoBindingSource;
         private System.Windows.Forms.TextBox idTextBox;
         private System.Windows.Forms.TextBox nomeTextBox;
-        private System.Windows.Forms.BindingSource funcaoBindingSource;
     }
 }

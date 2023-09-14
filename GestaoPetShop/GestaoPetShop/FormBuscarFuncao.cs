@@ -47,7 +47,7 @@ namespace GestaoPetShop
         }//Givas
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            //this.Hide();
             using (FormCadastroFuncao frm = new FormCadastroFuncao())
             {
                 try
@@ -107,5 +107,22 @@ namespace GestaoPetShop
                 MessageBox.Show(ex.Message);
             }
         }//Givas
+
+        private void buttonVincularPermissaoEmFuncao_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using(FormVincularPermissaoEmFuncao frm = new FormVincularPermissaoEmFuncao())
+                {
+                    frm.ShowDialog();
+                    
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }

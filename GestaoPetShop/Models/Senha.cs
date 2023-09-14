@@ -11,8 +11,7 @@ namespace Models
         public static string GerarSenha(byte digitos)
         {
             var senha = "";
-            var caracteres = @"ABCDEFGHIJKLMNOPQRSTUVXYWZ_0123456789!@#$%&()_0123456789!@#$%&()
-                                abcdefghijklmnopqrstuvxywz";
+            var caracteres = "ABCDEFGHIJKLMNOPQRSTUVXYWZ_0123456789!@#$%&()_0123456789!@#$%&()abcdefghijklmnopqrstuvxywz";
             var tamanho = caracteres.Length;
             Random numero = new Random();
 

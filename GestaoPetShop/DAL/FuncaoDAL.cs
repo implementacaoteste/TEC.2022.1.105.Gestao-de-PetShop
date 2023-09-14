@@ -16,7 +16,7 @@ using Models;
             try
             {
                 SqlCommand cmd = cn.CreateCommand();
-                cmd.CommandText = "INSERT INTO Funcao(Nome) VALUES (@Nome)";
+                cmd.CommandText = @"INSERT INTO Funcao(Nome) VALUES (@Nome)";
                 cmd.CommandType = System.Data.CommandType.Text;
 
                 cmd.Parameters.AddWithValue("@Nome", _funcao.Nome);
@@ -43,7 +43,7 @@ using Models;
                 SqlCommand cmd = cn.CreateCommand();
 
                 cmd.CommandText = @"UPDATE Funcao SET
-                                    Nome = @Nome,
+                                    Nome = @Nome
                                     WHERE Id = @Id";
 
                 cmd.CommandType = System.Data.CommandType.Text;
@@ -88,6 +88,7 @@ using Models;
                         funcao.Id = (int)rd["Id"];
                         funcao.Nome = rd["nome"].ToString();
 
+                        funcao.Permissoes = new PermissaoDAL().BuscarPermissaoPorIdFuncao (funcao.Id);
                         funcaoList.Add(funcao);
                     }
                 }
@@ -122,6 +123,8 @@ using Models;
                     {
                         funcao.Id = (int)rd["Id"];
                         funcao.Nome = rd["Nome"].ToString();
+
+                        funcao.Permissoes = new PermissaoDAL().BuscarPermissaoPorIdFuncao(funcao.Id);
                     }
                 }
                 return funcao;
@@ -157,6 +160,7 @@ using Models;
                         funcao.Id = (int)rd["Id"];
                         funcao.Nome = rd["Nome"].ToString();
 
+                        funcao.Permissoes = new PermissaoDAL().BuscarPermissaoPorIdFuncao(funcao.Id);
                         funcaoList.Add(funcao);
                     }
                 }

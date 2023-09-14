@@ -1,12 +1,5 @@
 ﻿using Models;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GestaoPetShop
@@ -21,8 +14,6 @@ namespace GestaoPetShop
 
         private void btnGerar_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(Senha.GerarSenha(8));
-
             if (txtSenhaAtual.Text == senhaAtual)
             {
                 DialogResult resposta = new DialogResult();
@@ -34,7 +25,6 @@ namespace GestaoPetShop
                     txtNovaSenha.Text = Senha.GerarSenha(8);
                     txtNovaSenha2.Text = txtNovaSenha.Text;
                 }
-
                 txtNovaSenha.Enabled = true;
                 txtNovaSenha2.Enabled = true;
                 btnOK.Enabled = true;

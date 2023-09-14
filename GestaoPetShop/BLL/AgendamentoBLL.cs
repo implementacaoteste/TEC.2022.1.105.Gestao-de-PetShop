@@ -16,33 +16,29 @@ namespace BLL
     {
         public void Inserir(Agendamento _agendamento)
         {
-            
-            if (ValidarPreenchimento(_agendamento)){
-                throw new Exception();
-            }
-
+            ValidarPreenchimento(_agendamento);
             AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
             agendamentoDAL.Inserir(_agendamento);
         }
 
         private bool ValidarPreenchimento(Agendamento _agendamento)
         {
-            if(_agendamento.IdAnimal == null || _agendamento.IdAnimal == 0)
+            if( _agendamento.IdAnimal == 0)
                 throw new Exception("Animal não informado.");
 
-            if (_agendamento.IdSituacao == null || _agendamento.IdSituacao == 0)
+            if ( _agendamento.IdSituacao == 0)
                 throw new Exception("Situação não informada");
 
-            if (_agendamento.DataAg == null || _agendamento.DataAg < DateTime.Now )
+            if ( _agendamento.DataAg.Date < DateTime.Now.Date )
                 throw new Exception("Data inválida ou não informada");
 
-            if (_agendamento.Horario == null || _agendamento.Horario == "")
+            if (String.IsNullOrEmpty (_agendamento.Horario))
                 throw new Exception("Horário inválido.");
 
-            if (_agendamento.Total == null || _agendamento.Total < 0)
+            if ( _agendamento.Total < 0)
                 throw new Exception("Total inválido.");
 
-            if(_agendamento.IdProfissional == null || _agendamento.IdProfissional == 0)
+            if( _agendamento.IdProfissional == 0)
 
             if (_agendamento.Ativo == false)
                 throw new Exception("Ativo não marcado.");

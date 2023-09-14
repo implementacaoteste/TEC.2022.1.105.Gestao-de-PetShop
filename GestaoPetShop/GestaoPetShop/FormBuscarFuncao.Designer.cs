@@ -35,10 +35,6 @@
             this.comboBoxEscolhaBuscarFuncao = new System.Windows.Forms.ComboBox();
             this.lblBuscar = new System.Windows.Forms.Label();
             this.textBoxBuscarFuncao = new System.Windows.Forms.TextBox();
-            this.funcaoDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.funcaoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lblCadastrar = new System.Windows.Forms.Label();
             this.lblAlterar = new System.Windows.Forms.Label();
             this.lblExcluir = new System.Windows.Forms.Label();
@@ -48,9 +44,21 @@
             this.btnBuscarFuncao = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.btnFechar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.funcaoDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.funcaoBindingSource)).BeginInit();
+            this.funcaoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.funcaoDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.permissoesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.permissoesDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.buttonVincularPermissaoEmFuncao = new System.Windows.Forms.Button();
+            this.buttonDesvincularPermissaoDeFuncao = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.funcaoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.funcaoDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.permissoesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.permissoesDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // imageList1
@@ -70,7 +78,7 @@
             this.lblConsultaFuncao.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblConsultaFuncao.Location = new System.Drawing.Point(0, 0);
             this.lblConsultaFuncao.Name = "lblConsultaFuncao";
-            this.lblConsultaFuncao.Size = new System.Drawing.Size(542, 41);
+            this.lblConsultaFuncao.Size = new System.Drawing.Size(551, 41);
             this.lblConsultaFuncao.TabIndex = 25;
             this.lblConsultaFuncao.Text = "Consulta de Função";
             this.lblConsultaFuncao.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -101,47 +109,8 @@
             // 
             this.textBoxBuscarFuncao.Location = new System.Drawing.Point(138, 156);
             this.textBoxBuscarFuncao.Name = "textBoxBuscarFuncao";
-            this.textBoxBuscarFuncao.Size = new System.Drawing.Size(388, 20);
+            this.textBoxBuscarFuncao.Size = new System.Drawing.Size(397, 20);
             this.textBoxBuscarFuncao.TabIndex = 31;
-            // 
-            // funcaoDataGridView
-            // 
-            this.funcaoDataGridView.AllowUserToAddRows = false;
-            this.funcaoDataGridView.AllowUserToDeleteRows = false;
-            this.funcaoDataGridView.AllowUserToOrderColumns = true;
-            this.funcaoDataGridView.AutoGenerateColumns = false;
-            this.funcaoDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.funcaoDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2});
-            this.funcaoDataGridView.DataSource = this.funcaoBindingSource;
-            this.funcaoDataGridView.Location = new System.Drawing.Point(12, 182);
-            this.funcaoDataGridView.Name = "funcaoDataGridView";
-            this.funcaoDataGridView.ReadOnly = true;
-            this.funcaoDataGridView.RowHeadersVisible = false;
-            this.funcaoDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.funcaoDataGridView.Size = new System.Drawing.Size(514, 220);
-            this.funcaoDataGridView.TabIndex = 32;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Id";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 50;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "Nome";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Nome";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // funcaoBindingSource
-            // 
-            this.funcaoBindingSource.DataSource = typeof(Models.Funcao);
             // 
             // lblCadastrar
             // 
@@ -249,7 +218,7 @@
             // 
             this.pictureBox3.Image = global::GestaoPetShop.Properties.Resources.bicho_de_estimacao;
             this.pictureBox3.Location = new System.Drawing.Point(11, 8);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(38, 33);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -266,26 +235,139 @@
             this.btnFechar.ImageKey = "fechar-removebg-preview.ico";
             this.btnFechar.ImageList = this.imageList1;
             this.btnFechar.Location = new System.Drawing.Point(485, 3);
-            this.btnFechar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnFechar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnFechar.Name = "btnFechar";
             this.btnFechar.Size = new System.Drawing.Size(50, 41);
             this.btnFechar.TabIndex = 23;
             this.btnFechar.UseVisualStyleBackColor = false;
             this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
             // 
+            // funcaoBindingSource
+            // 
+            this.funcaoBindingSource.DataSource = typeof(Models.Funcao);
+            // 
+            // funcaoDataGridView
+            // 
+            this.funcaoDataGridView.AllowUserToAddRows = false;
+            this.funcaoDataGridView.AllowUserToDeleteRows = false;
+            this.funcaoDataGridView.AllowUserToOrderColumns = true;
+            this.funcaoDataGridView.AutoGenerateColumns = false;
+            this.funcaoDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.funcaoDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2});
+            this.funcaoDataGridView.DataSource = this.funcaoBindingSource;
+            this.funcaoDataGridView.Location = new System.Drawing.Point(11, 212);
+            this.funcaoDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.funcaoDataGridView.Name = "funcaoDataGridView";
+            this.funcaoDataGridView.ReadOnly = true;
+            this.funcaoDataGridView.RowHeadersVisible = false;
+            this.funcaoDataGridView.RowHeadersWidth = 51;
+            this.funcaoDataGridView.RowTemplate.Height = 24;
+            this.funcaoDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.funcaoDataGridView.Size = new System.Drawing.Size(295, 179);
+            this.funcaoDataGridView.TabIndex = 39;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Id";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 50;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Nome";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Nome";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // permissoesBindingSource
+            // 
+            this.permissoesBindingSource.DataMember = "Permissoes";
+            this.permissoesBindingSource.DataSource = this.funcaoBindingSource;
+            // 
+            // permissoesDataGridView
+            // 
+            this.permissoesDataGridView.AllowUserToAddRows = false;
+            this.permissoesDataGridView.AllowUserToDeleteRows = false;
+            this.permissoesDataGridView.AllowUserToOrderColumns = true;
+            this.permissoesDataGridView.AutoGenerateColumns = false;
+            this.permissoesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.permissoesDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4});
+            this.permissoesDataGridView.DataSource = this.permissoesBindingSource;
+            this.permissoesDataGridView.Location = new System.Drawing.Point(322, 212);
+            this.permissoesDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.permissoesDataGridView.Name = "permissoesDataGridView";
+            this.permissoesDataGridView.ReadOnly = true;
+            this.permissoesDataGridView.RowHeadersVisible = false;
+            this.permissoesDataGridView.RowHeadersWidth = 51;
+            this.permissoesDataGridView.RowTemplate.Height = 24;
+            this.permissoesDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.permissoesDataGridView.Size = new System.Drawing.Size(213, 179);
+            this.permissoesDataGridView.TabIndex = 39;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Id";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Id";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Width = 50;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Descricao";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Descrição";
+            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // buttonVincularPermissaoEmFuncao
+            // 
+            this.buttonVincularPermissaoEmFuncao.Location = new System.Drawing.Point(399, 181);
+            this.buttonVincularPermissaoEmFuncao.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonVincularPermissaoEmFuncao.Name = "buttonVincularPermissaoEmFuncao";
+            this.buttonVincularPermissaoEmFuncao.Size = new System.Drawing.Size(56, 26);
+            this.buttonVincularPermissaoEmFuncao.TabIndex = 40;
+            this.buttonVincularPermissaoEmFuncao.Text = "Vincular";
+            this.buttonVincularPermissaoEmFuncao.UseVisualStyleBackColor = true;
+            this.buttonVincularPermissaoEmFuncao.Click += new System.EventHandler(this.buttonVincularPermissaoEmFuncao_Click);
+            // 
+            // buttonDesvincularPermissaoDeFuncao
+            // 
+            this.buttonDesvincularPermissaoDeFuncao.Location = new System.Drawing.Point(460, 181);
+            this.buttonDesvincularPermissaoDeFuncao.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonDesvincularPermissaoDeFuncao.Name = "buttonDesvincularPermissaoDeFuncao";
+            this.buttonDesvincularPermissaoDeFuncao.Size = new System.Drawing.Size(76, 26);
+            this.buttonDesvincularPermissaoDeFuncao.TabIndex = 41;
+            this.buttonDesvincularPermissaoDeFuncao.Text = "Desvincular";
+            this.buttonDesvincularPermissaoDeFuncao.UseVisualStyleBackColor = true;
+            // 
             // FormBuscarFuncao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(542, 418);
+            this.ClientSize = new System.Drawing.Size(551, 404);
+            this.Controls.Add(this.buttonDesvincularPermissaoDeFuncao);
+            this.Controls.Add(this.buttonVincularPermissaoEmFuncao);
+            this.Controls.Add(this.permissoesDataGridView);
+            this.Controls.Add(this.funcaoDataGridView);
             this.Controls.Add(this.lblExcluir);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.lblAlterar);
             this.Controls.Add(this.btnAlterar);
             this.Controls.Add(this.lblCadastrar);
             this.Controls.Add(this.btnCadastrar);
-            this.Controls.Add(this.funcaoDataGridView);
             this.Controls.Add(this.textBoxBuscarFuncao);
             this.Controls.Add(this.lblBuscar);
             this.Controls.Add(this.btnBuscarFuncao);
@@ -299,9 +381,11 @@
             this.Name = "FormBuscarFuncao";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            ((System.ComponentModel.ISupportInitialize)(this.funcaoDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.funcaoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.funcaoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.funcaoDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.permissoesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.permissoesDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -317,15 +401,21 @@
         private System.Windows.Forms.Button btnBuscarFuncao;
         private System.Windows.Forms.Label lblBuscar;
         private System.Windows.Forms.TextBox textBoxBuscarFuncao;
-        private System.Windows.Forms.BindingSource funcaoBindingSource;
-        private System.Windows.Forms.DataGridView funcaoDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.Label lblCadastrar;
         private System.Windows.Forms.Label lblAlterar;
         private System.Windows.Forms.Button btnAlterar;
         private System.Windows.Forms.Label lblExcluir;
         private System.Windows.Forms.Button btnExcluir;
+        private System.Windows.Forms.BindingSource funcaoBindingSource;
+        private System.Windows.Forms.DataGridView funcaoDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.BindingSource permissoesBindingSource;
+        private System.Windows.Forms.DataGridView permissoesDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.Button buttonVincularPermissaoEmFuncao;
+        private System.Windows.Forms.Button buttonDesvincularPermissaoDeFuncao;
     }
 }
