@@ -72,7 +72,7 @@
             this.textBoxDataNascimento = new System.Windows.Forms.TextBox();
             this.nomeFuncaoComboBox = new System.Windows.Forms.ComboBox();
             this.idFuncaoTextBox = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnGerarSenha = new System.Windows.Forms.Button();
             bairroLabel = new System.Windows.Forms.Label();
             cidadeLabel = new System.Windows.Forms.Label();
             dataNascimentoLabel = new System.Windows.Forms.Label();
@@ -515,19 +515,19 @@
             this.idFuncaoTextBox.Size = new System.Drawing.Size(66, 22);
             this.idFuncaoTextBox.TabIndex = 40;
             // 
-            // button1
+            // btnGerarSenha
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(648, 214);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(125, 35);
-            this.button1.TabIndex = 41;
-            this.button1.Text = "Teste";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnGerarSenha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnGerarSenha.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnGerarSenha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGerarSenha.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGerarSenha.Location = new System.Drawing.Point(648, 214);
+            this.btnGerarSenha.Name = "btnGerarSenha";
+            this.btnGerarSenha.Size = new System.Drawing.Size(125, 35);
+            this.btnGerarSenha.TabIndex = 41;
+            this.btnGerarSenha.Text = "Gerar Senha";
+            this.btnGerarSenha.UseVisualStyleBackColor = false;
+            this.btnGerarSenha.Click += new System.EventHandler(this.btnGerarSenha_Click);
             // 
             // FormCadastroProfissional
             // 
@@ -536,7 +536,7 @@
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(804, 517);
             this.Controls.Add(this.pictureBoxFoto);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnGerarSenha);
             this.Controls.Add(idFuncaoLabel);
             this.Controls.Add(this.idFuncaoTextBox);
             this.Controls.Add(nomeFuncaoLabel);
@@ -625,6 +625,6 @@
         private System.Windows.Forms.TextBox textBoxDataNascimento;
         private System.Windows.Forms.ComboBox nomeFuncaoComboBox;
         private System.Windows.Forms.TextBox idFuncaoTextBox;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnGerarSenha;
     }
 }
