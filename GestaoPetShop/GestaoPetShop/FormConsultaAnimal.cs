@@ -109,6 +109,28 @@ namespace GestaoPetShop
             animalBindingSource.CancelEdit();
         }
 
-       
+        private void buttonAlterar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (animalBindingSource.Count == 0)
+                {
+                    MessageBox.Show("Não existe animal para ser alterado.");
+                    return;
+                }
+
+                int id = ((Animal) animalBindingSource.Current).Id;
+
+                using (FormCadastroAnimal frm = new FormCadastroAnimal(id))
+                {
+                    frm.ShowDialog();
+                }
+                buttonBuscar_Click(null, null);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }

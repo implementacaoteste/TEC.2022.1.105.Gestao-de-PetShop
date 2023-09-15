@@ -21,6 +21,8 @@ namespace Models
         public string Alergia { get; set; }
         public DateTime DataNascimento { get; set; }
         public bool Ativo { get; set; }
+        public Raca Raca { get; set; }
+        public Cliente Cliente { get; set; }
 
     }
 }

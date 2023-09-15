@@ -1,4 +1,5 @@
 ﻿using BLL;
+using Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,12 +14,15 @@ namespace GestaoPetShop
 {
     public partial class ConsultaRaca : Form
     {
+
+
         int id;
         public ConsultaRaca()
         {
             InitializeComponent();
             id = id;
         }
+        public Raca Raca { get; set; }
 
         private void racaBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
@@ -32,6 +36,7 @@ namespace GestaoPetShop
         {
             // TODO: This line of code loads data into the 'petshopDataSet.Raca' table. You can move, or remove it, as needed.
             // this.racaTableAdapter.Fill(this.petshopDataSet.Raca);
+            comboBox1.SelectedIndex = 0;
 
             try
             {
@@ -60,6 +65,84 @@ namespace GestaoPetShop
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void buttonBuscar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                switch (comboBox1.SelectedIndex)
+                {
+                    case 0:
+                        racaBindingSource.DataSource = new RacaBLL().BuscarTodos();
+                        break;
+                    case 1:
+                        racaBindingSource.DataSource = new RacaBLL().BuscarPorNome(textBoxBuscar.Text);
+                        break;
+                    case 2:
+                        racaBindingSource.DataSource = new RacaBLL().BuscarPorId(Convert.ToInt32(textBoxBuscar.Text));
+                        if (String.IsNullOrEmpty(textBoxBuscar.Text))
+                            throw new Exception("Informe um Id para fazer a busca.") { Data = { { "Id", 21 } } };
+                        break;
+                    default:
+                        break;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void buttonAlterar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (racaBindingSource.Count == 0)
+                {
+                    MessageBox.Show("Não existe raça para ser alterado.");
+                    return;
+                }
+
+                int id = ((Raca)racaBindingSource.Current).Id;
+
+                using (FormCadastroRaca frm = new FormCadastroRaca())
+                {
+                    frm.ShowDialog();
+                }
+                buttonBuscar_Click(null, null);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void buttonCancelar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonSelecionar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (racaBindingSource.Count  == 0)
+                    throw new Exception("Selecione uma Raça!");
+
+                this.Raca = (Raca)racaBindingSource.Current;
+
+                Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void labelBuscraPorAnimal_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

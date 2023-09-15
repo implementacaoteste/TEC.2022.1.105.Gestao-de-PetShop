@@ -8,6 +8,7 @@ namespace Models
 {
     public class Cliente
     {
+
         public int Id { get; set; }
         public string Nome { get; set; }
         public string CPF { get; set; }
@@ -24,10 +25,12 @@ namespace Models
         public List<TelefoneCliente> TelefoneClientes { get; set; }
         public List<EmailCliente> EmailCliente { get; set; }
         public List<Animal> Animais { get; set; }
+       
         public Cliente()
         {
             TelefoneClientes = new List<TelefoneCliente>();
             EmailCliente = new List<EmailCliente>();
         }
+       
     }
 }
