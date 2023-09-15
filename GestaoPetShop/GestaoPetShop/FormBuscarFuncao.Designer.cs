@@ -77,8 +77,9 @@
             this.lblConsultaFuncao.Dock = System.Windows.Forms.DockStyle.Top;
             this.lblConsultaFuncao.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblConsultaFuncao.Location = new System.Drawing.Point(0, 0);
+            this.lblConsultaFuncao.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblConsultaFuncao.Name = "lblConsultaFuncao";
-            this.lblConsultaFuncao.Size = new System.Drawing.Size(551, 41);
+            this.lblConsultaFuncao.Size = new System.Drawing.Size(735, 50);
             this.lblConsultaFuncao.TabIndex = 25;
             this.lblConsultaFuncao.Text = "Consulta de Função";
             this.lblConsultaFuncao.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -90,35 +91,39 @@
             "Todos",
             "Id",
             "Nome"});
-            this.comboBoxEscolhaBuscarFuncao.Location = new System.Drawing.Point(11, 156);
+            this.comboBoxEscolhaBuscarFuncao.Location = new System.Drawing.Point(15, 192);
+            this.comboBoxEscolhaBuscarFuncao.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBoxEscolhaBuscarFuncao.Name = "comboBoxEscolhaBuscarFuncao";
-            this.comboBoxEscolhaBuscarFuncao.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxEscolhaBuscarFuncao.Size = new System.Drawing.Size(160, 24);
             this.comboBoxEscolhaBuscarFuncao.TabIndex = 26;
             // 
             // lblBuscar
             // 
             this.lblBuscar.AutoSize = true;
             this.lblBuscar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBuscar.Location = new System.Drawing.Point(99, 111);
+            this.lblBuscar.Location = new System.Drawing.Point(132, 137);
+            this.lblBuscar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblBuscar.Name = "lblBuscar";
-            this.lblBuscar.Size = new System.Drawing.Size(60, 19);
+            this.lblBuscar.Size = new System.Drawing.Size(75, 23);
             this.lblBuscar.TabIndex = 29;
             this.lblBuscar.Text = "Buscar";
             // 
             // textBoxBuscarFuncao
             // 
-            this.textBoxBuscarFuncao.Location = new System.Drawing.Point(138, 156);
+            this.textBoxBuscarFuncao.Location = new System.Drawing.Point(184, 192);
+            this.textBoxBuscarFuncao.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxBuscarFuncao.Name = "textBoxBuscarFuncao";
-            this.textBoxBuscarFuncao.Size = new System.Drawing.Size(397, 20);
+            this.textBoxBuscarFuncao.Size = new System.Drawing.Size(528, 22);
             this.textBoxBuscarFuncao.TabIndex = 31;
             // 
             // lblCadastrar
             // 
             this.lblCadastrar.AutoSize = true;
             this.lblCadastrar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCadastrar.Location = new System.Drawing.Point(181, 111);
+            this.lblCadastrar.Location = new System.Drawing.Point(241, 137);
+            this.lblCadastrar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCadastrar.Name = "lblCadastrar";
-            this.lblCadastrar.Size = new System.Drawing.Size(85, 19);
+            this.lblCadastrar.Size = new System.Drawing.Size(105, 23);
             this.lblCadastrar.TabIndex = 34;
             this.lblCadastrar.Text = "Cadastrar";
             // 
@@ -126,9 +131,10 @@
             // 
             this.lblAlterar.AutoSize = true;
             this.lblAlterar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAlterar.Location = new System.Drawing.Point(287, 111);
+            this.lblAlterar.Location = new System.Drawing.Point(383, 137);
+            this.lblAlterar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAlterar.Name = "lblAlterar";
-            this.lblAlterar.Size = new System.Drawing.Size(60, 19);
+            this.lblAlterar.Size = new System.Drawing.Size(74, 23);
             this.lblAlterar.TabIndex = 36;
             this.lblAlterar.Text = "Alterar";
             // 
@@ -136,9 +142,10 @@
             // 
             this.lblExcluir.AutoSize = true;
             this.lblExcluir.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblExcluir.Location = new System.Drawing.Point(384, 111);
+            this.lblExcluir.Location = new System.Drawing.Point(512, 137);
+            this.lblExcluir.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblExcluir.Name = "lblExcluir";
-            this.lblExcluir.Size = new System.Drawing.Size(59, 19);
+            this.lblExcluir.Size = new System.Drawing.Size(72, 23);
             this.lblExcluir.TabIndex = 38;
             this.lblExcluir.Text = "Excluir";
             // 
@@ -152,9 +159,10 @@
             this.btnExcluir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnExcluir.ImageKey = "excluir-removebg-preview.ico";
             this.btnExcluir.ImageList = this.imageList1;
-            this.btnExcluir.Location = new System.Drawing.Point(379, 58);
+            this.btnExcluir.Location = new System.Drawing.Point(505, 71);
+            this.btnExcluir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(69, 50);
+            this.btnExcluir.Size = new System.Drawing.Size(92, 62);
             this.btnExcluir.TabIndex = 37;
             this.btnExcluir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnExcluir.UseVisualStyleBackColor = false;
@@ -170,9 +178,10 @@
             this.btnAlterar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnAlterar.ImageKey = "editar-removebg-preview.ico";
             this.btnAlterar.ImageList = this.imageList1;
-            this.btnAlterar.Location = new System.Drawing.Point(283, 58);
+            this.btnAlterar.Location = new System.Drawing.Point(377, 71);
+            this.btnAlterar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAlterar.Name = "btnAlterar";
-            this.btnAlterar.Size = new System.Drawing.Size(69, 50);
+            this.btnAlterar.Size = new System.Drawing.Size(92, 62);
             this.btnAlterar.TabIndex = 35;
             this.btnAlterar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnAlterar.UseVisualStyleBackColor = false;
@@ -188,9 +197,10 @@
             this.btnCadastrar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnCadastrar.ImageKey = "add-removebg-preview.png";
             this.btnCadastrar.ImageList = this.imageList1;
-            this.btnCadastrar.Location = new System.Drawing.Point(189, 58);
+            this.btnCadastrar.Location = new System.Drawing.Point(252, 71);
+            this.btnCadastrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(69, 50);
+            this.btnCadastrar.Size = new System.Drawing.Size(92, 62);
             this.btnCadastrar.TabIndex = 33;
             this.btnCadastrar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnCadastrar.UseVisualStyleBackColor = false;
@@ -206,9 +216,10 @@
             this.btnBuscarFuncao.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnBuscarFuncao.ImageKey = "buscar-removebg-preview.ico";
             this.btnBuscarFuncao.ImageList = this.imageList1;
-            this.btnBuscarFuncao.Location = new System.Drawing.Point(100, 58);
+            this.btnBuscarFuncao.Location = new System.Drawing.Point(133, 71);
+            this.btnBuscarFuncao.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnBuscarFuncao.Name = "btnBuscarFuncao";
-            this.btnBuscarFuncao.Size = new System.Drawing.Size(59, 50);
+            this.btnBuscarFuncao.Size = new System.Drawing.Size(79, 62);
             this.btnBuscarFuncao.TabIndex = 28;
             this.btnBuscarFuncao.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnBuscarFuncao.UseVisualStyleBackColor = false;
@@ -216,11 +227,10 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Image = global::GestaoPetShop.Properties.Resources.bicho_de_estimacao;
-            this.pictureBox3.Location = new System.Drawing.Point(11, 8);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox3.Location = new System.Drawing.Point(15, 10);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(38, 33);
+            this.pictureBox3.Size = new System.Drawing.Size(51, 41);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 24;
             this.pictureBox3.TabStop = false;
@@ -234,10 +244,10 @@
             this.btnFechar.ForeColor = System.Drawing.Color.Transparent;
             this.btnFechar.ImageKey = "fechar-removebg-preview.ico";
             this.btnFechar.ImageList = this.imageList1;
-            this.btnFechar.Location = new System.Drawing.Point(485, 3);
-            this.btnFechar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnFechar.Location = new System.Drawing.Point(647, 4);
+            this.btnFechar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnFechar.Name = "btnFechar";
-            this.btnFechar.Size = new System.Drawing.Size(50, 41);
+            this.btnFechar.Size = new System.Drawing.Size(67, 50);
             this.btnFechar.TabIndex = 23;
             this.btnFechar.UseVisualStyleBackColor = false;
             this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
@@ -257,15 +267,15 @@
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2});
             this.funcaoDataGridView.DataSource = this.funcaoBindingSource;
-            this.funcaoDataGridView.Location = new System.Drawing.Point(11, 212);
-            this.funcaoDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.funcaoDataGridView.Location = new System.Drawing.Point(15, 261);
+            this.funcaoDataGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.funcaoDataGridView.Name = "funcaoDataGridView";
             this.funcaoDataGridView.ReadOnly = true;
             this.funcaoDataGridView.RowHeadersVisible = false;
             this.funcaoDataGridView.RowHeadersWidth = 51;
             this.funcaoDataGridView.RowTemplate.Height = 24;
             this.funcaoDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.funcaoDataGridView.Size = new System.Drawing.Size(295, 179);
+            this.funcaoDataGridView.Size = new System.Drawing.Size(393, 220);
             this.funcaoDataGridView.TabIndex = 39;
             // 
             // dataGridViewTextBoxColumn1
@@ -302,15 +312,15 @@
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4});
             this.permissoesDataGridView.DataSource = this.permissoesBindingSource;
-            this.permissoesDataGridView.Location = new System.Drawing.Point(322, 212);
-            this.permissoesDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.permissoesDataGridView.Location = new System.Drawing.Point(429, 261);
+            this.permissoesDataGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.permissoesDataGridView.Name = "permissoesDataGridView";
             this.permissoesDataGridView.ReadOnly = true;
             this.permissoesDataGridView.RowHeadersVisible = false;
             this.permissoesDataGridView.RowHeadersWidth = 51;
             this.permissoesDataGridView.RowTemplate.Height = 24;
             this.permissoesDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.permissoesDataGridView.Size = new System.Drawing.Size(213, 179);
+            this.permissoesDataGridView.Size = new System.Drawing.Size(284, 220);
             this.permissoesDataGridView.TabIndex = 39;
             // 
             // dataGridViewTextBoxColumn3
@@ -333,10 +343,10 @@
             // 
             // buttonVincularPermissaoEmFuncao
             // 
-            this.buttonVincularPermissaoEmFuncao.Location = new System.Drawing.Point(399, 181);
-            this.buttonVincularPermissaoEmFuncao.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonVincularPermissaoEmFuncao.Location = new System.Drawing.Point(532, 223);
+            this.buttonVincularPermissaoEmFuncao.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonVincularPermissaoEmFuncao.Name = "buttonVincularPermissaoEmFuncao";
-            this.buttonVincularPermissaoEmFuncao.Size = new System.Drawing.Size(56, 26);
+            this.buttonVincularPermissaoEmFuncao.Size = new System.Drawing.Size(75, 32);
             this.buttonVincularPermissaoEmFuncao.TabIndex = 40;
             this.buttonVincularPermissaoEmFuncao.Text = "Vincular";
             this.buttonVincularPermissaoEmFuncao.UseVisualStyleBackColor = true;
@@ -344,20 +354,21 @@
             // 
             // buttonDesvincularPermissaoDeFuncao
             // 
-            this.buttonDesvincularPermissaoDeFuncao.Location = new System.Drawing.Point(460, 181);
-            this.buttonDesvincularPermissaoDeFuncao.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonDesvincularPermissaoDeFuncao.Location = new System.Drawing.Point(613, 223);
+            this.buttonDesvincularPermissaoDeFuncao.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonDesvincularPermissaoDeFuncao.Name = "buttonDesvincularPermissaoDeFuncao";
-            this.buttonDesvincularPermissaoDeFuncao.Size = new System.Drawing.Size(76, 26);
+            this.buttonDesvincularPermissaoDeFuncao.Size = new System.Drawing.Size(101, 32);
             this.buttonDesvincularPermissaoDeFuncao.TabIndex = 41;
             this.buttonDesvincularPermissaoDeFuncao.Text = "Desvincular";
             this.buttonDesvincularPermissaoDeFuncao.UseVisualStyleBackColor = true;
+            this.buttonDesvincularPermissaoDeFuncao.Click += new System.EventHandler(this.buttonDesvincularPermissaoDeFuncao_Click);
             // 
             // FormBuscarFuncao
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(551, 404);
+            this.ClientSize = new System.Drawing.Size(735, 497);
             this.Controls.Add(this.buttonDesvincularPermissaoDeFuncao);
             this.Controls.Add(this.buttonVincularPermissaoEmFuncao);
             this.Controls.Add(this.permissoesDataGridView);
@@ -376,6 +387,7 @@
             this.Controls.Add(this.btnFechar);
             this.Controls.Add(this.lblConsultaFuncao);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormBuscarFuncao";

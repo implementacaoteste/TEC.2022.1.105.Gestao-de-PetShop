@@ -112,11 +112,70 @@ namespace GestaoPetShop
         {
             try
             {
-                using(FormVincularPermissaoEmFuncao frm = new FormVincularPermissaoEmFuncao())
+                if(funcaoBindingSource.Count <= 0)
+                {
+                    MessageBox.Show("Selecione uma função.");
+                    return ;
+                }
+                int idfuncao = ((Funcao)funcaoBindingSource.Current).Id;
+                string nomefuncao = ((Funcao)funcaoBindingSource.Current).Nome;
+                using(FormVincularPermissaoEmFuncao frm = new FormVincularPermissaoEmFuncao(idfuncao, nomefuncao))
                 {
                     frm.ShowDialog();
                     
                 }
+                if (comboBoxEscolhaBuscarFuncao.SelectedIndex == 0)
+                {
+                    funcaoBindingSource.DataSource = new FuncaoBLL().BuscarTodos();
+                }
+                else if (comboBoxEscolhaBuscarFuncao.SelectedIndex == 1)
+                {
+                    funcaoBindingSource.DataSource = new FuncaoBLL().BuscarPorId(Convert.ToInt32(textBoxBuscarFuncao.Text));
+                }
+                else if (comboBoxEscolhaBuscarFuncao.SelectedIndex == 2)
+                {
+                    funcaoBindingSource.DataSource = new FuncaoBLL().BuscarPorNome(textBoxBuscarFuncao.Text);
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void buttonDesvincularPermissaoDeFuncao_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if(permissoesBindingSource.Count < 1)
+                {
+                    MessageBox.Show("Selecione uma permissão para excluir.");
+                    return;
+                }
+                if (MessageBox.Show("Deseja Remover esta Permissão da Função?", "Atenção", MessageBoxButtons.YesNo) == DialogResult.No)
+                    return;
+
+                int idfuncao = ((Funcao)funcaoBindingSource.Current).Id;
+                int idpermissao = ((Permissao)permissoesBindingSource.Current).Id;
+
+
+                new FuncaoBLL().RemoverPermissaoDeFuncao(idfuncao, idpermissao);
+
+                if (comboBoxEscolhaBuscarFuncao.SelectedIndex == 0)
+                {
+                    funcaoBindingSource.DataSource = new FuncaoBLL().BuscarTodos();
+                }
+                else if (comboBoxEscolhaBuscarFuncao.SelectedIndex == 1)
+                {
+                    funcaoBindingSource.DataSource = new FuncaoBLL().BuscarPorId(Convert.ToInt32(textBoxBuscarFuncao.Text));
+                }
+                else if (comboBoxEscolhaBuscarFuncao.SelectedIndex == 2)
+                {
+                    funcaoBindingSource.DataSource = new FuncaoBLL().BuscarPorNome(textBoxBuscarFuncao.Text);
+                }
+
+
             }
             catch (Exception ex)
             {
