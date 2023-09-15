@@ -113,7 +113,7 @@
             // 
             this.buttonCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonCancelar.Location = new System.Drawing.Point(777, 330);
+            this.buttonCancelar.Location = new System.Drawing.Point(782, 330);
             this.buttonCancelar.Name = "buttonCancelar";
             this.buttonCancelar.Size = new System.Drawing.Size(75, 23);
             this.buttonCancelar.TabIndex = 5;
@@ -256,9 +256,9 @@
             // 
             // buttonVisualizar
             // 
-            this.buttonVisualizar.Location = new System.Drawing.Point(700, 330);
+            this.buttonVisualizar.Location = new System.Drawing.Point(695, 330);
             this.buttonVisualizar.Name = "buttonVisualizar";
-            this.buttonVisualizar.Size = new System.Drawing.Size(71, 23);
+            this.buttonVisualizar.Size = new System.Drawing.Size(83, 23);
             this.buttonVisualizar.TabIndex = 5;
             this.buttonVisualizar.Text = "&Visualizar";
             this.buttonVisualizar.UseVisualStyleBackColor = true;
@@ -266,7 +266,7 @@
             // 
             // buttonSelecionar
             // 
-            this.buttonSelecionar.Location = new System.Drawing.Point(604, 330);
+            this.buttonSelecionar.Location = new System.Drawing.Point(598, 330);
             this.buttonSelecionar.Name = "buttonSelecionar";
             this.buttonSelecionar.Size = new System.Drawing.Size(90, 23);
             this.buttonSelecionar.TabIndex = 22;
