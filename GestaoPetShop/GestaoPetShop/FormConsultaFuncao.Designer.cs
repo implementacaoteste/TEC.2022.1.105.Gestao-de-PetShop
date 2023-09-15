@@ -1,6 +1,6 @@
 ﻿namespace GestaoPetShop
 {
-    partial class FormBuscarFuncao
+    partial class FormConsultaFuncao
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormBuscarFuncao));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormConsultaFuncao));
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.lblConsultaFuncao = new System.Windows.Forms.Label();
             this.comboBoxEscolhaBuscarFuncao = new System.Windows.Forms.ComboBox();

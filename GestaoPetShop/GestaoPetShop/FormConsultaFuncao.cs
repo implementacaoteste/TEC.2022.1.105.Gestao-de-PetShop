@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace GestaoPetShop
 {
-    public partial class FormBuscarFuncao : Form
+    public partial class FormConsultaFuncao : Form
     {
-        public FormBuscarFuncao()
+        public FormConsultaFuncao()
         {
             InitializeComponent();
         }//Givas

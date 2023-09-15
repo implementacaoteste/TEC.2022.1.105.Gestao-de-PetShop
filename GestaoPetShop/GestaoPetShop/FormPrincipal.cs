@@ -65,7 +65,7 @@ namespace GestaoPetShop
 
         private void agendamentoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            using (ConsultaAgendamento frm = new ConsultaAgendamento())
+            using (FormConsultaAgendamento frm = new FormConsultaAgendamento())
             {
                 frm.ShowDialog();
             }
@@ -102,7 +102,7 @@ namespace GestaoPetShop
 
         private void raçaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            using (ConsultaRaca frm = new ConsultaRaca())
+            using (FormConsultaRaca frm = new FormConsultaRaca())
             {
                 frm.ShowDialog();
             }
@@ -120,7 +120,7 @@ namespace GestaoPetShop
         {
             try
             {
-                using(FormBuscarFuncao frm = new FormBuscarFuncao())
+                using(FormConsultaFuncao frm = new FormConsultaFuncao())
                 {
                     frm.ShowDialog();
                 }
