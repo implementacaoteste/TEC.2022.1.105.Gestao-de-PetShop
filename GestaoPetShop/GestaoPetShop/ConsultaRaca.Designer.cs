@@ -44,7 +44,7 @@
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxBuscar = new System.Windows.Forms.TextBox();
             this.buttonSelecionar = new System.Windows.Forms.Button();
             this.buttonCancelar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -55,25 +55,27 @@
             // 
             // buttonBuscar
             // 
-            this.buttonBuscar.Location = new System.Drawing.Point(470, 103);
+            this.buttonBuscar.Location = new System.Drawing.Point(470, 83);
             this.buttonBuscar.Name = "buttonBuscar";
             this.buttonBuscar.Size = new System.Drawing.Size(75, 23);
             this.buttonBuscar.TabIndex = 0;
             this.buttonBuscar.Text = "&Buscar";
             this.buttonBuscar.UseVisualStyleBackColor = true;
+            this.buttonBuscar.Click += new System.EventHandler(this.buttonBuscar_Click);
             // 
             // buttonAlterar
             // 
-            this.buttonAlterar.Location = new System.Drawing.Point(551, 103);
+            this.buttonAlterar.Location = new System.Drawing.Point(551, 83);
             this.buttonAlterar.Name = "buttonAlterar";
             this.buttonAlterar.Size = new System.Drawing.Size(75, 23);
             this.buttonAlterar.TabIndex = 1;
             this.buttonAlterar.Text = "&Alterar";
             this.buttonAlterar.UseVisualStyleBackColor = true;
+            this.buttonAlterar.Click += new System.EventHandler(this.buttonAlterar_Click);
             // 
             // buttonInserir
             // 
-            this.buttonInserir.Location = new System.Drawing.Point(632, 103);
+            this.buttonInserir.Location = new System.Drawing.Point(632, 83);
             this.buttonInserir.Name = "buttonInserir";
             this.buttonInserir.Size = new System.Drawing.Size(75, 23);
             this.buttonInserir.TabIndex = 2;
@@ -83,7 +85,7 @@
             // 
             // buttonExcluir
             // 
-            this.buttonExcluir.Location = new System.Drawing.Point(713, 103);
+            this.buttonExcluir.Location = new System.Drawing.Point(713, 83);
             this.buttonExcluir.Name = "buttonExcluir";
             this.buttonExcluir.Size = new System.Drawing.Size(75, 23);
             this.buttonExcluir.TabIndex = 3;
@@ -103,6 +105,7 @@
             this.labelBuscraPorAnimal.TabIndex = 4;
             this.labelBuscraPorAnimal.Text = "Buscar por Raça";
             this.labelBuscraPorAnimal.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.labelBuscraPorAnimal.Click += new System.EventHandler(this.labelBuscraPorAnimal_Click);
             // 
             // petshopDataSet
             // 
@@ -155,7 +158,7 @@
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4});
             this.racaDataGridView.DataSource = this.racaBindingSource;
-            this.racaDataGridView.Location = new System.Drawing.Point(8, 139);
+            this.racaDataGridView.Location = new System.Drawing.Point(8, 112);
             this.racaDataGridView.Name = "racaDataGridView";
             this.racaDataGridView.ReadOnly = true;
             this.racaDataGridView.RowHeadersVisible = false;
@@ -207,44 +210,46 @@
             "Todos",
             "Nome",
             "Id"});
-            this.comboBox1.Location = new System.Drawing.Point(12, 102);
+            this.comboBox1.Location = new System.Drawing.Point(12, 81);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 24);
             this.comboBox1.TabIndex = 7;
             // 
-            // textBox1
+            // textBoxBuscar
             // 
-            this.textBox1.Location = new System.Drawing.Point(139, 103);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(325, 22);
-            this.textBox1.TabIndex = 8;
+            this.textBoxBuscar.Location = new System.Drawing.Point(139, 83);
+            this.textBoxBuscar.Name = "textBoxBuscar";
+            this.textBoxBuscar.Size = new System.Drawing.Size(325, 22);
+            this.textBoxBuscar.TabIndex = 8;
             // 
             // buttonSelecionar
             // 
             this.buttonSelecionar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonSelecionar.Location = new System.Drawing.Point(599, 516);
+            this.buttonSelecionar.Location = new System.Drawing.Point(609, 480);
             this.buttonSelecionar.Name = "buttonSelecionar";
             this.buttonSelecionar.Size = new System.Drawing.Size(82, 25);
             this.buttonSelecionar.TabIndex = 9;
             this.buttonSelecionar.Text = "&Selecionar";
             this.buttonSelecionar.UseVisualStyleBackColor = true;
+            this.buttonSelecionar.Click += new System.EventHandler(this.buttonSelecionar_Click);
             // 
             // buttonCancelar
             // 
             this.buttonCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonCancelar.Location = new System.Drawing.Point(706, 516);
+            this.buttonCancelar.Location = new System.Drawing.Point(706, 480);
             this.buttonCancelar.Name = "buttonCancelar";
             this.buttonCancelar.Size = new System.Drawing.Size(82, 25);
             this.buttonCancelar.TabIndex = 10;
             this.buttonCancelar.Text = "&Cancelar";
             this.buttonCancelar.UseVisualStyleBackColor = true;
+            this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(13, 81);
+            this.label1.Location = new System.Drawing.Point(12, 62);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(83, 16);
             this.label1.TabIndex = 11;
@@ -259,7 +264,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.buttonSelecionar);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxBuscar);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.racaDataGridView);
             this.Controls.Add(this.labelBuscraPorAnimal);
@@ -293,7 +298,7 @@
         private petshopDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.DataGridView racaDataGridView;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxBuscar;
         private System.Windows.Forms.Button buttonSelecionar;
         private System.Windows.Forms.Button buttonCancelar;
         private System.Windows.Forms.Label label1;

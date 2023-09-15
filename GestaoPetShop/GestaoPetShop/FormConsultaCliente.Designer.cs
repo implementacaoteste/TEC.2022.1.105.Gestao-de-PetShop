@@ -38,12 +38,15 @@
             this.buttonInserir = new System.Windows.Forms.Button();
             this.buttonExcluir = new System.Windows.Forms.Button();
             this.comboBoxBuscarPor = new System.Windows.Forms.ComboBox();
-            this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.petshopDataSet = new GestaoPetShop.petshopDataSet();
             this.clienteBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.clienteTableAdapter = new GestaoPetShop.petshopDataSetTableAdapters.ClienteTableAdapter();
             this.tableAdapterManager = new GestaoPetShop.petshopDataSetTableAdapters.TableAdapterManager();
             this.clienteDataGridView = new System.Windows.Forms.DataGridView();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.emailClienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.buttonVisualizar = new System.Windows.Forms.Button();
+            this.buttonSelecionar = new System.Windows.Forms.Button();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -56,15 +59,13 @@
             this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.emailClienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.buttonVisualizar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).BeginInit();
+            this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.petshopDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clienteDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emailClienteBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -112,7 +113,7 @@
             // 
             this.buttonCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonCancelar.Location = new System.Drawing.Point(792, 329);
+            this.buttonCancelar.Location = new System.Drawing.Point(782, 330);
             this.buttonCancelar.Name = "buttonCancelar";
             this.buttonCancelar.Size = new System.Drawing.Size(75, 23);
             this.buttonCancelar.TabIndex = 5;
@@ -165,10 +166,6 @@
             this.comboBoxBuscarPor.Name = "comboBoxBuscarPor";
             this.comboBoxBuscarPor.Size = new System.Drawing.Size(144, 24);
             this.comboBoxBuscarPor.TabIndex = 6;
-            // 
-            // clienteBindingSource
-            // 
-            this.clienteBindingSource.DataSource = typeof(Models.Cliente);
             // 
             // petshopDataSet
             // 
@@ -229,7 +226,7 @@
             this.dataGridViewTextBoxColumn14,
             this.dataGridViewCheckBoxColumn1});
             this.clienteDataGridView.DataSource = this.clienteBindingSource;
-            this.clienteDataGridView.Location = new System.Drawing.Point(11, 100);
+            this.clienteDataGridView.Location = new System.Drawing.Point(14, 101);
             this.clienteDataGridView.Name = "clienteDataGridView";
             this.clienteDataGridView.ReadOnly = true;
             this.clienteDataGridView.RowHeadersWidth = 51;
@@ -237,6 +234,45 @@
             this.clienteDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.clienteDataGridView.Size = new System.Drawing.Size(861, 223);
             this.clienteDataGridView.TabIndex = 10;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.ErrorImage = null;
+            this.pictureBox3.Image = global::GestaoPetShop.Properties.Resources.bicho_de_estimacao;
+            this.pictureBox3.InitialImage = null;
+            this.pictureBox3.Location = new System.Drawing.Point(14, 5);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(35, 39);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 21;
+            this.pictureBox3.TabStop = false;
+            // 
+            // emailClienteBindingSource
+            // 
+            this.emailClienteBindingSource.DataMember = "EmailCliente";
+            this.emailClienteBindingSource.DataSource = this.clienteBindingSource;
+            // 
+            // buttonVisualizar
+            // 
+            this.buttonVisualizar.Location = new System.Drawing.Point(695, 330);
+            this.buttonVisualizar.Name = "buttonVisualizar";
+            this.buttonVisualizar.Size = new System.Drawing.Size(83, 23);
+            this.buttonVisualizar.TabIndex = 5;
+            this.buttonVisualizar.Text = "&Visualizar";
+            this.buttonVisualizar.UseVisualStyleBackColor = true;
+            this.buttonVisualizar.Click += new System.EventHandler(this.buttonVisualizar_Click);
+            // 
+            // buttonSelecionar
+            // 
+            this.buttonSelecionar.Location = new System.Drawing.Point(598, 330);
+            this.buttonSelecionar.Name = "buttonSelecionar";
+            this.buttonSelecionar.Size = new System.Drawing.Size(90, 23);
+            this.buttonSelecionar.TabIndex = 22;
+            this.buttonSelecionar.Text = "&Selecionar";
+            this.buttonSelecionar.UseVisualStyleBackColor = true;
+            this.buttonSelecionar.Click += new System.EventHandler(this.buttonSelecionar_Click);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -346,35 +382,9 @@
             this.dataGridViewCheckBoxColumn1.ReadOnly = true;
             this.dataGridViewCheckBoxColumn1.Width = 125;
             // 
-            // pictureBox3
+            // clienteBindingSource
             // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.ErrorImage = null;
-            this.pictureBox3.Image = global::GestaoPetShop.Properties.Resources.bicho_de_estimacao;
-            this.pictureBox3.InitialImage = null;
-            this.pictureBox3.Location = new System.Drawing.Point(14, 5);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(35, 39);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 21;
-            this.pictureBox3.TabStop = false;
-            // 
-            // emailClienteBindingSource
-            // 
-            this.emailClienteBindingSource.DataMember = "EmailCliente";
-            this.emailClienteBindingSource.DataSource = this.clienteBindingSource;
-            // 
-            // buttonVisualizar
-            // 
-            this.buttonVisualizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonVisualizar.Location = new System.Drawing.Point(695, 329);
-            this.buttonVisualizar.Name = "buttonVisualizar";
-            this.buttonVisualizar.Size = new System.Drawing.Size(91, 23);
-            this.buttonVisualizar.TabIndex = 5;
-            this.buttonVisualizar.Text = "&Visualizar";
-            this.buttonVisualizar.UseVisualStyleBackColor = true;
-            this.buttonVisualizar.Click += new System.EventHandler(this.buttonVisualizar_Click);
+            this.clienteBindingSource.DataSource = typeof(Models.Cliente);
             // 
             // FormConsultaCliente
             // 
@@ -382,6 +392,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(889, 435);
+            this.Controls.Add(this.buttonSelecionar);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.clienteDataGridView);
             this.Controls.Add(this.comboBoxBuscarPor);
@@ -401,12 +412,12 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.FormConsultaCliente_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.petshopDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clienteDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emailClienteBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -447,5 +458,6 @@
         private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
         private System.Windows.Forms.BindingSource emailClienteBindingSource;
         private System.Windows.Forms.Button buttonVisualizar;
+        private System.Windows.Forms.Button buttonSelecionar;
     }
 }
