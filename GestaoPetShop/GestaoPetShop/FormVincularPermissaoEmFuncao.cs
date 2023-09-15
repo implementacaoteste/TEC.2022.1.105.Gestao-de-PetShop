@@ -1,4 +1,5 @@
 ﻿using BLL;
+using Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,9 +14,15 @@ namespace GestaoPetShop
 {
     public partial class FormVincularPermissaoEmFuncao : Form
     {
-        public FormVincularPermissaoEmFuncao()
+       
+        
+        public FormVincularPermissaoEmFuncao(int _id, string _nomeFuncao)
         {
             InitializeComponent();
+            textBoxIdFuncao.Text = Convert.ToString( _id);
+            textBoxFuncao.Text = _nomeFuncao;
+            
+
         }
 
         private void buttonBuscarPermissao_Click(object sender, EventArgs e)
@@ -23,7 +30,7 @@ namespace GestaoPetShop
             try
             {
                
-                switch (comboBoxSelecionarBuscaPermissao.TabIndex)
+                switch (comboBoxSelecionarBuscaPermissao.SelectedIndex)
                 {
                     case 0:
                         {
@@ -50,6 +57,46 @@ namespace GestaoPetShop
             }
         }
 
-       
+        private void buttonInserirPermissao_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if(permissaoBindingSource.Count < 1)
+                {
+                    MessageBox.Show("Selecione uma permissão para ser inserida na função");
+                    return;
+                }
+                int idfuncao = Convert.ToInt32(textBoxIdFuncao.Text);
+                int idpermissao = ((Permissao)permissaoBindingSource.Current).Id;
+
+                new FuncaoBLL().InserirPermissaoNaFuncao(idfuncao, idpermissao);
+
+                MessageBox.Show("Permissão inserida com sucesso");
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void FormVincularPermissaoEmFuncao_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                //textBoxNomeFuncao.Enabled = false;
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void buttonCancelar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

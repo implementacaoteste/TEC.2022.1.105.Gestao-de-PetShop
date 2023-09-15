@@ -1,6 +1,6 @@
 ﻿namespace GestaoPetShop
 {
-    partial class ConsultaAgendamento
+    partial class FormConsultaAgendamento
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConsultaAgendamento));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormConsultaAgendamento));
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox_SelecionarTipoBusca = new System.Windows.Forms.ComboBox();
             this.textBox_BuscarAgendamento = new System.Windows.Forms.TextBox();

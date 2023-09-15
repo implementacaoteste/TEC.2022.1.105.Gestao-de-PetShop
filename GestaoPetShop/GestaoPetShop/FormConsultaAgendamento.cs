@@ -6,10 +6,10 @@ using System.Windows.Forms;
 
 namespace GestaoPetShop
 {
-    public partial class ConsultaAgendamento : Form
+    public partial class FormConsultaAgendamento : Form
     {
         private string datahoje;
-        public ConsultaAgendamento()
+        public FormConsultaAgendamento()
         {
             InitializeComponent();
             datahoje = monthCalendar_Agendamento.SelectionStart.ToShortDateString();

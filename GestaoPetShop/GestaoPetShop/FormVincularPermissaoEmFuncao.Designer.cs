@@ -36,7 +36,12 @@
             this.buttonBuscarPermissao = new System.Windows.Forms.Button();
             this.comboBoxSelecionarBuscaPermissao = new System.Windows.Forms.ComboBox();
             this.textBoxBuscarPermissao = new System.Windows.Forms.TextBox();
-            this.buttonSelecionarPermissao = new System.Windows.Forms.Button();
+            this.buttonInserirPermissao = new System.Windows.Forms.Button();
+            this.labelfuncao = new System.Windows.Forms.Label();
+            this.buttonCancelar = new System.Windows.Forms.Button();
+            this.textBoxIdFuncao = new System.Windows.Forms.TextBox();
+            this.labelId = new System.Windows.Forms.Label();
+            this.textBoxFuncao = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.permissaoDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.permissaoBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -58,6 +63,7 @@
             this.permissaoDataGridView.RowHeadersVisible = false;
             this.permissaoDataGridView.RowHeadersWidth = 51;
             this.permissaoDataGridView.RowTemplate.Height = 24;
+            this.permissaoDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.permissaoDataGridView.Size = new System.Drawing.Size(569, 248);
             this.permissaoDataGridView.TabIndex = 1;
             // 
@@ -112,27 +118,80 @@
             this.textBoxBuscarPermissao.Size = new System.Drawing.Size(352, 22);
             this.textBoxBuscarPermissao.TabIndex = 4;
             // 
-            // buttonSelecionarPermissao
+            // buttonInserirPermissao
             // 
-            this.buttonSelecionarPermissao.Location = new System.Drawing.Point(485, 400);
-            this.buttonSelecionarPermissao.Name = "buttonSelecionarPermissao";
-            this.buttonSelecionarPermissao.Size = new System.Drawing.Size(113, 23);
-            this.buttonSelecionarPermissao.TabIndex = 5;
-            this.buttonSelecionarPermissao.Text = "Selecionar";
-            this.buttonSelecionarPermissao.UseVisualStyleBackColor = true;
+            this.buttonInserirPermissao.Location = new System.Drawing.Point(391, 397);
+            this.buttonInserirPermissao.Name = "buttonInserirPermissao";
+            this.buttonInserirPermissao.Size = new System.Drawing.Size(113, 23);
+            this.buttonInserirPermissao.TabIndex = 5;
+            this.buttonInserirPermissao.Text = "Inserir";
+            this.buttonInserirPermissao.UseVisualStyleBackColor = true;
+            this.buttonInserirPermissao.Click += new System.EventHandler(this.buttonInserirPermissao_Click);
+            // 
+            // labelfuncao
+            // 
+            this.labelfuncao.AutoSize = true;
+            this.labelfuncao.Location = new System.Drawing.Point(174, 38);
+            this.labelfuncao.Name = "labelfuncao";
+            this.labelfuncao.Size = new System.Drawing.Size(52, 16);
+            this.labelfuncao.TabIndex = 7;
+            this.labelfuncao.Text = "Função";
+            // 
+            // buttonCancelar
+            // 
+            this.buttonCancelar.Location = new System.Drawing.Point(523, 397);
+            this.buttonCancelar.Name = "buttonCancelar";
+            this.buttonCancelar.Size = new System.Drawing.Size(75, 23);
+            this.buttonCancelar.TabIndex = 8;
+            this.buttonCancelar.Text = "Cancelar";
+            this.buttonCancelar.UseVisualStyleBackColor = true;
+            this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
+            // 
+            // textBoxIdFuncao
+            // 
+            this.textBoxIdFuncao.Enabled = false;
+            this.textBoxIdFuncao.Location = new System.Drawing.Point(38, 57);
+            this.textBoxIdFuncao.Name = "textBoxIdFuncao";
+            this.textBoxIdFuncao.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.textBoxIdFuncao.Size = new System.Drawing.Size(62, 22);
+            this.textBoxIdFuncao.TabIndex = 9;
+            // 
+            // labelId
+            // 
+            this.labelId.AutoSize = true;
+            this.labelId.Location = new System.Drawing.Point(35, 38);
+            this.labelId.Name = "labelId";
+            this.labelId.Size = new System.Drawing.Size(18, 16);
+            this.labelId.TabIndex = 10;
+            this.labelId.Text = "Id";
+            // 
+            // textBoxFuncao
+            // 
+            this.textBoxFuncao.Enabled = false;
+            this.textBoxFuncao.Location = new System.Drawing.Point(165, 57);
+            this.textBoxFuncao.Name = "textBoxFuncao";
+            this.textBoxFuncao.Size = new System.Drawing.Size(185, 22);
+            this.textBoxFuncao.TabIndex = 11;
             // 
             // FormVincularPermissaoEmFuncao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(633, 450);
-            this.Controls.Add(this.buttonSelecionarPermissao);
+            this.Controls.Add(this.textBoxFuncao);
+            this.Controls.Add(this.labelId);
+            this.Controls.Add(this.textBoxIdFuncao);
+            this.Controls.Add(this.buttonCancelar);
+            this.Controls.Add(this.labelfuncao);
+            this.Controls.Add(this.buttonInserirPermissao);
             this.Controls.Add(this.textBoxBuscarPermissao);
             this.Controls.Add(this.comboBoxSelecionarBuscaPermissao);
             this.Controls.Add(this.buttonBuscarPermissao);
             this.Controls.Add(this.permissaoDataGridView);
             this.Name = "FormVincularPermissaoEmFuncao";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormVincularPermissaoEmFuncao";
+            this.Load += new System.EventHandler(this.FormVincularPermissaoEmFuncao_Load);
             ((System.ComponentModel.ISupportInitialize)(this.permissaoDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.permissaoBindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -149,6 +208,11 @@
         private System.Windows.Forms.Button buttonBuscarPermissao;
         private System.Windows.Forms.ComboBox comboBoxSelecionarBuscaPermissao;
         private System.Windows.Forms.TextBox textBoxBuscarPermissao;
-        private System.Windows.Forms.Button buttonSelecionarPermissao;
+        private System.Windows.Forms.Button buttonInserirPermissao;
+        private System.Windows.Forms.Label labelfuncao;
+        private System.Windows.Forms.Button buttonCancelar;
+        private System.Windows.Forms.TextBox textBoxIdFuncao;
+        private System.Windows.Forms.Label labelId;
+        private System.Windows.Forms.TextBox textBoxFuncao;
     }
 }

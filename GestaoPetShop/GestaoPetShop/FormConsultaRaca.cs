@@ -12,12 +12,12 @@ using System.Windows.Forms;
 
 namespace GestaoPetShop
 {
-    public partial class ConsultaRaca : Form
+    public partial class FormConsultaRaca : Form
     {
 
 
         int id;
-        public ConsultaRaca()
+        public FormConsultaRaca()
         {
             InitializeComponent();
             id = id;

@@ -38,6 +38,16 @@ namespace BLL
         {
             return new FuncaoDAL().BuscarPorId(_id);
         }
+
+        public void InserirPermissaoNaFuncao(int _idFuncao, int _idPermissao)
+        {
+            new FuncaoDAL().InserirPermissaoNaFuncao(_idFuncao, _idPermissao);
+        }
+
+        public void RemoverPermissaoDeFuncao(int _idFuncao, int _idPermissao)
+        {
+            new FuncaoDAL().RemoverPermissaoDeFuncao(_idFuncao,_idPermissao);
+        }
     }
    
 }

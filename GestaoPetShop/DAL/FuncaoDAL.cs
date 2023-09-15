@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Models;
 
- namespace DAL
+namespace DAL
 {
     public class FuncaoDAL
     {
@@ -88,7 +88,7 @@ using Models;
                         funcao.Id = (int)rd["Id"];
                         funcao.Nome = rd["nome"].ToString();
 
-                        funcao.Permissoes = new PermissaoDAL().BuscarPermissaoPorIdFuncao (funcao.Id);
+                        funcao.Permissoes = new PermissaoDAL().BuscarPermissaoPorIdFuncao(funcao.Id);
                         funcaoList.Add(funcao);
                     }
                 }
@@ -107,7 +107,7 @@ using Models;
         public Funcao BuscarPorId(int _id)
         {
             Funcao funcao = new Funcao();
-            SqlConnection cn= new SqlConnection(Conexao.StringDeConexao);
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
             try
             {
                 SqlCommand cmd = new SqlCommand();
@@ -131,7 +131,7 @@ using Models;
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu um erro ao tentar buscar por id no banco de dados", ex){ Data = { { "Id", 18 } } };
+                throw new Exception("Ocorreu um erro ao tentar buscar por id no banco de dados", ex) { Data = { { "Id", 18 } } };
             }
             finally
             {
@@ -176,7 +176,7 @@ using Models;
             }
 
         }
-        public void Excluir (int _id)
+        public void Excluir(int _id)
         {
             SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
             try
@@ -202,8 +202,67 @@ using Models;
             }
         }
 
+        public void InserirPermissaoNaFuncao(int _idFuncao, int _idPermissao)
+        {
 
-        
+                SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            try
+            {
+                SqlCommand cmd = cn.CreateCommand();
 
+                cmd.CommandText = @"INSERT INTO FuncaoPermissao(IdFuncao,IdPermissao) VALUES (@IdFuncao, @IdPemrissao)";
+
+                cmd.CommandType = System.Data.CommandType.Text;
+
+                cmd.Parameters.AddWithValue("@IdFuncao", _idFuncao);
+                cmd.Parameters.AddWithValue("@IdPemrissao", _idPermissao);
+
+                cmd.Connection = cn;
+                cn.Open();
+
+                cmd.ExecuteNonQuery();
+
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception("Não foi possível vincular a permissão na função no Banco de Dados.");
+            }
+            finally
+            {
+                cn.Close();
+            }
+
+        }
+
+        public void RemoverPermissaoDeFuncao(int _idFuncao, int _idPermissao)
+        {
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            try
+            {
+                SqlCommand cmd = cn.CreateCommand();
+                cmd.CommandText = @"DELETE FROM FuncaoPermissao WHERE IdFuncao = @IdFuncao AND IdPermissao = @IdPermissao";
+
+                cmd.CommandType= System.Data.CommandType.Text;
+
+                cmd.Parameters.AddWithValue("@IdFuncao", _idFuncao);
+                cmd.Parameters.AddWithValue("@IdPermissao", _idPermissao);
+
+                cmd.Connection = cn;
+                cn.Open();
+
+                cmd.ExecuteNonQuery ();
+
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception("Não foi possível Remover a permissão da função.");
+            }
+            finally 
+            {
+                cn.Close(); 
+            }
+        }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace GestaoPetShop
 {
-    partial class ConsultaRaca
+    partial class FormConsultaRaca
     {
         /// <summary>
         /// Required designer variable.
