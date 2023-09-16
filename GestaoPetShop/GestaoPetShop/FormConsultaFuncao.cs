@@ -99,6 +99,7 @@ namespace GestaoPetShop
                     return;
 
                 int id = ((Funcao)funcaoBindingSource.Current).Id;
+              
                 new FuncaoBLL().Excluir(id);
                 funcaoBindingSource.RemoveCurrent();
             }

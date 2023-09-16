@@ -457,7 +457,7 @@ namespace DAL
                 cn.Close();
             }
         }
-        public List<Agendamento> BuscarAgendamentoPorData(int _opc, string _mesAno, int _opcAtivo = 0,int _opcSituacao = 0)
+        public List<Agendamento> BuscarAgendamentoPorData(int _opc, string _data, int _opcAtivo = 0,int _opcSituacao = 0)
         {
             List<Agendamento> agendamentos = new List<Agendamento>();
             Agendamento agendamento;
@@ -522,7 +522,7 @@ namespace DAL
                 
 
                 cmd.CommandType = System.Data.CommandType.Text;
-                cmd.Parameters.AddWithValue("@Data", Convert.ToDateTime(_mesAno));
+                cmd.Parameters.AddWithValue("@Data", Convert.ToDateTime(_data));
                 cn.Open();
                 using (SqlDataReader rd = cmd.ExecuteReader())
                 {

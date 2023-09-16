@@ -191,7 +191,6 @@
             this.Name = "FormVincularPermissaoEmFuncao";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormVincularPermissaoEmFuncao";
-            this.Load += new System.EventHandler(this.FormVincularPermissaoEmFuncao_Load);
             ((System.ComponentModel.ISupportInitialize)(this.permissaoDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.permissaoBindingSource)).EndInit();
             this.ResumeLayout(false);

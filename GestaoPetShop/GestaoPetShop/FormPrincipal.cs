@@ -14,13 +14,13 @@ namespace GestaoPetShop
         }
         private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private void FormPrincipal_Load(object sender, EventArgs e)
         {
 
-          //  agendamentoDataGridView.DataSource = new Agendamento();// ERA APENAS UM TESTE -DEIXEI AQUI SÓ PRA LEMBRAR
+            //  agendamentoDataGridView.DataSource = new Agendamento();// ERA APENAS UM TESTE -DEIXEI AQUI SÓ PRA LEMBRAR
 
 
             try
@@ -39,7 +39,7 @@ namespace GestaoPetShop
             }
         }
 
-       
+
         private void FormPrincipal_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Escape)
@@ -75,21 +75,31 @@ namespace GestaoPetShop
         {
             using (FormConsultaAnimal frm = new FormConsultaAnimal())
             {
-                frm.ShowDialog(); 
+                frm.ShowDialog();
             }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string dataconsultaagendamento = monthCalendar1.SelectionStart.ToShortDateString();
-            int opcbusca = 4;
-            int opcativo = 0; 
-            int opcsituacao = 0;
-            agendamentoBindingSource.DataSource = new AgendamentoBLL().BuscarAgendamentoPorData(opcbusca, dataconsultaagendamento,opcativo,opcsituacao);
 
-            agendamentoDataGridView.Visible = true;
-            agendamentoServicosDataGridView.Visible = true;
-            button2.Visible = true;
+            try
+            {
+                string dataconsultaagendamento = monthCalendar1.SelectionStart.ToShortDateString();
+                int opcbusca = 4;
+                int opcativo = 0;
+                int opcsituacao = 0;
+                agendamentoBindingSource.DataSource = new AgendamentoBLL().BuscarAgendamentoPorData(opcbusca, dataconsultaagendamento, opcativo, opcsituacao);
+
+                agendamentoDataGridView.Visible = true;
+                agendamentoServicosDataGridView.Visible = true;
+                button2.Visible = true;
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -97,7 +107,7 @@ namespace GestaoPetShop
             agendamentoDataGridView.Visible = false;
             agendamentoServicosDataGridView.Visible = false;
             button2.Visible = false;
-            
+
         }
 
         private void raçaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -120,7 +130,7 @@ namespace GestaoPetShop
         {
             try
             {
-                using(FormConsultaFuncao frm = new FormConsultaFuncao())
+                using (FormConsultaFuncao frm = new FormConsultaFuncao())
                 {
                     frm.ShowDialog();
                 }

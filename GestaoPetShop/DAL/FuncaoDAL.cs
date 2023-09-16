@@ -257,11 +257,44 @@ namespace DAL
             catch (Exception ex)
             {
 
-                throw new Exception("Não foi possível Remover a permissão da função.");
+                throw new Exception("Erro ao tentar Remover a permissão da função no Banco de Dados.");
             }
             finally 
             {
                 cn.Close(); 
+            }
+        }
+
+        public bool ExisteVinculaDeFuncaoComProfissional(int _idFuncao)
+        {
+            SqlConnection cn = new SqlConnection (Conexao.StringDeConexao);
+            try
+            {
+                SqlCommand cmd = cn.CreateCommand ();
+                cmd.CommandText = @"SELECT 1 FROM Funcao INNER JOIN Profissional ON Funcao.Id = Profissional.IdFuncao 
+                                    WHERE Funcao.Id = @IdFuncao";
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.Parameters.AddWithValue("@IdFuncao", _idFuncao);
+
+                cn.Open ();
+                using (SqlDataReader rd = cmd.ExecuteReader())
+                {
+                    while (rd.Read())
+                    {
+                      return true;
+                    }
+                }
+                return false;
+
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception("Erro ao consultar vículo entre função e profissional no Banco de Dados.");
+            }
+            finally
+            {
+                cn.Close ();
             }
         }
     }

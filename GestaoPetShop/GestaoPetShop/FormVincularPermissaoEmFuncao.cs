@@ -80,20 +80,6 @@ namespace GestaoPetShop
                 MessageBox.Show(ex.Message);
             }
         }
-
-        private void FormVincularPermissaoEmFuncao_Load(object sender, EventArgs e)
-        {
-            try
-            {
-                //textBoxNomeFuncao.Enabled = false;
-            }
-            catch (Exception ex)
-            {
-
-                MessageBox.Show(ex.Message);
-            }
-        }
-
         private void buttonCancelar_Click(object sender, EventArgs e)
         {
             Close();

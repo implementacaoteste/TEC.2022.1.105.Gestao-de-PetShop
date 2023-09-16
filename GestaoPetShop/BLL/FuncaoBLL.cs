@@ -23,9 +23,21 @@ namespace BLL
         }
         public void Excluir (int _id)
         {
-            new ClienteDAL().Excluir(_id);
+
+            if (ExisteVinculaDeFuncaoComProfissional(_id))
+            {
+                throw new Exception("Esta função não pode ser excluída enquanto tiver vícula com profissional.");
+            }
+
+            new FuncaoDAL().Excluir(_id);
 
         }
+
+        private bool ExisteVinculaDeFuncaoComProfissional(int _idfuncao)
+        {
+           return new FuncaoDAL().ExisteVinculaDeFuncaoComProfissional(_idfuncao);
+        }
+
         public List<Funcao> BuscarTodos()
         {
             return new FuncaoDAL().BuscarTodos();

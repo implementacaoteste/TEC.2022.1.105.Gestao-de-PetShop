@@ -91,11 +91,11 @@ namespace BLL
             return agendamento;
             
         }
-        public List<Agendamento> BuscarAgendamentoPorData(int _opc, string _mesAno, int _opcAtivo, int _opcSituacao)
+        public List<Agendamento> BuscarAgendamentoPorData(int _opc, string _data, int _opcAtivo, int _opcSituacao)
         {
             AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
             List<Agendamento> agendamentos = new List<Agendamento>();
-            agendamentos = agendamentoDAL.BuscarAgendamentoPorData(_opc, _mesAno, _opcAtivo, _opcSituacao);
+            agendamentos = agendamentoDAL.BuscarAgendamentoPorData(_opc, _data, _opcAtivo, _opcSituacao);
             if(agendamentos.Count < 1)
             {
                 throw new Exception("Agendamento não encontrado");
