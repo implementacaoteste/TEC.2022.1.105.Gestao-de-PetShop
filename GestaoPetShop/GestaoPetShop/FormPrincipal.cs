@@ -14,7 +14,10 @@ namespace GestaoPetShop
         }
         private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           
+            using (FormCadastroUsuario frm = new FormCadastroUsuario())
+            {
+                frm.ShowDialog();
+            }
         }
 
         private void FormPrincipal_Load(object sender, EventArgs e)
