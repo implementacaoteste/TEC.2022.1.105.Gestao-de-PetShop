@@ -1,6 +1,7 @@
 ﻿using BLL;
 using Models;
 using System;
+using System.Security.Cryptography;
 using System.Windows.Forms;
 
 namespace GestaoPetShop
@@ -65,6 +66,26 @@ namespace GestaoPetShop
         {
             if (e.KeyCode == Keys.Escape)
                 Close();
+        }
+
+        private void btnBuscarProfissional_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int opc = 1;
+                using (FormConsultaProfissional frm = new FormConsultaProfissional(opc))
+                {
+                    frm.ShowDialog();
+                    idTextBoxProfissional.Text = Convert.ToString(frm.id);
+                    nomeTextBoxProfissional.Text = frm.nome;
+                }
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
     }
 }

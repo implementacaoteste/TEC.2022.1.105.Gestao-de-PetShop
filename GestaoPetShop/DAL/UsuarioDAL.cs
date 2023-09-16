@@ -23,6 +23,7 @@ namespace DAL
                 cmd.Parameters.AddWithValue("@UsuarioLogin", _usuario.UsuarioLogin);
                 cmd.Parameters.AddWithValue("@IdProfissional", _usuario.IdProfissional);
                 cmd.Parameters.AddWithValue("@Senha", _usuario.Senha);
+                cmd.Parameters.AddWithValue("@Ativo", _usuario.Ativo);
 
                 cmd.Connection = cn;
                 cn.Open();
