@@ -125,6 +125,7 @@
             this.clienteDataGridView.RowHeadersVisible = false;
             this.clienteDataGridView.RowHeadersWidth = 51;
             this.clienteDataGridView.RowTemplate.Height = 24;
+            this.clienteDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.clienteDataGridView.Size = new System.Drawing.Size(340, 220);
             this.clienteDataGridView.TabIndex = 7;
             // 
@@ -170,6 +171,7 @@
             this.animaisDataGridView.RowHeadersVisible = false;
             this.animaisDataGridView.RowHeadersWidth = 51;
             this.animaisDataGridView.RowTemplate.Height = 24;
+            this.animaisDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.animaisDataGridView.Size = new System.Drawing.Size(272, 220);
             this.animaisDataGridView.TabIndex = 7;
             // 

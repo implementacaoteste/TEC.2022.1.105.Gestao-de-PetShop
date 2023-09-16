@@ -16,8 +16,8 @@ namespace DAL
             try
             {
                 SqlCommand cmd = cn.CreateCommand();
-                cmd.CommandText = @"INSERT INTO Usuario(UsuarioLogin, IdProfissional, Senha) 
-                                    VALUES(@UsuarioLogin, @IdProfissional, @Senha)";
+                cmd.CommandText = @"INSERT INTO Usuario(UsuarioLogin, IdProfissional, Senha, Ativo) 
+                                    VALUES(@UsuarioLogin, @IdProfissional, @Senha, @Ativo)";
                 cmd.CommandType = System.Data.CommandType.Text;
 
                 cmd.Parameters.AddWithValue("@UsuarioLogin", _usuario.UsuarioLogin);
@@ -279,11 +279,11 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT 1 FROM  Usuario INNER JOIN Profissional ON Usuario.IdProfissional = Profissional.Id
-                                                INNER JOIN Funcao ON Profissional.IdFuncao = Funcao.Id
-                                                INNER JOIN FuncaoPermissao ON Funcao.Id = FuncaoPermissao.IdFuncao
-                                                INNER JOIN Permissao ON FuncaoPermissao.IdPermissao = Permissao.Id
-                                                WHERE Usuario.Id = @IdUsuario AND Permissao.Id = @IdPermissao";
+                cmd.CommandText = @"SELECT 1 FROM  Usuario LEFT JOIN Profissional ON Usuario.IdProfissional = Profissional.Id
+                                                LEFT JOIN Funcao ON Profissional.IdFuncao = Funcao.Id
+                                                LEFT JOIN FuncaoPermissao ON Funcao.Id = FuncaoPermissao.IdFuncao
+                                                LEFT JOIN Permissao ON FuncaoPermissao.IdPermissao = Permissao.Id
+                                                WHERE Usuario.IdProfissional = @IdUsuario AND Permissao.Id = @IdPermissao";
 
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@IdUsuario", _idUsuarioLogado);
