@@ -26,7 +26,7 @@ namespace BLL
 
             if (ExisteVinculaDeFuncaoComProfissional(_id))
             {
-                throw new Exception("Esta função não pode ser excluída enquanto tiver vícula com profissional.");
+                throw new Exception("Esta função não pode ser excluída enquanto tiver vínculo com profissional.");
             }
 
             new FuncaoDAL().Excluir(_id);
