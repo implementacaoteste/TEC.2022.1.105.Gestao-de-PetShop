@@ -4,6 +4,8 @@
     {
         public int Id { get; set; }
         public string Servico { get; set; }
+        public int IdProfissional { get; set; }
+        public string NomeProfissional { get; set; }
         public int Quantidade { get; set; }
         public decimal Preco { get; set; }
         public decimal ValorUnitario { get; set; }

@@ -20,10 +20,10 @@ namespace DAL
 
             using (SqlConnection cn = new SqlConnection(Conexao.StringDeConexao))
             {
-                using (SqlCommand cmd = new SqlCommand(@"INSERT INTO Agendamento(IdAnimal, IdProfissional, IdSituacao, DataAg, Horario, Total, Ativo)VALUES(@IdAnimal, @IdProfissional, @IdSituacao, @DataAg, @Horario, @Total,@Ativo) SELECT @@IDENTITY", cn))
+                using (SqlCommand cmd = new SqlCommand(@"INSERT INTO Agendamento(IdAnimal,  IdSituacao, DataAg, Horario, Total, Ativo)VALUES(@IdAnimal, @IdSituacao, @DataAg, @Horario, @Total,@Ativo) SELECT @@IDENTITY", cn))
                 {
                     cmd.Parameters.AddWithValue("@IdAnimal", Convert.ToInt32(_agendamento.IdAnimal));
-                    cmd.Parameters.AddWithValue("@IdProfissional", Convert.ToInt32(_agendamento.IdProfissional));
+                  
                     cmd.Parameters.AddWithValue("@IdSituacao", Convert.ToInt32(_agendamento.IdSituacao));
                     cmd.Parameters.AddWithValue("@DataAg", _agendamento.DataAg); //Convert.ToDateTime
                     cmd.Parameters.AddWithValue("@Horario", _agendamento.Horario);
@@ -62,8 +62,8 @@ namespace DAL
 
             using (SqlConnection cn = new SqlConnection(Conexao.StringDeConexao))
             {
-                using (SqlCommand cmd = new SqlCommand(@"INSERT INTO AgendamentoServicos (IdAgendamento,IdServico, Quantidade, ValorUnitario)
-                                                                                 VALUES (@IdAgendamento,@IdServico, @Quantidade,@ValorUnitario)", cn))
+                using (SqlCommand cmd = new SqlCommand(@"INSERT INTO AgendamentoServicos (IdAgendamento,IdServico,IdProfissional, Quantidade, ValorUnitario)
+                                                                                 VALUES (@IdAgendamento,@IdServico,@IdProfissional, @Quantidade,@ValorUnitario)", cn))
                 {
                     try
                     {
@@ -80,6 +80,7 @@ namespace DAL
                         {
                             cmd.Parameters.Clear();
                             cmd.Parameters.AddWithValue("@IdAgendamento", _idagendamento);
+                            cmd.Parameters.AddWithValue("@IdProfissional", Convert.ToInt32(_agendamento.IdProfissional));
                             cmd.Parameters.AddWithValue("@IdServico", item.IdServico);
                             cmd.Parameters.AddWithValue("@Quantidade", item.Quantidade);
                             cmd.Parameters.AddWithValue("@ValorUnitario", item.ValorUnitario);
@@ -105,7 +106,6 @@ namespace DAL
             using (SqlConnection cn = new SqlConnection(Conexao.StringDeConexao))
             {
                 using (SqlCommand cmd = new SqlCommand(@"UPDATE Agendamento SET IdAnimal = @IdAnimal,
-                                                                                IdProfissional = @IdProfissional,
                                                                                 IdSituacao = @IdSituacao,
                                                                                 DataAg = @DataAg,
                                                                                 Horario = @Horario,
@@ -115,7 +115,7 @@ namespace DAL
                 {
                     cmd.Parameters.AddWithValue("@Id", Convert.ToInt32(_agendamento.Id));
                     cmd.Parameters.AddWithValue("@IdAnimal", Convert.ToInt32(_agendamento.IdAnimal));
-                    cmd.Parameters.AddWithValue("@IdProfissional", Convert.ToInt32(_agendamento.IdProfissional));
+                    
                     cmd.Parameters.AddWithValue("@IdSituacao", Convert.ToInt32(_agendamento.IdSituacao));
                     cmd.Parameters.AddWithValue("@DataAg", _agendamento.DataAg); //Convert.ToDateTime
                     cmd.Parameters.AddWithValue("@Horario", _agendamento.Horario);
@@ -158,8 +158,8 @@ namespace DAL
             List<AgendamentoServico> agendamentoservico = new List<AgendamentoServico>();
             using (SqlConnection cn = new SqlConnection(Conexao.StringDeConexao))
             {
-                using (SqlCommand cmd = new SqlCommand(@"INSERT INTO AgendamentoServicos (IdAgendamento,IdServico, Quantidade, ValorUnitario)
-                                                                                 VALUES (@IdAgendamento,@IdServico, @Quantidade,@ValorUnitario)", cn))
+                using (SqlCommand cmd = new SqlCommand(@"INSERT INTO AgendamentoServicos (IdAgendamento,IdServico,IdProfissional, Quantidade, ValorUnitario)
+                                                                                 VALUES (@IdAgendamento,@IdServico,@IdProfissional, @Quantidade,@ValorUnitario)", cn))
                 {
                     try
                     {
@@ -181,6 +181,7 @@ namespace DAL
                                 cmd.Parameters.Clear();
                                 cmd.Parameters.AddWithValue("@IdAgendamento", _agendamento.Id);
                                 cmd.Parameters.AddWithValue("@IdServico", item.IdServico);
+                                 cmd.Parameters.AddWithValue("@IdProfissional", Convert.ToInt32(_agendamento.IdProfissional));
                                 cmd.Parameters.AddWithValue("@Quantidade", item.Quantidade);
                                 cmd.Parameters.AddWithValue("@ValorUnitario", item.ValorUnitario);
 
@@ -313,7 +314,7 @@ namespace DAL
                 cmd.CommandText = @"SELECT Ag.Id, Ag.DataAg,Ag.Horario,Ag.Total, Ag.Ativo,
                                            Ani.Id as AnimalId, Ani.Nome as NomeAnimal,
                                            Cli.Id as ClienteId, Cli.Nome as NomeCliente,
-                                           P.Id as ProfissionalId, P.Nome as NomeProfissional,
+
                                            Si.Id as SituacaoId, Si.Descricao as DescSituacao
                                            FROM Agendamento Ag LEFT JOIN Profissional P     ON Ag.IdProfissional = P.Id
                                                                LEFT JOIN Animal Ani         ON Ag.IdAnimal = Ani.Id
@@ -376,8 +377,8 @@ namespace DAL
                         agendamento.NomeAnimal = rd["NomeAnimal"].ToString();
                         agendamento.IdCliente = Convert.ToInt32(rd["ClienteId"]);
                         agendamento.NomeCliente = rd["NomeCliente"].ToString();
-                        agendamento.IdProfissional = Convert.ToInt32(rd["ProfissionalId"]);
-                        agendamento.NomeProfissional = rd["NomeProfissional"].ToString();
+                        //agendamento.IdProfissional = Convert.ToInt32(rd["ProfissionalId"]);
+                        //agendamento.NomeProfissional = rd["NomeProfissional"].ToString();
                         agendamento.Horario = rd["Horario"].ToString();
                         agendamento.IdSituacao = Convert.ToInt32(rd["SituacaoId"]);
                         agendamento.DescricaoSituacao = rd["DescSituacao"].ToString();

@@ -8,8 +8,7 @@ namespace Models
         public int Id  { get; set; }
         public int IdAnimal { get; set; }
         public string NomeAnimal { get; set; }
-        public int IdProfissional { get; set; }
-        public string NomeProfissional { get; set; }
+       
         public int IdSituacao { get; set; }
         public string DescricaoSituacao { get; set; }
         public DateTime  DataAg { get; set; }

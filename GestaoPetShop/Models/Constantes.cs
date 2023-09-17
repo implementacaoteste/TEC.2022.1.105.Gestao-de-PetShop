@@ -8,6 +8,6 @@ namespace Models
         public static string UsuarioLogado;
         public static string StringDeConexao;
         public static string DiretorioStringConexao = "C:\\Configuracao\\";
-        public static string NomeArquivoConexao = "petShopConnection.config";
+        public static string NomeArquivoConexao = "DimasTestePetShop.config";
     }
 }
