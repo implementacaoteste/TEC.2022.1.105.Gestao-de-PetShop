@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BLL;
+using Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +14,39 @@ namespace GestaoPetShop
 {
     public partial class FormCadastroRaca : Form
     {
-        public FormCadastroRaca()
+
+        int id;
+        bool permitirSalvar;
+        public FormCadastroRaca(int _id = 0, bool _permitirSalvar = true)
         {
             InitializeComponent();
+            buttonSalvar.Visible = _permitirSalvar;
+            permitirSalvar = _permitirSalvar;
+        }
+
+        private void buttonSalvar_Click(object sender, EventArgs e)
+        {
+          /*  try
+            {
+                if (!permitirSalvar)
+                    return;
+
+                Raca raca = (Raca) racaBindingSource.Current;
+                racaBindingSource.EndEdit();
+
+
+                if (id == 0)
+                    new RacaBLL().Inserir(raca);
+                else
+                    new RacaBLL().Alterar(raca);
+
+                MessageBox.Show("Registro salvo com sucesso!");
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }*/
         }
 
       

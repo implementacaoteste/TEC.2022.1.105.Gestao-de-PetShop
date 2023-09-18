@@ -22,6 +22,7 @@ namespace DAL
                 SqlCommand cmd = cn.CreateCommand();
                 cmd.CommandText = @"INSERT INTO Animal(IdCliente, IdRaca  Nome, Sexo, Agressivo, Cor, Idade, Alergia, DataNascimento, Ativo) 
                                                VALUES (IdCliente, @IdRaca, @Nome, @Sexo, @Agressivo, @Cor, @Idade, @Alergia, @DataNascimento, @Ativo)";
+
                 cmd.CommandType = System.Data.CommandType.Text;
 
                 //cmd.Parameters.AddWithValue("@Id", _animal.Id);

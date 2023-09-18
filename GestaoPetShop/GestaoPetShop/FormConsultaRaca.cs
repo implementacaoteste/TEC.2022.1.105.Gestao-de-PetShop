@@ -144,5 +144,28 @@ namespace GestaoPetShop
         {
 
         }
+
+        private void buttonExcluir_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (racaBindingSource.Count <= 0)
+                {
+                    MessageBox.Show("Não existe registro para ser excluído");
+                    return;
+                }
+
+                if (MessageBox.Show("Deseja realmente excluir este registro?", "Atenção", MessageBoxButtons.YesNo) == DialogResult.No)
+                    return;
+
+                int id = ((Raca)racaBindingSource.Current).Id;
+                new RacaBLL().Excluir(id);
+                racaBindingSource.RemoveCurrent();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }
