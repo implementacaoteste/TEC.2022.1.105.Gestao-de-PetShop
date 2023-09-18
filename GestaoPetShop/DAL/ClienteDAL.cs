@@ -19,7 +19,7 @@ namespace DAL
             using (SqlConnection cn = new SqlConnection(Conexao.StringDeConexao))
             {
                 using (SqlCommand cmd = new SqlCommand(@"INSERT INTO Cliente(Nome, CPF, Logradouro, Numero, Bairro, Cidade, UF, Pais, CEP, DataNascimento,Foto,Ativo)
-                                    VALUES(@Nome, @CPF, @Logradouro, @Numero, @Bairro, @Cidade, @UF, @Pais, @CEP, @DataNascimento,@Foto,@Ativo) SELECT @@IDENTITY", cn))
+                                                VALUES(@Nome, @CPF, @Logradouro, @Numero, @Bairro, @Cidade, @UF, @Pais, @CEP, @DataNascimento,@Foto,@Ativo) SELECT @@IDENTITY", cn))
                 {
 
                     cmd.Parameters.AddWithValue("@Nome", _cliente.Nome);
