@@ -14,9 +14,13 @@ namespace GestaoPetShop
 {
     public partial class FormConsultaProfissional : Form
     {
-        public FormConsultaProfissional()
+        private int opc;
+        public int id;
+        public string nome;
+        public FormConsultaProfissional(int _opc = 0)
         {
             InitializeComponent();
+            opc = _opc;
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
@@ -135,7 +139,43 @@ namespace GestaoPetShop
 
         private void FormConsultaProfissional_Load(object sender, EventArgs e)
         {
+            try
+            {
+                if (opc == 1)
+                {
+                    btnInserir.Enabled = false;
+                    btnAlterar.Enabled = false;
+                    btnExcluir.Enabled = false;
+                    btnSelecionar.Enabled = true;
+                }
+            }
+            catch (Exception)
+            {
 
+                throw;
+            }
+        }
+
+        private void btnSelecionar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (profissionalBindingSource.Count > 0)
+                {
+                    id = ((Profissional)profissionalBindingSource.Current).Id;
+                    nome = ((Profissional)profissionalBindingSource.Current).Nome;
+                    Close();
+                }
+                else
+                {
+                    MessageBox.Show("Não foi selecionado um Profissional");
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
     }
 }
