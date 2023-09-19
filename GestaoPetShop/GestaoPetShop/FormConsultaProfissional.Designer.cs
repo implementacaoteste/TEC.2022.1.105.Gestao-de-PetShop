@@ -371,6 +371,7 @@
             this.btnSelecionar.TabIndex = 34;
             this.btnSelecionar.Text = "Selecionar";
             this.btnSelecionar.UseVisualStyleBackColor = true;
+            this.btnSelecionar.Visible = false;
             this.btnSelecionar.Click += new System.EventHandler(this.btnSelecionar_Click);
             // 
             // FormConsultaProfissional

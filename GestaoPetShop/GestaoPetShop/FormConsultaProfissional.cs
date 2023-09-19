@@ -147,6 +147,7 @@ namespace GestaoPetShop
                     btnAlterar.Enabled = false;
                     btnExcluir.Enabled = false;
                     btnSelecionar.Enabled = true;
+                    btnSelecionar.Visible = true;
                 }
             }
             catch (Exception)
