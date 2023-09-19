@@ -30,23 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             this.labelBuscarPorAnimal = new System.Windows.Forms.Label();
-            this.petshopDataSet = new GestaoPetShop.petshopDataSet();
             this.animalBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.animalTableAdapter = new GestaoPetShop.petshopDataSetTableAdapters.AnimalTableAdapter();
-            this.tableAdapterManager = new GestaoPetShop.petshopDataSetTableAdapters.TableAdapterManager();
             this.animalDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.IdRaca = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.IdCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.textBoxBuscar = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.buttonBuscar = new System.Windows.Forms.Button();
@@ -56,7 +41,17 @@
             this.buttonSelecionar = new System.Windows.Forms.Button();
             this.buttonCancelar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.petshopDataSet)).BeginInit();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomeRacaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomeClienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sexoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.agressivoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.corDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idadeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.alergiaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataNascimentoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ativoDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.animalBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.animalDataGridView)).BeginInit();
             this.SuspendLayout();
@@ -74,162 +69,37 @@
             this.labelBuscarPorAnimal.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.labelBuscarPorAnimal.UseWaitCursor = true;
             // 
-            // petshopDataSet
-            // 
-            this.petshopDataSet.DataSetName = "petshopDataSet";
-            this.petshopDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // animalBindingSource
             // 
-            this.animalBindingSource.DataMember = "Animal";
-            this.animalBindingSource.DataSource = this.petshopDataSet;
-            // 
-            // animalTableAdapter
-            // 
-            this.animalTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.AgendamentoServicosTableAdapter = null;
-            this.tableAdapterManager.AgendamentoTableAdapter = null;
-            this.tableAdapterManager.AnimalTableAdapter = this.animalTableAdapter;
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.ClienteTableAdapter = null;
-            this.tableAdapterManager.EmailClienteTableAdapter = null;
-            this.tableAdapterManager.EmailProfissionalTableAdapter = null;
-            this.tableAdapterManager.FuncaoPermissaoTableAdapter = null;
-            this.tableAdapterManager.FuncaoTableAdapter = null;
-            this.tableAdapterManager.PermissaoTableAdapter = null;
-            this.tableAdapterManager.ProfissionalTableAdapter = null;
-            this.tableAdapterManager.RacaTableAdapter = null;
-            this.tableAdapterManager.ServicoTableAdapter = null;
-            this.tableAdapterManager.SituacaoTableAdapter = null;
-            this.tableAdapterManager.TelefoneClienteTableAdapter = null;
-            this.tableAdapterManager.TelefoneProfissionalTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = GestaoPetShop.petshopDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            this.tableAdapterManager.UsuarioTableAdapter = null;
+            this.animalBindingSource.DataSource = typeof(Models.Animal);
             // 
             // animalDataGridView
             // 
+            this.animalDataGridView.AllowUserToAddRows = false;
+            this.animalDataGridView.AllowUserToDeleteRows = false;
+            this.animalDataGridView.AllowUserToOrderColumns = true;
             this.animalDataGridView.AutoGenerateColumns = false;
             this.animalDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.animalDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.IdRaca,
-            this.IdCliente,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewTextBoxColumn8,
-            this.dataGridViewTextBoxColumn9,
-            this.dataGridViewTextBoxColumn10,
-            this.dataGridViewCheckBoxColumn1,
-            this.dataGridViewTextBoxColumn2});
+            this.idDataGridViewTextBoxColumn,
+            this.nomeRacaDataGridViewTextBoxColumn,
+            this.nomeClienteDataGridViewTextBoxColumn,
+            this.nomeDataGridViewTextBoxColumn,
+            this.sexoDataGridViewTextBoxColumn,
+            this.agressivoDataGridViewTextBoxColumn,
+            this.corDataGridViewTextBoxColumn,
+            this.idadeDataGridViewTextBoxColumn,
+            this.alergiaDataGridViewTextBoxColumn,
+            this.dataNascimentoDataGridViewTextBoxColumn,
+            this.ativoDataGridViewCheckBoxColumn});
             this.animalDataGridView.DataSource = this.animalBindingSource;
             this.animalDataGridView.Location = new System.Drawing.Point(8, 110);
             this.animalDataGridView.Name = "animalDataGridView";
+            this.animalDataGridView.ReadOnly = true;
             this.animalDataGridView.RowHeadersWidth = 51;
             this.animalDataGridView.RowTemplate.Height = 24;
             this.animalDataGridView.Size = new System.Drawing.Size(1154, 369);
             this.animalDataGridView.TabIndex = 2;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Id";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 125;
-            // 
-            // IdRaca
-            // 
-            this.IdRaca.DataPropertyName = "IdRaca";
-            this.IdRaca.HeaderText = "IdRaca";
-            this.IdRaca.MinimumWidth = 6;
-            this.IdRaca.Name = "IdRaca";
-            this.IdRaca.Width = 125;
-            // 
-            // IdCliente
-            // 
-            this.IdCliente.DataPropertyName = "IdCliente";
-            this.IdCliente.HeaderText = "IdCliente";
-            this.IdCliente.MinimumWidth = 6;
-            this.IdCliente.Name = "IdCliente";
-            this.IdCliente.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "Nome";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Nome";
-            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "Sexo";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Sexo";
-            this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "Agressivo";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Agressivo";
-            this.dataGridViewTextBoxColumn6.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "Cor";
-            this.dataGridViewTextBoxColumn7.HeaderText = "Cor";
-            this.dataGridViewTextBoxColumn7.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "Idade";
-            this.dataGridViewTextBoxColumn8.HeaderText = "Idade";
-            this.dataGridViewTextBoxColumn8.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "Alergia";
-            this.dataGridViewTextBoxColumn9.HeaderText = "Alergia";
-            this.dataGridViewTextBoxColumn9.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            this.dataGridViewTextBoxColumn9.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.DataPropertyName = "DataNascimento";
-            this.dataGridViewTextBoxColumn10.HeaderText = "DataNascimento";
-            this.dataGridViewTextBoxColumn10.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            this.dataGridViewTextBoxColumn10.Width = 125;
-            // 
-            // dataGridViewCheckBoxColumn1
-            // 
-            this.dataGridViewCheckBoxColumn1.DataPropertyName = "Ativo";
-            this.dataGridViewCheckBoxColumn1.HeaderText = "Ativo";
-            this.dataGridViewCheckBoxColumn1.MinimumWidth = 6;
-            this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
-            this.dataGridViewCheckBoxColumn1.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "IdRaca";
-            this.dataGridViewTextBoxColumn2.HeaderText = "IdRaca";
-            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.Width = 125;
             // 
             // textBoxBuscar
             // 
@@ -319,6 +189,105 @@
             this.label1.TabIndex = 11;
             this.label1.Text = "Buscar Por";
             // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // nomeRacaDataGridViewTextBoxColumn
+            // 
+            this.nomeRacaDataGridViewTextBoxColumn.DataPropertyName = "NomeRaca";
+            this.nomeRacaDataGridViewTextBoxColumn.HeaderText = "Raça";
+            this.nomeRacaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.nomeRacaDataGridViewTextBoxColumn.Name = "nomeRacaDataGridViewTextBoxColumn";
+            this.nomeRacaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nomeRacaDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // nomeClienteDataGridViewTextBoxColumn
+            // 
+            this.nomeClienteDataGridViewTextBoxColumn.DataPropertyName = "NomeCliente";
+            this.nomeClienteDataGridViewTextBoxColumn.HeaderText = "Cliente";
+            this.nomeClienteDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.nomeClienteDataGridViewTextBoxColumn.Name = "nomeClienteDataGridViewTextBoxColumn";
+            this.nomeClienteDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nomeClienteDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // nomeDataGridViewTextBoxColumn
+            // 
+            this.nomeDataGridViewTextBoxColumn.DataPropertyName = "Nome";
+            this.nomeDataGridViewTextBoxColumn.HeaderText = "Nome";
+            this.nomeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.nomeDataGridViewTextBoxColumn.Name = "nomeDataGridViewTextBoxColumn";
+            this.nomeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nomeDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // sexoDataGridViewTextBoxColumn
+            // 
+            this.sexoDataGridViewTextBoxColumn.DataPropertyName = "Sexo";
+            this.sexoDataGridViewTextBoxColumn.HeaderText = "Sexo";
+            this.sexoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.sexoDataGridViewTextBoxColumn.Name = "sexoDataGridViewTextBoxColumn";
+            this.sexoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.sexoDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // agressivoDataGridViewTextBoxColumn
+            // 
+            this.agressivoDataGridViewTextBoxColumn.DataPropertyName = "Agressivo";
+            this.agressivoDataGridViewTextBoxColumn.HeaderText = "Agressivo";
+            this.agressivoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.agressivoDataGridViewTextBoxColumn.Name = "agressivoDataGridViewTextBoxColumn";
+            this.agressivoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.agressivoDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // corDataGridViewTextBoxColumn
+            // 
+            this.corDataGridViewTextBoxColumn.DataPropertyName = "Cor";
+            this.corDataGridViewTextBoxColumn.HeaderText = "Cor";
+            this.corDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.corDataGridViewTextBoxColumn.Name = "corDataGridViewTextBoxColumn";
+            this.corDataGridViewTextBoxColumn.ReadOnly = true;
+            this.corDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // idadeDataGridViewTextBoxColumn
+            // 
+            this.idadeDataGridViewTextBoxColumn.DataPropertyName = "Idade";
+            this.idadeDataGridViewTextBoxColumn.HeaderText = "Idade";
+            this.idadeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idadeDataGridViewTextBoxColumn.Name = "idadeDataGridViewTextBoxColumn";
+            this.idadeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idadeDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // alergiaDataGridViewTextBoxColumn
+            // 
+            this.alergiaDataGridViewTextBoxColumn.DataPropertyName = "Alergia";
+            this.alergiaDataGridViewTextBoxColumn.HeaderText = "Alergia";
+            this.alergiaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.alergiaDataGridViewTextBoxColumn.Name = "alergiaDataGridViewTextBoxColumn";
+            this.alergiaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.alergiaDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // dataNascimentoDataGridViewTextBoxColumn
+            // 
+            this.dataNascimentoDataGridViewTextBoxColumn.DataPropertyName = "DataNascimento";
+            this.dataNascimentoDataGridViewTextBoxColumn.HeaderText = "DataNascimento";
+            this.dataNascimentoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.dataNascimentoDataGridViewTextBoxColumn.Name = "dataNascimentoDataGridViewTextBoxColumn";
+            this.dataNascimentoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dataNascimentoDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // ativoDataGridViewCheckBoxColumn
+            // 
+            this.ativoDataGridViewCheckBoxColumn.DataPropertyName = "Ativo";
+            this.ativoDataGridViewCheckBoxColumn.HeaderText = "Ativo";
+            this.ativoDataGridViewCheckBoxColumn.MinimumWidth = 6;
+            this.ativoDataGridViewCheckBoxColumn.Name = "ativoDataGridViewCheckBoxColumn";
+            this.ativoDataGridViewCheckBoxColumn.ReadOnly = true;
+            this.ativoDataGridViewCheckBoxColumn.Width = 125;
+            // 
             // FormConsultaAnimal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -342,7 +311,6 @@
             this.ShowIcon = false;
             this.Text = "B";
             this.Load += new System.EventHandler(this.FormConsultaAnimal_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.petshopDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.animalBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.animalDataGridView)).EndInit();
             this.ResumeLayout(false);
@@ -351,10 +319,7 @@
         }
 
         #endregion
-        private petshopDataSet petshopDataSet;
         private System.Windows.Forms.BindingSource animalBindingSource;
-        private petshopDataSetTableAdapters.AnimalTableAdapter animalTableAdapter;
-        private petshopDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.DataGridView animalDataGridView;
         private System.Windows.Forms.TextBox textBoxBuscar;
         private System.Windows.Forms.ComboBox comboBox1;
@@ -366,17 +331,16 @@
         private System.Windows.Forms.Button buttonSelecionar;
         private System.Windows.Forms.Button buttonCancelar;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IdRaca;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IdCliente;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nomeRacaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nomeClienteDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nomeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sexoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn agressivoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn corDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idadeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn alergiaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataNascimentoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn ativoDataGridViewCheckBoxColumn;
     }
 }
