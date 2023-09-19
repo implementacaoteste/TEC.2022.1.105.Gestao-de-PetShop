@@ -76,6 +76,7 @@ namespace BLL
         }
         public void Alterar(Cliente _cliente)
         {
+            ValidarDados(_cliente);
             new ClienteDAL().Alterar(_cliente);
         }
         public void Excluir(int _id)
