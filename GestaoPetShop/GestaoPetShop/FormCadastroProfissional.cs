@@ -51,8 +51,10 @@ namespace GestaoPetShop
             {
                 if (id == 0)
                     profissionalBindingSource.AddNew();
+                   
                 else
-                    profissionalBindingSource.DataSource = new ProfissionalBLL().BuscarPorId(id);
+                    btnGerarSenha.Visible = true;
+                profissionalBindingSource.DataSource = new ProfissionalBLL().BuscarPorId(id);
 
                 if (!permitirSalvar)
                 {
