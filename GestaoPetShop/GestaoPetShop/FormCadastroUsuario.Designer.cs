@@ -35,13 +35,13 @@
             System.Windows.Forms.Label idLabel;
             System.Windows.Forms.Label nomeLabel;
             this.senhaTextBox = new System.Windows.Forms.TextBox();
+            this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ativoCheckBox = new System.Windows.Forms.CheckBox();
             this.textBoxConfirmarSenha = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.buttonSalvar = new System.Windows.Forms.Button();
             this.buttonCancelar = new System.Windows.Forms.Button();
             this.usuarioLoginTextBox = new System.Windows.Forms.TextBox();
-            this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.profissionalBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idTextBoxProfissional = new System.Windows.Forms.TextBox();
             this.nomeTextBoxProfissional = new System.Windows.Forms.TextBox();
@@ -59,7 +59,7 @@
             // 
             senhaLabel.AutoSize = true;
             senhaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            senhaLabel.Location = new System.Drawing.Point(46, 134);
+            senhaLabel.Location = new System.Drawing.Point(41, 226);
             senhaLabel.Name = "senhaLabel";
             senhaLabel.Size = new System.Drawing.Size(50, 18);
             senhaLabel.TabIndex = 9;
@@ -69,40 +69,72 @@
             // 
             label1.AutoSize = true;
             label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label1.Location = new System.Drawing.Point(176, 134);
+            label1.Location = new System.Drawing.Point(171, 226);
             label1.Name = "label1";
             label1.Size = new System.Drawing.Size(118, 18);
             label1.TabIndex = 11;
             label1.Text = "Confirmar senha";
             // 
+            // usuarioLoginLabel
+            // 
+            usuarioLoginLabel.AutoSize = true;
+            usuarioLoginLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            usuarioLoginLabel.Location = new System.Drawing.Point(41, 180);
+            usuarioLoginLabel.Name = "usuarioLoginLabel";
+            usuarioLoginLabel.Size = new System.Drawing.Size(104, 18);
+            usuarioLoginLabel.TabIndex = 15;
+            usuarioLoginLabel.Text = "Usuario Login:";
+            // 
+            // idLabel
+            // 
+            idLabel.AutoSize = true;
+            idLabel.Location = new System.Drawing.Point(96, 103);
+            idLabel.Name = "idLabel";
+            idLabel.Size = new System.Drawing.Size(21, 16);
+            idLabel.TabIndex = 15;
+            idLabel.Text = "Id:";
+            // 
+            // nomeLabel
+            // 
+            nomeLabel.AutoSize = true;
+            nomeLabel.Location = new System.Drawing.Point(152, 103);
+            nomeLabel.Name = "nomeLabel";
+            nomeLabel.Size = new System.Drawing.Size(47, 16);
+            nomeLabel.TabIndex = 16;
+            nomeLabel.Text = "Nome:";
+            // 
             // senhaTextBox
             // 
             this.senhaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioBindingSource, "Senha", true));
-            this.senhaTextBox.Location = new System.Drawing.Point(49, 156);
+            this.senhaTextBox.Location = new System.Drawing.Point(44, 248);
             this.senhaTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.senhaTextBox.Name = "senhaTextBox";
             this.senhaTextBox.Size = new System.Drawing.Size(115, 22);
-            this.senhaTextBox.TabIndex = 1;
+            this.senhaTextBox.TabIndex = 2;
+            // 
+            // usuarioBindingSource
+            // 
+            this.usuarioBindingSource.DataSource = typeof(Models.Usuario);
             // 
             // ativoCheckBox
             // 
             this.ativoCheckBox.AutoSize = true;
             this.ativoCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.usuarioBindingSource, "Ativo", true));
-            this.ativoCheckBox.Location = new System.Drawing.Point(265, 96);
+            this.ativoCheckBox.Location = new System.Drawing.Point(259, 203);
             this.ativoCheckBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ativoCheckBox.Name = "ativoCheckBox";
             this.ativoCheckBox.Size = new System.Drawing.Size(59, 20);
-            this.ativoCheckBox.TabIndex = 3;
+            this.ativoCheckBox.TabIndex = 4;
             this.ativoCheckBox.Text = "Ativo";
             this.ativoCheckBox.UseVisualStyleBackColor = true;
             // 
             // textBoxConfirmarSenha
             // 
-            this.textBoxConfirmarSenha.Location = new System.Drawing.Point(179, 156);
+            this.textBoxConfirmarSenha.Location = new System.Drawing.Point(174, 248);
             this.textBoxConfirmarSenha.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxConfirmarSenha.Name = "textBoxConfirmarSenha";
             this.textBoxConfirmarSenha.Size = new System.Drawing.Size(115, 22);
-            this.textBoxConfirmarSenha.TabIndex = 2;
+            this.textBoxConfirmarSenha.TabIndex = 3;
             // 
             // label2
             // 
@@ -121,7 +153,7 @@
             this.buttonSalvar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonSalvar.Name = "buttonSalvar";
             this.buttonSalvar.Size = new System.Drawing.Size(75, 31);
-            this.buttonSalvar.TabIndex = 4;
+            this.buttonSalvar.TabIndex = 5;
             this.buttonSalvar.Text = "&Salvar";
             this.buttonSalvar.UseVisualStyleBackColor = true;
             this.buttonSalvar.Click += new System.EventHandler(this.buttonSalvar_Click);
@@ -132,77 +164,45 @@
             this.buttonCancelar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonCancelar.Name = "buttonCancelar";
             this.buttonCancelar.Size = new System.Drawing.Size(75, 31);
-            this.buttonCancelar.TabIndex = 5;
+            this.buttonCancelar.TabIndex = 6;
             this.buttonCancelar.Text = "&Cancelar";
             this.buttonCancelar.UseVisualStyleBackColor = true;
             this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
             // 
-            // usuarioLoginLabel
-            // 
-            usuarioLoginLabel.AutoSize = true;
-            usuarioLoginLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            usuarioLoginLabel.Location = new System.Drawing.Point(47, 75);
-            usuarioLoginLabel.Name = "usuarioLoginLabel";
-            usuarioLoginLabel.Size = new System.Drawing.Size(104, 18);
-            usuarioLoginLabel.TabIndex = 15;
-            usuarioLoginLabel.Text = "Usuario Login:";
-            // 
             // usuarioLoginTextBox
             // 
             this.usuarioLoginTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioBindingSource, "UsuarioLogin", true));
-            this.usuarioLoginTextBox.Location = new System.Drawing.Point(50, 94);
+            this.usuarioLoginTextBox.Location = new System.Drawing.Point(44, 201);
             this.usuarioLoginTextBox.Name = "usuarioLoginTextBox";
             this.usuarioLoginTextBox.Size = new System.Drawing.Size(176, 22);
-            this.usuarioLoginTextBox.TabIndex = 0;
-            // 
-            // usuarioBindingSource
-            // 
-            this.usuarioBindingSource.DataSource = typeof(Models.Usuario);
+            this.usuarioLoginTextBox.TabIndex = 1;
             // 
             // profissionalBindingSource
             // 
             this.profissionalBindingSource.DataSource = typeof(Models.Profissional);
             // 
-            // idLabel
-            // 
-            idLabel.AutoSize = true;
-            idLabel.Location = new System.Drawing.Point(48, 190);
-            idLabel.Name = "idLabel";
-            idLabel.Size = new System.Drawing.Size(21, 16);
-            idLabel.TabIndex = 15;
-            idLabel.Text = "Id:";
-            // 
             // idTextBoxProfissional
             // 
             this.idTextBoxProfissional.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioBindingSource, "IdProfissional", true));
-            this.idTextBoxProfissional.Location = new System.Drawing.Point(51, 209);
+            this.idTextBoxProfissional.Location = new System.Drawing.Point(99, 122);
             this.idTextBoxProfissional.Name = "idTextBoxProfissional";
-            this.idTextBoxProfissional.Size = new System.Drawing.Size(100, 22);
+            this.idTextBoxProfissional.Size = new System.Drawing.Size(50, 22);
             this.idTextBoxProfissional.TabIndex = 16;
-            // 
-            // nomeLabel
-            // 
-            nomeLabel.AutoSize = true;
-            nomeLabel.Location = new System.Drawing.Point(176, 190);
-            nomeLabel.Name = "nomeLabel";
-            nomeLabel.Size = new System.Drawing.Size(47, 16);
-            nomeLabel.TabIndex = 16;
-            nomeLabel.Text = "Nome:";
             // 
             // nomeTextBoxProfissional
             // 
             this.nomeTextBoxProfissional.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.profissionalBindingSource, "Nome", true));
-            this.nomeTextBoxProfissional.Location = new System.Drawing.Point(179, 209);
+            this.nomeTextBoxProfissional.Location = new System.Drawing.Point(155, 122);
             this.nomeTextBoxProfissional.Name = "nomeTextBoxProfissional";
-            this.nomeTextBoxProfissional.Size = new System.Drawing.Size(115, 22);
+            this.nomeTextBoxProfissional.Size = new System.Drawing.Size(134, 22);
             this.nomeTextBoxProfissional.TabIndex = 17;
             // 
             // btnBuscarProfissional
             // 
-            this.btnBuscarProfissional.Location = new System.Drawing.Point(51, 250);
+            this.btnBuscarProfissional.Location = new System.Drawing.Point(96, 70);
             this.btnBuscarProfissional.Name = "btnBuscarProfissional";
-            this.btnBuscarProfissional.Size = new System.Drawing.Size(243, 28);
-            this.btnBuscarProfissional.TabIndex = 18;
+            this.btnBuscarProfissional.Size = new System.Drawing.Size(190, 28);
+            this.btnBuscarProfissional.TabIndex = 0;
             this.btnBuscarProfissional.Text = "Pesquisar Profissional";
             this.btnBuscarProfissional.UseVisualStyleBackColor = true;
             this.btnBuscarProfissional.Click += new System.EventHandler(this.btnBuscarProfissional_Click);

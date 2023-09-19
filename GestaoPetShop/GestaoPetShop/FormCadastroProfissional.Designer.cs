@@ -527,6 +527,7 @@
             this.btnGerarSenha.TabIndex = 41;
             this.btnGerarSenha.Text = "Gerar Senha";
             this.btnGerarSenha.UseVisualStyleBackColor = false;
+            this.btnGerarSenha.Visible = false;
             this.btnGerarSenha.Click += new System.EventHandler(this.btnGerarSenha_Click);
             // 
             // FormCadastroProfissional
