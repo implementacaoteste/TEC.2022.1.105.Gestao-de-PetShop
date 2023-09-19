@@ -186,13 +186,14 @@ namespace DAL
 
                 using (SqlDataReader rd = cmd.ExecuteReader())
                 {
-                        if (rd.Read())
-                        {
-                            raca.Id = Convert.ToInt32(rd["Id"]);
-                            raca.Nome = rd["Descricao"].ToString();
-                            raca.Especie = rd["Especie"].ToString();
-                            raca.PaisOrigem = rd["PaisOrigem"].ToString();
-                        }
+                    if (rd.Read())
+                    {
+                        raca.Id = Convert.ToInt32(rd["Id"]);
+                        raca.Nome = rd["Nome"].ToString();
+                        raca.Especie = rd["Especie"].ToString();
+                        raca.PaisOrigem = rd["PaisOrigem"].ToString();
+                        raca.Ativo = Convert.ToBoolean(rd["Ativo"]);
+                    }
                 }
                 return raca;
             }

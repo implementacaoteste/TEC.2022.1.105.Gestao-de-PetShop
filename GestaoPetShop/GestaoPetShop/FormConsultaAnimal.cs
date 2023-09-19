@@ -48,13 +48,6 @@ namespace GestaoPetShop
                 MessageBox.Show(ex.Message);
             }
         }
-        private void animalBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.animalBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.petshopDataSet);
-
-        }
 
         private void FormConsultaAnimal_Load(object sender, EventArgs e)
         {
@@ -62,8 +55,6 @@ namespace GestaoPetShop
             // this.animalTableAdapter.Fill(this.petshopDataSet.Animal);
 
              comboBox1.SelectedIndex = 0;
-
-
         }
 
         private void buttonExcluir_Click(object sender, EventArgs e)
@@ -96,6 +87,7 @@ namespace GestaoPetShop
                 using (FormCadastroAnimal frm = new FormCadastroAnimal())
                 {
                     frm.ShowDialog();
+                    buttonBuscar_Click(sender, e);
                 }
             }
             catch (Exception ex)
@@ -106,7 +98,7 @@ namespace GestaoPetShop
 
         private void buttonCancelar_Click(object sender, EventArgs e)
         {
-            animalBindingSource.CancelEdit();
+            Close();
         }
 
         private void buttonAlterar_Click(object sender, EventArgs e)

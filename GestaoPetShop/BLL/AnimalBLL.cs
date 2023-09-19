@@ -46,7 +46,7 @@ namespace BLL
         {
             return new AnimalDAL().BuscarPorNome(_nome);
         }
-        public List<Raca> BuscarPorRaca(string _raca)
+        public List<Animal> BuscarPorRaca(string _raca)
         {
             return new AnimalDAL().BuscarPorRaca(_raca);
         }
