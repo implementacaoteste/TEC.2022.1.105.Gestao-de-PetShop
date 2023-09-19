@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormConsultaPermissao));
             this.permissaoDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.permissaoBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -52,12 +53,13 @@
             this.permissaoDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn2});
             this.permissaoDataGridView.DataSource = this.permissaoBindingSource;
-            this.permissaoDataGridView.Location = new System.Drawing.Point(15, 105);
+            this.permissaoDataGridView.Location = new System.Drawing.Point(11, 85);
+            this.permissaoDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.permissaoDataGridView.Name = "permissaoDataGridView";
             this.permissaoDataGridView.ReadOnly = true;
             this.permissaoDataGridView.RowHeadersWidth = 51;
             this.permissaoDataGridView.RowTemplate.Height = 24;
-            this.permissaoDataGridView.Size = new System.Drawing.Size(824, 434);
+            this.permissaoDataGridView.Size = new System.Drawing.Size(618, 353);
             this.permissaoDataGridView.TabIndex = 4;
             this.permissaoDataGridView.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.permissaoDataGridView_MouseDoubleClick);
             // 
@@ -79,8 +81,9 @@
             this.label2.Dock = System.Windows.Forms.DockStyle.Top;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(0, 0);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(860, 58);
+            this.label2.Size = new System.Drawing.Size(645, 47);
             this.label2.TabIndex = 0;
             this.label2.Text = "Consultar permissão";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -89,35 +92,39 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 58);
+            this.label1.Location = new System.Drawing.Point(9, 47);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(204, 16);
+            this.label1.Size = new System.Drawing.Size(168, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "&Informe o que deseja buscar";
             // 
             // textBoxBuscar
             // 
-            this.textBoxBuscar.Location = new System.Drawing.Point(12, 77);
+            this.textBoxBuscar.Location = new System.Drawing.Point(9, 63);
+            this.textBoxBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxBuscar.Name = "textBoxBuscar";
-            this.textBoxBuscar.Size = new System.Drawing.Size(746, 22);
+            this.textBoxBuscar.Size = new System.Drawing.Size(560, 20);
             this.textBoxBuscar.TabIndex = 2;
             this.textBoxBuscar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxBuscar_KeyDown);
             // 
             // buttonCancelar
             // 
             this.buttonCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonCancelar.Location = new System.Drawing.Point(764, 559);
+            this.buttonCancelar.Location = new System.Drawing.Point(573, 454);
+            this.buttonCancelar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonCancelar.Name = "buttonCancelar";
-            this.buttonCancelar.Size = new System.Drawing.Size(75, 28);
+            this.buttonCancelar.Size = new System.Drawing.Size(56, 23);
             this.buttonCancelar.TabIndex = 6;
             this.buttonCancelar.Text = "&Cancelar";
             this.buttonCancelar.UseVisualStyleBackColor = true;
             // 
             // buttonBuscar
             // 
-            this.buttonBuscar.Location = new System.Drawing.Point(764, 71);
+            this.buttonBuscar.Location = new System.Drawing.Point(573, 58);
+            this.buttonBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonBuscar.Name = "buttonBuscar";
-            this.buttonBuscar.Size = new System.Drawing.Size(75, 28);
+            this.buttonBuscar.Size = new System.Drawing.Size(56, 23);
             this.buttonBuscar.TabIndex = 3;
             this.buttonBuscar.Text = "&Buscar";
             this.buttonBuscar.UseVisualStyleBackColor = true;
@@ -125,9 +132,10 @@
             // 
             // buttonSelecionar
             // 
-            this.buttonSelecionar.Location = new System.Drawing.Point(667, 559);
+            this.buttonSelecionar.Location = new System.Drawing.Point(500, 454);
+            this.buttonSelecionar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonSelecionar.Name = "buttonSelecionar";
-            this.buttonSelecionar.Size = new System.Drawing.Size(91, 28);
+            this.buttonSelecionar.Size = new System.Drawing.Size(68, 23);
             this.buttonSelecionar.TabIndex = 5;
             this.buttonSelecionar.Text = "&Selecionar";
             this.buttonSelecionar.UseVisualStyleBackColor = true;
@@ -135,9 +143,9 @@
             // 
             // FormConsultaPermissao
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(860, 614);
+            this.ClientSize = new System.Drawing.Size(645, 499);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxBuscar);
@@ -146,11 +154,12 @@
             this.Controls.Add(this.buttonSelecionar);
             this.Controls.Add(this.permissaoDataGridView);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormConsultaPermissao";
-            this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormConsultaPermissao_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.permissaoDataGridView)).EndInit();

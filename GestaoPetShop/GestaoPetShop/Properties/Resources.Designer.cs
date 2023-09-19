@@ -223,6 +223,16 @@ namespace GestaoPetShop.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap dog1_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("dog1-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap editar_removebg_preview {
             get {
                 object obj = ResourceManager.GetObject("editar-removebg-preview", resourceCulture);

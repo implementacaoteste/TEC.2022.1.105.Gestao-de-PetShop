@@ -363,10 +363,6 @@ namespace GestaoPetShop
                 MessageBox.Show("Ocorreu um erro ao tentar selecionar uma data no calendário.", ex.Message);
             }
         }
-        private void btnFechar_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
         private void button_InserirAgendamentos_Click(object sender, EventArgs e)
         {
             try

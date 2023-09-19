@@ -226,9 +226,10 @@
             // 
             // pictureBox3
             // 
+            this.pictureBox3.ErrorImage = null;
             this.pictureBox3.Image = global::GestaoPetShop.Properties.Resources.bicho_de_estimacao;
             this.pictureBox3.Location = new System.Drawing.Point(8, 9);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(22, 24);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -240,7 +241,7 @@
             this.splitter1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.splitter1.Location = new System.Drawing.Point(0, 0);
             this.splitter1.Name = "splitter1";
-            this.splitter1.Padding = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.splitter1.Padding = new System.Windows.Forms.Padding(7);
             this.splitter1.Size = new System.Drawing.Size(3, 311);
             this.splitter1.TabIndex = 18;
             this.splitter1.TabStop = false;
@@ -251,7 +252,7 @@
             this.splitter2.Dock = System.Windows.Forms.DockStyle.Right;
             this.splitter2.Location = new System.Drawing.Point(500, 0);
             this.splitter2.Name = "splitter2";
-            this.splitter2.Padding = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.splitter2.Padding = new System.Windows.Forms.Padding(7);
             this.splitter2.Size = new System.Drawing.Size(3, 311);
             this.splitter2.TabIndex = 19;
             this.splitter2.TabStop = false;
@@ -262,7 +263,7 @@
             this.splitter3.Dock = System.Windows.Forms.DockStyle.Top;
             this.splitter3.Location = new System.Drawing.Point(3, 0);
             this.splitter3.Name = "splitter3";
-            this.splitter3.Padding = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.splitter3.Padding = new System.Windows.Forms.Padding(7);
             this.splitter3.Size = new System.Drawing.Size(497, 3);
             this.splitter3.TabIndex = 20;
             this.splitter3.TabStop = false;
@@ -273,7 +274,7 @@
             this.splitter4.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.splitter4.Location = new System.Drawing.Point(3, 308);
             this.splitter4.Name = "splitter4";
-            this.splitter4.Padding = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.splitter4.Padding = new System.Windows.Forms.Padding(7);
             this.splitter4.Size = new System.Drawing.Size(497, 3);
             this.splitter4.TabIndex = 21;
             this.splitter4.TabStop = false;
@@ -282,7 +283,7 @@
             // 
             this.pictureBox1.Image = global::GestaoPetShop.Properties.Resources.png_transparent_pet_cat_animal_kitty_biological_removebg_preview;
             this.pictureBox1.Location = new System.Drawing.Point(350, 45);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(154, 98);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -318,7 +319,6 @@
             this.Controls.Add(ativoLabel);
             this.Controls.Add(this.ativoCheckBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.KeyPreview = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormsCadastroServico";

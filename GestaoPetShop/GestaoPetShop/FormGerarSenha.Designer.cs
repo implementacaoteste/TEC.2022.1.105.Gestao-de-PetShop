@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormGerarSenha));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -72,7 +73,7 @@
             // txtSenhaAtual
             // 
             this.txtSenhaAtual.Location = new System.Drawing.Point(168, 46);
-            this.txtSenhaAtual.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSenhaAtual.Margin = new System.Windows.Forms.Padding(2);
             this.txtSenhaAtual.MaxLength = 32;
             this.txtSenhaAtual.Name = "txtSenhaAtual";
             this.txtSenhaAtual.Size = new System.Drawing.Size(100, 20);
@@ -82,7 +83,7 @@
             // 
             this.txtNovaSenha.Enabled = false;
             this.txtNovaSenha.Location = new System.Drawing.Point(168, 100);
-            this.txtNovaSenha.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNovaSenha.Margin = new System.Windows.Forms.Padding(2);
             this.txtNovaSenha.MaxLength = 32;
             this.txtNovaSenha.Name = "txtNovaSenha";
             this.txtNovaSenha.PasswordChar = '*';
@@ -93,7 +94,7 @@
             // 
             this.txtNovaSenha2.Enabled = false;
             this.txtNovaSenha2.Location = new System.Drawing.Point(168, 154);
-            this.txtNovaSenha2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNovaSenha2.Margin = new System.Windows.Forms.Padding(2);
             this.txtNovaSenha2.MaxLength = 32;
             this.txtNovaSenha2.Name = "txtNovaSenha2";
             this.txtNovaSenha2.PasswordChar = '*';
@@ -104,7 +105,7 @@
             // 
             this.checkBoxMostrarSenha.AutoSize = true;
             this.checkBoxMostrarSenha.Location = new System.Drawing.Point(107, 211);
-            this.checkBoxMostrarSenha.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkBoxMostrarSenha.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxMostrarSenha.Name = "checkBoxMostrarSenha";
             this.checkBoxMostrarSenha.Size = new System.Drawing.Size(95, 17);
             this.checkBoxMostrarSenha.TabIndex = 6;
@@ -115,7 +116,7 @@
             // btnGerar
             // 
             this.btnGerar.Location = new System.Drawing.Point(64, 263);
-            this.btnGerar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnGerar.Margin = new System.Windows.Forms.Padding(2);
             this.btnGerar.Name = "btnGerar";
             this.btnGerar.Size = new System.Drawing.Size(60, 28);
             this.btnGerar.TabIndex = 7;
@@ -127,7 +128,7 @@
             // 
             this.btnOK.Enabled = false;
             this.btnOK.Location = new System.Drawing.Point(168, 263);
-            this.btnOK.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnOK.Margin = new System.Windows.Forms.Padding(2);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(60, 28);
             this.btnOK.TabIndex = 8;
@@ -149,11 +150,12 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormGerarSenha";
-            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.Text = "Gerar Senha";
             this.ResumeLayout(false);
             this.PerformLayout();

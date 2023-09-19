@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormConsultaRaca));
             this.buttonBuscar = new System.Windows.Forms.Button();
             this.buttonAlterar = new System.Windows.Forms.Button();
             this.buttonInserir = new System.Windows.Forms.Button();
@@ -55,9 +56,10 @@
             // 
             // buttonBuscar
             // 
-            this.buttonBuscar.Location = new System.Drawing.Point(470, 83);
+            this.buttonBuscar.Location = new System.Drawing.Point(352, 66);
+            this.buttonBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonBuscar.Name = "buttonBuscar";
-            this.buttonBuscar.Size = new System.Drawing.Size(75, 23);
+            this.buttonBuscar.Size = new System.Drawing.Size(56, 21);
             this.buttonBuscar.TabIndex = 0;
             this.buttonBuscar.Text = "&Buscar";
             this.buttonBuscar.UseVisualStyleBackColor = true;
@@ -65,9 +67,10 @@
             // 
             // buttonAlterar
             // 
-            this.buttonAlterar.Location = new System.Drawing.Point(551, 83);
+            this.buttonAlterar.Location = new System.Drawing.Point(413, 66);
+            this.buttonAlterar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonAlterar.Name = "buttonAlterar";
-            this.buttonAlterar.Size = new System.Drawing.Size(75, 23);
+            this.buttonAlterar.Size = new System.Drawing.Size(56, 21);
             this.buttonAlterar.TabIndex = 1;
             this.buttonAlterar.Text = "&Alterar";
             this.buttonAlterar.UseVisualStyleBackColor = true;
@@ -75,9 +78,10 @@
             // 
             // buttonInserir
             // 
-            this.buttonInserir.Location = new System.Drawing.Point(632, 83);
+            this.buttonInserir.Location = new System.Drawing.Point(474, 66);
+            this.buttonInserir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonInserir.Name = "buttonInserir";
-            this.buttonInserir.Size = new System.Drawing.Size(75, 23);
+            this.buttonInserir.Size = new System.Drawing.Size(56, 21);
             this.buttonInserir.TabIndex = 2;
             this.buttonInserir.Text = "&Inserir";
             this.buttonInserir.UseVisualStyleBackColor = true;
@@ -85,9 +89,10 @@
             // 
             // buttonExcluir
             // 
-            this.buttonExcluir.Location = new System.Drawing.Point(713, 83);
+            this.buttonExcluir.Location = new System.Drawing.Point(535, 66);
+            this.buttonExcluir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonExcluir.Name = "buttonExcluir";
-            this.buttonExcluir.Size = new System.Drawing.Size(75, 23);
+            this.buttonExcluir.Size = new System.Drawing.Size(56, 21);
             this.buttonExcluir.TabIndex = 3;
             this.buttonExcluir.Text = "&Excluir";
             this.buttonExcluir.UseVisualStyleBackColor = true;
@@ -101,8 +106,9 @@
             this.labelBuscraPorAnimal.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelBuscraPorAnimal.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.labelBuscraPorAnimal.Location = new System.Drawing.Point(0, 0);
+            this.labelBuscraPorAnimal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelBuscraPorAnimal.Name = "labelBuscraPorAnimal";
-            this.labelBuscraPorAnimal.Size = new System.Drawing.Size(807, 62);
+            this.labelBuscraPorAnimal.Size = new System.Drawing.Size(605, 50);
             this.labelBuscraPorAnimal.TabIndex = 4;
             this.labelBuscraPorAnimal.Text = "Buscar por Raça";
             this.labelBuscraPorAnimal.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -159,13 +165,15 @@
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4});
             this.racaDataGridView.DataSource = this.racaBindingSource;
-            this.racaDataGridView.Location = new System.Drawing.Point(8, 112);
+            this.racaDataGridView.Location = new System.Drawing.Point(6, 91);
+            this.racaDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.racaDataGridView.Name = "racaDataGridView";
             this.racaDataGridView.ReadOnly = true;
             this.racaDataGridView.RowHeadersVisible = false;
             this.racaDataGridView.RowHeadersWidth = 51;
             this.racaDataGridView.RowTemplate.Height = 24;
-            this.racaDataGridView.Size = new System.Drawing.Size(780, 362);
+            this.racaDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.racaDataGridView.Size = new System.Drawing.Size(585, 294);
             this.racaDataGridView.TabIndex = 6;
             // 
             // dataGridViewTextBoxColumn1
@@ -211,24 +219,27 @@
             "Todos",
             "Nome",
             "Id"});
-            this.comboBox1.Location = new System.Drawing.Point(12, 81);
+            this.comboBox1.Location = new System.Drawing.Point(9, 66);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
+            this.comboBox1.Size = new System.Drawing.Size(92, 21);
             this.comboBox1.TabIndex = 7;
             // 
             // textBoxBuscar
             // 
-            this.textBoxBuscar.Location = new System.Drawing.Point(139, 83);
+            this.textBoxBuscar.Location = new System.Drawing.Point(104, 67);
+            this.textBoxBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxBuscar.Name = "textBoxBuscar";
-            this.textBoxBuscar.Size = new System.Drawing.Size(325, 22);
+            this.textBoxBuscar.Size = new System.Drawing.Size(245, 20);
             this.textBoxBuscar.TabIndex = 8;
             // 
             // buttonSelecionar
             // 
             this.buttonSelecionar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonSelecionar.Location = new System.Drawing.Point(609, 480);
+            this.buttonSelecionar.Location = new System.Drawing.Point(457, 390);
+            this.buttonSelecionar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonSelecionar.Name = "buttonSelecionar";
-            this.buttonSelecionar.Size = new System.Drawing.Size(82, 25);
+            this.buttonSelecionar.Size = new System.Drawing.Size(62, 22);
             this.buttonSelecionar.TabIndex = 9;
             this.buttonSelecionar.Text = "&Selecionar";
             this.buttonSelecionar.UseVisualStyleBackColor = true;
@@ -238,9 +249,10 @@
             // 
             this.buttonCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonCancelar.Location = new System.Drawing.Point(706, 480);
+            this.buttonCancelar.Location = new System.Drawing.Point(530, 390);
+            this.buttonCancelar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonCancelar.Name = "buttonCancelar";
-            this.buttonCancelar.Size = new System.Drawing.Size(82, 25);
+            this.buttonCancelar.Size = new System.Drawing.Size(62, 22);
             this.buttonCancelar.TabIndex = 10;
             this.buttonCancelar.Text = "&Cancelar";
             this.buttonCancelar.UseVisualStyleBackColor = true;
@@ -250,18 +262,19 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 62);
+            this.label1.Location = new System.Drawing.Point(9, 50);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(83, 16);
+            this.label1.Size = new System.Drawing.Size(69, 13);
             this.label1.TabIndex = 11;
             this.label1.Text = "Buscar Por";
             // 
-            // ConsultaRaca
+            // FormConsultaRaca
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(807, 553);
+            this.ClientSize = new System.Drawing.Size(605, 449);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.buttonSelecionar);
@@ -273,10 +286,12 @@
             this.Controls.Add(this.buttonInserir);
             this.Controls.Add(this.buttonAlterar);
             this.Controls.Add(this.buttonBuscar);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "ConsultaRaca";
-            this.ShowIcon = false;
+            this.Name = "FormConsultaRaca";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.ConsultaPorRaca_Load);
             ((System.ComponentModel.ISupportInitialize)(this.petshopDataSet)).EndInit();
