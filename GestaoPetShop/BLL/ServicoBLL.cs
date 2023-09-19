@@ -14,11 +14,32 @@ namespace BLL
     {
         public void Inserir(Servico _servico)
         {
+            ValidarPreenchimento(_servico);
             ServicoDAL servicoDAL = new ServicoDAL();
             servicoDAL.Inserir(_servico);
         }
+
+        private void ValidarPreenchimento(Servico _servico)
+        {
+            if (String.IsNullOrEmpty(_servico.Descricao))
+                throw new Exception("A descrição do serviço não foi preenchida.");
+
+            if (_servico.Preco == 0)
+                throw new Exception("O Preço do serviço não foi preenchido.");
+
+            if (_servico.Tempo == 0)
+                throw new Exception("O tempo de serviço não foi preenchido.");
+
+            if(_servico.Id == 0)
+            {
+                if (_servico.Ativo == false)
+                    throw new Exception("O Ativo do serviço não foi preenchido");
+            }
+        }
+
         public List<Servico> BuscarTodos()
         {
+
             ServicoDAL servicoDAL = new ServicoDAL();
             List<Servico> servicos = servicoDAL.BuscarTodos();
             if (servicos.Count == 0)
@@ -30,6 +51,8 @@ namespace BLL
         public Servico BuscarPorId(int _id)
         {
 
+            if(_id == 0)
+                throw new Exception("Id Inválido ou não informado");
 
             ServicoDAL servicoDAL = new ServicoDAL();
             Servico servico = servicoDAL.BuscarPorId(_id);
@@ -43,6 +66,8 @@ namespace BLL
         }
         public List<Servico> BuscarPorNome(string _nome)
         {
+           
+            
             ServicoDAL servicoDAL = new ServicoDAL();
 
             List<Servico> servicos = servicoDAL.BuscarPorNome(_nome);
@@ -54,6 +79,7 @@ namespace BLL
         }
         public void Alterar(Servico _servico)
         {
+            ValidarPreenchimento(_servico);
             ServicoDAL servicoDAL = new ServicoDAL();
             servicoDAL.Alterar(_servico);
         }
