@@ -22,18 +22,18 @@ namespace BLL
         private void ValidarPreenchimento(Servico _servico)
         {
             if (String.IsNullOrEmpty(_servico.Descricao))
-                throw new Exception("A descrição do serviço não foi preenchida.");
+                throw new Exception("A descrição do serviço não foi preenchida.") { Data = { { "Id", 47 } } };
 
             if (_servico.Preco == 0)
-                throw new Exception("O Preço do serviço não foi preenchido.");
+                throw new Exception("O Preço do serviço não foi preenchido.") { Data = { { "Id", 48 } } };
 
             if (_servico.Tempo == 0)
-                throw new Exception("O tempo de serviço não foi preenchido.");
+                throw new Exception("O tempo de serviço não foi preenchido.") { Data = { { "Id", 49 } } };
 
             if(_servico.Id == 0)
             {
                 if (_servico.Ativo == false)
-                    throw new Exception("O Ativo do serviço não foi preenchido");
+                    throw new Exception("O Ativo do serviço não foi preenchido") { Data = { { "Id", 140 } } };
             }
         }
 
@@ -44,7 +44,7 @@ namespace BLL
             List<Servico> servicos = servicoDAL.BuscarTodos();
             if (servicos.Count == 0)
             {
-                throw new Exception("Não tem serviço cadastrado") { Data = { { "Id", 47 } } };
+                throw new Exception("Não tem serviço cadastrado") { Data = { { "Id", 141 } } };
             }
             return servicos;
         }
@@ -52,28 +52,29 @@ namespace BLL
         {
 
             if(_id == 0)
-                throw new Exception("Id Inválido ou não informado");
+                throw new Exception("Id Inválido ou não informado") { Data = { { "Id", 142 } } };
 
             ServicoDAL servicoDAL = new ServicoDAL();
             Servico servico = servicoDAL.BuscarPorId(_id);
 
             if (servico.Id == 0)
             {
-                throw new Exception("Serviço não encontrado") { Data = { { "Id", 48 } } };
+                throw new Exception("Serviço não encontrado") { Data = { { "Id", 143 } } };
             }
 
             return servico;
         }
         public List<Servico> BuscarPorNome(string _nome)
         {
-           
+            if (string.IsNullOrEmpty(_nome))
+                throw new Exception("Nome inválido ou não informado.") { Data = { { "Id", 144 } } };
             
             ServicoDAL servicoDAL = new ServicoDAL();
 
             List<Servico> servicos = servicoDAL.BuscarPorNome(_nome);
             if (servicos.Count == 0)
             {
-                throw new Exception("Serviço não encontrado") { Data = { { "Id", 49 } } };
+                throw new Exception("Serviço não encontrado") { Data = { { "Id", 145 } } };
             }
             return servicos;
         }
@@ -87,7 +88,7 @@ namespace BLL
         {
             if (new ServicoBLL().ExisteVinculo(_id))
             {
-                throw new Exception("Este Serviço foi utilizado em agendamento. Deve ser excluído primeiro o registro em agendamento.") { Data = { { "Id", 50 } } };
+                throw new Exception("Este Serviço foi utilizado em agendamento. Deve ser excluído primeiro o registro em agendamento.") { Data = { { "Id", 146 } } };
             }
             ServicoDAL servicoDAL = new ServicoDAL();
             servicoDAL.Excluir(_id);

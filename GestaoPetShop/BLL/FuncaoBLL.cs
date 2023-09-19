@@ -12,11 +12,17 @@ namespace BLL
     {
         public void Inserir (Funcao _funcao)
         {
+            if (String.IsNullOrEmpty(_funcao.Nome))
+                throw new Exception("Não foi inserido nome para a função.");
+
             FuncaoDAL funcaoDAL = new FuncaoDAL();
             funcaoDAL.Inserir(_funcao);
         }
         public void Alterar (Funcao _funcao)
         {
+            if (String.IsNullOrEmpty(_funcao.Nome))
+                throw new Exception("Não foi inserido nome para a função.");
+
             FuncaoDAL funcaoDAL = new FuncaoDAL();
             funcaoDAL.Alterar(_funcao);
 

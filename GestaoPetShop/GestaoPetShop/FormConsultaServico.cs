@@ -107,7 +107,13 @@ namespace GestaoPetShop
 
         }
 
-        private void button_ExcluirServico_Click(object sender, EventArgs e)
+      
+        private void btnFechar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button_ExcluirServico_Click_1(object sender, EventArgs e)
         {
             try
             {
@@ -128,11 +134,6 @@ namespace GestaoPetShop
             {
                 MessageBox.Show(ex.Message);
             }
-        }
-
-        private void btnFechar_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

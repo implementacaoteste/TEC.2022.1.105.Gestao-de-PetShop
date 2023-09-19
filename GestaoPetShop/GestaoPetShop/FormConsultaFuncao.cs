@@ -82,10 +82,7 @@ namespace GestaoPetShop
                 MessageBox.Show(ex.Message);
             }
         }//Givas
-        private void btnFechar_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }//Givas
+       
         private void btnExcluir_Click(object sender, EventArgs e)
         {
             try

@@ -238,6 +238,7 @@
             // 
             // textBox8
             // 
+            this.textBox8.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.animalBindingSource, "NomeCliente", true));
             this.textBox8.Location = new System.Drawing.Point(73, 116);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(190, 22);
@@ -245,6 +246,7 @@
             // 
             // textBox9
             // 
+            this.textBox9.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.animalBindingSource, "NomeRaca", true));
             this.textBox9.Location = new System.Drawing.Point(335, 116);
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(190, 22);
