@@ -72,7 +72,7 @@ namespace GestaoPetShop
         {
             try
             {
-                int opc = 1;
+                int opc = 0;
                 using (FormCadastroCliente frm = new FormCadastroCliente(opc))
                 {
                     frm.ShowDialog();
