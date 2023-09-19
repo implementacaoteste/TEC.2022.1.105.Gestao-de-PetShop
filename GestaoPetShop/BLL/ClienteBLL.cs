@@ -22,7 +22,7 @@ namespace BLL
             if (String.IsNullOrEmpty(_cliente.CPF))
                 throw new Exception("Informe o CPF do cliente.");
 
-            if (_cliente.DataNascimento.Date  == dateTime)
+            if (_cliente.DataNascimento.Date == dateTime)
                 throw new Exception("Informe o data de nascimento do cliente.");
 
             if (String.IsNullOrEmpty(_cliente.UF))
@@ -46,8 +46,13 @@ namespace BLL
             if (String.IsNullOrEmpty(_cliente.Logradouro))
                 throw new Exception("Informe o logradouro do cliente.");
 
-            if (_cliente.Ativo == false)
-                throw new Exception("Ativo não marcado.");
+            if (_cliente.Id == 0)
+            {
+
+                if (_cliente.Ativo == false)
+                    throw new Exception("Ativo não marcado.");
+
+            }
 
             List<TelefoneCliente> telefoneClientes = new List<TelefoneCliente>();
             telefoneClientes = _cliente.TelefoneClientes;
