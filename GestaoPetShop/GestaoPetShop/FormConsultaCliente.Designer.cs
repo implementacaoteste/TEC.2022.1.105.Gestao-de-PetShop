@@ -73,9 +73,8 @@
             this.label1.Dock = System.Windows.Forms.DockStyle.Top;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(667, 40);
+            this.label1.Size = new System.Drawing.Size(889, 49);
             this.label1.TabIndex = 2;
             this.label1.Text = "Consulta cliente";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -84,29 +83,28 @@
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(21, 42);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(28, 52);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 13);
+            this.label2.Size = new System.Drawing.Size(65, 16);
             this.label2.TabIndex = 3;
             this.label2.Text = "Bucar por";
             // 
             // textBoxBuscar
             // 
             this.textBoxBuscar.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBoxBuscar.Location = new System.Drawing.Point(123, 58);
-            this.textBoxBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxBuscar.Location = new System.Drawing.Point(164, 71);
+            this.textBoxBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxBuscar.Name = "textBoxBuscar";
-            this.textBoxBuscar.Size = new System.Drawing.Size(274, 20);
+            this.textBoxBuscar.Size = new System.Drawing.Size(364, 22);
             this.textBoxBuscar.TabIndex = 4;
             // 
             // buttonBuscar
             // 
             this.buttonBuscar.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.buttonBuscar.Location = new System.Drawing.Point(400, 56);
-            this.buttonBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonBuscar.Location = new System.Drawing.Point(533, 69);
+            this.buttonBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonBuscar.Name = "buttonBuscar";
-            this.buttonBuscar.Size = new System.Drawing.Size(56, 21);
+            this.buttonBuscar.Size = new System.Drawing.Size(75, 26);
             this.buttonBuscar.TabIndex = 5;
             this.buttonBuscar.Text = "&Buscar";
             this.buttonBuscar.UseVisualStyleBackColor = true;
@@ -115,10 +113,10 @@
             // buttonCancelar
             // 
             this.buttonCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonCancelar.Location = new System.Drawing.Point(586, 268);
-            this.buttonCancelar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonCancelar.Location = new System.Drawing.Point(781, 330);
+            this.buttonCancelar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonCancelar.Name = "buttonCancelar";
-            this.buttonCancelar.Size = new System.Drawing.Size(56, 21);
+            this.buttonCancelar.Size = new System.Drawing.Size(75, 26);
             this.buttonCancelar.TabIndex = 5;
             this.buttonCancelar.Text = "&Cancelar";
             this.buttonCancelar.UseVisualStyleBackColor = true;
@@ -126,10 +124,10 @@
             // buttonAlterar
             // 
             this.buttonAlterar.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.buttonAlterar.Location = new System.Drawing.Point(461, 56);
-            this.buttonAlterar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonAlterar.Location = new System.Drawing.Point(615, 69);
+            this.buttonAlterar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonAlterar.Name = "buttonAlterar";
-            this.buttonAlterar.Size = new System.Drawing.Size(56, 21);
+            this.buttonAlterar.Size = new System.Drawing.Size(75, 26);
             this.buttonAlterar.TabIndex = 5;
             this.buttonAlterar.Text = "&Alterar";
             this.buttonAlterar.UseVisualStyleBackColor = true;
@@ -138,10 +136,10 @@
             // buttonInserir
             // 
             this.buttonInserir.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.buttonInserir.Location = new System.Drawing.Point(522, 56);
-            this.buttonInserir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonInserir.Location = new System.Drawing.Point(696, 69);
+            this.buttonInserir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonInserir.Name = "buttonInserir";
-            this.buttonInserir.Size = new System.Drawing.Size(56, 21);
+            this.buttonInserir.Size = new System.Drawing.Size(75, 26);
             this.buttonInserir.TabIndex = 5;
             this.buttonInserir.Text = "&Inserir";
             this.buttonInserir.UseVisualStyleBackColor = true;
@@ -150,10 +148,10 @@
             // buttonExcluir
             // 
             this.buttonExcluir.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.buttonExcluir.Location = new System.Drawing.Point(583, 56);
-            this.buttonExcluir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonExcluir.Location = new System.Drawing.Point(777, 69);
+            this.buttonExcluir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonExcluir.Name = "buttonExcluir";
-            this.buttonExcluir.Size = new System.Drawing.Size(56, 21);
+            this.buttonExcluir.Size = new System.Drawing.Size(75, 26);
             this.buttonExcluir.TabIndex = 5;
             this.buttonExcluir.Text = "&Excluir";
             this.buttonExcluir.UseVisualStyleBackColor = true;
@@ -168,10 +166,10 @@
             "Nome",
             "CPF",
             "Todos"});
-            this.comboBoxBuscarPor.Location = new System.Drawing.Point(10, 58);
-            this.comboBoxBuscarPor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxBuscarPor.Location = new System.Drawing.Point(13, 71);
+            this.comboBoxBuscarPor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxBuscarPor.Name = "comboBoxBuscarPor";
-            this.comboBoxBuscarPor.Size = new System.Drawing.Size(109, 21);
+            this.comboBoxBuscarPor.Size = new System.Drawing.Size(144, 24);
             this.comboBoxBuscarPor.TabIndex = 6;
             // 
             // petshopDataSet
@@ -230,15 +228,15 @@
             this.dataGridViewTextBoxColumn14,
             this.dataGridViewCheckBoxColumn1});
             this.clienteDataGridView.DataSource = this.clienteBindingSource;
-            this.clienteDataGridView.Location = new System.Drawing.Point(10, 82);
-            this.clienteDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.clienteDataGridView.Location = new System.Drawing.Point(13, 101);
+            this.clienteDataGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.clienteDataGridView.Name = "clienteDataGridView";
             this.clienteDataGridView.ReadOnly = true;
             this.clienteDataGridView.RowHeadersVisible = false;
             this.clienteDataGridView.RowHeadersWidth = 51;
             this.clienteDataGridView.RowTemplate.Height = 24;
             this.clienteDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.clienteDataGridView.Size = new System.Drawing.Size(646, 182);
+            this.clienteDataGridView.Size = new System.Drawing.Size(861, 224);
             this.clienteDataGridView.TabIndex = 10;
             // 
             // dataGridViewTextBoxColumn1
@@ -355,10 +353,10 @@
             // 
             // buttonVisualizar
             // 
-            this.buttonVisualizar.Location = new System.Drawing.Point(521, 268);
-            this.buttonVisualizar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonVisualizar.Location = new System.Drawing.Point(695, 330);
+            this.buttonVisualizar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonVisualizar.Name = "buttonVisualizar";
-            this.buttonVisualizar.Size = new System.Drawing.Size(62, 21);
+            this.buttonVisualizar.Size = new System.Drawing.Size(83, 26);
             this.buttonVisualizar.TabIndex = 5;
             this.buttonVisualizar.Text = "&Visualizar";
             this.buttonVisualizar.UseVisualStyleBackColor = true;
@@ -366,14 +364,13 @@
             // 
             // buttonSelecionar
             // 
-            this.buttonSelecionar.Location = new System.Drawing.Point(448, 268);
-            this.buttonSelecionar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonSelecionar.Location = new System.Drawing.Point(597, 330);
+            this.buttonSelecionar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonSelecionar.Name = "buttonSelecionar";
-            this.buttonSelecionar.Size = new System.Drawing.Size(68, 21);
+            this.buttonSelecionar.Size = new System.Drawing.Size(91, 26);
             this.buttonSelecionar.TabIndex = 22;
             this.buttonSelecionar.Text = "&Selecionar";
             this.buttonSelecionar.UseVisualStyleBackColor = true;
-            this.buttonSelecionar.Visible = false;
             this.buttonSelecionar.Click += new System.EventHandler(this.buttonSelecionar_Click);
             // 
             // emailClienteBindingSource
@@ -383,10 +380,10 @@
             // 
             // FormConsultaCliente
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(667, 310);
+            this.ClientSize = new System.Drawing.Size(889, 382);
             this.Controls.Add(this.buttonSelecionar);
             this.Controls.Add(this.clienteDataGridView);
             this.Controls.Add(this.comboBoxBuscarPor);
@@ -400,7 +397,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormConsultaCliente";
