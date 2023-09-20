@@ -248,7 +248,7 @@
             // 
             // nomeTextBox
             // 
-            this.nomeTextBox.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.nomeTextBox.BackColor = System.Drawing.SystemColors.Window;
             this.nomeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.profissionalBindingSource, "Nome", true));
             this.nomeTextBox.Location = new System.Drawing.Point(29, 84);
             this.nomeTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -301,7 +301,7 @@
             this.buttonBuscarFoto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonBuscarFoto.Name = "buttonBuscarFoto";
             this.buttonBuscarFoto.Size = new System.Drawing.Size(125, 34);
-            this.buttonBuscarFoto.TabIndex = 14;
+            this.buttonBuscarFoto.TabIndex = 18;
             this.buttonBuscarFoto.Text = "Buscar Foto";
             this.buttonBuscarFoto.UseVisualStyleBackColor = false;
             this.buttonBuscarFoto.Click += new System.EventHandler(this.buttonBuscarFoto_Click);
@@ -320,7 +320,7 @@
             this.textBoxTelefone.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxTelefone.Name = "textBoxTelefone";
             this.textBoxTelefone.Size = new System.Drawing.Size(203, 22);
-            this.textBoxTelefone.TabIndex = 13;
+            this.textBoxTelefone.TabIndex = 15;
             // 
             // buttonInserirEmail
             // 
@@ -329,7 +329,7 @@
             this.buttonInserirEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonInserirEmail.Name = "buttonInserirEmail";
             this.buttonInserirEmail.Size = new System.Drawing.Size(76, 27);
-            this.buttonInserirEmail.TabIndex = 12;
+            this.buttonInserirEmail.TabIndex = 13;
             this.buttonInserirEmail.Text = "Inserir";
             this.buttonInserirEmail.UseVisualStyleBackColor = false;
             this.buttonInserirEmail.Click += new System.EventHandler(this.buttonInserirEmail_Click);
@@ -341,7 +341,7 @@
             this.buttonExcluirEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonExcluirEmail.Name = "buttonExcluirEmail";
             this.buttonExcluirEmail.Size = new System.Drawing.Size(76, 27);
-            this.buttonExcluirEmail.TabIndex = 18;
+            this.buttonExcluirEmail.TabIndex = 14;
             this.buttonExcluirEmail.Text = "Excluir";
             this.buttonExcluirEmail.UseVisualStyleBackColor = false;
             this.buttonExcluirEmail.Click += new System.EventHandler(this.buttonExcluirEmail_Click);
@@ -353,7 +353,7 @@
             this.buttonInserirTelefone.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonInserirTelefone.Name = "buttonInserirTelefone";
             this.buttonInserirTelefone.Size = new System.Drawing.Size(76, 27);
-            this.buttonInserirTelefone.TabIndex = 14;
+            this.buttonInserirTelefone.TabIndex = 16;
             this.buttonInserirTelefone.Text = "Inserir";
             this.buttonInserirTelefone.UseVisualStyleBackColor = false;
             this.buttonInserirTelefone.Click += new System.EventHandler(this.buttonInserirTelefone_Click);
@@ -365,7 +365,7 @@
             this.buttonExcluirTelefone.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonExcluirTelefone.Name = "buttonExcluirTelefone";
             this.buttonExcluirTelefone.Size = new System.Drawing.Size(76, 27);
-            this.buttonExcluirTelefone.TabIndex = 19;
+            this.buttonExcluirTelefone.TabIndex = 17;
             this.buttonExcluirTelefone.Text = "Excluir";
             this.buttonExcluirTelefone.UseVisualStyleBackColor = false;
             this.buttonExcluirTelefone.Click += new System.EventHandler(this.buttonExcluirTelefone_Click);
@@ -445,11 +445,11 @@
             // buttonSalvar
             // 
             this.buttonSalvar.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.buttonSalvar.Location = new System.Drawing.Point(593, 465);
+            this.buttonSalvar.Location = new System.Drawing.Point(615, 465);
             this.buttonSalvar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonSalvar.Name = "buttonSalvar";
             this.buttonSalvar.Size = new System.Drawing.Size(76, 27);
-            this.buttonSalvar.TabIndex = 16;
+            this.buttonSalvar.TabIndex = 19;
             this.buttonSalvar.Text = "Salvar";
             this.buttonSalvar.UseVisualStyleBackColor = false;
             this.buttonSalvar.Click += new System.EventHandler(this.buttonSalvar_Click);
@@ -458,11 +458,11 @@
             // 
             this.buttonCancelar.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.buttonCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonCancelar.Location = new System.Drawing.Point(675, 465);
+            this.buttonCancelar.Location = new System.Drawing.Point(696, 465);
             this.buttonCancelar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonCancelar.Name = "buttonCancelar";
             this.buttonCancelar.Size = new System.Drawing.Size(76, 27);
-            this.buttonCancelar.TabIndex = 17;
+            this.buttonCancelar.TabIndex = 20;
             this.buttonCancelar.Text = "Cancelar";
             this.buttonCancelar.UseVisualStyleBackColor = false;
             this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
@@ -481,10 +481,10 @@
             // 
             // cPFTextBox
             // 
-            this.cPFTextBox.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.cPFTextBox.BackColor = System.Drawing.SystemColors.Window;
             this.cPFTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.profissionalBindingSource, "CPF", true));
             this.cPFTextBox.Location = new System.Drawing.Point(459, 84);
-            this.cPFTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cPFTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.cPFTextBox.Name = "cPFTextBox";
             this.cPFTextBox.Size = new System.Drawing.Size(124, 22);
             this.cPFTextBox.TabIndex = 1;
@@ -493,7 +493,7 @@
             // 
             this.cEPTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.profissionalBindingSource, "CEP", true));
             this.cEPTextBox.Location = new System.Drawing.Point(29, 224);
-            this.cEPTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cEPTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.cEPTextBox.Name = "cEPTextBox";
             this.cEPTextBox.Size = new System.Drawing.Size(96, 22);
             this.cEPTextBox.TabIndex = 7;
@@ -502,7 +502,7 @@
             // 
             this.textBoxDataNascimento.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.profissionalBindingSource, "DataNascimento", true));
             this.textBoxDataNascimento.Location = new System.Drawing.Point(29, 129);
-            this.textBoxDataNascimento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxDataNascimento.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxDataNascimento.Name = "textBoxDataNascimento";
             this.textBoxDataNascimento.Size = new System.Drawing.Size(117, 22);
             this.textBoxDataNascimento.TabIndex = 2;
