@@ -314,6 +314,12 @@
     <Compile Include="FormConsultaServico.Designer.cs">
       <DependentUpon>FormConsultaServico.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormConsultaUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormConsultaUsuario.Designer.cs">
+      <DependentUpon>FormConsultaUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormGerarSenha.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -403,6 +409,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormConsultaServico.resx">
       <DependentUpon>FormConsultaServico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormConsultaUsuario.resx">
+      <DependentUpon>FormConsultaUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormGerarSenha.resx">
       <DependentUpon>FormGerarSenha.cs</DependentUpon>

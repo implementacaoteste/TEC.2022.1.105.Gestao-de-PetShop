@@ -10,8 +10,6 @@ namespace DAL
         {
             get
             {
-               
-
                 if (String.IsNullOrEmpty(Constantes.StringDeConexao))
                 {
                     if (File.Exists(Constantes.DiretorioStringConexao + Constantes.NomeArquivoConexao))

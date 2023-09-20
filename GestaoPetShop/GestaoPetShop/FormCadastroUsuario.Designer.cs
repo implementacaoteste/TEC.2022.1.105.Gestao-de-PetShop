@@ -36,24 +36,22 @@
             System.Windows.Forms.Label nomeLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCadastroUsuario));
             this.senhaTextBox = new System.Windows.Forms.TextBox();
-            this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ativoCheckBox = new System.Windows.Forms.CheckBox();
             this.textBoxConfirmarSenha = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.buttonSalvar = new System.Windows.Forms.Button();
             this.buttonCancelar = new System.Windows.Forms.Button();
             this.usuarioLoginTextBox = new System.Windows.Forms.TextBox();
-            this.profissionalBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idTextBoxProfissional = new System.Windows.Forms.TextBox();
             this.nomeTextBoxProfissional = new System.Windows.Forms.TextBox();
             this.btnBuscarProfissional = new System.Windows.Forms.Button();
+            this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             senhaLabel = new System.Windows.Forms.Label();
             label1 = new System.Windows.Forms.Label();
             usuarioLoginLabel = new System.Windows.Forms.Label();
             idLabel = new System.Windows.Forms.Label();
             nomeLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.profissionalBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // senhaLabel
@@ -106,16 +104,12 @@
             // 
             // senhaTextBox
             // 
-            this.senhaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioBindingSource, "Senha", true));
+            this.senhaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioBindingSource, "UsuarioLogin", true));
             this.senhaTextBox.Location = new System.Drawing.Point(44, 249);
             this.senhaTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.senhaTextBox.Name = "senhaTextBox";
             this.senhaTextBox.Size = new System.Drawing.Size(115, 22);
             this.senhaTextBox.TabIndex = 2;
-            // 
-            // usuarioBindingSource
-            // 
-            this.usuarioBindingSource.DataSource = typeof(Models.Usuario);
             // 
             // ativoCheckBox
             // 
@@ -174,16 +168,12 @@
             // 
             // usuarioLoginTextBox
             // 
-            this.usuarioLoginTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioBindingSource, "UsuarioLogin", true));
+            this.usuarioLoginTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioBindingSource, "Senha", true));
             this.usuarioLoginTextBox.Location = new System.Drawing.Point(44, 201);
             this.usuarioLoginTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.usuarioLoginTextBox.Name = "usuarioLoginTextBox";
             this.usuarioLoginTextBox.Size = new System.Drawing.Size(176, 22);
             this.usuarioLoginTextBox.TabIndex = 1;
-            // 
-            // profissionalBindingSource
-            // 
-            this.profissionalBindingSource.DataSource = typeof(Models.Profissional);
             // 
             // idTextBoxProfissional
             // 
@@ -196,7 +186,6 @@
             // 
             // nomeTextBoxProfissional
             // 
-            this.nomeTextBoxProfissional.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.profissionalBindingSource, "Nome", true));
             this.nomeTextBoxProfissional.Location = new System.Drawing.Point(155, 122);
             this.nomeTextBoxProfissional.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.nomeTextBoxProfissional.Name = "nomeTextBoxProfissional";
@@ -213,6 +202,10 @@
             this.btnBuscarProfissional.Text = "Pesquisar Profissional";
             this.btnBuscarProfissional.UseVisualStyleBackColor = true;
             this.btnBuscarProfissional.Click += new System.EventHandler(this.btnBuscarProfissional_Click);
+            // 
+            // usuarioBindingSource
+            // 
+            this.usuarioBindingSource.DataSource = typeof(Models.Usuario);
             // 
             // FormCadastroUsuario
             // 
@@ -247,15 +240,12 @@
             this.Load += new System.EventHandler(this.FormCadastroUsuario_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormCadastroUsuario_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.profissionalBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.BindingSource usuarioBindingSource;
         private System.Windows.Forms.TextBox senhaTextBox;
         private System.Windows.Forms.CheckBox ativoCheckBox;
         private System.Windows.Forms.TextBox textBoxConfirmarSenha;
@@ -263,9 +253,9 @@
         private System.Windows.Forms.Button buttonSalvar;
         private System.Windows.Forms.Button buttonCancelar;
         private System.Windows.Forms.TextBox usuarioLoginTextBox;
-        private System.Windows.Forms.BindingSource profissionalBindingSource;
         private System.Windows.Forms.TextBox idTextBoxProfissional;
         private System.Windows.Forms.TextBox nomeTextBoxProfissional;
         private System.Windows.Forms.Button btnBuscarProfissional;
+        private System.Windows.Forms.BindingSource usuarioBindingSource;
     }
 }

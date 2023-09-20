@@ -82,10 +82,9 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(233, 20);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(311, 25);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(381, 32);
+            this.label1.Size = new System.Drawing.Size(469, 39);
             this.label1.TabIndex = 7;
             this.label1.Text = "Consulta de Agendamentos";
             // 
@@ -107,19 +106,19 @@
             "Profissional Dia/Mês/Ano",
             "Profissional Mês/Ano",
             "Profissional Ano"});
-            this.comboBox_SelecionarTipoBusca.Location = new System.Drawing.Point(20, 178);
-            this.comboBox_SelecionarTipoBusca.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBox_SelecionarTipoBusca.Location = new System.Drawing.Point(27, 219);
+            this.comboBox_SelecionarTipoBusca.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox_SelecionarTipoBusca.Name = "comboBox_SelecionarTipoBusca";
-            this.comboBox_SelecionarTipoBusca.Size = new System.Drawing.Size(163, 21);
+            this.comboBox_SelecionarTipoBusca.Size = new System.Drawing.Size(216, 24);
             this.comboBox_SelecionarTipoBusca.TabIndex = 8;
             this.comboBox_SelecionarTipoBusca.Text = "Buscar por";
             // 
             // textBox_BuscarAgendamento
             // 
-            this.textBox_BuscarAgendamento.Location = new System.Drawing.Point(20, 217);
-            this.textBox_BuscarAgendamento.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_BuscarAgendamento.Location = new System.Drawing.Point(27, 267);
+            this.textBox_BuscarAgendamento.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox_BuscarAgendamento.Name = "textBox_BuscarAgendamento";
-            this.textBox_BuscarAgendamento.Size = new System.Drawing.Size(253, 20);
+            this.textBox_BuscarAgendamento.Size = new System.Drawing.Size(336, 22);
             this.textBox_BuscarAgendamento.TabIndex = 9;
             // 
             // button_BuscarAgendamentos
@@ -131,10 +130,10 @@
             this.button_BuscarAgendamentos.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button_BuscarAgendamentos.ImageKey = "buscar-removebg-preview.png";
             this.button_BuscarAgendamentos.ImageList = this.imageList1;
-            this.button_BuscarAgendamentos.Location = new System.Drawing.Point(158, 91);
-            this.button_BuscarAgendamentos.Margin = new System.Windows.Forms.Padding(2);
+            this.button_BuscarAgendamentos.Location = new System.Drawing.Point(211, 112);
+            this.button_BuscarAgendamentos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button_BuscarAgendamentos.Name = "button_BuscarAgendamentos";
-            this.button_BuscarAgendamentos.Size = new System.Drawing.Size(56, 50);
+            this.button_BuscarAgendamentos.Size = new System.Drawing.Size(75, 62);
             this.button_BuscarAgendamentos.TabIndex = 10;
             this.button_BuscarAgendamentos.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button_BuscarAgendamentos.UseVisualStyleBackColor = false;
@@ -158,10 +157,10 @@
             this.button_InserirAgendamentos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_InserirAgendamentos.ImageKey = "add-removebg-preview.png";
             this.button_InserirAgendamentos.ImageList = this.imageList1;
-            this.button_InserirAgendamentos.Location = new System.Drawing.Point(266, 86);
-            this.button_InserirAgendamentos.Margin = new System.Windows.Forms.Padding(2);
+            this.button_InserirAgendamentos.Location = new System.Drawing.Point(355, 106);
+            this.button_InserirAgendamentos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button_InserirAgendamentos.Name = "button_InserirAgendamentos";
-            this.button_InserirAgendamentos.Size = new System.Drawing.Size(58, 50);
+            this.button_InserirAgendamentos.Size = new System.Drawing.Size(77, 62);
             this.button_InserirAgendamentos.TabIndex = 11;
             this.button_InserirAgendamentos.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button_InserirAgendamentos.UseVisualStyleBackColor = false;
@@ -176,10 +175,10 @@
             this.button_AlterarAgendamentos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_AlterarAgendamentos.ImageKey = "editar-removebg-preview.png";
             this.button_AlterarAgendamentos.ImageList = this.imageList1;
-            this.button_AlterarAgendamentos.Location = new System.Drawing.Point(380, 81);
-            this.button_AlterarAgendamentos.Margin = new System.Windows.Forms.Padding(2);
+            this.button_AlterarAgendamentos.Location = new System.Drawing.Point(507, 100);
+            this.button_AlterarAgendamentos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button_AlterarAgendamentos.Name = "button_AlterarAgendamentos";
-            this.button_AlterarAgendamentos.Size = new System.Drawing.Size(50, 50);
+            this.button_AlterarAgendamentos.Size = new System.Drawing.Size(67, 62);
             this.button_AlterarAgendamentos.TabIndex = 12;
             this.button_AlterarAgendamentos.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button_AlterarAgendamentos.UseVisualStyleBackColor = false;
@@ -194,10 +193,10 @@
             this.button_ExcluirAgendamento.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_ExcluirAgendamento.ImageKey = "excluir-removebg-preview.png";
             this.button_ExcluirAgendamento.ImageList = this.imageList1;
-            this.button_ExcluirAgendamento.Location = new System.Drawing.Point(493, 81);
-            this.button_ExcluirAgendamento.Margin = new System.Windows.Forms.Padding(2);
+            this.button_ExcluirAgendamento.Location = new System.Drawing.Point(657, 100);
+            this.button_ExcluirAgendamento.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button_ExcluirAgendamento.Name = "button_ExcluirAgendamento";
-            this.button_ExcluirAgendamento.Size = new System.Drawing.Size(46, 50);
+            this.button_ExcluirAgendamento.Size = new System.Drawing.Size(61, 62);
             this.button_ExcluirAgendamento.TabIndex = 13;
             this.button_ExcluirAgendamento.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button_ExcluirAgendamento.UseVisualStyleBackColor = false;
@@ -205,32 +204,30 @@
             // 
             // textBox_BuscarData
             // 
-            this.textBox_BuscarData.Location = new System.Drawing.Point(321, 217);
-            this.textBox_BuscarData.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_BuscarData.Location = new System.Drawing.Point(428, 267);
+            this.textBox_BuscarData.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox_BuscarData.Name = "textBox_BuscarData";
-            this.textBox_BuscarData.Size = new System.Drawing.Size(79, 20);
+            this.textBox_BuscarData.Size = new System.Drawing.Size(104, 22);
             this.textBox_BuscarData.TabIndex = 14;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(290, 219);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(387, 270);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(30, 13);
+            this.label2.Size = new System.Drawing.Size(36, 16);
             this.label2.TabIndex = 15;
             this.label2.Text = "Data";
             // 
             // button_AbrirCalendario
             // 
-            this.button_AbrirCalendario.BackColor = System.Drawing.Color.Transparent;
-            this.button_AbrirCalendario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_AbrirCalendario.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.button_AbrirCalendario.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_AbrirCalendario.ForeColor = System.Drawing.Color.Black;
-            this.button_AbrirCalendario.Location = new System.Drawing.Point(406, 213);
-            this.button_AbrirCalendario.Margin = new System.Windows.Forms.Padding(2);
+            this.button_AbrirCalendario.Location = new System.Drawing.Point(541, 262);
+            this.button_AbrirCalendario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button_AbrirCalendario.Name = "button_AbrirCalendario";
-            this.button_AbrirCalendario.Size = new System.Drawing.Size(89, 26);
+            this.button_AbrirCalendario.Size = new System.Drawing.Size(119, 32);
             this.button_AbrirCalendario.TabIndex = 16;
             this.button_AbrirCalendario.Text = "Calendário";
             this.button_AbrirCalendario.UseVisualStyleBackColor = false;
@@ -238,22 +235,22 @@
             // 
             // monthCalendar_Agendamento
             // 
-            this.monthCalendar_Agendamento.Location = new System.Drawing.Point(585, 59);
-            this.monthCalendar_Agendamento.Margin = new System.Windows.Forms.Padding(7);
+            this.monthCalendar_Agendamento.Location = new System.Drawing.Point(780, 73);
             this.monthCalendar_Agendamento.Name = "monthCalendar_Agendamento";
             this.monthCalendar_Agendamento.TabIndex = 17;
             this.monthCalendar_Agendamento.Visible = false;
             // 
             // button_SelecionarData
             // 
+            this.button_SelecionarData.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.button_SelecionarData.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_SelecionarData.Location = new System.Drawing.Point(654, 232);
-            this.button_SelecionarData.Margin = new System.Windows.Forms.Padding(2);
+            this.button_SelecionarData.Location = new System.Drawing.Point(872, 286);
+            this.button_SelecionarData.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button_SelecionarData.Name = "button_SelecionarData";
-            this.button_SelecionarData.Size = new System.Drawing.Size(74, 25);
+            this.button_SelecionarData.Size = new System.Drawing.Size(99, 31);
             this.button_SelecionarData.TabIndex = 18;
             this.button_SelecionarData.Text = "Selecionar";
-            this.button_SelecionarData.UseVisualStyleBackColor = true;
+            this.button_SelecionarData.UseVisualStyleBackColor = false;
             this.button_SelecionarData.Visible = false;
             this.button_SelecionarData.Click += new System.EventHandler(this.button_SelecionarData_Click);
             // 
@@ -269,9 +266,10 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(158, 137);
+            this.label7.Location = new System.Drawing.Point(211, 169);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(60, 19);
+            this.label7.Size = new System.Drawing.Size(75, 23);
             this.label7.TabIndex = 25;
             this.label7.Text = "Buscar";
             // 
@@ -281,9 +279,10 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(485, 137);
+            this.label4.Location = new System.Drawing.Point(647, 169);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(59, 19);
+            this.label4.Size = new System.Drawing.Size(72, 23);
             this.label4.TabIndex = 28;
             this.label4.Text = "Excluir";
             // 
@@ -293,9 +292,10 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(374, 137);
+            this.label3.Location = new System.Drawing.Point(499, 169);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(60, 19);
+            this.label3.Size = new System.Drawing.Size(74, 23);
             this.label3.TabIndex = 27;
             this.label3.Text = "Alterar";
             // 
@@ -305,9 +305,10 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(248, 137);
+            this.label5.Location = new System.Drawing.Point(331, 169);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(85, 19);
+            this.label5.Size = new System.Drawing.Size(105, 23);
             this.label5.TabIndex = 26;
             this.label5.Text = "Cadastrar";
             // 
@@ -329,13 +330,14 @@
             this.dataGridViewTextBoxColumn19,
             this.dataGridViewCheckBoxColumn2});
             this.agendamentoDataGridView.DataSource = this.agendamentoBindingSource;
-            this.agendamentoDataGridView.Location = new System.Drawing.Point(12, 272);
+            this.agendamentoDataGridView.Location = new System.Drawing.Point(16, 335);
+            this.agendamentoDataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.agendamentoDataGridView.Name = "agendamentoDataGridView";
             this.agendamentoDataGridView.ReadOnly = true;
             this.agendamentoDataGridView.RowHeadersVisible = false;
             this.agendamentoDataGridView.RowHeadersWidth = 51;
             this.agendamentoDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.agendamentoDataGridView.Size = new System.Drawing.Size(435, 220);
+            this.agendamentoDataGridView.Size = new System.Drawing.Size(580, 271);
             this.agendamentoDataGridView.TabIndex = 28;
             // 
             // dataGridViewTextBoxColumn13
@@ -372,7 +374,7 @@
             this.NomeAnimal.MinimumWidth = 6;
             this.NomeAnimal.Name = "NomeAnimal";
             this.NomeAnimal.ReadOnly = true;
-            this.NomeAnimal.Width = 60;
+            this.NomeAnimal.Width = 120;
             // 
             // dataGridViewTextBoxColumn24
             // 
@@ -408,7 +410,7 @@
             this.dataGridViewTextBoxColumn19.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
             this.dataGridViewTextBoxColumn19.ReadOnly = true;
-            this.dataGridViewTextBoxColumn19.Width = 60;
+            this.dataGridViewTextBoxColumn19.Width = 125;
             // 
             // dataGridViewCheckBoxColumn2
             // 
@@ -442,13 +444,14 @@
             this.dataGridViewTextBoxColumn18,
             this.dataGridViewTextBoxColumn27});
             this.agendamentoServicosDataGridView.DataSource = this.agendamentoServicosBindingSource;
-            this.agendamentoServicosDataGridView.Location = new System.Drawing.Point(461, 272);
+            this.agendamentoServicosDataGridView.Location = new System.Drawing.Point(615, 335);
+            this.agendamentoServicosDataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.agendamentoServicosDataGridView.Name = "agendamentoServicosDataGridView";
             this.agendamentoServicosDataGridView.ReadOnly = true;
             this.agendamentoServicosDataGridView.RowHeadersVisible = false;
             this.agendamentoServicosDataGridView.RowHeadersWidth = 51;
             this.agendamentoServicosDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.agendamentoServicosDataGridView.Size = new System.Drawing.Size(368, 220);
+            this.agendamentoServicosDataGridView.Size = new System.Drawing.Size(491, 271);
             this.agendamentoServicosDataGridView.TabIndex = 28;
             // 
             // IdServico
@@ -498,10 +501,11 @@
             // 
             // buttonFecharCalendario
             // 
-            this.buttonFecharCalendario.BackColor = System.Drawing.SystemColors.Control;
-            this.buttonFecharCalendario.Location = new System.Drawing.Point(758, 232);
+            this.buttonFecharCalendario.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.buttonFecharCalendario.Location = new System.Drawing.Point(1011, 286);
+            this.buttonFecharCalendario.Margin = new System.Windows.Forms.Padding(4);
             this.buttonFecharCalendario.Name = "buttonFecharCalendario";
-            this.buttonFecharCalendario.Size = new System.Drawing.Size(29, 23);
+            this.buttonFecharCalendario.Size = new System.Drawing.Size(39, 28);
             this.buttonFecharCalendario.TabIndex = 29;
             this.buttonFecharCalendario.Text = "X";
             this.buttonFecharCalendario.UseVisualStyleBackColor = false;
@@ -516,10 +520,10 @@
             "Agendado",
             "Em andamento",
             "Finalizado"});
-            this.comboBox_SelecionarSituacaoBusca.Location = new System.Drawing.Point(186, 178);
-            this.comboBox_SelecionarSituacaoBusca.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBox_SelecionarSituacaoBusca.Location = new System.Drawing.Point(248, 219);
+            this.comboBox_SelecionarSituacaoBusca.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox_SelecionarSituacaoBusca.Name = "comboBox_SelecionarSituacaoBusca";
-            this.comboBox_SelecionarSituacaoBusca.Size = new System.Drawing.Size(163, 21);
+            this.comboBox_SelecionarSituacaoBusca.Size = new System.Drawing.Size(216, 24);
             this.comboBox_SelecionarSituacaoBusca.TabIndex = 30;
             this.comboBox_SelecionarSituacaoBusca.Text = "Situação";
             // 
@@ -530,18 +534,18 @@
             "Todos",
             "Ativo",
             "Inativo"});
-            this.comboBoxSelecionarAtivoBuscar.Location = new System.Drawing.Point(359, 178);
-            this.comboBoxSelecionarAtivoBuscar.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBoxSelecionarAtivoBuscar.Location = new System.Drawing.Point(479, 219);
+            this.comboBoxSelecionarAtivoBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxSelecionarAtivoBuscar.Name = "comboBoxSelecionarAtivoBuscar";
-            this.comboBoxSelecionarAtivoBuscar.Size = new System.Drawing.Size(130, 21);
+            this.comboBoxSelecionarAtivoBuscar.Size = new System.Drawing.Size(172, 24);
             this.comboBoxSelecionarAtivoBuscar.TabIndex = 31;
             // 
             // FormConsultaAgendamento
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(855, 517);
+            this.ClientSize = new System.Drawing.Size(1140, 636);
             this.Controls.Add(this.comboBoxSelecionarAtivoBuscar);
             this.Controls.Add(this.comboBox_SelecionarSituacaoBusca);
             this.Controls.Add(this.buttonFecharCalendario);
@@ -565,13 +569,14 @@
             this.Controls.Add(this.label4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(1158, 683);
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(1158, 683);
             this.Name = "FormConsultaAgendamento";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Consulta Agendamento";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1_FormsPrincipalBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.agendamentoDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.agendamentoBindingSource)).EndInit();
@@ -632,6 +637,11 @@
         private System.Windows.Forms.Button buttonFecharCalendario;
         private System.Windows.Forms.ComboBox comboBox_SelecionarSituacaoBusca;
         private System.Windows.Forms.ComboBox comboBoxSelecionarAtivoBuscar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IdServico;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn27;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn20;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
@@ -641,10 +651,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn22;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn19;
         private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IdServico;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn27;
     }
 }

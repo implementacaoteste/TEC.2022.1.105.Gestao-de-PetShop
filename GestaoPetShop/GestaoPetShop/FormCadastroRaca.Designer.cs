@@ -49,7 +49,7 @@
             this.label1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(800, 46);
+            this.label1.Size = new System.Drawing.Size(782, 46);
             this.label1.TabIndex = 1;
             this.label1.Tag = "Cadastrar Raça";
             this.label1.Text = "Cadastrar Raça";
@@ -82,9 +82,10 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(38, 409);
+            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox1.Location = new System.Drawing.Point(382, 305);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(61, 21);
+            this.checkBox1.Size = new System.Drawing.Size(62, 22);
             this.checkBox1.TabIndex = 3;
             this.checkBox1.Text = "Ativo";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -120,7 +121,7 @@
             // 
             this.buttonSalvar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonSalvar.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.buttonSalvar.Location = new System.Drawing.Point(561, 409);
+            this.buttonSalvar.Location = new System.Drawing.Point(540, 368);
             this.buttonSalvar.Name = "buttonSalvar";
             this.buttonSalvar.Size = new System.Drawing.Size(83, 29);
             this.buttonSalvar.TabIndex = 4;
@@ -133,7 +134,7 @@
             this.buttonCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonCancelar.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.buttonCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonCancelar.Location = new System.Drawing.Point(675, 409);
+            this.buttonCancelar.Location = new System.Drawing.Point(654, 368);
             this.buttonCancelar.Name = "buttonCancelar";
             this.buttonCancelar.Size = new System.Drawing.Size(82, 29);
             this.buttonCancelar.TabIndex = 5;
@@ -146,7 +147,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(782, 453);
             this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.buttonSalvar);
             this.Controls.Add(this.label6);
