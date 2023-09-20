@@ -29,9 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.usuarioDataGridView = new System.Windows.Forms.DataGridView();
-            this.profissionaisBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.profissionaisDataGridView = new System.Windows.Forms.DataGridView();
             this.textBoxBuscarUsuario = new System.Windows.Forms.TextBox();
             this.comboBoxSelecionarTipoPesquisaUsuario = new System.Windows.Forms.ComboBox();
             this.buttonBuscarUsuario = new System.Windows.Forms.Button();
@@ -39,65 +36,15 @@
             this.buttonInserirUsuario = new System.Windows.Forms.Button();
             this.buttonExcluirUsuario = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewCheckBoxColumn3 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.usuarioDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NomeProfissional = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewCheckBoxColumn2 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.usuarioDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.profissionaisBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.profissionaisDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuarioDataGridView)).BeginInit();
             this.SuspendLayout();
-            // 
-            // usuarioDataGridView
-            // 
-            this.usuarioDataGridView.AllowUserToAddRows = false;
-            this.usuarioDataGridView.AllowUserToDeleteRows = false;
-            this.usuarioDataGridView.AllowUserToOrderColumns = true;
-            this.usuarioDataGridView.AutoGenerateColumns = false;
-            this.usuarioDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.usuarioDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewCheckBoxColumn2});
-            this.usuarioDataGridView.DataSource = this.usuarioBindingSource;
-            this.usuarioDataGridView.Location = new System.Drawing.Point(24, 202);
-            this.usuarioDataGridView.Name = "usuarioDataGridView";
-            this.usuarioDataGridView.ReadOnly = true;
-            this.usuarioDataGridView.RowHeadersVisible = false;
-            this.usuarioDataGridView.RowHeadersWidth = 51;
-            this.usuarioDataGridView.RowTemplate.Height = 24;
-            this.usuarioDataGridView.Size = new System.Drawing.Size(413, 255);
-            this.usuarioDataGridView.TabIndex = 1;
-            // 
-            // profissionaisBindingSource
-            // 
-            this.profissionaisBindingSource.DataMember = "Profissionais";
-            this.profissionaisBindingSource.DataSource = this.usuarioBindingSource;
-            // 
-            // profissionaisDataGridView
-            // 
-            this.profissionaisDataGridView.AllowUserToAddRows = false;
-            this.profissionaisDataGridView.AllowUserToDeleteRows = false;
-            this.profissionaisDataGridView.AllowUserToOrderColumns = true;
-            this.profissionaisDataGridView.AutoGenerateColumns = false;
-            this.profissionaisDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.profissionaisDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn8,
-            this.dataGridViewCheckBoxColumn3});
-            this.profissionaisDataGridView.DataSource = this.profissionaisBindingSource;
-            this.profissionaisDataGridView.Location = new System.Drawing.Point(449, 202);
-            this.profissionaisDataGridView.Name = "profissionaisDataGridView";
-            this.profissionaisDataGridView.ReadOnly = true;
-            this.profissionaisDataGridView.RowHeadersVisible = false;
-            this.profissionaisDataGridView.RowHeadersWidth = 51;
-            this.profissionaisDataGridView.RowTemplate.Height = 24;
-            this.profissionaisDataGridView.Size = new System.Drawing.Size(333, 255);
-            this.profissionaisDataGridView.TabIndex = 1;
             // 
             // textBoxBuscarUsuario
             // 
@@ -169,36 +116,31 @@
             this.label1.TabIndex = 8;
             this.label1.Text = "Consulta de Usuário";
             // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "Id";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Id";
-            this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            this.dataGridViewTextBoxColumn5.Width = 50;
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "Nome";
-            this.dataGridViewTextBoxColumn8.HeaderText = "Nome";
-            this.dataGridViewTextBoxColumn8.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.ReadOnly = true;
-            // 
-            // dataGridViewCheckBoxColumn3
-            // 
-            this.dataGridViewCheckBoxColumn3.DataPropertyName = "Ativo";
-            this.dataGridViewCheckBoxColumn3.HeaderText = "Ativo";
-            this.dataGridViewCheckBoxColumn3.MinimumWidth = 6;
-            this.dataGridViewCheckBoxColumn3.Name = "dataGridViewCheckBoxColumn3";
-            this.dataGridViewCheckBoxColumn3.ReadOnly = true;
-            this.dataGridViewCheckBoxColumn3.Width = 50;
-            // 
             // usuarioBindingSource
             // 
             this.usuarioBindingSource.DataSource = typeof(Models.Usuario);
+            // 
+            // usuarioDataGridView
+            // 
+            this.usuarioDataGridView.AllowUserToAddRows = false;
+            this.usuarioDataGridView.AllowUserToDeleteRows = false;
+            this.usuarioDataGridView.AllowUserToOrderColumns = true;
+            this.usuarioDataGridView.AutoGenerateColumns = false;
+            this.usuarioDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.usuarioDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn3,
+            this.NomeProfissional,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewCheckBoxColumn2});
+            this.usuarioDataGridView.DataSource = this.usuarioBindingSource;
+            this.usuarioDataGridView.Location = new System.Drawing.Point(12, 197);
+            this.usuarioDataGridView.Name = "usuarioDataGridView";
+            this.usuarioDataGridView.ReadOnly = true;
+            this.usuarioDataGridView.RowHeadersVisible = false;
+            this.usuarioDataGridView.RowHeadersWidth = 51;
+            this.usuarioDataGridView.RowTemplate.Height = 24;
+            this.usuarioDataGridView.Size = new System.Drawing.Size(759, 234);
+            this.usuarioDataGridView.TabIndex = 9;
             // 
             // dataGridViewTextBoxColumn3
             // 
@@ -209,14 +151,23 @@
             this.dataGridViewTextBoxColumn3.ReadOnly = true;
             this.dataGridViewTextBoxColumn3.Width = 50;
             // 
+            // NomeProfissional
+            // 
+            this.NomeProfissional.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.NomeProfissional.DataPropertyName = "NomeProfissional";
+            this.NomeProfissional.HeaderText = "Nome do Profissional";
+            this.NomeProfissional.MinimumWidth = 6;
+            this.NomeProfissional.Name = "NomeProfissional";
+            this.NomeProfissional.ReadOnly = true;
+            // 
             // dataGridViewTextBoxColumn4
             // 
-            this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.dataGridViewTextBoxColumn4.DataPropertyName = "UsuarioLogin";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Login";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Login do Usuário";
             this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.dataGridViewTextBoxColumn4.Width = 125;
             // 
             // dataGridViewCheckBoxColumn2
             // 
@@ -225,13 +176,14 @@
             this.dataGridViewCheckBoxColumn2.MinimumWidth = 6;
             this.dataGridViewCheckBoxColumn2.Name = "dataGridViewCheckBoxColumn2";
             this.dataGridViewCheckBoxColumn2.ReadOnly = true;
-            this.dataGridViewCheckBoxColumn2.Width = 60;
+            this.dataGridViewCheckBoxColumn2.Width = 50;
             // 
             // FormConsultaUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(804, 493);
+            this.ClientSize = new System.Drawing.Size(804, 520);
+            this.Controls.Add(this.usuarioDataGridView);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonExcluirUsuario);
             this.Controls.Add(this.buttonInserirUsuario);
@@ -239,14 +191,10 @@
             this.Controls.Add(this.buttonBuscarUsuario);
             this.Controls.Add(this.comboBoxSelecionarTipoPesquisaUsuario);
             this.Controls.Add(this.textBoxBuscarUsuario);
-            this.Controls.Add(this.profissionaisDataGridView);
-            this.Controls.Add(this.usuarioDataGridView);
             this.Name = "FormConsultaUsuario";
             this.Text = "FormConsultaUsuario";
-            ((System.ComponentModel.ISupportInitialize)(this.usuarioDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.profissionaisBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.profissionaisDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuarioDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -256,16 +204,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
-        private System.Windows.Forms.BindingSource usuarioBindingSource;
-        private System.Windows.Forms.DataGridView usuarioDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn2;
-        private System.Windows.Forms.BindingSource profissionaisBindingSource;
-        private System.Windows.Forms.DataGridView profissionaisDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn3;
         private System.Windows.Forms.TextBox textBoxBuscarUsuario;
         private System.Windows.Forms.ComboBox comboBoxSelecionarTipoPesquisaUsuario;
         private System.Windows.Forms.Button buttonBuscarUsuario;
@@ -273,5 +211,11 @@
         private System.Windows.Forms.Button buttonInserirUsuario;
         private System.Windows.Forms.Button buttonExcluirUsuario;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.BindingSource usuarioBindingSource;
+        private System.Windows.Forms.DataGridView usuarioDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NomeProfissional;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn2;
     }
 }
