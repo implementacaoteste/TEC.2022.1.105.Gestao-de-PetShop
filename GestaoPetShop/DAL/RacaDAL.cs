@@ -114,7 +114,7 @@ namespace DAL
             try
             {
                 SqlCommand cmd = cn.CreateCommand();
-                cmd.CommandText = @"DELETE FROM Raca WHERE Id = @Id";
+                cmd.CommandText = @"DELETE FROM Raca WHERE id = @id";
                 cmd.CommandType = System.Data.CommandType.Text;
 
                 cmd.Parameters.AddWithValue("@Id", _id);
