@@ -44,7 +44,7 @@ namespace BLL
             //ValidarPermissao(1);
             return new UsuarioDAL().BuscarPorId(_id);
         }
-        public Usuario BuscarPorLogin(string _login)
+        public List<Usuario> BuscarPorLogin(string _login)
         {
             //ValidarPermissao(1);
             return new UsuarioDAL().BuscarPorLogin(_login);
@@ -67,7 +67,7 @@ namespace BLL
         }
         public void Autenticar(string _nomeUsuario, string _senha)
         {
-            Usuario usuario = new UsuarioDAL().BuscarPorLogin(_nomeUsuario);
+            Usuario usuario = new UsuarioDAL().BuscarPorLoginAutenticar(_nomeUsuario);
             if (_senha == usuario.Senha && usuario.Ativo)
             {
                 Constantes.IdUsuarioLogado = usuario.Id;
@@ -92,5 +92,15 @@ namespace BLL
         {
             new UsuarioDAL().BuscarPorFuncao(_nome);
         }//Givas
+
+        public List<Usuario> BuscarPorNomeProfissional(string _nomeProfissional)
+        {
+            return new UsuarioDAL().BuscarPorNomeProfissional(_nomeProfissional);
+        }
+
+        public Usuario BucarPorIdProfissional(int _idProfissional)
+        {
+            return new UsuarioDAL().BucarPorIdProfissional(_idProfissional);
+        }
     }
 }

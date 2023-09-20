@@ -5,6 +5,7 @@ using System.Data.Common;
 using System.Data.SqlClient;
 using System.Runtime.Remoting.Messaging;
 using System.Security.Cryptography;
+using System.Web.UI.WebControls;
 
 namespace DAL
 {
@@ -39,7 +40,7 @@ namespace DAL
                 cn.Close();
             }
         }
-        public List<Usuario> BuscarTodos()
+        public List<Usuario> BuscarTodos() // dimas
         {
             List<Usuario> usuarios = new List<Usuario>();
             Usuario usuario;
@@ -49,7 +50,7 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = "SELECT Id, UsuarioLogin, IdProfissional, Senha FROM Usuario";
+                cmd.CommandText = "SELECT Id, UsuarioLogin, IdProfissional, Senha,Ativo FROM Usuario";
                 cmd.CommandType = System.Data.CommandType.Text;
 
                 cn.Open();
@@ -63,6 +64,8 @@ namespace DAL
                         usuario.UsuarioLogin = rd["UsuarioLogin"].ToString();
                         usuario.IdProfissional = Convert.ToInt32(rd["IdProfissional"]);
                         usuario.Senha = rd["Senha"].ToString();
+                        usuario.Ativo = Convert.ToBoolean(rd["Ativo"]);
+                        usuario.Profissionais = new ProfissionalDAL().BuscarPorId(usuario.IdProfissional);
                         usuarios.Add(usuario);
                     }
                 }
@@ -152,27 +155,73 @@ namespace DAL
                 cn.Close();
             }
         }
-        public Usuario BuscarPorLogin(string _login)
+        public List<Usuario> BuscarPorLogin(string _login) // DIMAS
         {
-            Usuario usuario = new Usuario();
+            List<Usuario> usuarios = new List<Usuario>();
+            Usuario usuario;
             SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
             try
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = "SELECT Id, UsuarioLogin, Senha, IdProfissional, Ativo FROM Usuario WHERE UsuarioLogin = @Login";
+                cmd.CommandText = "SELECT Id, UsuarioLogin, IdProfissional, Senha,Ativo FROM Usuario WHERE UPPER(UsuarioLogin) LIKE UPPER(@Login)";
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.Parameters.AddWithValue("@Login","%" + _login + "%");
+
+                cn.Open();
+
+                using (SqlDataReader rd = cmd.ExecuteReader())
+                {
+                    while (rd.Read())
+                    {
+                        usuario = new Usuario();
+                        usuario.Id = Convert.ToInt32(rd["Id"]);
+                        usuario.UsuarioLogin = rd["UsuarioLogin"].ToString();
+                        usuario.IdProfissional = Convert.ToInt32(rd["IdProfissional"]);
+                        usuario.Senha = rd["Senha"].ToString();
+                        usuario.Ativo = Convert.ToBoolean(rd["Ativo"]);
+                        usuario.Profissionais = new ProfissionalDAL().BuscarPorId(usuario.IdProfissional);
+                        usuarios.Add(usuario);
+                    }
+                }
+                return usuarios;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("ocorreu um erro ao tentar buscar id do usuário do banco de dados", ex);
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
+        public Usuario BuscarPorLoginAutenticar(string _login) // DIMAS
+        {
+            List<Usuario> usuarios = new List<Usuario>();
+            Usuario usuario = new Usuario(); ;
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = cn;
+                cmd.CommandText = "SELECT Id, UsuarioLogin, IdProfissional, Senha,Ativo FROM Usuario WHERE UsuarioLogin LIKE @Login";
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@Login", _login);
+
                 cn.Open();
+
                 using (SqlDataReader rd = cmd.ExecuteReader())
                 {
                     if (rd.Read())
                     {
+                       
                         usuario.Id = Convert.ToInt32(rd["Id"]);
                         usuario.UsuarioLogin = rd["UsuarioLogin"].ToString();
-                        usuario.Senha = rd["Senha"].ToString();
                         usuario.IdProfissional = Convert.ToInt32(rd["IdProfissional"]);
-                        usuario.Ativo = rd["Ativo"] == DBNull.Value ? false : Convert.ToBoolean(rd["Ativo"]);
+                        usuario.Senha = rd["Senha"].ToString();
+                        usuario.Ativo = Convert.ToBoolean(rd["Ativo"]);
+                      
+                      
                     }
                 }
                 return usuario;
@@ -380,7 +429,7 @@ namespace DAL
                         usuario.UsuarioLogin = rd["UsuarioLogin"].ToString();
                         usuario.Senha = rd["Senha"].ToString();
                         usuario.Ativo = Convert.ToBoolean(rd["Ativo"]);
-                        usuario.GrupoUsuarios = new GrupoUsuarioDAL().BuscarPorIdUsuario(usuario.Id);
+                      
                         usuarios.Add(usuario);
                     }
                 }
@@ -458,5 +507,85 @@ namespace DAL
                 cn.Close();
             }
         }//Givas
+
+        public List<Usuario> BuscarPorNomeProfissional(string _nomeProfissional) // dimas
+        {
+            List<Usuario> usuarios = new List<Usuario>();
+            Usuario usuario;
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = cn;
+                cmd.CommandText = "SELECT U.Id, U.UsuarioLogin, U.IdProfissional, U.Senha,U.Ativo FROM Profissional P" +
+                                                                                    "INNER JOIN Usuario U ON P.Id = U.IdProfissional" +
+                                                                                    "WHERE UPPER(P.Nome) LIKE UPPER(@Nome)";
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.Parameters.AddWithValue("@Nome", "%" + _nomeProfissional + "%");
+
+                cn.Open();
+
+                using (SqlDataReader rd = cmd.ExecuteReader())
+                {
+                    while (rd.Read())
+                    {
+                        usuario = new Usuario();
+                        usuario.Id = Convert.ToInt32(rd["Id"]);
+                        usuario.UsuarioLogin = rd["UsuarioLogin"].ToString();
+                        usuario.IdProfissional = Convert.ToInt32(rd["IdProfissional"]);
+                        usuario.Senha = rd["Senha"].ToString();
+                        usuario.Ativo = Convert.ToBoolean(rd["Ativo"]);
+                        usuario.Profissionais = new ProfissionalDAL().BuscarPorId(usuario.IdProfissional);
+                        usuarios.Add(usuario);
+                    }
+                }
+                return usuarios;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("ocorreu um erro ao tentar buscar id do usuário do banco de dados", ex);
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
+
+        public Usuario BucarPorIdProfissional(int _idProfissional)
+        {
+            Usuario usuario = new Usuario();
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            try
+            {
+                SqlCommand cmd = cn.CreateCommand();
+                cmd.CommandText = @"SELECT Id, IdProfissional, UsuarioLogin, Senha, Ativo FROM Usuario WHERE IdProfissional = @Id";
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.Parameters.AddWithValue("@Id", _idProfissional);
+                
+                cn.Open();
+                using (SqlDataReader rd = cmd.ExecuteReader())
+                {
+                    while (rd.Read())
+                    {
+                        usuario = new Usuario();
+                        usuario.Id = Convert.ToInt32(rd["Id"]);
+                        usuario.UsuarioLogin = rd["UsuarioLogin"].ToString();
+                        usuario.IdProfissional = Convert.ToInt32(rd["IdProfissional"]);
+                        usuario.Senha = rd["Senha"].ToString();
+                        usuario.Ativo = Convert.ToBoolean(rd["Ativo"]);
+                        usuario.Profissionais = new ProfissionalDAL().BuscarPorId(usuario.IdProfissional);
+                       
+                    }
+                }
+                return usuario;
+            }
+            catch (Exception)
+            {
+
+                throw new Exception("Ocorreu um erro ao tentar buscar Usuário no Banco de Dados.");
+            }
+            finally { cn.Close(); }
+
+        }
     }
 }
