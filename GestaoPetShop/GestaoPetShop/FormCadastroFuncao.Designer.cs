@@ -47,20 +47,18 @@
             // idLabel
             // 
             idLabel.AutoSize = true;
-            idLabel.Location = new System.Drawing.Point(50, 118);
-            idLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            idLabel.Location = new System.Drawing.Point(67, 145);
             idLabel.Name = "idLabel";
-            idLabel.Size = new System.Drawing.Size(19, 13);
+            idLabel.Size = new System.Drawing.Size(21, 16);
             idLabel.TabIndex = 18;
             idLabel.Text = "Id:";
             // 
             // nomeLabel
             // 
             nomeLabel.AutoSize = true;
-            nomeLabel.Location = new System.Drawing.Point(50, 174);
-            nomeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            nomeLabel.Location = new System.Drawing.Point(67, 214);
             nomeLabel.Name = "nomeLabel";
-            nomeLabel.Size = new System.Drawing.Size(38, 13);
+            nomeLabel.Size = new System.Drawing.Size(47, 16);
             nomeLabel.TabIndex = 19;
             nomeLabel.Text = "Nome:";
             // 
@@ -68,9 +66,10 @@
             // 
             this.lblAlterarFuncao.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAlterarFuncao.ForeColor = System.Drawing.Color.Black;
-            this.lblAlterarFuncao.Location = new System.Drawing.Point(104, 39);
+            this.lblAlterarFuncao.Location = new System.Drawing.Point(139, 48);
+            this.lblAlterarFuncao.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAlterarFuncao.Name = "lblAlterarFuncao";
-            this.lblAlterarFuncao.Size = new System.Drawing.Size(201, 26);
+            this.lblAlterarFuncao.Size = new System.Drawing.Size(268, 32);
             this.lblAlterarFuncao.TabIndex = 13;
             this.lblAlterarFuncao.Text = "Alterar Função";
             this.lblAlterarFuncao.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -79,23 +78,25 @@
             // 
             this.lblCadastrarFuncao.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCadastrarFuncao.ForeColor = System.Drawing.Color.Black;
-            this.lblCadastrarFuncao.Location = new System.Drawing.Point(90, 39);
+            this.lblCadastrarFuncao.Location = new System.Drawing.Point(120, 48);
+            this.lblCadastrarFuncao.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCadastrarFuncao.Name = "lblCadastrarFuncao";
-            this.lblCadastrarFuncao.Size = new System.Drawing.Size(255, 26);
+            this.lblCadastrarFuncao.Size = new System.Drawing.Size(340, 32);
             this.lblCadastrarFuncao.TabIndex = 14;
             this.lblCadastrarFuncao.Text = "Cadastrar Função";
             this.lblCadastrarFuncao.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // btnSalvarServico
             // 
-            this.btnSalvarServico.BackColor = System.Drawing.Color.White;
+            this.btnSalvarServico.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.btnSalvarServico.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnSalvarServico.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnSalvarServico.FlatAppearance.BorderSize = 0;
             this.btnSalvarServico.ImageKey = "(none)";
-            this.btnSalvarServico.Location = new System.Drawing.Point(248, 254);
+            this.btnSalvarServico.Location = new System.Drawing.Point(331, 313);
+            this.btnSalvarServico.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSalvarServico.Name = "btnSalvarServico";
-            this.btnSalvarServico.Size = new System.Drawing.Size(58, 28);
+            this.btnSalvarServico.Size = new System.Drawing.Size(77, 34);
             this.btnSalvarServico.TabIndex = 16;
             this.btnSalvarServico.Tag = "Salvar";
             this.btnSalvarServico.Text = "Salvar";
@@ -104,13 +105,13 @@
             // 
             // btnCancelarCadastroOuAlterar
             // 
-            this.btnCancelarCadastroOuAlterar.BackColor = System.Drawing.Color.White;
+            this.btnCancelarCadastroOuAlterar.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.btnCancelarCadastroOuAlterar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnCancelarCadastroOuAlterar.FlatAppearance.BorderSize = 0;
-            this.btnCancelarCadastroOuAlterar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelarCadastroOuAlterar.Location = new System.Drawing.Point(315, 254);
+            this.btnCancelarCadastroOuAlterar.Location = new System.Drawing.Point(420, 313);
+            this.btnCancelarCadastroOuAlterar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCancelarCadastroOuAlterar.Name = "btnCancelarCadastroOuAlterar";
-            this.btnCancelarCadastroOuAlterar.Size = new System.Drawing.Size(58, 28);
+            this.btnCancelarCadastroOuAlterar.Size = new System.Drawing.Size(77, 34);
             this.btnCancelarCadastroOuAlterar.TabIndex = 17;
             this.btnCancelarCadastroOuAlterar.Text = "Cancelar";
             this.btnCancelarCadastroOuAlterar.UseVisualStyleBackColor = false;
@@ -124,27 +125,27 @@
             // 
             this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcaoBindingSource, "Id", true));
             this.idTextBox.Enabled = false;
-            this.idTextBox.Location = new System.Drawing.Point(53, 143);
-            this.idTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.idTextBox.Location = new System.Drawing.Point(71, 176);
+            this.idTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.idTextBox.Name = "idTextBox";
-            this.idTextBox.Size = new System.Drawing.Size(76, 20);
+            this.idTextBox.Size = new System.Drawing.Size(100, 22);
             this.idTextBox.TabIndex = 19;
             // 
             // nomeTextBox
             // 
             this.nomeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcaoBindingSource, "Nome", true));
-            this.nomeTextBox.Location = new System.Drawing.Point(53, 198);
-            this.nomeTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.nomeTextBox.Location = new System.Drawing.Point(71, 244);
+            this.nomeTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.nomeTextBox.Name = "nomeTextBox";
-            this.nomeTextBox.Size = new System.Drawing.Size(279, 20);
+            this.nomeTextBox.Size = new System.Drawing.Size(371, 22);
             this.nomeTextBox.TabIndex = 20;
             // 
             // FormCadastroFuncao
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(398, 311);
+            this.ClientSize = new System.Drawing.Size(531, 383);
             this.Controls.Add(nomeLabel);
             this.Controls.Add(this.nomeTextBox);
             this.Controls.Add(idLabel);
@@ -155,6 +156,7 @@
             this.Controls.Add(this.lblAlterarFuncao);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormCadastroFuncao";

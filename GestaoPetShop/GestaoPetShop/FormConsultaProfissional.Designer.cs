@@ -69,7 +69,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(937, 49);
+            this.label1.Size = new System.Drawing.Size(937, 51);
             this.label1.TabIndex = 3;
             this.label1.Text = "Consulta Profissional";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -109,69 +109,75 @@
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(493, 82);
+            this.btnBuscar.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btnBuscar.Location = new System.Drawing.Point(493, 80);
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(4);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(100, 28);
+            this.btnBuscar.Size = new System.Drawing.Size(100, 30);
             this.btnBuscar.TabIndex = 27;
             this.btnBuscar.Text = "&Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.UseVisualStyleBackColor = false;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // btnAlterar
             // 
-            this.btnAlterar.Location = new System.Drawing.Point(601, 82);
+            this.btnAlterar.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btnAlterar.Location = new System.Drawing.Point(601, 80);
             this.btnAlterar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAlterar.Name = "btnAlterar";
-            this.btnAlterar.Size = new System.Drawing.Size(100, 28);
+            this.btnAlterar.Size = new System.Drawing.Size(100, 30);
             this.btnAlterar.TabIndex = 28;
             this.btnAlterar.Text = "&Alterar";
-            this.btnAlterar.UseVisualStyleBackColor = true;
+            this.btnAlterar.UseVisualStyleBackColor = false;
             this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // btnInserir
             // 
-            this.btnInserir.Location = new System.Drawing.Point(709, 82);
+            this.btnInserir.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btnInserir.Location = new System.Drawing.Point(709, 80);
             this.btnInserir.Margin = new System.Windows.Forms.Padding(4);
             this.btnInserir.Name = "btnInserir";
-            this.btnInserir.Size = new System.Drawing.Size(100, 28);
+            this.btnInserir.Size = new System.Drawing.Size(100, 30);
             this.btnInserir.TabIndex = 29;
             this.btnInserir.Text = "&Inserir";
-            this.btnInserir.UseVisualStyleBackColor = true;
+            this.btnInserir.UseVisualStyleBackColor = false;
             this.btnInserir.Click += new System.EventHandler(this.btnInserir_Click);
             // 
             // btnExcluir
             // 
-            this.btnExcluir.Location = new System.Drawing.Point(817, 82);
+            this.btnExcluir.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btnExcluir.Location = new System.Drawing.Point(817, 80);
             this.btnExcluir.Margin = new System.Windows.Forms.Padding(4);
             this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(100, 28);
+            this.btnExcluir.Size = new System.Drawing.Size(100, 30);
             this.btnExcluir.TabIndex = 30;
             this.btnExcluir.Text = "&Excluir";
-            this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.UseVisualStyleBackColor = false;
             this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnVisualizar
             // 
-            this.btnVisualizar.Location = new System.Drawing.Point(709, 410);
+            this.btnVisualizar.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btnVisualizar.Location = new System.Drawing.Point(709, 408);
             this.btnVisualizar.Margin = new System.Windows.Forms.Padding(4);
             this.btnVisualizar.Name = "btnVisualizar";
-            this.btnVisualizar.Size = new System.Drawing.Size(100, 28);
+            this.btnVisualizar.Size = new System.Drawing.Size(100, 30);
             this.btnVisualizar.TabIndex = 31;
             this.btnVisualizar.Text = "&Visualizar";
-            this.btnVisualizar.UseVisualStyleBackColor = true;
+            this.btnVisualizar.UseVisualStyleBackColor = false;
             this.btnVisualizar.Click += new System.EventHandler(this.btnVisualizar_Click);
             // 
             // btnCancelar
             // 
+            this.btnCancelar.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.btnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancelar.Location = new System.Drawing.Point(817, 410);
+            this.btnCancelar.Location = new System.Drawing.Point(817, 408);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(100, 28);
+            this.btnCancelar.Size = new System.Drawing.Size(100, 30);
             this.btnCancelar.TabIndex = 32;
             this.btnCancelar.Text = "&Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.UseVisualStyleBackColor = false;
             // 
             // profissionalBindingSource
             // 
@@ -350,14 +356,15 @@
             // 
             // btnSelecionar
             // 
+            this.btnSelecionar.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.btnSelecionar.Enabled = false;
-            this.btnSelecionar.Location = new System.Drawing.Point(603, 410);
+            this.btnSelecionar.Location = new System.Drawing.Point(603, 408);
             this.btnSelecionar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSelecionar.Name = "btnSelecionar";
-            this.btnSelecionar.Size = new System.Drawing.Size(100, 28);
+            this.btnSelecionar.Size = new System.Drawing.Size(100, 30);
             this.btnSelecionar.TabIndex = 34;
             this.btnSelecionar.Text = "Selecionar";
-            this.btnSelecionar.UseVisualStyleBackColor = true;
+            this.btnSelecionar.UseVisualStyleBackColor = false;
             this.btnSelecionar.Click += new System.EventHandler(this.btnSelecionar_Click);
             // 
             // FormConsultaProfissional

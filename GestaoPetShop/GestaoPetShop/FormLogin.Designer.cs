@@ -44,7 +44,7 @@
             this.textBoxUsuario.Location = new System.Drawing.Point(184, 88);
             this.textBoxUsuario.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxUsuario.Name = "textBoxUsuario";
-            this.textBoxUsuario.Size = new System.Drawing.Size(182, 20);
+            this.textBoxUsuario.Size = new System.Drawing.Size(182, 22);
             this.textBoxUsuario.TabIndex = 2;
             this.textBoxUsuario.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxUsuario_KeyDown);
             // 
@@ -54,7 +54,7 @@
             this.textBoxSenha.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSenha.Name = "textBoxSenha";
             this.textBoxSenha.PasswordChar = '*';
-            this.textBoxSenha.Size = new System.Drawing.Size(182, 20);
+            this.textBoxSenha.Size = new System.Drawing.Size(182, 22);
             this.textBoxSenha.TabIndex = 4;
             this.textBoxSenha.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxSenha_KeyDown);
             // 
@@ -91,7 +91,7 @@
             this.label1.Location = new System.Drawing.Point(180, 116);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 19);
+            this.label1.Size = new System.Drawing.Size(61, 21);
             this.label1.TabIndex = 3;
             this.label1.Text = "Senha";
             // 
@@ -102,7 +102,7 @@
             this.label2.Location = new System.Drawing.Point(180, 65);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 19);
+            this.label2.Size = new System.Drawing.Size(70, 21);
             this.label2.TabIndex = 1;
             this.label2.Text = "Usuário";
             // 
@@ -113,7 +113,7 @@
             this.label4.Location = new System.Drawing.Point(0, 0);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(391, 47);
+            this.label4.Size = new System.Drawing.Size(387, 47);
             this.label4.TabIndex = 0;
             this.label4.Text = "Tela de Login";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -133,7 +133,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(391, 292);
+            this.ClientSize = new System.Drawing.Size(387, 288);
             this.ControlBox = false;
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);

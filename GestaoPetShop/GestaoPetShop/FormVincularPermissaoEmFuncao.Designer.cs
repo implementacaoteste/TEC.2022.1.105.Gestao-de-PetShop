@@ -43,6 +43,7 @@
             this.textBoxIdFuncao = new System.Windows.Forms.TextBox();
             this.labelId = new System.Windows.Forms.Label();
             this.textBoxFuncao = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.permissaoDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.permissaoBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -58,15 +59,15 @@
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2});
             this.permissaoDataGridView.DataSource = this.permissaoBindingSource;
-            this.permissaoDataGridView.Location = new System.Drawing.Point(22, 106);
-            this.permissaoDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.permissaoDataGridView.Location = new System.Drawing.Point(29, 147);
+            this.permissaoDataGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.permissaoDataGridView.Name = "permissaoDataGridView";
             this.permissaoDataGridView.ReadOnly = true;
             this.permissaoDataGridView.RowHeadersVisible = false;
             this.permissaoDataGridView.RowHeadersWidth = 51;
             this.permissaoDataGridView.RowTemplate.Height = 24;
             this.permissaoDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.permissaoDataGridView.Size = new System.Drawing.Size(427, 202);
+            this.permissaoDataGridView.Size = new System.Drawing.Size(569, 249);
             this.permissaoDataGridView.TabIndex = 1;
             // 
             // dataGridViewTextBoxColumn1
@@ -93,13 +94,14 @@
             // 
             // buttonBuscarPermissao
             // 
-            this.buttonBuscarPermissao.Location = new System.Drawing.Point(392, 78);
-            this.buttonBuscarPermissao.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonBuscarPermissao.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.buttonBuscarPermissao.Location = new System.Drawing.Point(517, 111);
+            this.buttonBuscarPermissao.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonBuscarPermissao.Name = "buttonBuscarPermissao";
-            this.buttonBuscarPermissao.Size = new System.Drawing.Size(56, 19);
+            this.buttonBuscarPermissao.Size = new System.Drawing.Size(81, 26);
             this.buttonBuscarPermissao.TabIndex = 2;
             this.buttonBuscarPermissao.Text = "Buscar";
-            this.buttonBuscarPermissao.UseVisualStyleBackColor = true;
+            this.buttonBuscarPermissao.UseVisualStyleBackColor = false;
             this.buttonBuscarPermissao.Click += new System.EventHandler(this.buttonBuscarPermissao_Click);
             // 
             // comboBoxSelecionarBuscaPermissao
@@ -109,86 +111,102 @@
             "Todos",
             "Id",
             "Nome"});
-            this.comboBoxSelecionarBuscaPermissao.Location = new System.Drawing.Point(22, 78);
-            this.comboBoxSelecionarBuscaPermissao.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxSelecionarBuscaPermissao.Location = new System.Drawing.Point(29, 113);
+            this.comboBoxSelecionarBuscaPermissao.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxSelecionarBuscaPermissao.Name = "comboBoxSelecionarBuscaPermissao";
-            this.comboBoxSelecionarBuscaPermissao.Size = new System.Drawing.Size(92, 21);
+            this.comboBoxSelecionarBuscaPermissao.Size = new System.Drawing.Size(121, 24);
             this.comboBoxSelecionarBuscaPermissao.TabIndex = 3;
             // 
             // textBoxBuscarPermissao
             // 
-            this.textBoxBuscarPermissao.Location = new System.Drawing.Point(124, 78);
-            this.textBoxBuscarPermissao.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxBuscarPermissao.Location = new System.Drawing.Point(165, 113);
+            this.textBoxBuscarPermissao.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxBuscarPermissao.Name = "textBoxBuscarPermissao";
-            this.textBoxBuscarPermissao.Size = new System.Drawing.Size(265, 20);
+            this.textBoxBuscarPermissao.Size = new System.Drawing.Size(339, 22);
             this.textBoxBuscarPermissao.TabIndex = 4;
             // 
             // buttonInserirPermissao
             // 
-            this.buttonInserirPermissao.Location = new System.Drawing.Point(293, 323);
-            this.buttonInserirPermissao.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonInserirPermissao.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.buttonInserirPermissao.Location = new System.Drawing.Point(429, 415);
+            this.buttonInserirPermissao.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonInserirPermissao.Name = "buttonInserirPermissao";
-            this.buttonInserirPermissao.Size = new System.Drawing.Size(85, 19);
+            this.buttonInserirPermissao.Size = new System.Drawing.Size(81, 26);
             this.buttonInserirPermissao.TabIndex = 5;
             this.buttonInserirPermissao.Text = "Inserir";
-            this.buttonInserirPermissao.UseVisualStyleBackColor = true;
+            this.buttonInserirPermissao.UseVisualStyleBackColor = false;
             this.buttonInserirPermissao.Click += new System.EventHandler(this.buttonInserirPermissao_Click);
             // 
             // labelfuncao
             // 
             this.labelfuncao.AutoSize = true;
-            this.labelfuncao.Location = new System.Drawing.Point(130, 31);
-            this.labelfuncao.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelfuncao.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelfuncao.Location = new System.Drawing.Point(173, 55);
             this.labelfuncao.Name = "labelfuncao";
-            this.labelfuncao.Size = new System.Drawing.Size(43, 13);
+            this.labelfuncao.Size = new System.Drawing.Size(58, 16);
             this.labelfuncao.TabIndex = 7;
             this.labelfuncao.Text = "Função";
             // 
             // buttonCancelar
             // 
-            this.buttonCancelar.Location = new System.Drawing.Point(392, 323);
-            this.buttonCancelar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonCancelar.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.buttonCancelar.Location = new System.Drawing.Point(516, 415);
+            this.buttonCancelar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonCancelar.Name = "buttonCancelar";
-            this.buttonCancelar.Size = new System.Drawing.Size(56, 19);
+            this.buttonCancelar.Size = new System.Drawing.Size(81, 26);
             this.buttonCancelar.TabIndex = 8;
             this.buttonCancelar.Text = "Cancelar";
-            this.buttonCancelar.UseVisualStyleBackColor = true;
+            this.buttonCancelar.UseVisualStyleBackColor = false;
             this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
             // 
             // textBoxIdFuncao
             // 
             this.textBoxIdFuncao.Enabled = false;
-            this.textBoxIdFuncao.Location = new System.Drawing.Point(28, 46);
-            this.textBoxIdFuncao.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxIdFuncao.Location = new System.Drawing.Point(37, 74);
+            this.textBoxIdFuncao.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxIdFuncao.Name = "textBoxIdFuncao";
             this.textBoxIdFuncao.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.textBoxIdFuncao.Size = new System.Drawing.Size(48, 20);
+            this.textBoxIdFuncao.Size = new System.Drawing.Size(63, 22);
             this.textBoxIdFuncao.TabIndex = 9;
             // 
             // labelId
             // 
             this.labelId.AutoSize = true;
-            this.labelId.Location = new System.Drawing.Point(26, 31);
-            this.labelId.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelId.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelId.Location = new System.Drawing.Point(35, 55);
             this.labelId.Name = "labelId";
-            this.labelId.Size = new System.Drawing.Size(16, 13);
+            this.labelId.Size = new System.Drawing.Size(20, 16);
             this.labelId.TabIndex = 10;
             this.labelId.Text = "Id";
             // 
             // textBoxFuncao
             // 
             this.textBoxFuncao.Enabled = false;
-            this.textBoxFuncao.Location = new System.Drawing.Point(124, 46);
-            this.textBoxFuncao.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxFuncao.Location = new System.Drawing.Point(165, 74);
+            this.textBoxFuncao.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxFuncao.Name = "textBoxFuncao";
-            this.textBoxFuncao.Size = new System.Drawing.Size(140, 20);
+            this.textBoxFuncao.Size = new System.Drawing.Size(185, 22);
             this.textBoxFuncao.TabIndex = 11;
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(29, 13);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(569, 25);
+            this.textBox1.TabIndex = 12;
+            this.textBox1.Text = "Vincular Permissão - Função";
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // FormVincularPermissaoEmFuncao
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(475, 366);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ClientSize = new System.Drawing.Size(633, 450);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.textBoxFuncao);
             this.Controls.Add(this.labelId);
             this.Controls.Add(this.textBoxIdFuncao);
@@ -200,12 +218,11 @@
             this.Controls.Add(this.buttonBuscarPermissao);
             this.Controls.Add(this.permissaoDataGridView);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormVincularPermissaoEmFuncao";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "       Vincular Permissão Em Função";
             ((System.ComponentModel.ISupportInitialize)(this.permissaoDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.permissaoBindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -228,5 +245,6 @@
         private System.Windows.Forms.TextBox textBoxIdFuncao;
         private System.Windows.Forms.Label labelId;
         private System.Windows.Forms.TextBox textBoxFuncao;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
