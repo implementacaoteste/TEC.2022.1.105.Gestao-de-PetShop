@@ -60,7 +60,7 @@
             this.textBox1.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.textBox1.Location = new System.Drawing.Point(22, 138);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(304, 20);
+            this.textBox1.Size = new System.Drawing.Size(304, 23);
             this.textBox1.TabIndex = 0;
             // 
             // textBox3
@@ -68,7 +68,7 @@
             this.textBox3.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.textBox3.Location = new System.Drawing.Point(22, 216);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(304, 20);
+            this.textBox3.Size = new System.Drawing.Size(304, 23);
             this.textBox3.TabIndex = 1;
             // 
             // textBox5
@@ -76,7 +76,7 @@
             this.textBox5.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.textBox5.Location = new System.Drawing.Point(22, 303);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(304, 20);
+            this.textBox5.Size = new System.Drawing.Size(304, 23);
             this.textBox5.TabIndex = 2;
             // 
             // checkBox1
@@ -84,7 +84,7 @@
             this.checkBox1.AutoSize = true;
             this.checkBox1.Location = new System.Drawing.Point(38, 409);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(50, 17);
+            this.checkBox1.Size = new System.Drawing.Size(61, 21);
             this.checkBox1.TabIndex = 3;
             this.checkBox1.Text = "Ativo";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -94,7 +94,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(19, 108);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.Size = new System.Drawing.Size(45, 17);
             this.label2.TabIndex = 8;
             this.label2.Text = "Nome";
             // 
@@ -103,7 +103,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(19, 280);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(80, 13);
+            this.label4.Size = new System.Drawing.Size(107, 17);
             this.label4.TabIndex = 10;
             this.label4.Text = "Pais De Origem";
             // 
@@ -112,7 +112,7 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(19, 192);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(45, 13);
+            this.label6.Size = new System.Drawing.Size(58, 17);
             this.label6.TabIndex = 12;
             this.label6.Text = "Espécie";
             // 
@@ -139,10 +139,11 @@
             this.buttonCancelar.TabIndex = 5;
             this.buttonCancelar.Text = "&Cancelar";
             this.buttonCancelar.UseVisualStyleBackColor = false;
+            this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
             // 
             // FormCadastroRaca
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
@@ -163,6 +164,7 @@
             this.Name = "FormCadastroRaca";
             this.ShowInTaskbar = false;
             this.Text = "   Cadastro de Raca";
+            this.Load += new System.EventHandler(this.FormCadastroRaca_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

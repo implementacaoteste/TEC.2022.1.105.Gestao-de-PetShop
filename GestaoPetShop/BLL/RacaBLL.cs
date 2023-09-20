@@ -17,13 +17,11 @@ namespace BLL
         }
         public void Alterar(Raca _raca)
         {
-            RacaDAL racaDAL = new RacaDAL();
-            racaDAL.Alterar(_raca);
+            new RacaDAL().Alterar(_raca);   
         }
         public void Excluir(int _id)
         {
-            RacaDAL racaDAL = new RacaDAL();
-            racaDAL.Excluir(_id);
+            new RacaDAL().Excluir(_id);
         }
         public List<Raca> BuscarTodos()
         {
@@ -46,17 +44,6 @@ namespace BLL
 
             return raca;
         }
-        /* public List<Animal>BuscarPorEspecie(string _especie)
-         {
-             RacaDAL racaDAL = new RacaDAL();
-
-             List<Raca> racas = racaDAL.BuscarPorNome(_especie);
-             if (racas.Count == 0)
-             {
-                 throw new Exception("Especie não encontrada");
-             }
-             return racas;
-         }*/
         public List<Raca> BuscarPorNome(string _nome)
         {
             RacaDAL racaDAL = new RacaDAL();
@@ -68,6 +55,23 @@ namespace BLL
             }
             return racas;
         }
+        public bool ExisteVinculo(int _id)
+        {
+            RacaBLL racaBLL = new RacaBLL();
+            return racaBLL.ExisteVinculo(_id);
+        }
+
+        /* public List<Animal>BuscarPorEspecie(string _especie)
+         {
+             RacaDAL racaDAL = new RacaDAL();
+
+             List<Raca> racas = racaDAL.BuscarPorNome(_especie);
+             if (racas.Count == 0)
+             {
+                 throw new Exception("Especie não encontrada");
+             }
+             return racas;
+         }*/
 
     }
 }

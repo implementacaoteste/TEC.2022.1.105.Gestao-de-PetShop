@@ -15,23 +15,26 @@ namespace GestaoPetShop
     public partial class FormCadastroRaca : Form
     {
 
+
         int id;
         bool permitirSalvar;
         public FormCadastroRaca(int _id = 0, bool _permitirSalvar = true)
         {
             InitializeComponent();
+            id = _id;
             buttonSalvar.Visible = _permitirSalvar;
             permitirSalvar = _permitirSalvar;
         }
 
         private void buttonSalvar_Click(object sender, EventArgs e)
         {
-          /*  try
+           /* try
             {
                 if (!permitirSalvar)
                     return;
 
-                Raca raca = (Raca) racaBindingSource.Current;
+
+                Raca raca = (Raca)racaBindingSource.Current;
                 racaBindingSource.EndEdit();
 
 
@@ -49,6 +52,25 @@ namespace GestaoPetShop
             }*/
         }
 
-      
+        private void FormCadastroRaca_Load(object sender, EventArgs e)
+        {
+            /* try
+             {
+                 if (id == 0)
+                     racaBindingSource.AddNew();
+                 else
+                     racaBindingSource.DataSource = new RacaBLL().BuscarPorId(id);
+             }
+             catch (Exception ex)
+             {
+                 MessageBox.Show(ex.Message);
+             } */
+        }
+
+        private void buttonCancelar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
     }
 }

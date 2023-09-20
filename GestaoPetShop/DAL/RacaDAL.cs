@@ -46,14 +46,20 @@ namespace DAL
             try
             {
                 SqlCommand cmd = cn.CreateCommand();
-                cmd.CommandText = @"UPDATE Raca SET Nome = @Nome, Especie = @Especie, PaisOrigem = @PaisOrigem)
-                                   WHERE Id = @Id";
+                cmd.CommandText = @"UPDATE Raca SET 
+                                             Nome = @Nome,
+                                             Especie = @Especie, 
+                                             PaisOrigem = @PaisOrigem)
+                                             Ativo = @Ativo,
+                                             WHERE Id = @Id";
                 cmd.CommandType = System.Data.CommandType.Text;
 
                 cmd.Parameters.AddWithValue("@Id", _raca.Id);
                 cmd.Parameters.AddWithValue("@Nome", _raca.Nome);
                 cmd.Parameters.AddWithValue("@Especie", _raca.Especie);
                 cmd.Parameters.AddWithValue("@PaisOrigem", _raca.PaisOrigem);
+                cmd.Parameters.AddWithValue("@Ativo", _raca.Ativo);
+
                 cmd.Connection = cn;
                 cn.Open();
 
@@ -93,6 +99,7 @@ namespace DAL
                         raca.Nome = rd["Nome"].ToString();
                         raca.Especie = rd["Especie"].ToString();
                         raca.PaisOrigem = rd["PaisOrigem"].ToString();
+                       
 
                         racas.Add(raca);
                     }
@@ -199,7 +206,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu um erro ao tentar buscar todos as raças no banco de dados ggggggg.", ex) { Data = { { "Id", 203 } } };
+                throw new Exception("Ocorreu um erro ao tentar buscar todos as raças no banco de dados.", ex) { Data = { { "Id", 203 } } };
             }
             finally
             {
