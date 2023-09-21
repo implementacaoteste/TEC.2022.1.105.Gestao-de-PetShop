@@ -399,7 +399,7 @@
             // 
             this.buttonPesquisarAnimal.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.buttonPesquisarAnimal.Location = new System.Drawing.Point(543, 131);
-            this.buttonPesquisarAnimal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonPesquisarAnimal.Margin = new System.Windows.Forms.Padding(2);
             this.buttonPesquisarAnimal.Name = "buttonPesquisarAnimal";
             this.buttonPesquisarAnimal.Size = new System.Drawing.Size(89, 22);
             this.buttonPesquisarAnimal.TabIndex = 22;
@@ -484,7 +484,7 @@
             // 
             this.buttonSalvar.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.buttonSalvar.Location = new System.Drawing.Point(478, 465);
-            this.buttonSalvar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonSalvar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSalvar.Name = "buttonSalvar";
             this.buttonSalvar.Size = new System.Drawing.Size(75, 24);
             this.buttonSalvar.TabIndex = 28;
@@ -625,9 +625,9 @@
             this.groupBoxServico.Controls.Add(this.textBoxValorUnitario);
             this.groupBoxServico.Enabled = false;
             this.groupBoxServico.Location = new System.Drawing.Point(8, 214);
-            this.groupBoxServico.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxServico.Margin = new System.Windows.Forms.Padding(2);
             this.groupBoxServico.Name = "groupBoxServico";
-            this.groupBoxServico.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxServico.Padding = new System.Windows.Forms.Padding(2);
             this.groupBoxServico.Size = new System.Drawing.Size(624, 63);
             this.groupBoxServico.TabIndex = 31;
             this.groupBoxServico.TabStop = false;
@@ -716,7 +716,9 @@
             this.Controls.Add(this.horarioTextBox);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(662, 544);
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(662, 544);
             this.Name = "FormCadastroAgendamento";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

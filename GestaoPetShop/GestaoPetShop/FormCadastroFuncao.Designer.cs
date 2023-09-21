@@ -124,7 +124,7 @@
             this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcaoBindingSource, "Id", true));
             this.idTextBox.Enabled = false;
             this.idTextBox.Location = new System.Drawing.Point(41, 100);
-            this.idTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.idTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.idTextBox.Name = "idTextBox";
             this.idTextBox.Size = new System.Drawing.Size(76, 20);
             this.idTextBox.TabIndex = 19;
@@ -133,7 +133,7 @@
             // 
             this.nomeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcaoBindingSource, "Nome", true));
             this.nomeTextBox.Location = new System.Drawing.Point(41, 155);
-            this.nomeTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.nomeTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.nomeTextBox.Name = "nomeTextBox";
             this.nomeTextBox.Size = new System.Drawing.Size(279, 20);
             this.nomeTextBox.TabIndex = 20;
@@ -155,7 +155,9 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(389, 290);
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(389, 290);
             this.Name = "FormCadastroFuncao";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
