@@ -73,10 +73,5 @@ namespace GestaoPetShop
         {
             Close();
         }
-
-        private void FormCadastroRaca_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }
