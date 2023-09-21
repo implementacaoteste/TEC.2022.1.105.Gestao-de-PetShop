@@ -155,8 +155,6 @@ namespace GestaoPetShop
                 MessageBox.Show(ex.Message);
             }
         }
-
-        
     }
     
 }

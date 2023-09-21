@@ -83,7 +83,7 @@
             "Todos",
             "Id",
             "Nome"});
-            this.comboBoxEscolhaBuscarFuncao.Location = new System.Drawing.Point(29, 147);
+            this.comboBoxEscolhaBuscarFuncao.Location = new System.Drawing.Point(29, 145);
             this.comboBoxEscolhaBuscarFuncao.Name = "comboBoxEscolhaBuscarFuncao";
             this.comboBoxEscolhaBuscarFuncao.Size = new System.Drawing.Size(84, 24);
             this.comboBoxEscolhaBuscarFuncao.TabIndex = 26;
@@ -177,15 +177,15 @@
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2});
             this.funcaoDataGridView.DataSource = this.funcaoBindingSource;
-            this.funcaoDataGridView.Location = new System.Drawing.Point(10, 252);
-            this.funcaoDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.funcaoDataGridView.Location = new System.Drawing.Point(10, 227);
+            this.funcaoDataGridView.Margin = new System.Windows.Forms.Padding(2);
             this.funcaoDataGridView.Name = "funcaoDataGridView";
             this.funcaoDataGridView.ReadOnly = true;
             this.funcaoDataGridView.RowHeadersVisible = false;
             this.funcaoDataGridView.RowHeadersWidth = 51;
             this.funcaoDataGridView.RowTemplate.Height = 24;
             this.funcaoDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.funcaoDataGridView.Size = new System.Drawing.Size(349, 242);
+            this.funcaoDataGridView.Size = new System.Drawing.Size(349, 267);
             this.funcaoDataGridView.TabIndex = 39;
             // 
             // dataGridViewTextBoxColumn1
@@ -224,15 +224,15 @@
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4});
             this.permissoesDataGridView.DataSource = this.permissoesBindingSource;
-            this.permissoesDataGridView.Location = new System.Drawing.Point(363, 252);
-            this.permissoesDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.permissoesDataGridView.Location = new System.Drawing.Point(363, 227);
+            this.permissoesDataGridView.Margin = new System.Windows.Forms.Padding(2);
             this.permissoesDataGridView.Name = "permissoesDataGridView";
             this.permissoesDataGridView.ReadOnly = true;
             this.permissoesDataGridView.RowHeadersVisible = false;
             this.permissoesDataGridView.RowHeadersWidth = 51;
             this.permissoesDataGridView.RowTemplate.Height = 24;
             this.permissoesDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.permissoesDataGridView.Size = new System.Drawing.Size(272, 242);
+            this.permissoesDataGridView.Size = new System.Drawing.Size(272, 267);
             this.permissoesDataGridView.TabIndex = 39;
             // 
             // dataGridViewTextBoxColumn3
@@ -256,8 +256,8 @@
             // buttonVincularPermissaoEmFuncao
             // 
             this.buttonVincularPermissaoEmFuncao.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.buttonVincularPermissaoEmFuncao.Location = new System.Drawing.Point(491, 220);
-            this.buttonVincularPermissaoEmFuncao.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonVincularPermissaoEmFuncao.Location = new System.Drawing.Point(491, 192);
+            this.buttonVincularPermissaoEmFuncao.Margin = new System.Windows.Forms.Padding(2);
             this.buttonVincularPermissaoEmFuncao.Name = "buttonVincularPermissaoEmFuncao";
             this.buttonVincularPermissaoEmFuncao.Size = new System.Drawing.Size(58, 28);
             this.buttonVincularPermissaoEmFuncao.TabIndex = 40;
@@ -268,8 +268,8 @@
             // buttonDesvincularPermissaoDeFuncao
             // 
             this.buttonDesvincularPermissaoDeFuncao.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.buttonDesvincularPermissaoDeFuncao.Location = new System.Drawing.Point(553, 220);
-            this.buttonDesvincularPermissaoDeFuncao.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonDesvincularPermissaoDeFuncao.Location = new System.Drawing.Point(553, 192);
+            this.buttonDesvincularPermissaoDeFuncao.Margin = new System.Windows.Forms.Padding(2);
             this.buttonDesvincularPermissaoDeFuncao.Name = "buttonDesvincularPermissaoDeFuncao";
             this.buttonDesvincularPermissaoDeFuncao.Size = new System.Drawing.Size(82, 28);
             this.buttonDesvincularPermissaoDeFuncao.TabIndex = 41;
@@ -297,7 +297,9 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(662, 544);
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(662, 544);
             this.Name = "FormConsultaFuncao";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
