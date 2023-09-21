@@ -29,11 +29,7 @@ namespace BLL
             //ValidarPermissao(4);
             new UsuarioDAL().Excluir(_id);
         }
-        public List<Usuario> BuscarPorNome(string _nome)//Givas
-        {
-            //ValidarPermissao(1);
-            return new UsuarioDAL().BuscarPorNome(_nome);
-        }
+       
         public List<Usuario> BuscarTodos()
         {
             //ValidarPermissao(1);
@@ -76,28 +72,10 @@ namespace BLL
             else
                 throw new Exception("Usuario ou senha inválido.");
         }
-        public void RemoverGrupoUsuario(int _idUsuario, int _idGrupoUsuario)//Givas
-        {
-            new UsuarioDAL().RemoverGrupoUsuario(_idUsuario, _idGrupoUsuario);
-        }
-        public Profissional BuscarPorCPF(string _cPF)//Givas
-        {
-            return new UsuarioDAL().BuscarPorCPF(_cPF);
-        }
-        public void BuscarEmailProfissional(int _id)//Givas
-        {
-            new UsuarioDAL().BuscarEmailProfissional(_id);
-        }
-        public void BuscarPorFuncao(string _nome)
-        {
-            new UsuarioDAL().BuscarPorFuncao(_nome);
-        }//Givas
-
         public List<Usuario> BuscarPorNomeProfissional(string _nomeProfissional)
         {
             return new UsuarioDAL().BuscarPorNomeProfissional(_nomeProfissional);
         }
-
         public Usuario BucarPorIdProfissional(int _idProfissional)
         {
             return new UsuarioDAL().BucarPorIdProfissional(_idProfissional);

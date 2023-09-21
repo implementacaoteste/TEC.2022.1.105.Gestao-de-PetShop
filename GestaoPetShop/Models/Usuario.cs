@@ -9,7 +9,7 @@ namespace Models
         public string Senha { get; set; }
         public int IdProfissional { get; set; }
         public bool Ativo { get; set; }
-        public Profissional Profissionais { get; set; }
+        public string NomeProfissional { get; set; }
 
     }
 }
