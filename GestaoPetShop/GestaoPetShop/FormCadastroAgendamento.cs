@@ -29,6 +29,7 @@ namespace GestaoPetShop
                 if (id == 0)
                 {
                     agendamentoBindingSource.AddNew();
+                    servicoBindingSource.AddNew();
                     labelAlterarAgenda.Visible = false;
                     labelCadastroAgenda.Visible = true;
                 }
@@ -79,7 +80,7 @@ namespace GestaoPetShop
                 ((AgendamentoServico)agendamentoServicosBindingSource.Current).ValorUnitario = Convert.ToDecimal(precoTextBox.Text);
                 ((AgendamentoServico)agendamentoServicosBindingSource.Current).IdServico = Convert.ToInt32(idTextBox.Text);
                 ((AgendamentoServico)agendamentoServicosBindingSource.Current).IdProfissional = Convert.ToInt32(idProfissionalTextBox.Text);
-                ((AgendamentoServico)agendamentoServicosBindingSource.Current).NomeProfissional = nomeProfissionalComboBox.Text;
+                ((AgendamentoServico)agendamentoServicosBindingSource.Current).NomeProfissional = nomeProfissionalComboBox.SelectedText;
                 agendamentoServicosBindingSource.EndEdit();
 
                 Agendamento agendamento = (Agendamento)agendamentoBindingSource.Current;
@@ -112,12 +113,7 @@ namespace GestaoPetShop
                 }
                 else
                 {
-                    //if (dataagendamento.Date < datahoje.Date)
-                    //{
-                    //    MessageBox.Show("Data inválida! \n Menor que a data atual.");
-                    //    return;
-                    //}
-
+                    
                     new AgendamentoBLL().Inserir(agendamento);
                     MessageBox.Show("Agendamento Cadastrado com sucesso!");
                 }
