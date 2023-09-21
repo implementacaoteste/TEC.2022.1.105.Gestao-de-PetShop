@@ -51,7 +51,7 @@ namespace GestaoPetShop
                 {
 
                     usuarioBindingSource.DataSource = new UsuarioBLL().BuscarPorId(Id);
-                    
+                  
                 }
 
             }
@@ -97,5 +97,6 @@ namespace GestaoPetShop
                 MessageBox.Show(ex.Message);
             }
         }
+
     }
 }

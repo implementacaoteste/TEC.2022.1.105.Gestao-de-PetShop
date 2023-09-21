@@ -46,6 +46,7 @@
             this.nomeTextBoxProfissional = new System.Windows.Forms.TextBox();
             this.btnBuscarProfissional = new System.Windows.Forms.Button();
             this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.button1 = new System.Windows.Forms.Button();
             senhaLabel = new System.Windows.Forms.Label();
             label1 = new System.Windows.Forms.Label();
             usuarioLoginLabel = new System.Windows.Forms.Label();
@@ -104,12 +105,14 @@
             // 
             // senhaTextBox
             // 
-            this.senhaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioBindingSource, "UsuarioLogin", true));
+            this.senhaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioBindingSource, "Senha", true));
             this.senhaTextBox.Location = new System.Drawing.Point(44, 249);
             this.senhaTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.senhaTextBox.Name = "senhaTextBox";
+            this.senhaTextBox.PasswordChar = '*';
             this.senhaTextBox.Size = new System.Drawing.Size(115, 22);
             this.senhaTextBox.TabIndex = 2;
+            this.senhaTextBox.Tag = "*";
             // 
             // ativoCheckBox
             // 
@@ -130,6 +133,7 @@
             this.textBoxConfirmarSenha.Location = new System.Drawing.Point(173, 249);
             this.textBoxConfirmarSenha.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxConfirmarSenha.Name = "textBoxConfirmarSenha";
+            this.textBoxConfirmarSenha.PasswordChar = '*';
             this.textBoxConfirmarSenha.Size = new System.Drawing.Size(115, 22);
             this.textBoxConfirmarSenha.TabIndex = 3;
             // 
@@ -168,7 +172,7 @@
             // 
             // usuarioLoginTextBox
             // 
-            this.usuarioLoginTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioBindingSource, "Senha", true));
+            this.usuarioLoginTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioBindingSource, "UsuarioLogin", true));
             this.usuarioLoginTextBox.Location = new System.Drawing.Point(44, 201);
             this.usuarioLoginTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.usuarioLoginTextBox.Name = "usuarioLoginTextBox";
@@ -186,6 +190,7 @@
             // 
             // nomeTextBoxProfissional
             // 
+            this.nomeTextBoxProfissional.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioBindingSource, "NomeProfissional", true));
             this.nomeTextBoxProfissional.Location = new System.Drawing.Point(155, 122);
             this.nomeTextBoxProfissional.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.nomeTextBoxProfissional.Name = "nomeTextBoxProfissional";
@@ -207,12 +212,23 @@
             // 
             this.usuarioBindingSource.DataSource = typeof(Models.Usuario);
             // 
+            // button1
+            // 
+            this.button1.ImageKey = "(none)";
+            this.button1.Location = new System.Drawing.Point(292, 249);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 18;
+            this.button1.Text = "Visualizar";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // FormCadastroUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(379, 336);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnBuscarProfissional);
             this.Controls.Add(nomeLabel);
             this.Controls.Add(this.nomeTextBoxProfissional);
@@ -257,5 +273,6 @@
         private System.Windows.Forms.TextBox nomeTextBoxProfissional;
         private System.Windows.Forms.Button btnBuscarProfissional;
         private System.Windows.Forms.BindingSource usuarioBindingSource;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -88,6 +88,30 @@ namespace GestaoPetShop
                 {
                     frm.ShowDialog();
                 }
+                switch (comboBoxSelecionarTipoPesquisaUsuario.SelectedIndex)
+                {
+                    case 0:
+                        {
+                            usuarioBindingSource.DataSource = new UsuarioBLL().BuscarTodos();
+                            break;
+                        }
+                    case 1:
+                        {
+                            usuarioBindingSource.DataSource = new UsuarioBLL().BuscarPorLogin(textBoxBuscarUsuario.Text);
+                            break;
+                        }
+                    case 2:
+                        {
+                            usuarioBindingSource.DataSource = new UsuarioBLL().BuscarPorNomeProfissional(textBoxBuscarUsuario.Text);
+                            break;
+                        }
+                    case 3:
+                        {
+                            usuarioBindingSource.DataSource = new UsuarioBLL().BucarPorIdProfissional(Convert.ToInt32(textBoxBuscarUsuario.Text));
+                            break;
+                        }
+
+                }
             }
             catch (Exception ex)
             {
