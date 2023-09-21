@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCadastroRaca));
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -39,6 +40,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.buttonSalvar = new System.Windows.Forms.Button();
             this.buttonCancelar = new System.Windows.Forms.Button();
+            this.racaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.racaBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -57,7 +60,8 @@
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.textBox1.Location = new System.Drawing.Point(26, 86);
+            this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.racaBindingSource, "Nome", true));
+            this.textBox1.Location = new System.Drawing.Point(22, 138);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(255, 20);
             this.textBox1.TabIndex = 0;
@@ -65,7 +69,8 @@
             // textBox3
             // 
             this.textBox3.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.textBox3.Location = new System.Drawing.Point(26, 125);
+            this.textBox3.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.racaBindingSource, "Especie", true));
+            this.textBox3.Location = new System.Drawing.Point(22, 216);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(255, 20);
             this.textBox3.TabIndex = 1;
@@ -73,7 +78,8 @@
             // textBox5
             // 
             this.textBox5.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.textBox5.Location = new System.Drawing.Point(26, 167);
+            this.textBox5.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.racaBindingSource, "PaisOrigem", true));
+            this.textBox5.Location = new System.Drawing.Point(22, 303);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(255, 20);
             this.textBox5.TabIndex = 2;
@@ -81,8 +87,7 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Checked = true;
-            this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox1.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.racaBindingSource, "Ativo", true));
             this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox1.Location = new System.Drawing.Point(310, 168);
             this.checkBox1.Name = "checkBox1";
@@ -139,6 +144,11 @@
             this.buttonCancelar.TabIndex = 5;
             this.buttonCancelar.Text = "&Cancelar";
             this.buttonCancelar.UseVisualStyleBackColor = false;
+            this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
+            // 
+            // racaBindingSource
+            // 
+            this.racaBindingSource.DataSource = typeof(Models.Raca);
             // 
             // FormCadastroRaca
             // 
@@ -164,7 +174,8 @@
             this.MinimumSize = new System.Drawing.Size(389, 290);
             this.Name = "FormCadastroRaca";
             this.ShowInTaskbar = false;
-            this.Load += new System.EventHandler(this.FormCadastroRaca_Load);
+            this.Text = "   Cadastro de Raca";
+            ((System.ComponentModel.ISupportInitialize)(this.racaBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -182,5 +193,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button buttonSalvar;
         private System.Windows.Forms.Button buttonCancelar;
+        private System.Windows.Forms.BindingSource racaBindingSource;
     }
 }

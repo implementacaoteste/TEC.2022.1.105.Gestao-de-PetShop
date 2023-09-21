@@ -104,9 +104,9 @@ namespace GestaoPetShop
                     return;
                 }
 
-                int id = ((Raca)racaBindingSource.Current).Id;
+                int id = ((Raca) racaBindingSource.Current).Id;
 
-                using (FormCadastroRaca frm = new FormCadastroRaca())
+                using (FormCadastroRaca frm = new FormCadastroRaca(id))
                 {
                     frm.ShowDialog();
                 }

@@ -52,7 +52,6 @@ namespace DAL
             }
 
         }
-
         public void Alterar(Animal _animal)
         {
             SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
@@ -99,7 +98,6 @@ namespace DAL
                 cn.Close();
             }
         }
-
         public List<Animal> BuscarPorNome(string _nome)
         {
             List<Animal> animalList = new List<Animal>();
