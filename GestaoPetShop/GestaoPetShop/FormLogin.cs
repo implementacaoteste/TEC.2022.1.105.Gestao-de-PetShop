@@ -60,7 +60,7 @@ namespace GestaoPetShop
         private void FormLogin_Load(object sender, EventArgs e)
         {
 #if DEBUG
-            textBoxSenha.Text = "123";
+            textBoxSenha.Text = "1234";
             textBoxUsuario.Text = "Erisvaldo";
 #endif
         }
