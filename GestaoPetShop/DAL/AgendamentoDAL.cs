@@ -80,7 +80,7 @@ namespace DAL
                         {
                             cmd.Parameters.Clear();
                             cmd.Parameters.AddWithValue("@IdAgendamento", _idagendamento);
-                            cmd.Parameters.AddWithValue("@IdProfissional", Convert.ToInt32(_agendamento.IdProfissional));
+                            cmd.Parameters.AddWithValue("@IdProfissional", Convert.ToInt32(item.IdProfissional));
                             cmd.Parameters.AddWithValue("@IdServico", item.IdServico);
                             cmd.Parameters.AddWithValue("@Quantidade", item.Quantidade);
                             cmd.Parameters.AddWithValue("@ValorUnitario", item.ValorUnitario);
@@ -181,7 +181,7 @@ namespace DAL
                                 cmd.Parameters.Clear();
                                 cmd.Parameters.AddWithValue("@IdAgendamento", _agendamento.Id);
                                 cmd.Parameters.AddWithValue("@IdServico", item.IdServico);
-                                 cmd.Parameters.AddWithValue("@IdProfissional", Convert.ToInt32(_agendamento.IdProfissional));
+                                 cmd.Parameters.AddWithValue("@IdProfissional", Convert.ToInt32(item.IdProfissional));
                                 cmd.Parameters.AddWithValue("@Quantidade", item.Quantidade);
                                 cmd.Parameters.AddWithValue("@ValorUnitario", item.ValorUnitario);
 
@@ -409,11 +409,13 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT Ag.Id, Ag.DataAg,Ag.Horario,Ag.Total,Ag.Ativo, Ani.Id as AnimalId, Ani.Nome as NomeAnimal,Cli.Id as ClienteId, Cli.Nome as NomeCliente, P.Id as ProfissionalId, P.Nome as NomeProfissional,Si.Id as SituacaoId,Si.Descricao as DescSituacao FROM Agendamento Ag LEFT JOIN Profissional P             ON Ag.IdProfissional = P.Id
-                                                                                                                                                                                            LEFT JOIN Animal Ani                 ON Ag.IdAnimal = Ani.Id
-                                                                                                                                                                                            LEFT JOIN Cliente Cli                ON Ani.IdCliente = Cli.Id
-                                                                                                                                                                                            LEFT JOIN Situacao Si                ON Ag.IdSituacao = Si.Id
-                                                                                                                                                                                            WHERE ";
+                cmd.CommandText = @"SELECT Ag.Id, Ag.DataAg,Ag.Horario,Ag.Total,Ag.Ativo, Ani.Id as AnimalId,
+                                    Ani.Nome as NomeAnimal,Cli.Id as ClienteId, Cli.Nome as NomeCliente,
+                                    Si.Id as SituacaoId, Si.Descricao as DescSituacao FROM Agendamento Ag 
+                                    LEFT JOIN Animal Ani                 ON Ag.IdAnimal = Ani.Id
+                                    LEFT JOIN Cliente Cli                ON Ani.IdCliente = Cli.Id
+                                    LEFT JOIN Situacao Si                ON Ag.IdSituacao = Si.Id
+                                    WHERE ";
 
                 if (_opc == 0)
                     cmd.CommandText = cmd.CommandText + "Ag.Id = @Id"; // Busca pelo ID do Agendamento
@@ -437,8 +439,8 @@ namespace DAL
                         agendamento.NomeAnimal = rd["NomeAnimal"].ToString();
                         agendamento.IdCliente = Convert.ToInt32(rd["ClienteId"]);
                         agendamento.NomeCliente = rd["NomeCliente"].ToString();
-                        agendamento.IdProfissional = Convert.ToInt32(rd["ProfissionalId"]);
-                        agendamento.NomeProfissional = rd["NomeProfissional"].ToString();
+                        //agendamento.IdProfissional = Convert.ToInt32(rd["ProfissionalId"]);
+                        //agendamento.NomeProfissional = rd["NomeProfissional"].ToString();
                         agendamento.Horario = rd["Horario"].ToString();
                         agendamento.IdSituacao = Convert.ToInt32(rd["SituacaoId"]);
                         agendamento.DescricaoSituacao = rd["DescSituacao"].ToString();
@@ -467,10 +469,12 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT Ag.Id, Ag.DataAg,Ag.Horario,Ag.Total,Ag.Ativo, Ani.Id as AnimalId, Ani.Nome as NomeAnimal,Cli.Id as ClienteId, Cli.Nome as NomeCliente, P.Id as ProfissionalId, P.Nome as NomeProfissional,Si.Id as SituacaoId,Si.Descricao as DescSituacao FROM Agendamento Ag LEFT JOIN Profissional P             ON Ag.IdProfissional = P.Id
-                                                                                                                                                                                            LEFT JOIN Animal Ani                 ON Ag.IdAnimal = Ani.Id
-                                                                                                                                                                                            LEFT JOIN Cliente Cli                ON Ani.IdCliente = Cli.Id
-                                                                                                                                                                                            LEFT JOIN Situacao Si                ON Ag.IdSituacao = Si.Id  ";
+                cmd.CommandText = @"@""SELECT Ag.Id, Ag.DataAg,Ag.Horario,Ag.Total,Ag.Ativo, Ani.Id as AnimalId,
+                                    Ani.Nome as NomeAnimal,Cli.Id as ClienteId, Cli.Nome as NomeCliente,
+                                    Si.Id as SituacaoId, Si.Descricao as DescSituacao FROM Agendamento Ag 
+                                    LEFT JOIN Animal Ani                 ON Ag.IdAnimal = Ani.Id
+                                    LEFT JOIN Cliente Cli                ON Ani.IdCliente = Cli.Id
+                                    LEFT JOIN Situacao Si                ON Ag.IdSituacao = Si.Id ";
                 if (_opc == 4)
                     cmd.CommandText = cmd.CommandText + " WHERE Ag.DataAg = @Data";
                 else if (_opc == 5)
@@ -536,8 +540,8 @@ namespace DAL
                         agendamento.NomeAnimal = rd["NomeAnimal"].ToString();
                         agendamento.IdCliente = Convert.ToInt32(rd["ClienteId"]);
                         agendamento.NomeCliente = rd["NomeCliente"].ToString();
-                        agendamento.IdProfissional = Convert.ToInt32(rd["ProfissionalId"]);
-                        agendamento.NomeProfissional = rd["NomeProfissional"].ToString();
+                        //agendamento.IdProfissional = Convert.ToInt32(rd["ProfissionalId"]);
+                        //agendamento.NomeProfissional = rd["NomeProfissional"].ToString();
                         agendamento.Horario = rd["Horario"].ToString();
                         agendamento.IdSituacao = Convert.ToInt32(rd["SituacaoId"]);
                         agendamento.DescricaoSituacao = rd["DescSituacao"].ToString();
@@ -568,10 +572,12 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT Ag.Id, Ag.DataAg,Ag.Horario,Ag.Total,Ag.Ativo, Ani.Id as AnimalId, Ani.Nome as NomeAnimal,Cli.Id as ClienteId, Cli.Nome as NomeCliente, P.Id as ProfissionalId, P.Nome as NomeProfissional,Si.Id as SituacaoId,Si.Descricao as DescSituacao FROM Agendamento Ag LEFT JOIN Profissional P             ON Ag.IdProfissional = P.Id
-                                                                                                                                                                                            LEFT JOIN Animal Ani                 ON Ag.IdAnimal = Ani.Id
-                                                                                                                                                                                            LEFT JOIN Cliente Cli                ON Ani.IdCliente = Cli.Id
-                                                                                                                                                                                            LEFT JOIN Situacao Si                ON Ag.IdSituacao = Si.Id WHERE  UPPER(Cli.Nome) LIKE UPPER(@Nome)";//WHERE Ag.Id = @Id
+                cmd.CommandText = @"SELECT Ag.Id, Ag.DataAg,Ag.Horario,Ag.Total,Ag.Ativo, Ani.Id as AnimalId,
+                                    Ani.Nome as NomeAnimal,Cli.Id as ClienteId, Cli.Nome as NomeCliente,
+                                    Si.Id as SituacaoId, Si.Descricao as DescSituacao FROM Agendamento Ag 
+                                    LEFT JOIN Animal Ani                 ON Ag.IdAnimal = Ani.Id
+                                    LEFT JOIN Cliente Cli                ON Ani.IdCliente = Cli.Id
+                                    LEFT JOIN Situacao Si                ON Ag.IdSituacao = Si.Id WHERE  UPPER(Cli.Nome) LIKE UPPER(@Nome)";//WHERE Ag.Id = @Id
                 if (_opcAtivo == 1)
                 {
                     cmd.CommandText = cmd.CommandText + " AND Ag.Ativo = 1";
@@ -631,8 +637,8 @@ namespace DAL
                         agendamento.NomeAnimal = rd["NomeAnimal"].ToString();
                         agendamento.IdCliente = Convert.ToInt32(rd["ClienteId"]);
                         agendamento.NomeCliente = rd["NomeCliente"].ToString();
-                        agendamento.IdProfissional = Convert.ToInt32(rd["ProfissionalId"]);
-                        agendamento.NomeProfissional = rd["NomeProfissional"].ToString();
+                        //agendamento.IdProfissional = Convert.ToInt32(rd["ProfissionalId"]);
+                        //agendamento.NomeProfissional = rd["NomeProfissional"].ToString();
                         agendamento.Horario = rd["Horario"].ToString();
                         agendamento.IdSituacao = Convert.ToInt32(rd["SituacaoId"]);
                         agendamento.DescricaoSituacao = rd["DescSituacao"].ToString();
@@ -663,10 +669,15 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT Ag.Id, Ag.DataAg,Ag.Horario,Ag.Total,Ag.Ativo, Ani.Id as AnimalId, Ani.Nome as NomeAnimal,Cli.Id as ClienteId, Cli.Nome as NomeCliente, P.Id as ProfissionalId, P.Nome as NomeProfissional,Si.Id as SituacaoId,Si.Descricao as DescSituacao FROM Agendamento Ag LEFT JOIN Profissional P             ON Ag.IdProfissional = P.Id
-                                                                                                                                                                                            LEFT JOIN Animal Ani                 ON Ag.IdAnimal = Ani.Id
-                                                                                                                                                                                            LEFT JOIN Cliente Cli                ON Ani.IdCliente = Cli.Id
-                                                                                                                                                                                            LEFT JOIN Situacao Si                ON Ag.IdSituacao = Si.Id WHERE  UPPER(P.Nome) LIKE UPPER(@Nome)";//WHERE Ag.Id = @Id
+                cmd.CommandText = @"SELECT Ag.Id, Ag.DataAg,Ag.Horario,Ag.Total,Ag.Ativo, Ani.Id as AnimalId,
+                                    Ani.Nome as NomeAnimal,Cli.Id as ClienteId, Cli.Nome as NomeCliente, 
+                                    Si.Id as SituacaoId,Si.Descricao as DescSituacao 
+                                    FROM Agendamento Ag LEFT JOIN AgendamentoServico AgSer   ON Ag.Id = AgSer.IdAgendamento
+                                                        LEFT JOIN Profissional P             ON AgSer.IdProfissional = P.Id
+                                                        LEFT JOIN Animal Ani                 ON Ag.IdAnimal = Ani.Id
+                                                        LEFT JOIN Cliente Cli                ON Ani.IdCliente = Cli.Id
+                                                        LEFT JOIN Situacao Si                ON Ag.IdSituacao = Si.Id 
+                                                        WHERE  UPPER(P.Nome) LIKE UPPER(@Nome)";//WHERE Ag.Id = @Id
 
                 if (_opcAtivo == 1)
                 {
@@ -726,8 +737,8 @@ namespace DAL
                         agendamento.NomeAnimal = rd["NomeAnimal"].ToString();
                         agendamento.IdCliente = Convert.ToInt32(rd["ClienteId"]);
                         agendamento.NomeCliente = rd["NomeCliente"].ToString();
-                        agendamento.IdProfissional = Convert.ToInt32(rd["ProfissionalId"]);
-                        agendamento.NomeProfissional = rd["NomeProfissional"].ToString();
+                        //agendamento.IdProfissional = Convert.ToInt32(rd["ProfissionalId"]);
+                        //agendamento.NomeProfissional = rd["NomeProfissional"].ToString();
                         agendamento.Horario = rd["Horario"].ToString();
                         agendamento.IdSituacao = Convert.ToInt32(rd["SituacaoId"]);
                         agendamento.DescricaoSituacao = rd["DescSituacao"].ToString();
@@ -758,12 +769,15 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT Ag.Id, Ag.DataAg,Ag.Horario,Ag.Total,Ag.Ativo, Ani.Id as AnimalId, Ani.Nome as NomeAnimal,Cli.Id as ClienteId, Cli.Nome as NomeCliente, P.Id as ProfissionalId, P.Nome as NomeProfissional,Si.Id as SituacaoId,Si.Descricao as DescSituacao FROM Agendamento Ag LEFT JOIN Profissional P             ON Ag.IdProfissional = P.Id
-                                                                                                                                                                                            LEFT JOIN Animal Ani                 ON Ag.IdAnimal = Ani.Id
-                                                                                                                                                                                            LEFT JOIN Cliente Cli                ON Ani.IdCliente = Cli.Id
-                                                                                                                                                                                            LEFT JOIN AgendamentoServicos AgSe   ON Ag.Id = AgSe.IdAgendamento
-                                                                                                                                                                                            LEFT JOIN Servico Se                 ON AgSe.IdServico = Se.Id
-                                                                                                                                                                                            LEFT JOIN Situacao Si                ON Ag.IdSituacao = Si.Id WHERE   UPPER (P.Nome) LIKE UPPER (@NomeProfissional) ";
+                cmd.CommandText = @"SELECT Ag.Id, Ag.DataAg,Ag.Horario,Ag.Total,Ag.Ativo, Ani.Id as AnimalId,
+                                    Ani.Nome as NomeAnimal,Cli.Id as ClienteId, Cli.Nome as NomeCliente, 
+                                    Si.Id as SituacaoId,Si.Descricao as DescSituacao 
+                                    FROM Agendamento Ag LEFT JOIN AgendamentoServico AgSer   ON Ag.Id = AgSer.IdAgendamento
+                                                        LEFT JOIN Profissional P             ON AgSer.IdProfissional = P.Id
+                                                        LEFT JOIN Animal Ani                 ON Ag.IdAnimal = Ani.Id
+                                                        LEFT JOIN Cliente Cli                ON Ani.IdCliente = Cli.Id
+                                                        LEFT JOIN Situacao Si                ON Ag.IdSituacao = Si.Id 
+                                                        WHERE   UPPER (P.Nome) LIKE UPPER (@NomeProfissional) ";
 
                 if (_opc == 1)
                     cmd.CommandText = cmd.CommandText + " AND Ag.DataAg = @Data";
@@ -835,8 +849,8 @@ namespace DAL
                             agendamento.NomeAnimal = rd["NomeAnimal"].ToString();
                             agendamento.IdCliente = Convert.ToInt32(rd["ClienteId"]);
                             agendamento.NomeCliente = rd["NomeCliente"].ToString();
-                            agendamento.IdProfissional = Convert.ToInt32(rd["ProfissionalId"]);
-                            agendamento.NomeProfissional = rd["NomeProfissional"].ToString();
+                            //agendamento.IdProfissional = Convert.ToInt32(rd["ProfissionalId"]);
+                            //agendamento.NomeProfissional = rd["NomeProfissional"].ToString();
                             agendamento.Horario = rd["Horario"].ToString();
                             agendamento.IdSituacao = Convert.ToInt32(rd["SituacaoId"]);
                             agendamento.DescricaoSituacao = rd["DescSituacao"].ToString();
@@ -872,10 +886,8 @@ namespace DAL
                 cmd.CommandText = @"SELECT  Ag.Id, Ag.DataAg, Ag.Horario, Ag.Total,
                                             Ani.Id as AnimalId, Ani.Nome as NomeAnimal, 
                                             Cli.Id as ClienteId, Cli.Nome as NomeCliente,
-                                            P.Id as ProfissionalId, P.Nome as NomeProfissional,
                                             Si.Id as SituacaoId, Si.Descricao as DescSituacao
                                             FROM Agendamento Ag
-                                    LEFT JOIN Profissional P            ON Ag.IdProfissional = P.Id
                                     LEFT JOIN Animal Ani                ON Ag.IdAnimal = Ani.Id
                                     LEFT JOIN Cliente Cli               ON Ani.IdCliente = Cli.Id
                                     LEFT JOIN AgendamentoServicos AgSe  ON Ag.Id = AgSe.IdAgendamento
@@ -944,8 +956,8 @@ namespace DAL
                             agendamento.NomeAnimal = rd["NomeAnimal"].ToString();
                             agendamento.IdCliente = Convert.ToInt32(rd["ClienteId"]);
                             agendamento.NomeCliente = rd["NomeCliente"].ToString();
-                            agendamento.IdProfissional = Convert.ToInt32(rd["ProfissionalId"]);
-                            agendamento.NomeProfissional = rd["NomeProfissional"].ToString();
+                            //agendamento.IdProfissional = Convert.ToInt32(rd["ProfissionalId"]);
+                            //agendamento.NomeProfissional = rd["NomeProfissional"].ToString();
                             agendamento.Horario = rd["Horario"].ToString();
                             agendamento.IdSituacao = Convert.ToInt32(rd["SituacaoId"]);
                             agendamento.DescricaoSituacao = rd["DescSituacao"].ToString();
@@ -977,12 +989,17 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT Ag.Id, Ag.DataAg,Ag.Horario,Ag.Total,Ag.Ativo, Ani.Id as AnimalId, Ani.Nome as NomeAnimal,Cli.Id as ClienteId, Cli.Nome as NomeCliente, P.Id as ProfissionalId, P.Nome as NomeProfissional,Si.Id as SituacaoId,Si.Descricao as DescSituacao FROM Agendamento Ag LEFT JOIN Profissional P             ON Ag.IdProfissional = P.Id
-                                                                                                                                                                                            LEFT JOIN Animal Ani                 ON Ag.IdAnimal = Ani.Id
-                                                                                                                                                                                            LEFT JOIN Cliente Cli                ON Ani.IdCliente = Cli.Id
-                                                                                                                                                                                            LEFT JOIN AgendamentoServicos AgSe   ON Ag.Id = AgSe.IdAgendamento
-                                                                                                                                                                                            LEFT JOIN Servico Se                 ON AgSe.IdServico = Se.Id
-                                                                                                                                                                                            LEFT JOIN Situacao Si                ON Ag.IdSituacao = Si.Id WHERE UPPER (Se.Descricao) LIKE UPPER (@NomeServico) ";
+                cmd.CommandText = @"SELECT  Ag.Id, Ag.DataAg, Ag.Horario, Ag.Total,
+                                            Ani.Id as AnimalId, Ani.Nome as NomeAnimal, 
+                                            Cli.Id as ClienteId, Cli.Nome as NomeCliente,
+                                            Si.Id as SituacaoId, Si.Descricao as DescSituacao
+                                            FROM Agendamento Ag
+                                    LEFT JOIN Animal Ani                ON Ag.IdAnimal = Ani.Id
+                                    LEFT JOIN Cliente Cli               ON Ani.IdCliente = Cli.Id
+                                    LEFT JOIN AgendamentoServicos AgSe  ON Ag.Id = AgSe.IdAgendamento
+                                    LEFT JOIN Servico Se                ON AgSe.IdServico = Se.Id
+                                    LEFT JOIN Situacao Si               ON Ag.IdSituacao = Si.Id
+                                    WHERE UPPER (Se.Descricao) LIKE UPPER (@NomeServico) ";
 
                 if (_opc == 1)
                     cmd.CommandText = cmd.CommandText + " AND Ag.DataAg = @Data";
@@ -1055,8 +1072,8 @@ namespace DAL
                             agendamento.NomeAnimal = rd["NomeAnimal"].ToString();
                             agendamento.IdCliente = Convert.ToInt32(rd["ClienteId"]);
                             agendamento.NomeCliente = rd["NomeCliente"].ToString();
-                            agendamento.IdProfissional = Convert.ToInt32(rd["ProfissionalId"]);
-                            agendamento.NomeProfissional = rd["NomeProfissional"].ToString();
+                            //agendamento.IdProfissional = Convert.ToInt32(rd["ProfissionalId"]);
+                            //agendamento.NomeProfissional = rd["NomeProfissional"].ToString();
                             agendamento.Horario = rd["Horario"].ToString();
                             agendamento.IdSituacao = Convert.ToInt32(rd["SituacaoId"]);
                             agendamento.DescricaoSituacao = rd["DescSituacao"].ToString();
@@ -1091,8 +1108,11 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT AgeSer.Id,AgeSer.idServico, Ser.Descricao, AgeSer.ValorUnitario, AgeSer.Quantidade, Ser.Preco, Ser.Tempo 
-                                    FROM AgendamentoServicos AgeSer INNER JOIN Servico Ser ON AgeSer.IdServico = Ser.Id  WHERE AgeSer.IdAgendamento = @Id";
+                cmd.CommandText = @"SELECT AgeSer.Id,AgeSer.idServico, Ser.Descricao, AgeSer.ValorUnitario, AgeSer.Quantidade,
+                                            Ser.Preco, Ser.Tempo, P.Id as IdProfissional, P.Nome as NomeProfissional 
+                                    FROM AgendamentoServicos AgeSer INNER JOIN Servico Ser ON AgeSer.IdServico = Ser.Id 
+                                                                    INNER JOIN Profissional P ON AgSer.IdProfissional = P.Id  
+                                                                    WHERE AgeSer.IdAgendamento = @Id";
 
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@Id", _idAgendamento);
@@ -1106,6 +1126,8 @@ namespace DAL
                         servico.IdServico = Convert.ToInt32(rd["IdServico"]);
                         servico.Servico = rd["Descricao"].ToString();
                         servico.ValorUnitario = Convert.ToDecimal(rd["ValorUnitario"]);
+                        servico.IdProfissional = Convert.ToInt32(rd["IdProfissional"]);
+                        servico.NomeProfissional = rd["NomeProfissional"].ToString();
                         servico.Quantidade = Convert.ToInt32(rd["Quantidade"]);
                         servico.ValorUnitario = Convert.ToDecimal(rd["Preco"]);
                         servico.Tempo = Convert.ToInt32(rd["Tempo"]);
