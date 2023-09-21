@@ -465,6 +465,7 @@
     <None Include="Properties\DataSources\Models.GrupoUsuario.datasource" />
     <None Include="Properties\DataSources\Models.Permissao.datasource" />
     <None Include="Properties\DataSources\Models.Profissional.datasource" />
+    <None Include="Properties\DataSources\Models.Raca.datasource" />
     <None Include="Properties\DataSources\Models.Servico.datasource" />
     <None Include="Properties\DataSources\Models.Usuario.datasource" />
     <None Include="Properties\Settings.settings">

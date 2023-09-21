@@ -17,13 +17,14 @@ namespace DAL
             try
             {
                 SqlCommand cmd = cn.CreateCommand();
-                cmd.CommandText = @"ISERT INTO Raca(Nome, Especie, PaisOrigem)
-                                             VOLUES(Nome, Especie, PaisOrigem)";
+                cmd.CommandText = @"INSERT INTO Raca(Nome, Especie, PaisOrigem, Ativo)
+                                             VALUES(@Nome, @Especie, @PaisOrigem, @Ativo)";
                 cmd.CommandType = System.Data.CommandType.Text;
 
                 cmd.Parameters.AddWithValue("@Nome", _raca.Nome);
                 cmd.Parameters.AddWithValue("@Especie", _raca.Especie);
                 cmd.Parameters.AddWithValue("@PaisOrigem", _raca.PaisOrigem);
+                cmd.Parameters.AddWithValue("Ativo", _raca.Ativo);
 
                 cmd.Connection = cn;
                 cn.Open();
@@ -49,16 +50,16 @@ namespace DAL
                 cmd.CommandText = @"UPDATE Raca SET 
                                              Nome = @Nome,
                                              Especie = @Especie, 
-                                             PaisOrigem = @PaisOrigem)
-                                             Ativo = @Ativo,
+                                             PaisOrigem = @PaisOrigem,
+                                             Ativo = @Ativo
                                              WHERE Id = @Id";
                 cmd.CommandType = System.Data.CommandType.Text;
 
-                cmd.Parameters.AddWithValue("@Id", _raca.Id);
                 cmd.Parameters.AddWithValue("@Nome", _raca.Nome);
                 cmd.Parameters.AddWithValue("@Especie", _raca.Especie);
                 cmd.Parameters.AddWithValue("@PaisOrigem", _raca.PaisOrigem);
                 cmd.Parameters.AddWithValue("@Ativo", _raca.Ativo);
+                cmd.Parameters.AddWithValue("@Id", _raca.Id);
 
                 cmd.Connection = cn;
                 cn.Open();
@@ -67,7 +68,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu erro ao tentar alterar um raça no banco de dados.", ex) { Data = { { "Id", 29 } } }; ;
+                throw new Exception("Ocorreu erro ao tentar alterar um raça no banco de dados.", ex) { Data = { { "Id", 29 } } };
             }
             finally
             {

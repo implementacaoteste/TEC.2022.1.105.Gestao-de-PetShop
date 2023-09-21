@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static Guna.UI2.Native.WinApi;
 
 namespace GestaoPetShop
 {
@@ -28,7 +29,7 @@ namespace GestaoPetShop
 
         private void buttonSalvar_Click(object sender, EventArgs e)
         {
-           /* try
+          try
             {
                 if (!permitirSalvar)
                     return;
@@ -49,22 +50,23 @@ namespace GestaoPetShop
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-            }*/
+            }
         }
 
         private void FormCadastroRaca_Load(object sender, EventArgs e)
         {
-            /* try
-             {
-                 if (id == 0)
-                     racaBindingSource.AddNew();
-                 else
-                     racaBindingSource.DataSource = new RacaBLL().BuscarPorId(id);
-             }
-             catch (Exception ex)
-             {
-                 MessageBox.Show(ex.Message);
-             } */
+
+           try
+            {
+                if (id == 0)
+                    racaBindingSource.AddNew();
+                else
+                    racaBindingSource.DataSource = new RacaBLL().BuscarPorId(id);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void buttonCancelar_Click(object sender, EventArgs e)
