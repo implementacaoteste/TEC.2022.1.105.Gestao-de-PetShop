@@ -256,6 +256,8 @@
             this.agendamentoDataGridView.AllowUserToAddRows = false;
             this.agendamentoDataGridView.AllowUserToDeleteRows = false;
             this.agendamentoDataGridView.AllowUserToOrderColumns = true;
+            this.agendamentoDataGridView.AllowUserToResizeColumns = false;
+            this.agendamentoDataGridView.AllowUserToResizeRows = false;
             this.agendamentoDataGridView.AutoGenerateColumns = false;
             this.agendamentoDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.agendamentoDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -360,6 +362,8 @@
             this.agendamentoServicosDataGridView.AllowUserToAddRows = false;
             this.agendamentoServicosDataGridView.AllowUserToDeleteRows = false;
             this.agendamentoServicosDataGridView.AllowUserToOrderColumns = true;
+            this.agendamentoServicosDataGridView.AllowUserToResizeColumns = false;
+            this.agendamentoServicosDataGridView.AllowUserToResizeRows = false;
             this.agendamentoServicosDataGridView.AutoGenerateColumns = false;
             this.agendamentoServicosDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.agendamentoServicosDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
