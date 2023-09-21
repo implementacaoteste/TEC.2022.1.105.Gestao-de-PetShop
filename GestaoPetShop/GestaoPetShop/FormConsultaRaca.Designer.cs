@@ -157,6 +157,8 @@
             this.racaDataGridView.AllowUserToAddRows = false;
             this.racaDataGridView.AllowUserToDeleteRows = false;
             this.racaDataGridView.AllowUserToOrderColumns = true;
+            this.racaDataGridView.AllowUserToResizeColumns = false;
+            this.racaDataGridView.AllowUserToResizeRows = false;
             this.racaDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));

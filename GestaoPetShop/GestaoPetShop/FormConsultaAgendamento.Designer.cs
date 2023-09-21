@@ -56,14 +56,14 @@
             this.agendamentoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.agendamentoServicosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.agendamentoServicosDataGridView = new System.Windows.Forms.DataGridView();
-            this.buttonFecharCalendario = new System.Windows.Forms.Button();
-            this.comboBox_SelecionarSituacaoBusca = new System.Windows.Forms.ComboBox();
-            this.comboBoxSelecionarAtivoBuscar = new System.Windows.Forms.ComboBox();
             this.IdServico = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn27 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.buttonFecharCalendario = new System.Windows.Forms.Button();
+            this.comboBox_SelecionarSituacaoBusca = new System.Windows.Forms.ComboBox();
+            this.comboBoxSelecionarAtivoBuscar = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1_FormsPrincipalBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.agendamentoDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.agendamentoBindingSource)).BeginInit();
@@ -374,47 +374,6 @@
             this.agendamentoServicosDataGridView.Size = new System.Drawing.Size(415, 220);
             this.agendamentoServicosDataGridView.TabIndex = 28;
             // 
-            // buttonFecharCalendario
-            // 
-            this.buttonFecharCalendario.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.buttonFecharCalendario.Location = new System.Drawing.Point(467, 257);
-            this.buttonFecharCalendario.Margin = new System.Windows.Forms.Padding(4);
-            this.buttonFecharCalendario.Name = "buttonFecharCalendario";
-            this.buttonFecharCalendario.Size = new System.Drawing.Size(39, 28);
-            this.buttonFecharCalendario.TabIndex = 29;
-            this.buttonFecharCalendario.Text = "X";
-            this.buttonFecharCalendario.UseVisualStyleBackColor = false;
-            this.buttonFecharCalendario.Visible = false;
-            this.buttonFecharCalendario.Click += new System.EventHandler(this.buttonFecharCalendario_Click);
-            // 
-            // comboBox_SelecionarSituacaoBusca
-            // 
-            this.comboBox_SelecionarSituacaoBusca.FormattingEnabled = true;
-            this.comboBox_SelecionarSituacaoBusca.Items.AddRange(new object[] {
-            "Todos",
-            "Agendado",
-            "Em andamento",
-            "Finalizado"});
-            this.comboBox_SelecionarSituacaoBusca.Location = new System.Drawing.Point(29, 220);
-            this.comboBox_SelecionarSituacaoBusca.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBox_SelecionarSituacaoBusca.Name = "comboBox_SelecionarSituacaoBusca";
-            this.comboBox_SelecionarSituacaoBusca.Size = new System.Drawing.Size(216, 24);
-            this.comboBox_SelecionarSituacaoBusca.TabIndex = 30;
-            this.comboBox_SelecionarSituacaoBusca.Text = "Situação";
-            // 
-            // comboBoxSelecionarAtivoBuscar
-            // 
-            this.comboBoxSelecionarAtivoBuscar.FormattingEnabled = true;
-            this.comboBoxSelecionarAtivoBuscar.Items.AddRange(new object[] {
-            "Todos",
-            "Ativo",
-            "Inativo"});
-            this.comboBoxSelecionarAtivoBuscar.Location = new System.Drawing.Point(29, 266);
-            this.comboBoxSelecionarAtivoBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBoxSelecionarAtivoBuscar.Name = "comboBoxSelecionarAtivoBuscar";
-            this.comboBoxSelecionarAtivoBuscar.Size = new System.Drawing.Size(216, 24);
-            this.comboBoxSelecionarAtivoBuscar.TabIndex = 31;
-            // 
             // IdServico
             // 
             this.IdServico.DataPropertyName = "IdServico";
@@ -458,6 +417,48 @@
             this.dataGridViewTextBoxColumn27.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn27.Name = "dataGridViewTextBoxColumn27";
             this.dataGridViewTextBoxColumn27.ReadOnly = true;
+            this.dataGridViewTextBoxColumn27.Width = 125;
+            // 
+            // buttonFecharCalendario
+            // 
+            this.buttonFecharCalendario.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.buttonFecharCalendario.Location = new System.Drawing.Point(467, 257);
+            this.buttonFecharCalendario.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonFecharCalendario.Name = "buttonFecharCalendario";
+            this.buttonFecharCalendario.Size = new System.Drawing.Size(39, 28);
+            this.buttonFecharCalendario.TabIndex = 29;
+            this.buttonFecharCalendario.Text = "X";
+            this.buttonFecharCalendario.UseVisualStyleBackColor = false;
+            this.buttonFecharCalendario.Visible = false;
+            this.buttonFecharCalendario.Click += new System.EventHandler(this.buttonFecharCalendario_Click);
+            // 
+            // comboBox_SelecionarSituacaoBusca
+            // 
+            this.comboBox_SelecionarSituacaoBusca.FormattingEnabled = true;
+            this.comboBox_SelecionarSituacaoBusca.Items.AddRange(new object[] {
+            "Todos",
+            "Agendado",
+            "Em andamento",
+            "Finalizado"});
+            this.comboBox_SelecionarSituacaoBusca.Location = new System.Drawing.Point(29, 220);
+            this.comboBox_SelecionarSituacaoBusca.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBox_SelecionarSituacaoBusca.Name = "comboBox_SelecionarSituacaoBusca";
+            this.comboBox_SelecionarSituacaoBusca.Size = new System.Drawing.Size(216, 24);
+            this.comboBox_SelecionarSituacaoBusca.TabIndex = 30;
+            this.comboBox_SelecionarSituacaoBusca.Text = "Situação";
+            // 
+            // comboBoxSelecionarAtivoBuscar
+            // 
+            this.comboBoxSelecionarAtivoBuscar.FormattingEnabled = true;
+            this.comboBoxSelecionarAtivoBuscar.Items.AddRange(new object[] {
+            "Todos",
+            "Ativo",
+            "Inativo"});
+            this.comboBoxSelecionarAtivoBuscar.Location = new System.Drawing.Point(29, 266);
+            this.comboBoxSelecionarAtivoBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBoxSelecionarAtivoBuscar.Name = "comboBoxSelecionarAtivoBuscar";
+            this.comboBoxSelecionarAtivoBuscar.Size = new System.Drawing.Size(216, 24);
+            this.comboBoxSelecionarAtivoBuscar.TabIndex = 31;
             // 
             // FormConsultaAgendamento
             // 
@@ -486,7 +487,9 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(878, 661);
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(878, 661);
             this.Name = "FormConsultaAgendamento";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
