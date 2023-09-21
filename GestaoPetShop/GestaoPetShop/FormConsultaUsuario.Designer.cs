@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormConsultaUsuario));
             this.textBoxBuscarUsuario = new System.Windows.Forms.TextBox();
             this.comboBoxSelecionarTipoPesquisaUsuario = new System.Windows.Forms.ComboBox();
             this.buttonBuscarUsuario = new System.Windows.Forms.Button();
@@ -48,9 +49,9 @@
             // 
             // textBoxBuscarUsuario
             // 
-            this.textBoxBuscarUsuario.Location = new System.Drawing.Point(151, 137);
+            this.textBoxBuscarUsuario.Location = new System.Drawing.Point(139, 133);
             this.textBoxBuscarUsuario.Name = "textBoxBuscarUsuario";
-            this.textBoxBuscarUsuario.Size = new System.Drawing.Size(286, 22);
+            this.textBoxBuscarUsuario.Size = new System.Drawing.Size(381, 22);
             this.textBoxBuscarUsuario.TabIndex = 2;
             // 
             // comboBoxSelecionarTipoPesquisaUsuario
@@ -61,56 +62,60 @@
             "Login",
             "Profissinal",
             "Id Profissional"});
-            this.comboBoxSelecionarTipoPesquisaUsuario.Location = new System.Drawing.Point(24, 136);
+            this.comboBoxSelecionarTipoPesquisaUsuario.Location = new System.Drawing.Point(12, 131);
             this.comboBoxSelecionarTipoPesquisaUsuario.Name = "comboBoxSelecionarTipoPesquisaUsuario";
             this.comboBoxSelecionarTipoPesquisaUsuario.Size = new System.Drawing.Size(121, 24);
             this.comboBoxSelecionarTipoPesquisaUsuario.TabIndex = 3;
             // 
             // buttonBuscarUsuario
             // 
-            this.buttonBuscarUsuario.Location = new System.Drawing.Point(443, 137);
+            this.buttonBuscarUsuario.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.buttonBuscarUsuario.Location = new System.Drawing.Point(202, 98);
             this.buttonBuscarUsuario.Name = "buttonBuscarUsuario";
-            this.buttonBuscarUsuario.Size = new System.Drawing.Size(75, 23);
+            this.buttonBuscarUsuario.Size = new System.Drawing.Size(75, 29);
             this.buttonBuscarUsuario.TabIndex = 4;
             this.buttonBuscarUsuario.Text = "Buscar";
-            this.buttonBuscarUsuario.UseVisualStyleBackColor = true;
+            this.buttonBuscarUsuario.UseVisualStyleBackColor = false;
             this.buttonBuscarUsuario.Click += new System.EventHandler(this.buttonBuscarUsuario_Click);
             // 
             // buttonAlterarUsuario
             // 
-            this.buttonAlterarUsuario.Location = new System.Drawing.Point(524, 137);
+            this.buttonAlterarUsuario.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.buttonAlterarUsuario.Location = new System.Drawing.Point(283, 98);
             this.buttonAlterarUsuario.Name = "buttonAlterarUsuario";
-            this.buttonAlterarUsuario.Size = new System.Drawing.Size(75, 23);
+            this.buttonAlterarUsuario.Size = new System.Drawing.Size(75, 29);
             this.buttonAlterarUsuario.TabIndex = 5;
             this.buttonAlterarUsuario.Text = "Alterar";
-            this.buttonAlterarUsuario.UseVisualStyleBackColor = true;
+            this.buttonAlterarUsuario.UseVisualStyleBackColor = false;
             this.buttonAlterarUsuario.Click += new System.EventHandler(this.buttonAlterarUsuario_Click);
             // 
             // buttonInserirUsuario
             // 
-            this.buttonInserirUsuario.Location = new System.Drawing.Point(605, 137);
+            this.buttonInserirUsuario.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.buttonInserirUsuario.Location = new System.Drawing.Point(364, 98);
             this.buttonInserirUsuario.Name = "buttonInserirUsuario";
-            this.buttonInserirUsuario.Size = new System.Drawing.Size(75, 23);
+            this.buttonInserirUsuario.Size = new System.Drawing.Size(75, 29);
             this.buttonInserirUsuario.TabIndex = 6;
             this.buttonInserirUsuario.Text = "Inserir";
-            this.buttonInserirUsuario.UseVisualStyleBackColor = true;
+            this.buttonInserirUsuario.UseVisualStyleBackColor = false;
             this.buttonInserirUsuario.Click += new System.EventHandler(this.buttonInserirUsuario_Click);
             // 
             // buttonExcluirUsuario
             // 
-            this.buttonExcluirUsuario.Location = new System.Drawing.Point(686, 137);
+            this.buttonExcluirUsuario.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.buttonExcluirUsuario.Location = new System.Drawing.Point(445, 98);
             this.buttonExcluirUsuario.Name = "buttonExcluirUsuario";
-            this.buttonExcluirUsuario.Size = new System.Drawing.Size(75, 23);
+            this.buttonExcluirUsuario.Size = new System.Drawing.Size(75, 29);
             this.buttonExcluirUsuario.TabIndex = 7;
             this.buttonExcluirUsuario.Text = "Excluir";
-            this.buttonExcluirUsuario.UseVisualStyleBackColor = true;
+            this.buttonExcluirUsuario.UseVisualStyleBackColor = false;
             this.buttonExcluirUsuario.Click += new System.EventHandler(this.buttonExcluirUsuario_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(272, 9);
+            this.label1.Location = new System.Drawing.Point(133, 30);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(271, 32);
             this.label1.TabIndex = 8;
@@ -125,6 +130,8 @@
             this.usuarioDataGridView.AllowUserToAddRows = false;
             this.usuarioDataGridView.AllowUserToDeleteRows = false;
             this.usuarioDataGridView.AllowUserToOrderColumns = true;
+            this.usuarioDataGridView.AllowUserToResizeColumns = false;
+            this.usuarioDataGridView.AllowUserToResizeRows = false;
             this.usuarioDataGridView.AutoGenerateColumns = false;
             this.usuarioDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.usuarioDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -133,13 +140,14 @@
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewCheckBoxColumn2});
             this.usuarioDataGridView.DataSource = this.usuarioBindingSource;
-            this.usuarioDataGridView.Location = new System.Drawing.Point(12, 197);
+            this.usuarioDataGridView.Location = new System.Drawing.Point(12, 161);
             this.usuarioDataGridView.Name = "usuarioDataGridView";
             this.usuarioDataGridView.ReadOnly = true;
             this.usuarioDataGridView.RowHeadersVisible = false;
             this.usuarioDataGridView.RowHeadersWidth = 51;
             this.usuarioDataGridView.RowTemplate.Height = 24;
-            this.usuarioDataGridView.Size = new System.Drawing.Size(759, 234);
+            this.usuarioDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.usuarioDataGridView.Size = new System.Drawing.Size(508, 180);
             this.usuarioDataGridView.TabIndex = 9;
             // 
             // dataGridViewTextBoxColumn3
@@ -153,12 +161,12 @@
             // 
             // NomeProfissional
             // 
-            this.NomeProfissional.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.NomeProfissional.DataPropertyName = "NomeProfissional";
             this.NomeProfissional.HeaderText = "Nome do Profissional";
             this.NomeProfissional.MinimumWidth = 6;
             this.NomeProfissional.Name = "NomeProfissional";
             this.NomeProfissional.ReadOnly = true;
+            this.NomeProfissional.Width = 250;
             // 
             // dataGridViewTextBoxColumn4
             // 
@@ -167,7 +175,7 @@
             this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            this.dataGridViewTextBoxColumn4.Width = 125;
+            this.dataGridViewTextBoxColumn4.Width = 150;
             // 
             // dataGridViewCheckBoxColumn2
             // 
@@ -182,7 +190,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(804, 520);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ClientSize = new System.Drawing.Size(532, 353);
             this.Controls.Add(this.usuarioDataGridView);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonExcluirUsuario);
@@ -191,8 +200,14 @@
             this.Controls.Add(this.buttonBuscarUsuario);
             this.Controls.Add(this.comboBoxSelecionarTipoPesquisaUsuario);
             this.Controls.Add(this.textBoxBuscarUsuario);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(550, 400);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(550, 400);
             this.Name = "FormConsultaUsuario";
-            this.Text = "FormConsultaUsuario";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioDataGridView)).EndInit();
             this.ResumeLayout(false);

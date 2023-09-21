@@ -59,9 +59,10 @@
             "Todos",
             "Id",
             "Descrição"});
-            this.comboBox_EscolhaBuscarServico.Location = new System.Drawing.Point(11, 100);
+            this.comboBox_EscolhaBuscarServico.Location = new System.Drawing.Point(12, 155);
+            this.comboBox_EscolhaBuscarServico.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox_EscolhaBuscarServico.Name = "comboBox_EscolhaBuscarServico";
-            this.comboBox_EscolhaBuscarServico.Size = new System.Drawing.Size(100, 25);
+            this.comboBox_EscolhaBuscarServico.Size = new System.Drawing.Size(132, 28);
             this.comboBox_EscolhaBuscarServico.TabIndex = 4;
             this.comboBox_EscolhaBuscarServico.Text = "Buscar Por";
             // 
@@ -69,9 +70,10 @@
             // 
             this.textBox_BuscarServico.BackColor = System.Drawing.Color.White;
             this.textBox_BuscarServico.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_BuscarServico.Location = new System.Drawing.Point(117, 99);
+            this.textBox_BuscarServico.Location = new System.Drawing.Point(189, 155);
+            this.textBox_BuscarServico.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_BuscarServico.Name = "textBox_BuscarServico";
-            this.textBox_BuscarServico.Size = new System.Drawing.Size(237, 26);
+            this.textBox_BuscarServico.Size = new System.Drawing.Size(330, 30);
             this.textBox_BuscarServico.TabIndex = 5;
             // 
             // servicoDataGridView
@@ -79,8 +81,9 @@
             this.servicoDataGridView.AllowUserToAddRows = false;
             this.servicoDataGridView.AllowUserToDeleteRows = false;
             this.servicoDataGridView.AllowUserToOrderColumns = true;
+            this.servicoDataGridView.AllowUserToResizeColumns = false;
+            this.servicoDataGridView.AllowUserToResizeRows = false;
             this.servicoDataGridView.AutoGenerateColumns = false;
-            this.servicoDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.servicoDataGridView.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableAlwaysIncludeHeaderText;
             this.servicoDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.servicoDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -99,14 +102,16 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.servicoDataGridView.DefaultCellStyle = dataGridViewCellStyle2;
             this.servicoDataGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(190)))), ((int)(((byte)(255)))));
-            this.servicoDataGridView.Location = new System.Drawing.Point(12, 131);
+            this.servicoDataGridView.Location = new System.Drawing.Point(13, 192);
+            this.servicoDataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.servicoDataGridView.MultiSelect = false;
             this.servicoDataGridView.Name = "servicoDataGridView";
             this.servicoDataGridView.ReadOnly = true;
             this.servicoDataGridView.RowHeadersVisible = false;
             this.servicoDataGridView.RowHeadersWidth = 51;
+            this.servicoDataGridView.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.servicoDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.servicoDataGridView.Size = new System.Drawing.Size(342, 108);
+            this.servicoDataGridView.Size = new System.Drawing.Size(506, 148);
             this.servicoDataGridView.TabIndex = 10;
             // 
             // dataGridViewTextBoxColumn1
@@ -116,7 +121,7 @@
             this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 50;
+            this.dataGridViewTextBoxColumn1.Width = 35;
             // 
             // dataGridViewTextBoxColumn2
             // 
@@ -143,7 +148,7 @@
             this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            this.dataGridViewTextBoxColumn4.Width = 60;
+            this.dataGridViewTextBoxColumn4.Width = 50;
             // 
             // dataGridViewCheckBoxColumn1
             // 
@@ -161,11 +166,12 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(29, 9);
+            this.label5.Location = new System.Drawing.Point(117, 30);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(310, 36);
+            this.label5.Size = new System.Drawing.Size(299, 34);
             this.label5.TabIndex = 15;
             this.label5.Text = "Consulta de Serviços";
             // 
@@ -187,9 +193,10 @@
             this.button_AlterarServico.ForeColor = System.Drawing.Color.Black;
             this.button_AlterarServico.ImageKey = "(none)";
             this.button_AlterarServico.ImageList = this.imageList1;
-            this.button_AlterarServico.Location = new System.Drawing.Point(233, 66);
+            this.button_AlterarServico.Location = new System.Drawing.Point(360, 113);
+            this.button_AlterarServico.Margin = new System.Windows.Forms.Padding(4);
             this.button_AlterarServico.Name = "button_AlterarServico";
-            this.button_AlterarServico.Size = new System.Drawing.Size(58, 27);
+            this.button_AlterarServico.Size = new System.Drawing.Size(77, 33);
             this.button_AlterarServico.TabIndex = 8;
             this.button_AlterarServico.Text = "Alterar";
             this.button_AlterarServico.UseVisualStyleBackColor = false;
@@ -202,9 +209,10 @@
             this.button_InserirServico.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_InserirServico.ForeColor = System.Drawing.Color.Black;
             this.button_InserirServico.ImageKey = "(none)";
-            this.button_InserirServico.Location = new System.Drawing.Point(169, 66);
+            this.button_InserirServico.Location = new System.Drawing.Point(274, 113);
+            this.button_InserirServico.Margin = new System.Windows.Forms.Padding(4);
             this.button_InserirServico.Name = "button_InserirServico";
-            this.button_InserirServico.Size = new System.Drawing.Size(58, 28);
+            this.button_InserirServico.Size = new System.Drawing.Size(77, 34);
             this.button_InserirServico.TabIndex = 7;
             this.button_InserirServico.Text = "Inserir";
             this.button_InserirServico.UseVisualStyleBackColor = false;
@@ -217,9 +225,10 @@
             this.button_BucarServico.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_BucarServico.ForeColor = System.Drawing.Color.Black;
             this.button_BucarServico.ImageKey = "(none)";
-            this.button_BucarServico.Location = new System.Drawing.Point(105, 66);
+            this.button_BucarServico.Location = new System.Drawing.Point(189, 113);
+            this.button_BucarServico.Margin = new System.Windows.Forms.Padding(4);
             this.button_BucarServico.Name = "button_BucarServico";
-            this.button_BucarServico.Size = new System.Drawing.Size(58, 28);
+            this.button_BucarServico.Size = new System.Drawing.Size(77, 34);
             this.button_BucarServico.TabIndex = 6;
             this.button_BucarServico.Text = "Buscar";
             this.button_BucarServico.UseVisualStyleBackColor = false;
@@ -229,10 +238,10 @@
             // 
             this.button_ExcluirServico.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.button_ExcluirServico.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_ExcluirServico.Location = new System.Drawing.Point(296, 66);
-            this.button_ExcluirServico.Margin = new System.Windows.Forms.Padding(2);
+            this.button_ExcluirServico.Location = new System.Drawing.Point(444, 113);
+            this.button_ExcluirServico.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button_ExcluirServico.Name = "button_ExcluirServico";
-            this.button_ExcluirServico.Size = new System.Drawing.Size(58, 28);
+            this.button_ExcluirServico.Size = new System.Drawing.Size(77, 34);
             this.button_ExcluirServico.TabIndex = 16;
             this.button_ExcluirServico.Text = "Excluir";
             this.button_ExcluirServico.UseVisualStyleBackColor = false;
@@ -240,10 +249,10 @@
             // 
             // FormConsultaServico
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(373, 251);
+            this.ClientSize = new System.Drawing.Size(532, 353);
             this.Controls.Add(this.button_ExcluirServico);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.servicoDataGridView);
@@ -254,10 +263,14 @@
             this.Controls.Add(this.button_BucarServico);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(550, 400);
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(550, 400);
             this.Name = "FormConsultaServico";
             this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             ((System.ComponentModel.ISupportInitialize)(this.servicoDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.servicoBindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -273,13 +286,13 @@
         private System.Windows.Forms.BindingSource servicoBindingSource;
         private System.Windows.Forms.DataGridView servicoDataGridView;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ImageList imageList1;
+        private System.Windows.Forms.Button button_ExcluirServico;
+        private System.Windows.Forms.Button button_AlterarServico;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
-        private System.Windows.Forms.ImageList imageList1;
-        private System.Windows.Forms.Button button_ExcluirServico;
-        private System.Windows.Forms.Button button_AlterarServico;
     }
 }

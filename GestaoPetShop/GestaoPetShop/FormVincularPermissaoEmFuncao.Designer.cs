@@ -53,13 +53,15 @@
             this.permissaoDataGridView.AllowUserToAddRows = false;
             this.permissaoDataGridView.AllowUserToDeleteRows = false;
             this.permissaoDataGridView.AllowUserToOrderColumns = true;
+            this.permissaoDataGridView.AllowUserToResizeColumns = false;
+            this.permissaoDataGridView.AllowUserToResizeRows = false;
             this.permissaoDataGridView.AutoGenerateColumns = false;
             this.permissaoDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.permissaoDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2});
             this.permissaoDataGridView.DataSource = this.permissaoBindingSource;
-            this.permissaoDataGridView.Location = new System.Drawing.Point(29, 147);
+            this.permissaoDataGridView.Location = new System.Drawing.Point(12, 147);
             this.permissaoDataGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.permissaoDataGridView.Name = "permissaoDataGridView";
             this.permissaoDataGridView.ReadOnly = true;
@@ -67,7 +69,7 @@
             this.permissaoDataGridView.RowHeadersWidth = 51;
             this.permissaoDataGridView.RowTemplate.Height = 24;
             this.permissaoDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.permissaoDataGridView.Size = new System.Drawing.Size(569, 249);
+            this.permissaoDataGridView.Size = new System.Drawing.Size(508, 155);
             this.permissaoDataGridView.TabIndex = 1;
             // 
             // dataGridViewTextBoxColumn1
@@ -95,7 +97,7 @@
             // buttonBuscarPermissao
             // 
             this.buttonBuscarPermissao.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.buttonBuscarPermissao.Location = new System.Drawing.Point(517, 111);
+            this.buttonBuscarPermissao.Location = new System.Drawing.Point(439, 117);
             this.buttonBuscarPermissao.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonBuscarPermissao.Name = "buttonBuscarPermissao";
             this.buttonBuscarPermissao.Size = new System.Drawing.Size(81, 26);
@@ -111,24 +113,24 @@
             "Todos",
             "Id",
             "Nome"});
-            this.comboBoxSelecionarBuscaPermissao.Location = new System.Drawing.Point(29, 113);
+            this.comboBoxSelecionarBuscaPermissao.Location = new System.Drawing.Point(12, 117);
             this.comboBoxSelecionarBuscaPermissao.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxSelecionarBuscaPermissao.Name = "comboBoxSelecionarBuscaPermissao";
-            this.comboBoxSelecionarBuscaPermissao.Size = new System.Drawing.Size(121, 24);
+            this.comboBoxSelecionarBuscaPermissao.Size = new System.Drawing.Size(95, 24);
             this.comboBoxSelecionarBuscaPermissao.TabIndex = 3;
             // 
             // textBoxBuscarPermissao
             // 
-            this.textBoxBuscarPermissao.Location = new System.Drawing.Point(165, 113);
+            this.textBoxBuscarPermissao.Location = new System.Drawing.Point(139, 117);
             this.textBoxBuscarPermissao.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxBuscarPermissao.Name = "textBoxBuscarPermissao";
-            this.textBoxBuscarPermissao.Size = new System.Drawing.Size(339, 22);
+            this.textBoxBuscarPermissao.Size = new System.Drawing.Size(236, 22);
             this.textBoxBuscarPermissao.TabIndex = 4;
             // 
             // buttonInserirPermissao
             // 
             this.buttonInserirPermissao.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.buttonInserirPermissao.Location = new System.Drawing.Point(429, 415);
+            this.buttonInserirPermissao.Location = new System.Drawing.Point(352, 316);
             this.buttonInserirPermissao.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonInserirPermissao.Name = "buttonInserirPermissao";
             this.buttonInserirPermissao.Size = new System.Drawing.Size(81, 26);
@@ -141,7 +143,7 @@
             // 
             this.labelfuncao.AutoSize = true;
             this.labelfuncao.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelfuncao.Location = new System.Drawing.Point(173, 55);
+            this.labelfuncao.Location = new System.Drawing.Point(147, 72);
             this.labelfuncao.Name = "labelfuncao";
             this.labelfuncao.Size = new System.Drawing.Size(58, 16);
             this.labelfuncao.TabIndex = 7;
@@ -150,7 +152,7 @@
             // buttonCancelar
             // 
             this.buttonCancelar.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.buttonCancelar.Location = new System.Drawing.Point(516, 415);
+            this.buttonCancelar.Location = new System.Drawing.Point(439, 316);
             this.buttonCancelar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonCancelar.Name = "buttonCancelar";
             this.buttonCancelar.Size = new System.Drawing.Size(81, 26);
@@ -162,7 +164,7 @@
             // textBoxIdFuncao
             // 
             this.textBoxIdFuncao.Enabled = false;
-            this.textBoxIdFuncao.Location = new System.Drawing.Point(37, 74);
+            this.textBoxIdFuncao.Location = new System.Drawing.Point(12, 91);
             this.textBoxIdFuncao.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxIdFuncao.Name = "textBoxIdFuncao";
             this.textBoxIdFuncao.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -173,7 +175,7 @@
             // 
             this.labelId.AutoSize = true;
             this.labelId.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelId.Location = new System.Drawing.Point(35, 55);
+            this.labelId.Location = new System.Drawing.Point(10, 72);
             this.labelId.Name = "labelId";
             this.labelId.Size = new System.Drawing.Size(20, 16);
             this.labelId.TabIndex = 10;
@@ -182,7 +184,7 @@
             // textBoxFuncao
             // 
             this.textBoxFuncao.Enabled = false;
-            this.textBoxFuncao.Location = new System.Drawing.Point(165, 74);
+            this.textBoxFuncao.Location = new System.Drawing.Point(139, 91);
             this.textBoxFuncao.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxFuncao.Name = "textBoxFuncao";
             this.textBoxFuncao.Size = new System.Drawing.Size(185, 22);
@@ -193,9 +195,9 @@
             this.textBox1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(29, 13);
+            this.textBox1.Location = new System.Drawing.Point(12, 22);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(569, 25);
+            this.textBox1.Size = new System.Drawing.Size(507, 25);
             this.textBox1.TabIndex = 12;
             this.textBox1.Text = "Vincular Permissão - Função";
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -205,7 +207,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(633, 450);
+            this.ClientSize = new System.Drawing.Size(532, 353);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.textBoxFuncao);
             this.Controls.Add(this.labelId);
@@ -220,7 +222,9 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(550, 400);
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(550, 400);
             this.Name = "FormVincularPermissaoEmFuncao";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             ((System.ComponentModel.ISupportInitialize)(this.permissaoDataGridView)).EndInit();

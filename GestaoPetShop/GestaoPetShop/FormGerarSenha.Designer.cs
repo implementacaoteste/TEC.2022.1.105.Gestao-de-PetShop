@@ -44,7 +44,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(53, 90);
+            this.label1.Location = new System.Drawing.Point(54, 107);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(128, 16);
             this.label1.TabIndex = 0;
@@ -53,7 +53,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(53, 158);
+            this.label2.Location = new System.Drawing.Point(54, 175);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(131, 16);
             this.label2.TabIndex = 1;
@@ -62,7 +62,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(53, 226);
+            this.label3.Location = new System.Drawing.Point(54, 243);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(136, 16);
             this.label3.TabIndex = 2;
@@ -70,7 +70,7 @@
             // 
             // txtSenhaAtual
             // 
-            this.txtSenhaAtual.Location = new System.Drawing.Point(224, 89);
+            this.txtSenhaAtual.Location = new System.Drawing.Point(225, 106);
             this.txtSenhaAtual.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSenhaAtual.MaxLength = 32;
             this.txtSenhaAtual.Name = "txtSenhaAtual";
@@ -81,7 +81,7 @@
             // txtNovaSenha
             // 
             this.txtNovaSenha.Enabled = false;
-            this.txtNovaSenha.Location = new System.Drawing.Point(224, 155);
+            this.txtNovaSenha.Location = new System.Drawing.Point(225, 172);
             this.txtNovaSenha.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNovaSenha.MaxLength = 32;
             this.txtNovaSenha.Name = "txtNovaSenha";
@@ -92,7 +92,7 @@
             // txtNovaSenha2
             // 
             this.txtNovaSenha2.Enabled = false;
-            this.txtNovaSenha2.Location = new System.Drawing.Point(224, 222);
+            this.txtNovaSenha2.Location = new System.Drawing.Point(225, 239);
             this.txtNovaSenha2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNovaSenha2.MaxLength = 32;
             this.txtNovaSenha2.Name = "txtNovaSenha2";
@@ -103,7 +103,7 @@
             // checkBoxMostrarSenha
             // 
             this.checkBoxMostrarSenha.AutoSize = true;
-            this.checkBoxMostrarSenha.Location = new System.Drawing.Point(143, 292);
+            this.checkBoxMostrarSenha.Location = new System.Drawing.Point(383, 297);
             this.checkBoxMostrarSenha.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkBoxMostrarSenha.Name = "checkBoxMostrarSenha";
             this.checkBoxMostrarSenha.Size = new System.Drawing.Size(116, 20);
@@ -140,10 +140,10 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(133, 28);
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(203, 28);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(126, 19);
+            this.label5.Size = new System.Drawing.Size(146, 23);
             this.label5.TabIndex = 10;
             this.label5.Text = "GERAR SENHA";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -152,7 +152,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(411, 423);
+            this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ClientSize = new System.Drawing.Size(532, 353);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnOK);
             this.Controls.Add(this.btnGerar);
@@ -166,9 +168,12 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(550, 400);
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(550, 400);
             this.Name = "FormGerarSenha";
             this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.ResumeLayout(false);
             this.PerformLayout();
 
