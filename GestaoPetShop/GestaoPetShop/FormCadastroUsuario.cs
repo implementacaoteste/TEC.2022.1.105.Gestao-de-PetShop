@@ -9,11 +9,14 @@ namespace GestaoPetShop
     public partial class FormCadastroUsuario : Form
     {
         public int Id;
+        private int controle = 0;
         public FormCadastroUsuario(int _id = 0)
         {
             InitializeComponent();
             Id = _id;
-           
+            senhaTextBox.UseSystemPasswordChar = true;
+
+
         }
         private void buttonSalvar_Click(object sender, EventArgs e)
         {
@@ -51,7 +54,7 @@ namespace GestaoPetShop
                 {
 
                     usuarioBindingSource.DataSource = new UsuarioBLL().BuscarPorId(Id);
-                  
+
                 }
 
             }
@@ -88,7 +91,7 @@ namespace GestaoPetShop
                     idTextBoxProfissional.Text = Convert.ToString(frm.id);
                     ((Usuario)usuarioBindingSource.Current).IdProfissional = frm.id;
                     nomeTextBoxProfissional.Text = frm.nome;
-                    
+
                 }
 
             }
@@ -98,5 +101,22 @@ namespace GestaoPetShop
             }
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+
+            if (controle == 0)
+            {
+                senhaTextBox.UseSystemPasswordChar = false;
+                controle = 1;
+            }
+            else
+            {
+                senhaTextBox.UseSystemPasswordChar = true;
+                controle = 0;
+            }
+
+
+        }
     }
 }

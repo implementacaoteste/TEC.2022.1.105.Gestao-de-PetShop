@@ -59,14 +59,14 @@
             // 
             // labelBuscarPorAnimal
             // 
-            this.labelBuscarPorAnimal.Dock = System.Windows.Forms.DockStyle.Top;
             this.labelBuscarPorAnimal.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelBuscarPorAnimal.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.labelBuscarPorAnimal.Location = new System.Drawing.Point(0, 0);
+            this.labelBuscarPorAnimal.Location = new System.Drawing.Point(-1, 20);
+            this.labelBuscarPorAnimal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelBuscarPorAnimal.Name = "labelBuscarPorAnimal";
-            this.labelBuscarPorAnimal.Size = new System.Drawing.Size(995, 55);
+            this.labelBuscarPorAnimal.Size = new System.Drawing.Size(645, 45);
             this.labelBuscarPorAnimal.TabIndex = 0;
-            this.labelBuscarPorAnimal.Text = "Buscar por Animal";
+            this.labelBuscarPorAnimal.Text = "Buscar Por Animal";
             this.labelBuscarPorAnimal.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.labelBuscarPorAnimal.UseWaitCursor = true;
             // 
@@ -79,6 +79,8 @@
             this.animalDataGridView.AllowUserToAddRows = false;
             this.animalDataGridView.AllowUserToDeleteRows = false;
             this.animalDataGridView.AllowUserToOrderColumns = true;
+            this.animalDataGridView.AllowUserToResizeColumns = false;
+            this.animalDataGridView.AllowUserToResizeRows = false;
             this.animalDataGridView.AutoGenerateColumns = false;
             this.animalDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.animalDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -94,15 +96,15 @@
             this.dataNascimentoDataGridViewTextBoxColumn,
             this.ativoDataGridViewCheckBoxColumn});
             this.animalDataGridView.DataSource = this.animalBindingSource;
-            this.animalDataGridView.Location = new System.Drawing.Point(8, 110);
-            this.animalDataGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.animalDataGridView.Location = new System.Drawing.Point(6, 139);
+            this.animalDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.animalDataGridView.Name = "animalDataGridView";
             this.animalDataGridView.ReadOnly = true;
             this.animalDataGridView.RowHeadersVisible = false;
             this.animalDataGridView.RowHeadersWidth = 51;
             this.animalDataGridView.RowTemplate.Height = 24;
             this.animalDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.animalDataGridView.Size = new System.Drawing.Size(976, 369);
+            this.animalDataGridView.Size = new System.Drawing.Size(630, 304);
             this.animalDataGridView.TabIndex = 2;
             // 
             // idDataGridViewTextBoxColumn
@@ -206,10 +208,10 @@
             // 
             // textBoxBuscar
             // 
-            this.textBoxBuscar.Location = new System.Drawing.Point(169, 80);
-            this.textBoxBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBoxBuscar.Location = new System.Drawing.Point(103, 104);
+            this.textBoxBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxBuscar.Name = "textBoxBuscar";
-            this.textBoxBuscar.Size = new System.Drawing.Size(408, 22);
+            this.textBoxBuscar.Size = new System.Drawing.Size(194, 20);
             this.textBoxBuscar.TabIndex = 3;
             // 
             // comboBox1
@@ -219,19 +221,19 @@
             "Todos",
             "Nome",
             "Id"});
-            this.comboBox1.Location = new System.Drawing.Point(8, 80);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBox1.Location = new System.Drawing.Point(6, 104);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(155, 24);
+            this.comboBox1.Size = new System.Drawing.Size(93, 21);
             this.comboBox1.TabIndex = 4;
             // 
             // buttonBuscar
             // 
             this.buttonBuscar.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.buttonBuscar.Location = new System.Drawing.Point(613, 77);
-            this.buttonBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonBuscar.Location = new System.Drawing.Point(358, 102);
+            this.buttonBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonBuscar.Name = "buttonBuscar";
-            this.buttonBuscar.Size = new System.Drawing.Size(88, 29);
+            this.buttonBuscar.Size = new System.Drawing.Size(66, 24);
             this.buttonBuscar.TabIndex = 5;
             this.buttonBuscar.Text = "&Buscar";
             this.buttonBuscar.UseVisualStyleBackColor = false;
@@ -240,10 +242,10 @@
             // buttonAlterar
             // 
             this.buttonAlterar.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.buttonAlterar.Location = new System.Drawing.Point(707, 77);
-            this.buttonAlterar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonAlterar.Location = new System.Drawing.Point(429, 102);
+            this.buttonAlterar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonAlterar.Name = "buttonAlterar";
-            this.buttonAlterar.Size = new System.Drawing.Size(88, 29);
+            this.buttonAlterar.Size = new System.Drawing.Size(66, 24);
             this.buttonAlterar.TabIndex = 6;
             this.buttonAlterar.Text = "&Alterar";
             this.buttonAlterar.UseVisualStyleBackColor = false;
@@ -252,10 +254,10 @@
             // buttonIserir
             // 
             this.buttonIserir.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.buttonIserir.Location = new System.Drawing.Point(801, 75);
-            this.buttonIserir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonIserir.Location = new System.Drawing.Point(500, 100);
+            this.buttonIserir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonIserir.Name = "buttonIserir";
-            this.buttonIserir.Size = new System.Drawing.Size(88, 29);
+            this.buttonIserir.Size = new System.Drawing.Size(66, 24);
             this.buttonIserir.TabIndex = 7;
             this.buttonIserir.Text = "&Inserir";
             this.buttonIserir.UseVisualStyleBackColor = false;
@@ -264,10 +266,10 @@
             // buttonExcluir
             // 
             this.buttonExcluir.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.buttonExcluir.Location = new System.Drawing.Point(895, 75);
-            this.buttonExcluir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonExcluir.Location = new System.Drawing.Point(570, 100);
+            this.buttonExcluir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonExcluir.Name = "buttonExcluir";
-            this.buttonExcluir.Size = new System.Drawing.Size(88, 29);
+            this.buttonExcluir.Size = new System.Drawing.Size(66, 24);
             this.buttonExcluir.TabIndex = 8;
             this.buttonExcluir.Text = "&Excluir";
             this.buttonExcluir.UseVisualStyleBackColor = false;
@@ -276,10 +278,10 @@
             // buttonSelecionar
             // 
             this.buttonSelecionar.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.buttonSelecionar.Location = new System.Drawing.Point(801, 484);
-            this.buttonSelecionar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonSelecionar.Location = new System.Drawing.Point(500, 465);
+            this.buttonSelecionar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonSelecionar.Name = "buttonSelecionar";
-            this.buttonSelecionar.Size = new System.Drawing.Size(88, 31);
+            this.buttonSelecionar.Size = new System.Drawing.Size(66, 25);
             this.buttonSelecionar.TabIndex = 9;
             this.buttonSelecionar.Text = "&Selecionar";
             this.buttonSelecionar.UseVisualStyleBackColor = false;
@@ -287,10 +289,10 @@
             // buttonCancelar
             // 
             this.buttonCancelar.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.buttonCancelar.Location = new System.Drawing.Point(896, 484);
-            this.buttonCancelar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonCancelar.Location = new System.Drawing.Point(570, 465);
+            this.buttonCancelar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonCancelar.Name = "buttonCancelar";
-            this.buttonCancelar.Size = new System.Drawing.Size(88, 31);
+            this.buttonCancelar.Size = new System.Drawing.Size(66, 25);
             this.buttonCancelar.TabIndex = 10;
             this.buttonCancelar.Text = "&Cancelar";
             this.buttonCancelar.UseVisualStyleBackColor = false;
@@ -301,18 +303,19 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(13, 59);
+            this.label1.Location = new System.Drawing.Point(10, 87);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(88, 17);
+            this.label1.Size = new System.Drawing.Size(69, 13);
             this.label1.TabIndex = 11;
             this.label1.Text = "Buscar Por";
             // 
             // FormConsultaAnimal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(995, 522);
+            this.ClientSize = new System.Drawing.Size(646, 505);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.buttonSelecionar);
@@ -325,9 +328,11 @@
             this.Controls.Add(this.animalDataGridView);
             this.Controls.Add(this.labelBuscarPorAnimal);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(662, 544);
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(662, 544);
             this.Name = "FormConsultaAnimal";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

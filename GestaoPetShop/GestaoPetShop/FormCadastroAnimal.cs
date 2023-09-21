@@ -16,7 +16,7 @@ namespace GestaoPetShop
 {
     public partial class FormCadastroAnimal : Form
     {
-        
+
 
         int id;
         bool permitirSalvar;
@@ -64,9 +64,16 @@ namespace GestaoPetShop
             try
             {
                 if (id == 0)
+                {
                     animalBindingSource.AddNew();
+                    textBox5.Text = "";
+
+                }
                 else
+                {
+
                     animalBindingSource.DataSource = new AnimalBLL().BuscarPorId(id);
+                }
             }
             catch (Exception ex)
             {
