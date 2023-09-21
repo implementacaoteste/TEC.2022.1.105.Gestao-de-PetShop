@@ -86,7 +86,7 @@
             "Id",
             "Nome"});
             this.comboBoxEscolhaBuscarFuncao.Location = new System.Drawing.Point(13, 92);
-            this.comboBoxEscolhaBuscarFuncao.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBoxEscolhaBuscarFuncao.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxEscolhaBuscarFuncao.Name = "comboBoxEscolhaBuscarFuncao";
             this.comboBoxEscolhaBuscarFuncao.Size = new System.Drawing.Size(111, 28);
             this.comboBoxEscolhaBuscarFuncao.TabIndex = 26;
@@ -95,7 +95,7 @@
             // 
             this.textBoxBuscarFuncao.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxBuscarFuncao.Location = new System.Drawing.Point(133, 95);
-            this.textBoxBuscarFuncao.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxBuscarFuncao.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxBuscarFuncao.Name = "textBoxBuscarFuncao";
             this.textBoxBuscarFuncao.Size = new System.Drawing.Size(253, 29);
             this.textBoxBuscarFuncao.TabIndex = 31;
@@ -109,7 +109,7 @@
             this.btnExcluir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnExcluir.ImageKey = "(none)";
             this.btnExcluir.Location = new System.Drawing.Point(658, 86);
-            this.btnExcluir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnExcluir.Margin = new System.Windows.Forms.Padding(4);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(77, 34);
             this.btnExcluir.TabIndex = 37;
@@ -125,7 +125,7 @@
             this.btnAlterar.ForeColor = System.Drawing.Color.Black;
             this.btnAlterar.ImageKey = "(none)";
             this.btnAlterar.Location = new System.Drawing.Point(573, 86);
-            this.btnAlterar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAlterar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAlterar.Name = "btnAlterar";
             this.btnAlterar.Size = new System.Drawing.Size(77, 34);
             this.btnAlterar.TabIndex = 35;
@@ -142,7 +142,7 @@
             this.btnCadastrar.ForeColor = System.Drawing.Color.Black;
             this.btnCadastrar.ImageList = this.imageList1;
             this.btnCadastrar.Location = new System.Drawing.Point(488, 88);
-            this.btnCadastrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCadastrar.Margin = new System.Windows.Forms.Padding(4);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(77, 34);
             this.btnCadastrar.TabIndex = 33;
@@ -160,7 +160,7 @@
             this.btnBuscarFuncao.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnBuscarFuncao.ImageKey = "(none)";
             this.btnBuscarFuncao.Location = new System.Drawing.Point(403, 90);
-            this.btnBuscarFuncao.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBuscarFuncao.Margin = new System.Windows.Forms.Padding(4);
             this.btnBuscarFuncao.Name = "btnBuscarFuncao";
             this.btnBuscarFuncao.Size = new System.Drawing.Size(77, 34);
             this.btnBuscarFuncao.TabIndex = 28;
@@ -177,6 +177,8 @@
             this.funcaoDataGridView.AllowUserToAddRows = false;
             this.funcaoDataGridView.AllowUserToDeleteRows = false;
             this.funcaoDataGridView.AllowUserToOrderColumns = true;
+            this.funcaoDataGridView.AllowUserToResizeColumns = false;
+            this.funcaoDataGridView.AllowUserToResizeRows = false;
             this.funcaoDataGridView.AutoGenerateColumns = false;
             this.funcaoDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.funcaoDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -222,6 +224,8 @@
             this.permissoesDataGridView.AllowUserToAddRows = false;
             this.permissoesDataGridView.AllowUserToDeleteRows = false;
             this.permissoesDataGridView.AllowUserToOrderColumns = true;
+            this.permissoesDataGridView.AllowUserToResizeColumns = false;
+            this.permissoesDataGridView.AllowUserToResizeRows = false;
             this.permissoesDataGridView.AutoGenerateColumns = false;
             this.permissoesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.permissoesDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -300,7 +304,7 @@
             this.Controls.Add(this.lblConsultaFuncao);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormConsultaFuncao";
