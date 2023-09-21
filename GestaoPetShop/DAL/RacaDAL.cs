@@ -17,13 +17,14 @@ namespace DAL
             try
             {
                 SqlCommand cmd = cn.CreateCommand();
-                cmd.CommandText = @"ISERT INTO Raca(Nome, Especie, PaisOrigem)
-                                             VOLUES(Nome, Especie, PaisOrigem)";
+                cmd.CommandText = @"INSERT INTO Raca(Nome, Especie, PaisOrigem, Ativo)
+                                             VALUES(@Nome, @Especie, @PaisOrigem, @Ativo)";
                 cmd.CommandType = System.Data.CommandType.Text;
 
                 cmd.Parameters.AddWithValue("@Nome", _raca.Nome);
                 cmd.Parameters.AddWithValue("@Especie", _raca.Especie);
                 cmd.Parameters.AddWithValue("@PaisOrigem", _raca.PaisOrigem);
+                cmd.Parameters.AddWithValue("Ativo", _raca.Ativo);
 
                 cmd.Connection = cn;
                 cn.Open();
@@ -46,14 +47,20 @@ namespace DAL
             try
             {
                 SqlCommand cmd = cn.CreateCommand();
-                cmd.CommandText = @"UPDATE Raca SET Nome = @Nome, Especie = @Especie, PaisOrigem = @PaisOrigem)
-                                   WHERE Id = @Id";
+                cmd.CommandText = @"UPDATE Raca SET 
+                                             Nome = @Nome,
+                                             Especie = @Especie, 
+                                             PaisOrigem = @PaisOrigem,
+                                             Ativo = @Ativo
+                                             WHERE Id = @Id";
                 cmd.CommandType = System.Data.CommandType.Text;
 
-                cmd.Parameters.AddWithValue("@Id", _raca.Id);
                 cmd.Parameters.AddWithValue("@Nome", _raca.Nome);
                 cmd.Parameters.AddWithValue("@Especie", _raca.Especie);
                 cmd.Parameters.AddWithValue("@PaisOrigem", _raca.PaisOrigem);
+                cmd.Parameters.AddWithValue("@Ativo", _raca.Ativo);
+                cmd.Parameters.AddWithValue("@Id", _raca.Id);
+
                 cmd.Connection = cn;
                 cn.Open();
 
@@ -61,7 +68,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu erro ao tentar alterar um raça no banco de dados.", ex) { Data = { { "Id", 29 } } }; ;
+                throw new Exception("Ocorreu erro ao tentar alterar um raça no banco de dados.", ex) { Data = { { "Id", 29 } } };
             }
             finally
             {
@@ -93,6 +100,7 @@ namespace DAL
                         raca.Nome = rd["Nome"].ToString();
                         raca.Especie = rd["Especie"].ToString();
                         raca.PaisOrigem = rd["PaisOrigem"].ToString();
+                       
 
                         racas.Add(raca);
                     }
@@ -199,7 +207,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu um erro ao tentar buscar todos as raças no banco de dados ggggggg.", ex) { Data = { { "Id", 203 } } };
+                throw new Exception("Ocorreu um erro ao tentar buscar todos as raças no banco de dados.", ex) { Data = { { "Id", 203 } } };
             }
             finally
             {
