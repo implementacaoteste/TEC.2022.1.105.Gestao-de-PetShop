@@ -305,7 +305,7 @@ namespace DAL
         public List<Agendamento> BuscarTodos(int _opcSituacao, int _opcAtivo)
         {
             List<Agendamento> agendamentos = new List<Agendamento>();
-            Agendamento agendamento = new Agendamento();
+            Agendamento agendamento;
             SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
             try
             {
@@ -316,7 +316,7 @@ namespace DAL
                                            Cli.Id as ClienteId, Cli.Nome as NomeCliente,
 
                                            Si.Id as SituacaoId, Si.Descricao as DescSituacao
-                                           FROM Agendamento Ag LEFT JOIN Profissional P     ON Ag.IdProfissional = P.Id
+                                           FROM Agendamento Ag LEFT JOIN AgendamentoServicos AgSer ON     AgSer.IdProfissional = Ag.Id
                                                                LEFT JOIN Animal Ani         ON Ag.IdAnimal = Ani.Id
                                                                LEFT JOIN Cliente Cli        ON Ani.IdCliente = Cli.Id
                                                                LEFT JOIN Situacao Si        ON Ag.IdSituacao = Si.Id ";
@@ -365,7 +365,9 @@ namespace DAL
                 }
 
                 cmd.CommandType = System.Data.CommandType.Text;
+                
                 cn.Open();
+
                 using (SqlDataReader rd = cmd.ExecuteReader())
                 {
                     while (rd.Read())
@@ -1106,23 +1108,24 @@ namespace DAL
             SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
             try
             {
-                SqlCommand cmd = new SqlCommand();
+                SqlCommand cmd = new SqlCommand ();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT AgeSer.Id,AgeSer.idServico, Ser.Descricao, AgeSer.ValorUnitario, AgeSer.Quantidade,
-                                            Ser.Preco, Ser.Tempo, P.Id as IdProfissional, P.Nome as NomeProfissional 
-                                    FROM AgendamentoServicos AgeSer INNER JOIN Servico Ser ON AgeSer.IdServico = Ser.Id 
-                                                                    INNER JOIN Profissional P ON AgSer.IdProfissional = P.Id  
+                cmd.CommandText = @"SELECT AgeSer.Id as IdAgeSer, AgeSer.IdServico, Ser.Descricao, AgeSer.ValorUnitario, AgeSer.Quantidade, Ser.Preco, Ser.Tempo, P.Id as IdProfissional, P.Nome as NomeProfissional 
+                                    FROM AgendamentoServicos AgeSer LEFT JOIN Servico Ser ON AgeSer.IdServico = Ser.Id 
+                                                                    LEFT JOIN Profissional P ON AgeSer.IdProfissional = P.Id  
                                                                     WHERE AgeSer.IdAgendamento = @Id";
 
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@Id", _idAgendamento);
+
                 cn.Open();
+
                 using (SqlDataReader rd = cmd.ExecuteReader())
                 {
                     while (rd.Read())
                     {
                         servico = new AgendamentoServico();
-                        servico.Id = Convert.ToInt32(rd["Id"]);
+                        servico.Id = Convert.ToInt32(rd["IdAgeSer"]);
                         servico.IdServico = Convert.ToInt32(rd["IdServico"]);
                         servico.Servico = rd["Descricao"].ToString();
                         servico.ValorUnitario = Convert.ToDecimal(rd["ValorUnitario"]);
