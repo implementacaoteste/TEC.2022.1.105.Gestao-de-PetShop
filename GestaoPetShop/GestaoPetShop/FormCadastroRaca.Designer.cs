@@ -175,7 +175,6 @@
             this.Name = "FormCadastroRaca";
             this.ShowInTaskbar = false;
             this.Text = "   Cadastro de Raca";
-            this.Load += new System.EventHandler(this.FormCadastroRaca_Load);
             ((System.ComponentModel.ISupportInitialize)(this.racaBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
