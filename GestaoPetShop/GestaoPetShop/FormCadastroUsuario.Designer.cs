@@ -36,6 +36,7 @@
             System.Windows.Forms.Label nomeLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCadastroUsuario));
             this.senhaTextBox = new System.Windows.Forms.TextBox();
+            this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ativoCheckBox = new System.Windows.Forms.CheckBox();
             this.textBoxConfirmarSenha = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -45,7 +46,6 @@
             this.idTextBoxProfissional = new System.Windows.Forms.TextBox();
             this.nomeTextBoxProfissional = new System.Windows.Forms.TextBox();
             this.btnBuscarProfissional = new System.Windows.Forms.Button();
-            this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.button1 = new System.Windows.Forms.Button();
             senhaLabel = new System.Windows.Forms.Label();
             label1 = new System.Windows.Forms.Label();
@@ -109,10 +109,13 @@
             this.senhaTextBox.Location = new System.Drawing.Point(44, 249);
             this.senhaTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.senhaTextBox.Name = "senhaTextBox";
-            this.senhaTextBox.PasswordChar = '*';
             this.senhaTextBox.Size = new System.Drawing.Size(115, 22);
             this.senhaTextBox.TabIndex = 2;
             this.senhaTextBox.Tag = "*";
+            // 
+            // usuarioBindingSource
+            // 
+            this.usuarioBindingSource.DataSource = typeof(Models.Usuario);
             // 
             // ativoCheckBox
             // 
@@ -208,10 +211,6 @@
             this.btnBuscarProfissional.UseVisualStyleBackColor = true;
             this.btnBuscarProfissional.Click += new System.EventHandler(this.btnBuscarProfissional_Click);
             // 
-            // usuarioBindingSource
-            // 
-            this.usuarioBindingSource.DataSource = typeof(Models.Usuario);
-            // 
             // button1
             // 
             this.button1.ImageKey = "(none)";
@@ -221,6 +220,7 @@
             this.button1.TabIndex = 18;
             this.button1.Text = "Visualizar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // FormCadastroUsuario
             // 
