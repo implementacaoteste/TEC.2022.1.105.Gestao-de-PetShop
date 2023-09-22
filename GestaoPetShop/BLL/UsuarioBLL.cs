@@ -10,7 +10,7 @@ namespace BLL
     {
         public void Inserir(Usuario _usuario, string _confirmacaoDeSenha)
         {
-            //ValidarPermissao(10);
+            ValidarPermissao(10);
             ValidarDados(_usuario, _confirmacaoDeSenha);
 
             UsuarioDAL usuarioDAL = new UsuarioDAL();
@@ -18,7 +18,7 @@ namespace BLL
         }
         public void Alterar(Usuario _usuario, string _confirmacaoDeSenha)
         {
-            //ValidarPermissao(3);
+            ValidarPermissao(19);
             ValidarDados(_usuario, _confirmacaoDeSenha);
 
             UsuarioDAL usuarioDAL = new UsuarioDAL();
@@ -37,7 +37,7 @@ namespace BLL
         }
         public Usuario BuscarPorId(int _id)
         {
-            //ValidarPermissao(1);
+            ValidarPermissao(1);
             return new UsuarioDAL().BuscarPorId(_id);
         }
         public List<Usuario> BuscarPorLogin(string _login)
