@@ -266,7 +266,7 @@
             // textBox9
             // 
             this.textBox9.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.animalBindingSource, "NomeRaca", true));
-            this.textBox9.Location = new System.Drawing.Point(286, 145);
+            this.textBox9.Location = new System.Drawing.Point(286, 143);
             this.textBox9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(198, 22);
@@ -285,7 +285,7 @@
             // 
             // buttonBuscarRaca
             // 
-            this.buttonBuscarRaca.Location = new System.Drawing.Point(489, 145);
+            this.buttonBuscarRaca.Location = new System.Drawing.Point(489, 142);
             this.buttonBuscarRaca.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonBuscarRaca.Name = "buttonBuscarRaca";
             this.buttonBuscarRaca.Size = new System.Drawing.Size(29, 23);
@@ -299,7 +299,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label3.Location = new System.Drawing.Point(12, 110);
+            this.label3.Location = new System.Drawing.Point(12, 122);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(154, 18);
             this.label3.TabIndex = 34;
@@ -309,7 +309,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(293, 122);
+            this.label4.Location = new System.Drawing.Point(283, 122);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(140, 18);
             this.label4.TabIndex = 35;

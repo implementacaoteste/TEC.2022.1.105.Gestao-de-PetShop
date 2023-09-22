@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCadastroRaca));
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -39,6 +40,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.buttonSalvar = new System.Windows.Forms.Button();
             this.buttonCancelar = new System.Windows.Forms.Button();
+            this.racaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.racaBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -57,6 +60,7 @@
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.racaBindingSource, "Nome", true));
             this.textBox1.Location = new System.Drawing.Point(27, 141);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(255, 23);
@@ -65,6 +69,7 @@
             // textBox3
             // 
             this.textBox3.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.textBox3.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.racaBindingSource, "Especie", true));
             this.textBox3.Location = new System.Drawing.Point(27, 199);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(255, 23);
@@ -73,6 +78,7 @@
             // textBox5
             // 
             this.textBox5.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.textBox5.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.racaBindingSource, "PaisOrigem", true));
             this.textBox5.Location = new System.Drawing.Point(27, 263);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(255, 23);
@@ -83,6 +89,7 @@
             this.checkBox1.AutoSize = true;
             this.checkBox1.Checked = true;
             this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox1.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.racaBindingSource, "Ativo", true));
             this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox1.Location = new System.Drawing.Point(349, 264);
             this.checkBox1.Name = "checkBox1";
@@ -140,6 +147,10 @@
             this.buttonCancelar.Text = "&Cancelar";
             this.buttonCancelar.UseVisualStyleBackColor = false;
             // 
+            // racaBindingSource
+            // 
+            this.racaBindingSource.DataSource = typeof(Models.Raca);
+            // 
             // FormCadastroRaca
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -164,7 +175,9 @@
             this.MinimumSize = new System.Drawing.Size(550, 400);
             this.Name = "FormCadastroRaca";
             this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.FormCadastroRaca_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.racaBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -182,5 +195,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button buttonSalvar;
         private System.Windows.Forms.Button buttonCancelar;
+        private System.Windows.Forms.BindingSource racaBindingSource;
     }
 }
