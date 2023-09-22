@@ -29,7 +29,7 @@ namespace GestaoPetShop
                 if (id == 0)
                 {
                     agendamentoBindingSource.AddNew();
-              
+                    profissionalBindingSource.AddNew();
                     labelAlterarAgenda.Visible = false;
                     labelCadastroAgenda.Visible = true;
                     
@@ -39,6 +39,19 @@ namespace GestaoPetShop
                     agendamentoBindingSource.DataSource = new AgendamentoBLL().BuscarAgendamentoPorId(id, opc);
                     labelAlterarAgenda.Visible = true;
                     labelCadastroAgenda.Visible = false;
+                }
+
+                List<Profissional> agendamentoProfissinal = new List<Profissional>();
+
+
+                string _nomeProfissional = "";
+                int _idProfissional = 0;
+                nomeProfissionalComboBox.Items.Clear();
+                agendamentoProfissinal = new AgendamentoBLL().BuscarPorNomeProfissional(_nomeProfissional, _idProfissional);
+                int num2 = agendamentoProfissinal.Count();
+                for (int x = 0; x < num2; x++)
+                {
+                    nomeProfissionalComboBox.Items.Insert(x, agendamentoProfissinal[x].Nome);
                 }
 
 
@@ -73,7 +86,7 @@ namespace GestaoPetShop
                 ((AgendamentoServico)agendamentoServicosBindingSource.Current).IdProfissional = Convert.ToInt32(idProfissionalTextBox.Text);
                 ((AgendamentoServico)agendamentoServicosBindingSource.Current).NomeProfissional = nomeProfissionalComboBox.Text;
                 agendamentoServicosBindingSource.EndEdit();
-                profissionalBindingSource.EndEdit();
+                
 
                 Agendamento agendamento = (Agendamento)agendamentoBindingSource.Current;
                 buttonNovo_Click(sender, e);
@@ -157,6 +170,7 @@ namespace GestaoPetShop
                 ((AgendamentoServico)agendamentoServicosBindingSource.Current).IdProfissional = profissionais.Id;
                 nomeProfissionalComboBox.Text = profissionais.Nome;
                 ((AgendamentoServico)agendamentoServicosBindingSource.Current).NomeProfissional = profissionais.Nome;
+                profissionalBindingSource.EndEdit();
             }
             catch (Exception ex)
             {
@@ -218,17 +232,11 @@ namespace GestaoPetShop
 
             if (!buttonNovo.Enabled)
             {
-                profissionalBindingSource.AddNew();
                 agendamentoServicosBindingSource.AddNew();
                 textBoxQuantidade.Text = "1";
                 ((AgendamentoServico)agendamentoServicosBindingSource.Current).Quantidade = 1;
-                if (servicoBindingSource.Count == 0)
-                    servicoBindingSource.DataSource = new ServicoBLL().BuscarTodos();
-
-                if (profissionalBindingSource.Count == 0)
-                {
-                    profissionalBindingSource.DataSource = new ProfissionalBLL().BuscarTodos();
-                }
+                //if (servicoBindingSource.Count == 0)
+                        servicoBindingSource.DataSource = new ServicoBLL().BuscarTodos();
             }
         }
 
@@ -272,20 +280,28 @@ namespace GestaoPetShop
             }
         }
 
-        private void groupBoxServico_Enter(object sender, EventArgs e)
+        private void descricaoComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
+            try
+            {
+                List<Servico> servicos = new List<Servico>();
+                Servico servico = new Servico();
 
-            //List<Profissional> agendamentoProfissinal = new List<Profissional>();
+                servicos = new ServicoBLL().BuscarPorNome(descricaoComboBox.Text);
 
-            //string _nomeProfissional = "";
-            //int _idProfissional = 0;
-            //nomeProfissionalComboBox.Items.Clear();
-            //agendamentoProfissinal = new AgendamentoBLL().BuscarPorNomeProfissional(_nomeProfissional, _idProfissional);
-            //int num2 = agendamentoProfissinal.Count();
-            //for (int x = 0; x < num2; x++)
-            //{
-            //    nomeProfissionalComboBox.Items.Insert(x, agendamentoProfissinal[x].Nome);
-            //}
+                foreach (var item in servicos)
+                {
+                    servico = item;
+                }
+
+                idTextBox.Text = Convert.ToString(servico.Id);
+                descricaoComboBox.Text = servico.Descricao;
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
         }
     }
 

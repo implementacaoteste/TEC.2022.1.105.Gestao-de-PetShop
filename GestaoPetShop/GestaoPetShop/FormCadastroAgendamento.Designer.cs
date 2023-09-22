@@ -53,6 +53,7 @@
             this.ativoCheckBox = new System.Windows.Forms.CheckBox();
             this.descricaoSituacaoComboBox = new System.Windows.Forms.ComboBox();
             this.nomeProfissionalComboBox = new System.Windows.Forms.ComboBox();
+            this.profissionalBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.horarioTextBox = new System.Windows.Forms.TextBox();
             this.idTextBox1 = new System.Windows.Forms.TextBox();
             this.idAnimalTextBox = new System.Windows.Forms.TextBox();
@@ -89,7 +90,6 @@
             this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.profissionalBindingSource = new System.Windows.Forms.BindingSource(this.components);
             descricaoLabel = new System.Windows.Forms.Label();
             idLabel = new System.Windows.Forms.Label();
             label = new System.Windows.Forms.Label();
@@ -109,11 +109,11 @@
             dataAgLabel = new System.Windows.Forms.Label();
             idSituacaoLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.agendamentoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.profissionalBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.servicoBindingSource)).BeginInit();
             this.groupBoxServico.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.agendamentoServicosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.agendamentoServicosDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.profissionalBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // descricaoLabel
@@ -353,6 +353,10 @@
             this.nomeProfissionalComboBox.TabIndex = 47;
             this.nomeProfissionalComboBox.SelectedIndexChanged += new System.EventHandler(this.nomeProfissionalComboBox_SelectedIndexChanged);
             // 
+            // profissionalBindingSource
+            // 
+            this.profissionalBindingSource.DataSource = typeof(Models.Profissional);
+            // 
             // horarioTextBox
             // 
             this.horarioTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agendamentoBindingSource, "Horario", true));
@@ -450,6 +454,7 @@
             this.descricaoComboBox.Size = new System.Drawing.Size(293, 24);
             this.descricaoComboBox.TabIndex = 1;
             this.descricaoComboBox.ValueMember = "Id";
+            this.descricaoComboBox.SelectedIndexChanged += new System.EventHandler(this.descricaoComboBox_SelectedIndexChanged);
             // 
             // servicoBindingSource
             // 
@@ -566,7 +571,6 @@
             this.groupBoxServico.Size = new System.Drawing.Size(1128, 78);
             this.groupBoxServico.TabIndex = 31;
             this.groupBoxServico.TabStop = false;
-            this.groupBoxServico.Enter += new System.EventHandler(this.groupBoxServico_Enter);
             // 
             // buttonNovo
             // 
@@ -735,10 +739,6 @@
             this.dataGridViewTextBoxColumn16.ReadOnly = true;
             this.dataGridViewTextBoxColumn16.Width = 125;
             // 
-            // profissionalBindingSource
-            // 
-            this.profissionalBindingSource.DataSource = typeof(Models.Profissional);
-            // 
             // FormCadastroAgendamento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -785,12 +785,12 @@
             this.Text = "Agendamento";
             this.Load += new System.EventHandler(this.FormCadastroAgendamento_Load);
             ((System.ComponentModel.ISupportInitialize)(this.agendamentoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.profissionalBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.servicoBindingSource)).EndInit();
             this.groupBoxServico.ResumeLayout(false);
             this.groupBoxServico.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.agendamentoServicosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.agendamentoServicosDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.profissionalBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
