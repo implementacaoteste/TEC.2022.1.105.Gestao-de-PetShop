@@ -8,10 +8,15 @@ namespace GestaoPetShop
     public partial class FormConsultaCliente : Form
     {
         public Cliente Cliente { get; set; }
-
-        public FormConsultaCliente()
+        private int opc;
+        public FormConsultaCliente(int _opc = 0)
         {
             InitializeComponent();
+            opc = _opc;
+            if(opc != 0)
+            {
+                buttonSelecionar.Visible = true;
+            }
         }
 
         private void buttonBuscar_Click(object sender, EventArgs e)
