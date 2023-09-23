@@ -111,9 +111,10 @@
             this.senhaTextBox.Location = new System.Drawing.Point(41, 307);
             this.senhaTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.senhaTextBox.Name = "senhaTextBox";
+            this.senhaTextBox.PasswordChar = '*';
             this.senhaTextBox.Size = new System.Drawing.Size(115, 22);
             this.senhaTextBox.TabIndex = 2;
-            this.senhaTextBox.Tag = "*";
+            this.senhaTextBox.Tag = "";
             // 
             // usuarioBindingSource
             // 
@@ -237,9 +238,9 @@
             this.groupBox1.Controls.Add(this.nomeTextBoxProfissional);
             this.groupBox1.Controls.Add(nomeLabel);
             this.groupBox1.Location = new System.Drawing.Point(41, 116);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(429, 74);
             this.groupBox1.TabIndex = 19;
             this.groupBox1.TabStop = false;

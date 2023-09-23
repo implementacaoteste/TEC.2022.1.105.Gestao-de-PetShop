@@ -16,6 +16,7 @@ namespace BLL
     {
         public void Inserir(Agendamento _agendamento)
         {
+            new UsuarioBLL().ValidarPermissao(13);
             ValidarPreenchimento(_agendamento);
             AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
             agendamentoDAL.Inserir(_agendamento);
@@ -54,6 +55,7 @@ namespace BLL
 
         public void Alterar(Agendamento _agendamento, List<AgendamentoServico> _servicosParaExcluir)//
         {
+            new UsuarioBLL().ValidarPermissao(22);
             AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
             agendamentoDAL.Alterar(_agendamento, _servicosParaExcluir);//
         }
@@ -66,6 +68,7 @@ namespace BLL
 
         public List<Agendamento> BuscarTodos(int _opcSituacao,int _opcAtivo)
         {
+            new UsuarioBLL().ValidarPermissao(31);
             AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
             List<Agendamento> agendamentos = new List<Agendamento>();
             agendamentos =  agendamentoDAL.BuscarTodos(_opcSituacao, _opcAtivo);
@@ -80,6 +83,8 @@ namespace BLL
        
         public Agendamento BuscarAgendamentoPorId(int _idAgendamento, int _opc)
         {
+
+            new UsuarioBLL().ValidarPermissao(4);
             AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
             Agendamento agendamento = new Agendamento();
             agendamento = agendamentoDAL.BuscarAgendamentoPorId(_idAgendamento, _opc);
@@ -93,6 +98,7 @@ namespace BLL
         }
         public List<Agendamento> BuscarAgendamentoPorData(int _opc, string _data, int _opcAtivo, int _opcSituacao)
         {
+            new UsuarioBLL().ValidarPermissao(4);
             AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
             List<Agendamento> agendamentos = new List<Agendamento>();
             agendamentos = agendamentoDAL.BuscarAgendamentoPorData(_opc, _data, _opcAtivo, _opcSituacao);
@@ -104,6 +110,7 @@ namespace BLL
         }
         public List<Agendamento> BuscarAgendamentoPorNomeCliente(string _nomeCliente, int _opcAtivo, int _opcSituacao)
         {
+            new UsuarioBLL().ValidarPermissao(4);
             AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
             List<Agendamento> agendamentos = new List<Agendamento>();
             agendamentos = agendamentoDAL.BuscarAgendamentoPorNomeCliente(_nomeCliente, _opcAtivo,_opcSituacao);
@@ -115,6 +122,7 @@ namespace BLL
         }
         public List<Agendamento> BuscarAgendamentoPorNomeProfissional(string _nomeProfissional, int _opcAtivo, int _opcSituacao)
         {
+            new UsuarioBLL().ValidarPermissao(4);
             AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
             List<Agendamento> agendamentos = new List<Agendamento>();
             agendamentos = agendamentoDAL.BuscarAgendamentoPorNomeProfissional(_nomeProfissional, _opcAtivo, _opcSituacao);
@@ -126,6 +134,8 @@ namespace BLL
         }
         public List<Agendamento> BuscarAgendamentoPorServicoData(string _nomeServico, string _data, int _opc, int _opcAtivo, int _opcSituacao)
         {
+            new UsuarioBLL().ValidarPermissao(4);
+
             AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
             List<Agendamento> agendamentos = new List<Agendamento>();
             agendamentos = agendamentoDAL.BuscarAgendamentoPorServicoData(_nomeServico, _data,_opc,_opcAtivo,_opcSituacao);
@@ -137,6 +147,7 @@ namespace BLL
         }
         public List<Agendamento> BuscarAgendamentoPorServico(string _nomeServico, int _opcAtivo, int _opcSituacao)
         {
+            new UsuarioBLL().ValidarPermissao(4);
             AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
             List<Agendamento> agendamentos = new List<Agendamento>();
             agendamentos = agendamentoDAL.BuscarAgendamentoPorServico(_nomeServico, _opcAtivo, _opcSituacao);
@@ -148,6 +159,7 @@ namespace BLL
         }
         public List<Agendamento> BuscarAgendamentoPorProfissionalData(string _nomeProfissional, string _data, int _opc,int _opcAtivo, int _opcSituacao)
         {
+            new UsuarioBLL().ValidarPermissao(4);
             AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
             List<Agendamento> agendamentos = new List<Agendamento>();
             agendamentos = agendamentoDAL.BuscarAgendamentoPorProfissionalData(_nomeProfissional, _data, _opc, _opcAtivo, _opcSituacao);
@@ -164,6 +176,7 @@ namespace BLL
         
         public Cliente BuscarPorIdAnimalCliente(int _id, int _opc)
         {
+            new UsuarioBLL().ValidarPermissao(4);
             AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
             Cliente cliente = new Cliente();
             cliente = agendamentoDAL.BuscarPorIdAnimalCliente(_id, _opc);
@@ -175,6 +188,7 @@ namespace BLL
         }
         public List<Cliente> BuscarPorNomeAnimalCliente(string _nomeAnimalCliente, int _opc)
         {
+            new UsuarioBLL().ValidarPermissao(4);
             AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
             List<Cliente> clientes = agendamentoDAL.BuscarPorNomeAnimalCliente(_nomeAnimalCliente, _opc);
             if (clientes.Count < 1)
@@ -185,6 +199,7 @@ namespace BLL
         }
         public List<Profissional> BuscarPorNomeProfissional(string _nomeProfissional, int _idProfissional)
         {
+            new UsuarioBLL().ValidarPermissao(4);
             AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
             List<Profissional> profissionais = new List<Profissional>();
             profissionais = agendamentoDAL.BuscarPorNomeProfissional(_nomeProfissional, _idProfissional);
@@ -196,6 +211,7 @@ namespace BLL
         }
         public Profissional BuscarProfissional(string _nomeProfissional)
         {
+            new UsuarioBLL().ValidarPermissao(4);
             AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
             Profissional profissional = new Profissional();
             profissional = agendamentoDAL.BuscarProfissional(_nomeProfissional);
@@ -207,6 +223,7 @@ namespace BLL
         }
         public Situacao BuscarSituacaoPorNome(string _descricaoSituacao)
         {
+            new UsuarioBLL().ValidarPermissao(4);
             AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
             Situacao situacao = new Situacao();
            situacao = agendamentoDAL.BuscarSituacaoPorNome(_descricaoSituacao);
