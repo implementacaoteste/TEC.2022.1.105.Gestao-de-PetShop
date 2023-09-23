@@ -24,26 +24,35 @@ namespace BLL
 
         private bool ValidarPreenchimento(Agendamento _agendamento)
         {
-            if( _agendamento.IdAnimal == 0)
+            if (_agendamento.IdAnimal == 0)
                 throw new Exception("Animal não informado.");
 
-            if ( _agendamento.IdSituacao == 0)
+            if (_agendamento.IdSituacao == 0)
                 throw new Exception("Situação não informada");
 
-            if ( _agendamento.DataAg.Date < DateTime.Now.Date )
+            if (_agendamento.DataAg.Date < DateTime.Now.Date)
                 throw new Exception("Data inválida ou não informada");
 
-            if (String.IsNullOrEmpty (_agendamento.Horario))
+            if (String.IsNullOrEmpty(_agendamento.Horario))
                 throw new Exception("Horário inválido.");
 
-            if ( _agendamento.Total < 0)
+            if (_agendamento.Total < 0)
                 throw new Exception("Total inválido.");
 
-            if( _agendamento.IdProfissional == 0)
-
-            if (_agendamento.Ativo == false)
-                throw new Exception("Ativo não marcado.");
-
+            if (_agendamento.Id == 0)
+            {
+                if (_agendamento.Ativo == false)
+                    throw new Exception("Ativo não marcado.");
+            }
+            else
+            {
+                int opc = 0;
+                Agendamento agendamento = new AgendamentoDAL().BuscarAgendamentoPorId(_agendamento.Id,opc);
+                if(agendamento.Ativo != _agendamento.Ativo)
+                {
+                    new UsuarioBLL().ValidarPermissao(37);
+                }
+            }
             List<AgendamentoServico> agendamentoServicos = new List<AgendamentoServico>();
             agendamentoServicos = _agendamento.AgendamentoServicos;
             if (agendamentoServicos.Count < 1)
@@ -56,6 +65,7 @@ namespace BLL
         public void Alterar(Agendamento _agendamento, List<AgendamentoServico> _servicosParaExcluir)//
         {
             new UsuarioBLL().ValidarPermissao(22);
+            ValidarPreenchimento(_agendamento);
             AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
             agendamentoDAL.Alterar(_agendamento, _servicosParaExcluir);//
         }
@@ -66,21 +76,22 @@ namespace BLL
         }
         //______________________________________________________________________
 
-        public List<Agendamento> BuscarTodos(int _opcSituacao,int _opcAtivo)
+        public List<Agendamento> BuscarTodos(int _opcSituacao, int _opcAtivo)
         {
-            new UsuarioBLL().ValidarPermissao(31);
+            new UsuarioBLL().ValidarPermissao(4);
+
             AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
             List<Agendamento> agendamentos = new List<Agendamento>();
-            agendamentos =  agendamentoDAL.BuscarTodos(_opcSituacao, _opcAtivo);
-            if(agendamentos.Count < 1)
+            agendamentos = agendamentoDAL.BuscarTodos(_opcSituacao, _opcAtivo);
+            if (agendamentos.Count < 1)
             {
                 throw new Exception("Agendamento não encontrado.");
-                
+
             }
-            return agendamentos;   
+            return agendamentos;
         }
 
-       
+
         public Agendamento BuscarAgendamentoPorId(int _idAgendamento, int _opc)
         {
 
@@ -94,7 +105,7 @@ namespace BLL
 
             }
             return agendamento;
-            
+
         }
         public List<Agendamento> BuscarAgendamentoPorData(int _opc, string _data, int _opcAtivo, int _opcSituacao)
         {
@@ -102,7 +113,7 @@ namespace BLL
             AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
             List<Agendamento> agendamentos = new List<Agendamento>();
             agendamentos = agendamentoDAL.BuscarAgendamentoPorData(_opc, _data, _opcAtivo, _opcSituacao);
-            if(agendamentos.Count < 1)
+            if (agendamentos.Count < 1)
             {
                 throw new Exception("Agendamento não encontrado");
             }
@@ -113,8 +124,8 @@ namespace BLL
             new UsuarioBLL().ValidarPermissao(4);
             AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
             List<Agendamento> agendamentos = new List<Agendamento>();
-            agendamentos = agendamentoDAL.BuscarAgendamentoPorNomeCliente(_nomeCliente, _opcAtivo,_opcSituacao);
-            if(agendamentos.Count < 1)
+            agendamentos = agendamentoDAL.BuscarAgendamentoPorNomeCliente(_nomeCliente, _opcAtivo, _opcSituacao);
+            if (agendamentos.Count < 1)
             {
                 throw new Exception("Agendamento não encontrado.");
             }
@@ -130,7 +141,7 @@ namespace BLL
             {
                 throw new Exception("Agendamento não encontrado");
             }
-            return agendamentos ;
+            return agendamentos;
         }
         public List<Agendamento> BuscarAgendamentoPorServicoData(string _nomeServico, string _data, int _opc, int _opcAtivo, int _opcSituacao)
         {
@@ -138,8 +149,8 @@ namespace BLL
 
             AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
             List<Agendamento> agendamentos = new List<Agendamento>();
-            agendamentos = agendamentoDAL.BuscarAgendamentoPorServicoData(_nomeServico, _data,_opc,_opcAtivo,_opcSituacao);
-            if(agendamentos.Count < 1)
+            agendamentos = agendamentoDAL.BuscarAgendamentoPorServicoData(_nomeServico, _data, _opc, _opcAtivo, _opcSituacao);
+            if (agendamentos.Count < 1)
             {
                 throw new Exception("Agendamento não encontrado.");
             }
@@ -157,13 +168,13 @@ namespace BLL
             }
             return agendamentos;
         }
-        public List<Agendamento> BuscarAgendamentoPorProfissionalData(string _nomeProfissional, string _data, int _opc,int _opcAtivo, int _opcSituacao)
+        public List<Agendamento> BuscarAgendamentoPorProfissionalData(string _nomeProfissional, string _data, int _opc, int _opcAtivo, int _opcSituacao)
         {
             new UsuarioBLL().ValidarPermissao(4);
             AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
             List<Agendamento> agendamentos = new List<Agendamento>();
             agendamentos = agendamentoDAL.BuscarAgendamentoPorProfissionalData(_nomeProfissional, _data, _opc, _opcAtivo, _opcSituacao);
-            if(agendamentos.Count < 1)
+            if (agendamentos.Count < 1)
             {
                 throw new Exception("Agendamento não encontrado");
             }
@@ -173,14 +184,14 @@ namespace BLL
 
 
         //----------------------------------------------------------------------
-        
+
         public Cliente BuscarPorIdAnimalCliente(int _id, int _opc)
         {
             new UsuarioBLL().ValidarPermissao(4);
             AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
             Cliente cliente = new Cliente();
             cliente = agendamentoDAL.BuscarPorIdAnimalCliente(_id, _opc);
-            if(cliente == null || cliente.Id <= 0)
+            if (cliente == null || cliente.Id <= 0)
             {
                 throw new Exception("Cliente ou Animal não encontrado");
             }
@@ -203,7 +214,7 @@ namespace BLL
             AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
             List<Profissional> profissionais = new List<Profissional>();
             profissionais = agendamentoDAL.BuscarPorNomeProfissional(_nomeProfissional, _idProfissional);
-            if(profissionais.Count < 1)
+            if (profissionais.Count < 1)
             {
                 throw new Exception("Profissional não encontrado.");
             }
@@ -215,7 +226,7 @@ namespace BLL
             AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
             Profissional profissional = new Profissional();
             profissional = agendamentoDAL.BuscarProfissional(_nomeProfissional);
-            if(profissional == null || profissional.Id < 0)
+            if (profissional == null || profissional.Id < 0)
             {
                 throw new Exception("Profissional não encontrado.");
             }
@@ -226,8 +237,8 @@ namespace BLL
             new UsuarioBLL().ValidarPermissao(4);
             AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
             Situacao situacao = new Situacao();
-           situacao = agendamentoDAL.BuscarSituacaoPorNome(_descricaoSituacao);
-            if(situacao == null || situacao.Id < 0)
+            situacao = agendamentoDAL.BuscarSituacaoPorNome(_descricaoSituacao);
+            if (situacao == null || situacao.Id < 0)
             {
                 throw new Exception("Situação não encontrada.");
             }

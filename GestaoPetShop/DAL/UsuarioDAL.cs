@@ -277,7 +277,7 @@ namespace DAL
                                                 LEFT JOIN Funcao ON Profissional.IdFuncao = Funcao.Id
                                                 LEFT JOIN FuncaoPermissao ON Funcao.Id = FuncaoPermissao.IdFuncao
                                                 LEFT JOIN Permissao ON FuncaoPermissao.IdPermissao = Permissao.Id
-                                                WHERE Usuario.IdProfissional = @IdUsuario AND Permissao.Id = @IdPermissao";
+                                                WHERE Usuario.Id = @IdUsuario AND Permissao.Id = @IdPermissao";
 
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@IdUsuario", _idUsuarioLogado);

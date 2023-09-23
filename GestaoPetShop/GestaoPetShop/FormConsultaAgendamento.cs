@@ -367,6 +367,7 @@ namespace GestaoPetShop
         {
             try
             {
+                new UsuarioBLL().ValidarPermissao(13);
                 int id = 0;
                 using (FormCadastroAgendamento frm = new FormCadastroAgendamento(id))
                 {
