@@ -10,7 +10,7 @@ namespace DAL
 {
     public class ClienteDAL
     {
-        //private int _idcliente = 0;
+        private int _idcliente = 0;
         public void Inserir(Cliente _cliente, SqlTransaction _transaction = null)
         {
 

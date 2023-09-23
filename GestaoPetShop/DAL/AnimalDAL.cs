@@ -199,8 +199,8 @@ namespace DAL
                         animal.Alergia = rd["Alergia"].ToString();
                         animal.DataNascimento = Convert.ToDateTime(rd["DataNascimento"]);
                         animal.Ativo = (bool)rd["Ativo"];
-                        animal.Cliente = new ClienteDAL().BuscarPorId(animal.IdCliente);
-                        animal.Raca = new RacaDAL().BuscarPorId(animal.IdRaca);
+                        animal.Cliente = new ClienteDAL().BuscarPorId((int)rd["IdCliente"]);
+                        animal.Raca = new RacaDAL().BuscarPorId((int)rd["IdRaca"]);
                         animalList.Add(animal);
                     }
                 }
