@@ -101,16 +101,6 @@ namespace GestaoPetShop
             clienteBindingSource.CancelEdit();
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void buttonBuscarFoto_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
@@ -151,20 +141,7 @@ namespace GestaoPetShop
             textBoxTelefone.Text = "";
         }
 
-        private void nomeTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void AtivocheckBox1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-        private void emailClienteDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
+      
         private void buttonExcluirEmail_Click(object sender, EventArgs e)
         {
 

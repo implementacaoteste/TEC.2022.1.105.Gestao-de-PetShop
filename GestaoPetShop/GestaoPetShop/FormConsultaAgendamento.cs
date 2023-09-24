@@ -333,6 +333,9 @@ namespace GestaoPetShop
             }
             catch (Exception ex)
             {
+                //if (new TratarErro().GetId(ex) == 1)
+                //    textBox_BuscarAgendamento.Focus();
+
                 MessageBox.Show(ex.Message);
             }
         }
