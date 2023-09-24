@@ -49,11 +49,36 @@ namespace GestaoPetShop
                 else
                 {
                     MessageBox.Show("Escolha a forma de busca");
+                    comboBox_EscolhaBuscarServico.Focus();
                 }
 
             }
             catch (Exception ex)
             {
+                if (new TratarErro().GetId(ex) == 141 || new TratarErro().GetId(ex) == 41)
+                    textBox_BuscarServico.Focus();
+
+                if (new TratarErro().GetId(ex) == 142 || new TratarErro().GetId(ex) == 42)
+                    textBox_BuscarServico.Focus();
+
+                if (new TratarErro().GetId(ex) == 143 || new TratarErro().GetId(ex) == 43)
+                    textBox_BuscarServico.Focus();
+
+                if (new TratarErro().GetId(ex) == 45)
+                    comboBox_EscolhaBuscarServico.Focus();
+
+                if (new TratarErro().GetId(ex) == 46)
+                    comboBox_EscolhaBuscarServico.Focus();
+
+
+                if (new TratarErro().GetId(ex) == 144)
+                    textBox_BuscarServico.Focus();
+
+                if (new TratarErro().GetId(ex) == 145)
+                    textBox_BuscarServico.Focus();
+
+                if (new TratarErro().GetId(ex) == 146)
+                    textBox_BuscarServico.Focus();
 
                 MessageBox.Show(ex.Message);
             }
@@ -108,11 +133,6 @@ namespace GestaoPetShop
         }
 
       
-        private void btnFechar_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void button_ExcluirServico_Click_1(object sender, EventArgs e)
         {
             try

@@ -24,7 +24,7 @@ namespace GestaoPetShop
         
         private void FormsCadastroServico_Load(object sender, EventArgs e)
         {
-            this.Hide();
+            //this.Hide();
             try
             {
                 if (id == 0)
@@ -60,18 +60,36 @@ namespace GestaoPetShop
                 {
                     servicoBLL.Inserir((Servico)servicoBindingSource.Current);
                     MessageBox.Show("Cadastrado com sucesso!");
-                    Close();
+                    //Close();
                 }
                 else
                 {
                     servicoBLL.Alterar((Servico)servicoBindingSource.Current);
                     MessageBox.Show("Alterado com sucesso!");
-                    Close();
+                    //Close();
 
                 }
             }
             catch (Exception ex)
             {
+                if (new TratarErro().GetId(ex) == 40)//referente a inserir em Dal
+                    descricaoTextBox.Focus();
+
+                if (new TratarErro().GetId(ex) == 44)// referente a alterar em DAL
+                    descricaoTextBox.Focus();
+
+                if (new TratarErro().GetId(ex) == 47)// referente inserir em BLl
+                       descricaoTextBox.Focus();
+
+                if (new TratarErro().GetId(ex) == 48)// referente inserir em BLl
+                    precoTextBox.Focus();
+
+                if (new TratarErro().GetId(ex) == 49)// referente inserir em BLl
+                    tempoTextBox.Focus();
+
+                if (new TratarErro().GetId(ex) == 50)// referente inserir em BLl
+                    ativoCheckBox.Focus();
+
 
                 MessageBox.Show(ex.Message);
             }
