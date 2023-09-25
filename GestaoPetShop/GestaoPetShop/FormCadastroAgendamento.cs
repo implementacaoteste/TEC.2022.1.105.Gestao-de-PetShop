@@ -110,12 +110,7 @@ namespace GestaoPetShop
                 }
                 else
                 {
-                    //if (dataagendamento.Date < datahoje.Date)
-                    //{
-                    //    MessageBox.Show("Data inválida! \n Menor que a data atual.");
-                    //    return;
-                    //}
-
+                    
                     new AgendamentoBLL().Inserir(agendamento);
                     MessageBox.Show("Agendamento Cadastrado com sucesso!");
                 }

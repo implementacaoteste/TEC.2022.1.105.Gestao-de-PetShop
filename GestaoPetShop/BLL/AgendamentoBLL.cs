@@ -27,11 +27,7 @@ namespace BLL
             if (_agendamento.IdAnimal == 0)
                 throw new Exception("Animal não informado.");
 
-            if (_agendamento.IdSituacao == 0)
-                throw new Exception("Situação não informada");
 
-            if (_agendamento.DataAg.Date < DateTime.Now.Date)
-                throw new Exception("Data inválida ou não informada");
 
             if (String.IsNullOrEmpty(_agendamento.Horario))
                 throw new Exception("Horário inválido.");
@@ -41,6 +37,12 @@ namespace BLL
 
             if (_agendamento.Id == 0)
             {
+            if (_agendamento.IdSituacao == 0)
+                throw new Exception("Situação não informada");
+
+            if (_agendamento.DataAg.Date < DateTime.Now.Date)
+                throw new Exception("Data inválida ou não informada");
+
                 if (_agendamento.Ativo == false)
                     throw new Exception("Ativo não marcado.");
             }

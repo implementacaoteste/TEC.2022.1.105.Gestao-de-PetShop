@@ -68,6 +68,7 @@ namespace BLL
         public List<Servico> BuscarPorNome(string _nome)
         {
             new UsuarioBLL().ValidarPermissao(6);
+
             if (string.IsNullOrEmpty(_nome))
                 throw new Exception("Nome inválido ou não informado.") { Data = { { "Id", 144 } } };
             

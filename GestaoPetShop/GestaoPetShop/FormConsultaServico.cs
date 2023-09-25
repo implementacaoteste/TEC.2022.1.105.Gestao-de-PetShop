@@ -34,17 +34,17 @@ namespace GestaoPetShop
 
                 else if (comboBox_EscolhaBuscarServico.SelectedIndex == 1)
                 {
+                    int id;
+                    if (String.IsNullOrEmpty(textBox_BuscarServico.Text))
+                    id = 0;
+                    else
+                        id = Convert.ToInt32( textBox_BuscarServico.Text);
 
-
-                    servicoBindingSource.DataSource = servicoBLL.BuscarPorId(Convert.ToInt32(textBox_BuscarServico.Text));
-
+                    servicoBindingSource.DataSource = servicoBLL.BuscarPorId(id);
                 }
                 else if (comboBox_EscolhaBuscarServico.SelectedIndex == 2)
                 {
-
-
                     servicoBindingSource.DataSource = servicoBLL.BuscarPorNome(textBox_BuscarServico.Text);
-
                 }
                 else
                 {
@@ -55,7 +55,10 @@ namespace GestaoPetShop
             }
             catch (Exception ex)
             {
-                if (new TratarErro().GetId(ex) == 141 || new TratarErro().GetId(ex) == 41)
+                if ( new TratarErro().GetId(ex) == 41)
+                    textBox_BuscarServico.Focus();
+
+                if (new TratarErro().GetId(ex) == 141)
                     textBox_BuscarServico.Focus();
 
                 if (new TratarErro().GetId(ex) == 142 || new TratarErro().GetId(ex) == 42)
