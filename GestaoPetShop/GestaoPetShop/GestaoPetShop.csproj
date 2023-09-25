@@ -522,14 +522,8 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="packages.config" />
     <None Include="petshopDataSet.xsc">
       <DependentUpon>petshopDataSet.xsd</DependentUpon>
@@ -701,6 +695,8 @@
     <None Include="Resources\dog1-removebg-preview.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\papel-de-parede-22.jpg" />
+    <None Include="Resources\papel-de-parede-23.jpg" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
