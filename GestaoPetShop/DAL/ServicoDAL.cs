@@ -244,5 +244,45 @@ namespace DAL
             }
         }
 
+        public Servico BuscarPorNomeUnico(string _nome)
+        {
+           
+            Servico servico = new Servico();
+
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = cn;
+                cmd.CommandText = @"SELECT Id,Descricao, Preco, Tempo, Ativo FROM Servico WHERE UPPER (Descricao) LIKE UPPER (@Descricao)";
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.Parameters.AddWithValue("@Descricao", _nome );
+                cn.Open();
+
+                using (SqlDataReader rd = cmd.ExecuteReader())
+                {
+                    if (rd.Read())
+                    {
+                       
+                        servico.Id = Convert.ToInt32(rd["Id"]);
+                        servico.Descricao = rd["Descricao"].ToString();
+                        servico.Preco = Convert.ToDecimal(rd["Preco"]);
+                        servico.Tempo = Convert.ToInt32(rd["Tempo"]);
+                        servico.Ativo = Convert.ToBoolean(rd["Ativo"]);
+
+                        
+                    }
+                }
+                return servico;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu um erro ao tentar buscar todos os Serviços no banco de dados.", ex) { Data = { { "Id", 43 } } };
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
     }
 }

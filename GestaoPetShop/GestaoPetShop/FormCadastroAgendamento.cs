@@ -32,7 +32,7 @@ namespace GestaoPetShop
                     profissionalBindingSource.AddNew();
                     labelAlterarAgenda.Visible = false;
                     labelCadastroAgenda.Visible = true;
-                    
+
                 }
                 else
                 {
@@ -40,6 +40,22 @@ namespace GestaoPetShop
                     labelAlterarAgenda.Visible = true;
                     labelCadastroAgenda.Visible = false;
                 }
+
+
+                //List<Servico> servicos = new List<Servico>();
+                //Servico servico = new Servico();
+
+                //servicos = new ServicoBLL().BuscarPorNome(descricaoComboBox.Text);
+
+                //foreach (var item in servicos)
+                //{
+                //    servico = item;
+                //}
+
+
+
+
+
 
                 List<Profissional> agendamentoProfissinal = new List<Profissional>();
 
@@ -80,13 +96,13 @@ namespace GestaoPetShop
             try
             {
                 ((AgendamentoServico)agendamentoServicosBindingSource.Current).Servico = descricaoComboBox.Text;
-               ///* textBoxValorUnitario.Text = precoTextBox.Text;
+                ///* textBoxValorUnitario.Text = precoTextBox.Text;
                 ((AgendamentoServico)agendamentoServicosBindingSource.Current).ValorUnitario = Convert.ToDecimal(precoTextBox.Text);
                 ((AgendamentoServico)agendamentoServicosBindingSource.Current).IdServico = Convert.ToInt32(idTextBox.Text);
                 ((AgendamentoServico)agendamentoServicosBindingSource.Current).IdProfissional = Convert.ToInt32(idProfissionalTextBox.Text);
                 ((AgendamentoServico)agendamentoServicosBindingSource.Current).NomeProfissional = nomeProfissionalComboBox.Text;
                 agendamentoServicosBindingSource.EndEdit();
-                
+
 
                 Agendamento agendamento = (Agendamento)agendamentoBindingSource.Current;
                 buttonNovo_Click(sender, e);
@@ -106,7 +122,7 @@ namespace GestaoPetShop
         {
             try
             {
-                DateTime dataagendamento= ((Agendamento)agendamentoBindingSource.Current).DataAg;
+                DateTime dataagendamento = ((Agendamento)agendamentoBindingSource.Current).DataAg;
                 DateTime datahoje = DateTime.Now;
                 agendamentoBindingSource.EndEdit();
                 Agendamento agendamento = (Agendamento)agendamentoBindingSource.Current;
@@ -118,7 +134,7 @@ namespace GestaoPetShop
                 }
                 else
                 {
-                    
+
                     new AgendamentoBLL().Inserir(agendamento);
                     MessageBox.Show("Agendamento Cadastrado com sucesso!");
                 }
@@ -140,7 +156,7 @@ namespace GestaoPetShop
 
                         if (frm.Cliente.Id < 1)
                             return;
-                       
+
                         idAnimalTextBox.Text = Convert.ToString(frm.Animal.Id);
                         ((Agendamento)agendamentoBindingSource.Current).IdAnimal = frm.Animal.Id;
                         nomeAnimalTextBox.Text = frm.Animal.Nome;
@@ -236,7 +252,7 @@ namespace GestaoPetShop
                 textBoxQuantidade.Text = "1";
                 ((AgendamentoServico)agendamentoServicosBindingSource.Current).Quantidade = 1;
                 //if (servicoBindingSource.Count == 0)
-                        servicoBindingSource.DataSource = new ServicoBLL().BuscarTodos();
+                servicoBindingSource.DataSource = new ServicoBLL().BuscarTodos();
             }
         }
 
@@ -284,14 +300,23 @@ namespace GestaoPetShop
         {
             try
             {
-                List<Servico> servicos = new List<Servico>();
+                //List<Servico> servicos = new List<Servico>();
                 Servico servico = new Servico();
 
-                servicos = new ServicoBLL().BuscarPorNome(descricaoComboBox.Text);
 
-                foreach (var item in servicos)
+
+
+
+
+                if (descricaoComboBox.Items.Count < 1)
                 {
-                    servico = item;
+
+                    servico = new ServicoBLL().BuscarPorNomeUnico(descricaoComboBox.Text);
+
+                    //foreach (var item in servicos)
+                    //{
+                    //    servico = item;
+                    //}
                 }
 
                 idTextBox.Text = Convert.ToString(servico.Id);
@@ -300,7 +325,7 @@ namespace GestaoPetShop
             catch (Exception ex)
             {
 
-                throw;
+                MessageBox.Show(ex.Message);
             }
         }
     }

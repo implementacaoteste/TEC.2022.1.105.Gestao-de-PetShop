@@ -44,7 +44,7 @@ namespace BLL
         public List<Servico> BuscarPorNome(string _nome)
         {
             ServicoDAL servicoDAL = new ServicoDAL();
-
+            
             List<Servico> servicos = servicoDAL.BuscarPorNome(_nome);
             if (servicos.Count == 0)
             {
@@ -70,6 +70,18 @@ namespace BLL
         {
             ServicoDAL servicoDAL = new ServicoDAL();
             return servicoDAL.ExisteVinculo(_id);
+        }
+
+        public Servico BuscarPorNomeUnico(string _nome)
+        {
+            ServicoDAL servicoDAL = new ServicoDAL();
+
+            Servico servico = servicoDAL.BuscarPorNomeUnico(_nome);
+            if (servico.Id == 0)
+            {
+                throw new Exception("Serviço não encontrado") { Data = { { "Id", 0 } } };
+            }
+            return servico;
         }
     }
 }
