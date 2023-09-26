@@ -44,6 +44,8 @@
             this.labelId = new System.Windows.Forms.Label();
             this.textBoxFuncao = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.permissaoDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.permissaoBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -61,7 +63,7 @@
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2});
             this.permissaoDataGridView.DataSource = this.permissaoBindingSource;
-            this.permissaoDataGridView.Location = new System.Drawing.Point(12, 147);
+            this.permissaoDataGridView.Location = new System.Drawing.Point(13, 163);
             this.permissaoDataGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.permissaoDataGridView.Name = "permissaoDataGridView";
             this.permissaoDataGridView.ReadOnly = true;
@@ -69,7 +71,7 @@
             this.permissaoDataGridView.RowHeadersWidth = 51;
             this.permissaoDataGridView.RowTemplate.Height = 24;
             this.permissaoDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.permissaoDataGridView.Size = new System.Drawing.Size(508, 155);
+            this.permissaoDataGridView.Size = new System.Drawing.Size(508, 149);
             this.permissaoDataGridView.TabIndex = 1;
             // 
             // dataGridViewTextBoxColumn1
@@ -97,7 +99,7 @@
             // buttonBuscarPermissao
             // 
             this.buttonBuscarPermissao.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.buttonBuscarPermissao.Location = new System.Drawing.Point(439, 117);
+            this.buttonBuscarPermissao.Location = new System.Drawing.Point(439, 133);
             this.buttonBuscarPermissao.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonBuscarPermissao.Name = "buttonBuscarPermissao";
             this.buttonBuscarPermissao.Size = new System.Drawing.Size(81, 26);
@@ -113,7 +115,7 @@
             "Todos",
             "Id",
             "Nome"});
-            this.comboBoxSelecionarBuscaPermissao.Location = new System.Drawing.Point(12, 117);
+            this.comboBoxSelecionarBuscaPermissao.Location = new System.Drawing.Point(12, 133);
             this.comboBoxSelecionarBuscaPermissao.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxSelecionarBuscaPermissao.Name = "comboBoxSelecionarBuscaPermissao";
             this.comboBoxSelecionarBuscaPermissao.Size = new System.Drawing.Size(95, 24);
@@ -121,10 +123,10 @@
             // 
             // textBoxBuscarPermissao
             // 
-            this.textBoxBuscarPermissao.Location = new System.Drawing.Point(139, 117);
+            this.textBoxBuscarPermissao.Location = new System.Drawing.Point(139, 133);
             this.textBoxBuscarPermissao.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxBuscarPermissao.Name = "textBoxBuscarPermissao";
-            this.textBoxBuscarPermissao.Size = new System.Drawing.Size(236, 22);
+            this.textBoxBuscarPermissao.Size = new System.Drawing.Size(294, 22);
             this.textBoxBuscarPermissao.TabIndex = 4;
             // 
             // buttonInserirPermissao
@@ -142,10 +144,10 @@
             // labelfuncao
             // 
             this.labelfuncao.AutoSize = true;
-            this.labelfuncao.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelfuncao.Location = new System.Drawing.Point(147, 72);
+            this.labelfuncao.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelfuncao.Location = new System.Drawing.Point(147, 65);
             this.labelfuncao.Name = "labelfuncao";
-            this.labelfuncao.Size = new System.Drawing.Size(58, 16);
+            this.labelfuncao.Size = new System.Drawing.Size(52, 16);
             this.labelfuncao.TabIndex = 7;
             this.labelfuncao.Text = "Função";
             // 
@@ -164,7 +166,7 @@
             // textBoxIdFuncao
             // 
             this.textBoxIdFuncao.Enabled = false;
-            this.textBoxIdFuncao.Location = new System.Drawing.Point(12, 91);
+            this.textBoxIdFuncao.Location = new System.Drawing.Point(12, 84);
             this.textBoxIdFuncao.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxIdFuncao.Name = "textBoxIdFuncao";
             this.textBoxIdFuncao.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -174,17 +176,17 @@
             // labelId
             // 
             this.labelId.AutoSize = true;
-            this.labelId.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelId.Location = new System.Drawing.Point(10, 72);
+            this.labelId.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelId.Location = new System.Drawing.Point(10, 65);
             this.labelId.Name = "labelId";
-            this.labelId.Size = new System.Drawing.Size(20, 16);
+            this.labelId.Size = new System.Drawing.Size(18, 16);
             this.labelId.TabIndex = 10;
             this.labelId.Text = "Id";
             // 
             // textBoxFuncao
             // 
             this.textBoxFuncao.Enabled = false;
-            this.textBoxFuncao.Location = new System.Drawing.Point(139, 91);
+            this.textBoxFuncao.Location = new System.Drawing.Point(139, 84);
             this.textBoxFuncao.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxFuncao.Name = "textBoxFuncao";
             this.textBoxFuncao.Size = new System.Drawing.Size(185, 22);
@@ -202,12 +204,34 @@
             this.textBox1.Text = "Vincular Permissão - Função";
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(136, 115);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(219, 16);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "Digite o nome da permissão ou o id";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(12, 115);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(72, 16);
+            this.label2.TabIndex = 14;
+            this.label2.Text = "Buscar por";
+            // 
             // FormVincularPermissaoEmFuncao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(532, 353);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.textBoxFuncao);
             this.Controls.Add(this.labelId);
@@ -250,5 +274,7 @@
         private System.Windows.Forms.Label labelId;
         private System.Windows.Forms.TextBox textBoxFuncao;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }

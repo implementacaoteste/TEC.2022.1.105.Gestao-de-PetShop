@@ -164,6 +164,7 @@
             // comboBoxBuscarPor
             // 
             this.comboBoxBuscarPor.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.comboBoxBuscarPor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxBuscarPor.FormattingEnabled = true;
             this.comboBoxBuscarPor.Items.AddRange(new object[] {
             "Id",

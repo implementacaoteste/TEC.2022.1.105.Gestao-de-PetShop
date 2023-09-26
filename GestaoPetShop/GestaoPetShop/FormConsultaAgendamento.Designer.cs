@@ -65,6 +65,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1_FormsPrincipalBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.agendamentoDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.agendamentoBindingSource)).BeginInit();
@@ -86,6 +87,7 @@
             // 
             // comboBox_SelecionarTipoBusca
             // 
+            this.comboBox_SelecionarTipoBusca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_SelecionarTipoBusca.FormattingEnabled = true;
             this.comboBox_SelecionarTipoBusca.Items.AddRange(new object[] {
             "Todos",
@@ -406,6 +408,7 @@
             // 
             // comboBox_SelecionarSituacaoBusca
             // 
+            this.comboBox_SelecionarSituacaoBusca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_SelecionarSituacaoBusca.FormattingEnabled = true;
             this.comboBox_SelecionarSituacaoBusca.Items.AddRange(new object[] {
             "Todos",
@@ -420,6 +423,7 @@
             // 
             // comboBoxSelecionarAtivoBuscar
             // 
+            this.comboBoxSelecionarAtivoBuscar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxSelecionarAtivoBuscar.FormattingEnabled = true;
             this.comboBoxSelecionarAtivoBuscar.Items.AddRange(new object[] {
             "Todos",
@@ -458,12 +462,22 @@
             this.label5.TabIndex = 34;
             this.label5.Text = "Ativo";
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(29, 197);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(125, 16);
+            this.label6.TabIndex = 35;
+            this.label6.Text = "Digite  o nome ou id";
+            // 
             // FormConsultaAgendamento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(860, 614);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -562,5 +576,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
     }
 }
