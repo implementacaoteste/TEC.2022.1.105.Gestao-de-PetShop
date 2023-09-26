@@ -204,7 +204,7 @@
             // button_SalvarServico
             // 
             this.button_SalvarServico.BackColor = System.Drawing.Color.Transparent;
-            this.button_SalvarServico.BackgroundImage = global::GestaoPetShop.Properties.Resources.save_transparente1;
+            //this.button_SalvarServico.BackgroundImage = global::GestaoPetShop.Properties.Resources.save_transparente1;
             this.button_SalvarServico.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button_SalvarServico.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.button_SalvarServico.FlatAppearance.BorderSize = 0;
@@ -221,7 +221,7 @@
             // button_CancelarCadastroOuAlterar
             // 
             this.button_CancelarCadastroOuAlterar.BackColor = System.Drawing.Color.Transparent;
-            this.button_CancelarCadastroOuAlterar.BackgroundImage = global::GestaoPetShop.Properties.Resources.cancel_removebg_preview;
+            //this.button_CancelarCadastroOuAlterar.BackgroundImage = global::GestaoPetShop.Properties.Resources.cancel_removebg_preview;
             this.button_CancelarCadastroOuAlterar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button_CancelarCadastroOuAlterar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.button_CancelarCadastroOuAlterar.FlatAppearance.BorderSize = 0;

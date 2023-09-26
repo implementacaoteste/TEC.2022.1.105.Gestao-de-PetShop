@@ -120,7 +120,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::GestaoPetShop.Properties.Resources.dog1_removebg_preview;
+            //this.pictureBox1.Image = global::GestaoPetShop.Properties.Resources.dog1_removebg_preview;
             this.pictureBox1.Location = new System.Drawing.Point(22, 103);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(135, 122);
