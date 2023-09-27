@@ -61,68 +61,68 @@
             // ativoLabel
             // 
             ativoLabel.AutoSize = true;
-            ativoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            ativoLabel.ForeColor = System.Drawing.SystemColors.WindowText;
+            ativoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            ativoLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(107)))), ((int)(((byte)(62)))));
             ativoLabel.Location = new System.Drawing.Point(27, 292);
             ativoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             ativoLabel.Name = "ativoLabel";
-            ativoLabel.Size = new System.Drawing.Size(40, 16);
+            ativoLabel.Size = new System.Drawing.Size(56, 24);
             ativoLabel.TabIndex = 1;
             ativoLabel.Text = "Ativo:";
             // 
             // descricaoLabel
             // 
             descricaoLabel.AutoSize = true;
-            descricaoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            descricaoLabel.ForeColor = System.Drawing.SystemColors.WindowText;
-            descricaoLabel.Location = new System.Drawing.Point(108, 139);
+            descricaoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            descricaoLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(107)))), ((int)(((byte)(62)))));
+            descricaoLabel.Location = new System.Drawing.Point(106, 139);
             descricaoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             descricaoLabel.Name = "descricaoLabel";
-            descricaoLabel.Size = new System.Drawing.Size(69, 16);
+            descricaoLabel.Size = new System.Drawing.Size(94, 24);
             descricaoLabel.TabIndex = 3;
             descricaoLabel.Text = "Descriçao";
             // 
             // idLabel
             // 
             idLabel.AutoSize = true;
-            idLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            idLabel.ForeColor = System.Drawing.SystemColors.WindowText;
+            idLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            idLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(107)))), ((int)(((byte)(62)))));
             idLabel.Location = new System.Drawing.Point(19, 139);
             idLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             idLabel.Name = "idLabel";
-            idLabel.Size = new System.Drawing.Size(18, 16);
+            idLabel.Size = new System.Drawing.Size(25, 24);
             idLabel.TabIndex = 5;
             idLabel.Text = "Id";
             // 
             // precoLabel
             // 
             precoLabel.AutoSize = true;
-            precoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            precoLabel.ForeColor = System.Drawing.SystemColors.WindowText;
-            precoLabel.Location = new System.Drawing.Point(185, 212);
+            precoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            precoLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(107)))), ((int)(((byte)(62)))));
+            precoLabel.Location = new System.Drawing.Point(179, 212);
             precoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             precoLabel.Name = "precoLabel";
-            precoLabel.Size = new System.Drawing.Size(43, 16);
+            precoLabel.Size = new System.Drawing.Size(60, 24);
             precoLabel.TabIndex = 7;
             precoLabel.Text = "Preco";
             // 
             // tempoLabel
             // 
             tempoLabel.AutoSize = true;
-            tempoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            tempoLabel.ForeColor = System.Drawing.SystemColors.WindowText;
+            tempoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            tempoLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(107)))), ((int)(((byte)(62)))));
             tempoLabel.Location = new System.Drawing.Point(19, 212);
             tempoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             tempoLabel.Name = "tempoLabel";
-            tempoLabel.Size = new System.Drawing.Size(51, 16);
+            tempoLabel.Size = new System.Drawing.Size(71, 24);
             tempoLabel.TabIndex = 9;
             tempoLabel.Text = "Tempo";
             // 
             // ativoCheckBox
             // 
             this.ativoCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.servicoBindingSource, "Ativo", true));
-            this.ativoCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ativoCheckBox.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.ativoCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ativoCheckBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(107)))), ((int)(((byte)(62)))));
             this.ativoCheckBox.Location = new System.Drawing.Point(91, 290);
             this.ativoCheckBox.Margin = new System.Windows.Forms.Padding(4);
             this.ativoCheckBox.Name = "ativoCheckBox";
@@ -204,6 +204,7 @@
             // button_SalvarServico
             // 
             this.button_SalvarServico.BackColor = System.Drawing.Color.Transparent;
+            this.button_SalvarServico.BackgroundImage = global::GestaoPetShop.Properties.Resources.save_transparente1;
             this.button_SalvarServico.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button_SalvarServico.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.button_SalvarServico.FlatAppearance.BorderSize = 0;
@@ -220,6 +221,7 @@
             // button_CancelarCadastroOuAlterar
             // 
             this.button_CancelarCadastroOuAlterar.BackColor = System.Drawing.Color.Transparent;
+            this.button_CancelarCadastroOuAlterar.BackgroundImage = global::GestaoPetShop.Properties.Resources.cancel_removebg_preview;
             this.button_CancelarCadastroOuAlterar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button_CancelarCadastroOuAlterar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.button_CancelarCadastroOuAlterar.FlatAppearance.BorderSize = 0;

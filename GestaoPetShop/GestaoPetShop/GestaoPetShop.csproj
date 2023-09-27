@@ -39,8 +39,20 @@
     <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
       <HintPath>..\packages\BouncyCastle.1.8.9\lib\BouncyCastle.Crypto.dll</HintPath>
     </Reference>
+    <Reference Include="Bunifu.Licensing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=f89b4760ba7dcb6b, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.Licensing.5.0.0\lib\net40\Bunifu.Licensing.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms, Version=0.0.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.6.1.0\lib\net40\Bunifu.UI.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.1.5.3, Version=1.5.3.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.1.5.3.1.0.0\lib\net40\Bunifu.UI.WinForms.1.5.3.dll</HintPath>
+    </Reference>
     <Reference Include="Costura, Version=3.3.3.0, Culture=neutral, PublicKeyToken=9919ef960d84173d, processorArchitecture=MSIL">
       <HintPath>..\packages\Costura.Fody.3.3.3\lib\net40\Costura.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2, Version=2.0.4.4, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.4\lib\net472\Guna.UI2.dll</HintPath>
     </Reference>
     <Reference Include="itext.barcodes, Version=8.0.1.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
       <HintPath>..\packages\itext.8.0.1\lib\net461\itext.barcodes.dll</HintPath>
@@ -75,6 +87,9 @@
     <Reference Include="itext.svg, Version=8.0.1.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
       <HintPath>..\packages\itext.8.0.1\lib\net461\itext.svg.dll</HintPath>
     </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.3, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.3\lib\itextsharp.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.5.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
     </Reference>
@@ -96,20 +111,20 @@
     <Reference Include="Microsoft.Extensions.Primitives, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Extensions.Primitives.5.0.0\lib\net461\Microsoft.Extensions.Primitives.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.ReportViewer.Common, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.340.80\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.340.80\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.ReportViewer.Design, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.340.80\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.340.80\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.ReportViewer.WinForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.340.80\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
@@ -296,12 +311,6 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormConsultaAgendamento.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -416,11 +425,11 @@
     <Compile Include="FormPrincipal.Designer.cs">
       <DependentUpon>FormPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormRelatorios.cs">
+    <Compile Include="FormRelatorioGeral.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormRelatorios.Designer.cs">
-      <DependentUpon>FormRelatorios.cs</DependentUpon>
+    <Compile Include="FormRelatorioGeral.Designer.cs">
+      <DependentUpon>FormRelatorioGeral.cs</DependentUpon>
     </Compile>
     <Compile Include="FormsCadastroServico.cs">
       <SubType>Form</SubType>
@@ -440,18 +449,31 @@
     <Compile Include="FormVincularPermissaoEmFuncao.Designer.cs">
       <DependentUpon>FormVincularPermissaoEmFuncao.cs</DependentUpon>
     </Compile>
+    <Compile Include="modelagemDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>modelagemDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="petshopDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>petshopDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="petshopDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>petshopDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Relatorio\FormRelatorioCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Relatorio\FormRelatorioCliente.Designer.cs">
+      <DependentUpon>FormRelatorioCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="TratarErro.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FormConsultaAgendamento.resx">
       <DependentUpon>FormConsultaAgendamento.cs</DependentUpon>
     </EmbeddedResource>
@@ -511,6 +533,9 @@
       <DependentUpon>FormPrincipal.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormRelatorioGeral.resx">
+      <DependentUpon>FormRelatorioGeral.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormsCadastroServico.resx">
       <DependentUpon>FormsCadastroServico.cs</DependentUpon>
     </EmbeddedResource>
@@ -522,8 +547,29 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Relatorio\FormRelatorioCliente.resx">
+      <DependentUpon>FormRelatorioCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatorio\ReportCliente.rdlc" />
+    <None Include="modelagemDataSet.xsc">
+      <DependentUpon>modelagemDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="modelagemDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>modelagemDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="modelagemDataSet.xss">
+      <DependentUpon>modelagemDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="petshopDataSet.xsc">
       <DependentUpon>petshopDataSet.xsd</DependentUpon>
@@ -536,6 +582,18 @@
     <None Include="petshopDataSet.xss">
       <DependentUpon>petshopDataSet.xsd</DependentUpon>
     </None>
+    <None Include="petshopDataSet1.xsc">
+      <DependentUpon>petshopDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="petshopDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>petshopDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="petshopDataSet1.xss">
+      <DependentUpon>petshopDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\FormCadastroProfissional.datasource" />
     <None Include="Properties\DataSources\Models.Agendamento.datasource" />
     <None Include="Properties\DataSources\Models.AgendamentoServico.datasource" />
     <None Include="Properties\DataSources\Models.Animal2.datasource" />
@@ -550,7 +608,10 @@
     <None Include="Properties\DataSources\Models.Raca.datasource" />
     <None Include="Properties\DataSources\Models.Servico.datasource" />
     <None Include="Properties\DataSources\Models.Usuario.datasource" />
-    <None Include="Properties\DataSources\petshopDataSet.AnimalRow.datasource" />
+    <None Include="Properties\DataSources\petshopDataSet.FuncaoDataTable.datasource" />
+    <None Include="Properties\DataSources\petshopDataSet.ProfissionalDataTable.datasource" />
+    <None Include="Properties\DataSources\petshopDataSet.ProfissionalRow.datasource" />
+    <None Include="Properties\DataSources\petshopDataSet.ServicoDataTable.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -695,8 +756,6 @@
     <None Include="Resources\dog1-removebg-preview.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\papel-de-parede-22.jpg" />
-    <None Include="Resources\papel-de-parede-23.jpg" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

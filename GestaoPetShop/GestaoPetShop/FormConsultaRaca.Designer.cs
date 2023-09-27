@@ -237,7 +237,6 @@
             // buttonSelecionar
             // 
             this.buttonSelecionar.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.buttonSelecionar.Enabled = false;
             this.buttonSelecionar.Location = new System.Drawing.Point(325, 312);
             this.buttonSelecionar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonSelecionar.Name = "buttonSelecionar";
@@ -245,7 +244,6 @@
             this.buttonSelecionar.TabIndex = 9;
             this.buttonSelecionar.Text = "&Selecionar";
             this.buttonSelecionar.UseVisualStyleBackColor = false;
-            this.buttonSelecionar.Visible = false;
             this.buttonSelecionar.Click += new System.EventHandler(this.buttonSelecionar_Click);
             // 
             // buttonCancelar

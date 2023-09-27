@@ -54,7 +54,7 @@ namespace GestaoPetShop
         private void textBoxSenha_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
-                buttonEntrar_Click(null, null);
+                bunifuThinButton21_Click(null, null);
         }
 
         private void FormLogin_Load(object sender, EventArgs e)
@@ -63,6 +63,25 @@ namespace GestaoPetShop
             textBoxSenha.Text = "123";
             textBoxUsuario.Text = "Erisvaldo";
 #endif
+        }
+
+        private void bunifuThinButton21_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                new UsuarioBLL().Autenticar(textBoxUsuario.Text, textBoxSenha.Text);
+                Logou = true;
+                Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void bunifuThinButton22_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

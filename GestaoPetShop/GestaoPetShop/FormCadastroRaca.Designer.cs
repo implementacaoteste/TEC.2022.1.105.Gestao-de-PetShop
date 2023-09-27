@@ -32,7 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCadastroRaca));
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.racaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
@@ -41,6 +40,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.buttonSalvar = new System.Windows.Forms.Button();
             this.buttonCancelar = new System.Windows.Forms.Button();
+            this.racaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.racaBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,20 +59,16 @@
             // 
             // textBox1
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.textBox1.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.racaBindingSource, "Nome", true));
             this.textBox1.Location = new System.Drawing.Point(27, 141);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(255, 23);
             this.textBox1.TabIndex = 0;
             // 
-            // racaBindingSource
-            // 
-            this.racaBindingSource.DataSource = typeof(Models.Raca);
-            // 
             // textBox3
             // 
-            this.textBox3.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.textBox3.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.textBox3.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.racaBindingSource, "Especie", true));
             this.textBox3.Location = new System.Drawing.Point(27, 199);
             this.textBox3.Name = "textBox3";
@@ -81,7 +77,7 @@
             // 
             // textBox5
             // 
-            this.textBox5.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.textBox5.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.textBox5.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.racaBindingSource, "PaisOrigem", true));
             this.textBox5.Location = new System.Drawing.Point(27, 263);
             this.textBox5.Name = "textBox5";
@@ -150,6 +146,10 @@
             this.buttonCancelar.TabIndex = 5;
             this.buttonCancelar.Text = "&Cancelar";
             this.buttonCancelar.UseVisualStyleBackColor = false;
+            // 
+            // racaBindingSource
+            // 
+            this.racaBindingSource.DataSource = typeof(Models.Raca);
             // 
             // FormCadastroRaca
             // 

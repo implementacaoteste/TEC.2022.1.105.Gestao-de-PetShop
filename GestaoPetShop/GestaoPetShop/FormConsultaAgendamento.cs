@@ -333,33 +333,30 @@ namespace GestaoPetShop
             }
             catch (Exception ex)
             {
-                //if (new TratarErro().GetId(ex) == 1)
-                //    textBox_BuscarAgendamento.Focus();
-
                 MessageBox.Show(ex.Message);
             }
         }
-        //private void button_AbrirCalendario_Click(object sender, EventArgs e)
-        //{
-        //    try
-        //    {
-        //        monthCalendar_Agendamento.Visible = true;
-        //        button_SelecionarData.Visible = true;
-        //        buttonFecharCalendario.Visible = true;
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        MessageBox.Show("Ocorreu um erro ao tentar abrir o calendário", ex.Message);
-        //    }
-        //}
+        private void button_AbrirCalendario_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                monthCalendar_Agendamento.Visible = true;
+                button_SelecionarData.Visible = true;
+                buttonFecharCalendario.Visible = true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocorreu um erro ao tentar abrir o calendário", ex.Message);
+            }
+        }
         private void button_SelecionarData_Click(object sender, EventArgs e)
         {
             try
             {
                 textBox_BuscarData.Text = monthCalendar_Agendamento.SelectionStart.ToShortDateString();
-                //monthCalendar_Agendamento.Visible = false;
-                //button_SelecionarData.Visible = false;
-                //buttonFecharCalendario.Visible = false;
+                monthCalendar_Agendamento.Visible = false;
+                button_SelecionarData.Visible = false;
+                buttonFecharCalendario.Visible = false;
             }
             catch (Exception ex)
             {
@@ -370,7 +367,6 @@ namespace GestaoPetShop
         {
             try
             {
-                new UsuarioBLL().ValidarPermissao(13);
                 int id = 0;
                 using (FormCadastroAgendamento frm = new FormCadastroAgendamento(id))
                 {
@@ -422,25 +418,18 @@ namespace GestaoPetShop
                 MessageBox.Show(ex.Message);
             }
         }
-
-        private void FormConsultaAgendamento_Load(object sender, EventArgs e)
+        private void buttonFecharCalendario_Click(object sender, EventArgs e)
         {
-            comboBoxSelecionarAtivoBuscar.SelectedIndex = 0;
-            comboBox_SelecionarSituacaoBusca.SelectedIndex = 0;
-            comboBox_SelecionarTipoBusca.SelectedIndex = 0;
+            try
+            {
+                monthCalendar_Agendamento.Visible = false;
+                button_SelecionarData.Visible = false;
+                buttonFecharCalendario.Visible = false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocorreu um erro ao tentar fecha o calendário.", ex.Message);
+            }
         }
-        //private void buttonFecharCalendario_Click(object sender, EventArgs e)
-        //{
-        //    try
-        //    {
-        //        monthCalendar_Agendamento.Visible = false;
-        //        button_SelecionarData.Visible = false;
-        //        buttonFecharCalendario.Visible = false;
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        MessageBox.Show("Ocorreu um erro ao tentar fecha o calendário.", ex.Message);
-        //    }
-        //}
     }
 }

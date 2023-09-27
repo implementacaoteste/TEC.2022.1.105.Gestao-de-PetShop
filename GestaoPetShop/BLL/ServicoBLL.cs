@@ -14,7 +14,6 @@ namespace BLL
     {
         public void Inserir(Servico _servico)
         {
-           new UsuarioBLL().ValidarPermissao(15);  
             ValidarPreenchimento(_servico);
             ServicoDAL servicoDAL = new ServicoDAL();
             servicoDAL.Inserir(_servico);
@@ -40,7 +39,7 @@ namespace BLL
 
         public List<Servico> BuscarTodos()
         {
-            new UsuarioBLL().ValidarPermissao(6);
+
             ServicoDAL servicoDAL = new ServicoDAL();
             List<Servico> servicos = servicoDAL.BuscarTodos();
             if (servicos.Count == 0)
@@ -51,8 +50,8 @@ namespace BLL
         }
         public Servico BuscarPorId(int _id)
         {
-            new UsuarioBLL().ValidarPermissao(6);
-            if (_id == 0)
+
+            if(_id == 0)
                 throw new Exception("Id Inválido ou não informado") { Data = { { "Id", 142 } } };
 
             ServicoDAL servicoDAL = new ServicoDAL();
@@ -67,8 +66,6 @@ namespace BLL
         }
         public List<Servico> BuscarPorNome(string _nome)
         {
-            new UsuarioBLL().ValidarPermissao(6);
-
             if (string.IsNullOrEmpty(_nome))
                 throw new Exception("Nome inválido ou não informado.") { Data = { { "Id", 144 } } };
             
@@ -83,14 +80,12 @@ namespace BLL
         }
         public void Alterar(Servico _servico)
         {
-            new UsuarioBLL().ValidarPermissao(24);
             ValidarPreenchimento(_servico);
             ServicoDAL servicoDAL = new ServicoDAL();
             servicoDAL.Alterar(_servico);
         }
         public void Excluir(int _id)
         {
-            new UsuarioBLL().ValidarPermissao(33);
             if (new ServicoBLL().ExisteVinculo(_id))
             {
                 throw new Exception("Este Serviço foi utilizado em agendamento. Deve ser excluído primeiro o registro em agendamento.") { Data = { { "Id", 146 } } };

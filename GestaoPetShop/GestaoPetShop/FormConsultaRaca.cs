@@ -15,14 +15,12 @@ namespace GestaoPetShop
     public partial class FormConsultaRaca : Form
     {
 
-        int opc; // variavel para ativar o selecionar quando o usuario vier do Cadastro ou Alterar Animal
+
         int id;
-        public FormConsultaRaca(int _opc = 0)
+        public FormConsultaRaca()
         {
             InitializeComponent();
             id = id;
-            opc = _opc;
-
         }
         public Raca Raca { get; set; }
 
@@ -46,13 +44,6 @@ namespace GestaoPetShop
                     racaBindingSource.AddNew();
                 else
                     racaBindingSource.DataSource = new AnimalBLL().BuscarPorId(id);
-
-                if(opc != 0)
-                {
-
-                    buttonSelecionar.Enabled = true;
-                    buttonSelecionar.Visible = true;
-                }
             }
             catch (Exception ex)
             {

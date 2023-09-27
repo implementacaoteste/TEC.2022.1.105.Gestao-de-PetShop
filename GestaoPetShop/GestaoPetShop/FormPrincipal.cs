@@ -154,5 +154,18 @@ namespace GestaoPetShop
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void relatóriosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Relatorio.FormRelatorioCliente frm = new Relatorio.FormRelatorioCliente();
+                frm.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }

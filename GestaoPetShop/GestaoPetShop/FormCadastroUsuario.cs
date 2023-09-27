@@ -14,8 +14,8 @@ namespace GestaoPetShop
         {
             InitializeComponent();
             Id = _id;
-            //senhaTextBox.UseSystemPasswordChar = true;
-            //textBoxConfirmarSenha.UseSystemPasswordChar = true;
+            senhaTextBox.UseSystemPasswordChar = true;
+
 
         }
         private void buttonSalvar_Click(object sender, EventArgs e)
@@ -91,7 +91,6 @@ namespace GestaoPetShop
                     idTextBoxProfissional.Text = Convert.ToString(frm.id);
                     ((Usuario)usuarioBindingSource.Current).IdProfissional = frm.id;
                     nomeTextBoxProfissional.Text = frm.nome;
-                    ((Usuario)usuarioBindingSource.Current).NomeProfissional = frm.nome;
 
                 }
 
@@ -104,18 +103,20 @@ namespace GestaoPetShop
 
         private void button1_Click(object sender, EventArgs e)
         {
+
+
             if (controle == 0)
             {
-                senhaTextBox.PasswordChar = '\u0000';
-                textBoxConfirmarSenha.PasswordChar = '\u0000';
+                senhaTextBox.UseSystemPasswordChar = false;
                 controle = 1;
             }
             else
             {
-                senhaTextBox.PasswordChar = '*';
-                textBoxConfirmarSenha.PasswordChar = '*';
+                senhaTextBox.UseSystemPasswordChar = true;
                 controle = 0;
             }
+
+
         }
     }
 }

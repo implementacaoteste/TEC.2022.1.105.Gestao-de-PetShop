@@ -211,9 +211,9 @@ namespace DAL
                 cn.Close();
             }
         }
-        public void Excluir(int _id, SqlTransaction _transaction = null)
+        public void Excluir(int _id)
         {
-            SqlTransaction transaction = _transaction;
+
             SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
             try
             {
@@ -222,27 +222,14 @@ namespace DAL
                 cmd.CommandType = System.Data.CommandType.Text;
 
                 cmd.Parameters.AddWithValue("@Id", _id);
-                if (_transaction == null)
-                {
-                    cn.Open();
-                    transaction = cn.BeginTransaction();
-                }
-                cmd.Transaction = transaction;
-                cmd.Connection = transaction.Connection;
 
-                new EmailClienteDAL().ExcluirPorIdCliente(_id, transaction);
-                new TelefoneClienteDAL().ExcluirPorIdCliente(_id, transaction);
+                cmd.Connection = cn;
+                cn.Open();
 
                 cmd.ExecuteNonQuery();
-
-                if (_transaction == null)
-                    transaction.Commit();
             }
             catch (Exception ex)
             {
-                if (_transaction == null)
-                    transaction.Rollback();
-
                 throw new Exception("Ocorreu um erro ao tentar excluir cliente no banco de dados.", ex) { Data = { { "Id", 12 } } };
             }
             finally

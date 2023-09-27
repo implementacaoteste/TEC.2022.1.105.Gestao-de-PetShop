@@ -94,7 +94,7 @@
             this.btnSalvarServico.FlatAppearance.BorderSize = 0;
             this.btnSalvarServico.ImageKey = "(none)";
             this.btnSalvarServico.Location = new System.Drawing.Point(357, 306);
-            this.btnSalvarServico.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSalvarServico.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSalvarServico.Name = "btnSalvarServico";
             this.btnSalvarServico.Size = new System.Drawing.Size(77, 34);
             this.btnSalvarServico.TabIndex = 16;
@@ -109,7 +109,7 @@
             this.btnCancelarCadastroOuAlterar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnCancelarCadastroOuAlterar.FlatAppearance.BorderSize = 0;
             this.btnCancelarCadastroOuAlterar.Location = new System.Drawing.Point(442, 306);
-            this.btnCancelarCadastroOuAlterar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCancelarCadastroOuAlterar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCancelarCadastroOuAlterar.Name = "btnCancelarCadastroOuAlterar";
             this.btnCancelarCadastroOuAlterar.Size = new System.Drawing.Size(77, 34);
             this.btnCancelarCadastroOuAlterar.TabIndex = 17;
@@ -156,7 +156,7 @@
             this.Controls.Add(this.lblAlterarFuncao);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(550, 400);
             this.MinimizeBox = false;

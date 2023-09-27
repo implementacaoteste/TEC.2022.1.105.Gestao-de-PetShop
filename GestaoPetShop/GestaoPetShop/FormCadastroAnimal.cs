@@ -10,6 +10,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static Guna.UI2.Native.WinApi;
 
 namespace GestaoPetShop
 {
@@ -84,8 +85,7 @@ namespace GestaoPetShop
         {
             try
             {
-                int opc = 1;
-                using (FormConsultaCliente frm = new FormConsultaCliente(opc))
+                using (FormConsultaCliente frm = new FormConsultaCliente())
                 {
                     frm.ShowDialog();
 
@@ -106,8 +106,7 @@ namespace GestaoPetShop
         {
             try
             {
-                int opc = 1;
-                using (FormConsultaRaca frm = new FormConsultaRaca(opc))
+                using (FormConsultaRaca frm = new FormConsultaRaca())
                 {
                     frm.ShowDialog();
 

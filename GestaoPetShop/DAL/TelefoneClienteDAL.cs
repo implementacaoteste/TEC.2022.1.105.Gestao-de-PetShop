@@ -3,10 +3,8 @@ using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
-using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
-using System.Web.UI.WebControls;
 
 namespace DAL
 {
@@ -175,47 +173,6 @@ namespace DAL
             finally
             {
                 cn.Close();
-            }
-        }
-
-        public void ExcluirPorIdCliente(int _idCliente, SqlTransaction _transaction)
-        {
-            SqlTransaction transaction = _transaction;
-            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
-
-            try
-            {
-                SqlCommand cmd = cn.CreateCommand();
-                cmd.CommandText = @"DELETE FROM TelefoneCliente WHERE IdCliente = @IdCliente";
-                cmd.CommandType = System.Data.CommandType.Text;
-
-                cmd.Parameters.AddWithValue("@IdCliente", _idCliente);
-
-                if (_transaction == null)
-                {
-                    cn.Open();
-                    transaction = cn.BeginTransaction();
-                }
-
-                cmd.Transaction = transaction;
-                cmd.Connection = transaction.Connection;
-
-                cmd.ExecuteNonQuery();
-
-                if (_transaction == null)
-                    transaction.Commit();
-            }
-            catch (Exception ex)
-            {
-                if (_transaction == null)
-                    transaction.Rollback();
-
-                throw new Exception("Ocorreu um erro ao tentar excluir telefonecliente no banco de dados.", ex) { Data = { { "Id", 878 } } };
-            }
-            finally
-            {
-                if (_transaction == null)
-                    cn.Close();
             }
         }
     }

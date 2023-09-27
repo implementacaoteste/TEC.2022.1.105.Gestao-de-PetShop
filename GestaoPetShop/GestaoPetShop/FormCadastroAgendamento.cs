@@ -75,7 +75,7 @@ namespace GestaoPetShop
             try
             {
                 ((AgendamentoServico)agendamentoServicosBindingSource.Current).Servico = descricaoComboBox.Text;
-                ///* textBoxValorUnitario.Text = precoTextBox.Text;
+               ///* textBoxValorUnitario.Text = precoTextBox.Text;
                 ((AgendamentoServico)agendamentoServicosBindingSource.Current).ValorUnitario = Convert.ToDecimal(precoTextBox.Text);
                 ((AgendamentoServico)agendamentoServicosBindingSource.Current).IdServico = Convert.ToInt32(idTextBox.Text);
                 agendamentoServicosBindingSource.EndEdit();
@@ -98,7 +98,7 @@ namespace GestaoPetShop
         {
             try
             {
-                DateTime dataagendamento = ((Agendamento)agendamentoBindingSource.Current).DataAg;
+                DateTime dataagendamento= ((Agendamento)agendamentoBindingSource.Current).DataAg;
                 DateTime datahoje = DateTime.Now;
                 agendamentoBindingSource.EndEdit();
                 Agendamento agendamento = (Agendamento)agendamentoBindingSource.Current;
@@ -110,7 +110,12 @@ namespace GestaoPetShop
                 }
                 else
                 {
-                    
+                    //if (dataagendamento.Date < datahoje.Date)
+                    //{
+                    //    MessageBox.Show("Data inválida! \n Menor que a data atual.");
+                    //    return;
+                    //}
+
                     new AgendamentoBLL().Inserir(agendamento);
                     MessageBox.Show("Agendamento Cadastrado com sucesso!");
                 }
@@ -132,7 +137,7 @@ namespace GestaoPetShop
 
                         if (frm.Cliente.Id < 1)
                             return;
-
+                       
                         idAnimalTextBox.Text = Convert.ToString(frm.Animal.Id);
                         ((Agendamento)agendamentoBindingSource.Current).IdAnimal = frm.Animal.Id;
                         nomeAnimalTextBox.Text = frm.Animal.Nome;
@@ -286,7 +291,6 @@ namespace GestaoPetShop
 
             }
         }
-
     }
 
 }
