@@ -86,8 +86,9 @@ namespace GestaoPetShop
                 ((AgendamentoServico)agendamentoServicosBindingSource.Current).NomeProfissional = nomeProfissionalComboBox.Text;
                 ((AgendamentoServico)agendamentoServicosBindingSource.Current).Quantidade = Convert.ToInt32(textBoxQuantidade.Text);
                 ((AgendamentoServico)agendamentoServicosBindingSource.Current).Tempo = ((Servico)servicoBindingSource.Current).Tempo;
+                ((AgendamentoServico)agendamentoServicosBindingSource.Current).Preco = Convert.ToDecimal(precoTextBox.Text);
                 agendamentoServicosBindingSource.EndEdit();
-                servicoBindingSource.EndEdit();
+              
 
 
                 Agendamento agendamento = (Agendamento)agendamentoBindingSource.Current;
@@ -236,13 +237,12 @@ namespace GestaoPetShop
             if (!buttonNovo.Enabled)
             {
                 agendamentoServicosBindingSource.AddNew();
-                //servicoBindingSource.AddNew();
-
+              
 
                 textBoxQuantidade.Text = "1";
                 ((AgendamentoServico)agendamentoServicosBindingSource.Current).Quantidade = 1;
 
-                //if (servicoBindingSource.Count == 0)
+                if (servicoBindingSource.Count == 0)
                     servicoBindingSource.DataSource = new ServicoBLL().BuscarTodos();
             }
         }
@@ -303,6 +303,7 @@ namespace GestaoPetShop
                 idTextBox.Text = Convert.ToString(servico.Id);
                 descricaoComboBox.Text = servico.Descricao;
                 precoTextBox.Text = Convert.ToString(servico.Preco);
+                
                
             }
             catch (Exception ex)
