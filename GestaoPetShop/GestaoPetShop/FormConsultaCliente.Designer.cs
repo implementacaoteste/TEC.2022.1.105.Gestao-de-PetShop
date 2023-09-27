@@ -44,6 +44,11 @@
             this.clienteTableAdapter = new GestaoPetShop.petshopDataSetTableAdapters.ClienteTableAdapter();
             this.tableAdapterManager = new GestaoPetShop.petshopDataSetTableAdapters.TableAdapterManager();
             this.clienteDataGridView = new System.Windows.Forms.DataGridView();
+            this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.buttonVisualizar = new System.Windows.Forms.Button();
+            this.buttonSelecionar = new System.Windows.Forms.Button();
+            this.emailClienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label3 = new System.Windows.Forms.Label();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -56,10 +61,6 @@
             this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.buttonVisualizar = new System.Windows.Forms.Button();
-            this.buttonSelecionar = new System.Windows.Forms.Button();
-            this.emailClienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.petshopDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clienteDataGridView)).BeginInit();
@@ -94,7 +95,7 @@
             this.textBoxBuscar.Location = new System.Drawing.Point(140, 143);
             this.textBoxBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxBuscar.Name = "textBoxBuscar";
-            this.textBoxBuscar.Size = new System.Drawing.Size(291, 22);
+            this.textBoxBuscar.Size = new System.Drawing.Size(318, 22);
             this.textBoxBuscar.TabIndex = 4;
             // 
             // buttonBuscar
@@ -164,6 +165,7 @@
             // comboBoxBuscarPor
             // 
             this.comboBoxBuscarPor.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.comboBoxBuscarPor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxBuscarPor.FormattingEnabled = true;
             this.comboBoxBuscarPor.Items.AddRange(new object[] {
             "Id",
@@ -245,6 +247,49 @@
             this.clienteDataGridView.Size = new System.Drawing.Size(832, 366);
             this.clienteDataGridView.TabIndex = 10;
             // 
+            // clienteBindingSource
+            // 
+            this.clienteBindingSource.DataSource = typeof(Models.Cliente);
+            // 
+            // buttonVisualizar
+            // 
+            this.buttonVisualizar.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.buttonVisualizar.Location = new System.Drawing.Point(657, 570);
+            this.buttonVisualizar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonVisualizar.Name = "buttonVisualizar";
+            this.buttonVisualizar.Size = new System.Drawing.Size(92, 30);
+            this.buttonVisualizar.TabIndex = 5;
+            this.buttonVisualizar.Text = "&Visualizar";
+            this.buttonVisualizar.UseVisualStyleBackColor = false;
+            this.buttonVisualizar.Click += new System.EventHandler(this.buttonVisualizar_Click);
+            // 
+            // buttonSelecionar
+            // 
+            this.buttonSelecionar.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.buttonSelecionar.Location = new System.Drawing.Point(560, 570);
+            this.buttonSelecionar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonSelecionar.Name = "buttonSelecionar";
+            this.buttonSelecionar.Size = new System.Drawing.Size(92, 30);
+            this.buttonSelecionar.TabIndex = 22;
+            this.buttonSelecionar.Text = "&Selecionar";
+            this.buttonSelecionar.UseVisualStyleBackColor = false;
+            this.buttonSelecionar.Visible = false;
+            this.buttonSelecionar.Click += new System.EventHandler(this.buttonSelecionar_Click);
+            // 
+            // emailClienteBindingSource
+            // 
+            this.emailClienteBindingSource.DataMember = "EmailCliente";
+            this.emailClienteBindingSource.DataSource = this.clienteBindingSource;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(144, 123);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(154, 16);
+            this.label3.TabIndex = 23;
+            this.label3.Text = "Digite o Id, nome ou CPF";
+            // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
@@ -283,8 +328,8 @@
             // 
             // dataGridViewTextBoxColumn8
             // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "Numero";
-            this.dataGridViewTextBoxColumn8.HeaderText = "Numero";
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "Número";
+            this.dataGridViewTextBoxColumn8.HeaderText = "Número";
             this.dataGridViewTextBoxColumn8.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             this.dataGridViewTextBoxColumn8.ReadOnly = true;
@@ -319,8 +364,8 @@
             // 
             // dataGridViewTextBoxColumn12
             // 
-            this.dataGridViewTextBoxColumn12.DataPropertyName = "Pais";
-            this.dataGridViewTextBoxColumn12.HeaderText = "Pais";
+            this.dataGridViewTextBoxColumn12.DataPropertyName = "País";
+            this.dataGridViewTextBoxColumn12.HeaderText = "País";
             this.dataGridViewTextBoxColumn12.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
             this.dataGridViewTextBoxColumn12.ReadOnly = true;
@@ -337,8 +382,8 @@
             // 
             // dataGridViewTextBoxColumn14
             // 
-            this.dataGridViewTextBoxColumn14.DataPropertyName = "DataNascimento";
-            this.dataGridViewTextBoxColumn14.HeaderText = "DataNascimento";
+            this.dataGridViewTextBoxColumn14.DataPropertyName = "Data de nascimento";
+            this.dataGridViewTextBoxColumn14.HeaderText = "Data de nascimento";
             this.dataGridViewTextBoxColumn14.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
             this.dataGridViewTextBoxColumn14.ReadOnly = true;
@@ -353,46 +398,13 @@
             this.dataGridViewCheckBoxColumn1.ReadOnly = true;
             this.dataGridViewCheckBoxColumn1.Width = 40;
             // 
-            // clienteBindingSource
-            // 
-            this.clienteBindingSource.DataSource = typeof(Models.Cliente);
-            // 
-            // buttonVisualizar
-            // 
-            this.buttonVisualizar.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.buttonVisualizar.Location = new System.Drawing.Point(657, 570);
-            this.buttonVisualizar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.buttonVisualizar.Name = "buttonVisualizar";
-            this.buttonVisualizar.Size = new System.Drawing.Size(92, 30);
-            this.buttonVisualizar.TabIndex = 5;
-            this.buttonVisualizar.Text = "&Visualizar";
-            this.buttonVisualizar.UseVisualStyleBackColor = false;
-            this.buttonVisualizar.Click += new System.EventHandler(this.buttonVisualizar_Click);
-            // 
-            // buttonSelecionar
-            // 
-            this.buttonSelecionar.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.buttonSelecionar.Location = new System.Drawing.Point(560, 570);
-            this.buttonSelecionar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.buttonSelecionar.Name = "buttonSelecionar";
-            this.buttonSelecionar.Size = new System.Drawing.Size(92, 30);
-            this.buttonSelecionar.TabIndex = 22;
-            this.buttonSelecionar.Text = "&Selecionar";
-            this.buttonSelecionar.UseVisualStyleBackColor = false;
-            this.buttonSelecionar.Visible = false;
-            this.buttonSelecionar.Click += new System.EventHandler(this.buttonSelecionar_Click);
-            // 
-            // emailClienteBindingSource
-            // 
-            this.emailClienteBindingSource.DataMember = "EmailCliente";
-            this.emailClienteBindingSource.DataSource = this.clienteBindingSource;
-            // 
             // FormConsultaCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(860, 614);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.buttonSelecionar);
             this.Controls.Add(this.clienteDataGridView);
             this.Controls.Add(this.comboBoxBuscarPor);
@@ -448,6 +460,7 @@
         private System.Windows.Forms.BindingSource emailClienteBindingSource;
         private System.Windows.Forms.Button buttonVisualizar;
         private System.Windows.Forms.Button buttonSelecionar;
+        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
