@@ -166,7 +166,7 @@
             this.rGTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rGTextBox.Name = "rGTextBox";
             this.rGTextBox.Size = new System.Drawing.Size(120, 22);
-            this.rGTextBox.TabIndex = 4;
+            this.rGTextBox.TabIndex = 9;
             // 
             // foneTextBox
             // 
@@ -176,7 +176,7 @@
             this.foneTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.foneTextBox.Name = "foneTextBox";
             this.foneTextBox.Size = new System.Drawing.Size(161, 22);
-            this.foneTextBox.TabIndex = 5;
+            this.foneTextBox.TabIndex = 6;
             // 
             // emailTextBox
             // 
@@ -186,7 +186,7 @@
             this.emailTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.emailTextBox.Name = "emailTextBox";
             this.emailTextBox.Size = new System.Drawing.Size(51, 22);
-            this.emailTextBox.TabIndex = 3;
+            this.emailTextBox.TabIndex = 7;
             // 
             // label1
             // 
@@ -207,7 +207,7 @@
             this.buttonSalvar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonSalvar.Name = "buttonSalvar";
             this.buttonSalvar.Size = new System.Drawing.Size(87, 31);
-            this.buttonSalvar.TabIndex = 12;
+            this.buttonSalvar.TabIndex = 13;
             this.buttonSalvar.Text = "&Salvar";
             this.buttonSalvar.UseVisualStyleBackColor = false;
             this.buttonSalvar.Click += new System.EventHandler(this.buttonSalvar_Click);
@@ -221,7 +221,7 @@
             this.buttonCancelar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonCancelar.Name = "buttonCancelar";
             this.buttonCancelar.Size = new System.Drawing.Size(87, 31);
-            this.buttonCancelar.TabIndex = 12;
+            this.buttonCancelar.TabIndex = 14;
             this.buttonCancelar.Text = "&Cancelar";
             this.buttonCancelar.UseVisualStyleBackColor = false;
             this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
@@ -244,7 +244,7 @@
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(113, 22);
-            this.textBox1.TabIndex = 6;
+            this.textBox1.TabIndex = 8;
             // 
             // textBox2
             // 
@@ -254,7 +254,7 @@
             this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(212, 22);
-            this.textBox2.TabIndex = 7;
+            this.textBox2.TabIndex = 5;
             // 
             // label3
             // 
@@ -274,7 +274,7 @@
             this.textBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(79, 22);
-            this.textBox3.TabIndex = 8;
+            this.textBox3.TabIndex = 4;
             // 
             // label4
             // 
@@ -294,7 +294,7 @@
             this.textBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(427, 22);
-            this.textBox4.TabIndex = 9;
+            this.textBox4.TabIndex = 3;
             // 
             // label5
             // 
@@ -337,7 +337,7 @@
             this.AtivocheckBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.AtivocheckBox1.Name = "AtivocheckBox1";
             this.AtivocheckBox1.Size = new System.Drawing.Size(59, 20);
-            this.AtivocheckBox1.TabIndex = 23;
+            this.AtivocheckBox1.TabIndex = 10;
             this.AtivocheckBox1.Text = "Ativo";
             this.AtivocheckBox1.UseVisualStyleBackColor = true;
             // 
@@ -398,7 +398,7 @@
             this.textBoxEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxEmail.Name = "textBoxEmail";
             this.textBoxEmail.Size = new System.Drawing.Size(263, 22);
-            this.textBoxEmail.TabIndex = 10;
+            this.textBoxEmail.TabIndex = 11;
             // 
             // textBoxTelefone
             // 
@@ -407,7 +407,7 @@
             this.textBoxTelefone.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxTelefone.Name = "textBoxTelefone";
             this.textBoxTelefone.Size = new System.Drawing.Size(265, 22);
-            this.textBoxTelefone.TabIndex = 11;
+            this.textBoxTelefone.TabIndex = 12;
             // 
             // buttonInserirEmail
             // 
