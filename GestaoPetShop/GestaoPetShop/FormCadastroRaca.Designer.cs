@@ -59,7 +59,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.textBox1.BackColor = System.Drawing.SystemColors.HighlightText;
             this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.racaBindingSource, "Nome", true));
             this.textBox1.Location = new System.Drawing.Point(27, 141);
             this.textBox1.Name = "textBox1";
@@ -68,7 +68,7 @@
             // 
             // textBox3
             // 
-            this.textBox3.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.textBox3.BackColor = System.Drawing.SystemColors.HighlightText;
             this.textBox3.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.racaBindingSource, "Especie", true));
             this.textBox3.Location = new System.Drawing.Point(27, 199);
             this.textBox3.Name = "textBox3";
@@ -77,7 +77,7 @@
             // 
             // textBox5
             // 
-            this.textBox5.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.textBox5.BackColor = System.Drawing.SystemColors.HighlightText;
             this.textBox5.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.racaBindingSource, "PaisOrigem", true));
             this.textBox5.Location = new System.Drawing.Point(27, 263);
             this.textBox5.Name = "textBox5";
