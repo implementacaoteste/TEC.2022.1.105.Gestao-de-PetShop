@@ -48,6 +48,8 @@
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.buttonVincularPermissaoEmFuncao = new System.Windows.Forms.Button();
             this.buttonDesvincularPermissaoDeFuncao = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.funcaoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.funcaoDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.permissoesBindingSource)).BeginInit();
@@ -78,6 +80,7 @@
             // 
             // comboBoxEscolhaBuscarFuncao
             // 
+            this.comboBoxEscolhaBuscarFuncao.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxEscolhaBuscarFuncao.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxEscolhaBuscarFuncao.FormattingEnabled = true;
             this.comboBoxEscolhaBuscarFuncao.Items.AddRange(new object[] {
@@ -85,7 +88,7 @@
             "Id",
             "Nome"});
             this.comboBoxEscolhaBuscarFuncao.Location = new System.Drawing.Point(21, 155);
-            this.comboBoxEscolhaBuscarFuncao.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBoxEscolhaBuscarFuncao.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxEscolhaBuscarFuncao.Name = "comboBoxEscolhaBuscarFuncao";
             this.comboBoxEscolhaBuscarFuncao.Size = new System.Drawing.Size(129, 28);
             this.comboBoxEscolhaBuscarFuncao.TabIndex = 26;
@@ -94,7 +97,7 @@
             // 
             this.textBoxBuscarFuncao.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxBuscarFuncao.Location = new System.Drawing.Point(159, 155);
-            this.textBoxBuscarFuncao.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxBuscarFuncao.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxBuscarFuncao.Name = "textBoxBuscarFuncao";
             this.textBoxBuscarFuncao.Size = new System.Drawing.Size(319, 29);
             this.textBoxBuscarFuncao.TabIndex = 31;
@@ -108,7 +111,7 @@
             this.btnExcluir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnExcluir.ImageKey = "(none)";
             this.btnExcluir.Location = new System.Drawing.Point(769, 151);
-            this.btnExcluir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnExcluir.Margin = new System.Windows.Forms.Padding(4);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(77, 34);
             this.btnExcluir.TabIndex = 37;
@@ -124,7 +127,7 @@
             this.btnAlterar.ForeColor = System.Drawing.Color.Black;
             this.btnAlterar.ImageKey = "(none)";
             this.btnAlterar.Location = new System.Drawing.Point(684, 151);
-            this.btnAlterar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAlterar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAlterar.Name = "btnAlterar";
             this.btnAlterar.Size = new System.Drawing.Size(77, 34);
             this.btnAlterar.TabIndex = 35;
@@ -141,7 +144,7 @@
             this.btnCadastrar.ForeColor = System.Drawing.Color.Black;
             this.btnCadastrar.ImageList = this.imageList1;
             this.btnCadastrar.Location = new System.Drawing.Point(599, 151);
-            this.btnCadastrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCadastrar.Margin = new System.Windows.Forms.Padding(4);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(77, 34);
             this.btnCadastrar.TabIndex = 33;
@@ -159,7 +162,7 @@
             this.btnBuscarFuncao.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnBuscarFuncao.ImageKey = "(none)";
             this.btnBuscarFuncao.Location = new System.Drawing.Point(513, 151);
-            this.btnBuscarFuncao.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBuscarFuncao.Margin = new System.Windows.Forms.Padding(4);
             this.btnBuscarFuncao.Name = "btnBuscarFuncao";
             this.btnBuscarFuncao.Size = new System.Drawing.Size(77, 34);
             this.btnBuscarFuncao.TabIndex = 28;
@@ -284,12 +287,32 @@
             this.buttonDesvincularPermissaoDeFuncao.UseVisualStyleBackColor = false;
             this.buttonDesvincularPermissaoDeFuncao.Click += new System.EventHandler(this.buttonDesvincularPermissaoDeFuncao_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(21, 132);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(72, 16);
+            this.label1.TabIndex = 42;
+            this.label1.Text = "Buscar por";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(156, 132);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(122, 16);
+            this.label2.TabIndex = 43;
+            this.label2.Text = "Digite o nome ou id";
+            // 
             // FormConsultaFuncao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(860, 614);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonDesvincularPermissaoDeFuncao);
             this.Controls.Add(this.buttonVincularPermissaoEmFuncao);
             this.Controls.Add(this.permissoesDataGridView);
@@ -303,7 +326,7 @@
             this.Controls.Add(this.lblConsultaFuncao);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(878, 661);
             this.MinimizeBox = false;
@@ -339,5 +362,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.Button buttonVincularPermissaoEmFuncao;
         private System.Windows.Forms.Button buttonDesvincularPermissaoDeFuncao;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }

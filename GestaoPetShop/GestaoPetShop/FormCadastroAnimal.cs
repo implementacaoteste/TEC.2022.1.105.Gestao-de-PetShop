@@ -106,7 +106,8 @@ namespace GestaoPetShop
         {
             try
             {
-                using (FormConsultaRaca frm = new FormConsultaRaca())
+                int opc = 1;
+                using (FormConsultaRaca frm = new FormConsultaRaca(opc))
                 {
                     frm.ShowDialog();
 
