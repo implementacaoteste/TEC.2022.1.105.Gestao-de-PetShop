@@ -43,23 +43,19 @@ namespace GestaoPetShop
 
 
                 //List<Servico> servicos = new List<Servico>();
-                //Servico servico = new Servico();
-
-                //servicos = new ServicoBLL().BuscarPorNome(descricaoComboBox.Text);
-
-                //foreach (var item in servicos)
+                                               
+               
+                //descricaoComboBox.Items.Clear();
+                //servicos = new ServicoBLL().BuscarTodos();
+                //int num1 = servicos.Count();
+                //for (int x = 0; x < num1; x++)
                 //{
-                //    servico = item;
+                //    descricaoComboBox.Items.Insert(x, servicos[x].Descricao);
                 //}
 
 
 
-
-
-
                 List<Profissional> agendamentoProfissinal = new List<Profissional>();
-
-
                 string _nomeProfissional = "";
                 int _idProfissional = 0;
                 nomeProfissionalComboBox.Items.Clear();
@@ -251,8 +247,9 @@ namespace GestaoPetShop
                 agendamentoServicosBindingSource.AddNew();
                 textBoxQuantidade.Text = "1";
                 ((AgendamentoServico)agendamentoServicosBindingSource.Current).Quantidade = 1;
+
                 //if (servicoBindingSource.Count == 0)
-                servicoBindingSource.DataSource = new ServicoBLL().BuscarTodos();
+                //servicoBindingSource.DataSource = new ServicoBLL().BuscarTodos();
             }
         }
 
@@ -300,25 +297,15 @@ namespace GestaoPetShop
         {
             try
             {
-                //List<Servico> servicos = new List<Servico>();
+              
                 Servico servico = new Servico();
-
-
-
-
-
-
-                if (descricaoComboBox.Items.Count < 1)
-                {
 
                     servico = new ServicoBLL().BuscarPorNomeUnico(descricaoComboBox.Text);
 
-                    //foreach (var item in servicos)
-                    //{
-                    //    servico = item;
-                    //}
-                }
-
+                
+                
+                ((Servico)servicoBindingSource.Current).Id = servico.Id;
+                ((Servico)servicoBindingSource.Current).Descricao = servico.Descricao;
                 idTextBox.Text = Convert.ToString(servico.Id);
                 descricaoComboBox.Text = servico.Descricao;
             }
