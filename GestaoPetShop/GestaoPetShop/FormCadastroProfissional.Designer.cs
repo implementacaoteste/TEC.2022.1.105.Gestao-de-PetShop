@@ -41,6 +41,8 @@
             System.Windows.Forms.Label cEPLabel1;
             System.Windows.Forms.Label nomeFuncaoLabel;
             System.Windows.Forms.Label idFuncaoLabel;
+            System.Windows.Forms.Label label1;
+            System.Windows.Forms.Label label2;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCadastroProfissional));
             this.ativoCheckBox = new System.Windows.Forms.CheckBox();
             this.profissionalBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -86,6 +88,8 @@
             cEPLabel1 = new System.Windows.Forms.Label();
             nomeFuncaoLabel = new System.Windows.Forms.Label();
             idFuncaoLabel = new System.Windows.Forms.Label();
+            label1 = new System.Windows.Forms.Label();
+            label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.profissionalBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emailProfissionalBindingSource)).BeginInit();
@@ -490,7 +494,7 @@
             this.cPFTextBox.BackColor = System.Drawing.SystemColors.Window;
             this.cPFTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.profissionalBindingSource, "CPF", true));
             this.cPFTextBox.Location = new System.Drawing.Point(445, 108);
-            this.cPFTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cPFTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.cPFTextBox.Name = "cPFTextBox";
             this.cPFTextBox.Size = new System.Drawing.Size(161, 22);
             this.cPFTextBox.TabIndex = 1;
@@ -499,7 +503,7 @@
             // 
             this.cEPTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.profissionalBindingSource, "CEP", true));
             this.cEPTextBox.Location = new System.Drawing.Point(16, 294);
-            this.cEPTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cEPTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.cEPTextBox.Name = "cEPTextBox";
             this.cEPTextBox.Size = new System.Drawing.Size(96, 22);
             this.cEPTextBox.TabIndex = 7;
@@ -508,7 +512,7 @@
             // 
             this.textBoxDataNascimento.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.profissionalBindingSource, "DataNascimento", true));
             this.textBoxDataNascimento.Location = new System.Drawing.Point(16, 171);
-            this.textBoxDataNascimento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxDataNascimento.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxDataNascimento.Name = "textBoxDataNascimento";
             this.textBoxDataNascimento.Size = new System.Drawing.Size(117, 22);
             this.textBoxDataNascimento.TabIndex = 2;
@@ -516,6 +520,7 @@
             // nomeFuncaoComboBox
             // 
             this.nomeFuncaoComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.profissionalBindingSource, "NomeFuncao", true));
+            this.nomeFuncaoComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.nomeFuncaoComboBox.FormattingEnabled = true;
             this.nomeFuncaoComboBox.Location = new System.Drawing.Point(435, 292);
             this.nomeFuncaoComboBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -527,6 +532,7 @@
             // idFuncaoTextBox
             // 
             this.idFuncaoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.profissionalBindingSource, "IdFuncao", true));
+            this.idFuncaoTextBox.Enabled = false;
             this.idFuncaoTextBox.Location = new System.Drawing.Point(352, 294);
             this.idFuncaoTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.idFuncaoTextBox.Name = "idFuncaoTextBox";
@@ -549,12 +555,32 @@
             this.btnGerarSenha.Visible = false;
             this.btnGerarSenha.Click += new System.EventHandler(this.btnGerarSenha_Click);
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new System.Drawing.Point(17, 350);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(108, 16);
+            label1.TabIndex = 42;
+            label1.Text = "Digite seu E-mail";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new System.Drawing.Point(438, 346);
+            label2.Name = "label2";
+            label2.Size = new System.Drawing.Size(118, 16);
+            label2.TabIndex = 43;
+            label2.Text = "Digite seu telefone";
+            // 
             // FormCadastroProfissional
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(860, 614);
+            this.Controls.Add(label2);
+            this.Controls.Add(label1);
             this.Controls.Add(this.pictureBoxFoto);
             this.Controls.Add(this.btnGerarSenha);
             this.Controls.Add(idFuncaoLabel);

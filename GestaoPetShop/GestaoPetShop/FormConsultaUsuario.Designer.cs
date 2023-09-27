@@ -43,6 +43,8 @@
             this.NomeProfissional = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewCheckBoxColumn2 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioDataGridView)).BeginInit();
             this.SuspendLayout();
@@ -56,11 +58,12 @@
             // 
             // comboBoxSelecionarTipoPesquisaUsuario
             // 
+            this.comboBoxSelecionarTipoPesquisaUsuario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxSelecionarTipoPesquisaUsuario.FormattingEnabled = true;
             this.comboBoxSelecionarTipoPesquisaUsuario.Items.AddRange(new object[] {
             "Todos",
             "Login",
-            "Profissinal",
+            "Profissional",
             "Id Profissional"});
             this.comboBoxSelecionarTipoPesquisaUsuario.Location = new System.Drawing.Point(12, 131);
             this.comboBoxSelecionarTipoPesquisaUsuario.Name = "comboBoxSelecionarTipoPesquisaUsuario";
@@ -70,7 +73,7 @@
             // buttonBuscarUsuario
             // 
             this.buttonBuscarUsuario.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.buttonBuscarUsuario.Location = new System.Drawing.Point(202, 98);
+            this.buttonBuscarUsuario.Location = new System.Drawing.Point(110, 65);
             this.buttonBuscarUsuario.Name = "buttonBuscarUsuario";
             this.buttonBuscarUsuario.Size = new System.Drawing.Size(75, 29);
             this.buttonBuscarUsuario.TabIndex = 4;
@@ -81,7 +84,7 @@
             // buttonAlterarUsuario
             // 
             this.buttonAlterarUsuario.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.buttonAlterarUsuario.Location = new System.Drawing.Point(283, 98);
+            this.buttonAlterarUsuario.Location = new System.Drawing.Point(191, 65);
             this.buttonAlterarUsuario.Name = "buttonAlterarUsuario";
             this.buttonAlterarUsuario.Size = new System.Drawing.Size(75, 29);
             this.buttonAlterarUsuario.TabIndex = 5;
@@ -92,7 +95,7 @@
             // buttonInserirUsuario
             // 
             this.buttonInserirUsuario.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.buttonInserirUsuario.Location = new System.Drawing.Point(364, 98);
+            this.buttonInserirUsuario.Location = new System.Drawing.Point(272, 65);
             this.buttonInserirUsuario.Name = "buttonInserirUsuario";
             this.buttonInserirUsuario.Size = new System.Drawing.Size(75, 29);
             this.buttonInserirUsuario.TabIndex = 6;
@@ -103,7 +106,7 @@
             // buttonExcluirUsuario
             // 
             this.buttonExcluirUsuario.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.buttonExcluirUsuario.Location = new System.Drawing.Point(445, 98);
+            this.buttonExcluirUsuario.Location = new System.Drawing.Point(353, 65);
             this.buttonExcluirUsuario.Name = "buttonExcluirUsuario";
             this.buttonExcluirUsuario.Size = new System.Drawing.Size(75, 29);
             this.buttonExcluirUsuario.TabIndex = 7;
@@ -115,7 +118,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(133, 30);
+            this.label1.Location = new System.Drawing.Point(133, 11);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(271, 32);
             this.label1.TabIndex = 8;
@@ -186,12 +189,32 @@
             this.dataGridViewCheckBoxColumn2.ReadOnly = true;
             this.dataGridViewCheckBoxColumn2.Width = 50;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(13, 109);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(72, 16);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "Buscar por";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(141, 109);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(266, 16);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "Digite o login, ou nome do profissional ou id";
+            // 
             // FormConsultaUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(532, 353);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.usuarioDataGridView);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonExcluirUsuario);
@@ -232,5 +255,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn NomeProfissional;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn2;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }

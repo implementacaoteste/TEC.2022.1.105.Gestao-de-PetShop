@@ -64,6 +64,10 @@
             this.buttonFecharCalendario = new System.Windows.Forms.Button();
             this.comboBox_SelecionarSituacaoBusca = new System.Windows.Forms.ComboBox();
             this.comboBoxSelecionarAtivoBuscar = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1_FormsPrincipalBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.agendamentoDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.agendamentoBindingSource)).BeginInit();
@@ -110,7 +114,7 @@
             // 
             // textBox_BuscarAgendamento
             // 
-            this.textBox_BuscarAgendamento.Location = new System.Drawing.Point(29, 319);
+            this.textBox_BuscarAgendamento.Location = new System.Drawing.Point(29, 313);
             this.textBox_BuscarAgendamento.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox_BuscarAgendamento.Name = "textBox_BuscarAgendamento";
             this.textBox_BuscarAgendamento.Size = new System.Drawing.Size(216, 22);
@@ -178,7 +182,7 @@
             // 
             // textBox_BuscarData
             // 
-            this.textBox_BuscarData.Location = new System.Drawing.Point(302, 262);
+            this.textBox_BuscarData.Location = new System.Drawing.Point(276, 313);
             this.textBox_BuscarData.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox_BuscarData.Name = "textBox_BuscarData";
             this.textBox_BuscarData.Size = new System.Drawing.Size(104, 22);
@@ -187,7 +191,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(261, 265);
+            this.label2.Location = new System.Drawing.Point(273, 295);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(36, 16);
             this.label2.TabIndex = 15;
@@ -198,7 +202,7 @@
             this.button_AbrirCalendario.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.button_AbrirCalendario.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_AbrirCalendario.ForeColor = System.Drawing.Color.Black;
-            this.button_AbrirCalendario.Location = new System.Drawing.Point(264, 219);
+            this.button_AbrirCalendario.Location = new System.Drawing.Point(284, 220);
             this.button_AbrirCalendario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button_AbrirCalendario.Name = "button_AbrirCalendario";
             this.button_AbrirCalendario.Size = new System.Drawing.Size(142, 32);
@@ -454,11 +458,47 @@
             "Todos",
             "Ativo",
             "Inativo"});
-            this.comboBoxSelecionarAtivoBuscar.Location = new System.Drawing.Point(29, 266);
+            this.comboBoxSelecionarAtivoBuscar.Location = new System.Drawing.Point(29, 270);
             this.comboBoxSelecionarAtivoBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxSelecionarAtivoBuscar.Name = "comboBoxSelecionarAtivoBuscar";
             this.comboBoxSelecionarAtivoBuscar.Size = new System.Drawing.Size(216, 24);
             this.comboBoxSelecionarAtivoBuscar.TabIndex = 31;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(26, 150);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(72, 16);
+            this.label3.TabIndex = 32;
+            this.label3.Text = "Buscar por";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(26, 202);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(60, 16);
+            this.label4.TabIndex = 33;
+            this.label4.Text = "Situação";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(26, 252);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(37, 16);
+            this.label5.TabIndex = 34;
+            this.label5.Text = "Ativo";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(27, 296);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(197, 16);
+            this.label6.TabIndex = 35;
+            this.label6.Text = "Digite o nome ou id para buscar";
             // 
             // FormConsultaAgendamento
             // 
@@ -466,6 +506,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(860, 614);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.comboBoxSelecionarAtivoBuscar);
             this.Controls.Add(this.comboBox_SelecionarSituacaoBusca);
             this.Controls.Add(this.buttonFecharCalendario);
@@ -561,5 +605,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn27;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
     }
 }

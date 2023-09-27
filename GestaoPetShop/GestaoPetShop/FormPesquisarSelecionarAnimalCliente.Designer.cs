@@ -44,6 +44,8 @@
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clienteDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.animaisBindingSource)).BeginInit();
@@ -84,6 +86,7 @@
             // 
             // comboBoxEscolherTipoPequisaAnimalCliente
             // 
+            this.comboBoxEscolherTipoPequisaAnimalCliente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxEscolherTipoPequisaAnimalCliente.FormattingEnabled = true;
             this.comboBoxEscolherTipoPequisaAnimalCliente.Items.AddRange(new object[] {
             "Id Animal",
@@ -212,12 +215,32 @@
             this.textBox1.Text = "Pesquisar Animal";
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 83);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(72, 16);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Buscar por";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(139, 83);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(122, 16);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "Digite o nome ou id";
+            // 
             // FormPesquisarSelecionarAnimalCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(532, 353);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.animaisDataGridView);
             this.Controls.Add(this.clienteDataGridView);
@@ -259,5 +282,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
