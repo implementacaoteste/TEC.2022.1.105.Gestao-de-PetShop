@@ -30,7 +30,6 @@ namespace GestaoPetShop
                 {
                     agendamentoBindingSource.AddNew();
                     profissionalBindingSource.AddNew();
-                    //servicoBindingSource.AddNew();
 
                     labelAlterarAgenda.Visible = false;
                     labelCadastroAgenda.Visible = true;
@@ -42,6 +41,7 @@ namespace GestaoPetShop
                     labelAlterarAgenda.Visible = true;
                     labelCadastroAgenda.Visible = false;
                 }
+              
 
                 List<Profissional> agendamentoProfissinal = new List<Profissional>();
                 string _nomeProfissional = "";
@@ -87,6 +87,7 @@ namespace GestaoPetShop
                 ((AgendamentoServico)agendamentoServicosBindingSource.Current).Quantidade = Convert.ToInt32(textBoxQuantidade.Text);
                 ((AgendamentoServico)agendamentoServicosBindingSource.Current).Tempo = ((Servico)servicoBindingSource.Current).Tempo;
                 agendamentoServicosBindingSource.EndEdit();
+                servicoBindingSource.EndEdit();
 
 
                 Agendamento agendamento = (Agendamento)agendamentoBindingSource.Current;
@@ -235,6 +236,8 @@ namespace GestaoPetShop
             if (!buttonNovo.Enabled)
             {
                 agendamentoServicosBindingSource.AddNew();
+                //servicoBindingSource.AddNew();
+
 
                 textBoxQuantidade.Text = "1";
                 ((AgendamentoServico)agendamentoServicosBindingSource.Current).Quantidade = 1;
@@ -289,7 +292,7 @@ namespace GestaoPetShop
             try
             {
                 Servico servico = new Servico();
-
+               
                 servico = new ServicoBLL().BuscarPorNomeUnico(descricaoComboBox.Text);
 
                 ((Servico)servicoBindingSource.Current).Id = servico.Id;
@@ -300,7 +303,7 @@ namespace GestaoPetShop
                 idTextBox.Text = Convert.ToString(servico.Id);
                 descricaoComboBox.Text = servico.Descricao;
                 precoTextBox.Text = Convert.ToString(servico.Preco);
-                servicoBindingSource.EndEdit();
+               
             }
             catch (Exception ex)
             {
