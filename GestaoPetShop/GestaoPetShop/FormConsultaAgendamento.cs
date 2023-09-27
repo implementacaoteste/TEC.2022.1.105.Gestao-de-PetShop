@@ -371,8 +371,8 @@ namespace GestaoPetShop
         {
             try
             {
-               int id = 0;
-                using (FormCadastroAgendamento frm = new FormCadastroAgendamento(id))
+               
+                using (FormCadastroAgendamento frm = new FormCadastroAgendamento())
                 {
                     frm.ShowDialog();
                 }

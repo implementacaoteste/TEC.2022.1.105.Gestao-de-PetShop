@@ -402,7 +402,7 @@
             // buttonPesquisarAnimal
             // 
             this.buttonPesquisarAnimal.Location = new System.Drawing.Point(763, 89);
-            this.buttonPesquisarAnimal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonPesquisarAnimal.Margin = new System.Windows.Forms.Padding(2);
             this.buttonPesquisarAnimal.Name = "buttonPesquisarAnimal";
             this.buttonPesquisarAnimal.Size = new System.Drawing.Size(97, 19);
             this.buttonPesquisarAnimal.TabIndex = 22;
@@ -412,6 +412,7 @@
             // 
             // descricaoComboBox
             // 
+            this.descricaoComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.servicoBindingSource, "Descricao", true));
             this.descricaoComboBox.DataSource = this.servicoBindingSource;
             this.descricaoComboBox.DisplayMember = "Descricao";
             this.descricaoComboBox.FormattingEnabled = true;
@@ -455,6 +456,7 @@
             // 
             // idTextBox
             // 
+            this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.servicoBindingSource, "Id", true));
             this.idTextBox.Location = new System.Drawing.Point(5, 24);
             this.idTextBox.Name = "idTextBox";
             this.idTextBox.Size = new System.Drawing.Size(45, 20);
@@ -463,6 +465,7 @@
             // precoTextBox
             // 
             this.precoTextBox.BackColor = System.Drawing.Color.White;
+            this.precoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.servicoBindingSource, "Preco", true));
             this.precoTextBox.Location = new System.Drawing.Point(538, 25);
             this.precoTextBox.Name = "precoTextBox";
             this.precoTextBox.ReadOnly = true;
@@ -483,7 +486,7 @@
             // buttonSalvar
             // 
             this.buttonSalvar.Location = new System.Drawing.Point(708, 393);
-            this.buttonSalvar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonSalvar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSalvar.Name = "buttonSalvar";
             this.buttonSalvar.Size = new System.Drawing.Size(75, 23);
             this.buttonSalvar.TabIndex = 28;
@@ -522,9 +525,9 @@
             this.groupBoxServico.Controls.Add(idProfissionalLabel);
             this.groupBoxServico.Enabled = false;
             this.groupBoxServico.Location = new System.Drawing.Point(19, 142);
-            this.groupBoxServico.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxServico.Margin = new System.Windows.Forms.Padding(2);
             this.groupBoxServico.Name = "groupBoxServico";
-            this.groupBoxServico.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxServico.Padding = new System.Windows.Forms.Padding(2);
             this.groupBoxServico.Size = new System.Drawing.Size(846, 63);
             this.groupBoxServico.TabIndex = 31;
             this.groupBoxServico.TabStop = false;
@@ -594,7 +597,7 @@
             this.dataGridViewTextBoxColumn16});
             this.agendamentoServicosDataGridView.DataSource = this.agendamentoServicosBindingSource;
             this.agendamentoServicosDataGridView.Location = new System.Drawing.Point(17, 236);
-            this.agendamentoServicosDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.agendamentoServicosDataGridView.Margin = new System.Windows.Forms.Padding(2);
             this.agendamentoServicosDataGridView.Name = "agendamentoServicosDataGridView";
             this.agendamentoServicosDataGridView.ReadOnly = true;
             this.agendamentoServicosDataGridView.RowHeadersVisible = false;

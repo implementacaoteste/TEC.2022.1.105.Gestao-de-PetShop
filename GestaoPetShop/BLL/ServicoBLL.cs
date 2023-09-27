@@ -23,7 +23,7 @@ namespace BLL
             List<Servico> servicos = servicoDAL.BuscarTodos();
             if (servicos.Count == 0)
             {
-                throw new Exception("Não tem serviço cadastrado") { Data = { { "Id", 47 } } };
+                throw new Exception("Não tem serviço cadastrado 47") { Data = { { "Id", 47 } } };
             }
             return servicos;
         }
@@ -36,7 +36,7 @@ namespace BLL
 
             if (servico.Id == 0)
             {
-                throw new Exception("Serviço não encontrado") { Data = { { "Id", 48 } } };
+                throw new Exception("Serviço não encontrado 48") { Data = { { "Id", 48 } } };
             }
 
             return servico;
@@ -48,7 +48,7 @@ namespace BLL
             List<Servico> servicos = servicoDAL.BuscarPorNome(_nome);
             if (servicos.Count == 0)
             {
-                throw new Exception("Serviço não encontrado") { Data = { { "Id", 49 } } };
+                throw new Exception("Serviço não encontrado 49") { Data = { { "Id", 49 } } };
             }
             return servicos;
         }
@@ -79,7 +79,7 @@ namespace BLL
             Servico servico = servicoDAL.BuscarPorNomeUnico(_nome);
             if (servico.Id == 0)
             {
-                throw new Exception("Serviço não encontrado") { Data = { { "Id", 0 } } };
+                throw new Exception("Serviço não encontrado 00") { Data = { { "Id", 0 } } };
             }
             return servico;
         }
