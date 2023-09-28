@@ -41,7 +41,7 @@ namespace GestaoPetShop
                     labelAlterarAgenda.Visible = true;
                     labelCadastroAgenda.Visible = false;
                 }
-              
+          
 
                 List<Profissional> agendamentoProfissinal = new List<Profissional>();
                 string _nomeProfissional = "";
@@ -233,7 +233,7 @@ namespace GestaoPetShop
         {
             groupBoxServico.Enabled = !groupBoxServico.Enabled;
             buttonNovo.Enabled = !buttonNovo.Enabled;
-
+          
             if (!buttonNovo.Enabled)
             {
                 agendamentoServicosBindingSource.AddNew();
@@ -254,11 +254,7 @@ namespace GestaoPetShop
             textBoxValorUnitario.Text = precoTextBox.Text;
 
         }
-
-        private void buttonCancelar_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
+              
 
         private void textBoxValorUnitario_TextChanged(object sender, EventArgs e)
         {
@@ -287,12 +283,17 @@ namespace GestaoPetShop
             }
         }
 
+        private void buttonCancelar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
         private void descricaoComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
             {
                 Servico servico = new Servico();
-               
+
                 servico = new ServicoBLL().BuscarPorNomeUnico(descricaoComboBox.Text);
 
                 ((Servico)servicoBindingSource.Current).Id = servico.Id;
@@ -303,7 +304,7 @@ namespace GestaoPetShop
                 idTextBox.Text = Convert.ToString(servico.Id);
                 descricaoComboBox.Text = servico.Descricao;
                 precoTextBox.Text = Convert.ToString(servico.Preco);
-                
+
                
             }
             catch (Exception ex)
