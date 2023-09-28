@@ -686,9 +686,6 @@
     <None Include="buttons\close.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Icons\bicho-de-estimacao.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Icons\system-administrator.png" />
   </ItemGroup>
   <ItemGroup>
