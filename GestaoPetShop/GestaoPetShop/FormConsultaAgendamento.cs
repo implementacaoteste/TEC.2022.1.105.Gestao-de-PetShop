@@ -336,33 +336,7 @@ namespace GestaoPetShop
                 MessageBox.Show(ex.Message);
             }
         }
-        private void button_AbrirCalendario_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                monthCalendar_Agendamento.Visible = true;
-                button_SelecionarData.Visible = true;
-                buttonFecharCalendario.Visible = true;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Ocorreu um erro ao tentar abrir o calendário", ex.Message);
-            }
-        }
-        private void button_SelecionarData_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                textBox_BuscarData.Text = monthCalendar_Agendamento.SelectionStart.ToShortDateString();
-                monthCalendar_Agendamento.Visible = false;
-                button_SelecionarData.Visible = false;
-                buttonFecharCalendario.Visible = false;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Ocorreu um erro ao tentar selecionar uma data no calendário.", ex.Message);
-            }
-        }
+   
         private void button_InserirAgendamentos_Click(object sender, EventArgs e)
         {
             try
@@ -418,18 +392,28 @@ namespace GestaoPetShop
                 MessageBox.Show(ex.Message);
             }
         }
-        private void buttonFecharCalendario_Click(object sender, EventArgs e)
+      
+        private void monthCalendar_Agendamento_DateChanged(object sender, DateRangeEventArgs e)
         {
+
             try
             {
-                monthCalendar_Agendamento.Visible = false;
-                button_SelecionarData.Visible = false;
-                buttonFecharCalendario.Visible = false;
+                textBox_BuscarData.Text = monthCalendar_Agendamento.SelectionStart.ToShortDateString();
+                //monthCalendar_Agendamento.Visible = false;
+                //button_SelecionarData.Visible = false;
+                //buttonFecharCalendario.Visible = false;
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Ocorreu um erro ao tentar fecha o calendário.", ex.Message);
+                MessageBox.Show("Ocorreu um erro ao tentar selecionar uma data no calendário.", ex.Message);
             }
+        }
+
+        private void FormConsultaAgendamento_Load(object sender, EventArgs e)
+        {
+            comboBoxSelecionarAtivoBuscar.SelectedIndex = 0;
+            comboBox_SelecionarSituacaoBusca.SelectedIndex = 0;
+            comboBox_SelecionarTipoBusca.SelectedIndex = 0;
         }
     }
 }
