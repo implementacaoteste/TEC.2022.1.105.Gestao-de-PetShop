@@ -38,7 +38,7 @@ namespace BLL
             if ( _agendamento.Total < 0)
                 throw new Exception("Total inválido.");
 
-            if( _agendamento.IdProfissional == 0)
+          
 
             if (_agendamento.Ativo == false)
                 throw new Exception("Ativo não marcado.");

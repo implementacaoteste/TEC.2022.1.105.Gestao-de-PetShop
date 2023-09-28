@@ -10,6 +10,8 @@
         public decimal Subtotal { get; set; }
         public int IdServico { get; set; }
         public int Tempo { get; set; }
+        public int IdProfissional { get; set; }
+        public string NomeProfissional { get; set; }
 
     }
 }

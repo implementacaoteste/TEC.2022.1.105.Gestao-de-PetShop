@@ -1,4 +1,4 @@
-use petshop
+use DimasTestepetshop
 /*ANTES DE INSERIR VERIFICAR OS CADASTROS*/
 
 /*---ORDEM DE CADASTRO---
@@ -310,9 +310,9 @@ GO
 --select * from Animal
 --select * from Profissional
 
-insert into Agendamento(IdAnimal,IdProfissional,IdSituacao,DataAg,Horario,Total,Ativo) values (1,2,1,'04/08/2023','09:30:00',0.00,1);
-insert into Agendamento(IdAnimal,IdProfissional,IdSituacao,DataAg,Horario,Total,Ativo) values (1,2,2,'04/09/2023','09:35:00',0.00,1);
-insert into Agendamento(IdAnimal,IdProfissional,IdSituacao,DataAg,Horario,Total,Ativo) values (1,2,3,'04/10/2023','09:40:00',0.00,1);
+insert into Agendamento(IdAnimal,IdSituacao,DataAg,Horario,Total,Ativo) values (1,1,'04/08/2023','09:30:00',0.00,1);
+insert into Agendamento(IdAnimal,IdSituacao,DataAg,Horario,Total,Ativo) values (1,2,'04/09/2023','09:35:00',0.00,1);
+insert into Agendamento(IdAnimal,IdSituacao,DataAg,Horario,Total,Ativo) values (1,3,'04/10/2023','09:40:00',0.00,1);
 GO
 
 /*******************************************************************************************************************************/
@@ -325,9 +325,9 @@ GO
 -- select * from Agendamento
 --cadastro de Agendamento / Servicos
 
-insert into AgendamentoServicos(IdAgendamento,IdServico,Quantidade,ValorUnitario) values (1,2,1,30.00);
-insert into AgendamentoServicos(IdAgendamento,IdServico,Quantidade,ValorUnitario) values (2,1,1,50.00);
-insert into AgendamentoServicos(IdAgendamento,IdServico,Quantidade,ValorUnitario) values (3,3,1,10.00);
+insert into AgendamentoServicos(IdAgendamento,IdServico,Quantidade,ValorUnitario,IdProfissional) values (1,2,1,30.00,2);
+insert into AgendamentoServicos(IdAgendamento,IdServico,Quantidade,ValorUnitario,IdProfissional) values (2,1,1,50.00,2);
+insert into AgendamentoServicos(IdAgendamento,IdServico,Quantidade,ValorUnitario,IdProfissional) values (3,3,1,10.00,2);
 GO
 --SELECT dbo.Cliente.Nome, dbo.Agendamento.IdSituacao, dbo.Animal.Nome AS Animal, dbo.Servico.Descricao, dbo.AgendamentoServicos.Quantidade, dbo.AgendamentoServicos.ValorUnitario, dbo.Agendamento.Total
 --	FROM dbo.Agendamento	INNER JOIN dbo.AgendamentoServicos ON dbo.Agendamento.Id = dbo.AgendamentoServicos.IdAgendamento 
