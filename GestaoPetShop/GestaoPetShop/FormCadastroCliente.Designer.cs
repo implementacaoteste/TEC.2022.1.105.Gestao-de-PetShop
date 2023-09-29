@@ -89,7 +89,7 @@
             nomeLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             nomeLabel.AutoSize = true;
             nomeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            nomeLabel.Location = new System.Drawing.Point(17, 58);
+            nomeLabel.Location = new System.Drawing.Point(17, 55);
             nomeLabel.Name = "nomeLabel";
             nomeLabel.Size = new System.Drawing.Size(53, 20);
             nomeLabel.TabIndex = 1;
@@ -100,7 +100,7 @@
             cPFLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             cPFLabel.AutoSize = true;
             cPFLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            cPFLabel.Location = new System.Drawing.Point(434, 58);
+            cPFLabel.Location = new System.Drawing.Point(443, 56);
             cPFLabel.Name = "cPFLabel";
             cPFLabel.Size = new System.Drawing.Size(42, 20);
             cPFLabel.TabIndex = 3;
@@ -111,7 +111,7 @@
             rGLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             rGLabel.AutoSize = true;
             rGLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            rGLabel.Location = new System.Drawing.Point(623, 167);
+            rGLabel.Location = new System.Drawing.Point(634, 165);
             rGLabel.Name = "rGLabel";
             rGLabel.Size = new System.Drawing.Size(43, 20);
             rGLabel.TabIndex = 5;
@@ -122,7 +122,7 @@
             foneLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             foneLabel.AutoSize = true;
             foneLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            foneLabel.Location = new System.Drawing.Point(237, 168);
+            foneLabel.Location = new System.Drawing.Point(248, 166);
             foneLabel.Name = "foneLabel";
             foneLabel.Size = new System.Drawing.Size(61, 20);
             foneLabel.TabIndex = 7;
@@ -133,7 +133,7 @@
             emailLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             emailLabel.AutoSize = true;
             emailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            emailLabel.Location = new System.Drawing.Point(428, 167);
+            emailLabel.Location = new System.Drawing.Point(439, 165);
             emailLabel.Name = "emailLabel";
             emailLabel.Size = new System.Drawing.Size(31, 20);
             emailLabel.TabIndex = 9;
@@ -144,7 +144,7 @@
             this.nomeTextBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.nomeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "Nome", true));
             this.nomeTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nomeTextBox.Location = new System.Drawing.Point(17, 80);
+            this.nomeTextBox.Location = new System.Drawing.Point(17, 77);
             this.nomeTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.nomeTextBox.Name = "nomeTextBox";
             this.nomeTextBox.Size = new System.Drawing.Size(403, 30);
@@ -155,7 +155,7 @@
             this.cPFTextBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cPFTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "CPF", true));
             this.cPFTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cPFTextBox.Location = new System.Drawing.Point(431, 79);
+            this.cPFTextBox.Location = new System.Drawing.Point(442, 77);
             this.cPFTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cPFTextBox.Name = "cPFTextBox";
             this.cPFTextBox.Size = new System.Drawing.Size(456, 30);
@@ -166,7 +166,7 @@
             this.rGTextBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.rGTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "CEP", true));
             this.rGTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rGTextBox.Location = new System.Drawing.Point(623, 189);
+            this.rGTextBox.Location = new System.Drawing.Point(634, 187);
             this.rGTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rGTextBox.Name = "rGTextBox";
             this.rGTextBox.Size = new System.Drawing.Size(264, 30);
@@ -177,7 +177,7 @@
             this.foneTextBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.foneTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "Cidade", true));
             this.foneTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.foneTextBox.Location = new System.Drawing.Point(237, 189);
+            this.foneTextBox.Location = new System.Drawing.Point(248, 187);
             this.foneTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.foneTextBox.Name = "foneTextBox";
             this.foneTextBox.Size = new System.Drawing.Size(184, 30);
@@ -188,7 +188,7 @@
             this.emailTextBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.emailTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "UF", true));
             this.emailTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.emailTextBox.Location = new System.Drawing.Point(428, 188);
+            this.emailTextBox.Location = new System.Drawing.Point(439, 186);
             this.emailTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.emailTextBox.Name = "emailTextBox";
             this.emailTextBox.Size = new System.Drawing.Size(51, 30);
@@ -237,7 +237,7 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(485, 166);
+            this.label2.Location = new System.Drawing.Point(496, 164);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(42, 20);
             this.label2.TabIndex = 13;
@@ -248,7 +248,7 @@
             this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "Pais", true));
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(485, 188);
+            this.textBox1.Location = new System.Drawing.Point(496, 186);
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(132, 30);
@@ -281,7 +281,7 @@
             this.textBox3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textBox3.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "Numero", true));
             this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(623, 133);
+            this.textBox3.Location = new System.Drawing.Point(634, 133);
             this.textBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(264, 30);
@@ -292,7 +292,7 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(623, 112);
+            this.label4.Location = new System.Drawing.Point(634, 112);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(68, 20);
             this.label4.TabIndex = 18;
@@ -303,7 +303,7 @@
             this.textBox4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textBox4.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "Logradouro", true));
             this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(190, 133);
+            this.textBox4.Location = new System.Drawing.Point(201, 133);
             this.textBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(427, 30);
@@ -314,7 +314,7 @@
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(187, 110);
+            this.label5.Location = new System.Drawing.Point(202, 110);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(94, 20);
             this.label5.TabIndex = 20;
@@ -328,7 +328,7 @@
             this.textBox5.Location = new System.Drawing.Point(15, 133);
             this.textBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(161, 30);
+            this.textBox5.Size = new System.Drawing.Size(180, 30);
             this.textBox5.TabIndex = 2;
             // 
             // label6
