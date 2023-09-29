@@ -81,7 +81,6 @@
             this.labelAlterarAgenda = new System.Windows.Forms.Label();
             this.buttonCancelar = new System.Windows.Forms.Button();
             this.agendamentoServicosDataGridView = new System.Windows.Forms.DataGridView();
-            this.agendamentoServicosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.servicoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.quantidadeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -89,6 +88,7 @@
             this.subtotalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tempoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomeProfissionalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.agendamentoServicosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             descricaoLabel = new System.Windows.Forms.Label();
             idLabel = new System.Windows.Forms.Label();
             label = new System.Windows.Forms.Label();
@@ -117,60 +117,54 @@
             // descricaoLabel
             // 
             descricaoLabel.AutoSize = true;
-            descricaoLabel.Location = new System.Drawing.Point(96, 73);
-            descricaoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            descricaoLabel.Location = new System.Drawing.Point(72, 75);
             descricaoLabel.Name = "descricaoLabel";
-            descricaoLabel.Size = new System.Drawing.Size(86, 20);
+            descricaoLabel.Size = new System.Drawing.Size(71, 17);
             descricaoLabel.TabIndex = 15;
             descricaoLabel.Text = "Descricao";
             // 
             // idLabel
             // 
             idLabel.AutoSize = true;
-            idLabel.Location = new System.Drawing.Point(31, 75);
-            idLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            idLabel.Location = new System.Drawing.Point(23, 75);
             idLabel.Name = "idLabel";
-            idLabel.Size = new System.Drawing.Size(22, 20);
+            idLabel.Size = new System.Drawing.Size(19, 17);
             idLabel.TabIndex = 17;
             idLabel.Text = "Id";
             // 
             // label
             // 
             label.AutoSize = true;
-            label.Location = new System.Drawing.Point(606, 75);
-            label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label.Location = new System.Drawing.Point(619, 75);
             label.Name = "label";
-            label.Size = new System.Drawing.Size(93, 20);
+            label.Size = new System.Drawing.Size(78, 17);
             label.TabIndex = 19;
             label.Text = "Preço / Uni";
             // 
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new System.Drawing.Point(714, 75);
-            label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label8.Location = new System.Drawing.Point(729, 75);
             label8.Name = "label8";
-            label8.Size = new System.Drawing.Size(99, 20);
+            label8.Size = new System.Drawing.Size(84, 17);
             label8.TabIndex = 23;
             label8.Text = "Valor Uni($)";
             // 
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new System.Drawing.Point(532, 75);
-            label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label9.Location = new System.Drawing.Point(516, 75);
             label9.Name = "label9";
-            label9.Size = new System.Drawing.Size(54, 20);
+            label9.Size = new System.Drawing.Size(47, 17);
             label9.TabIndex = 24;
             label9.Text = "Quant";
             // 
             // label10
             // 
             label10.AutoSize = true;
-            label10.Location = new System.Drawing.Point(828, 75);
-            label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label10.Location = new System.Drawing.Point(856, 75);
             label10.Name = "label10";
-            label10.Size = new System.Drawing.Size(80, 20);
+            label10.Size = new System.Drawing.Size(69, 17);
             label10.TabIndex = 27;
             label10.Text = "Sub Total";
             // 
@@ -178,10 +172,9 @@
             // 
             horarioLabel.AutoSize = true;
             horarioLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            horarioLabel.Location = new System.Drawing.Point(535, 72);
-            horarioLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            horarioLabel.Location = new System.Drawing.Point(543, 58);
             horarioLabel.Name = "horarioLabel";
-            horarioLabel.Size = new System.Drawing.Size(65, 20);
+            horarioLabel.Size = new System.Drawing.Size(55, 17);
             horarioLabel.TabIndex = 26;
             horarioLabel.Text = "Horário";
             // 
@@ -189,10 +182,9 @@
             // 
             idLabel1.AutoSize = true;
             idLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            idLabel1.Location = new System.Drawing.Point(31, 72);
-            idLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            idLabel1.Location = new System.Drawing.Point(18, 56);
             idLabel1.Name = "idLabel1";
-            idLabel1.Size = new System.Drawing.Size(22, 20);
+            idLabel1.Size = new System.Drawing.Size(19, 17);
             idLabel1.TabIndex = 28;
             idLabel1.Text = "Id";
             // 
@@ -200,10 +192,9 @@
             // 
             idAnimalLabel.AutoSize = true;
             idAnimalLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            idAnimalLabel.Location = new System.Drawing.Point(24, 138);
-            idAnimalLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            idAnimalLabel.Location = new System.Drawing.Point(19, 123);
             idAnimalLabel.Name = "idAnimalLabel";
-            idAnimalLabel.Size = new System.Drawing.Size(78, 20);
+            idAnimalLabel.Size = new System.Drawing.Size(65, 17);
             idAnimalLabel.TabIndex = 30;
             idAnimalLabel.Text = "Id Animal";
             // 
@@ -211,20 +202,18 @@
             // 
             idClienteLabel.AutoSize = true;
             idClienteLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            idClienteLabel.Location = new System.Drawing.Point(411, 138);
-            idClienteLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            idClienteLabel.Location = new System.Drawing.Point(516, 119);
             idClienteLabel.Name = "idClienteLabel";
-            idClienteLabel.Size = new System.Drawing.Size(79, 20);
+            idClienteLabel.Size = new System.Drawing.Size(66, 17);
             idClienteLabel.TabIndex = 32;
             idClienteLabel.Text = "Id Cliente";
             // 
             // idProfissionalLabel
             // 
             idProfissionalLabel.AutoSize = true;
-            idProfissionalLabel.Location = new System.Drawing.Point(26, 12);
-            idProfissionalLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            idProfissionalLabel.Location = new System.Drawing.Point(20, 17);
             idProfissionalLabel.Name = "idProfissionalLabel";
-            idProfissionalLabel.Size = new System.Drawing.Size(22, 20);
+            idProfissionalLabel.Size = new System.Drawing.Size(19, 17);
             idProfissionalLabel.TabIndex = 34;
             idProfissionalLabel.Text = "Id";
             // 
@@ -232,10 +221,9 @@
             // 
             nomeAnimalLabel.AutoSize = true;
             nomeAnimalLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            nomeAnimalLabel.Location = new System.Drawing.Point(124, 138);
-            nomeAnimalLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            nomeAnimalLabel.Location = new System.Drawing.Point(145, 123);
             nomeAnimalLabel.Name = "nomeAnimalLabel";
-            nomeAnimalLabel.Size = new System.Drawing.Size(109, 20);
+            nomeAnimalLabel.Size = new System.Drawing.Size(91, 17);
             nomeAnimalLabel.TabIndex = 38;
             nomeAnimalLabel.Text = "Nome Animal";
             // 
@@ -243,10 +231,9 @@
             // 
             nomeClienteLabel.AutoSize = true;
             nomeClienteLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            nomeClienteLabel.Location = new System.Drawing.Point(509, 138);
-            nomeClienteLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            nomeClienteLabel.Location = new System.Drawing.Point(640, 119);
             nomeClienteLabel.Name = "nomeClienteLabel";
-            nomeClienteLabel.Size = new System.Drawing.Size(110, 20);
+            nomeClienteLabel.Size = new System.Drawing.Size(92, 17);
             nomeClienteLabel.TabIndex = 40;
             nomeClienteLabel.Text = "Nome Cliente";
             // 
@@ -254,20 +241,18 @@
             // 
             totalLabel.AutoSize = true;
             totalLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            totalLabel.Location = new System.Drawing.Point(923, 138);
-            totalLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            totalLabel.Location = new System.Drawing.Point(1000, 121);
             totalLabel.Name = "totalLabel";
-            totalLabel.Size = new System.Drawing.Size(46, 20);
+            totalLabel.Size = new System.Drawing.Size(40, 17);
             totalLabel.TabIndex = 44;
             totalLabel.Text = "Total";
             // 
             // nomeProfissionalLabel1
             // 
             nomeProfissionalLabel1.AutoSize = true;
-            nomeProfissionalLabel1.Location = new System.Drawing.Point(96, 12);
-            nomeProfissionalLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            nomeProfissionalLabel1.Location = new System.Drawing.Point(72, 17);
             nomeProfissionalLabel1.Name = "nomeProfissionalLabel1";
-            nomeProfissionalLabel1.Size = new System.Drawing.Size(146, 20);
+            nomeProfissionalLabel1.Size = new System.Drawing.Size(122, 17);
             nomeProfissionalLabel1.TabIndex = 46;
             nomeProfissionalLabel1.Text = "Nome Profissional";
             // 
@@ -275,10 +260,9 @@
             // 
             descricaoSituacaoLabel.AutoSize = true;
             descricaoSituacaoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            descricaoSituacaoLabel.Location = new System.Drawing.Point(800, 72);
-            descricaoSituacaoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            descricaoSituacaoLabel.Location = new System.Drawing.Point(872, 61);
             descricaoSituacaoLabel.Name = "descricaoSituacaoLabel";
-            descricaoSituacaoLabel.Size = new System.Drawing.Size(156, 20);
+            descricaoSituacaoLabel.Size = new System.Drawing.Size(130, 17);
             descricaoSituacaoLabel.TabIndex = 47;
             descricaoSituacaoLabel.Text = "Descrição Situação";
             // 
@@ -286,10 +270,9 @@
             // 
             dataAgLabel.AutoSize = true;
             dataAgLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataAgLabel.Location = new System.Drawing.Point(113, 72);
-            dataAgLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            dataAgLabel.Location = new System.Drawing.Point(148, 58);
             dataAgLabel.Name = "dataAgLabel";
-            dataAgLabel.Size = new System.Drawing.Size(175, 20);
+            dataAgLabel.Size = new System.Drawing.Size(150, 17);
             dataAgLabel.TabIndex = 51;
             dataAgLabel.Text = "Data do Agendamento";
             // 
@@ -297,10 +280,9 @@
             // 
             idSituacaoLabel.AutoSize = true;
             idSituacaoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            idSituacaoLabel.Location = new System.Drawing.Point(696, 72);
-            idSituacaoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            idSituacaoLabel.Location = new System.Drawing.Point(750, 59);
             idSituacaoLabel.Name = "idSituacaoLabel";
-            idSituacaoLabel.Size = new System.Drawing.Size(92, 20);
+            idSituacaoLabel.Size = new System.Drawing.Size(78, 17);
             idSituacaoLabel.TabIndex = 52;
             idSituacaoLabel.Text = "Id Situação";
             // 
@@ -309,10 +291,9 @@
             this.idSituacaoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agendamentoBindingSource, "IdSituacao", true));
             this.idSituacaoTextBox.Enabled = false;
             this.idSituacaoTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.idSituacaoTextBox.Location = new System.Drawing.Point(699, 98);
-            this.idSituacaoTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.idSituacaoTextBox.Location = new System.Drawing.Point(752, 81);
             this.idSituacaoTextBox.Name = "idSituacaoTextBox";
-            this.idSituacaoTextBox.Size = new System.Drawing.Size(89, 30);
+            this.idSituacaoTextBox.Size = new System.Drawing.Size(76, 26);
             this.idSituacaoTextBox.TabIndex = 53;
             // 
             // agendamentoBindingSource
@@ -323,10 +304,9 @@
             // 
             this.dataAgDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.agendamentoBindingSource, "DataAg", true));
             this.dataAgDateTimePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataAgDateTimePicker.Location = new System.Drawing.Point(112, 97);
-            this.dataAgDateTimePicker.Margin = new System.Windows.Forms.Padding(4);
+            this.dataAgDateTimePicker.Location = new System.Drawing.Point(147, 79);
             this.dataAgDateTimePicker.Name = "dataAgDateTimePicker";
-            this.dataAgDateTimePicker.Size = new System.Drawing.Size(414, 30);
+            this.dataAgDateTimePicker.Size = new System.Drawing.Size(319, 26);
             this.dataAgDateTimePicker.TabIndex = 52;
             // 
             // ativoCheckBox
@@ -337,10 +317,9 @@
             this.ativoCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
             this.ativoCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.agendamentoBindingSource, "Ativo", true));
             this.ativoCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ativoCheckBox.Location = new System.Drawing.Point(1013, 101);
-            this.ativoCheckBox.Margin = new System.Windows.Forms.Padding(4);
+            this.ativoCheckBox.Location = new System.Drawing.Point(1034, 84);
             this.ativoCheckBox.Name = "ativoCheckBox";
-            this.ativoCheckBox.Size = new System.Drawing.Size(68, 24);
+            this.ativoCheckBox.Size = new System.Drawing.Size(58, 21);
             this.ativoCheckBox.TabIndex = 49;
             this.ativoCheckBox.Text = "Ativo";
             this.ativoCheckBox.UseVisualStyleBackColor = false;
@@ -351,10 +330,9 @@
             this.descricaoSituacaoComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.descricaoSituacaoComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.descricaoSituacaoComboBox.FormattingEnabled = true;
-            this.descricaoSituacaoComboBox.Location = new System.Drawing.Point(802, 95);
-            this.descricaoSituacaoComboBox.Margin = new System.Windows.Forms.Padding(4);
+            this.descricaoSituacaoComboBox.Location = new System.Drawing.Point(875, 81);
             this.descricaoSituacaoComboBox.Name = "descricaoSituacaoComboBox";
-            this.descricaoSituacaoComboBox.Size = new System.Drawing.Size(189, 33);
+            this.descricaoSituacaoComboBox.Size = new System.Drawing.Size(143, 28);
             this.descricaoSituacaoComboBox.TabIndex = 48;
             this.descricaoSituacaoComboBox.SelectedIndexChanged += new System.EventHandler(this.descricaoSituacaoComboBox_SelectedIndexChanged);
             // 
@@ -363,10 +341,9 @@
             this.nomeProfissionalComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.nomeProfissionalComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nomeProfissionalComboBox.FormattingEnabled = true;
-            this.nomeProfissionalComboBox.Location = new System.Drawing.Point(92, 36);
-            this.nomeProfissionalComboBox.Margin = new System.Windows.Forms.Padding(4);
+            this.nomeProfissionalComboBox.Location = new System.Drawing.Point(69, 38);
             this.nomeProfissionalComboBox.Name = "nomeProfissionalComboBox";
-            this.nomeProfissionalComboBox.Size = new System.Drawing.Size(414, 33);
+            this.nomeProfissionalComboBox.Size = new System.Drawing.Size(426, 28);
             this.nomeProfissionalComboBox.TabIndex = 47;
             this.nomeProfissionalComboBox.SelectedIndexChanged += new System.EventHandler(this.nomeProfissionalComboBox_SelectedIndexChanged);
             // 
@@ -374,10 +351,9 @@
             // 
             this.horarioTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agendamentoBindingSource, "Horario", true));
             this.horarioTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.horarioTextBox.Location = new System.Drawing.Point(541, 97);
-            this.horarioTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.horarioTextBox.Location = new System.Drawing.Point(519, 79);
             this.horarioTextBox.Name = "horarioTextBox";
-            this.horarioTextBox.Size = new System.Drawing.Size(135, 30);
+            this.horarioTextBox.Size = new System.Drawing.Size(172, 26);
             this.horarioTextBox.TabIndex = 27;
             // 
             // idTextBox1
@@ -385,10 +361,9 @@
             this.idTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agendamentoBindingSource, "Id", true));
             this.idTextBox1.Enabled = false;
             this.idTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.idTextBox1.Location = new System.Drawing.Point(34, 97);
-            this.idTextBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.idTextBox1.Location = new System.Drawing.Point(21, 77);
             this.idTextBox1.Name = "idTextBox1";
-            this.idTextBox1.Size = new System.Drawing.Size(72, 30);
+            this.idTextBox1.Size = new System.Drawing.Size(55, 26);
             this.idTextBox1.TabIndex = 29;
             // 
             // idAnimalTextBox
@@ -396,10 +371,9 @@
             this.idAnimalTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agendamentoBindingSource, "IdAnimal", true));
             this.idAnimalTextBox.Enabled = false;
             this.idAnimalTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.idAnimalTextBox.Location = new System.Drawing.Point(28, 163);
-            this.idAnimalTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.idAnimalTextBox.Location = new System.Drawing.Point(22, 143);
             this.idAnimalTextBox.Name = "idAnimalTextBox";
-            this.idAnimalTextBox.Size = new System.Drawing.Size(71, 30);
+            this.idAnimalTextBox.Size = new System.Drawing.Size(54, 26);
             this.idAnimalTextBox.TabIndex = 31;
             // 
             // idClienteTextBox
@@ -407,20 +381,18 @@
             this.idClienteTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agendamentoBindingSource, "IdCliente", true));
             this.idClienteTextBox.Enabled = false;
             this.idClienteTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.idClienteTextBox.Location = new System.Drawing.Point(414, 163);
-            this.idClienteTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.idClienteTextBox.Location = new System.Drawing.Point(519, 143);
             this.idClienteTextBox.Name = "idClienteTextBox";
-            this.idClienteTextBox.Size = new System.Drawing.Size(76, 30);
+            this.idClienteTextBox.Size = new System.Drawing.Size(58, 26);
             this.idClienteTextBox.TabIndex = 33;
             // 
             // idProfissionalTextBox
             // 
             this.idProfissionalTextBox.Enabled = false;
             this.idProfissionalTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.idProfissionalTextBox.Location = new System.Drawing.Point(27, 39);
-            this.idProfissionalTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.idProfissionalTextBox.Location = new System.Drawing.Point(20, 39);
             this.idProfissionalTextBox.Name = "idProfissionalTextBox";
-            this.idProfissionalTextBox.Size = new System.Drawing.Size(57, 30);
+            this.idProfissionalTextBox.Size = new System.Drawing.Size(44, 26);
             this.idProfissionalTextBox.TabIndex = 35;
             // 
             // nomeAnimalTextBox
@@ -428,10 +400,9 @@
             this.nomeAnimalTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agendamentoBindingSource, "NomeAnimal", true));
             this.nomeAnimalTextBox.Enabled = false;
             this.nomeAnimalTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nomeAnimalTextBox.Location = new System.Drawing.Point(127, 163);
-            this.nomeAnimalTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.nomeAnimalTextBox.Location = new System.Drawing.Point(147, 143);
             this.nomeAnimalTextBox.Name = "nomeAnimalTextBox";
-            this.nomeAnimalTextBox.Size = new System.Drawing.Size(265, 30);
+            this.nomeAnimalTextBox.Size = new System.Drawing.Size(319, 26);
             this.nomeAnimalTextBox.TabIndex = 39;
             // 
             // nomeClienteTextBox
@@ -439,10 +410,9 @@
             this.nomeClienteTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agendamentoBindingSource, "NomeCliente", true));
             this.nomeClienteTextBox.Enabled = false;
             this.nomeClienteTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nomeClienteTextBox.Location = new System.Drawing.Point(513, 163);
-            this.nomeClienteTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.nomeClienteTextBox.Location = new System.Drawing.Point(594, 143);
             this.nomeClienteTextBox.Name = "nomeClienteTextBox";
-            this.nomeClienteTextBox.Size = new System.Drawing.Size(244, 30);
+            this.nomeClienteTextBox.Size = new System.Drawing.Size(234, 26);
             this.nomeClienteTextBox.TabIndex = 41;
             // 
             // totalTextBox
@@ -450,20 +420,19 @@
             this.totalTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agendamentoBindingSource, "Total", true));
             this.totalTextBox.Enabled = false;
             this.totalTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalTextBox.Location = new System.Drawing.Point(925, 163);
-            this.totalTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.totalTextBox.Location = new System.Drawing.Point(1004, 141);
             this.totalTextBox.Name = "totalTextBox";
-            this.totalTextBox.Size = new System.Drawing.Size(156, 30);
+            this.totalTextBox.Size = new System.Drawing.Size(118, 26);
             this.totalTextBox.TabIndex = 45;
             // 
             // buttonPesquisarAnimal
             // 
             this.buttonPesquisarAnimal.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.buttonPesquisarAnimal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonPesquisarAnimal.Location = new System.Drawing.Point(772, 156);
-            this.buttonPesquisarAnimal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonPesquisarAnimal.Location = new System.Drawing.Point(875, 139);
+            this.buttonPesquisarAnimal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonPesquisarAnimal.Name = "buttonPesquisarAnimal";
-            this.buttonPesquisarAnimal.Size = new System.Drawing.Size(141, 37);
+            this.buttonPesquisarAnimal.Size = new System.Drawing.Size(106, 30);
             this.buttonPesquisarAnimal.TabIndex = 22;
             this.buttonPesquisarAnimal.Text = "Pesquisar";
             this.buttonPesquisarAnimal.UseVisualStyleBackColor = false;
@@ -477,10 +446,9 @@
             this.descricaoComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.descricaoComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.descricaoComboBox.FormattingEnabled = true;
-            this.descricaoComboBox.Location = new System.Drawing.Point(92, 97);
-            this.descricaoComboBox.Margin = new System.Windows.Forms.Padding(4);
+            this.descricaoComboBox.Location = new System.Drawing.Point(69, 92);
             this.descricaoComboBox.Name = "descricaoComboBox";
-            this.descricaoComboBox.Size = new System.Drawing.Size(414, 33);
+            this.descricaoComboBox.Size = new System.Drawing.Size(426, 28);
             this.descricaoComboBox.TabIndex = 1;
             this.descricaoComboBox.ValueMember = "Id";
             // 
@@ -493,30 +461,27 @@
             this.textBoxSubtotal.BackColor = System.Drawing.Color.White;
             this.textBoxSubtotal.Enabled = false;
             this.textBoxSubtotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxSubtotal.Location = new System.Drawing.Point(827, 100);
-            this.textBoxSubtotal.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxSubtotal.Location = new System.Drawing.Point(855, 93);
             this.textBoxSubtotal.Name = "textBoxSubtotal";
             this.textBoxSubtotal.ReadOnly = true;
-            this.textBoxSubtotal.Size = new System.Drawing.Size(84, 30);
+            this.textBoxSubtotal.Size = new System.Drawing.Size(64, 26);
             this.textBoxSubtotal.TabIndex = 5;
             // 
             // textBoxValorUnitario
             // 
             this.textBoxValorUnitario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxValorUnitario.Location = new System.Drawing.Point(720, 100);
-            this.textBoxValorUnitario.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxValorUnitario.Location = new System.Drawing.Point(733, 93);
             this.textBoxValorUnitario.Name = "textBoxValorUnitario";
-            this.textBoxValorUnitario.Size = new System.Drawing.Size(93, 30);
+            this.textBoxValorUnitario.Size = new System.Drawing.Size(71, 26);
             this.textBoxValorUnitario.TabIndex = 4;
             this.textBoxValorUnitario.TextChanged += new System.EventHandler(this.textBoxValorUnitario_TextChanged);
             // 
             // textBoxQuantidade
             // 
             this.textBoxQuantidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxQuantidade.Location = new System.Drawing.Point(527, 100);
-            this.textBoxQuantidade.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxQuantidade.Location = new System.Drawing.Point(512, 93);
             this.textBoxQuantidade.Name = "textBoxQuantidade";
-            this.textBoxQuantidade.Size = new System.Drawing.Size(65, 30);
+            this.textBoxQuantidade.Size = new System.Drawing.Size(50, 26);
             this.textBoxQuantidade.TabIndex = 2;
             this.textBoxQuantidade.Text = "1";
             this.textBoxQuantidade.TextChanged += new System.EventHandler(this.textBoxQuantidade_TextChanged);
@@ -526,10 +491,9 @@
             this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.servicoBindingSource, "Id", true));
             this.idTextBox.Enabled = false;
             this.idTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.idTextBox.Location = new System.Drawing.Point(26, 100);
-            this.idTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.idTextBox.Location = new System.Drawing.Point(20, 93);
             this.idTextBox.Name = "idTextBox";
-            this.idTextBox.Size = new System.Drawing.Size(58, 30);
+            this.idTextBox.Size = new System.Drawing.Size(44, 26);
             this.idTextBox.TabIndex = 0;
             // 
             // precoTextBox
@@ -538,11 +502,10 @@
             this.precoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.servicoBindingSource, "Preco", true));
             this.precoTextBox.Enabled = false;
             this.precoTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.precoTextBox.Location = new System.Drawing.Point(610, 100);
-            this.precoTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.precoTextBox.Location = new System.Drawing.Point(623, 93);
             this.precoTextBox.Name = "precoTextBox";
             this.precoTextBox.ReadOnly = true;
-            this.precoTextBox.Size = new System.Drawing.Size(95, 30);
+            this.precoTextBox.Size = new System.Drawing.Size(72, 26);
             this.precoTextBox.TabIndex = 3;
             this.precoTextBox.TextChanged += new System.EventHandler(this.precoTextBox_TextChanged);
             // 
@@ -550,10 +513,9 @@
             // 
             this.button_InserirServicoAgendamento.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.button_InserirServicoAgendamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_InserirServicoAgendamento.Location = new System.Drawing.Point(944, 93);
-            this.button_InserirServicoAgendamento.Margin = new System.Windows.Forms.Padding(4);
+            this.button_InserirServicoAgendamento.Location = new System.Drawing.Point(966, 91);
             this.button_InserirServicoAgendamento.Name = "button_InserirServicoAgendamento";
-            this.button_InserirServicoAgendamento.Size = new System.Drawing.Size(141, 37);
+            this.button_InserirServicoAgendamento.Size = new System.Drawing.Size(106, 30);
             this.button_InserirServicoAgendamento.TabIndex = 7;
             this.button_InserirServicoAgendamento.Text = "Inserir";
             this.button_InserirServicoAgendamento.UseVisualStyleBackColor = false;
@@ -563,10 +525,10 @@
             // 
             this.buttonSalvar.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.buttonSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSalvar.Location = new System.Drawing.Point(971, 452);
-            this.buttonSalvar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonSalvar.Location = new System.Drawing.Point(986, 422);
+            this.buttonSalvar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonSalvar.Name = "buttonSalvar";
-            this.buttonSalvar.Size = new System.Drawing.Size(141, 37);
+            this.buttonSalvar.Size = new System.Drawing.Size(106, 30);
             this.buttonSalvar.TabIndex = 28;
             this.buttonSalvar.Text = "Salvar";
             this.buttonSalvar.UseVisualStyleBackColor = false;
@@ -576,10 +538,9 @@
             // 
             this.button1RemoverServico.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.button1RemoverServico.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1RemoverServico.Location = new System.Drawing.Point(971, 399);
-            this.button1RemoverServico.Margin = new System.Windows.Forms.Padding(4);
+            this.button1RemoverServico.Location = new System.Drawing.Point(986, 379);
             this.button1RemoverServico.Name = "button1RemoverServico";
-            this.button1RemoverServico.Size = new System.Drawing.Size(141, 37);
+            this.button1RemoverServico.Size = new System.Drawing.Size(106, 30);
             this.button1RemoverServico.TabIndex = 30;
             this.button1RemoverServico.Text = "Remover";
             this.button1RemoverServico.UseVisualStyleBackColor = false;
@@ -606,11 +567,11 @@
             this.groupBoxServico.Controls.Add(idProfissionalLabel);
             this.groupBoxServico.Enabled = false;
             this.groupBoxServico.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBoxServico.Location = new System.Drawing.Point(27, 197);
-            this.groupBoxServico.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBoxServico.Location = new System.Drawing.Point(20, 191);
+            this.groupBoxServico.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBoxServico.Name = "groupBoxServico";
-            this.groupBoxServico.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBoxServico.Size = new System.Drawing.Size(1093, 142);
+            this.groupBoxServico.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxServico.Size = new System.Drawing.Size(1094, 132);
             this.groupBoxServico.TabIndex = 31;
             this.groupBoxServico.TabStop = false;
             // 
@@ -618,10 +579,9 @@
             // 
             this.buttonNovo.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.buttonNovo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonNovo.Location = new System.Drawing.Point(971, 345);
-            this.buttonNovo.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonNovo.Location = new System.Drawing.Point(986, 335);
             this.buttonNovo.Name = "buttonNovo";
-            this.buttonNovo.Size = new System.Drawing.Size(141, 37);
+            this.buttonNovo.Size = new System.Drawing.Size(106, 30);
             this.buttonNovo.TabIndex = 7;
             this.buttonNovo.Text = "Novo";
             this.buttonNovo.UseVisualStyleBackColor = false;
@@ -631,10 +591,9 @@
             // 
             this.labelCadastroAgenda.AutoSize = true;
             this.labelCadastroAgenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCadastroAgenda.Location = new System.Drawing.Point(411, 14);
-            this.labelCadastroAgenda.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelCadastroAgenda.Location = new System.Drawing.Point(308, 11);
             this.labelCadastroAgenda.Name = "labelCadastroAgenda";
-            this.labelCadastroAgenda.Size = new System.Drawing.Size(288, 36);
+            this.labelCadastroAgenda.Size = new System.Drawing.Size(233, 29);
             this.labelCadastroAgenda.TabIndex = 54;
             this.labelCadastroAgenda.Text = "Cadastro de Agenda";
             // 
@@ -642,10 +601,9 @@
             // 
             this.labelAlterarAgenda.AutoSize = true;
             this.labelAlterarAgenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAlterarAgenda.Location = new System.Drawing.Point(449, 14);
-            this.labelAlterarAgenda.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelAlterarAgenda.Location = new System.Drawing.Point(337, 11);
             this.labelAlterarAgenda.Name = "labelAlterarAgenda";
-            this.labelAlterarAgenda.Size = new System.Drawing.Size(223, 36);
+            this.labelAlterarAgenda.Size = new System.Drawing.Size(178, 29);
             this.labelAlterarAgenda.TabIndex = 55;
             this.labelAlterarAgenda.Text = "Alterar  Agenda";
             // 
@@ -653,10 +611,9 @@
             // 
             this.buttonCancelar.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.buttonCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCancelar.Location = new System.Drawing.Point(971, 505);
-            this.buttonCancelar.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonCancelar.Location = new System.Drawing.Point(986, 465);
             this.buttonCancelar.Name = "buttonCancelar";
-            this.buttonCancelar.Size = new System.Drawing.Size(141, 37);
+            this.buttonCancelar.Size = new System.Drawing.Size(106, 30);
             this.buttonCancelar.TabIndex = 56;
             this.buttonCancelar.Text = "Cancelar";
             this.buttonCancelar.UseVisualStyleBackColor = false;
@@ -694,19 +651,13 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.agendamentoServicosDataGridView.DefaultCellStyle = dataGridViewCellStyle2;
-            this.agendamentoServicosDataGridView.Location = new System.Drawing.Point(27, 345);
-            this.agendamentoServicosDataGridView.Margin = new System.Windows.Forms.Padding(4);
+            this.agendamentoServicosDataGridView.Location = new System.Drawing.Point(20, 328);
             this.agendamentoServicosDataGridView.Name = "agendamentoServicosDataGridView";
             this.agendamentoServicosDataGridView.ReadOnly = true;
             this.agendamentoServicosDataGridView.RowHeadersVisible = false;
             this.agendamentoServicosDataGridView.RowHeadersWidth = 51;
-            this.agendamentoServicosDataGridView.Size = new System.Drawing.Size(929, 228);
+            this.agendamentoServicosDataGridView.Size = new System.Drawing.Size(936, 241);
             this.agendamentoServicosDataGridView.TabIndex = 56;
-            // 
-            // agendamentoServicosBindingSource
-            // 
-            this.agendamentoServicosBindingSource.DataMember = "AgendamentoServicos";
-            this.agendamentoServicosBindingSource.DataSource = this.agendamentoBindingSource;
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -769,13 +720,18 @@
             this.nomeProfissionalDataGridViewTextBoxColumn.ReadOnly = true;
             this.nomeProfissionalDataGridViewTextBoxColumn.Width = 200;
             // 
+            // agendamentoServicosBindingSource
+            // 
+            this.agendamentoServicosBindingSource.DataMember = "AgendamentoServicos";
+            this.agendamentoServicosBindingSource.DataSource = this.agendamentoBindingSource;
+            // 
             // FormCadastroAgendamento
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1132, 586);
+            this.ClientSize = new System.Drawing.Size(1134, 594);
             this.Controls.Add(this.agendamentoServicosDataGridView);
             this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.labelAlterarAgenda);
@@ -807,12 +763,13 @@
             this.Controls.Add(horarioLabel);
             this.Controls.Add(this.horarioTextBox);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(1150, 633);
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(1150, 633);
             this.Name = "FormCadastroAgendamento";
             this.ShowInTaskbar = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Load += new System.EventHandler(this.FormCadastroAgendamento_Load);
             ((System.ComponentModel.ISupportInitialize)(this.agendamentoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.servicoBindingSource)).EndInit();

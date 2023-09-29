@@ -30,24 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPrincipal));
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.cadastroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.servicosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.agendamentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.animalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.raçaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.profissionalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.funçãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.relatóriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.button1 = new System.Windows.Forms.Button();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.button2 = new System.Windows.Forms.Button();
-            this.lblUsuarioLogado = new System.Windows.Forms.Label();
             this.lblUser = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.agendamentoDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -64,122 +51,23 @@
             this.valorUnitarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tempoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.agendamentoServicosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.agendamentoDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.agendamentoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.agendamentoServicosDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.agendamentoServicosBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // menuStrip1
-            // 
-            this.menuStrip1.BackColor = System.Drawing.Color.Transparent;
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cadastroToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(859, 28);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // cadastroToolStripMenuItem
-            // 
-            this.cadastroToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.usuariosToolStripMenuItem,
-            this.clientesToolStripMenuItem,
-            this.servicosToolStripMenuItem,
-            this.agendamentoToolStripMenuItem,
-            this.animalToolStripMenuItem,
-            this.raçaToolStripMenuItem,
-            this.profissionalToolStripMenuItem,
-            this.funçãoToolStripMenuItem,
-            this.relatóriosToolStripMenuItem});
-            this.cadastroToolStripMenuItem.Name = "cadastroToolStripMenuItem";
-            this.cadastroToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.U)));
-            this.cadastroToolStripMenuItem.Size = new System.Drawing.Size(82, 24);
-            this.cadastroToolStripMenuItem.Text = "Cadastro";
-            // 
-            // usuariosToolStripMenuItem
-            // 
-            this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
-            this.usuariosToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.U)));
-            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(239, 26);
-            this.usuariosToolStripMenuItem.Text = "Usuários";
-            this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
-            // 
-            // clientesToolStripMenuItem
-            // 
-            this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(239, 26);
-            this.clientesToolStripMenuItem.Text = "Clientes";
-            this.clientesToolStripMenuItem.Click += new System.EventHandler(this.clientesToolStripMenuItem_Click);
-            // 
-            // servicosToolStripMenuItem
-            // 
-            this.servicosToolStripMenuItem.Name = "servicosToolStripMenuItem";
-            this.servicosToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.servicosToolStripMenuItem.Size = new System.Drawing.Size(239, 26);
-            this.servicosToolStripMenuItem.Text = "Serviços";
-            this.servicosToolStripMenuItem.Click += new System.EventHandler(this.servicosToolStripMenuItem_Click);
-            // 
-            // agendamentoToolStripMenuItem
-            // 
-            this.agendamentoToolStripMenuItem.Name = "agendamentoToolStripMenuItem";
-            this.agendamentoToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));
-            this.agendamentoToolStripMenuItem.Size = new System.Drawing.Size(239, 26);
-            this.agendamentoToolStripMenuItem.Text = "Agendamento";
-            this.agendamentoToolStripMenuItem.Click += new System.EventHandler(this.agendamentoToolStripMenuItem_Click);
-            // 
-            // animalToolStripMenuItem
-            // 
-            this.animalToolStripMenuItem.Name = "animalToolStripMenuItem";
-            this.animalToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
-            this.animalToolStripMenuItem.Size = new System.Drawing.Size(239, 26);
-            this.animalToolStripMenuItem.Text = "Animal";
-            this.animalToolStripMenuItem.Click += new System.EventHandler(this.animalToolStripMenuItem_Click);
-            // 
-            // raçaToolStripMenuItem
-            // 
-            this.raçaToolStripMenuItem.Name = "raçaToolStripMenuItem";
-            this.raçaToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.R)));
-            this.raçaToolStripMenuItem.Size = new System.Drawing.Size(239, 26);
-            this.raçaToolStripMenuItem.Text = "Raça";
-            this.raçaToolStripMenuItem.Click += new System.EventHandler(this.raçaToolStripMenuItem_Click);
-            // 
-            // profissionalToolStripMenuItem
-            // 
-            this.profissionalToolStripMenuItem.Name = "profissionalToolStripMenuItem";
-            this.profissionalToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
-            this.profissionalToolStripMenuItem.Size = new System.Drawing.Size(239, 26);
-            this.profissionalToolStripMenuItem.Text = "Profissional";
-            this.profissionalToolStripMenuItem.Click += new System.EventHandler(this.profissionalToolStripMenuItem_Click);
-            // 
-            // funçãoToolStripMenuItem
-            // 
-            this.funçãoToolStripMenuItem.Name = "funçãoToolStripMenuItem";
-            this.funçãoToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F)));
-            this.funçãoToolStripMenuItem.Size = new System.Drawing.Size(239, 26);
-            this.funçãoToolStripMenuItem.Text = "Função";
-            this.funçãoToolStripMenuItem.Click += new System.EventHandler(this.funçãoToolStripMenuItem_Click);
-            // 
-            // relatóriosToolStripMenuItem
-            // 
-            this.relatóriosToolStripMenuItem.Name = "relatóriosToolStripMenuItem";
-            this.relatóriosToolStripMenuItem.Size = new System.Drawing.Size(239, 26);
-            this.relatóriosToolStripMenuItem.Text = "Relatórios";
-            this.relatóriosToolStripMenuItem.Click += new System.EventHandler(this.relatóriosToolStripMenuItem_Click);
-            // 
             // monthCalendar1
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(387, 18);
+            this.monthCalendar1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.monthCalendar1.Location = new System.Drawing.Point(493, 28);
+            this.monthCalendar1.Margin = new System.Windows.Forms.Padding(7);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 1;
             // 
             // button1
             // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.BackColor = System.Drawing.Color.Transparent;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -187,10 +75,10 @@
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.ImageKey = "buscar-removebg-preview.png";
             this.button1.ImageList = this.imageList1;
-            this.button1.Location = new System.Drawing.Point(701, 27);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Location = new System.Drawing.Point(760, 28);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(125, 48);
+            this.button1.Size = new System.Drawing.Size(94, 39);
             this.button1.TabIndex = 4;
             this.button1.Text = "Buscar";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -206,6 +94,7 @@
             // 
             // button2
             // 
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button2.BackColor = System.Drawing.Color.Transparent;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -213,10 +102,10 @@
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.ImageKey = "fechar-removebg-preview.png";
             this.button2.ImageList = this.imageList1;
-            this.button2.Location = new System.Drawing.Point(701, 178);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button2.Location = new System.Drawing.Point(760, 159);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(125, 38);
+            this.button2.Size = new System.Drawing.Size(94, 31);
             this.button2.TabIndex = 5;
             this.button2.Text = "Fechar";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -224,40 +113,17 @@
             this.button2.Visible = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // lblUsuarioLogado
-            // 
-            this.lblUsuarioLogado.AutoSize = true;
-            this.lblUsuarioLogado.BackColor = System.Drawing.Color.Transparent;
-            this.lblUsuarioLogado.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuarioLogado.ForeColor = System.Drawing.Color.ForestGreen;
-            this.lblUsuarioLogado.Location = new System.Drawing.Point(108, 580);
-            this.lblUsuarioLogado.Name = "lblUsuarioLogado";
-            this.lblUsuarioLogado.Size = new System.Drawing.Size(161, 23);
-            this.lblUsuarioLogado.TabIndex = 7;
-            this.lblUsuarioLogado.Text = "Usuário Logado";
-            // 
             // lblUser
             // 
             this.lblUser.AutoSize = true;
             this.lblUser.BackColor = System.Drawing.Color.Transparent;
             this.lblUser.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUser.ForeColor = System.Drawing.Color.ForestGreen;
-            this.lblUser.Location = new System.Drawing.Point(197, 497);
+            this.lblUser.Location = new System.Drawing.Point(148, 404);
+            this.lblUser.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblUser.Name = "lblUser";
-            this.lblUser.Size = new System.Drawing.Size(0, 23);
+            this.lblUser.Size = new System.Drawing.Size(0, 19);
             this.lblUser.TabIndex = 7;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label1.Location = new System.Drawing.Point(12, 580);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(90, 23);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "Logado:";
             // 
             // agendamentoDataGridView
             // 
@@ -266,6 +132,8 @@
             this.agendamentoDataGridView.AllowUserToOrderColumns = true;
             this.agendamentoDataGridView.AllowUserToResizeColumns = false;
             this.agendamentoDataGridView.AllowUserToResizeRows = false;
+            this.agendamentoDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.agendamentoDataGridView.AutoGenerateColumns = false;
             this.agendamentoDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.agendamentoDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -277,14 +145,14 @@
             this.dataGridViewTextBoxColumn19,
             this.dataGridViewTextBoxColumn17});
             this.agendamentoDataGridView.DataSource = this.agendamentoBindingSource;
-            this.agendamentoDataGridView.Location = new System.Drawing.Point(12, 270);
-            this.agendamentoDataGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.agendamentoDataGridView.Location = new System.Drawing.Point(9, 269);
+            this.agendamentoDataGridView.Margin = new System.Windows.Forms.Padding(2);
             this.agendamentoDataGridView.Name = "agendamentoDataGridView";
             this.agendamentoDataGridView.ReadOnly = true;
             this.agendamentoDataGridView.RowHeadersVisible = false;
             this.agendamentoDataGridView.RowHeadersWidth = 51;
             this.agendamentoDataGridView.RowTemplate.Height = 24;
-            this.agendamentoDataGridView.Size = new System.Drawing.Size(421, 284);
+            this.agendamentoDataGridView.Size = new System.Drawing.Size(419, 224);
             this.agendamentoDataGridView.TabIndex = 7;
             this.agendamentoDataGridView.Visible = false;
             // 
@@ -362,6 +230,8 @@
             this.agendamentoServicosDataGridView.AllowUserToOrderColumns = true;
             this.agendamentoServicosDataGridView.AllowUserToResizeColumns = false;
             this.agendamentoServicosDataGridView.AllowUserToResizeRows = false;
+            this.agendamentoServicosDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.agendamentoServicosDataGridView.AutoGenerateColumns = false;
             this.agendamentoServicosDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.agendamentoServicosDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -371,14 +241,14 @@
             this.valorUnitarioDataGridViewTextBoxColumn,
             this.tempoDataGridViewTextBoxColumn});
             this.agendamentoServicosDataGridView.DataSource = this.agendamentoServicosBindingSource;
-            this.agendamentoServicosDataGridView.Location = new System.Drawing.Point(440, 270);
-            this.agendamentoServicosDataGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.agendamentoServicosDataGridView.Location = new System.Drawing.Point(435, 269);
+            this.agendamentoServicosDataGridView.Margin = new System.Windows.Forms.Padding(2);
             this.agendamentoServicosDataGridView.Name = "agendamentoServicosDataGridView";
             this.agendamentoServicosDataGridView.ReadOnly = true;
             this.agendamentoServicosDataGridView.RowHeadersVisible = false;
             this.agendamentoServicosDataGridView.RowHeadersWidth = 51;
             this.agendamentoServicosDataGridView.RowTemplate.Height = 24;
-            this.agendamentoServicosDataGridView.Size = new System.Drawing.Size(408, 287);
+            this.agendamentoServicosDataGridView.Size = new System.Drawing.Size(419, 224);
             this.agendamentoServicosDataGridView.TabIndex = 8;
             this.agendamentoServicosDataGridView.Visible = false;
             // 
@@ -434,32 +304,28 @@
             // 
             // FormPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(859, 612);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ClientSize = new System.Drawing.Size(865, 515);
             this.Controls.Add(this.agendamentoServicosDataGridView);
             this.Controls.Add(this.agendamentoDataGridView);
             this.Controls.Add(this.lblUser);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.lblUsuarioLogado);
             this.Controls.Add(this.monthCalendar1);
-            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.KeyPreview = true;
-            this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormPrincipal";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "MÓDULO CONFIGURAÇÃO";
+            this.Text = "PRINCIPAL";
             this.Load += new System.EventHandler(this.FormPrincipal_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormPrincipal_KeyDown);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.agendamentoDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.agendamentoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.agendamentoServicosDataGridView)).EndInit();
@@ -470,12 +336,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem cadastroToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem clientesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem servicosToolStripMenuItem;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataAgDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomeAnimalDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomeClienteDataGridViewTextBoxColumn;
@@ -483,8 +343,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn horarioDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn profissionalDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn telClienteDataGridViewTextBoxColumn;
-        private System.Windows.Forms.ToolStripMenuItem agendamentoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem animalToolStripMenuItem;
         private System.Windows.Forms.MonthCalendar monthCalendar1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
@@ -496,9 +354,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ImageList imageList1;
-        private System.Windows.Forms.Label lblUsuarioLogado;
         private System.Windows.Forms.Label lblUser;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.BindingSource agendamentoBindingSource;
         private System.Windows.Forms.DataGridView agendamentoDataGridView;
         private System.Windows.Forms.DataGridView agendamentoServicosDataGridView;
@@ -507,9 +363,6 @@
         private System.Windows.Forms.BindingSource agendamentoServicosBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn precoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn subtotalDataGridViewTextBoxColumn;
-        private System.Windows.Forms.ToolStripMenuItem raçaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem profissionalToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem funçãoToolStripMenuItem;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
@@ -523,7 +376,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn quantidadeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn valorUnitarioDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tempoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.ToolStripMenuItem relatóriosToolStripMenuItem;
     }
 }
 

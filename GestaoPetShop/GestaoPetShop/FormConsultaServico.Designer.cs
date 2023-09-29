@@ -36,7 +36,6 @@
             this.textBox_BuscarServico = new System.Windows.Forms.TextBox();
             this.servicoDataGridView = new System.Windows.Forms.DataGridView();
             this.servicoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.label5 = new System.Windows.Forms.Label();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.button_AlterarServico = new System.Windows.Forms.Button();
             this.button_InserirServico = new System.Windows.Forms.Button();
@@ -63,20 +62,20 @@
             "Todos",
             "Id",
             "Descrição"});
-            this.comboBox_EscolhaBuscarServico.Location = new System.Drawing.Point(13, 196);
-            this.comboBox_EscolhaBuscarServico.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBox_EscolhaBuscarServico.Location = new System.Drawing.Point(14, 51);
             this.comboBox_EscolhaBuscarServico.Name = "comboBox_EscolhaBuscarServico";
-            this.comboBox_EscolhaBuscarServico.Size = new System.Drawing.Size(208, 33);
+            this.comboBox_EscolhaBuscarServico.Size = new System.Drawing.Size(100, 28);
             this.comboBox_EscolhaBuscarServico.TabIndex = 4;
             // 
             // textBox_BuscarServico
             // 
+            this.textBox_BuscarServico.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox_BuscarServico.BackColor = System.Drawing.Color.White;
             this.textBox_BuscarServico.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_BuscarServico.Location = new System.Drawing.Point(229, 199);
-            this.textBox_BuscarServico.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox_BuscarServico.Location = new System.Drawing.Point(119, 53);
             this.textBox_BuscarServico.Name = "textBox_BuscarServico";
-            this.textBox_BuscarServico.Size = new System.Drawing.Size(698, 30);
+            this.textBox_BuscarServico.Size = new System.Drawing.Size(248, 26);
             this.textBox_BuscarServico.TabIndex = 5;
             // 
             // servicoDataGridView
@@ -86,11 +85,14 @@
             this.servicoDataGridView.AllowUserToOrderColumns = true;
             this.servicoDataGridView.AllowUserToResizeColumns = false;
             this.servicoDataGridView.AllowUserToResizeRows = false;
+            this.servicoDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.servicoDataGridView.AutoGenerateColumns = false;
             this.servicoDataGridView.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableAlwaysIncludeHeaderText;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -113,8 +115,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.servicoDataGridView.DefaultCellStyle = dataGridViewCellStyle2;
             this.servicoDataGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(190)))), ((int)(((byte)(255)))));
-            this.servicoDataGridView.Location = new System.Drawing.Point(13, 256);
-            this.servicoDataGridView.Margin = new System.Windows.Forms.Padding(4);
+            this.servicoDataGridView.Location = new System.Drawing.Point(12, 85);
             this.servicoDataGridView.MultiSelect = false;
             this.servicoDataGridView.Name = "servicoDataGridView";
             this.servicoDataGridView.ReadOnly = true;
@@ -122,24 +123,12 @@
             this.servicoDataGridView.RowHeadersWidth = 51;
             this.servicoDataGridView.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.servicoDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.servicoDataGridView.Size = new System.Drawing.Size(1106, 303);
+            this.servicoDataGridView.Size = new System.Drawing.Size(825, 379);
             this.servicoDataGridView.TabIndex = 10;
             // 
             // servicoBindingSource
             // 
             this.servicoBindingSource.DataSource = typeof(Models.Servico);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(373, 23);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(299, 34);
-            this.label5.TabIndex = 15;
-            this.label5.Text = "Consulta de Serviços";
             // 
             // imageList1
             // 
@@ -153,18 +142,16 @@
             // 
             // button_AlterarServico
             // 
+            this.button_AlterarServico.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button_AlterarServico.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.button_AlterarServico.FlatAppearance.BorderSize = 0;
-            this.button_AlterarServico.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_AlterarServico.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_AlterarServico.ForeColor = System.Drawing.Color.Black;
             this.button_AlterarServico.ImageKey = "(none)";
             this.button_AlterarServico.ImageList = this.imageList1;
-            this.button_AlterarServico.Location = new System.Drawing.Point(608, 109);
-            this.button_AlterarServico.Margin = new System.Windows.Forms.Padding(4);
-            this.button_AlterarServico.MaximumSize = new System.Drawing.Size(141, 37);
-            this.button_AlterarServico.MinimumSize = new System.Drawing.Size(141, 37);
+            this.button_AlterarServico.Location = new System.Drawing.Point(621, 49);
             this.button_AlterarServico.Name = "button_AlterarServico";
-            this.button_AlterarServico.Size = new System.Drawing.Size(141, 37);
+            this.button_AlterarServico.Size = new System.Drawing.Size(106, 30);
             this.button_AlterarServico.TabIndex = 8;
             this.button_AlterarServico.Text = "Alterar";
             this.button_AlterarServico.UseVisualStyleBackColor = false;
@@ -172,17 +159,15 @@
             // 
             // button_InserirServico
             // 
+            this.button_InserirServico.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button_InserirServico.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.button_InserirServico.FlatAppearance.BorderSize = 0;
-            this.button_InserirServico.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_InserirServico.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_InserirServico.ForeColor = System.Drawing.Color.Black;
             this.button_InserirServico.ImageKey = "(none)";
-            this.button_InserirServico.Location = new System.Drawing.Point(439, 109);
-            this.button_InserirServico.Margin = new System.Windows.Forms.Padding(4);
-            this.button_InserirServico.MaximumSize = new System.Drawing.Size(141, 37);
-            this.button_InserirServico.MinimumSize = new System.Drawing.Size(141, 37);
+            this.button_InserirServico.Location = new System.Drawing.Point(509, 49);
             this.button_InserirServico.Name = "button_InserirServico";
-            this.button_InserirServico.Size = new System.Drawing.Size(141, 37);
+            this.button_InserirServico.Size = new System.Drawing.Size(106, 30);
             this.button_InserirServico.TabIndex = 7;
             this.button_InserirServico.Text = "Inserir";
             this.button_InserirServico.UseVisualStyleBackColor = false;
@@ -190,17 +175,15 @@
             // 
             // button_BucarServico
             // 
+            this.button_BucarServico.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button_BucarServico.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.button_BucarServico.FlatAppearance.BorderSize = 0;
-            this.button_BucarServico.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_BucarServico.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_BucarServico.ForeColor = System.Drawing.Color.Black;
             this.button_BucarServico.ImageKey = "(none)";
-            this.button_BucarServico.Location = new System.Drawing.Point(261, 109);
-            this.button_BucarServico.Margin = new System.Windows.Forms.Padding(4);
-            this.button_BucarServico.MaximumSize = new System.Drawing.Size(141, 37);
-            this.button_BucarServico.MinimumSize = new System.Drawing.Size(141, 37);
+            this.button_BucarServico.Location = new System.Drawing.Point(397, 49);
             this.button_BucarServico.Name = "button_BucarServico";
-            this.button_BucarServico.Size = new System.Drawing.Size(141, 37);
+            this.button_BucarServico.Size = new System.Drawing.Size(106, 30);
             this.button_BucarServico.TabIndex = 6;
             this.button_BucarServico.Text = "Buscar";
             this.button_BucarServico.UseVisualStyleBackColor = false;
@@ -208,14 +191,13 @@
             // 
             // button_ExcluirServico
             // 
+            this.button_ExcluirServico.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button_ExcluirServico.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.button_ExcluirServico.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_ExcluirServico.Location = new System.Drawing.Point(781, 109);
-            this.button_ExcluirServico.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button_ExcluirServico.MaximumSize = new System.Drawing.Size(141, 37);
-            this.button_ExcluirServico.MinimumSize = new System.Drawing.Size(141, 37);
+            this.button_ExcluirServico.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_ExcluirServico.Location = new System.Drawing.Point(732, 49);
+            this.button_ExcluirServico.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button_ExcluirServico.Name = "button_ExcluirServico";
-            this.button_ExcluirServico.Size = new System.Drawing.Size(141, 37);
+            this.button_ExcluirServico.Size = new System.Drawing.Size(106, 30);
             this.button_ExcluirServico.TabIndex = 16;
             this.button_ExcluirServico.Text = "Excluir";
             this.button_ExcluirServico.UseVisualStyleBackColor = false;
@@ -224,20 +206,22 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 172);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(16, 33);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(92, 20);
+            this.label1.Size = new System.Drawing.Size(72, 16);
             this.label1.TabIndex = 17;
             this.label1.Text = "Buscar por";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(226, 172);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(120, 34);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(200, 20);
+            this.label2.Size = new System.Drawing.Size(159, 16);
             this.label2.TabIndex = 18;
             this.label2.Text = "Digite a descrição ou o id";
             // 
@@ -248,7 +232,7 @@
             this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 60;
+            this.dataGridViewTextBoxColumn1.Width = 35;
             // 
             // dataGridViewTextBoxColumn2
             // 
@@ -266,6 +250,7 @@
             this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Width = 120;
             // 
             // dataGridViewTextBoxColumn4
             // 
@@ -274,6 +259,7 @@
             this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.dataGridViewTextBoxColumn4.Width = 90;
             // 
             // dataGridViewCheckBoxColumn1
             // 
@@ -286,14 +272,13 @@
             // 
             // FormConsultaServico
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1132, 586);
+            this.ClientSize = new System.Drawing.Size(849, 476);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button_ExcluirServico);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.servicoDataGridView);
             this.Controls.Add(this.textBox_BuscarServico);
             this.Controls.Add(this.comboBox_EscolhaBuscarServico);
@@ -302,14 +287,13 @@
             this.Controls.Add(this.button_BucarServico);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(1150, 633);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(1150, 633);
             this.Name = "FormConsultaServico";
+            this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "CONSULTAR SERVIÇOS";
             ((System.ComponentModel.ISupportInitialize)(this.servicoDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.servicoBindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -324,7 +308,6 @@
         private System.Windows.Forms.Button button_InserirServico;
         private System.Windows.Forms.BindingSource servicoBindingSource;
         private System.Windows.Forms.DataGridView servicoDataGridView;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.Button button_ExcluirServico;
         private System.Windows.Forms.Button button_AlterarServico;
