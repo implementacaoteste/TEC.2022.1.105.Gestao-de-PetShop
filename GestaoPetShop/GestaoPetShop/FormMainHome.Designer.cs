@@ -216,7 +216,8 @@
             // 
             // lblUsuarioLogado
             // 
-            this.lblUsuarioLogado.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.lblUsuarioLogado.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblUsuarioLogado.AutoSize = true;
             this.lblUsuarioLogado.BackColor = System.Drawing.Color.Transparent;
             this.lblUsuarioLogado.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -245,7 +246,7 @@
             // 
             // buttonSair
             // 
-            this.buttonSair.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonSair.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.buttonSair.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.buttonSair.FlatAppearance.BorderSize = 0;
             this.buttonSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;

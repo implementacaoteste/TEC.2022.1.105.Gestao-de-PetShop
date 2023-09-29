@@ -23,14 +23,14 @@ namespace GestaoPetShop
             InitializeComponent();
             random = new Random();
             btnCloseChildForm.Visible = false;
-            //this.Text = string.Empty;
-            //this.ControlBox = false;
-            //this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+            this.Text = string.Empty;
+            this.ControlBox = false;
+            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
         }
-        //[DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
-        //private extern static void ReleaseCapture();
-        //[DllImport("user32.DLL", EntryPoint = "SendMessage")]
-        //private extern static void SendMessage(System.IntPtr hWnd, int Msg, int wParam, int lParam);
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int Msg, int wParam, int lParam);
 
         private Color SelectThemeColor()
         {
@@ -190,11 +190,5 @@ namespace GestaoPetShop
             else
                 this.WindowState = FormWindowState.Normal;
         }
-
-        //private void panelTitleBar_MouseDown(object sender, MouseEventArgs e)
-        //{
-        //    ReleaseCapture();
-        //    SendMessage(this.Handle, 0x112, 0xf012, 0);
-        //}
     }
 }
