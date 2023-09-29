@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormConsultaUsuario));
             this.textBoxBuscarUsuario = new System.Windows.Forms.TextBox();
             this.comboBoxSelecionarTipoPesquisaUsuario = new System.Windows.Forms.ComboBox();
@@ -36,7 +37,6 @@
             this.buttonAlterarUsuario = new System.Windows.Forms.Button();
             this.buttonInserirUsuario = new System.Windows.Forms.Button();
             this.buttonExcluirUsuario = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.usuarioDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -51,34 +51,41 @@
             // 
             // textBoxBuscarUsuario
             // 
-            this.textBoxBuscarUsuario.Location = new System.Drawing.Point(104, 108);
-            this.textBoxBuscarUsuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxBuscarUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.textBoxBuscarUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxBuscarUsuario.Location = new System.Drawing.Point(105, 33);
+            this.textBoxBuscarUsuario.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxBuscarUsuario.Name = "textBoxBuscarUsuario";
-            this.textBoxBuscarUsuario.Size = new System.Drawing.Size(287, 20);
+            this.textBoxBuscarUsuario.Size = new System.Drawing.Size(271, 26);
             this.textBoxBuscarUsuario.TabIndex = 2;
             // 
             // comboBoxSelecionarTipoPesquisaUsuario
             // 
+            this.comboBoxSelecionarTipoPesquisaUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.comboBoxSelecionarTipoPesquisaUsuario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxSelecionarTipoPesquisaUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxSelecionarTipoPesquisaUsuario.FormattingEnabled = true;
             this.comboBoxSelecionarTipoPesquisaUsuario.Items.AddRange(new object[] {
             "Todos",
             "Login",
             "Profissional",
             "Id Profissional"});
-            this.comboBoxSelecionarTipoPesquisaUsuario.Location = new System.Drawing.Point(9, 106);
-            this.comboBoxSelecionarTipoPesquisaUsuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxSelecionarTipoPesquisaUsuario.Location = new System.Drawing.Point(9, 33);
+            this.comboBoxSelecionarTipoPesquisaUsuario.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxSelecionarTipoPesquisaUsuario.Name = "comboBoxSelecionarTipoPesquisaUsuario";
-            this.comboBoxSelecionarTipoPesquisaUsuario.Size = new System.Drawing.Size(92, 21);
+            this.comboBoxSelecionarTipoPesquisaUsuario.Size = new System.Drawing.Size(92, 28);
             this.comboBoxSelecionarTipoPesquisaUsuario.TabIndex = 3;
             // 
             // buttonBuscarUsuario
             // 
+            this.buttonBuscarUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonBuscarUsuario.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.buttonBuscarUsuario.Location = new System.Drawing.Point(82, 53);
-            this.buttonBuscarUsuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonBuscarUsuario.Location = new System.Drawing.Point(418, 29);
+            this.buttonBuscarUsuario.Margin = new System.Windows.Forms.Padding(2);
             this.buttonBuscarUsuario.Name = "buttonBuscarUsuario";
-            this.buttonBuscarUsuario.Size = new System.Drawing.Size(56, 24);
+            this.buttonBuscarUsuario.Size = new System.Drawing.Size(106, 30);
             this.buttonBuscarUsuario.TabIndex = 4;
             this.buttonBuscarUsuario.Text = "Buscar";
             this.buttonBuscarUsuario.UseVisualStyleBackColor = false;
@@ -86,11 +93,12 @@
             // 
             // buttonAlterarUsuario
             // 
+            this.buttonAlterarUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonAlterarUsuario.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.buttonAlterarUsuario.Location = new System.Drawing.Point(143, 53);
-            this.buttonAlterarUsuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonAlterarUsuario.Location = new System.Drawing.Point(528, 29);
+            this.buttonAlterarUsuario.Margin = new System.Windows.Forms.Padding(2);
             this.buttonAlterarUsuario.Name = "buttonAlterarUsuario";
-            this.buttonAlterarUsuario.Size = new System.Drawing.Size(56, 24);
+            this.buttonAlterarUsuario.Size = new System.Drawing.Size(106, 30);
             this.buttonAlterarUsuario.TabIndex = 5;
             this.buttonAlterarUsuario.Text = "Alterar";
             this.buttonAlterarUsuario.UseVisualStyleBackColor = false;
@@ -98,11 +106,12 @@
             // 
             // buttonInserirUsuario
             // 
+            this.buttonInserirUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonInserirUsuario.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.buttonInserirUsuario.Location = new System.Drawing.Point(204, 53);
-            this.buttonInserirUsuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonInserirUsuario.Location = new System.Drawing.Point(638, 29);
+            this.buttonInserirUsuario.Margin = new System.Windows.Forms.Padding(2);
             this.buttonInserirUsuario.Name = "buttonInserirUsuario";
-            this.buttonInserirUsuario.Size = new System.Drawing.Size(56, 24);
+            this.buttonInserirUsuario.Size = new System.Drawing.Size(106, 30);
             this.buttonInserirUsuario.TabIndex = 6;
             this.buttonInserirUsuario.Text = "Inserir";
             this.buttonInserirUsuario.UseVisualStyleBackColor = false;
@@ -110,26 +119,16 @@
             // 
             // buttonExcluirUsuario
             // 
+            this.buttonExcluirUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonExcluirUsuario.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.buttonExcluirUsuario.Location = new System.Drawing.Point(265, 53);
-            this.buttonExcluirUsuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonExcluirUsuario.Location = new System.Drawing.Point(748, 29);
+            this.buttonExcluirUsuario.Margin = new System.Windows.Forms.Padding(2);
             this.buttonExcluirUsuario.Name = "buttonExcluirUsuario";
-            this.buttonExcluirUsuario.Size = new System.Drawing.Size(56, 24);
+            this.buttonExcluirUsuario.Size = new System.Drawing.Size(106, 30);
             this.buttonExcluirUsuario.TabIndex = 7;
             this.buttonExcluirUsuario.Text = "Excluir";
             this.buttonExcluirUsuario.UseVisualStyleBackColor = false;
             this.buttonExcluirUsuario.Click += new System.EventHandler(this.buttonExcluirUsuario_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(100, 9);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(209, 26);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "Consulta de Usuário";
             // 
             // usuarioBindingSource
             // 
@@ -142,7 +141,18 @@
             this.usuarioDataGridView.AllowUserToOrderColumns = true;
             this.usuarioDataGridView.AllowUserToResizeColumns = false;
             this.usuarioDataGridView.AllowUserToResizeRows = false;
+            this.usuarioDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.usuarioDataGridView.AutoGenerateColumns = false;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.usuarioDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.usuarioDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.usuarioDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn3,
@@ -150,15 +160,15 @@
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewCheckBoxColumn2});
             this.usuarioDataGridView.DataSource = this.usuarioBindingSource;
-            this.usuarioDataGridView.Location = new System.Drawing.Point(9, 131);
-            this.usuarioDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.usuarioDataGridView.Location = new System.Drawing.Point(9, 67);
+            this.usuarioDataGridView.Margin = new System.Windows.Forms.Padding(2);
             this.usuarioDataGridView.Name = "usuarioDataGridView";
             this.usuarioDataGridView.ReadOnly = true;
             this.usuarioDataGridView.RowHeadersVisible = false;
             this.usuarioDataGridView.RowHeadersWidth = 51;
             this.usuarioDataGridView.RowTemplate.Height = 24;
             this.usuarioDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.usuarioDataGridView.Size = new System.Drawing.Size(381, 146);
+            this.usuarioDataGridView.Size = new System.Drawing.Size(845, 437);
             this.usuarioDataGridView.TabIndex = 9;
             // 
             // dataGridViewTextBoxColumn3
@@ -172,12 +182,12 @@
             // 
             // NomeProfissional
             // 
+            this.NomeProfissional.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.NomeProfissional.DataPropertyName = "NomeProfissional";
             this.NomeProfissional.HeaderText = "Nome do Profissional";
             this.NomeProfissional.MinimumWidth = 6;
             this.NomeProfissional.Name = "NomeProfissional";
             this.NomeProfissional.ReadOnly = true;
-            this.NomeProfissional.Width = 250;
             // 
             // dataGridViewTextBoxColumn4
             // 
@@ -195,53 +205,53 @@
             this.dataGridViewCheckBoxColumn2.MinimumWidth = 6;
             this.dataGridViewCheckBoxColumn2.Name = "dataGridViewCheckBoxColumn2";
             this.dataGridViewCheckBoxColumn2.ReadOnly = true;
-            this.dataGridViewCheckBoxColumn2.Width = 50;
+            this.dataGridViewCheckBoxColumn2.Width = 70;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(10, 89);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(11, 14);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 13);
+            this.label2.Size = new System.Drawing.Size(77, 17);
             this.label2.TabIndex = 10;
             this.label2.Text = "Buscar por";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(106, 89);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(102, 14);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(211, 13);
+            this.label3.Size = new System.Drawing.Size(262, 17);
             this.label3.TabIndex = 11;
-            this.label3.Text = "Digite o login, ou nome do profissional ou id";
+            this.label3.Text = "Digite (login, nome do profissional ou id)";
             // 
             // FormConsultaUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(400, 293);
+            this.ClientSize = new System.Drawing.Size(865, 515);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.usuarioDataGridView);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonExcluirUsuario);
             this.Controls.Add(this.buttonInserirUsuario);
             this.Controls.Add(this.buttonAlterarUsuario);
             this.Controls.Add(this.buttonBuscarUsuario);
             this.Controls.Add(this.comboBoxSelecionarTipoPesquisaUsuario);
             this.Controls.Add(this.textBoxBuscarUsuario);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(416, 332);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(416, 332);
             this.Name = "FormConsultaUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "CONSULTAR USUÁRIO";
             this.Load += new System.EventHandler(this.FormConsultaUsuario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioDataGridView)).EndInit();
@@ -260,14 +270,13 @@
         private System.Windows.Forms.Button buttonAlterarUsuario;
         private System.Windows.Forms.Button buttonInserirUsuario;
         private System.Windows.Forms.Button buttonExcluirUsuario;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.BindingSource usuarioBindingSource;
         private System.Windows.Forms.DataGridView usuarioDataGridView;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn NomeProfissional;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn2;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
     }
 }

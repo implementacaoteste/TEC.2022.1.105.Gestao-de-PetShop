@@ -159,8 +159,8 @@ namespace GestaoPetShop
                     btn.FlatAppearance.BorderColor = ThemeColor.SecondaryColor;
                 }
             }
-            //label4.ForeColor = ThemeColor.SecondaryColor;
-            //label5.ForeColor = ThemeColor.PrimaryColor;
+            //label2.ForeColor = ThemeColor.SecondaryColor;
+            //label3.ForeColor = ThemeColor.PrimaryColor;
         }
     }
 }
