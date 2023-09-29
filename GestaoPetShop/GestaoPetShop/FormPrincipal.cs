@@ -34,20 +34,20 @@ namespace GestaoPetShop
             //  agendamentoDataGridView.DataSource = new Agendamento();// ERA APENAS UM TESTE -DEIXEI AQUI SÓ PRA LEMBRAR
 
 
-            try
-            {
-                using (FormLogin frm = new FormLogin())
-                {
-                    frm.ShowDialog();
-                    if (!frm.Logou)
-                        Application.Exit();
-                    lblUsuarioLogado.Text = Constantes.UsuarioLogado;
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            //try
+            //{
+            //    using (FormLogin frm = new FormLogin())
+            //    {
+            //        frm.ShowDialog();
+            //        if (!frm.Logou)
+            //            Application.Exit();
+            //        lblUsuarioLogado.Text = Constantes.UsuarioLogado;
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show(ex.Message);
+            //}
         }
 
 
