@@ -177,7 +177,8 @@ namespace GestaoPetShop
         }
         private void btnGerarSenha_Click(object sender, EventArgs e)
         {
-            using (FormGerarSenha frm = new FormGerarSenha())
+            
+            using (FormGerarSenha frm = new FormGerarSenha(id))
             {
                 frm.ShowDialog();
             }

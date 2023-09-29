@@ -3,6 +3,7 @@ using Models;
 using System;
 using System.Collections.Generic;
 using System.Runtime.Remoting.Channels;
+using System.Windows.Forms;
 
 namespace BLL
 {
@@ -19,6 +20,7 @@ namespace BLL
         public void Alterar(Usuario _usuario, string _confirmacaoDeSenha)
         {
             //ValidarPermissao(3);
+
             ValidarDados(_usuario, _confirmacaoDeSenha);
 
             UsuarioDAL usuarioDAL = new UsuarioDAL();
@@ -29,7 +31,7 @@ namespace BLL
             //ValidarPermissao(4);
             new UsuarioDAL().Excluir(_id);
         }
-       
+
         public List<Usuario> BuscarTodos()
         {
             //ValidarPermissao(1);
@@ -55,6 +57,7 @@ namespace BLL
 
             if (_usuario.UsuarioLogin.Length <= 2)
                 throw new Exception("O Login deve ter mais de 2 caracteres.");
+
         }
         public void ValidarPermissao(int _idPermissao)
         {
@@ -79,6 +82,15 @@ namespace BLL
         public Usuario BucarPorIdProfissional(int _idProfissional)
         {
             return new UsuarioDAL().BucarPorIdProfissional(_idProfissional);
+        }
+
+        public bool VerificarSenhaAtual(TextBox _txtSenhaAtual, int _id)
+        {
+            string senhaatual = BuscarPorId(_id).Senha;
+            if (senhaatual == _txtSenhaAtual.Text)
+                return false;
+            else
+                return true;
         }
     }
 }

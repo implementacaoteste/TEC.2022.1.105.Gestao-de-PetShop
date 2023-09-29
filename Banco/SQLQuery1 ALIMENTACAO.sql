@@ -1,4 +1,4 @@
-use DimasTestepetshop
+use petshop
 /*ANTES DE INSERIR VERIFICAR OS CADASTROS*/
 
 /*---ORDEM DE CADASTRO---

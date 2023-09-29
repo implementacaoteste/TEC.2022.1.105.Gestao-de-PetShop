@@ -1,4 +1,5 @@
-﻿using Models;
+﻿using BLL;
+using Models;
 using System;
 using System.Windows.Forms;
 
@@ -7,9 +8,11 @@ namespace GestaoPetShop
     public partial class FormGerarSenha : Form
     {
         string senhaAtual = "teste123";
-        public FormGerarSenha()
+        private int id;
+        public FormGerarSenha(int id)
         {
             InitializeComponent();
+            this.id = id;
         }
 
         private void btnGerar_Click(object sender, EventArgs e)
@@ -72,6 +75,45 @@ namespace GestaoPetShop
             txtNovaSenha.Enabled = false;
             txtNovaSenha2.Enabled = false;
             btnOK.Enabled = false;
+        }
+
+        private void buttonSalvarNovaSenha_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Usuario usuario = new Usuario();
+
+                if(new UsuarioBLL().VerificarSenhaAtual(txtSenhaAtual, ((Usuario)usuarioBindingSource.Current).Id))
+                {
+                    MessageBox.Show("Senha atual incorreta!");
+                    txtSenhaAtual.Focus();
+                    return;
+
+                }
+
+                usuario = (Usuario)usuarioBindingSource.Current;
+                new UsuarioBLL().Alterar(usuario,txtNovaSenha2.Text);
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void FormGerarSenha_Load(object sender, EventArgs e)
+        {
+            
+            usuarioBindingSource.AddNew();
+            if(Constantes.IdUsuarioLogado != id)
+            {
+                MessageBox.Show("Você não tem permissão para alterar a senha deste Profissional");
+                Close();
+            }
+
+            usuarioBindingSource.DataSource = new UsuarioBLL().BucarPorIdProfissional(id);
+            txtNovaSenha.Clear();
         }
     }
 }

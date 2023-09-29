@@ -268,23 +268,6 @@ namespace GestaoPetShop
             }
         }
 
-        private void descricaoComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            //try
-            //{
-            //    //  servicoBindingSource.DataSource = new AgendamentoBLL().B(descricaoComboBox.Text);
-
-            //    textBoxSubtotal.Text = Convert.ToString(Convert.ToDecimal(textBoxValorUnitario.Text) * Convert.ToDecimal(textBoxQuantidade.Text));
-            //    //  ((AgendamentoServico)agendamentoServicosBindingSource.Current).Subtotal = Convert.ToDecimal(textBoxValorUnitario.Text) * Convert.ToDecimal(textBoxQuantidade.Text);
-
-            //}
-            //catch (Exception ex)
-            //{
-
-            //    MessageBox.Show(ex.Message);
-            //}
-        }
-
         private void textBoxQuantidade_TextChanged(object sender, EventArgs e)
         {
             try
@@ -297,6 +280,8 @@ namespace GestaoPetShop
 
             }
         }
+
+
     }
 
 }

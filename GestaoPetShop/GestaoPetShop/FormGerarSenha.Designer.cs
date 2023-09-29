@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormGerarSenha));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -39,12 +40,16 @@
             this.btnGerar = new System.Windows.Forms.Button();
             this.btnOK = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
+            this.buttonSalvarNovaSenha = new System.Windows.Forms.Button();
+            this.buttonCancelar = new System.Windows.Forms.Button();
+            this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(54, 107);
+            this.label1.Location = new System.Drawing.Point(192, 84);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(128, 16);
             this.label1.TabIndex = 0;
@@ -53,7 +58,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(54, 175);
+            this.label2.Location = new System.Drawing.Point(196, 150);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(131, 16);
             this.label2.TabIndex = 1;
@@ -62,7 +67,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(54, 243);
+            this.label3.Location = new System.Drawing.Point(191, 217);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(136, 16);
             this.label3.TabIndex = 2;
@@ -70,7 +75,7 @@
             // 
             // txtSenhaAtual
             // 
-            this.txtSenhaAtual.Location = new System.Drawing.Point(225, 106);
+            this.txtSenhaAtual.Location = new System.Drawing.Point(195, 102);
             this.txtSenhaAtual.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSenhaAtual.MaxLength = 32;
             this.txtSenhaAtual.Name = "txtSenhaAtual";
@@ -80,8 +85,8 @@
             // 
             // txtNovaSenha
             // 
-            this.txtNovaSenha.Enabled = false;
-            this.txtNovaSenha.Location = new System.Drawing.Point(225, 172);
+            this.txtNovaSenha.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioBindingSource, "Senha", true));
+            this.txtNovaSenha.Location = new System.Drawing.Point(195, 168);
             this.txtNovaSenha.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNovaSenha.MaxLength = 32;
             this.txtNovaSenha.Name = "txtNovaSenha";
@@ -91,8 +96,7 @@
             // 
             // txtNovaSenha2
             // 
-            this.txtNovaSenha2.Enabled = false;
-            this.txtNovaSenha2.Location = new System.Drawing.Point(225, 239);
+            this.txtNovaSenha2.Location = new System.Drawing.Point(195, 235);
             this.txtNovaSenha2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNovaSenha2.MaxLength = 32;
             this.txtNovaSenha2.Name = "txtNovaSenha2";
@@ -103,7 +107,7 @@
             // checkBoxMostrarSenha
             // 
             this.checkBoxMostrarSenha.AutoSize = true;
-            this.checkBoxMostrarSenha.Location = new System.Drawing.Point(383, 297);
+            this.checkBoxMostrarSenha.Location = new System.Drawing.Point(276, 261);
             this.checkBoxMostrarSenha.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkBoxMostrarSenha.Name = "checkBoxMostrarSenha";
             this.checkBoxMostrarSenha.Size = new System.Drawing.Size(116, 20);
@@ -141,12 +145,35 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(203, 28);
+            this.label5.Location = new System.Drawing.Point(190, 9);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(146, 23);
             this.label5.TabIndex = 10;
             this.label5.Text = "GERAR SENHA";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // buttonSalvarNovaSenha
+            // 
+            this.buttonSalvarNovaSenha.Location = new System.Drawing.Point(160, 309);
+            this.buttonSalvarNovaSenha.Name = "buttonSalvarNovaSenha";
+            this.buttonSalvarNovaSenha.Size = new System.Drawing.Size(75, 23);
+            this.buttonSalvarNovaSenha.TabIndex = 11;
+            this.buttonSalvarNovaSenha.Text = "Salvar";
+            this.buttonSalvarNovaSenha.UseVisualStyleBackColor = true;
+            this.buttonSalvarNovaSenha.Click += new System.EventHandler(this.buttonSalvarNovaSenha_Click);
+            // 
+            // buttonCancelar
+            // 
+            this.buttonCancelar.Location = new System.Drawing.Point(276, 309);
+            this.buttonCancelar.Name = "buttonCancelar";
+            this.buttonCancelar.Size = new System.Drawing.Size(75, 23);
+            this.buttonCancelar.TabIndex = 12;
+            this.buttonCancelar.Text = "Cancelar";
+            this.buttonCancelar.UseVisualStyleBackColor = true;
+            // 
+            // usuarioBindingSource
+            // 
+            this.usuarioBindingSource.DataSource = typeof(Models.Usuario);
             // 
             // FormGerarSenha
             // 
@@ -155,6 +182,8 @@
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(532, 353);
+            this.Controls.Add(this.buttonCancelar);
+            this.Controls.Add(this.buttonSalvarNovaSenha);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnOK);
             this.Controls.Add(this.btnGerar);
@@ -174,6 +203,8 @@
             this.Name = "FormGerarSenha";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.FormGerarSenha_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -191,5 +222,8 @@
         private System.Windows.Forms.Button btnGerar;
         private System.Windows.Forms.Button btnOK;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button buttonSalvarNovaSenha;
+        private System.Windows.Forms.Button buttonCancelar;
+        private System.Windows.Forms.BindingSource usuarioBindingSource;
     }
 }
