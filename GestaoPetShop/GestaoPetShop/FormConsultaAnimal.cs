@@ -55,8 +55,23 @@ namespace GestaoPetShop
             // this.animalTableAdapter.Fill(this.petshopDataSet.Animal);
 
              comboBox1.SelectedIndex = 0;
+
+            LoadTheme();
         }
 
+        private void LoadTheme() 
+        {
+            foreach (Control btns in this.Controls)
+            {
+                if (btns.GetType() == typeof(Button))
+                {
+                    Button btn = (Button)btns;
+                    btn.BackColor = ThemeColor.PrimaryColor;
+                    btn.ForeColor = Color.White;
+                    btn.FlatAppearance.BorderColor = ThemeColor.SecondaryColor;
+                }
+            }
+        }
         private void buttonExcluir_Click(object sender, EventArgs e)
         {
             try

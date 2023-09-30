@@ -38,6 +38,8 @@ namespace GestaoPetShop
             // this.racaTableAdapter.Fill(this.petshopDataSet.Raca);
             comboBox1.SelectedIndex = 0;
 
+            LoadTheme();
+
             try
             {
                 if (id == 0)
@@ -50,6 +52,20 @@ namespace GestaoPetShop
                 MessageBox.Show(ex.Message);
             }
 
+        }
+
+        private void LoadTheme() 
+        {
+            foreach (Control btns in this.Controls)
+            {
+                if (btns.GetType() == typeof(Button))
+                {
+                    Button btn = (Button)btns;
+                    btn.BackColor = ThemeColor.PrimaryColor;
+                    btn.ForeColor = Color.White;
+                    btn.FlatAppearance.BorderColor = ThemeColor.SecondaryColor;
+                }
+            }
         }
 
         private void buttonInserir_Click(object sender, EventArgs e)
