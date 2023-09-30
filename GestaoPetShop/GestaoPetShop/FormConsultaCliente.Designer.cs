@@ -82,7 +82,7 @@
             // 
             this.textBoxBuscar.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textBoxBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxBuscar.Location = new System.Drawing.Point(221, 185);
+            this.textBoxBuscar.Location = new System.Drawing.Point(177, 186);
             this.textBoxBuscar.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.textBoxBuscar.Name = "textBoxBuscar";
             this.textBoxBuscar.Size = new System.Drawing.Size(290, 30);
@@ -168,7 +168,7 @@
             "Nome",
             "CPF",
             "Todos"});
-            this.comboBoxBuscarPor.Location = new System.Drawing.Point(27, 185);
+            this.comboBoxBuscarPor.Location = new System.Drawing.Point(13, 185);
             this.comboBoxBuscarPor.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.comboBoxBuscarPor.Name = "comboBoxBuscarPor";
             this.comboBoxBuscarPor.Size = new System.Drawing.Size(145, 33);
@@ -288,7 +288,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(223, 163);
+            this.label3.Location = new System.Drawing.Point(179, 162);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(196, 20);
@@ -299,7 +299,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(29, 163);
+            this.label4.Location = new System.Drawing.Point(13, 163);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(92, 20);
