@@ -293,9 +293,9 @@
             this.label2.Location = new System.Drawing.Point(94, 13);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(141, 16);
+            this.label2.Size = new System.Drawing.Size(142, 16);
             this.label2.TabIndex = 12;
-            this.label2.Text = "Digite o id ou nome";
+            this.label2.Text = "Digite ( id ou nome)";
             // 
             // FormConsultaRaca
             // 

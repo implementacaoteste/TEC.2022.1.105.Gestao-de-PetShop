@@ -155,8 +155,10 @@
             this.buttonCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCancelar.Location = new System.Drawing.Point(585, 416);
             this.buttonCancelar.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonCancelar.MaximumSize = new System.Drawing.Size(141, 37);
+            this.buttonCancelar.MinimumSize = new System.Drawing.Size(141, 37);
             this.buttonCancelar.Name = "buttonCancelar";
-            this.buttonCancelar.Size = new System.Drawing.Size(106, 30);
+            this.buttonCancelar.Size = new System.Drawing.Size(141, 37);
             this.buttonCancelar.TabIndex = 11;
             this.buttonCancelar.Text = "&Cancelar";
             this.buttonCancelar.UseVisualStyleBackColor = false;
@@ -166,10 +168,12 @@
             // 
             this.buttonSalvar.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.buttonSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSalvar.Location = new System.Drawing.Point(377, 416);
+            this.buttonSalvar.Location = new System.Drawing.Point(342, 416);
             this.buttonSalvar.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonSalvar.MaximumSize = new System.Drawing.Size(141, 37);
+            this.buttonSalvar.MinimumSize = new System.Drawing.Size(141, 37);
             this.buttonSalvar.Name = "buttonSalvar";
-            this.buttonSalvar.Size = new System.Drawing.Size(106, 30);
+            this.buttonSalvar.Size = new System.Drawing.Size(141, 37);
             this.buttonSalvar.TabIndex = 10;
             this.buttonSalvar.Text = "&Salvar";
             this.buttonSalvar.UseVisualStyleBackColor = false;

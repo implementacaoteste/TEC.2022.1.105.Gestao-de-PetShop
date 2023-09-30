@@ -371,7 +371,7 @@
             this.idAnimalTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agendamentoBindingSource, "IdAnimal", true));
             this.idAnimalTextBox.Enabled = false;
             this.idAnimalTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.idAnimalTextBox.Location = new System.Drawing.Point(22, 143);
+            this.idAnimalTextBox.Location = new System.Drawing.Point(22, 141);
             this.idAnimalTextBox.Name = "idAnimalTextBox";
             this.idAnimalTextBox.Size = new System.Drawing.Size(54, 26);
             this.idAnimalTextBox.TabIndex = 31;
@@ -381,7 +381,7 @@
             this.idClienteTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agendamentoBindingSource, "IdCliente", true));
             this.idClienteTextBox.Enabled = false;
             this.idClienteTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.idClienteTextBox.Location = new System.Drawing.Point(519, 143);
+            this.idClienteTextBox.Location = new System.Drawing.Point(519, 141);
             this.idClienteTextBox.Name = "idClienteTextBox";
             this.idClienteTextBox.Size = new System.Drawing.Size(58, 26);
             this.idClienteTextBox.TabIndex = 33;
@@ -400,7 +400,7 @@
             this.nomeAnimalTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agendamentoBindingSource, "NomeAnimal", true));
             this.nomeAnimalTextBox.Enabled = false;
             this.nomeAnimalTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nomeAnimalTextBox.Location = new System.Drawing.Point(147, 143);
+            this.nomeAnimalTextBox.Location = new System.Drawing.Point(147, 141);
             this.nomeAnimalTextBox.Name = "nomeAnimalTextBox";
             this.nomeAnimalTextBox.Size = new System.Drawing.Size(319, 26);
             this.nomeAnimalTextBox.TabIndex = 39;
@@ -410,7 +410,7 @@
             this.nomeClienteTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agendamentoBindingSource, "NomeCliente", true));
             this.nomeClienteTextBox.Enabled = false;
             this.nomeClienteTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nomeClienteTextBox.Location = new System.Drawing.Point(594, 143);
+            this.nomeClienteTextBox.Location = new System.Drawing.Point(594, 141);
             this.nomeClienteTextBox.Name = "nomeClienteTextBox";
             this.nomeClienteTextBox.Size = new System.Drawing.Size(234, 26);
             this.nomeClienteTextBox.TabIndex = 41;
@@ -429,10 +429,12 @@
             // 
             this.buttonPesquisarAnimal.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.buttonPesquisarAnimal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonPesquisarAnimal.Location = new System.Drawing.Point(875, 139);
+            this.buttonPesquisarAnimal.Location = new System.Drawing.Point(845, 136);
             this.buttonPesquisarAnimal.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonPesquisarAnimal.MaximumSize = new System.Drawing.Size(141, 37);
+            this.buttonPesquisarAnimal.MinimumSize = new System.Drawing.Size(141, 37);
             this.buttonPesquisarAnimal.Name = "buttonPesquisarAnimal";
-            this.buttonPesquisarAnimal.Size = new System.Drawing.Size(106, 30);
+            this.buttonPesquisarAnimal.Size = new System.Drawing.Size(141, 37);
             this.buttonPesquisarAnimal.TabIndex = 22;
             this.buttonPesquisarAnimal.Text = "Pesquisar";
             this.buttonPesquisarAnimal.UseVisualStyleBackColor = false;
@@ -513,9 +515,11 @@
             // 
             this.button_InserirServicoAgendamento.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.button_InserirServicoAgendamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_InserirServicoAgendamento.Location = new System.Drawing.Point(966, 91);
+            this.button_InserirServicoAgendamento.Location = new System.Drawing.Point(948, 87);
+            this.button_InserirServicoAgendamento.MaximumSize = new System.Drawing.Size(141, 37);
+            this.button_InserirServicoAgendamento.MinimumSize = new System.Drawing.Size(141, 37);
             this.button_InserirServicoAgendamento.Name = "button_InserirServicoAgendamento";
-            this.button_InserirServicoAgendamento.Size = new System.Drawing.Size(106, 30);
+            this.button_InserirServicoAgendamento.Size = new System.Drawing.Size(141, 37);
             this.button_InserirServicoAgendamento.TabIndex = 7;
             this.button_InserirServicoAgendamento.Text = "Inserir";
             this.button_InserirServicoAgendamento.UseVisualStyleBackColor = false;
@@ -525,10 +529,12 @@
             // 
             this.buttonSalvar.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.buttonSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSalvar.Location = new System.Drawing.Point(986, 422);
+            this.buttonSalvar.Location = new System.Drawing.Point(968, 458);
             this.buttonSalvar.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonSalvar.MaximumSize = new System.Drawing.Size(141, 37);
+            this.buttonSalvar.MinimumSize = new System.Drawing.Size(141, 37);
             this.buttonSalvar.Name = "buttonSalvar";
-            this.buttonSalvar.Size = new System.Drawing.Size(106, 30);
+            this.buttonSalvar.Size = new System.Drawing.Size(141, 37);
             this.buttonSalvar.TabIndex = 28;
             this.buttonSalvar.Text = "Salvar";
             this.buttonSalvar.UseVisualStyleBackColor = false;
@@ -538,9 +544,11 @@
             // 
             this.button1RemoverServico.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.button1RemoverServico.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1RemoverServico.Location = new System.Drawing.Point(986, 379);
+            this.button1RemoverServico.Location = new System.Drawing.Point(968, 396);
+            this.button1RemoverServico.MaximumSize = new System.Drawing.Size(141, 37);
+            this.button1RemoverServico.MinimumSize = new System.Drawing.Size(141, 37);
             this.button1RemoverServico.Name = "button1RemoverServico";
-            this.button1RemoverServico.Size = new System.Drawing.Size(106, 30);
+            this.button1RemoverServico.Size = new System.Drawing.Size(141, 37);
             this.button1RemoverServico.TabIndex = 30;
             this.button1RemoverServico.Text = "Remover";
             this.button1RemoverServico.UseVisualStyleBackColor = false;
@@ -579,9 +587,11 @@
             // 
             this.buttonNovo.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.buttonNovo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonNovo.Location = new System.Drawing.Point(986, 335);
+            this.buttonNovo.Location = new System.Drawing.Point(968, 341);
+            this.buttonNovo.MaximumSize = new System.Drawing.Size(141, 37);
+            this.buttonNovo.MinimumSize = new System.Drawing.Size(141, 37);
             this.buttonNovo.Name = "buttonNovo";
-            this.buttonNovo.Size = new System.Drawing.Size(106, 30);
+            this.buttonNovo.Size = new System.Drawing.Size(141, 37);
             this.buttonNovo.TabIndex = 7;
             this.buttonNovo.Text = "Novo";
             this.buttonNovo.UseVisualStyleBackColor = false;
@@ -611,9 +621,11 @@
             // 
             this.buttonCancelar.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.buttonCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCancelar.Location = new System.Drawing.Point(986, 465);
+            this.buttonCancelar.Location = new System.Drawing.Point(968, 514);
+            this.buttonCancelar.MaximumSize = new System.Drawing.Size(141, 37);
+            this.buttonCancelar.MinimumSize = new System.Drawing.Size(141, 37);
             this.buttonCancelar.Name = "buttonCancelar";
-            this.buttonCancelar.Size = new System.Drawing.Size(106, 30);
+            this.buttonCancelar.Size = new System.Drawing.Size(141, 37);
             this.buttonCancelar.TabIndex = 56;
             this.buttonCancelar.Text = "Cancelar";
             this.buttonCancelar.UseVisualStyleBackColor = false;

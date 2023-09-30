@@ -415,6 +415,8 @@ namespace GestaoPetShop
             comboBoxSelecionarAtivoBuscar.SelectedIndex = 0;
             comboBox_SelecionarSituacaoBusca.SelectedIndex = 0;
             comboBox_SelecionarTipoBusca.SelectedIndex = 0;
+            textBox_BuscarAgendamento.Enabled = false;
+            textBox_BuscarData.Enabled = false;
 
             LoadTheme();
         }
@@ -430,6 +432,105 @@ namespace GestaoPetShop
                     btn.ForeColor = Color.White;
                     btn.FlatAppearance.BorderColor = ThemeColor.SecondaryColor;
                 }
+            }
+        }
+
+        private void comboBox_SelecionarTipoBusca_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (comboBox_SelecionarTipoBusca.SelectedIndex)
+            {
+                case 0:
+                    {
+                        textBox_BuscarData.Enabled = false;
+                        textBox_BuscarAgendamento.Enabled = false;
+                        break;
+                    }
+                case 1: // BUSCAR AGENDAMENTO POR ID
+                    {
+                        textBox_BuscarData.Enabled = false;
+                        textBox_BuscarAgendamento.Enabled = true;
+                        break;
+                    }
+                case 2:// BUSCAR AGENDAMENTO PELO NOME DO PROFISSIONAL
+                    {
+                        textBox_BuscarData.Enabled = false;
+                        textBox_BuscarAgendamento.Enabled = true;
+                        break;
+                    }
+                case 3:// BUSCAR AGENDMAENTO PELO NOME DO CLIENTE CLIENTE
+                    {
+                        textBox_BuscarData.Enabled = false;
+                        textBox_BuscarAgendamento.Enabled = true;
+                        break;
+                    }
+                case 4: // BUSCAR AGENDAMENTO POR DIA/MÊS/ANO
+                    {
+                        textBox_BuscarAgendamento.Enabled = false;
+                        textBox_BuscarData.Enabled = true;
+                        break;
+                    }
+                case 5:// BUSCAR POR MÊS E ANO
+                    {
+                        textBox_BuscarAgendamento.Enabled = false;
+                        textBox_BuscarData.Enabled = true;
+                        break;
+                    }
+                case 6: // BUSCAR POR ANO
+                    {
+                        textBox_BuscarAgendamento.Enabled = false;
+                        textBox_BuscarData.Enabled = true;
+                        break;
+                    }
+                case 7:// BUSCAR AGENDAMENTO POR SERVICO DIA/MES/ANO
+                    {
+                        textBox_BuscarData.Enabled = true;
+                        textBox_BuscarAgendamento.Enabled = true;
+                        break;
+                    }
+                case 8: // BUSCAR AGENDAMENTO POR SERVICO ANO
+                    {
+                        textBox_BuscarData.Enabled = true;
+                        textBox_BuscarAgendamento.Enabled = true;
+                        break;
+                    }
+                case 9: // BUSCAR AGENDAMENTO POR SERVICO E MÊS/ANO
+                    {
+                        textBox_BuscarData.Enabled = true;
+                        textBox_BuscarAgendamento.Enabled = true;
+                        break;
+                    }
+                case 10: // Busca por nome do serviço
+                    {
+                        textBox_BuscarData.Enabled = false;
+                        textBox_BuscarAgendamento.Enabled = true;
+                        break;
+                    }
+                case 11: // BUSCAR POR PROFISSIONAL E DIA/MÊS/ANO
+                    {
+                        textBox_BuscarData.Enabled = true;
+                        textBox_BuscarAgendamento.Enabled = true;
+
+                        break;
+                    }
+                case 12:// BUSCAR AGENDAMENTO POR PROFISSIONAL E MÊS/ANO
+                    {
+                        textBox_BuscarData.Enabled = true;
+                        textBox_BuscarAgendamento.Enabled = true;
+                        break;
+                    }
+                case 13:// BUSCAR AGENDAMENTO POR PROFISSIONAL E ANO
+                    {
+                        textBox_BuscarData.Enabled = true;
+                        textBox_BuscarAgendamento.Enabled = true;
+                        break;
+                    }
+                default:
+                    {
+                        MessageBox.Show("Escolha a forma de busca");
+                        comboBox_SelecionarTipoBusca.Focus();
+                        break;
+                    }
+
             }
         }
     }

@@ -97,6 +97,8 @@
             this.btnSalvarServico.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalvarServico.ImageKey = "(none)";
             this.btnSalvarServico.Location = new System.Drawing.Point(409, 366);
+            this.btnSalvarServico.MaximumSize = new System.Drawing.Size(141, 37);
+            this.btnSalvarServico.MinimumSize = new System.Drawing.Size(141, 37);
             this.btnSalvarServico.Name = "btnSalvarServico";
             this.btnSalvarServico.Size = new System.Drawing.Size(141, 37);
             this.btnSalvarServico.TabIndex = 16;
@@ -112,6 +114,8 @@
             this.btnCancelarCadastroOuAlterar.FlatAppearance.BorderSize = 0;
             this.btnCancelarCadastroOuAlterar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelarCadastroOuAlterar.Location = new System.Drawing.Point(584, 366);
+            this.btnCancelarCadastroOuAlterar.MaximumSize = new System.Drawing.Size(141, 37);
+            this.btnCancelarCadastroOuAlterar.MinimumSize = new System.Drawing.Size(141, 37);
             this.btnCancelarCadastroOuAlterar.Name = "btnCancelarCadastroOuAlterar";
             this.btnCancelarCadastroOuAlterar.Size = new System.Drawing.Size(141, 37);
             this.btnCancelarCadastroOuAlterar.TabIndex = 17;

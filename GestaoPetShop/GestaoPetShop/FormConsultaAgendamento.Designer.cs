@@ -102,6 +102,7 @@
             this.comboBox_SelecionarTipoBusca.Size = new System.Drawing.Size(247, 28);
             this.comboBox_SelecionarTipoBusca.TabIndex = 8;
             this.comboBox_SelecionarTipoBusca.Text = "Buscar por";
+            this.comboBox_SelecionarTipoBusca.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelecionarTipoBusca_SelectedIndexChanged);
             // 
             // textBox_BuscarAgendamento
             // 
@@ -277,9 +278,9 @@
             this.label6.Location = new System.Drawing.Point(10, 125);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(197, 16);
+            this.label6.Size = new System.Drawing.Size(122, 16);
             this.label6.TabIndex = 35;
-            this.label6.Text = "Digite o nome ou id para buscar";
+            this.label6.Text = "Digite (nome ou id )";
             // 
             // agendamentoBindingSource
             // 

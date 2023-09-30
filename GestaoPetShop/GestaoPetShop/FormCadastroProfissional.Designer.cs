@@ -361,10 +361,12 @@
             // 
             this.buttonBuscarFoto.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.buttonBuscarFoto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonBuscarFoto.Location = new System.Drawing.Point(989, 201);
+            this.buttonBuscarFoto.Location = new System.Drawing.Point(972, 207);
             this.buttonBuscarFoto.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonBuscarFoto.MaximumSize = new System.Drawing.Size(141, 37);
+            this.buttonBuscarFoto.MinimumSize = new System.Drawing.Size(141, 37);
             this.buttonBuscarFoto.Name = "buttonBuscarFoto";
-            this.buttonBuscarFoto.Size = new System.Drawing.Size(106, 30);
+            this.buttonBuscarFoto.Size = new System.Drawing.Size(141, 37);
             this.buttonBuscarFoto.TabIndex = 18;
             this.buttonBuscarFoto.Text = "Buscar Foto";
             this.buttonBuscarFoto.UseVisualStyleBackColor = false;
@@ -392,10 +394,12 @@
             // 
             this.buttonInserirEmail.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.buttonInserirEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonInserirEmail.Location = new System.Drawing.Point(361, 347);
+            this.buttonInserirEmail.Location = new System.Drawing.Point(291, 344);
             this.buttonInserirEmail.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonInserirEmail.MaximumSize = new System.Drawing.Size(141, 37);
+            this.buttonInserirEmail.MinimumSize = new System.Drawing.Size(141, 37);
             this.buttonInserirEmail.Name = "buttonInserirEmail";
-            this.buttonInserirEmail.Size = new System.Drawing.Size(106, 30);
+            this.buttonInserirEmail.Size = new System.Drawing.Size(141, 37);
             this.buttonInserirEmail.TabIndex = 13;
             this.buttonInserirEmail.Text = "Inserir";
             this.buttonInserirEmail.UseVisualStyleBackColor = false;
@@ -405,10 +409,12 @@
             // 
             this.buttonExcluirEmail.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.buttonExcluirEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonExcluirEmail.Location = new System.Drawing.Point(471, 347);
+            this.buttonExcluirEmail.Location = new System.Drawing.Point(436, 344);
             this.buttonExcluirEmail.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonExcluirEmail.MaximumSize = new System.Drawing.Size(141, 37);
+            this.buttonExcluirEmail.MinimumSize = new System.Drawing.Size(141, 37);
             this.buttonExcluirEmail.Name = "buttonExcluirEmail";
-            this.buttonExcluirEmail.Size = new System.Drawing.Size(106, 30);
+            this.buttonExcluirEmail.Size = new System.Drawing.Size(141, 37);
             this.buttonExcluirEmail.TabIndex = 14;
             this.buttonExcluirEmail.Text = "Excluir";
             this.buttonExcluirEmail.UseVisualStyleBackColor = false;
@@ -418,10 +424,12 @@
             // 
             this.buttonInserirTelefone.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.buttonInserirTelefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonInserirTelefone.Location = new System.Drawing.Point(897, 347);
+            this.buttonInserirTelefone.Location = new System.Drawing.Point(827, 344);
             this.buttonInserirTelefone.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonInserirTelefone.MaximumSize = new System.Drawing.Size(141, 37);
+            this.buttonInserirTelefone.MinimumSize = new System.Drawing.Size(141, 37);
             this.buttonInserirTelefone.Name = "buttonInserirTelefone";
-            this.buttonInserirTelefone.Size = new System.Drawing.Size(106, 30);
+            this.buttonInserirTelefone.Size = new System.Drawing.Size(141, 37);
             this.buttonInserirTelefone.TabIndex = 16;
             this.buttonInserirTelefone.Text = "Inserir";
             this.buttonInserirTelefone.UseVisualStyleBackColor = false;
@@ -431,10 +439,12 @@
             // 
             this.buttonExcluirTelefone.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.buttonExcluirTelefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonExcluirTelefone.Location = new System.Drawing.Point(1007, 347);
+            this.buttonExcluirTelefone.Location = new System.Drawing.Point(972, 344);
             this.buttonExcluirTelefone.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonExcluirTelefone.MaximumSize = new System.Drawing.Size(141, 37);
+            this.buttonExcluirTelefone.MinimumSize = new System.Drawing.Size(141, 37);
             this.buttonExcluirTelefone.Name = "buttonExcluirTelefone";
-            this.buttonExcluirTelefone.Size = new System.Drawing.Size(106, 30);
+            this.buttonExcluirTelefone.Size = new System.Drawing.Size(141, 37);
             this.buttonExcluirTelefone.TabIndex = 17;
             this.buttonExcluirTelefone.Text = "Excluir";
             this.buttonExcluirTelefone.UseVisualStyleBackColor = false;
@@ -552,10 +562,12 @@
             // 
             this.buttonSalvar.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.buttonSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSalvar.Location = new System.Drawing.Point(897, 553);
+            this.buttonSalvar.Location = new System.Drawing.Point(827, 553);
             this.buttonSalvar.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonSalvar.MaximumSize = new System.Drawing.Size(141, 37);
+            this.buttonSalvar.MinimumSize = new System.Drawing.Size(141, 37);
             this.buttonSalvar.Name = "buttonSalvar";
-            this.buttonSalvar.Size = new System.Drawing.Size(106, 30);
+            this.buttonSalvar.Size = new System.Drawing.Size(141, 37);
             this.buttonSalvar.TabIndex = 19;
             this.buttonSalvar.Text = "Salvar";
             this.buttonSalvar.UseVisualStyleBackColor = false;
@@ -566,10 +578,12 @@
             this.buttonCancelar.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.buttonCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.buttonCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCancelar.Location = new System.Drawing.Point(1007, 553);
+            this.buttonCancelar.Location = new System.Drawing.Point(972, 546);
             this.buttonCancelar.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonCancelar.MaximumSize = new System.Drawing.Size(141, 37);
+            this.buttonCancelar.MinimumSize = new System.Drawing.Size(141, 37);
             this.buttonCancelar.Name = "buttonCancelar";
-            this.buttonCancelar.Size = new System.Drawing.Size(106, 30);
+            this.buttonCancelar.Size = new System.Drawing.Size(141, 37);
             this.buttonCancelar.TabIndex = 20;
             this.buttonCancelar.Text = "Cancelar";
             this.buttonCancelar.UseVisualStyleBackColor = false;
@@ -646,10 +660,12 @@
             this.btnGerarSenha.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnGerarSenha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGerarSenha.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGerarSenha.Location = new System.Drawing.Point(989, 235);
+            this.btnGerarSenha.Location = new System.Drawing.Point(972, 268);
             this.btnGerarSenha.Margin = new System.Windows.Forms.Padding(2);
+            this.btnGerarSenha.MaximumSize = new System.Drawing.Size(141, 37);
+            this.btnGerarSenha.MinimumSize = new System.Drawing.Size(141, 37);
             this.btnGerarSenha.Name = "btnGerarSenha";
-            this.btnGerarSenha.Size = new System.Drawing.Size(106, 30);
+            this.btnGerarSenha.Size = new System.Drawing.Size(141, 37);
             this.btnGerarSenha.TabIndex = 41;
             this.btnGerarSenha.Text = "Gerar Senha";
             this.btnGerarSenha.UseVisualStyleBackColor = false;

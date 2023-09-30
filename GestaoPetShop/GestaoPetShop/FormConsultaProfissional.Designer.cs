@@ -387,7 +387,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(154, 16);
             this.label1.TabIndex = 35;
-            this.label1.Text = "Digite o id, nome ou CPF";
+            this.label1.Text = "Digite ( id, nome ou CPF)";
             // 
             // FormConsultaProfissional
             // 

@@ -229,10 +229,12 @@
             // 
             this.btnBuscarProfissional.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.btnBuscarProfissional.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscarProfissional.Location = new System.Drawing.Point(514, 112);
+            this.btnBuscarProfissional.Location = new System.Drawing.Point(482, 105);
             this.btnBuscarProfissional.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBuscarProfissional.MaximumSize = new System.Drawing.Size(180, 37);
+            this.btnBuscarProfissional.MinimumSize = new System.Drawing.Size(180, 37);
             this.btnBuscarProfissional.Name = "btnBuscarProfissional";
-            this.btnBuscarProfissional.Size = new System.Drawing.Size(106, 30);
+            this.btnBuscarProfissional.Size = new System.Drawing.Size(180, 37);
             this.btnBuscarProfissional.TabIndex = 0;
             this.btnBuscarProfissional.Text = "Pesquisar Profissional";
             this.btnBuscarProfissional.UseVisualStyleBackColor = false;
