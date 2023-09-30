@@ -30,6 +30,7 @@ namespace GestaoPetShop
                 switch (comboBoxBuscarPor.SelectedIndex)
                 {
                     case 0:
+                        
                         if (String.IsNullOrEmpty(textBoxBuscar.Text))
                             throw new Exception("Informe um Id para fazer a busca.") { Data = { { "Id", -1 } } };
 
@@ -142,6 +143,7 @@ namespace GestaoPetShop
         {
             try
             {
+                textBoxBuscar.Enabled = false;
                 if (opc == 1)
                 {
                     btnInserir.Enabled = false;
@@ -178,6 +180,12 @@ namespace GestaoPetShop
 
                 throw;
             }
+        }
+
+        private void comboBoxBuscarPor_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBoxBuscarPor.SelectedIndex != 3)
+                textBoxBuscar.Enabled = true;
         }
     }
 }
