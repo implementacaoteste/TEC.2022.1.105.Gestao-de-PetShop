@@ -90,7 +90,7 @@
             this.buttonRelatorio.Name = "buttonRelatorio";
             this.buttonRelatorio.Size = new System.Drawing.Size(220, 43);
             this.buttonRelatorio.TabIndex = 23;
-            this.buttonRelatorio.Text = "Relatório";
+            this.buttonRelatorio.Text = "R&elatório";
             this.buttonRelatorio.UseVisualStyleBackColor = true;
             this.buttonRelatorio.Click += new System.EventHandler(this.buttonRelatorio_Click);
             // 
@@ -240,7 +240,7 @@
             this.buttonPrincipal.Name = "buttonPrincipal";
             this.buttonPrincipal.Size = new System.Drawing.Size(220, 43);
             this.buttonPrincipal.TabIndex = 11;
-            this.buttonPrincipal.Text = "Principal";
+            this.buttonPrincipal.Text = "&Principal";
             this.buttonPrincipal.UseVisualStyleBackColor = true;
             this.buttonPrincipal.Click += new System.EventHandler(this.buttonPrincipal_Click);
             // 
@@ -351,9 +351,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(180, 44);
+            this.pictureBox1.Location = new System.Drawing.Point(270, 131);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(448, 427);
+            this.pictureBox1.Size = new System.Drawing.Size(268, 252);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -367,9 +367,9 @@
             this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.panelMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimizeBox = false;
             this.Name = "FormMainHome";
-            this.ShowIcon = false;
             this.Load += new System.EventHandler(this.FormMainHome_Load);
             this.panelMenu.ResumeLayout(false);
             this.panelMenu.PerformLayout();

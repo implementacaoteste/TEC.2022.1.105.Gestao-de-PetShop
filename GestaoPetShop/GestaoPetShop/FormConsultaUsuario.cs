@@ -147,7 +147,7 @@ namespace GestaoPetShop
         {
             LoadTheme();
         }
-        private void LoadTheme()
+        private void LoadTheme() // tem a finalidade de pegar o mesmo efeito de cor do formulario
         {
             foreach (Control btns in this.Controls)
             {

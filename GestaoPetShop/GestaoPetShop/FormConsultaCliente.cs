@@ -1,6 +1,7 @@
 ﻿using BLL;
 using Models;
 using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace GestaoPetShop
@@ -108,13 +109,6 @@ namespace GestaoPetShop
             }
         }
 
-        private void FormConsultaCliente_Load(object sender, EventArgs e)
-        {
-        //TODO: This line of code loads data into the 'petshopDataSet.Cliente' table.You can move, or remove it, as needed.
-        //    this.clienteTableAdapter.Fill(this.petshopDataSet.Cliente);
-        //    comboBoxBuscarPor.SelectedIndex = 3;
-        }
-
         private void buttonVisualizar_Click(object sender, EventArgs e)
         {
             try
@@ -153,6 +147,26 @@ namespace GestaoPetShop
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+            }
+        }
+        private void FormConsultaCliente_Load(object sender, EventArgs e)
+        {
+            LoadTheme();
+            //TODO: This line of code loads data into the 'petshopDataSet.Cliente' table.You can move, or remove it, as needed.
+            //    this.clienteTableAdapter.Fill(this.petshopDataSet.Cliente);
+            //    comboBoxBuscarPor.SelectedIndex = 3;
+        }
+        private void LoadTheme() 
+        {
+            foreach (Control btns in this.Controls)
+            {
+                if (btns.GetType() == typeof(Button))
+                {
+                    Button btn = (Button)btns;
+                    btn.BackColor = ThemeColor.PrimaryColor;
+                    btn.ForeColor = Color.White;
+                    btn.FlatAppearance.BorderColor = ThemeColor.SecondaryColor;
+                }
             }
         }
     }

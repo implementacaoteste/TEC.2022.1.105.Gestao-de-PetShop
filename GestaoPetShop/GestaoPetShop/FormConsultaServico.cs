@@ -19,7 +19,6 @@ namespace GestaoPetShop
         {
             InitializeComponent();
         }
-
         private void button_BucarServico_Click(object sender, EventArgs e)
         {
 
@@ -59,7 +58,6 @@ namespace GestaoPetShop
             }
 
         }
-
         private void button_InserirServico_Click(object sender, EventArgs e)
         {
             //this.Hide();
@@ -78,7 +76,6 @@ namespace GestaoPetShop
 
             }
         }
-
         private void button_AlterarServico_Click(object sender, EventArgs e)
         {
 
@@ -106,13 +103,10 @@ namespace GestaoPetShop
 
 
         }
-
-      
         private void btnFechar_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
         private void button_ExcluirServico_Click_1(object sender, EventArgs e)
         {
             try
@@ -135,6 +129,22 @@ namespace GestaoPetShop
                 MessageBox.Show(ex.Message);
             }
         }
-
+        private void FormConsultaServico_Load(object sender, EventArgs e)
+        {
+            LoadTheme();
+        }
+        private void LoadTheme() 
+        {
+            foreach (Control btns in this.Controls)
+            {
+                if (btns.GetType() == typeof(Button))
+                {
+                    Button btn = (Button)btns;
+                    btn.BackColor = ThemeColor.PrimaryColor;
+                    btn.ForeColor = Color.White;
+                    btn.FlatAppearance.BorderColor = ThemeColor.SecondaryColor;
+                }
+            }
+        }
     }
 }

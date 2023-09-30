@@ -1,6 +1,7 @@
 ﻿using BLL;
 using Models;
 using System;
+using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -414,6 +415,22 @@ namespace GestaoPetShop
             comboBoxSelecionarAtivoBuscar.SelectedIndex = 0;
             comboBox_SelecionarSituacaoBusca.SelectedIndex = 0;
             comboBox_SelecionarTipoBusca.SelectedIndex = 0;
+
+            LoadTheme();
+        }
+
+        private void LoadTheme() // tem a finalidade de pegar o mesmo efeito de cor do formulario
+        {
+            foreach (Control btns in this.Controls)
+            {
+                if (btns.GetType() == typeof(Button))
+                {
+                    Button btn = (Button)btns;
+                    btn.BackColor = ThemeColor.PrimaryColor;
+                    btn.ForeColor = Color.White;
+                    btn.FlatAppearance.BorderColor = ThemeColor.SecondaryColor;
+                }
+            }
         }
     }
 }
