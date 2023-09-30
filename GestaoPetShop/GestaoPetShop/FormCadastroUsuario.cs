@@ -1,6 +1,7 @@
 ﻿using BLL;
 using Models;
 using System;
+using System.Drawing;
 using System.Security.Cryptography;
 using System.Windows.Forms;
 
@@ -45,6 +46,8 @@ namespace GestaoPetShop
         {
             try
             {
+                LoadTheme();
+
                 if (Id == 0)
                 {
 
@@ -63,6 +66,19 @@ namespace GestaoPetShop
                 MessageBox.Show(ex.Message);
             }
         }
+        private void LoadTheme()
+        {
+            foreach (Control btns in this.Controls)
+            {
+                if (btns.GetType() == typeof(Button))
+                {
+                    Button btn = (Button)btns;
+                    btn.BackColor = ThemeColor.PrimaryColor;
+                    btn.ForeColor = Color.White;
+                    btn.FlatAppearance.BorderColor = ThemeColor.SecondaryColor;
+                }
+            }
+        }
         private void buttonCancelar_Click(object sender, EventArgs e)
         {
             try
@@ -79,7 +95,6 @@ namespace GestaoPetShop
             if (e.KeyCode == Keys.Escape)
                 Close();
         }
-
         private void btnBuscarProfissional_Click(object sender, EventArgs e)
         {
             try
@@ -100,7 +115,6 @@ namespace GestaoPetShop
                 MessageBox.Show(ex.Message);
             }
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
 

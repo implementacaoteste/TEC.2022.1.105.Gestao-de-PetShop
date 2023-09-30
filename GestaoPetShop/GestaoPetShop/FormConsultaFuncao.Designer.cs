@@ -116,7 +116,7 @@
             this.btnAlterar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAlterar.ForeColor = System.Drawing.Color.Black;
             this.btnAlterar.ImageKey = "(none)";
-            this.btnAlterar.Location = new System.Drawing.Point(636, 32);
+            this.btnAlterar.Location = new System.Drawing.Point(524, 32);
             this.btnAlterar.Name = "btnAlterar";
             this.btnAlterar.Size = new System.Drawing.Size(106, 30);
             this.btnAlterar.TabIndex = 35;
@@ -133,7 +133,7 @@
             this.btnCadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCadastrar.ForeColor = System.Drawing.Color.Black;
             this.btnCadastrar.ImageList = this.imageList1;
-            this.btnCadastrar.Location = new System.Drawing.Point(524, 32);
+            this.btnCadastrar.Location = new System.Drawing.Point(638, 32);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(106, 30);
             this.btnCadastrar.TabIndex = 33;
@@ -195,7 +195,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.funcaoDataGridView.DefaultCellStyle = dataGridViewCellStyle2;
             this.funcaoDataGridView.Location = new System.Drawing.Point(11, 123);
-            this.funcaoDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.funcaoDataGridView.Margin = new System.Windows.Forms.Padding(2);
             this.funcaoDataGridView.Name = "funcaoDataGridView";
             this.funcaoDataGridView.ReadOnly = true;
             this.funcaoDataGridView.RowHeadersVisible = false;
@@ -261,7 +261,7 @@
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.permissoesDataGridView.DefaultCellStyle = dataGridViewCellStyle4;
             this.permissoesDataGridView.Location = new System.Drawing.Point(436, 123);
-            this.permissoesDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.permissoesDataGridView.Margin = new System.Windows.Forms.Padding(2);
             this.permissoesDataGridView.Name = "permissoesDataGridView";
             this.permissoesDataGridView.ReadOnly = true;
             this.permissoesDataGridView.RowHeadersVisible = false;
@@ -294,7 +294,7 @@
             this.buttonVincularPermissaoEmFuncao.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonVincularPermissaoEmFuncao.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.buttonVincularPermissaoEmFuncao.Location = new System.Drawing.Point(638, 79);
-            this.buttonVincularPermissaoEmFuncao.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonVincularPermissaoEmFuncao.Margin = new System.Windows.Forms.Padding(2);
             this.buttonVincularPermissaoEmFuncao.Name = "buttonVincularPermissaoEmFuncao";
             this.buttonVincularPermissaoEmFuncao.Size = new System.Drawing.Size(106, 30);
             this.buttonVincularPermissaoEmFuncao.TabIndex = 40;
@@ -307,7 +307,7 @@
             this.buttonDesvincularPermissaoDeFuncao.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonDesvincularPermissaoDeFuncao.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.buttonDesvincularPermissaoDeFuncao.Location = new System.Drawing.Point(748, 79);
-            this.buttonDesvincularPermissaoDeFuncao.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonDesvincularPermissaoDeFuncao.Margin = new System.Windows.Forms.Padding(2);
             this.buttonDesvincularPermissaoDeFuncao.Name = "buttonDesvincularPermissaoDeFuncao";
             this.buttonDesvincularPermissaoDeFuncao.Size = new System.Drawing.Size(106, 30);
             this.buttonDesvincularPermissaoDeFuncao.TabIndex = 41;

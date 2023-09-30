@@ -49,6 +49,8 @@ namespace GestaoPetShop
         {
             try
             {
+                LoadTheme();
+
                 if (id == 0)
                     profissionalBindingSource.AddNew();
                    
@@ -77,6 +79,19 @@ namespace GestaoPetShop
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+            }
+        }
+        private void LoadTheme()
+        {
+            foreach (Control btns in this.Controls)
+            {
+                if (btns.GetType() == typeof(Button))
+                {
+                    Button btn = (Button)btns;
+                    btn.BackColor = ThemeColor.PrimaryColor;
+                    btn.ForeColor = Color.White;
+                    btn.FlatAppearance.BorderColor = ThemeColor.SecondaryColor;
+                }
             }
         }
         private void buttonCancelar_Click(object sender, EventArgs e)

@@ -49,7 +49,7 @@
             this.label1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label1.Location = new System.Drawing.Point(271, 31);
+            this.label1.Location = new System.Drawing.Point(304, 31);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(527, 46);
             this.label1.TabIndex = 1;
@@ -62,7 +62,7 @@
             this.textBox1.BackColor = System.Drawing.SystemColors.HighlightText;
             this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.racaBindingSource, "Nome", true));
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(384, 129);
+            this.textBox1.Location = new System.Drawing.Point(409, 171);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(317, 26);
             this.textBox1.TabIndex = 0;
@@ -76,7 +76,7 @@
             this.textBox3.BackColor = System.Drawing.SystemColors.HighlightText;
             this.textBox3.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.racaBindingSource, "Especie", true));
             this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(384, 187);
+            this.textBox3.Location = new System.Drawing.Point(409, 229);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(317, 26);
             this.textBox3.TabIndex = 1;
@@ -86,7 +86,7 @@
             this.textBox5.BackColor = System.Drawing.SystemColors.HighlightText;
             this.textBox5.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.racaBindingSource, "PaisOrigem", true));
             this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(384, 251);
+            this.textBox5.Location = new System.Drawing.Point(409, 293);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(317, 26);
             this.textBox5.TabIndex = 2;
@@ -98,7 +98,7 @@
             this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox1.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.racaBindingSource, "Ativo", true));
             this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(384, 300);
+            this.checkBox1.Location = new System.Drawing.Point(409, 345);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(56, 20);
             this.checkBox1.TabIndex = 3;
@@ -109,7 +109,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(381, 109);
+            this.label2.Location = new System.Drawing.Point(408, 152);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(44, 16);
             this.label2.TabIndex = 8;
@@ -119,7 +119,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(381, 227);
+            this.label4.Location = new System.Drawing.Point(408, 274);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(100, 16);
             this.label4.TabIndex = 10;
@@ -129,7 +129,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(381, 167);
+            this.label6.Location = new System.Drawing.Point(408, 210);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(57, 16);
             this.label6.TabIndex = 12;
@@ -139,9 +139,9 @@
             // 
             this.buttonSalvar.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.buttonSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSalvar.Location = new System.Drawing.Point(384, 360);
+            this.buttonSalvar.Location = new System.Drawing.Point(409, 460);
             this.buttonSalvar.Name = "buttonSalvar";
-            this.buttonSalvar.Size = new System.Drawing.Size(141, 37);
+            this.buttonSalvar.Size = new System.Drawing.Size(106, 30);
             this.buttonSalvar.TabIndex = 4;
             this.buttonSalvar.Text = "&Salvar";
             this.buttonSalvar.UseVisualStyleBackColor = false;
@@ -152,9 +152,9 @@
             this.buttonCancelar.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.buttonCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.buttonCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCancelar.Location = new System.Drawing.Point(560, 360);
+            this.buttonCancelar.Location = new System.Drawing.Point(620, 460);
             this.buttonCancelar.Name = "buttonCancelar";
-            this.buttonCancelar.Size = new System.Drawing.Size(141, 37);
+            this.buttonCancelar.Size = new System.Drawing.Size(106, 30);
             this.buttonCancelar.TabIndex = 5;
             this.buttonCancelar.Text = "&Cancelar";
             this.buttonCancelar.UseVisualStyleBackColor = false;

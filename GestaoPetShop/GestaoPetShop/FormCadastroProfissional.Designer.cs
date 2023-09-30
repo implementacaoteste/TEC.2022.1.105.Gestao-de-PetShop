@@ -257,7 +257,7 @@
             this.ativoCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.profissionalBindingSource, "Ativo", true));
             this.ativoCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ativoCheckBox.Location = new System.Drawing.Point(376, 274);
-            this.ativoCheckBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ativoCheckBox.Margin = new System.Windows.Forms.Padding(2);
             this.ativoCheckBox.MaximumSize = new System.Drawing.Size(70, 32);
             this.ativoCheckBox.MinimumSize = new System.Drawing.Size(70, 32);
             this.ativoCheckBox.Name = "ativoCheckBox";
@@ -275,7 +275,7 @@
             this.bairroTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.profissionalBindingSource, "Bairro", true));
             this.bairroTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bairroTextBox.Location = new System.Drawing.Point(28, 212);
-            this.bairroTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bairroTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.bairroTextBox.Name = "bairroTextBox";
             this.bairroTextBox.Size = new System.Drawing.Size(352, 26);
             this.bairroTextBox.TabIndex = 5;
@@ -285,7 +285,7 @@
             this.cidadeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.profissionalBindingSource, "Cidade", true));
             this.cidadeTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cidadeTextBox.Location = new System.Drawing.Point(398, 212);
-            this.cidadeTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cidadeTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.cidadeTextBox.Name = "cidadeTextBox";
             this.cidadeTextBox.Size = new System.Drawing.Size(233, 26);
             this.cidadeTextBox.TabIndex = 6;
@@ -295,7 +295,7 @@
             this.logradouroTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.profissionalBindingSource, "Logradouro", true));
             this.logradouroTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.logradouroTextBox.Location = new System.Drawing.Point(29, 149);
-            this.logradouroTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.logradouroTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.logradouroTextBox.Name = "logradouroTextBox";
             this.logradouroTextBox.Size = new System.Drawing.Size(517, 26);
             this.logradouroTextBox.TabIndex = 3;
@@ -306,7 +306,7 @@
             this.nomeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.profissionalBindingSource, "Nome", true));
             this.nomeTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nomeTextBox.Location = new System.Drawing.Point(26, 88);
-            this.nomeTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.nomeTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.nomeTextBox.Name = "nomeTextBox";
             this.nomeTextBox.Size = new System.Drawing.Size(430, 26);
             this.nomeTextBox.TabIndex = 0;
@@ -316,7 +316,7 @@
             this.numeroTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.profissionalBindingSource, "Numero", true));
             this.numeroTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numeroTextBox.Location = new System.Drawing.Point(584, 149);
-            this.numeroTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numeroTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.numeroTextBox.Name = "numeroTextBox";
             this.numeroTextBox.Size = new System.Drawing.Size(69, 26);
             this.numeroTextBox.TabIndex = 4;
@@ -326,7 +326,7 @@
             this.paisTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.profissionalBindingSource, "Pais", true));
             this.paisTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.paisTextBox.Location = new System.Drawing.Point(739, 212);
-            this.paisTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.paisTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.paisTextBox.Name = "paisTextBox";
             this.paisTextBox.Size = new System.Drawing.Size(197, 26);
             this.paisTextBox.TabIndex = 9;
@@ -336,7 +336,7 @@
             this.uFTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.profissionalBindingSource, "UF", true));
             this.uFTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.uFTextBox.Location = new System.Drawing.Point(658, 212);
-            this.uFTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.uFTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.uFTextBox.Name = "uFTextBox";
             this.uFTextBox.Size = new System.Drawing.Size(64, 26);
             this.uFTextBox.TabIndex = 8;
@@ -345,8 +345,8 @@
             // 
             this.pictureBoxFoto.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.pictureBoxFoto.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.profissionalBindingSource, "Foto", true));
-            this.pictureBoxFoto.Location = new System.Drawing.Point(997, 87);
-            this.pictureBoxFoto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBoxFoto.Location = new System.Drawing.Point(995, 87);
+            this.pictureBoxFoto.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBoxFoto.Name = "pictureBoxFoto";
             this.pictureBoxFoto.Size = new System.Drawing.Size(94, 110);
             this.pictureBoxFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -357,10 +357,10 @@
             // 
             this.buttonBuscarFoto.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.buttonBuscarFoto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonBuscarFoto.Location = new System.Drawing.Point(972, 201);
-            this.buttonBuscarFoto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonBuscarFoto.Location = new System.Drawing.Point(989, 201);
+            this.buttonBuscarFoto.Margin = new System.Windows.Forms.Padding(2);
             this.buttonBuscarFoto.Name = "buttonBuscarFoto";
-            this.buttonBuscarFoto.Size = new System.Drawing.Size(141, 37);
+            this.buttonBuscarFoto.Size = new System.Drawing.Size(106, 30);
             this.buttonBuscarFoto.TabIndex = 18;
             this.buttonBuscarFoto.Text = "Buscar Foto";
             this.buttonBuscarFoto.UseVisualStyleBackColor = false;
@@ -370,7 +370,7 @@
             // 
             this.textBoxEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxEmail.Location = new System.Drawing.Point(26, 349);
-            this.textBoxEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxEmail.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxEmail.Name = "textBoxEmail";
             this.textBoxEmail.Size = new System.Drawing.Size(261, 26);
             this.textBoxEmail.TabIndex = 12;
@@ -379,7 +379,7 @@
             // 
             this.textBoxTelefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxTelefone.Location = new System.Drawing.Point(594, 349);
-            this.textBoxTelefone.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxTelefone.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxTelefone.Name = "textBoxTelefone";
             this.textBoxTelefone.Size = new System.Drawing.Size(229, 26);
             this.textBoxTelefone.TabIndex = 15;
@@ -388,10 +388,10 @@
             // 
             this.buttonInserirEmail.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.buttonInserirEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonInserirEmail.Location = new System.Drawing.Point(291, 344);
-            this.buttonInserirEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonInserirEmail.Location = new System.Drawing.Point(361, 347);
+            this.buttonInserirEmail.Margin = new System.Windows.Forms.Padding(2);
             this.buttonInserirEmail.Name = "buttonInserirEmail";
-            this.buttonInserirEmail.Size = new System.Drawing.Size(141, 37);
+            this.buttonInserirEmail.Size = new System.Drawing.Size(106, 30);
             this.buttonInserirEmail.TabIndex = 13;
             this.buttonInserirEmail.Text = "Inserir";
             this.buttonInserirEmail.UseVisualStyleBackColor = false;
@@ -401,10 +401,10 @@
             // 
             this.buttonExcluirEmail.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.buttonExcluirEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonExcluirEmail.Location = new System.Drawing.Point(436, 344);
-            this.buttonExcluirEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonExcluirEmail.Location = new System.Drawing.Point(471, 347);
+            this.buttonExcluirEmail.Margin = new System.Windows.Forms.Padding(2);
             this.buttonExcluirEmail.Name = "buttonExcluirEmail";
-            this.buttonExcluirEmail.Size = new System.Drawing.Size(141, 37);
+            this.buttonExcluirEmail.Size = new System.Drawing.Size(106, 30);
             this.buttonExcluirEmail.TabIndex = 14;
             this.buttonExcluirEmail.Text = "Excluir";
             this.buttonExcluirEmail.UseVisualStyleBackColor = false;
@@ -414,10 +414,10 @@
             // 
             this.buttonInserirTelefone.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.buttonInserirTelefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonInserirTelefone.Location = new System.Drawing.Point(827, 344);
-            this.buttonInserirTelefone.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonInserirTelefone.Location = new System.Drawing.Point(897, 347);
+            this.buttonInserirTelefone.Margin = new System.Windows.Forms.Padding(2);
             this.buttonInserirTelefone.Name = "buttonInserirTelefone";
-            this.buttonInserirTelefone.Size = new System.Drawing.Size(141, 37);
+            this.buttonInserirTelefone.Size = new System.Drawing.Size(106, 30);
             this.buttonInserirTelefone.TabIndex = 16;
             this.buttonInserirTelefone.Text = "Inserir";
             this.buttonInserirTelefone.UseVisualStyleBackColor = false;
@@ -427,10 +427,10 @@
             // 
             this.buttonExcluirTelefone.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.buttonExcluirTelefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonExcluirTelefone.Location = new System.Drawing.Point(972, 344);
-            this.buttonExcluirTelefone.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonExcluirTelefone.Location = new System.Drawing.Point(1007, 347);
+            this.buttonExcluirTelefone.Margin = new System.Windows.Forms.Padding(2);
             this.buttonExcluirTelefone.Name = "buttonExcluirTelefone";
-            this.buttonExcluirTelefone.Size = new System.Drawing.Size(141, 37);
+            this.buttonExcluirTelefone.Size = new System.Drawing.Size(106, 30);
             this.buttonExcluirTelefone.TabIndex = 17;
             this.buttonExcluirTelefone.Text = "Excluir";
             this.buttonExcluirTelefone.UseVisualStyleBackColor = false;
@@ -455,7 +455,7 @@
             this.dataGridViewTextBoxColumn3});
             this.emailProfissionalDataGridView.DataSource = this.emailProfissionalBindingSource;
             this.emailProfissionalDataGridView.Location = new System.Drawing.Point(26, 385);
-            this.emailProfissionalDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.emailProfissionalDataGridView.Margin = new System.Windows.Forms.Padding(2);
             this.emailProfissionalDataGridView.Name = "emailProfissionalDataGridView";
             this.emailProfissionalDataGridView.ReadOnly = true;
             this.emailProfissionalDataGridView.RowHeadersVisible = false;
@@ -493,7 +493,7 @@
             this.dataGridViewTextBoxColumn6});
             this.telefoneProfissionalDataGridView.DataSource = this.telefoneProfissionalBindingSource;
             this.telefoneProfissionalDataGridView.Location = new System.Drawing.Point(594, 385);
-            this.telefoneProfissionalDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.telefoneProfissionalDataGridView.Margin = new System.Windows.Forms.Padding(2);
             this.telefoneProfissionalDataGridView.Name = "telefoneProfissionalDataGridView";
             this.telefoneProfissionalDataGridView.ReadOnly = true;
             this.telefoneProfissionalDataGridView.RowHeadersVisible = false;
@@ -516,10 +516,10 @@
             // 
             this.buttonSalvar.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.buttonSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSalvar.Location = new System.Drawing.Point(827, 546);
-            this.buttonSalvar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonSalvar.Location = new System.Drawing.Point(897, 553);
+            this.buttonSalvar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSalvar.Name = "buttonSalvar";
-            this.buttonSalvar.Size = new System.Drawing.Size(141, 37);
+            this.buttonSalvar.Size = new System.Drawing.Size(106, 30);
             this.buttonSalvar.TabIndex = 19;
             this.buttonSalvar.Text = "Salvar";
             this.buttonSalvar.UseVisualStyleBackColor = false;
@@ -530,10 +530,10 @@
             this.buttonCancelar.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.buttonCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.buttonCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCancelar.Location = new System.Drawing.Point(972, 546);
-            this.buttonCancelar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonCancelar.Location = new System.Drawing.Point(1007, 553);
+            this.buttonCancelar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonCancelar.Name = "buttonCancelar";
-            this.buttonCancelar.Size = new System.Drawing.Size(141, 37);
+            this.buttonCancelar.Size = new System.Drawing.Size(106, 30);
             this.buttonCancelar.TabIndex = 20;
             this.buttonCancelar.Text = "Cancelar";
             this.buttonCancelar.UseVisualStyleBackColor = false;
@@ -587,7 +587,7 @@
             this.nomeFuncaoComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nomeFuncaoComboBox.FormattingEnabled = true;
             this.nomeFuncaoComboBox.Location = new System.Drawing.Point(107, 277);
-            this.nomeFuncaoComboBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.nomeFuncaoComboBox.Margin = new System.Windows.Forms.Padding(2);
             this.nomeFuncaoComboBox.Name = "nomeFuncaoComboBox";
             this.nomeFuncaoComboBox.Size = new System.Drawing.Size(217, 28);
             this.nomeFuncaoComboBox.TabIndex = 11;
@@ -599,7 +599,7 @@
             this.idFuncaoTextBox.Enabled = false;
             this.idFuncaoTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.idFuncaoTextBox.Location = new System.Drawing.Point(29, 279);
-            this.idFuncaoTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.idFuncaoTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.idFuncaoTextBox.Name = "idFuncaoTextBox";
             this.idFuncaoTextBox.Size = new System.Drawing.Size(64, 26);
             this.idFuncaoTextBox.TabIndex = 40;
@@ -610,10 +610,10 @@
             this.btnGerarSenha.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnGerarSenha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGerarSenha.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGerarSenha.Location = new System.Drawing.Point(972, 242);
-            this.btnGerarSenha.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnGerarSenha.Location = new System.Drawing.Point(989, 235);
+            this.btnGerarSenha.Margin = new System.Windows.Forms.Padding(2);
             this.btnGerarSenha.Name = "btnGerarSenha";
-            this.btnGerarSenha.Size = new System.Drawing.Size(141, 34);
+            this.btnGerarSenha.Size = new System.Drawing.Size(106, 30);
             this.btnGerarSenha.TabIndex = 41;
             this.btnGerarSenha.Text = "Gerar Senha";
             this.btnGerarSenha.UseVisualStyleBackColor = false;
@@ -668,7 +668,7 @@
             this.Controls.Add(uFLabel);
             this.Controls.Add(this.uFTextBox);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(1150, 633);
             this.MinimizeBox = false;

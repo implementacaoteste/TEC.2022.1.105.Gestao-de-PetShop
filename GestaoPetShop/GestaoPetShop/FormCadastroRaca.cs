@@ -58,6 +58,8 @@ namespace GestaoPetShop
 
            try
             {
+                LoadTheme();
+
                 if (id == 0)
                     racaBindingSource.AddNew();
                 else
@@ -69,9 +71,23 @@ namespace GestaoPetShop
             }
         }
 
-        private void buttonCancelar_Click(object sender, EventArgs e)
+        private void LoadTheme()
         {
-            Close();
+            foreach (Control btns in this.Controls)
+            {
+                if (btns.GetType() == typeof(Button))
+                {
+                    Button btn = (Button)btns;
+                    btn.BackColor = ThemeColor.PrimaryColor;
+                    btn.ForeColor = Color.White;
+                    btn.FlatAppearance.BorderColor = ThemeColor.SecondaryColor;
+                }
+            }
         }
+
+        //private void buttonCancelar_Click(object sender, EventArgs e)
+        //{
+        //    Close();
+        //}
     }
 }

@@ -2,6 +2,7 @@
 using Models;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -26,6 +27,8 @@ namespace GestaoPetShop
         {
             try
             {
+                LoadTheme();
+
                 if (id == 0)
                 {
                     agendamentoBindingSource.AddNew();
@@ -69,7 +72,19 @@ namespace GestaoPetShop
                 MessageBox.Show(ex.Message);
             }
         }
-
+        private void LoadTheme()
+        {
+            foreach (Control btns in this.Controls)
+            {
+                if (btns.GetType() == typeof(Button))
+                {
+                    Button btn = (Button)btns;
+                    btn.BackColor = ThemeColor.PrimaryColor;
+                    btn.ForeColor = Color.White;
+                    btn.FlatAppearance.BorderColor = ThemeColor.SecondaryColor;
+                }
+            }
+        }
         private void button_InserirServicoAgendamento_Click(object sender, EventArgs e)
         {
             try

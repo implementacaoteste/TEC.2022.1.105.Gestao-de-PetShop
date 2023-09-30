@@ -136,7 +136,7 @@ namespace GestaoPetShop
 
         private void buttonCancelar_Click(object sender, EventArgs e)
         {
-
+            Close();
         }
 
         private void buttonSelecionar_Click(object sender, EventArgs e)

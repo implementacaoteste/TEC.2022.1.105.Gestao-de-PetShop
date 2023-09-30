@@ -194,7 +194,7 @@
             this.button_AlterarServico.ForeColor = System.Drawing.Color.Black;
             this.button_AlterarServico.ImageKey = "(none)";
             this.button_AlterarServico.ImageList = this.imageList1;
-            this.button_AlterarServico.Location = new System.Drawing.Point(637, 49);
+            this.button_AlterarServico.Location = new System.Drawing.Point(525, 49);
             this.button_AlterarServico.Name = "button_AlterarServico";
             this.button_AlterarServico.Size = new System.Drawing.Size(106, 30);
             this.button_AlterarServico.TabIndex = 8;
@@ -210,7 +210,7 @@
             this.button_InserirServico.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_InserirServico.ForeColor = System.Drawing.Color.Black;
             this.button_InserirServico.ImageKey = "(none)";
-            this.button_InserirServico.Location = new System.Drawing.Point(525, 49);
+            this.button_InserirServico.Location = new System.Drawing.Point(637, 49);
             this.button_InserirServico.Name = "button_InserirServico";
             this.button_InserirServico.Size = new System.Drawing.Size(106, 30);
             this.button_InserirServico.TabIndex = 7;

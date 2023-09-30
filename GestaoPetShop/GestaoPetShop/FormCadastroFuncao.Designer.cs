@@ -48,7 +48,7 @@
             // 
             idLabel.AutoSize = true;
             idLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            idLabel.Location = new System.Drawing.Point(388, 92);
+            idLabel.Location = new System.Drawing.Point(407, 168);
             idLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             idLabel.Name = "idLabel";
             idLabel.Size = new System.Drawing.Size(19, 17);
@@ -59,7 +59,7 @@
             // 
             nomeLabel.AutoSize = true;
             nomeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            nomeLabel.Location = new System.Drawing.Point(387, 171);
+            nomeLabel.Location = new System.Drawing.Point(406, 248);
             nomeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             nomeLabel.Name = "nomeLabel";
             nomeLabel.Size = new System.Drawing.Size(45, 17);
@@ -81,7 +81,7 @@
             // 
             this.lblCadastrarFuncao.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCadastrarFuncao.ForeColor = System.Drawing.Color.Black;
-            this.lblCadastrarFuncao.Location = new System.Drawing.Point(346, 22);
+            this.lblCadastrarFuncao.Location = new System.Drawing.Point(375, 22);
             this.lblCadastrarFuncao.Name = "lblCadastrarFuncao";
             this.lblCadastrarFuncao.Size = new System.Drawing.Size(385, 26);
             this.lblCadastrarFuncao.TabIndex = 14;
@@ -96,7 +96,7 @@
             this.btnSalvarServico.FlatAppearance.BorderSize = 0;
             this.btnSalvarServico.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalvarServico.ImageKey = "(none)";
-            this.btnSalvarServico.Location = new System.Drawing.Point(390, 290);
+            this.btnSalvarServico.Location = new System.Drawing.Point(409, 366);
             this.btnSalvarServico.Name = "btnSalvarServico";
             this.btnSalvarServico.Size = new System.Drawing.Size(141, 37);
             this.btnSalvarServico.TabIndex = 16;
@@ -111,7 +111,7 @@
             this.btnCancelarCadastroOuAlterar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnCancelarCadastroOuAlterar.FlatAppearance.BorderSize = 0;
             this.btnCancelarCadastroOuAlterar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelarCadastroOuAlterar.Location = new System.Drawing.Point(565, 290);
+            this.btnCancelarCadastroOuAlterar.Location = new System.Drawing.Point(584, 366);
             this.btnCancelarCadastroOuAlterar.Name = "btnCancelarCadastroOuAlterar";
             this.btnCancelarCadastroOuAlterar.Size = new System.Drawing.Size(141, 37);
             this.btnCancelarCadastroOuAlterar.TabIndex = 17;
@@ -128,7 +128,7 @@
             this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcaoBindingSource, "Id", true));
             this.idTextBox.Enabled = false;
             this.idTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.idTextBox.Location = new System.Drawing.Point(390, 114);
+            this.idTextBox.Location = new System.Drawing.Point(409, 190);
             this.idTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.idTextBox.Name = "idTextBox";
             this.idTextBox.Size = new System.Drawing.Size(76, 26);
@@ -138,7 +138,7 @@
             // 
             this.nomeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcaoBindingSource, "Nome", true));
             this.nomeTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nomeTextBox.Location = new System.Drawing.Point(390, 191);
+            this.nomeTextBox.Location = new System.Drawing.Point(409, 267);
             this.nomeTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.nomeTextBox.Name = "nomeTextBox";
             this.nomeTextBox.Size = new System.Drawing.Size(316, 26);

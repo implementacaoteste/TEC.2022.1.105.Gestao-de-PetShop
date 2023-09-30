@@ -430,7 +430,7 @@
             this.buttonPesquisarAnimal.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.buttonPesquisarAnimal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonPesquisarAnimal.Location = new System.Drawing.Point(875, 139);
-            this.buttonPesquisarAnimal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonPesquisarAnimal.Margin = new System.Windows.Forms.Padding(2);
             this.buttonPesquisarAnimal.Name = "buttonPesquisarAnimal";
             this.buttonPesquisarAnimal.Size = new System.Drawing.Size(106, 30);
             this.buttonPesquisarAnimal.TabIndex = 22;
@@ -526,7 +526,7 @@
             this.buttonSalvar.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.buttonSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSalvar.Location = new System.Drawing.Point(986, 422);
-            this.buttonSalvar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonSalvar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSalvar.Name = "buttonSalvar";
             this.buttonSalvar.Size = new System.Drawing.Size(106, 30);
             this.buttonSalvar.TabIndex = 28;
@@ -568,9 +568,9 @@
             this.groupBoxServico.Enabled = false;
             this.groupBoxServico.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxServico.Location = new System.Drawing.Point(20, 191);
-            this.groupBoxServico.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxServico.Margin = new System.Windows.Forms.Padding(2);
             this.groupBoxServico.Name = "groupBoxServico";
-            this.groupBoxServico.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxServico.Padding = new System.Windows.Forms.Padding(2);
             this.groupBoxServico.Size = new System.Drawing.Size(1094, 132);
             this.groupBoxServico.TabIndex = 31;
             this.groupBoxServico.TabStop = false;
@@ -591,7 +591,7 @@
             // 
             this.labelCadastroAgenda.AutoSize = true;
             this.labelCadastroAgenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCadastroAgenda.Location = new System.Drawing.Point(308, 11);
+            this.labelCadastroAgenda.Location = new System.Drawing.Point(451, 11);
             this.labelCadastroAgenda.Name = "labelCadastroAgenda";
             this.labelCadastroAgenda.Size = new System.Drawing.Size(233, 29);
             this.labelCadastroAgenda.TabIndex = 54;
@@ -601,7 +601,7 @@
             // 
             this.labelAlterarAgenda.AutoSize = true;
             this.labelAlterarAgenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAlterarAgenda.Location = new System.Drawing.Point(337, 11);
+            this.labelAlterarAgenda.Location = new System.Drawing.Point(478, 11);
             this.labelAlterarAgenda.Name = "labelAlterarAgenda";
             this.labelAlterarAgenda.Size = new System.Drawing.Size(178, 29);
             this.labelAlterarAgenda.TabIndex = 55;
@@ -624,6 +624,8 @@
             this.agendamentoServicosDataGridView.AllowUserToAddRows = false;
             this.agendamentoServicosDataGridView.AllowUserToDeleteRows = false;
             this.agendamentoServicosDataGridView.AllowUserToOrderColumns = true;
+            this.agendamentoServicosDataGridView.AllowUserToResizeColumns = false;
+            this.agendamentoServicosDataGridView.AllowUserToResizeRows = false;
             this.agendamentoServicosDataGridView.AutoGenerateColumns = false;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
@@ -656,6 +658,7 @@
             this.agendamentoServicosDataGridView.ReadOnly = true;
             this.agendamentoServicosDataGridView.RowHeadersVisible = false;
             this.agendamentoServicosDataGridView.RowHeadersWidth = 51;
+            this.agendamentoServicosDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.agendamentoServicosDataGridView.Size = new System.Drawing.Size(936, 241);
             this.agendamentoServicosDataGridView.TabIndex = 56;
             // 

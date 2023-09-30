@@ -43,7 +43,6 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.profissionalBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.profissionalDataGridView = new System.Windows.Forms.DataGridView();
-            this.btnSelecionar = new System.Windows.Forms.Button();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -59,6 +58,7 @@
             this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.btnSelecionar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.profissionalBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.profissionalDataGridView)).BeginInit();
             this.SuspendLayout();
@@ -176,6 +176,8 @@
             this.profissionalDataGridView.AllowUserToAddRows = false;
             this.profissionalDataGridView.AllowUserToDeleteRows = false;
             this.profissionalDataGridView.AllowUserToOrderColumns = true;
+            this.profissionalDataGridView.AllowUserToResizeColumns = false;
+            this.profissionalDataGridView.AllowUserToResizeRows = false;
             this.profissionalDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -224,20 +226,6 @@
             this.profissionalDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.profissionalDataGridView.Size = new System.Drawing.Size(843, 382);
             this.profissionalDataGridView.TabIndex = 33;
-            // 
-            // btnSelecionar
-            // 
-            this.btnSelecionar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSelecionar.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.btnSelecionar.Enabled = false;
-            this.btnSelecionar.Location = new System.Drawing.Point(523, 474);
-            this.btnSelecionar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnSelecionar.Name = "btnSelecionar";
-            this.btnSelecionar.Size = new System.Drawing.Size(106, 30);
-            this.btnSelecionar.TabIndex = 34;
-            this.btnSelecionar.Text = "Selecionar";
-            this.btnSelecionar.UseVisualStyleBackColor = false;
-            this.btnSelecionar.Click += new System.EventHandler(this.btnSelecionar_Click);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -374,6 +362,20 @@
             this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
             this.dataGridViewCheckBoxColumn1.ReadOnly = true;
             this.dataGridViewCheckBoxColumn1.Width = 50;
+            // 
+            // btnSelecionar
+            // 
+            this.btnSelecionar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSelecionar.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btnSelecionar.Enabled = false;
+            this.btnSelecionar.Location = new System.Drawing.Point(523, 474);
+            this.btnSelecionar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSelecionar.Name = "btnSelecionar";
+            this.btnSelecionar.Size = new System.Drawing.Size(106, 30);
+            this.btnSelecionar.TabIndex = 34;
+            this.btnSelecionar.Text = "Selecionar";
+            this.btnSelecionar.UseVisualStyleBackColor = false;
+            this.btnSelecionar.Click += new System.EventHandler(this.btnSelecionar_Click);
             // 
             // FormConsultaProfissional
             // 

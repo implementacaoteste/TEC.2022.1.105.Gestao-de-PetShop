@@ -63,6 +63,8 @@ namespace GestaoPetShop
         {
             try
             {
+                LoadTheme();
+
                 if (id == 0)
                 {
                     animalBindingSource.AddNew();
@@ -81,6 +83,19 @@ namespace GestaoPetShop
             }
         }
 
+        private void LoadTheme()
+        {
+            foreach (Control btns in this.Controls)
+            {
+                if (btns.GetType() == typeof(Button))
+                {
+                    Button btn = (Button)btns;
+                    btn.BackColor = ThemeColor.PrimaryColor;
+                    btn.ForeColor = Color.White;
+                    btn.FlatAppearance.BorderColor = ThemeColor.SecondaryColor;
+                }
+            }
+        }
         private void buttonBuscarCliente_Click(object sender, EventArgs e)
         {
             try
