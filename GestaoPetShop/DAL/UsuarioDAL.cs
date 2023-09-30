@@ -227,7 +227,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu erro ao tentar alterar um usuário no banco de dados.", ex);
+                throw new Exception("Ocorreu erro ao tentar alterar um usuário no banco de dados.", ex) { Data = { { "Id", 41 } } }; ;
             }
             finally
             {
@@ -260,7 +260,7 @@ namespace DAL
                     {
                         if (transaction != null && transaction.Connection != null)
                             transaction.Rollback();
-                        throw new Exception("Ocorreu um erro ao tentar excluir usuário no banco de dados.", ex) { Data = { { "Id", -1 } } };
+                        throw new Exception("Ocorreu um erro ao tentar excluir usuário no banco de dados.", ex) { Data = { { "Id", 42 } } };
                     }
                 }
             }
@@ -294,7 +294,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu um erro ao tentar validar permissões do usuário no banco de dados.", ex);
+                throw new Exception("Ocorreu um erro ao tentar validar permissões do usuário no banco de dados.", ex) { Data = { { "Id", 43 } } }; ;
             }
             finally
             {
@@ -380,7 +380,7 @@ namespace DAL
             catch (Exception)
             {
 
-                throw new Exception("Ocorreu um erro ao tentar buscar Usuário no Banco de Dados.");
+                throw new Exception("Ocorreu um erro ao tentar buscar Usuário no Banco de Dados.") { Data = { { "Id", 44 } } }; ;
             }
             finally { cn.Close(); }
 

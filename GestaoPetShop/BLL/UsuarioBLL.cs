@@ -53,7 +53,7 @@ namespace BLL
                 throw new Exception("A senha e a confirmação da senha devem ser iguais.");
 
             if (_usuario.Senha.Length <= 3)
-                throw new Exception("A senha deve ter mais de 3 caracteres.") { Data = { { "Id", 123 } } };
+                throw new Exception("A senha deve ter mais de 3 caracteres.") { Data = { { "Id", 30 } } };
 
             if (_usuario.UsuarioLogin.Length <= 2)
                 throw new Exception("O Login deve ter mais de 2 caracteres.");

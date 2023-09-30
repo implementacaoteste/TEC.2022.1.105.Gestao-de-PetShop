@@ -15,7 +15,7 @@ namespace BLL
         private void ValidarDados(Profissional _profissional)//Givas
         {
             if (String.IsNullOrEmpty(_profissional.Nome))
-                throw new Exception("Informe o nome do cliente.");
+                throw new Exception("Informe o nome do cliente.") { Data = { { "Id", 39 } } }; ;
         }
         public List<Profissional> BuscarTodos()
         {
@@ -40,7 +40,7 @@ namespace BLL
         public Profissional BuscarPorCPF(string _CPF)//Givas
         {
             if (String.IsNullOrEmpty(_CPF))
-                throw new Exception("Informe um CPF") { Data = { { "Id", -1 } } };
+                throw new Exception("Informe um CPF") { Data = { { "Id", 40 } } };
 
             return new ProfissionalDAL().BuscarPorCPF(_CPF);
         }

@@ -13,7 +13,7 @@ namespace BLL
         public void Inserir (Funcao _funcao)
         {
             if (String.IsNullOrEmpty(_funcao.Nome))
-                throw new Exception("Não foi inserido nome para a função.");
+                throw new Exception("Não foi inserido nome para a função.") { Data = { { "Id", 31 } } };
 
             FuncaoDAL funcaoDAL = new FuncaoDAL();
             funcaoDAL.Inserir(_funcao);
@@ -21,7 +21,7 @@ namespace BLL
         public void Alterar (Funcao _funcao)
         {
             if (String.IsNullOrEmpty(_funcao.Nome))
-                throw new Exception("Não foi inserido nome para a função.");
+                throw new Exception("Não foi inserido nome para a função.") { Data = { { "Id", 32 } } };
 
             FuncaoDAL funcaoDAL = new FuncaoDAL();
             funcaoDAL.Alterar(_funcao);
@@ -32,7 +32,7 @@ namespace BLL
 
             if (ExisteVinculaDeFuncaoComProfissional(_id))
             {
-                throw new Exception("Esta função não pode ser excluída enquanto tiver vículo com profissional.");
+                throw new Exception("Esta função não pode ser excluída enquanto tiver vículo com profissional.") { Data = { { "Id", 33 } } }; ;
             }
 
             new FuncaoDAL().Excluir(_id);

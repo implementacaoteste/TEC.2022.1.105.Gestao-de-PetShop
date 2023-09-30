@@ -38,7 +38,7 @@ namespace DAL
                         if (transaction != null && transaction.Connection != null)
                         {
                             transaction.Rollback();
-                            throw new Exception("Ocorreu um erro ao tentar inserir um E-mail do profissional no banco de dados.", ex) { Data = { {"Id", -1 } } };
+                            throw new Exception("Ocorreu um erro ao tentar inserir um E-mail do profissional no banco de dados.", ex) { Data = { {"Id", 231 } } };
                         }
                     }
                 }
@@ -63,7 +63,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                throw new Exception("Erro ao tentar alterar Email do Profissional no banco de dados", ex) { Data = { { "Id", -1 } } };
+                throw new Exception("Erro ao tentar alterar Email do Profissional no banco de dados", ex) { Data = { { "Id", 232 } } };
             }
             finally
             {
@@ -90,7 +90,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu um erro ao tentar excluir E-mail do Profissional no banco de dados.", ex) { Data = { { "Id", -1 } } };
+                throw new Exception("Ocorreu um erro ao tentar excluir E-mail do Profissional no banco de dados.", ex) { Data = { { "Id", 233 } } };
             }
             finally
             {
@@ -127,7 +127,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu um erro ao tentar buscar Email do Profissional no banco de dados", ex) { Data = { { "Id", -1 } } };
+                throw new Exception("Ocorreu um erro ao tentar buscar Email do Profissional no banco de dados", ex) { Data = { { "Id", 234 } } };
             }
             finally
             {
@@ -165,7 +165,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu um erro ao tentar buscar E-mail do Profissional no banco de dados", ex) { Data = { { "Id", -1 } } };
+                throw new Exception("Ocorreu um erro ao tentar buscar E-mail do Profissional no banco de dados", ex) { Data = { { "Id", 235 } } };
             }
             finally
             {

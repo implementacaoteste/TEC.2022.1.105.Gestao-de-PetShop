@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace GestaoPetShop
 {
-    public static class ThemeColor
+    public static class ThemeColor //Givas
     {
         public static Color PrimaryColor { get; set; }
         public static Color SecondaryColor { get; set; }
