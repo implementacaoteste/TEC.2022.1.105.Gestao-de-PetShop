@@ -184,6 +184,9 @@ namespace GestaoPetShop
 
         private void FormConsultaFuncao_Load(object sender, EventArgs e)
         {
+            comboBoxEscolhaBuscarFuncao.SelectedIndex = 0;
+            textBoxBuscarFuncao.Enabled = false;
+
             LoadTheme();
         }
 
@@ -199,6 +202,12 @@ namespace GestaoPetShop
                     btn.FlatAppearance.BorderColor = ThemeColor.SecondaryColor;
                 }
             }
+        }
+
+        private void comboBoxEscolhaBuscarFuncao_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBoxEscolhaBuscarFuncao.SelectedIndex != 0)
+                textBoxBuscarFuncao.Enabled = true;
         }
     }
 }

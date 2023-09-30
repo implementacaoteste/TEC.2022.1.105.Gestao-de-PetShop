@@ -37,6 +37,7 @@ namespace GestaoPetShop
             // TODO: This line of code loads data into the 'petshopDataSet.Raca' table. You can move, or remove it, as needed.
             // this.racaTableAdapter.Fill(this.petshopDataSet.Raca);
             comboBox1.SelectedIndex = 0;
+            textBoxBuscar.Enabled = false;
 
             LoadTheme();
 
@@ -182,6 +183,14 @@ namespace GestaoPetShop
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBox1.SelectedIndex != 0)
+                textBoxBuscar.Enabled = true;
+            else
+                textBoxBuscar.Enabled = false;
         }
     }
 }

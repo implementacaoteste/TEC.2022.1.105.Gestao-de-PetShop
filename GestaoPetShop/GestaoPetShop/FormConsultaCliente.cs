@@ -154,7 +154,8 @@ namespace GestaoPetShop
             LoadTheme();
             //TODO: This line of code loads data into the 'petshopDataSet.Cliente' table.You can move, or remove it, as needed.
             //    this.clienteTableAdapter.Fill(this.petshopDataSet.Cliente);
-            //    comboBoxBuscarPor.SelectedIndex = 3;
+                comboBoxBuscarPor.SelectedIndex = 3;
+            textBoxBuscar.Enabled = false;
         }
         private void LoadTheme() 
         {
@@ -168,6 +169,12 @@ namespace GestaoPetShop
                     btn.FlatAppearance.BorderColor = ThemeColor.SecondaryColor;
                 }
             }
+        }
+
+        private void comboBoxBuscarPor_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBoxBuscarPor.SelectedIndex != 3)
+                textBoxBuscar.Enabled = true;
         }
     }
     

@@ -144,6 +144,7 @@ namespace GestaoPetShop
             try
             {
                 textBoxBuscar.Enabled = false;
+                comboBoxBuscarPor.SelectedIndex = 3;
                 if (opc == 1)
                 {
                     btnInserir.Enabled = false;
@@ -198,7 +199,8 @@ namespace GestaoPetShop
             }
         }
 
-        private void comboBoxBuscarPor_SelectedIndexChanged(object sender, EventArgs e)
+
+        private void comboBoxBuscarPor_SelectedIndexChanged_1(object sender, EventArgs e)
         {
             if (comboBoxBuscarPor.SelectedIndex != 3)
                 textBoxBuscar.Enabled = true;

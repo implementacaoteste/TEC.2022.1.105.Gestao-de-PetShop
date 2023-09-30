@@ -131,6 +131,9 @@ namespace GestaoPetShop
         }
         private void FormConsultaServico_Load(object sender, EventArgs e)
         {
+            comboBox_EscolhaBuscarServico.SelectedIndex = 0;
+            textBox_BuscarServico.Enabled = false;
+
             LoadTheme();
         }
         private void LoadTheme() 
@@ -145,6 +148,14 @@ namespace GestaoPetShop
                     btn.FlatAppearance.BorderColor = ThemeColor.SecondaryColor;
                 }
             }
+        }
+
+        private void comboBox_EscolhaBuscarServico_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBox_EscolhaBuscarServico.SelectedIndex != 0)
+                textBox_BuscarServico.Enabled = true;
+            else
+                textBox_BuscarServico.Enabled = false;
         }
     }
 }

@@ -32,20 +32,36 @@ namespace GestaoPetShop
             {
                 switch (comboBoxEscolherTipoPequisaAnimalCliente.SelectedIndex)
                 {
-                    case 0:
+                    case 0: // buscar id animal
                         opc = 0;
+                        if (String.IsNullOrEmpty(textBoxPesquisaAnimalCliente.Text))
+                        {
+                            MessageBox.Show("Digite o id do animal");
+                            textBoxPesquisaAnimalCliente.Focus();
+                            return;
+                        }
                         clienteBindingSource.DataSource = new AgendamentoBLL().BuscarPorIdAnimalCliente(Convert.ToInt32(textBoxPesquisaAnimalCliente.Text), opc);
                         break;
-                    case 1:
+                    case 1: // buscar id cliente
                         opc = 1;
+                        if (String.IsNullOrEmpty(textBoxPesquisaAnimalCliente.Text))
+                        {
+                            MessageBox.Show("Digite o id do cliente");
+                            textBoxPesquisaAnimalCliente.Focus();
+                            return;
+                        }
                         clienteBindingSource.DataSource = new AgendamentoBLL().BuscarPorIdAnimalCliente(Convert.ToInt32(textBoxPesquisaAnimalCliente.Text), opc);
                         break;
-                    case 2:
+                    case 2: // buscar nome animal
                         opc = 2;
                         clienteBindingSource.DataSource = new AgendamentoBLL().BuscarPorNomeAnimalCliente(textBoxPesquisaAnimalCliente.Text, opc);
                         break;
-                    case 3:
+                    case 3: // buscar nome cliente
                         opc = 3;
+                        clienteBindingSource.DataSource = new AgendamentoBLL().BuscarPorNomeAnimalCliente(textBoxPesquisaAnimalCliente.Text, opc);
+                        break;
+                    case 4: // buscar todos
+                        opc = 4;
                         clienteBindingSource.DataSource = new AgendamentoBLL().BuscarPorNomeAnimalCliente(textBoxPesquisaAnimalCliente.Text, opc);
                         break;
                     default:
@@ -86,6 +102,20 @@ namespace GestaoPetShop
         private void buttonCancelarPesquisaAnimalCliente_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void FormPesquisarSelecionarAnimalCliente_Load(object sender, EventArgs e)
+        {
+            comboBoxEscolherTipoPequisaAnimalCliente.SelectedIndex = 4;
+            textBoxPesquisaAnimalCliente.Enabled = false;
+        }
+
+        private void comboBoxEscolherTipoPequisaAnimalCliente_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBoxEscolherTipoPequisaAnimalCliente.SelectedIndex != 4)
+                textBoxPesquisaAnimalCliente.Enabled = true;
+            else
+                textBoxPesquisaAnimalCliente.Enabled = false;
         }
     }
 }

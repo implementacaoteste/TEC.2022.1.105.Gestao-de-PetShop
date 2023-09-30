@@ -1188,16 +1188,14 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
+                if(_opc == 4)
                 cmd.CommandText = @"SELECT C.Id , C.Nome , A.Id   FROM Cliente C INNER JOIN Animal A  ON C.Id = A.IdCliente ";
 
                 if (_opc == 2)
-                {
                     cmd.CommandText = @"SELECT C.Id , C.Nome   FROM Cliente C LEFT JOIN Animal A ON A.IdCliente = C.Id  WHERE UPPER(A.Nome) LIKE UPPER(@Nome) AND C.Ativo = 1 AND A.Ativo = 1";
-                }
+
                 if (_opc == 3)
-                {
                     cmd.CommandText = @"SELECT Id , Nome   FROM Cliente  WHERE UPPER (Nome) LIKE UPPER (@Nome) AND Ativo = 1";
-                }
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@Nome", "%" + _nomeAnimalCliente + "%");
                 cn.Open();

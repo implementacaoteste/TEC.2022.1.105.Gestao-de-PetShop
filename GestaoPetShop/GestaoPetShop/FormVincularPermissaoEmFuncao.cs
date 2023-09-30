@@ -88,6 +88,15 @@ namespace GestaoPetShop
         private void FormVincularPermissaoEmFuncao_Load(object sender, EventArgs e)
         {
             comboBoxSelecionarBuscaPermissao.SelectedIndex = 0;
+            textBoxBuscarPermissao.Enabled = false;
+        }
+
+        private void comboBoxSelecionarBuscaPermissao_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBoxSelecionarBuscaPermissao.SelectedIndex != 0)
+                textBoxBuscarPermissao.Enabled = true;
+            else
+                textBoxBuscarPermissao.Enabled = false;
         }
     }
 }

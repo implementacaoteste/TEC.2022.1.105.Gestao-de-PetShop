@@ -145,6 +145,8 @@ namespace GestaoPetShop
 
         private void FormConsultaUsuario_Load(object sender, EventArgs e)
         {
+            comboBoxSelecionarTipoPesquisaUsuario.SelectedIndex = 0;
+            textBoxBuscarUsuario.Enabled = false;
             LoadTheme();
         }
         private void LoadTheme() // tem a finalidade de pegar o mesmo efeito de cor do formulario
@@ -161,6 +163,14 @@ namespace GestaoPetShop
             }
             //label2.ForeColor = ThemeColor.SecondaryColor;
             //label3.ForeColor = ThemeColor.PrimaryColor;
+        }
+
+        private void comboBoxSelecionarTipoPesquisaUsuario_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBoxSelecionarTipoPesquisaUsuario.SelectedIndex != 0)
+                textBoxBuscarUsuario.Enabled = true;
+            else
+                textBoxBuscarUsuario.Enabled = false;
         }
     }
 }

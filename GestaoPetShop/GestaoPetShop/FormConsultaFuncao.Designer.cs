@@ -82,6 +82,7 @@
             this.comboBoxEscolhaBuscarFuncao.Name = "comboBoxEscolhaBuscarFuncao";
             this.comboBoxEscolhaBuscarFuncao.Size = new System.Drawing.Size(98, 28);
             this.comboBoxEscolhaBuscarFuncao.TabIndex = 26;
+            this.comboBoxEscolhaBuscarFuncao.SelectedIndexChanged += new System.EventHandler(this.comboBoxEscolhaBuscarFuncao_SelectedIndexChanged);
             // 
             // textBoxBuscarFuncao
             // 

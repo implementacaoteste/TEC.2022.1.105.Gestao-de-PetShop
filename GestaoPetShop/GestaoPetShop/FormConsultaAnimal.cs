@@ -55,6 +55,7 @@ namespace GestaoPetShop
             // this.animalTableAdapter.Fill(this.petshopDataSet.Animal);
 
              comboBox1.SelectedIndex = 0;
+            textBoxBuscar.Enabled = false;
 
             LoadTheme();
         }
@@ -138,6 +139,12 @@ namespace GestaoPetShop
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBox1.SelectedIndex != 0)
+                textBoxBuscar.Enabled = true;
         }
     }
 }

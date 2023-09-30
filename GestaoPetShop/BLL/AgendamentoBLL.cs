@@ -164,6 +164,7 @@ namespace BLL
         
         public Cliente BuscarPorIdAnimalCliente(int _id, int _opc)
         {
+            ValidarPreenchimentoIdAnimalCliente(_id, _opc);
             AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
             Cliente cliente = new Cliente();
             cliente = agendamentoDAL.BuscarPorIdAnimalCliente(_id, _opc);
@@ -173,9 +174,27 @@ namespace BLL
             }
             return cliente;
         }
+
+        private void ValidarPreenchimentoIdAnimalCliente(int _id, int _opc)
+        {
+            if(_opc == 0)
+            {
+                if (_id < 1)
+                    throw new Exception("Digite o Id do Animail");
+            }
+            if (_opc == 1)
+            {
+                if (_id < 1)
+                    throw new Exception("Digite o Id do Cliente");
+            }
+
+        }
+
         public List<Cliente> BuscarPorNomeAnimalCliente(string _nomeAnimalCliente, int _opc)
         {
+            ValidarPreenchimentoNomeAnimalCliente(_nomeAnimalCliente, _opc);
             AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
+            
             List<Cliente> clientes = agendamentoDAL.BuscarPorNomeAnimalCliente(_nomeAnimalCliente, _opc);
             if (clientes.Count < 1)
             {
@@ -183,6 +202,21 @@ namespace BLL
             }
             return clientes;
         }
+
+        private void ValidarPreenchimentoNomeAnimalCliente(string _nomeAnimalCliente, int _opc)
+        {
+            if(_opc == 2)
+            {
+                if (String.IsNullOrEmpty(_nomeAnimalCliente))
+                    throw new Exception("Digite o nome do Animal");
+            }
+            if (_opc == 3)
+            {
+                if (String.IsNullOrEmpty(_nomeAnimalCliente))
+                    throw new Exception("Digite o nome do Cliente");
+            }
+        }
+
         public List<Profissional> BuscarPorNomeProfissional(string _nomeProfissional, int _idProfissional)
         {
             AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
