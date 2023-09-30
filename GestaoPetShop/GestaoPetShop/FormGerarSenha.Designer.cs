@@ -35,6 +35,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtSenhaAtual = new System.Windows.Forms.TextBox();
             this.txtNovaSenha = new System.Windows.Forms.TextBox();
+            this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.txtNovaSenha2 = new System.Windows.Forms.TextBox();
             this.checkBoxMostrarSenha = new System.Windows.Forms.CheckBox();
             this.btnGerar = new System.Windows.Forms.Button();
@@ -42,14 +43,15 @@
             this.label5 = new System.Windows.Forms.Label();
             this.buttonSalvarNovaSenha = new System.Windows.Forms.Button();
             this.buttonCancelar = new System.Windows.Forms.Button();
-            this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(192, 84);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(129, 53);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(128, 16);
             this.label1.TabIndex = 0;
@@ -58,7 +60,9 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(196, 150);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(126, 118);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(131, 16);
             this.label2.TabIndex = 1;
@@ -67,7 +71,9 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(191, 217);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(126, 178);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(136, 16);
             this.label3.TabIndex = 2;
@@ -75,42 +81,49 @@
             // 
             // txtSenhaAtual
             // 
-            this.txtSenhaAtual.Location = new System.Drawing.Point(195, 102);
-            this.txtSenhaAtual.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtSenhaAtual.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSenhaAtual.Location = new System.Drawing.Point(132, 71);
+            this.txtSenhaAtual.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtSenhaAtual.MaxLength = 32;
             this.txtSenhaAtual.Name = "txtSenhaAtual";
             this.txtSenhaAtual.PasswordChar = '*';
-            this.txtSenhaAtual.Size = new System.Drawing.Size(132, 22);
+            this.txtSenhaAtual.Size = new System.Drawing.Size(125, 26);
             this.txtSenhaAtual.TabIndex = 3;
             // 
             // txtNovaSenha
             // 
             this.txtNovaSenha.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioBindingSource, "Senha", true));
-            this.txtNovaSenha.Location = new System.Drawing.Point(195, 168);
-            this.txtNovaSenha.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtNovaSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNovaSenha.Location = new System.Drawing.Point(129, 136);
+            this.txtNovaSenha.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtNovaSenha.MaxLength = 32;
             this.txtNovaSenha.Name = "txtNovaSenha";
             this.txtNovaSenha.PasswordChar = '*';
-            this.txtNovaSenha.Size = new System.Drawing.Size(132, 22);
+            this.txtNovaSenha.Size = new System.Drawing.Size(128, 26);
             this.txtNovaSenha.TabIndex = 4;
+            // 
+            // usuarioBindingSource
+            // 
+            this.usuarioBindingSource.DataSource = typeof(Models.Usuario);
             // 
             // txtNovaSenha2
             // 
-            this.txtNovaSenha2.Location = new System.Drawing.Point(195, 235);
-            this.txtNovaSenha2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtNovaSenha2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNovaSenha2.Location = new System.Drawing.Point(129, 193);
+            this.txtNovaSenha2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtNovaSenha2.MaxLength = 32;
             this.txtNovaSenha2.Name = "txtNovaSenha2";
             this.txtNovaSenha2.PasswordChar = '*';
-            this.txtNovaSenha2.Size = new System.Drawing.Size(132, 22);
+            this.txtNovaSenha2.Size = new System.Drawing.Size(128, 26);
             this.txtNovaSenha2.TabIndex = 5;
             // 
             // checkBoxMostrarSenha
             // 
             this.checkBoxMostrarSenha.AutoSize = true;
-            this.checkBoxMostrarSenha.Location = new System.Drawing.Point(276, 261);
-            this.checkBoxMostrarSenha.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.checkBoxMostrarSenha.Location = new System.Drawing.Point(253, 230);
+            this.checkBoxMostrarSenha.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.checkBoxMostrarSenha.Name = "checkBoxMostrarSenha";
-            this.checkBoxMostrarSenha.Size = new System.Drawing.Size(116, 20);
+            this.checkBoxMostrarSenha.Size = new System.Drawing.Size(95, 17);
             this.checkBoxMostrarSenha.TabIndex = 6;
             this.checkBoxMostrarSenha.Text = "Mostrar Senha";
             this.checkBoxMostrarSenha.UseVisualStyleBackColor = true;
@@ -119,10 +132,11 @@
             // btnGerar
             // 
             this.btnGerar.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.btnGerar.Location = new System.Drawing.Point(85, 356);
-            this.btnGerar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnGerar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGerar.Location = new System.Drawing.Point(261, 136);
+            this.btnGerar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnGerar.Name = "btnGerar";
-            this.btnGerar.Size = new System.Drawing.Size(80, 34);
+            this.btnGerar.Size = new System.Drawing.Size(60, 28);
             this.btnGerar.TabIndex = 7;
             this.btnGerar.Text = "Gerar";
             this.btnGerar.UseVisualStyleBackColor = false;
@@ -132,10 +146,11 @@
             // 
             this.btnOK.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.btnOK.Enabled = false;
-            this.btnOK.Location = new System.Drawing.Point(224, 356);
-            this.btnOK.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnOK.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOK.Location = new System.Drawing.Point(329, 136);
+            this.btnOK.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnOK.Name = "btnOK";
-            this.btnOK.Size = new System.Drawing.Size(80, 34);
+            this.btnOK.Size = new System.Drawing.Size(60, 28);
             this.btnOK.TabIndex = 8;
             this.btnOK.Text = "OK";
             this.btnOK.UseVisualStyleBackColor = false;
@@ -145,18 +160,21 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(190, 9);
+            this.label5.Location = new System.Drawing.Point(142, 7);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(146, 23);
+            this.label5.Size = new System.Drawing.Size(115, 19);
             this.label5.TabIndex = 10;
             this.label5.Text = "GERAR SENHA";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // buttonSalvarNovaSenha
             // 
-            this.buttonSalvarNovaSenha.Location = new System.Drawing.Point(160, 309);
+            this.buttonSalvarNovaSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSalvarNovaSenha.Location = new System.Drawing.Point(50, 251);
+            this.buttonSalvarNovaSenha.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonSalvarNovaSenha.Name = "buttonSalvarNovaSenha";
-            this.buttonSalvarNovaSenha.Size = new System.Drawing.Size(75, 23);
+            this.buttonSalvarNovaSenha.Size = new System.Drawing.Size(141, 37);
             this.buttonSalvarNovaSenha.TabIndex = 11;
             this.buttonSalvarNovaSenha.Text = "Salvar";
             this.buttonSalvarNovaSenha.UseVisualStyleBackColor = true;
@@ -164,24 +182,22 @@
             // 
             // buttonCancelar
             // 
-            this.buttonCancelar.Location = new System.Drawing.Point(276, 309);
+            this.buttonCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCancelar.Location = new System.Drawing.Point(207, 251);
+            this.buttonCancelar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonCancelar.Name = "buttonCancelar";
-            this.buttonCancelar.Size = new System.Drawing.Size(75, 23);
+            this.buttonCancelar.Size = new System.Drawing.Size(141, 37);
             this.buttonCancelar.TabIndex = 12;
             this.buttonCancelar.Text = "Cancelar";
             this.buttonCancelar.UseVisualStyleBackColor = true;
             // 
-            // usuarioBindingSource
-            // 
-            this.usuarioBindingSource.DataSource = typeof(Models.Usuario);
-            // 
             // FormGerarSenha
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(532, 353);
+            this.ClientSize = new System.Drawing.Size(400, 293);
             this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.buttonSalvarNovaSenha);
             this.Controls.Add(this.label5);
@@ -195,11 +211,11 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(550, 400);
+            this.MaximumSize = new System.Drawing.Size(416, 332);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(550, 400);
+            this.MinimumSize = new System.Drawing.Size(416, 332);
             this.Name = "FormGerarSenha";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

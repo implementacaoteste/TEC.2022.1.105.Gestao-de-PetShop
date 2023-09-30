@@ -60,30 +60,33 @@
             // senhaLabel
             // 
             senhaLabel.AutoSize = true;
-            senhaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            senhaLabel.Location = new System.Drawing.Point(407, 263);
+            senhaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            senhaLabel.Location = new System.Drawing.Point(400, 255);
+            senhaLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             senhaLabel.Name = "senhaLabel";
-            senhaLabel.Size = new System.Drawing.Size(50, 18);
+            senhaLabel.Size = new System.Drawing.Size(46, 16);
             senhaLabel.TabIndex = 9;
             senhaLabel.Text = "Senha";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label1.Location = new System.Drawing.Point(407, 330);
+            label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label1.Location = new System.Drawing.Point(400, 311);
+            label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(118, 18);
+            label1.Size = new System.Drawing.Size(104, 16);
             label1.TabIndex = 11;
             label1.Text = "Confirmar senha";
             // 
             // usuarioLoginLabel
             // 
             usuarioLoginLabel.AutoSize = true;
-            usuarioLoginLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            usuarioLoginLabel.Location = new System.Drawing.Point(407, 200);
+            usuarioLoginLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            usuarioLoginLabel.Location = new System.Drawing.Point(400, 183);
+            usuarioLoginLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             usuarioLoginLabel.Name = "usuarioLoginLabel";
-            usuarioLoginLabel.Size = new System.Drawing.Size(104, 18);
+            usuarioLoginLabel.Size = new System.Drawing.Size(93, 16);
             usuarioLoginLabel.TabIndex = 15;
             usuarioLoginLabel.Text = "Usuario Login:";
             // 
@@ -91,9 +94,10 @@
             // 
             idLabel.AutoSize = true;
             idLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            idLabel.Location = new System.Drawing.Point(63, 13);
+            idLabel.Location = new System.Drawing.Point(47, 11);
+            idLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             idLabel.Name = "idLabel";
-            idLabel.Size = new System.Drawing.Size(27, 20);
+            idLabel.Size = new System.Drawing.Size(23, 17);
             idLabel.TabIndex = 15;
             idLabel.Text = "Id:";
             // 
@@ -101,9 +105,10 @@
             // 
             nomeLabel.AutoSize = true;
             nomeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            nomeLabel.Location = new System.Drawing.Point(160, 13);
+            nomeLabel.Location = new System.Drawing.Point(120, 11);
+            nomeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             nomeLabel.Name = "nomeLabel";
-            nomeLabel.Size = new System.Drawing.Size(58, 20);
+            nomeLabel.Size = new System.Drawing.Size(49, 17);
             nomeLabel.TabIndex = 16;
             nomeLabel.Text = "Nome:";
             // 
@@ -111,10 +116,10 @@
             // 
             this.senhaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioBindingSource, "Senha", true));
             this.senhaTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.senhaTextBox.Location = new System.Drawing.Point(410, 283);
-            this.senhaTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.senhaTextBox.Location = new System.Drawing.Point(403, 271);
+            this.senhaTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.senhaTextBox.Name = "senhaTextBox";
-            this.senhaTextBox.Size = new System.Drawing.Size(321, 30);
+            this.senhaTextBox.Size = new System.Drawing.Size(322, 26);
             this.senhaTextBox.TabIndex = 2;
             this.senhaTextBox.Tag = "*";
             // 
@@ -129,10 +134,10 @@
             this.ativoCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
             this.ativoCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.usuarioBindingSource, "Ativo", true));
             this.ativoCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ativoCheckBox.Location = new System.Drawing.Point(410, 405);
-            this.ativoCheckBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ativoCheckBox.Location = new System.Drawing.Point(455, 400);
+            this.ativoCheckBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ativoCheckBox.Name = "ativoCheckBox";
-            this.ativoCheckBox.Size = new System.Drawing.Size(68, 24);
+            this.ativoCheckBox.Size = new System.Drawing.Size(58, 21);
             this.ativoCheckBox.TabIndex = 4;
             this.ativoCheckBox.Text = "Ativo";
             this.ativoCheckBox.UseVisualStyleBackColor = true;
@@ -140,19 +145,20 @@
             // textBoxConfirmarSenha
             // 
             this.textBoxConfirmarSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxConfirmarSenha.Location = new System.Drawing.Point(410, 352);
-            this.textBoxConfirmarSenha.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBoxConfirmarSenha.Location = new System.Drawing.Point(403, 329);
+            this.textBoxConfirmarSenha.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxConfirmarSenha.Name = "textBoxConfirmarSenha";
             this.textBoxConfirmarSenha.PasswordChar = '*';
-            this.textBoxConfirmarSenha.Size = new System.Drawing.Size(321, 30);
+            this.textBoxConfirmarSenha.Size = new System.Drawing.Size(322, 26);
             this.textBoxConfirmarSenha.TabIndex = 3;
             // 
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(290, -2);
+            this.label2.Location = new System.Drawing.Point(364, 18);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(534, 58);
+            this.label2.Size = new System.Drawing.Size(400, 47);
             this.label2.TabIndex = 0;
             this.label2.Text = "Cadastro de Usuários";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -161,8 +167,8 @@
             // 
             this.buttonSalvar.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.buttonSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSalvar.Location = new System.Drawing.Point(410, 458);
-            this.buttonSalvar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonSalvar.Location = new System.Drawing.Point(408, 463);
+            this.buttonSalvar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonSalvar.Name = "buttonSalvar";
             this.buttonSalvar.Size = new System.Drawing.Size(141, 37);
             this.buttonSalvar.TabIndex = 5;
@@ -174,8 +180,8 @@
             // 
             this.buttonCancelar.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.buttonCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCancelar.Location = new System.Drawing.Point(590, 458);
-            this.buttonCancelar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonCancelar.Location = new System.Drawing.Point(590, 463);
+            this.buttonCancelar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonCancelar.Name = "buttonCancelar";
             this.buttonCancelar.Size = new System.Drawing.Size(141, 37);
             this.buttonCancelar.TabIndex = 6;
@@ -187,10 +193,10 @@
             // 
             this.usuarioLoginTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioBindingSource, "UsuarioLogin", true));
             this.usuarioLoginTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usuarioLoginTextBox.Location = new System.Drawing.Point(410, 220);
-            this.usuarioLoginTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.usuarioLoginTextBox.Location = new System.Drawing.Point(403, 200);
+            this.usuarioLoginTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.usuarioLoginTextBox.Name = "usuarioLoginTextBox";
-            this.usuarioLoginTextBox.Size = new System.Drawing.Size(321, 30);
+            this.usuarioLoginTextBox.Size = new System.Drawing.Size(322, 26);
             this.usuarioLoginTextBox.TabIndex = 1;
             // 
             // idTextBoxProfissional
@@ -198,10 +204,10 @@
             this.idTextBoxProfissional.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioBindingSource, "IdProfissional", true));
             this.idTextBoxProfissional.Enabled = false;
             this.idTextBoxProfissional.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.idTextBoxProfissional.Location = new System.Drawing.Point(63, 38);
-            this.idTextBoxProfissional.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.idTextBoxProfissional.Location = new System.Drawing.Point(47, 31);
+            this.idTextBoxProfissional.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.idTextBoxProfissional.Name = "idTextBoxProfissional";
-            this.idTextBoxProfissional.Size = new System.Drawing.Size(70, 30);
+            this.idTextBoxProfissional.Size = new System.Drawing.Size(54, 26);
             this.idTextBoxProfissional.TabIndex = 16;
             // 
             // nomeTextBoxProfissional
@@ -209,20 +215,20 @@
             this.nomeTextBoxProfissional.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioBindingSource, "NomeProfissional", true));
             this.nomeTextBoxProfissional.Enabled = false;
             this.nomeTextBoxProfissional.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nomeTextBoxProfissional.Location = new System.Drawing.Point(158, 38);
-            this.nomeTextBoxProfissional.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.nomeTextBoxProfissional.Location = new System.Drawing.Point(118, 31);
+            this.nomeTextBoxProfissional.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.nomeTextBoxProfissional.Name = "nomeTextBoxProfissional";
-            this.nomeTextBoxProfissional.Size = new System.Drawing.Size(230, 30);
+            this.nomeTextBoxProfissional.Size = new System.Drawing.Size(174, 26);
             this.nomeTextBoxProfissional.TabIndex = 17;
             // 
             // btnBuscarProfissional
             // 
             this.btnBuscarProfissional.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.btnBuscarProfissional.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscarProfissional.Location = new System.Drawing.Point(461, 68);
-            this.btnBuscarProfissional.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnBuscarProfissional.Location = new System.Drawing.Point(492, 75);
+            this.btnBuscarProfissional.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnBuscarProfissional.Name = "btnBuscarProfissional";
-            this.btnBuscarProfissional.Size = new System.Drawing.Size(189, 37);
+            this.btnBuscarProfissional.Size = new System.Drawing.Size(142, 30);
             this.btnBuscarProfissional.TabIndex = 0;
             this.btnBuscarProfissional.Text = "Pesquisar Profissional";
             this.btnBuscarProfissional.UseVisualStyleBackColor = false;
@@ -233,8 +239,8 @@
             this.button1.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ImageKey = "(none)";
-            this.button1.Location = new System.Drawing.Point(590, 398);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Location = new System.Drawing.Point(589, 394);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(141, 37);
             this.button1.TabIndex = 18;
@@ -248,20 +254,18 @@
             this.groupBox1.Controls.Add(idLabel);
             this.groupBox1.Controls.Add(this.nomeTextBoxProfissional);
             this.groupBox1.Controls.Add(nomeLabel);
-            this.groupBox1.Location = new System.Drawing.Point(343, 105);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Location = new System.Drawing.Point(403, 105);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(429, 91);
+            this.groupBox1.Size = new System.Drawing.Size(322, 74);
             this.groupBox1.TabIndex = 19;
             this.groupBox1.TabStop = false;
             // 
             // FormCadastroUsuario
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1132, 586);
+            this.ClientSize = new System.Drawing.Size(1134, 594);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnBuscarProfissional);
@@ -278,7 +282,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(1150, 633);
             this.MinimizeBox = false;

@@ -48,7 +48,7 @@
             // 
             idLabel.AutoSize = true;
             idLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            idLabel.Location = new System.Drawing.Point(257, 94);
+            idLabel.Location = new System.Drawing.Point(388, 92);
             idLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             idLabel.Name = "idLabel";
             idLabel.Size = new System.Drawing.Size(19, 17);
@@ -59,7 +59,7 @@
             // 
             nomeLabel.AutoSize = true;
             nomeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            nomeLabel.Location = new System.Drawing.Point(256, 173);
+            nomeLabel.Location = new System.Drawing.Point(387, 171);
             nomeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             nomeLabel.Name = "nomeLabel";
             nomeLabel.Size = new System.Drawing.Size(45, 17);
@@ -70,7 +70,7 @@
             // 
             this.lblAlterarFuncao.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAlterarFuncao.ForeColor = System.Drawing.Color.Black;
-            this.lblAlterarFuncao.Location = new System.Drawing.Point(304, 24);
+            this.lblAlterarFuncao.Location = new System.Drawing.Point(435, 22);
             this.lblAlterarFuncao.Name = "lblAlterarFuncao";
             this.lblAlterarFuncao.Size = new System.Drawing.Size(201, 26);
             this.lblAlterarFuncao.TabIndex = 13;
@@ -81,7 +81,7 @@
             // 
             this.lblCadastrarFuncao.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCadastrarFuncao.ForeColor = System.Drawing.Color.Black;
-            this.lblCadastrarFuncao.Location = new System.Drawing.Point(215, 24);
+            this.lblCadastrarFuncao.Location = new System.Drawing.Point(346, 22);
             this.lblCadastrarFuncao.Name = "lblCadastrarFuncao";
             this.lblCadastrarFuncao.Size = new System.Drawing.Size(385, 26);
             this.lblCadastrarFuncao.TabIndex = 14;
@@ -96,9 +96,9 @@
             this.btnSalvarServico.FlatAppearance.BorderSize = 0;
             this.btnSalvarServico.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalvarServico.ImageKey = "(none)";
-            this.btnSalvarServico.Location = new System.Drawing.Point(286, 294);
+            this.btnSalvarServico.Location = new System.Drawing.Point(390, 290);
             this.btnSalvarServico.Name = "btnSalvarServico";
-            this.btnSalvarServico.Size = new System.Drawing.Size(106, 30);
+            this.btnSalvarServico.Size = new System.Drawing.Size(141, 37);
             this.btnSalvarServico.TabIndex = 16;
             this.btnSalvarServico.Tag = "Salvar";
             this.btnSalvarServico.Text = "Salvar";
@@ -111,9 +111,9 @@
             this.btnCancelarCadastroOuAlterar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnCancelarCadastroOuAlterar.FlatAppearance.BorderSize = 0;
             this.btnCancelarCadastroOuAlterar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelarCadastroOuAlterar.Location = new System.Drawing.Point(442, 294);
+            this.btnCancelarCadastroOuAlterar.Location = new System.Drawing.Point(565, 290);
             this.btnCancelarCadastroOuAlterar.Name = "btnCancelarCadastroOuAlterar";
-            this.btnCancelarCadastroOuAlterar.Size = new System.Drawing.Size(106, 30);
+            this.btnCancelarCadastroOuAlterar.Size = new System.Drawing.Size(141, 37);
             this.btnCancelarCadastroOuAlterar.TabIndex = 17;
             this.btnCancelarCadastroOuAlterar.Text = "Cancelar";
             this.btnCancelarCadastroOuAlterar.UseVisualStyleBackColor = false;
@@ -128,8 +128,8 @@
             this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcaoBindingSource, "Id", true));
             this.idTextBox.Enabled = false;
             this.idTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.idTextBox.Location = new System.Drawing.Point(259, 116);
-            this.idTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.idTextBox.Location = new System.Drawing.Point(390, 114);
+            this.idTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.idTextBox.Name = "idTextBox";
             this.idTextBox.Size = new System.Drawing.Size(76, 26);
             this.idTextBox.TabIndex = 19;
@@ -138,8 +138,8 @@
             // 
             this.nomeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcaoBindingSource, "Nome", true));
             this.nomeTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nomeTextBox.Location = new System.Drawing.Point(259, 193);
-            this.nomeTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.nomeTextBox.Location = new System.Drawing.Point(390, 191);
+            this.nomeTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.nomeTextBox.Name = "nomeTextBox";
             this.nomeTextBox.Size = new System.Drawing.Size(316, 26);
             this.nomeTextBox.TabIndex = 20;
@@ -149,7 +149,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(850, 483);
+            this.ClientSize = new System.Drawing.Size(1134, 594);
             this.Controls.Add(nomeLabel);
             this.Controls.Add(this.nomeTextBox);
             this.Controls.Add(idLabel);
@@ -161,9 +161,9 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(866, 522);
+            this.MaximumSize = new System.Drawing.Size(1150, 633);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(866, 522);
+            this.MinimumSize = new System.Drawing.Size(1150, 633);
             this.Name = "FormCadastroFuncao";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
