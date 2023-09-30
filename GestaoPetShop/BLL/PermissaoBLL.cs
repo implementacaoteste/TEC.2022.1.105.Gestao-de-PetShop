@@ -11,7 +11,7 @@ namespace BLL
         {
             //new PermissaoDAL().Inserir(_permissao);
             if (_permissao.Descricao.Length <= 10 || _permissao.Descricao.Length >= 50)
-                throw new Exception("A descrição da permissao de usuário deve ter ais de 10 caracteres.");
+                throw new Exception("A descrição da permissao de usuário deve ter ais de 10 caracteres.") { Data = { { "Id", 34 } } }; ;
 
             PermissaoDAL permissaoDAL = new PermissaoDAL();
             permissaoDAL.Inserir(_permissao);
@@ -22,7 +22,7 @@ namespace BLL
             List<Permissao> permissaos = permissaoDAL.BuscarTodos();
             if (permissaos.Count == 0)
             {
-                throw new Exception("Permissão não cadastrado");
+                throw new Exception("Permissão não cadastrado") { Data = { { "Id", 35 } } }; ;
             }
             return permissaos;
         }//Givas
@@ -33,7 +33,7 @@ namespace BLL
             List<Permissao> permissaos = permissaoDAL.BuscarPermissaoPorNome(_nomePermissao);
             if (permissaos.Count == 0)
             {
-                throw new Exception("Serviço de buscar por nome não encontrado em permissão");
+                throw new Exception("Serviço de buscar por nome não encontrado em permissão") { Data = { { "Id", 36 } } }; ;
             }
             return permissaos;
         }//Givas
@@ -43,7 +43,7 @@ namespace BLL
             List<Permissao> permissaos = permissaoDAL.BuscarPorId(_id);
             if (permissaos.Count == 0)
             {
-                throw new Exception("Serviço de buscar por id não encontrado");
+                throw new Exception("Serviço de buscar por id não encontrado") { Data = { { "Id", 37 } } }; ;
             }
             return permissaos;
         }//Givas
@@ -51,7 +51,7 @@ namespace BLL
         {
             new PermissaoDAL().Alterar(_permissao);
             if (_permissao.Descricao.Length <= 3 || _permissao.Descricao.Length >= 250)
-                throw new Exception("A alteração informada deverá conter de 3 a 250 caracteres.");
+                throw new Exception("A alteração informada deverá conter de 3 a 250 caracteres.") { Data = { { "Id", 38 } } }; ;
 
             PermissaoDAL permissaoDAL = new PermissaoDAL();
             permissaoDAL.Alterar(_permissao);

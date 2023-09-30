@@ -21,26 +21,26 @@ namespace Models
         public string Alergia { get; set; }
         public DateTime DataNascimento { get; set; }
         public bool Ativo { get; set; }
-        public string NomeRaca
-        {
-            get
-            {
-                if (Raca != null)
-                    return Raca.Nome;
+        //public string NomeRaca
+        //{
+        //    get
+        //    {
+        //        if (Raca != null)
+        //            return Raca.Nome;
 
-                return "";
-            }
-        }
-        public string NomeCliente
-        {
-            get
-            {
-                if (Cliente != null)
-                    return Cliente.Nome;
+        //        return "";
+        //    }
+        //}
+        //public string NomeCliente
+        //{
+        //    get
+        //    {
+        //        if (Cliente != null)
+        //            return Cliente.Nome;
 
-                return "";
-            }
-        }
+        //        return "";
+        //    }
+        //}
         public Raca Raca { get; set; }
         public Cliente Cliente { get; set; }
 

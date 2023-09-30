@@ -28,7 +28,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu um erro ao tentar inserir Função no banco de dados.", ex);
+                throw new Exception("Ocorreu um erro ao tentar inserir Função no banco de dados.", ex) { Data = { { "Id", 146 } } };
             }
             finally
             {
@@ -58,7 +58,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu um erro ao tentar alterar função no banco de dados.", ex);
+                throw new Exception("Ocorreu um erro ao tentar alterar função no banco de dados.", ex) { Data = { { "Id", 147 } } };
             }
             finally
             {
@@ -226,7 +226,7 @@ namespace DAL
             catch (Exception ex)
             {
 
-                throw new Exception("Não foi possível vincular a permissão na função no Banco de Dados.");
+                throw new Exception("Não foi possível vincular a permissão na função no Banco de Dados.") { Data = { { "Id", 148 } } };
             }
             finally
             {
@@ -257,7 +257,7 @@ namespace DAL
             catch (Exception ex)
             {
 
-                throw new Exception("Erro ao tentar Remover a permissão da função no Banco de Dados.");
+                throw new Exception("Erro ao tentar Remover a permissão da função no Banco de Dados.") { Data = { { "Id", 149 } } };
             }
             finally 
             {
@@ -290,7 +290,7 @@ namespace DAL
             catch (Exception ex)
             {
 
-                throw new Exception("Erro ao consultar vículo entre função e profissional no Banco de Dados.");
+                throw new Exception("Erro ao consultar vículo entre função e profissional no Banco de Dados.") { Data = { { "Id", 230 } } };
             }
             finally
             {

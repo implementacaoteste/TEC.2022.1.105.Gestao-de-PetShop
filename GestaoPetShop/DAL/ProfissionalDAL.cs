@@ -77,7 +77,7 @@ namespace DAL
             {
                 if (transaction != null && transaction.Connection != null)
                     transaction.Rollback();
-                throw new Exception("Erro ao tentar Alterar um Profissonal no banco de dados", ex) { Data = { { "Id", -1 } } };
+                throw new Exception("Erro ao tentar Alterar um Profissonal no banco de dados", ex) { Data = { { "Id", 130 } } };
             }
             finally
             {
@@ -144,7 +144,7 @@ namespace DAL
                     {
                         if (transaction != null && transaction.Connection != null)
                             transaction.Rollback();
-                        throw new Exception("Ocorreu um erro ao tentar Inserir um Profissional no banco de dados.", ex) { Data = { { "Id", -1 } } };
+                        throw new Exception("Ocorreu um erro ao tentar Inserir um Profissional no banco de dados.", ex) { Data = { { "Id", 131 } } };
                     }
                 }
             }
@@ -196,7 +196,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu um erro ao tentar buscar profissional por nome no banco de dados", ex) { Data = { { "Id", -1 } } };
+                throw new Exception("Ocorreu um erro ao tentar buscar profissional por nome no banco de dados", ex) { Data = { { "Id", 132 } } };
             }
             finally
             {
@@ -255,7 +255,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu um erro ao tentar buscar profissionais no banco de dados", ex) { Data = { { "Id", -1 } } };
+                throw new Exception("Ocorreu um erro ao tentar buscar profissionais no banco de dados", ex) { Data = { { "Id", 133 } } };
             }
             finally
             {
@@ -312,7 +312,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu um erro ao tentar buscar profissionais por id no banco de dados", ex) { Data = { { "Id", -1 } } };
+                throw new Exception("Ocorreu um erro ao tentar buscar profissionais por id no banco de dados", ex) { Data = { { "Id", 134 } } };
             }
             finally
             {
@@ -363,7 +363,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu um erro ao tentar buscar profissional por CPF no banco de dados", ex) { Data = { { "Id", -1 } } };
+                throw new Exception("Ocorreu um erro ao tentar buscar profissional por CPF no banco de dados", ex) { Data = { { "Id", 135 } } };
             }
             finally
             {
@@ -388,7 +388,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu um erro ao tentar Excluir um Profissional no banco de dados.", ex) { Data = { { "Id", -1 } } };
+                throw new Exception("Ocorreu um erro ao tentar Excluir um Profissional no banco de dados.", ex) { Data = { { "Id", 136 } } };
             }
             finally
             {

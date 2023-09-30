@@ -44,7 +44,7 @@ namespace DAL
                     {
                         if (transaction != null && transaction.Connection != null)
                             transaction.Rollback();
-                        throw new Exception("Ocorreu um erro ao tentar inserir um telefone no banco de dados.", ex) { Data = { { "Id", 800 } } };
+                        throw new Exception("Ocorreu um erro ao tentar inserir um telefone no banco de dados.", ex) { Data = { { "Id", 45 } } };
                     }
                 }
             }
@@ -68,7 +68,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                throw new Exception("Erro ao tentar alterar Telefone do Profissional no Banco de Dados", ex) { Data = { { "Id", -1 } } };
+                throw new Exception("Erro ao tentar alterar Telefone do Profissional no Banco de Dados", ex) { Data = { { "Id", 46 } } };
             }
             finally
             {
@@ -91,7 +91,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu um erro ao tentar Excluir um Telefone do Profissional no Banco de Dados", ex) { Data = { { "Id", -1 } } };
+                throw new Exception("Ocorreu um erro ao tentar Excluir um Telefone do Profissional no Banco de Dados", ex) { Data = { { "Id", 47 } } };
             }
             finally
             {
@@ -127,7 +127,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu um erro ao tentar Buscar Telefone do Profissional por Id no Banco de Dados", ex) { Data = { { "Id", -1 } } };
+                throw new Exception("Ocorreu um erro ao tentar Buscar Telefone do Profissional por Id no Banco de Dados", ex) { Data = { { "Id", 48 } } };
             }
             finally
             {
@@ -164,7 +164,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu um erro ao tentar buscar Telefone Profissional no banco de dados", ex) { Data = { { "Id", -1 } } };
+                throw new Exception("Ocorreu um erro ao tentar buscar Telefone Profissional no banco de dados", ex) { Data = { { "Id", 49 } } };
             }
             finally
             {

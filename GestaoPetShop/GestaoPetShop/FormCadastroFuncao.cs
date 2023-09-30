@@ -44,7 +44,10 @@ namespace GestaoPetShop
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                //MessageBox.Show(ex.Message);
+                throw new Exception("Ocorreu um erro ao buscar uma função por ID no banco de dados.", ex) { Data = { { "Id", 236 } } };
+
+
             }
         }//Givas
         private void LoadTheme()

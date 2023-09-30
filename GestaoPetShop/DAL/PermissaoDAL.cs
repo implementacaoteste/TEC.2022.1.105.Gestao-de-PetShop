@@ -26,7 +26,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu erro ao tentar inserir uma permissão no banco de dados.", ex) { Data = { { "Id", 59 } } };
+                throw new Exception("Ocorreu erro ao tentar inserir uma permissão no banco de dados.", ex) { Data = { { "Id", 137 } } };
             }
             finally
             {
@@ -62,7 +62,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu um erro ao tentar buscar todas as permissoes no banco de dados.", ex);
+                throw new Exception("Ocorreu um erro ao tentar buscar todas as permissoes no banco de dados.", ex) { Data = { { "Id", 138 } } };
             }
             finally
             {
@@ -98,7 +98,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu um erro ao tentar buscar as permissões no banco de dados.", ex);
+                throw new Exception("Ocorreu um erro ao tentar buscar as permissões no banco de dados.", ex) { Data = { { "Id", 139 } } };
             }
             finally
             {
@@ -134,7 +134,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu um erro ao tentar buscar permissoes por Id no banco de dados.", ex);
+                throw new Exception("Ocorreu um erro ao tentar buscar permissoes por Id no banco de dados.", ex) { Data = { { "Id", 140 } } };
             }
             finally
             {
@@ -174,7 +174,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu um erro ao tentar buscar permissoes por Id no banco de dados.", ex);
+                throw new Exception("Ocorreu um erro ao tentar buscar permissoes por Id no banco de dados.", ex) { Data = { { "Id", 141 } } };
             }
             finally
             {
@@ -200,7 +200,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu erro ao tentar alterar uma permissão no banco de dados.", ex);
+                throw new Exception("Ocorreu erro ao tentar alterar uma permissão no banco de dados.", ex) { Data = { { "Id", 142 } } };
             }
             finally
             {
@@ -225,7 +225,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu erro ao tentar excluir uma permissão no banco de dados.", ex);
+                throw new Exception("Ocorreu erro ao tentar excluir uma permissão no banco de dados.", ex) { Data = { { "Id", 143 } } };
             }
             finally
             {
