@@ -119,7 +119,7 @@
             this.button_BuscarAgendamentos.FlatAppearance.BorderSize = 0;
             this.button_BuscarAgendamentos.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_BuscarAgendamentos.ImageKey = "(none)";
-            this.button_BuscarAgendamentos.Location = new System.Drawing.Point(401, 28);
+            this.button_BuscarAgendamentos.Location = new System.Drawing.Point(417, 28);
             this.button_BuscarAgendamentos.Margin = new System.Windows.Forms.Padding(2);
             this.button_BuscarAgendamentos.Name = "button_BuscarAgendamentos";
             this.button_BuscarAgendamentos.Size = new System.Drawing.Size(106, 30);
@@ -135,7 +135,7 @@
             this.button_InserirAgendamentos.FlatAppearance.BorderSize = 0;
             this.button_InserirAgendamentos.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_InserirAgendamentos.ImageKey = "(none)";
-            this.button_InserirAgendamentos.Location = new System.Drawing.Point(512, 28);
+            this.button_InserirAgendamentos.Location = new System.Drawing.Point(528, 28);
             this.button_InserirAgendamentos.Margin = new System.Windows.Forms.Padding(2);
             this.button_InserirAgendamentos.Name = "button_InserirAgendamentos";
             this.button_InserirAgendamentos.Size = new System.Drawing.Size(106, 30);
@@ -151,7 +151,7 @@
             this.button_AlterarAgendamentos.FlatAppearance.BorderSize = 0;
             this.button_AlterarAgendamentos.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_AlterarAgendamentos.ImageKey = "(none)";
-            this.button_AlterarAgendamentos.Location = new System.Drawing.Point(622, 28);
+            this.button_AlterarAgendamentos.Location = new System.Drawing.Point(638, 28);
             this.button_AlterarAgendamentos.Margin = new System.Windows.Forms.Padding(2);
             this.button_AlterarAgendamentos.Name = "button_AlterarAgendamentos";
             this.button_AlterarAgendamentos.Size = new System.Drawing.Size(106, 30);
@@ -167,7 +167,7 @@
             this.button_ExcluirAgendamento.FlatAppearance.BorderSize = 0;
             this.button_ExcluirAgendamento.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_ExcluirAgendamento.ImageKey = "(none)";
-            this.button_ExcluirAgendamento.Location = new System.Drawing.Point(732, 28);
+            this.button_ExcluirAgendamento.Location = new System.Drawing.Point(748, 28);
             this.button_ExcluirAgendamento.Margin = new System.Windows.Forms.Padding(2);
             this.button_ExcluirAgendamento.Name = "button_ExcluirAgendamento";
             this.button_ExcluirAgendamento.Size = new System.Drawing.Size(106, 30);
@@ -200,7 +200,7 @@
             // 
             this.monthCalendar_Agendamento.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.monthCalendar_Agendamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.monthCalendar_Agendamento.Location = new System.Drawing.Point(611, 70);
+            this.monthCalendar_Agendamento.Location = new System.Drawing.Point(627, 70);
             this.monthCalendar_Agendamento.Margin = new System.Windows.Forms.Padding(7);
             this.monthCalendar_Agendamento.MaximumSize = new System.Drawing.Size(300, 0);
             this.monthCalendar_Agendamento.Name = "monthCalendar_Agendamento";
@@ -333,7 +333,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.agendamentoDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.agendamentoDataGridView.RowHeadersVisible = false;
-            this.agendamentoDataGridView.Size = new System.Drawing.Size(405, 220);
+            this.agendamentoDataGridView.Size = new System.Drawing.Size(421, 259);
             this.agendamentoDataGridView.TabIndex = 35;
             // 
             // agendamentoServicosBindingSource
@@ -375,11 +375,11 @@
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.agendamentoServicosDataGridView.DefaultCellStyle = dataGridViewCellStyle5;
-            this.agendamentoServicosDataGridView.Location = new System.Drawing.Point(423, 244);
+            this.agendamentoServicosDataGridView.Location = new System.Drawing.Point(439, 244);
             this.agendamentoServicosDataGridView.Name = "agendamentoServicosDataGridView";
             this.agendamentoServicosDataGridView.ReadOnly = true;
             this.agendamentoServicosDataGridView.RowHeadersVisible = false;
-            this.agendamentoServicosDataGridView.Size = new System.Drawing.Size(414, 220);
+            this.agendamentoServicosDataGridView.Size = new System.Drawing.Size(414, 259);
             this.agendamentoServicosDataGridView.TabIndex = 35;
             // 
             // dataGridViewTextBoxColumn14
@@ -504,7 +504,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(849, 476);
+            this.ClientSize = new System.Drawing.Size(865, 515);
             this.Controls.Add(this.agendamentoServicosDataGridView);
             this.Controls.Add(this.agendamentoDataGridView);
             this.Controls.Add(this.label6);
