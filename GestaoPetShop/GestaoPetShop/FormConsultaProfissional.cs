@@ -30,7 +30,7 @@ namespace GestaoPetShop
                 switch (comboBoxBuscarPor.SelectedIndex)
                 {
                     case 0:
-                        
+
                         if (String.IsNullOrEmpty(textBoxBuscar.Text))
                             throw new Exception("Informe um Id para fazer a busca.") { Data = { { "Id", -1 } } };
 
@@ -81,7 +81,7 @@ namespace GestaoPetShop
         {
             try
             {
-                
+
                 //int id = ((Profissional)profissionalBindingSource.Current).Id;
                 using (FormCadastroProfissional frm = new FormCadastroProfissional())
                 {
@@ -162,7 +162,7 @@ namespace GestaoPetShop
             }
         }
 
-        private void LoadTheme() 
+        private void LoadTheme()
         {
             foreach (Control btns in this.Controls)
             {

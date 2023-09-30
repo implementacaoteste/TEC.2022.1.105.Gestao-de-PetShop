@@ -30,8 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormConsultaFuncao));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.lblConsultaFuncao = new System.Windows.Forms.Label();
             this.comboBoxEscolhaBuscarFuncao = new System.Windows.Forms.ComboBox();
             this.textBoxBuscarFuncao = new System.Windows.Forms.TextBox();
             this.btnExcluir = new System.Windows.Forms.Button();
@@ -66,54 +69,40 @@
             this.imageList1.Images.SetKeyName(3, "editar-removebg-preview.ico");
             this.imageList1.Images.SetKeyName(4, "excluir-removebg-preview.ico");
             // 
-            // lblConsultaFuncao
-            // 
-            this.lblConsultaFuncao.BackColor = System.Drawing.Color.Transparent;
-            this.lblConsultaFuncao.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblConsultaFuncao.Location = new System.Drawing.Point(14, 18);
-            this.lblConsultaFuncao.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblConsultaFuncao.Name = "lblConsultaFuncao";
-            this.lblConsultaFuncao.Size = new System.Drawing.Size(833, 50);
-            this.lblConsultaFuncao.TabIndex = 25;
-            this.lblConsultaFuncao.Text = "Consulta de Função";
-            this.lblConsultaFuncao.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // comboBoxEscolhaBuscarFuncao
             // 
             this.comboBoxEscolhaBuscarFuncao.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxEscolhaBuscarFuncao.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxEscolhaBuscarFuncao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxEscolhaBuscarFuncao.FormattingEnabled = true;
             this.comboBoxEscolhaBuscarFuncao.Items.AddRange(new object[] {
             "Todos",
             "Id",
             "Nome"});
-            this.comboBoxEscolhaBuscarFuncao.Location = new System.Drawing.Point(21, 155);
-            this.comboBoxEscolhaBuscarFuncao.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBoxEscolhaBuscarFuncao.Location = new System.Drawing.Point(12, 34);
             this.comboBoxEscolhaBuscarFuncao.Name = "comboBoxEscolhaBuscarFuncao";
-            this.comboBoxEscolhaBuscarFuncao.Size = new System.Drawing.Size(129, 28);
+            this.comboBoxEscolhaBuscarFuncao.Size = new System.Drawing.Size(98, 28);
             this.comboBoxEscolhaBuscarFuncao.TabIndex = 26;
             // 
             // textBoxBuscarFuncao
             // 
-            this.textBoxBuscarFuncao.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxBuscarFuncao.Location = new System.Drawing.Point(159, 155);
-            this.textBoxBuscarFuncao.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxBuscarFuncao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxBuscarFuncao.Location = new System.Drawing.Point(116, 34);
             this.textBoxBuscarFuncao.Name = "textBoxBuscarFuncao";
-            this.textBoxBuscarFuncao.Size = new System.Drawing.Size(319, 29);
+            this.textBoxBuscarFuncao.Size = new System.Drawing.Size(240, 26);
             this.textBoxBuscarFuncao.TabIndex = 31;
             // 
             // btnExcluir
             // 
+            this.btnExcluir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnExcluir.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.btnExcluir.FlatAppearance.BorderSize = 0;
             this.btnExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExcluir.ForeColor = System.Drawing.Color.Black;
             this.btnExcluir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnExcluir.ImageKey = "(none)";
-            this.btnExcluir.Location = new System.Drawing.Point(769, 151);
-            this.btnExcluir.Margin = new System.Windows.Forms.Padding(4);
+            this.btnExcluir.Location = new System.Drawing.Point(748, 32);
             this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(77, 34);
+            this.btnExcluir.Size = new System.Drawing.Size(106, 30);
             this.btnExcluir.TabIndex = 37;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = false;
@@ -121,15 +110,15 @@
             // 
             // btnAlterar
             // 
+            this.btnAlterar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAlterar.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.btnAlterar.FlatAppearance.BorderSize = 0;
             this.btnAlterar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAlterar.ForeColor = System.Drawing.Color.Black;
             this.btnAlterar.ImageKey = "(none)";
-            this.btnAlterar.Location = new System.Drawing.Point(684, 151);
-            this.btnAlterar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAlterar.Location = new System.Drawing.Point(636, 32);
             this.btnAlterar.Name = "btnAlterar";
-            this.btnAlterar.Size = new System.Drawing.Size(77, 34);
+            this.btnAlterar.Size = new System.Drawing.Size(106, 30);
             this.btnAlterar.TabIndex = 35;
             this.btnAlterar.Text = "Alterar";
             this.btnAlterar.UseVisualStyleBackColor = false;
@@ -137,16 +126,16 @@
             // 
             // btnCadastrar
             // 
+            this.btnCadastrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCadastrar.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.btnCadastrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnCadastrar.FlatAppearance.BorderSize = 0;
             this.btnCadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCadastrar.ForeColor = System.Drawing.Color.Black;
             this.btnCadastrar.ImageList = this.imageList1;
-            this.btnCadastrar.Location = new System.Drawing.Point(599, 151);
-            this.btnCadastrar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCadastrar.Location = new System.Drawing.Point(524, 32);
             this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(77, 34);
+            this.btnCadastrar.Size = new System.Drawing.Size(106, 30);
             this.btnCadastrar.TabIndex = 33;
             this.btnCadastrar.Text = "Inserir";
             this.btnCadastrar.UseVisualStyleBackColor = false;
@@ -154,6 +143,7 @@
             // 
             // btnBuscarFuncao
             // 
+            this.btnBuscarFuncao.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnBuscarFuncao.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.btnBuscarFuncao.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnBuscarFuncao.FlatAppearance.BorderSize = 0;
@@ -161,10 +151,9 @@
             this.btnBuscarFuncao.ForeColor = System.Drawing.Color.Black;
             this.btnBuscarFuncao.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnBuscarFuncao.ImageKey = "(none)";
-            this.btnBuscarFuncao.Location = new System.Drawing.Point(513, 151);
-            this.btnBuscarFuncao.Margin = new System.Windows.Forms.Padding(4);
+            this.btnBuscarFuncao.Location = new System.Drawing.Point(412, 32);
             this.btnBuscarFuncao.Name = "btnBuscarFuncao";
-            this.btnBuscarFuncao.Size = new System.Drawing.Size(77, 34);
+            this.btnBuscarFuncao.Size = new System.Drawing.Size(106, 30);
             this.btnBuscarFuncao.TabIndex = 28;
             this.btnBuscarFuncao.Text = "Buscar";
             this.btnBuscarFuncao.UseVisualStyleBackColor = false;
@@ -181,21 +170,39 @@
             this.funcaoDataGridView.AllowUserToOrderColumns = true;
             this.funcaoDataGridView.AllowUserToResizeColumns = false;
             this.funcaoDataGridView.AllowUserToResizeRows = false;
+            this.funcaoDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.funcaoDataGridView.AutoGenerateColumns = false;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.funcaoDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.funcaoDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.funcaoDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2});
             this.funcaoDataGridView.DataSource = this.funcaoBindingSource;
-            this.funcaoDataGridView.Location = new System.Drawing.Point(13, 253);
-            this.funcaoDataGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.funcaoDataGridView.DefaultCellStyle = dataGridViewCellStyle2;
+            this.funcaoDataGridView.Location = new System.Drawing.Point(11, 123);
+            this.funcaoDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.funcaoDataGridView.Name = "funcaoDataGridView";
             this.funcaoDataGridView.ReadOnly = true;
             this.funcaoDataGridView.RowHeadersVisible = false;
             this.funcaoDataGridView.RowHeadersWidth = 51;
             this.funcaoDataGridView.RowTemplate.Height = 24;
             this.funcaoDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.funcaoDataGridView.Size = new System.Drawing.Size(465, 329);
+            this.funcaoDataGridView.Size = new System.Drawing.Size(419, 381);
             this.funcaoDataGridView.TabIndex = 39;
             // 
             // dataGridViewTextBoxColumn1
@@ -228,21 +235,40 @@
             this.permissoesDataGridView.AllowUserToOrderColumns = true;
             this.permissoesDataGridView.AllowUserToResizeColumns = false;
             this.permissoesDataGridView.AllowUserToResizeRows = false;
+            this.permissoesDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.permissoesDataGridView.AutoGenerateColumns = false;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.permissoesDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.permissoesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.permissoesDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4});
             this.permissoesDataGridView.DataSource = this.permissoesBindingSource;
-            this.permissoesDataGridView.Location = new System.Drawing.Point(484, 253);
-            this.permissoesDataGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.permissoesDataGridView.DefaultCellStyle = dataGridViewCellStyle4;
+            this.permissoesDataGridView.Location = new System.Drawing.Point(436, 123);
+            this.permissoesDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.permissoesDataGridView.Name = "permissoesDataGridView";
             this.permissoesDataGridView.ReadOnly = true;
             this.permissoesDataGridView.RowHeadersVisible = false;
             this.permissoesDataGridView.RowHeadersWidth = 51;
             this.permissoesDataGridView.RowTemplate.Height = 24;
             this.permissoesDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.permissoesDataGridView.Size = new System.Drawing.Size(363, 329);
+            this.permissoesDataGridView.Size = new System.Drawing.Size(418, 381);
             this.permissoesDataGridView.TabIndex = 39;
             // 
             // dataGridViewTextBoxColumn3
@@ -265,11 +291,12 @@
             // 
             // buttonVincularPermissaoEmFuncao
             // 
+            this.buttonVincularPermissaoEmFuncao.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonVincularPermissaoEmFuncao.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.buttonVincularPermissaoEmFuncao.Location = new System.Drawing.Point(656, 211);
-            this.buttonVincularPermissaoEmFuncao.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonVincularPermissaoEmFuncao.Location = new System.Drawing.Point(638, 79);
+            this.buttonVincularPermissaoEmFuncao.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonVincularPermissaoEmFuncao.Name = "buttonVincularPermissaoEmFuncao";
-            this.buttonVincularPermissaoEmFuncao.Size = new System.Drawing.Size(77, 34);
+            this.buttonVincularPermissaoEmFuncao.Size = new System.Drawing.Size(106, 30);
             this.buttonVincularPermissaoEmFuncao.TabIndex = 40;
             this.buttonVincularPermissaoEmFuncao.Text = "Vincular";
             this.buttonVincularPermissaoEmFuncao.UseVisualStyleBackColor = false;
@@ -277,11 +304,12 @@
             // 
             // buttonDesvincularPermissaoDeFuncao
             // 
+            this.buttonDesvincularPermissaoDeFuncao.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonDesvincularPermissaoDeFuncao.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.buttonDesvincularPermissaoDeFuncao.Location = new System.Drawing.Point(738, 211);
-            this.buttonDesvincularPermissaoDeFuncao.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonDesvincularPermissaoDeFuncao.Location = new System.Drawing.Point(748, 79);
+            this.buttonDesvincularPermissaoDeFuncao.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonDesvincularPermissaoDeFuncao.Name = "buttonDesvincularPermissaoDeFuncao";
-            this.buttonDesvincularPermissaoDeFuncao.Size = new System.Drawing.Size(109, 34);
+            this.buttonDesvincularPermissaoDeFuncao.Size = new System.Drawing.Size(106, 30);
             this.buttonDesvincularPermissaoDeFuncao.TabIndex = 41;
             this.buttonDesvincularPermissaoDeFuncao.Text = "Desvincular";
             this.buttonDesvincularPermissaoDeFuncao.UseVisualStyleBackColor = false;
@@ -290,7 +318,9 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(21, 132);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(9, 15);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(72, 16);
             this.label1.TabIndex = 42;
@@ -299,7 +329,9 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(156, 132);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(113, 15);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(122, 16);
             this.label2.TabIndex = 43;
@@ -307,10 +339,10 @@
             // 
             // FormConsultaFuncao
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(860, 614);
+            this.ClientSize = new System.Drawing.Size(865, 515);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonDesvincularPermissaoDeFuncao);
@@ -323,17 +355,16 @@
             this.Controls.Add(this.textBoxBuscarFuncao);
             this.Controls.Add(this.btnBuscarFuncao);
             this.Controls.Add(this.comboBoxEscolhaBuscarFuncao);
-            this.Controls.Add(this.lblConsultaFuncao);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(878, 661);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(878, 661);
             this.Name = "FormConsultaFuncao";
+            this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "CONSULTAR FUNÇÃO";
+            this.Load += new System.EventHandler(this.FormConsultaFuncao_Load);
             ((System.ComponentModel.ISupportInitialize)(this.funcaoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.funcaoDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.permissoesBindingSource)).EndInit();
@@ -345,7 +376,6 @@
 
         #endregion
         private System.Windows.Forms.ImageList imageList1;
-        private System.Windows.Forms.Label lblConsultaFuncao;
         private System.Windows.Forms.ComboBox comboBoxEscolhaBuscarFuncao;
         private System.Windows.Forms.Button btnBuscarFuncao;
         private System.Windows.Forms.TextBox textBoxBuscarFuncao;
