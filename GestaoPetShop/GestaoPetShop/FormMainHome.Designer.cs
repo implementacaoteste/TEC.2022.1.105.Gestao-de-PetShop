@@ -341,7 +341,7 @@
             // 
             // panelDesktopPane
             // 
-            this.panelDesktopPane.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.panelDesktopPane.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(173)))), ((int)(((byte)(167)))));
             this.panelDesktopPane.Controls.Add(this.label3);
             this.panelDesktopPane.Controls.Add(this.label1);
             this.panelDesktopPane.Controls.Add(this.pictureBox1);
@@ -370,9 +370,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 84F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(270, 304);
+            this.label1.Location = new System.Drawing.Point(146, 304);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(268, 116);
+            this.label1.Size = new System.Drawing.Size(530, 116);
             this.label1.TabIndex = 1;
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
