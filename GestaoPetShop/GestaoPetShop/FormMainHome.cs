@@ -190,5 +190,20 @@ namespace GestaoPetShop
             else
                 this.WindowState = FormWindowState.Normal;
         }
+
+        private void panelDesktopPane_Paint(object sender, PaintEventArgs e)
+        {
+            timer1.Start();
+
+            label1.Text = DateTime.Now.ToLongTimeString();
+
+            label3.Text = DateTime.Now.ToLongDateString();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            label1.Text = DateTime.Now.ToLongTimeString();
+            timer1.Start();
+        }
     }
 }
