@@ -84,5 +84,10 @@ namespace GestaoPetShop
         {
             Close();
         }
+
+        private void FormVincularPermissaoEmFuncao_Load(object sender, EventArgs e)
+        {
+            comboBoxSelecionarBuscaPermissao.SelectedIndex = 0;
+        }
     }
 }

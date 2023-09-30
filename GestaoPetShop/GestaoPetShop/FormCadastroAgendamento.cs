@@ -116,12 +116,6 @@ namespace GestaoPetShop
                 }
                 else
                 {
-                    //if (dataagendamento.Date < datahoje.Date)
-                    //{
-                    //    MessageBox.Show("Data inválida! \n Menor que a data atual.");
-                    //    return;
-                    //}
-
                     new AgendamentoBLL().Inserir(agendamento);
                     MessageBox.Show("Agendamento Cadastrado com sucesso!");
                 }
@@ -241,15 +235,11 @@ namespace GestaoPetShop
                     servicoBindingSource.DataSource = new ServicoBLL().BuscarTodos();
             }
         }
-
-
         private void precoTextBox_TextChanged(object sender, EventArgs e)
         {
             ((AgendamentoServico)agendamentoServicosBindingSource.Current).ValorUnitario = Convert.ToDecimal(precoTextBox.Text);
             textBoxValorUnitario.Text = precoTextBox.Text;
-
         }
-
         private void buttonCancelar_Click(object sender, EventArgs e)
         {
             Close();
