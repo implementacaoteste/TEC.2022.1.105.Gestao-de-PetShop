@@ -600,22 +600,22 @@
             // labelCadastroAgenda
             // 
             this.labelCadastroAgenda.AutoSize = true;
-            this.labelCadastroAgenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCadastroAgenda.Location = new System.Drawing.Point(451, 11);
+            this.labelCadastroAgenda.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCadastroAgenda.Location = new System.Drawing.Point(346, 11);
             this.labelCadastroAgenda.Name = "labelCadastroAgenda";
-            this.labelCadastroAgenda.Size = new System.Drawing.Size(233, 29);
+            this.labelCadastroAgenda.Size = new System.Drawing.Size(443, 38);
             this.labelCadastroAgenda.TabIndex = 54;
-            this.labelCadastroAgenda.Text = "Cadastro de Agenda";
+            this.labelCadastroAgenda.Text = "Cadastro de Agendamento";
             // 
             // labelAlterarAgenda
             // 
             this.labelAlterarAgenda.AutoSize = true;
-            this.labelAlterarAgenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAlterarAgenda.Location = new System.Drawing.Point(478, 11);
+            this.labelAlterarAgenda.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelAlterarAgenda.Location = new System.Drawing.Point(386, 11);
             this.labelAlterarAgenda.Name = "labelAlterarAgenda";
-            this.labelAlterarAgenda.Size = new System.Drawing.Size(178, 29);
+            this.labelAlterarAgenda.Size = new System.Drawing.Size(363, 38);
             this.labelAlterarAgenda.TabIndex = 55;
-            this.labelAlterarAgenda.Text = "Alterar  Agenda";
+            this.labelAlterarAgenda.Text = "Alterar  Agendamento";
             // 
             // buttonCancelar
             // 
