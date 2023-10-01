@@ -89,7 +89,8 @@ namespace GestaoPetShop
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                //MessageBox.Show(ex.Message);
+                throw new Exception("Ocorreu um erro ao tentar salvar uma funçao ao serviço no banco de dados.", ex) { Data = { { "Id", 237 } } };
             }
         }//Givas
     }

@@ -68,22 +68,22 @@
             // 
             // lblAlterarFuncao
             // 
-            this.lblAlterarFuncao.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAlterarFuncao.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAlterarFuncao.ForeColor = System.Drawing.Color.Black;
-            this.lblAlterarFuncao.Location = new System.Drawing.Point(435, 22);
+            this.lblAlterarFuncao.Location = new System.Drawing.Point(400, 22);
             this.lblAlterarFuncao.Name = "lblAlterarFuncao";
-            this.lblAlterarFuncao.Size = new System.Drawing.Size(201, 26);
+            this.lblAlterarFuncao.Size = new System.Drawing.Size(335, 48);
             this.lblAlterarFuncao.TabIndex = 13;
             this.lblAlterarFuncao.Text = "Alterar Função";
             this.lblAlterarFuncao.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // lblCadastrarFuncao
             // 
-            this.lblCadastrarFuncao.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCadastrarFuncao.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCadastrarFuncao.ForeColor = System.Drawing.Color.Black;
-            this.lblCadastrarFuncao.Location = new System.Drawing.Point(375, 22);
+            this.lblCadastrarFuncao.Location = new System.Drawing.Point(375, 23);
             this.lblCadastrarFuncao.Name = "lblCadastrarFuncao";
-            this.lblCadastrarFuncao.Size = new System.Drawing.Size(385, 26);
+            this.lblCadastrarFuncao.Size = new System.Drawing.Size(385, 47);
             this.lblCadastrarFuncao.TabIndex = 14;
             this.lblCadastrarFuncao.Text = "Cadastrar Função";
             this.lblCadastrarFuncao.TextAlign = System.Drawing.ContentAlignment.TopCenter;

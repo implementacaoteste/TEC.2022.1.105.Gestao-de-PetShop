@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCadastroRaca));
-            this.label1 = new System.Windows.Forms.Label();
+            this.label1CadastrarRaca = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.racaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -41,21 +41,22 @@
             this.label6 = new System.Windows.Forms.Label();
             this.buttonSalvar = new System.Windows.Forms.Button();
             this.buttonCancelar = new System.Windows.Forms.Button();
+            this.label2AlterarRaca = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.racaBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // label1CadastrarRaca
             // 
-            this.label1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label1.Location = new System.Drawing.Point(304, 31);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(527, 46);
-            this.label1.TabIndex = 1;
-            this.label1.Tag = "Cadastrar Raça";
-            this.label1.Text = "Cadastrar Raça";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label1CadastrarRaca.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label1CadastrarRaca.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1CadastrarRaca.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label1CadastrarRaca.Location = new System.Drawing.Point(304, 31);
+            this.label1CadastrarRaca.Name = "label1CadastrarRaca";
+            this.label1CadastrarRaca.Size = new System.Drawing.Size(527, 46);
+            this.label1CadastrarRaca.TabIndex = 1;
+            this.label1CadastrarRaca.Tag = "";
+            this.label1CadastrarRaca.Text = "Cadastrar Raça";
+            this.label1CadastrarRaca.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // textBox1
             // 
@@ -163,12 +164,26 @@
             this.buttonCancelar.Text = "&Cancelar";
             this.buttonCancelar.UseVisualStyleBackColor = false;
             // 
+            // label2AlterarRaca
+            // 
+            this.label2AlterarRaca.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label2AlterarRaca.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2AlterarRaca.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label2AlterarRaca.Location = new System.Drawing.Point(304, 31);
+            this.label2AlterarRaca.Name = "label2AlterarRaca";
+            this.label2AlterarRaca.Size = new System.Drawing.Size(527, 46);
+            this.label2AlterarRaca.TabIndex = 13;
+            this.label2AlterarRaca.Tag = "";
+            this.label2AlterarRaca.Text = "Alterar Raça";
+            this.label2AlterarRaca.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
             // FormCadastroRaca
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1134, 594);
+            this.Controls.Add(this.label2AlterarRaca);
             this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.buttonSalvar);
             this.Controls.Add(this.label6);
@@ -178,7 +193,7 @@
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.label1CadastrarRaca);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -197,7 +212,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label1CadastrarRaca;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox5;
@@ -208,5 +223,6 @@
         private System.Windows.Forms.Button buttonSalvar;
         private System.Windows.Forms.Button buttonCancelar;
         private System.Windows.Forms.BindingSource racaBindingSource;
+        private System.Windows.Forms.Label label2AlterarRaca;
     }
 }

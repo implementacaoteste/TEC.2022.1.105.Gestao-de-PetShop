@@ -42,7 +42,7 @@ namespace GestaoPetShop
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                throw new Exception("Ocorreu um erro ao buscar alguma função (Todos - Id - Nome) no banco de dados.", ex) { Data = { { "Id", 246 } } };
             }
         }//Givas
         private void btnCadastrar_Click(object sender, EventArgs e)
@@ -78,11 +78,10 @@ namespace GestaoPetShop
             }
             catch (Exception ex)
             {
-
-                MessageBox.Show(ex.Message);
+                throw new Exception("Ocorreu um erro, é preciso selecionar uma Função para Alterar no banco de dados.", ex) { Data = { { "Id", 247 } } };
             }
         }//Givas
-       
+
         private void btnExcluir_Click(object sender, EventArgs e)
         {
             try
@@ -96,13 +95,13 @@ namespace GestaoPetShop
                     return;
 
                 int id = ((Funcao)funcaoBindingSource.Current).Id;
-              
+
                 new FuncaoBLL().Excluir(id);
                 funcaoBindingSource.RemoveCurrent();
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                throw new Exception("É preciso selecionar um registro e confirmar se deseja excluir.", ex) { Data = { { "Id", 248 } } };
             }
         }//Givas
 
@@ -110,17 +109,17 @@ namespace GestaoPetShop
         {
             try
             {
-                if(funcaoBindingSource.Count <= 0)
+                if (funcaoBindingSource.Count <= 0)
                 {
                     MessageBox.Show("Selecione uma função.");
-                    return ;
+                    return;
                 }
                 int idfuncao = ((Funcao)funcaoBindingSource.Current).Id;
                 string nomefuncao = ((Funcao)funcaoBindingSource.Current).Nome;
-                using(FormVincularPermissaoEmFuncao frm = new FormVincularPermissaoEmFuncao(idfuncao, nomefuncao))
+                using (FormVincularPermissaoEmFuncao frm = new FormVincularPermissaoEmFuncao(idfuncao, nomefuncao))
                 {
                     frm.ShowDialog();
-                    
+
                 }
                 if (comboBoxEscolhaBuscarFuncao.SelectedIndex == 0)
                 {
@@ -146,7 +145,7 @@ namespace GestaoPetShop
         {
             try
             {
-                if(permissoesBindingSource.Count < 1)
+                if (permissoesBindingSource.Count < 1)
                 {
                     MessageBox.Show("Selecione uma permissão para excluir.");
                     return;
@@ -190,17 +189,24 @@ namespace GestaoPetShop
             LoadTheme();
         }
 
-        private void LoadTheme() 
+        private void LoadTheme()
         {
-            foreach (Control btns in this.Controls)
+            try
             {
-                if (btns.GetType() == typeof(Button))
+                foreach (Control btns in this.Controls)
                 {
-                    Button btn = (Button)btns;
-                    btn.BackColor = ThemeColor.PrimaryColor;
-                    btn.ForeColor = Color.White;
-                    btn.FlatAppearance.BorderColor = ThemeColor.SecondaryColor;
+                    if (btns.GetType() == typeof(Button))
+                    {
+                        Button btn = (Button)btns;
+                        btn.BackColor = ThemeColor.PrimaryColor;
+                        btn.ForeColor = Color.White;
+                        btn.FlatAppearance.BorderColor = ThemeColor.SecondaryColor;
+                    }
                 }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu um erro ao colorir um tema ao botão.", ex) { Data = { { "Id", 249 } } };
             }
         }
 

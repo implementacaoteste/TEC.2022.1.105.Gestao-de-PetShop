@@ -45,7 +45,7 @@
             this.rGTextBox = new System.Windows.Forms.TextBox();
             this.foneTextBox = new System.Windows.Forms.TextBox();
             this.emailTextBox = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.label1CadastrarCliente = new System.Windows.Forms.Label();
             this.buttonSalvar = new System.Windows.Forms.Button();
             this.buttonCancelar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -75,6 +75,7 @@
             this.pictureBoxFoto = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.label2AlterarCliente = new System.Windows.Forms.Label();
             nomeLabel = new System.Windows.Forms.Label();
             cPFLabel = new System.Windows.Forms.Label();
             rGLabel = new System.Windows.Forms.Label();
@@ -207,17 +208,17 @@
             this.emailTextBox.Size = new System.Drawing.Size(61, 26);
             this.emailTextBox.TabIndex = 7;
             // 
-            // label1
+            // label1CadastrarCliente
             // 
-            this.label1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(244, 5);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(646, 40);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Cadastro de Cliente";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1CadastrarCliente.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label1CadastrarCliente.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1CadastrarCliente.Location = new System.Drawing.Point(244, 5);
+            this.label1CadastrarCliente.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1CadastrarCliente.Name = "label1CadastrarCliente";
+            this.label1CadastrarCliente.Size = new System.Drawing.Size(646, 40);
+            this.label1CadastrarCliente.TabIndex = 0;
+            this.label1CadastrarCliente.Text = "Cadastrar Cliente";
+            this.label1CadastrarCliente.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // buttonSalvar
             // 
@@ -628,12 +629,25 @@
             this.label8.TabIndex = 34;
             this.label8.Text = "Digite o telefone";
             // 
+            // label2AlterarCliente
+            // 
+            this.label2AlterarCliente.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label2AlterarCliente.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2AlterarCliente.Location = new System.Drawing.Point(244, 5);
+            this.label2AlterarCliente.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2AlterarCliente.Name = "label2AlterarCliente";
+            this.label2AlterarCliente.Size = new System.Drawing.Size(646, 40);
+            this.label2AlterarCliente.TabIndex = 35;
+            this.label2AlterarCliente.Text = "Alterar Cliente";
+            this.label2AlterarCliente.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // FormCadastroCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1134, 594);
+            this.Controls.Add(this.label2AlterarCliente);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.buttonExcluirTelefone);
@@ -659,7 +673,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.buttonSalvar);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.label1CadastrarCliente);
             this.Controls.Add(emailLabel);
             this.Controls.Add(this.emailTextBox);
             this.Controls.Add(foneLabel);
@@ -700,7 +714,7 @@
         private System.Windows.Forms.TextBox rGTextBox;
         private System.Windows.Forms.TextBox foneTextBox;
         private System.Windows.Forms.TextBox emailTextBox;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label1CadastrarCliente;
         private System.Windows.Forms.Button buttonSalvar;
         private System.Windows.Forms.Button buttonCancelar;
         private System.Windows.Forms.Label label2;
@@ -730,5 +744,6 @@
         private System.Windows.Forms.Button buttonExcluirTelefone;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label2AlterarCliente;
     }
 }

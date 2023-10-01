@@ -165,15 +165,23 @@ namespace GestaoPetShop
 
         private void LoadTheme()
         {
-            foreach (Control btns in this.Controls)
+            try
             {
-                if (btns.GetType() == typeof(Button))
+                foreach (Control btns in this.Controls)
                 {
-                    Button btn = (Button)btns;
-                    btn.BackColor = ThemeColor.PrimaryColor;
-                    btn.ForeColor = Color.White;
-                    btn.FlatAppearance.BorderColor = ThemeColor.SecondaryColor;
+                    if (btns.GetType() == typeof(Button))
+                    {
+                        Button btn = (Button)btns;
+                        btn.BackColor = ThemeColor.PrimaryColor;
+                        btn.ForeColor = Color.White;
+                        btn.FlatAppearance.BorderColor = ThemeColor.SecondaryColor;
+                    }
                 }
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu um erro ao colorir botão.", ex) { Data = { { "Id", 330 } } };
             }
         }
 
@@ -204,6 +212,11 @@ namespace GestaoPetShop
         {
             if (comboBoxBuscarPor.SelectedIndex != 3)
                 textBoxBuscar.Enabled = true;
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

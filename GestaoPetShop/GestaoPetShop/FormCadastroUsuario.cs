@@ -44,18 +44,21 @@ namespace GestaoPetShop
         }
         private void FormCadastroUsuario_Load(object sender, EventArgs e)
         {
+            this.Hide();
             try
             {
                 LoadTheme();
 
                 if (Id == 0)
                 {
-
+                    label2CadastrarUsuario.Visible = true;
+                    label4AlterarUsuario.Visible = false;
                     usuarioBindingSource.AddNew();
                 }
                 else
                 {
-
+                    label2CadastrarUsuario.Visible = false;
+                    label4AlterarUsuario.Visible = true;
                     usuarioBindingSource.DataSource = new UsuarioBLL().BuscarPorId(Id);
 
                 }
@@ -68,15 +71,23 @@ namespace GestaoPetShop
         }
         private void LoadTheme()
         {
-            foreach (Control btns in this.Controls)
+            try
             {
-                if (btns.GetType() == typeof(Button))
+                foreach (Control btns in this.Controls)
                 {
-                    Button btn = (Button)btns;
-                    btn.BackColor = ThemeColor.PrimaryColor;
-                    btn.ForeColor = Color.White;
-                    btn.FlatAppearance.BorderColor = ThemeColor.SecondaryColor;
+                    if (btns.GetType() == typeof(Button))
+                    {
+                        Button btn = (Button)btns;
+                        btn.BackColor = ThemeColor.PrimaryColor;
+                        btn.ForeColor = Color.White;
+                        btn.FlatAppearance.BorderColor = ThemeColor.SecondaryColor;
+                    }
                 }
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu um erro ao tentar formatar um tema aos botões.", ex) { Data = { { "Id", 245 } } };
             }
         }
         private void buttonCancelar_Click(object sender, EventArgs e)
@@ -122,11 +133,13 @@ namespace GestaoPetShop
             if (controle == 0)
             {
                 senhaTextBox.UseSystemPasswordChar = false;
+                textBoxConfirmarSenha.UseSystemPasswordChar = false;
                 controle = 1;
             }
             else
             {
                 senhaTextBox.UseSystemPasswordChar = true;
+                textBoxConfirmarSenha.UseSystemPasswordChar=true;
                 controle = 0;
             }
 

@@ -73,15 +73,24 @@ namespace GestaoPetShop
         }
         private void FormCadastroCliente_Load(object sender, EventArgs e)
         {
+            this.Hide();
             try
             {
                 LoadTheme();
 
                 if (id == 0)
+                {
+                    label1CadastrarCliente.Visible = true;
+                    label2AlterarCliente.Visible = false;
                     clienteBindingSource.AddNew();
+                }
                 else
+                {
+                    label1CadastrarCliente.Visible = false;
+                    label2AlterarCliente.Visible = true;
+                    clienteBindingSource.AddNew();
                     clienteBindingSource.DataSource = new ClienteBLL().BuscarPorId(id);
-
+                }
 
                 if (!permitirSalvar)
                 {
@@ -115,6 +124,7 @@ namespace GestaoPetShop
         private void buttonCancelar_Click(object sender, EventArgs e)
         {
             clienteBindingSource.CancelEdit();
+            Close();
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)

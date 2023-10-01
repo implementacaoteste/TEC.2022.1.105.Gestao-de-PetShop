@@ -35,8 +35,6 @@
             this.animalBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.animalDataGridView = new System.Windows.Forms.DataGridView();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nomeRacaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nomeClienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sexoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.agressivoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -85,8 +83,6 @@
             this.animalDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.animalDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn,
-            this.nomeRacaDataGridViewTextBoxColumn,
-            this.nomeClienteDataGridViewTextBoxColumn,
             this.nomeDataGridViewTextBoxColumn,
             this.sexoDataGridViewTextBoxColumn,
             this.agressivoDataGridViewTextBoxColumn,
@@ -112,7 +108,7 @@
             this.animalDataGridView.RowHeadersWidth = 51;
             this.animalDataGridView.RowTemplate.Height = 24;
             this.animalDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.animalDataGridView.Size = new System.Drawing.Size(843, 398);
+            this.animalDataGridView.Size = new System.Drawing.Size(843, 391);
             this.animalDataGridView.TabIndex = 2;
             // 
             // idDataGridViewTextBoxColumn
@@ -124,32 +120,14 @@
             this.idDataGridViewTextBoxColumn.ReadOnly = true;
             this.idDataGridViewTextBoxColumn.Width = 40;
             // 
-            // nomeRacaDataGridViewTextBoxColumn
-            // 
-            this.nomeRacaDataGridViewTextBoxColumn.DataPropertyName = "NomeRaca";
-            this.nomeRacaDataGridViewTextBoxColumn.HeaderText = "Raça";
-            this.nomeRacaDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.nomeRacaDataGridViewTextBoxColumn.Name = "nomeRacaDataGridViewTextBoxColumn";
-            this.nomeRacaDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nomeRacaDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // nomeClienteDataGridViewTextBoxColumn
-            // 
-            this.nomeClienteDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.nomeClienteDataGridViewTextBoxColumn.DataPropertyName = "NomeCliente";
-            this.nomeClienteDataGridViewTextBoxColumn.HeaderText = "Cliente";
-            this.nomeClienteDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.nomeClienteDataGridViewTextBoxColumn.Name = "nomeClienteDataGridViewTextBoxColumn";
-            this.nomeClienteDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
             // nomeDataGridViewTextBoxColumn
             // 
+            this.nomeDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.nomeDataGridViewTextBoxColumn.DataPropertyName = "Nome";
             this.nomeDataGridViewTextBoxColumn.HeaderText = "Nome";
             this.nomeDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.nomeDataGridViewTextBoxColumn.Name = "nomeDataGridViewTextBoxColumn";
             this.nomeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nomeDataGridViewTextBoxColumn.Width = 150;
             // 
             // sexoDataGridViewTextBoxColumn
             // 
@@ -167,7 +145,6 @@
             this.agressivoDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.agressivoDataGridViewTextBoxColumn.Name = "agressivoDataGridViewTextBoxColumn";
             this.agressivoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.agressivoDataGridViewTextBoxColumn.Width = 80;
             // 
             // corDataGridViewTextBoxColumn
             // 
@@ -203,7 +180,7 @@
             this.dataNascimentoDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.dataNascimentoDataGridViewTextBoxColumn.Name = "dataNascimentoDataGridViewTextBoxColumn";
             this.dataNascimentoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.dataNascimentoDataGridViewTextBoxColumn.Width = 125;
+            this.dataNascimentoDataGridViewTextBoxColumn.Width = 150;
             // 
             // ativoDataGridViewCheckBoxColumn
             // 
@@ -216,11 +193,13 @@
             // 
             // textBoxBuscar
             // 
+            this.textBoxBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxBuscar.Location = new System.Drawing.Point(108, 34);
             this.textBoxBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxBuscar.Name = "textBoxBuscar";
-            this.textBoxBuscar.Size = new System.Drawing.Size(306, 26);
+            this.textBoxBuscar.Size = new System.Drawing.Size(154, 26);
             this.textBoxBuscar.TabIndex = 3;
             // 
             // comboBox1
@@ -242,10 +221,10 @@
             // 
             this.buttonBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonBuscar.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.buttonBuscar.Location = new System.Drawing.Point(418, 29);
+            this.buttonBuscar.Location = new System.Drawing.Point(278, 32);
             this.buttonBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonBuscar.Name = "buttonBuscar";
-            this.buttonBuscar.Size = new System.Drawing.Size(106, 30);
+            this.buttonBuscar.Size = new System.Drawing.Size(141, 30);
             this.buttonBuscar.TabIndex = 5;
             this.buttonBuscar.Text = "&Buscar";
             this.buttonBuscar.UseVisualStyleBackColor = false;
@@ -255,10 +234,10 @@
             // 
             this.buttonAlterar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonAlterar.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.buttonAlterar.Location = new System.Drawing.Point(528, 29);
+            this.buttonAlterar.Location = new System.Drawing.Point(423, 32);
             this.buttonAlterar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonAlterar.Name = "buttonAlterar";
-            this.buttonAlterar.Size = new System.Drawing.Size(106, 30);
+            this.buttonAlterar.Size = new System.Drawing.Size(141, 30);
             this.buttonAlterar.TabIndex = 6;
             this.buttonAlterar.Text = "&Alterar";
             this.buttonAlterar.UseVisualStyleBackColor = false;
@@ -268,10 +247,10 @@
             // 
             this.buttonIserir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonIserir.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.buttonIserir.Location = new System.Drawing.Point(638, 29);
+            this.buttonIserir.Location = new System.Drawing.Point(568, 32);
             this.buttonIserir.Margin = new System.Windows.Forms.Padding(2);
             this.buttonIserir.Name = "buttonIserir";
-            this.buttonIserir.Size = new System.Drawing.Size(106, 30);
+            this.buttonIserir.Size = new System.Drawing.Size(141, 30);
             this.buttonIserir.TabIndex = 7;
             this.buttonIserir.Text = "&Inserir";
             this.buttonIserir.UseVisualStyleBackColor = false;
@@ -281,10 +260,10 @@
             // 
             this.buttonExcluir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonExcluir.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.buttonExcluir.Location = new System.Drawing.Point(748, 29);
+            this.buttonExcluir.Location = new System.Drawing.Point(713, 32);
             this.buttonExcluir.Margin = new System.Windows.Forms.Padding(2);
             this.buttonExcluir.Name = "buttonExcluir";
-            this.buttonExcluir.Size = new System.Drawing.Size(106, 30);
+            this.buttonExcluir.Size = new System.Drawing.Size(141, 30);
             this.buttonExcluir.TabIndex = 8;
             this.buttonExcluir.Text = "&Excluir";
             this.buttonExcluir.UseVisualStyleBackColor = false;
@@ -294,10 +273,10 @@
             // 
             this.buttonSelecionar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonSelecionar.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.buttonSelecionar.Location = new System.Drawing.Point(638, 474);
+            this.buttonSelecionar.Location = new System.Drawing.Point(568, 474);
             this.buttonSelecionar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSelecionar.Name = "buttonSelecionar";
-            this.buttonSelecionar.Size = new System.Drawing.Size(106, 30);
+            this.buttonSelecionar.Size = new System.Drawing.Size(141, 30);
             this.buttonSelecionar.TabIndex = 9;
             this.buttonSelecionar.Text = "&Selecionar";
             this.buttonSelecionar.UseVisualStyleBackColor = false;
@@ -306,10 +285,10 @@
             // 
             this.buttonCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonCancelar.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.buttonCancelar.Location = new System.Drawing.Point(748, 474);
+            this.buttonCancelar.Location = new System.Drawing.Point(713, 474);
             this.buttonCancelar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonCancelar.Name = "buttonCancelar";
-            this.buttonCancelar.Size = new System.Drawing.Size(106, 30);
+            this.buttonCancelar.Size = new System.Drawing.Size(141, 30);
             this.buttonCancelar.TabIndex = 10;
             this.buttonCancelar.Text = "&Cancelar";
             this.buttonCancelar.UseVisualStyleBackColor = false;
@@ -386,9 +365,10 @@
         private System.Windows.Forms.Button buttonSelecionar;
         private System.Windows.Forms.Button buttonCancelar;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomeRacaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomeClienteDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn sexoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn agressivoDataGridViewTextBoxColumn;
@@ -397,6 +377,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn alergiaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataNascimentoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn ativoDataGridViewCheckBoxColumn;
-        private System.Windows.Forms.Label label2;
     }
 }

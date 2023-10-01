@@ -75,7 +75,7 @@
             "Todos"});
             this.comboBoxBuscarPor.Location = new System.Drawing.Point(11, 39);
             this.comboBoxBuscarPor.Name = "comboBoxBuscarPor";
-            this.comboBoxBuscarPor.Size = new System.Drawing.Size(108, 28);
+            this.comboBoxBuscarPor.Size = new System.Drawing.Size(90, 28);
             this.comboBoxBuscarPor.TabIndex = 24;
             this.comboBoxBuscarPor.SelectedIndexChanged += new System.EventHandler(this.comboBoxBuscarPor_SelectedIndexChanged_1);
             // 
@@ -91,19 +91,21 @@
             // 
             // textBoxBuscar
             // 
+            this.textBoxBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxBuscar.Location = new System.Drawing.Point(125, 41);
+            this.textBoxBuscar.Location = new System.Drawing.Point(107, 39);
             this.textBoxBuscar.Name = "textBoxBuscar";
-            this.textBoxBuscar.Size = new System.Drawing.Size(246, 26);
+            this.textBoxBuscar.Size = new System.Drawing.Size(151, 26);
             this.textBoxBuscar.TabIndex = 26;
             // 
             // btnBuscar
             // 
             this.btnBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnBuscar.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.btnBuscar.Location = new System.Drawing.Point(411, 37);
+            this.btnBuscar.Location = new System.Drawing.Point(272, 37);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(106, 30);
+            this.btnBuscar.Size = new System.Drawing.Size(141, 30);
             this.btnBuscar.TabIndex = 27;
             this.btnBuscar.Text = "&Buscar";
             this.btnBuscar.UseVisualStyleBackColor = false;
@@ -113,9 +115,9 @@
             // 
             this.btnAlterar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAlterar.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.btnAlterar.Location = new System.Drawing.Point(523, 37);
+            this.btnAlterar.Location = new System.Drawing.Point(419, 37);
             this.btnAlterar.Name = "btnAlterar";
-            this.btnAlterar.Size = new System.Drawing.Size(106, 30);
+            this.btnAlterar.Size = new System.Drawing.Size(141, 30);
             this.btnAlterar.TabIndex = 28;
             this.btnAlterar.Text = "&Alterar";
             this.btnAlterar.UseVisualStyleBackColor = false;
@@ -125,9 +127,9 @@
             // 
             this.btnInserir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnInserir.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.btnInserir.Location = new System.Drawing.Point(635, 37);
+            this.btnInserir.Location = new System.Drawing.Point(566, 37);
             this.btnInserir.Name = "btnInserir";
-            this.btnInserir.Size = new System.Drawing.Size(106, 30);
+            this.btnInserir.Size = new System.Drawing.Size(141, 30);
             this.btnInserir.TabIndex = 29;
             this.btnInserir.Text = "&Inserir";
             this.btnInserir.UseVisualStyleBackColor = false;
@@ -137,9 +139,9 @@
             // 
             this.btnExcluir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnExcluir.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.btnExcluir.Location = new System.Drawing.Point(748, 37);
+            this.btnExcluir.Location = new System.Drawing.Point(713, 37);
             this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(106, 30);
+            this.btnExcluir.Size = new System.Drawing.Size(141, 30);
             this.btnExcluir.TabIndex = 30;
             this.btnExcluir.Text = "&Excluir";
             this.btnExcluir.UseVisualStyleBackColor = false;
@@ -149,9 +151,9 @@
             // 
             this.btnVisualizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnVisualizar.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.btnVisualizar.Location = new System.Drawing.Point(635, 473);
+            this.btnVisualizar.Location = new System.Drawing.Point(566, 473);
             this.btnVisualizar.Name = "btnVisualizar";
-            this.btnVisualizar.Size = new System.Drawing.Size(106, 30);
+            this.btnVisualizar.Size = new System.Drawing.Size(141, 30);
             this.btnVisualizar.TabIndex = 31;
             this.btnVisualizar.Text = "&Visualizar";
             this.btnVisualizar.UseVisualStyleBackColor = false;
@@ -162,12 +164,13 @@
             this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCancelar.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.btnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancelar.Location = new System.Drawing.Point(747, 473);
+            this.btnCancelar.Location = new System.Drawing.Point(713, 473);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(106, 30);
+            this.btnCancelar.Size = new System.Drawing.Size(141, 30);
             this.btnCancelar.TabIndex = 32;
             this.btnCancelar.Text = "&Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // profissionalBindingSource
             // 
@@ -226,7 +229,7 @@
             this.profissionalDataGridView.RowHeadersWidth = 51;
             this.profissionalDataGridView.RowTemplate.Height = 24;
             this.profissionalDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.profissionalDataGridView.Size = new System.Drawing.Size(843, 382);
+            this.profissionalDataGridView.Size = new System.Drawing.Size(843, 376);
             this.profissionalDataGridView.TabIndex = 33;
             // 
             // dataGridViewTextBoxColumn1
@@ -370,10 +373,10 @@
             this.btnSelecionar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSelecionar.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.btnSelecionar.Enabled = false;
-            this.btnSelecionar.Location = new System.Drawing.Point(523, 474);
+            this.btnSelecionar.Location = new System.Drawing.Point(420, 473);
             this.btnSelecionar.Margin = new System.Windows.Forms.Padding(2);
             this.btnSelecionar.Name = "btnSelecionar";
-            this.btnSelecionar.Size = new System.Drawing.Size(106, 30);
+            this.btnSelecionar.Size = new System.Drawing.Size(141, 30);
             this.btnSelecionar.TabIndex = 34;
             this.btnSelecionar.Text = "Selecionar";
             this.btnSelecionar.UseVisualStyleBackColor = false;
@@ -383,7 +386,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(132, 20);
+            this.label1.Location = new System.Drawing.Point(104, 20);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(154, 16);
             this.label1.TabIndex = 35;

@@ -30,9 +30,9 @@ namespace GestaoPetShop
                             usuarioBindingSource.DataSource = new UsuarioBLL().BuscarTodos();
                             break;
                         }
-                        case 1:
+                    case 1:
                         {
-                            usuarioBindingSource.DataSource = new UsuarioBLL().BuscarPorLogin(textBoxBuscarUsuario.Text) ;
+                            usuarioBindingSource.DataSource = new UsuarioBLL().BuscarPorLogin(textBoxBuscarUsuario.Text);
                             break;
                         }
                     case 2:
@@ -45,7 +45,7 @@ namespace GestaoPetShop
                             usuarioBindingSource.DataSource = new UsuarioBLL().BucarPorIdProfissional(Convert.ToInt32(textBoxBuscarUsuario.Text));
                             break;
                         }
-                     
+
                 }
 
             }
@@ -60,9 +60,9 @@ namespace GestaoPetShop
         {
             try
             {
-                using(FormCadastroUsuario frm = new FormCadastroUsuario())
+                using (FormCadastroUsuario frm = new FormCadastroUsuario())
                 {
-                    frm.ShowDialog(); 
+                    frm.ShowDialog();
                 }
             }
             catch (Exception ex)
@@ -76,7 +76,7 @@ namespace GestaoPetShop
         {
             try
             {
-                if(usuarioBindingSource.Count < 1)
+                if (usuarioBindingSource.Count < 1)
                 {
 
                     MessageBox.Show("Selecione um Usuário.");
@@ -149,20 +149,26 @@ namespace GestaoPetShop
             textBoxBuscarUsuario.Enabled = false;
             LoadTheme();
         }
-        private void LoadTheme() // tem a finalidade de pegar o mesmo efeito de cor do formulario
+        private void LoadTheme()
         {
-            foreach (Control btns in this.Controls)
+            try
             {
-                if (btns.GetType() == typeof(Button))
+                foreach (Control btns in this.Controls)
                 {
-                    Button btn = (Button)btns;
-                    btn.BackColor = ThemeColor.PrimaryColor;
-                    btn.ForeColor = Color.White;
-                    btn.FlatAppearance.BorderColor = ThemeColor.SecondaryColor;
+                    if (btns.GetType() == typeof(Button))
+                    {
+                        Button btn = (Button)btns;
+                        btn.BackColor = ThemeColor.PrimaryColor;
+                        btn.ForeColor = Color.White;
+                        btn.FlatAppearance.BorderColor = ThemeColor.SecondaryColor;
+                    }
                 }
+
             }
-            //label2.ForeColor = ThemeColor.SecondaryColor;
-            //label3.ForeColor = ThemeColor.PrimaryColor;
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu um erro ao buscar uma função por ID no banco de dados.", ex) { Data = { { "Id", 331 } } };
+            }
         }
 
         private void comboBoxSelecionarTipoPesquisaUsuario_SelectedIndexChanged(object sender, EventArgs e)
