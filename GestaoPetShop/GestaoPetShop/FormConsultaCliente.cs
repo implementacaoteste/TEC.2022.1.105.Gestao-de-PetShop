@@ -9,10 +9,11 @@ namespace GestaoPetShop
     public partial class FormConsultaCliente : Form
     {
         public Cliente Cliente { get; set; }
-
-        public FormConsultaCliente()
+        int selecionarcliente;
+        public FormConsultaCliente(int _selecionarcliente = 0)
         {
             InitializeComponent();
+            selecionarcliente =_selecionarcliente;
         }
 
         private void buttonBuscar_Click(object sender, EventArgs e)
@@ -158,6 +159,14 @@ namespace GestaoPetShop
             //    this.clienteTableAdapter.Fill(this.petshopDataSet.Cliente);
                 comboBoxBuscarPor.SelectedIndex = 3;
             textBoxBuscar.Enabled = false;
+            if (selecionarcliente == 1)
+            {
+                buttonSelecionar.Visible = true;
+                buttonExcluir.Enabled = false;
+                buttonInserir.Enabled = false;
+                buttonAlterar.Enabled = false;
+
+            }
         }
         private void LoadTheme() 
         {

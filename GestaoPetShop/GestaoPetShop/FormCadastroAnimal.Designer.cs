@@ -273,7 +273,7 @@
             // 
             // textBox8
             // 
-            this.textBox8.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.animalBindingSource, "NomeCliente", true));
+            this.textBox8.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.animalBindingSource, "Cliente.Nome", true));
             this.textBox8.Enabled = false;
             this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox8.Location = new System.Drawing.Point(251, 149);
@@ -284,7 +284,7 @@
             // 
             // textBox9
             // 
-            this.textBox9.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.animalBindingSource, "NomeRaca", true));
+            this.textBox9.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.animalBindingSource, "Raca.Nome", true));
             this.textBox9.Enabled = false;
             this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox9.Location = new System.Drawing.Point(661, 149);
