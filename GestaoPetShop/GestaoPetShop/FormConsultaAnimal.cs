@@ -103,7 +103,7 @@ namespace GestaoPetShop
                 using (FormCadastroAnimal frm = new FormCadastroAnimal())
                 {
                     frm.ShowDialog();
-                    buttonBuscar_Click(sender, e);
+                    /*buttonBuscar_Click(sender, e);*/
                 }
             }
             catch (Exception ex)

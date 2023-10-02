@@ -59,8 +59,10 @@ namespace GestaoPetShop
                 if (MessageBox.Show("Deseja realmente excluir este registro?", "Atenção", MessageBoxButtons.YesNo) == DialogResult.No)
                     return;
 
-                int id = ((Cliente)clienteBindingSource.Current).Id;
-                new ClienteBLL().Excluir(id);
+                Cliente cliente = new Cliente();
+
+                cliente = (Cliente)clienteBindingSource.Current;
+                new ClienteBLL().Excluir(cliente);
                 clienteBindingSource.RemoveCurrent();
             }
             catch (Exception ex)

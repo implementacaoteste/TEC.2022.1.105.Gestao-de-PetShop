@@ -20,20 +20,21 @@ namespace GestaoPetShop
 
         int id;
         bool permitirSalvar;
-        public FormCadastroAnimal(int _id = 0, bool _permitirSalvar = true)
+        public FormCadastroAnimal(int _id = 0)
         {
             InitializeComponent();
             id = _id;
-            buttonSalvar.Visible = _permitirSalvar;
-            permitirSalvar = _permitirSalvar;
+            //buttonSalvar.Visible = _permitirSalvar;
+            //permitirSalvar = _permitirSalvar;
+            //, bool _permitirSalvar = true
         }
 
         private void buttonSalvar_Click(object sender, EventArgs e)
         {
             try
             {
-                if (!permitirSalvar)
-                    return;
+                //if (!permitirSalvar)
+                //    return;
 
 
                 Animal animal = (Animal)animalBindingSource.Current;
@@ -56,7 +57,7 @@ namespace GestaoPetShop
 
         private void buttonCancelar_Click(object sender, EventArgs e)
         {
-            animalBindingSource.CancelEdit();
+            Close();
         }
 
         private void FormCadastroAnimal_Load(object sender, EventArgs e)

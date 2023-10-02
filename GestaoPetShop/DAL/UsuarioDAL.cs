@@ -132,9 +132,9 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT U.Id, U.UsuarioLogin, U.IdProfissional, U.Senha,U.Ativo, P.Nome FROM Usuario U" +
-                                                                   " INNER JOIN Profissional P ON U.IdProfissional = P.Id" +
-                                                                   "WHERE UPPER(UsuarioLogin) LIKE UPPER(@Login)";
+                cmd.CommandText = @"SELECT U.Id, U.UsuarioLogin, U.IdProfissional, U.Senha,U.Ativo, P.Nome FROM Usuario U 
+                                                                   INNER JOIN Profissional P ON U.IdProfissional = P.Id
+                                                                    WHERE UPPER(U.UsuarioLogin) LIKE UPPER(@Login)";
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@Login","%" + _login + "%");
 
@@ -174,9 +174,9 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = "SELECT Id, UsuarioLogin, IdProfissional, Senha,Ativo FROM Usuario WHERE UsuarioLogin LIKE @Login";
+                cmd.CommandText = "SELECT Id, UsuarioLogin, IdProfissional, Senha,Ativo FROM Usuario WHERE UPPER(UsuarioLogin) LIKE UPPER(@Login)";
                 cmd.CommandType = System.Data.CommandType.Text;
-                cmd.Parameters.AddWithValue("@Login", _login);
+                cmd.Parameters.AddWithValue("@Login", "%"+_login+"%");
 
                 cn.Open();
 
@@ -313,9 +313,9 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = "SELECT U.Id, U.UsuarioLogin, U.IdProfissional, U.Senha,U.Ativo, P.Nome FROM Profissional P" +
-                                                                                    "INNER JOIN Usuario U ON P.Id = U.IdProfissional" +
-                                                                                    "WHERE UPPER(P.Nome) LIKE UPPER(@Nome)";
+                cmd.CommandText = @"SELECT U.Id, U.UsuarioLogin, U.IdProfissional, U.Senha,U.Ativo, P.Nome FROM Profissional P 
+                                        INNER JOIN Usuario U ON P.Id = U.IdProfissional 
+                                                WHERE UPPER(P.Nome) LIKE UPPER(@Nome)";
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@Nome", "%" + _nomeProfissional + "%");
 

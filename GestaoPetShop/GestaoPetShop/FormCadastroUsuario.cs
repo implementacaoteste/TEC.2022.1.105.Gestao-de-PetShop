@@ -117,6 +117,8 @@ namespace GestaoPetShop
                     idTextBoxProfissional.Text = Convert.ToString(frm.id);
                     ((Usuario)usuarioBindingSource.Current).IdProfissional = frm.id;
                     nomeTextBoxProfissional.Text = frm.nome;
+                    ((Usuario)usuarioBindingSource.Current).NomeProfissional = frm.nome;
+
 
                 }
 
