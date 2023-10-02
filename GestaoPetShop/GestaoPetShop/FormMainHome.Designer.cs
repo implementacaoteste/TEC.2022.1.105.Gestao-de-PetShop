@@ -96,6 +96,7 @@
             this.buttonRelatorio.TabIndex = 23;
             this.buttonRelatorio.Text = "R&elatório";
             this.buttonRelatorio.UseVisualStyleBackColor = true;
+            this.buttonRelatorio.Visible = false;
             this.buttonRelatorio.Click += new System.EventHandler(this.buttonRelatorio_Click);
             // 
             // buttonFuncao
