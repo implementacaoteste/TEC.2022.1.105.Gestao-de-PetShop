@@ -16,7 +16,7 @@
 ## Desenvolvedores
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore -->
- [<img src="C:/BD/TEC.2022.1.105.Gestao-de-PetShop/Desenvolvedores/givaldo.png" width="100px;"/><br /><sub><b>Givaldo Gomes</b></sub>](https://github.com/givacombr)<br />
+ [<img src="BD/TEC.2022.1.105.Gestao-de-PetShop/Desenvolvedores/givaldo.png" width="100px;"/><br /><sub><b>Givaldo Gomes</b></sub>](https://github.com/givacombr)<br />
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 ## Licença
