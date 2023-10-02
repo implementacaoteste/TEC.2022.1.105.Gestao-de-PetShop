@@ -16,7 +16,7 @@
 ## Desenvolvedores
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore -->
-![givaldo](https://github.com/implementacaoteste/TEC.2022.1.105.Gestao-de-PetShop/assets/101278555/06abd60c-4786-4189-b2a8-39d82b1a49b6)<br /><sub><b>Givaldo Gomes</b></sub>](https://github.com/givacombr)<br />
+![givaldo](https://github.com/implementacaoteste/TEC.2022.1.105.Gestao-de-PetShop/assets/101278555/06abd60c-4786-4189-b2a8-39d82b1a49b6)<br /><sub><b>Givaldo Gomes</b>
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 ## Licença
