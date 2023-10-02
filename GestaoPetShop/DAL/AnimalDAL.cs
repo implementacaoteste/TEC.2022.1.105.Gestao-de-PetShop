@@ -9,6 +9,7 @@ using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.UI.WebControls;
 
 namespace DAL
 {
@@ -27,7 +28,7 @@ namespace DAL
 
                 //cmd.Parameters.AddWithValue("@Id", _animal.Id);
                 cmd.Parameters.AddWithValue("@IdCliente", _animal.Cliente.Id);
-                cmd.Parameters.AddWithValue("@IdRaca", _animal.Raca.Id); 
+                cmd.Parameters.AddWithValue("@IdRaca", _animal.Raca.Id);
                 cmd.Parameters.AddWithValue("@Nome", _animal.Nome);
                 cmd.Parameters.AddWithValue("@Sexo", _animal.Sexo);
                 cmd.Parameters.AddWithValue("@Agressivo", _animal.Agressivo);
@@ -84,8 +85,9 @@ namespace DAL
                 cmd.Parameters.AddWithValue("DataNascimento", _animal.DataNascimento);
                 cmd.Parameters.AddWithValue("@Ativo", _animal.Ativo);
 
-                cmd.Connection = cn;
+
                 cn.Open();
+                cmd.Connection = cn;
 
                 cmd.ExecuteNonQuery();
             }
