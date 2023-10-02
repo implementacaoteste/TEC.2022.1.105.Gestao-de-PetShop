@@ -336,6 +336,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.agendamentoDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.agendamentoDataGridView.RowHeadersVisible = false;
+            this.agendamentoDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.agendamentoDataGridView.Size = new System.Drawing.Size(421, 259);
             this.agendamentoDataGridView.TabIndex = 35;
             // 
@@ -446,6 +447,7 @@
             this.agendamentoServicosDataGridView.Name = "agendamentoServicosDataGridView";
             this.agendamentoServicosDataGridView.ReadOnly = true;
             this.agendamentoServicosDataGridView.RowHeadersVisible = false;
+            this.agendamentoServicosDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.agendamentoServicosDataGridView.Size = new System.Drawing.Size(414, 259);
             this.agendamentoServicosDataGridView.TabIndex = 35;
             // 

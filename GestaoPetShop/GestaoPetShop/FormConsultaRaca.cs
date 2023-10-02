@@ -77,6 +77,7 @@ namespace GestaoPetShop
                 {
                     frm.ShowDialog();
                 }
+                buttonBuscar_Click(null, null);
             }
             catch (Exception ex)
             {

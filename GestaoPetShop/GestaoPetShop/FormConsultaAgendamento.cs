@@ -367,6 +367,7 @@ namespace GestaoPetShop
                 {
                     frm.ShowDialog();
                 }
+                button_BuscarAgendamentos_Click(null, null);
             }
             catch (Exception ex)
             {
