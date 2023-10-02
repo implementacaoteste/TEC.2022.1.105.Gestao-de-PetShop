@@ -16,7 +16,16 @@
 ## Desenvolvedores
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore -->
-![givaldo](https://github.com/implementacaoteste/TEC.2022.1.105.Gestao-de-PetShop/assets/101278555/06abd60c-4786-4189-b2a8-39d82b1a49b6)<br /><sub><b>Givaldo Gomes</b>
+|![givaldo](https://github.com/implementacaoteste/TEC.2022.1.105.Gestao-de-PetShop/assets/101278555/743e4b71-36b2-43ed-a0ac-8b4643184c57;width="100px")<br /><sub><b>Givaldo</b></sub><br /> | ![dimas](https://github.com/implementacaoteste/TEC.2022.1.105.Gestao-de-PetShop/assets/101278555/fa7f3e07-7d56-4ccc-8398-14b400ceade5;width="100px")<br /><sub><b>Dimas</b></sub> <br /> |:-----------------------------:|:-----------------------------:|
+
+
+![milena](https://github.com/implementacaoteste/TEC.2022.1.105.Gestao-de-PetShop/assets/101278555/a84fe25f-6166-4c4b-9c1c-0546f4976c82)
+![railson](https://github.com/implementacaoteste/TEC.2022.1.105.Gestao-de-PetShop/assets/101278555/9a9f1d78-ab6c-4b06-ba27-659d9dd03c89)
+![erisvaldo](https://github.com/implementacaoteste/TEC.2022.1.105.Gestao-de-PetShop/assets/101278555/040f9015-b1bd-4f6f-8199-3dcdbacf4877)
+
+
+
+
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 ## Licença
