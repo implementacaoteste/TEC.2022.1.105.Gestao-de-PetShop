@@ -81,7 +81,7 @@
             this.comboBoxEscolhaBuscarFuncao.Location = new System.Drawing.Point(12, 34);
             this.comboBoxEscolhaBuscarFuncao.Name = "comboBoxEscolhaBuscarFuncao";
             this.comboBoxEscolhaBuscarFuncao.Size = new System.Drawing.Size(90, 28);
-            this.comboBoxEscolhaBuscarFuncao.TabIndex = 26;
+            this.comboBoxEscolhaBuscarFuncao.TabIndex = 0;
             this.comboBoxEscolhaBuscarFuncao.SelectedIndexChanged += new System.EventHandler(this.comboBoxEscolhaBuscarFuncao_SelectedIndexChanged);
             // 
             // textBoxBuscarFuncao
@@ -106,7 +106,7 @@
             this.btnExcluir.Location = new System.Drawing.Point(712, 32);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(141, 30);
-            this.btnExcluir.TabIndex = 37;
+            this.btnExcluir.TabIndex = 6;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = false;
             this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
@@ -122,7 +122,7 @@
             this.btnAlterar.Location = new System.Drawing.Point(416, 32);
             this.btnAlterar.Name = "btnAlterar";
             this.btnAlterar.Size = new System.Drawing.Size(141, 30);
-            this.btnAlterar.TabIndex = 35;
+            this.btnAlterar.TabIndex = 5;
             this.btnAlterar.Text = "Alterar";
             this.btnAlterar.UseVisualStyleBackColor = false;
             this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
@@ -139,7 +139,7 @@
             this.btnCadastrar.Location = new System.Drawing.Point(563, 32);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(141, 30);
-            this.btnCadastrar.TabIndex = 33;
+            this.btnCadastrar.TabIndex = 4;
             this.btnCadastrar.Text = "Inserir";
             this.btnCadastrar.UseVisualStyleBackColor = false;
             this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
@@ -157,7 +157,7 @@
             this.btnBuscarFuncao.Location = new System.Drawing.Point(269, 32);
             this.btnBuscarFuncao.Name = "btnBuscarFuncao";
             this.btnBuscarFuncao.Size = new System.Drawing.Size(141, 30);
-            this.btnBuscarFuncao.TabIndex = 28;
+            this.btnBuscarFuncao.TabIndex = 1;
             this.btnBuscarFuncao.Text = "Buscar";
             this.btnBuscarFuncao.UseVisualStyleBackColor = false;
             this.btnBuscarFuncao.Click += new System.EventHandler(this.btnBuscarFuncao_Click);
@@ -206,7 +206,7 @@
             this.funcaoDataGridView.RowTemplate.Height = 24;
             this.funcaoDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.funcaoDataGridView.Size = new System.Drawing.Size(419, 397);
-            this.funcaoDataGridView.TabIndex = 39;
+            this.funcaoDataGridView.TabIndex = 2;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -272,7 +272,7 @@
             this.permissoesDataGridView.RowTemplate.Height = 24;
             this.permissoesDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.permissoesDataGridView.Size = new System.Drawing.Size(418, 397);
-            this.permissoesDataGridView.TabIndex = 39;
+            this.permissoesDataGridView.TabIndex = 3;
             // 
             // dataGridViewTextBoxColumn3
             // 
@@ -300,7 +300,7 @@
             this.buttonVincularPermissaoEmFuncao.Margin = new System.Windows.Forms.Padding(2);
             this.buttonVincularPermissaoEmFuncao.Name = "buttonVincularPermissaoEmFuncao";
             this.buttonVincularPermissaoEmFuncao.Size = new System.Drawing.Size(141, 30);
-            this.buttonVincularPermissaoEmFuncao.TabIndex = 40;
+            this.buttonVincularPermissaoEmFuncao.TabIndex = 7;
             this.buttonVincularPermissaoEmFuncao.Text = "Vincular";
             this.buttonVincularPermissaoEmFuncao.UseVisualStyleBackColor = false;
             this.buttonVincularPermissaoEmFuncao.Click += new System.EventHandler(this.buttonVincularPermissaoEmFuncao_Click);
@@ -313,7 +313,7 @@
             this.buttonDesvincularPermissaoDeFuncao.Margin = new System.Windows.Forms.Padding(2);
             this.buttonDesvincularPermissaoDeFuncao.Name = "buttonDesvincularPermissaoDeFuncao";
             this.buttonDesvincularPermissaoDeFuncao.Size = new System.Drawing.Size(141, 30);
-            this.buttonDesvincularPermissaoDeFuncao.TabIndex = 41;
+            this.buttonDesvincularPermissaoDeFuncao.TabIndex = 8;
             this.buttonDesvincularPermissaoDeFuncao.Text = "Desvincular";
             this.buttonDesvincularPermissaoDeFuncao.UseVisualStyleBackColor = false;
             this.buttonDesvincularPermissaoDeFuncao.Click += new System.EventHandler(this.buttonDesvincularPermissaoDeFuncao_Click);

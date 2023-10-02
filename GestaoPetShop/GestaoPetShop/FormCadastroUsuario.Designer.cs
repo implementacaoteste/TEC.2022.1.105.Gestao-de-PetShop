@@ -122,7 +122,7 @@
             this.senhaTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.senhaTextBox.Name = "senhaTextBox";
             this.senhaTextBox.Size = new System.Drawing.Size(322, 26);
-            this.senhaTextBox.TabIndex = 2;
+            this.senhaTextBox.TabIndex = 1;
             this.senhaTextBox.Tag = "";
             this.senhaTextBox.UseSystemPasswordChar = true;
             // 
@@ -141,7 +141,7 @@
             this.ativoCheckBox.Margin = new System.Windows.Forms.Padding(2);
             this.ativoCheckBox.Name = "ativoCheckBox";
             this.ativoCheckBox.Size = new System.Drawing.Size(58, 21);
-            this.ativoCheckBox.TabIndex = 4;
+            this.ativoCheckBox.TabIndex = 3;
             this.ativoCheckBox.Text = "Ativo";
             this.ativoCheckBox.UseVisualStyleBackColor = true;
             // 
@@ -152,7 +152,7 @@
             this.textBoxConfirmarSenha.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxConfirmarSenha.Name = "textBoxConfirmarSenha";
             this.textBoxConfirmarSenha.Size = new System.Drawing.Size(322, 26);
-            this.textBoxConfirmarSenha.TabIndex = 3;
+            this.textBoxConfirmarSenha.TabIndex = 2;
             this.textBoxConfirmarSenha.Tag = "";
             this.textBoxConfirmarSenha.UseSystemPasswordChar = true;
             // 
@@ -205,7 +205,7 @@
             this.usuarioLoginTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.usuarioLoginTextBox.Name = "usuarioLoginTextBox";
             this.usuarioLoginTextBox.Size = new System.Drawing.Size(322, 26);
-            this.usuarioLoginTextBox.TabIndex = 1;
+            this.usuarioLoginTextBox.TabIndex = 0;
             // 
             // idTextBoxProfissional
             // 
@@ -253,7 +253,7 @@
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(106, 30);
-            this.button1.TabIndex = 18;
+            this.button1.TabIndex = 4;
             this.button1.Text = "Visualizar";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);

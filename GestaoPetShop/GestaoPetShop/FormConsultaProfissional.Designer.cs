@@ -76,7 +76,7 @@
             this.comboBoxBuscarPor.Location = new System.Drawing.Point(11, 39);
             this.comboBoxBuscarPor.Name = "comboBoxBuscarPor";
             this.comboBoxBuscarPor.Size = new System.Drawing.Size(90, 28);
-            this.comboBoxBuscarPor.TabIndex = 24;
+            this.comboBoxBuscarPor.TabIndex = 0;
             this.comboBoxBuscarPor.SelectedIndexChanged += new System.EventHandler(this.comboBoxBuscarPor_SelectedIndexChanged_1);
             // 
             // label2
@@ -97,7 +97,7 @@
             this.textBoxBuscar.Location = new System.Drawing.Point(107, 39);
             this.textBoxBuscar.Name = "textBoxBuscar";
             this.textBoxBuscar.Size = new System.Drawing.Size(151, 26);
-            this.textBoxBuscar.TabIndex = 26;
+            this.textBoxBuscar.TabIndex = 1;
             // 
             // btnBuscar
             // 
@@ -106,7 +106,7 @@
             this.btnBuscar.Location = new System.Drawing.Point(272, 37);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(141, 30);
-            this.btnBuscar.TabIndex = 27;
+            this.btnBuscar.TabIndex = 2;
             this.btnBuscar.Text = "&Buscar";
             this.btnBuscar.UseVisualStyleBackColor = false;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
@@ -118,7 +118,7 @@
             this.btnAlterar.Location = new System.Drawing.Point(419, 37);
             this.btnAlterar.Name = "btnAlterar";
             this.btnAlterar.Size = new System.Drawing.Size(141, 30);
-            this.btnAlterar.TabIndex = 28;
+            this.btnAlterar.TabIndex = 6;
             this.btnAlterar.Text = "&Alterar";
             this.btnAlterar.UseVisualStyleBackColor = false;
             this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
@@ -130,7 +130,7 @@
             this.btnInserir.Location = new System.Drawing.Point(566, 37);
             this.btnInserir.Name = "btnInserir";
             this.btnInserir.Size = new System.Drawing.Size(141, 30);
-            this.btnInserir.TabIndex = 29;
+            this.btnInserir.TabIndex = 7;
             this.btnInserir.Text = "&Inserir";
             this.btnInserir.UseVisualStyleBackColor = false;
             this.btnInserir.Click += new System.EventHandler(this.btnInserir_Click);
@@ -142,7 +142,7 @@
             this.btnExcluir.Location = new System.Drawing.Point(713, 37);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(141, 30);
-            this.btnExcluir.TabIndex = 30;
+            this.btnExcluir.TabIndex = 8;
             this.btnExcluir.Text = "&Excluir";
             this.btnExcluir.UseVisualStyleBackColor = false;
             this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
@@ -154,7 +154,7 @@
             this.btnVisualizar.Location = new System.Drawing.Point(566, 473);
             this.btnVisualizar.Name = "btnVisualizar";
             this.btnVisualizar.Size = new System.Drawing.Size(141, 30);
-            this.btnVisualizar.TabIndex = 31;
+            this.btnVisualizar.TabIndex = 5;
             this.btnVisualizar.Text = "&Visualizar";
             this.btnVisualizar.UseVisualStyleBackColor = false;
             this.btnVisualizar.Click += new System.EventHandler(this.btnVisualizar_Click);
@@ -167,7 +167,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(713, 473);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(141, 30);
-            this.btnCancelar.TabIndex = 32;
+            this.btnCancelar.TabIndex = 9;
             this.btnCancelar.Text = "&Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -230,7 +230,7 @@
             this.profissionalDataGridView.RowTemplate.Height = 24;
             this.profissionalDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.profissionalDataGridView.Size = new System.Drawing.Size(843, 376);
-            this.profissionalDataGridView.TabIndex = 33;
+            this.profissionalDataGridView.TabIndex = 3;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -377,7 +377,7 @@
             this.btnSelecionar.Margin = new System.Windows.Forms.Padding(2);
             this.btnSelecionar.Name = "btnSelecionar";
             this.btnSelecionar.Size = new System.Drawing.Size(141, 30);
-            this.btnSelecionar.TabIndex = 34;
+            this.btnSelecionar.TabIndex = 4;
             this.btnSelecionar.Text = "Selecionar";
             this.btnSelecionar.UseVisualStyleBackColor = false;
             this.btnSelecionar.Click += new System.EventHandler(this.btnSelecionar_Click);

@@ -267,7 +267,7 @@
             this.ativoCheckBox.MinimumSize = new System.Drawing.Size(70, 32);
             this.ativoCheckBox.Name = "ativoCheckBox";
             this.ativoCheckBox.Size = new System.Drawing.Size(70, 32);
-            this.ativoCheckBox.TabIndex = 10;
+            this.ativoCheckBox.TabIndex = 11;
             this.ativoCheckBox.Text = "Ativo";
             this.ativoCheckBox.UseVisualStyleBackColor = true;
             // 
@@ -283,7 +283,7 @@
             this.bairroTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.bairroTextBox.Name = "bairroTextBox";
             this.bairroTextBox.Size = new System.Drawing.Size(352, 26);
-            this.bairroTextBox.TabIndex = 5;
+            this.bairroTextBox.TabIndex = 6;
             // 
             // cidadeTextBox
             // 
@@ -293,7 +293,7 @@
             this.cidadeTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.cidadeTextBox.Name = "cidadeTextBox";
             this.cidadeTextBox.Size = new System.Drawing.Size(233, 26);
-            this.cidadeTextBox.TabIndex = 6;
+            this.cidadeTextBox.TabIndex = 7;
             // 
             // logradouroTextBox
             // 
@@ -368,7 +368,7 @@
             this.buttonBuscarFoto.MinimumSize = new System.Drawing.Size(141, 37);
             this.buttonBuscarFoto.Name = "buttonBuscarFoto";
             this.buttonBuscarFoto.Size = new System.Drawing.Size(141, 37);
-            this.buttonBuscarFoto.TabIndex = 18;
+            this.buttonBuscarFoto.TabIndex = 16;
             this.buttonBuscarFoto.Text = "Buscar Foto";
             this.buttonBuscarFoto.UseVisualStyleBackColor = false;
             this.buttonBuscarFoto.Click += new System.EventHandler(this.buttonBuscarFoto_Click);
@@ -389,7 +389,7 @@
             this.textBoxTelefone.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxTelefone.Name = "textBoxTelefone";
             this.textBoxTelefone.Size = new System.Drawing.Size(229, 26);
-            this.textBoxTelefone.TabIndex = 15;
+            this.textBoxTelefone.TabIndex = 14;
             // 
             // buttonInserirEmail
             // 
@@ -431,7 +431,7 @@
             this.buttonInserirTelefone.MinimumSize = new System.Drawing.Size(141, 37);
             this.buttonInserirTelefone.Name = "buttonInserirTelefone";
             this.buttonInserirTelefone.Size = new System.Drawing.Size(141, 37);
-            this.buttonInserirTelefone.TabIndex = 16;
+            this.buttonInserirTelefone.TabIndex = 15;
             this.buttonInserirTelefone.Text = "Inserir";
             this.buttonInserirTelefone.UseVisualStyleBackColor = false;
             this.buttonInserirTelefone.Click += new System.EventHandler(this.buttonInserirTelefone_Click);
@@ -569,7 +569,7 @@
             this.buttonSalvar.MinimumSize = new System.Drawing.Size(141, 37);
             this.buttonSalvar.Name = "buttonSalvar";
             this.buttonSalvar.Size = new System.Drawing.Size(141, 37);
-            this.buttonSalvar.TabIndex = 19;
+            this.buttonSalvar.TabIndex = 17;
             this.buttonSalvar.Text = "Salvar";
             this.buttonSalvar.UseVisualStyleBackColor = false;
             this.buttonSalvar.Click += new System.EventHandler(this.buttonSalvar_Click);
@@ -585,7 +585,7 @@
             this.buttonCancelar.MinimumSize = new System.Drawing.Size(141, 37);
             this.buttonCancelar.Name = "buttonCancelar";
             this.buttonCancelar.Size = new System.Drawing.Size(141, 37);
-            this.buttonCancelar.TabIndex = 20;
+            this.buttonCancelar.TabIndex = 18;
             this.buttonCancelar.Text = "Cancelar";
             this.buttonCancelar.UseVisualStyleBackColor = false;
             this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
@@ -619,7 +619,7 @@
             this.cEPTextBox.Location = new System.Drawing.Point(687, 149);
             this.cEPTextBox.Name = "cEPTextBox";
             this.cEPTextBox.Size = new System.Drawing.Size(249, 26);
-            this.cEPTextBox.TabIndex = 7;
+            this.cEPTextBox.TabIndex = 5;
             // 
             // textBoxDataNascimento
             // 
@@ -640,7 +640,7 @@
             this.nomeFuncaoComboBox.Margin = new System.Windows.Forms.Padding(2);
             this.nomeFuncaoComboBox.Name = "nomeFuncaoComboBox";
             this.nomeFuncaoComboBox.Size = new System.Drawing.Size(217, 28);
-            this.nomeFuncaoComboBox.TabIndex = 11;
+            this.nomeFuncaoComboBox.TabIndex = 10;
             this.nomeFuncaoComboBox.SelectedIndexChanged += new System.EventHandler(this.nomeFuncaoComboBox_SelectedIndexChanged);
             // 
             // idFuncaoTextBox

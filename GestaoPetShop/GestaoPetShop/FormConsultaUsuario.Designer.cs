@@ -63,7 +63,7 @@
             this.textBoxBuscarUsuario.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxBuscarUsuario.Name = "textBoxBuscarUsuario";
             this.textBoxBuscarUsuario.Size = new System.Drawing.Size(165, 26);
-            this.textBoxBuscarUsuario.TabIndex = 2;
+            this.textBoxBuscarUsuario.TabIndex = 1;
             // 
             // comboBoxSelecionarTipoPesquisaUsuario
             // 
@@ -81,7 +81,7 @@
             this.comboBoxSelecionarTipoPesquisaUsuario.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxSelecionarTipoPesquisaUsuario.Name = "comboBoxSelecionarTipoPesquisaUsuario";
             this.comboBoxSelecionarTipoPesquisaUsuario.Size = new System.Drawing.Size(96, 28);
-            this.comboBoxSelecionarTipoPesquisaUsuario.TabIndex = 3;
+            this.comboBoxSelecionarTipoPesquisaUsuario.TabIndex = 0;
             this.comboBoxSelecionarTipoPesquisaUsuario.SelectedIndexChanged += new System.EventHandler(this.comboBoxSelecionarTipoPesquisaUsuario_SelectedIndexChanged);
             // 
             // buttonBuscarUsuario
@@ -92,7 +92,7 @@
             this.buttonBuscarUsuario.Margin = new System.Windows.Forms.Padding(2);
             this.buttonBuscarUsuario.Name = "buttonBuscarUsuario";
             this.buttonBuscarUsuario.Size = new System.Drawing.Size(141, 30);
-            this.buttonBuscarUsuario.TabIndex = 4;
+            this.buttonBuscarUsuario.TabIndex = 2;
             this.buttonBuscarUsuario.Text = "Buscar";
             this.buttonBuscarUsuario.UseVisualStyleBackColor = false;
             this.buttonBuscarUsuario.Click += new System.EventHandler(this.buttonBuscarUsuario_Click);
@@ -118,7 +118,7 @@
             this.buttonInserirUsuario.Margin = new System.Windows.Forms.Padding(2);
             this.buttonInserirUsuario.Name = "buttonInserirUsuario";
             this.buttonInserirUsuario.Size = new System.Drawing.Size(141, 30);
-            this.buttonInserirUsuario.TabIndex = 6;
+            this.buttonInserirUsuario.TabIndex = 4;
             this.buttonInserirUsuario.Text = "Inserir";
             this.buttonInserirUsuario.UseVisualStyleBackColor = false;
             this.buttonInserirUsuario.Click += new System.EventHandler(this.buttonInserirUsuario_Click);
@@ -131,7 +131,7 @@
             this.buttonExcluirUsuario.Margin = new System.Windows.Forms.Padding(2);
             this.buttonExcluirUsuario.Name = "buttonExcluirUsuario";
             this.buttonExcluirUsuario.Size = new System.Drawing.Size(141, 30);
-            this.buttonExcluirUsuario.TabIndex = 7;
+            this.buttonExcluirUsuario.TabIndex = 6;
             this.buttonExcluirUsuario.Text = "Excluir";
             this.buttonExcluirUsuario.UseVisualStyleBackColor = false;
             this.buttonExcluirUsuario.Click += new System.EventHandler(this.buttonExcluirUsuario_Click);
@@ -183,7 +183,7 @@
             this.usuarioDataGridView.RowTemplate.Height = 24;
             this.usuarioDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.usuarioDataGridView.Size = new System.Drawing.Size(845, 437);
-            this.usuarioDataGridView.TabIndex = 9;
+            this.usuarioDataGridView.TabIndex = 3;
             // 
             // dataGridViewTextBoxColumn3
             // 

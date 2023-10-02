@@ -64,7 +64,7 @@
             this.buttonBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonBuscar.Name = "buttonBuscar";
             this.buttonBuscar.Size = new System.Drawing.Size(141, 30);
-            this.buttonBuscar.TabIndex = 0;
+            this.buttonBuscar.TabIndex = 2;
             this.buttonBuscar.Text = "&Buscar";
             this.buttonBuscar.UseVisualStyleBackColor = false;
             this.buttonBuscar.Click += new System.EventHandler(this.buttonBuscar_Click);
@@ -77,7 +77,7 @@
             this.buttonAlterar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonAlterar.Name = "buttonAlterar";
             this.buttonAlterar.Size = new System.Drawing.Size(141, 30);
-            this.buttonAlterar.TabIndex = 1;
+            this.buttonAlterar.TabIndex = 4;
             this.buttonAlterar.Text = "&Alterar";
             this.buttonAlterar.UseVisualStyleBackColor = false;
             this.buttonAlterar.Click += new System.EventHandler(this.buttonAlterar_Click);
@@ -90,7 +90,7 @@
             this.buttonInserir.Margin = new System.Windows.Forms.Padding(2);
             this.buttonInserir.Name = "buttonInserir";
             this.buttonInserir.Size = new System.Drawing.Size(141, 30);
-            this.buttonInserir.TabIndex = 2;
+            this.buttonInserir.TabIndex = 5;
             this.buttonInserir.Text = "&Inserir";
             this.buttonInserir.UseVisualStyleBackColor = false;
             this.buttonInserir.Click += new System.EventHandler(this.buttonInserir_Click);
@@ -103,7 +103,7 @@
             this.buttonExcluir.Margin = new System.Windows.Forms.Padding(2);
             this.buttonExcluir.Name = "buttonExcluir";
             this.buttonExcluir.Size = new System.Drawing.Size(141, 30);
-            this.buttonExcluir.TabIndex = 3;
+            this.buttonExcluir.TabIndex = 8;
             this.buttonExcluir.Text = "&Excluir";
             this.buttonExcluir.UseVisualStyleBackColor = false;
             this.buttonExcluir.Click += new System.EventHandler(this.buttonExcluir_Click);
@@ -186,7 +186,7 @@
             this.racaDataGridView.RowTemplate.Height = 24;
             this.racaDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.racaDataGridView.Size = new System.Drawing.Size(831, 356);
-            this.racaDataGridView.TabIndex = 6;
+            this.racaDataGridView.TabIndex = 3;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -236,7 +236,7 @@
             this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(83, 28);
-            this.comboBox1.TabIndex = 7;
+            this.comboBox1.TabIndex = 0;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // textBoxBuscar
@@ -248,7 +248,7 @@
             this.textBoxBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxBuscar.Name = "textBoxBuscar";
             this.textBoxBuscar.Size = new System.Drawing.Size(153, 26);
-            this.textBoxBuscar.TabIndex = 8;
+            this.textBoxBuscar.TabIndex = 1;
             // 
             // buttonSelecionar
             // 
@@ -258,7 +258,7 @@
             this.buttonSelecionar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSelecionar.Name = "buttonSelecionar";
             this.buttonSelecionar.Size = new System.Drawing.Size(141, 30);
-            this.buttonSelecionar.TabIndex = 9;
+            this.buttonSelecionar.TabIndex = 6;
             this.buttonSelecionar.Text = "&Selecionar";
             this.buttonSelecionar.UseVisualStyleBackColor = false;
             this.buttonSelecionar.Click += new System.EventHandler(this.buttonSelecionar_Click);
@@ -272,7 +272,7 @@
             this.buttonCancelar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonCancelar.Name = "buttonCancelar";
             this.buttonCancelar.Size = new System.Drawing.Size(141, 30);
-            this.buttonCancelar.TabIndex = 10;
+            this.buttonCancelar.TabIndex = 7;
             this.buttonCancelar.Text = "&Cancelar";
             this.buttonCancelar.UseVisualStyleBackColor = false;
             this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
