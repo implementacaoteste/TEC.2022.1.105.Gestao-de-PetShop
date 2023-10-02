@@ -211,32 +211,120 @@ namespace DAL
                 cn.Close();
             }
         }
-        public void Excluir(int _id)
+        public void Excluir(Cliente _cliente, SqlTransaction _transaction = null)
         {
-
-            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
-            try
+            SqlTransaction transaction = _transaction;
+            using (SqlConnection cn = new SqlConnection(Conexao.StringDeConexao))
             {
-                SqlCommand cmd = cn.CreateCommand();
-                cmd.CommandText = @"DELETE FROM Cliente WHERE id = @id";
-                cmd.CommandType = System.Data.CommandType.Text;
-
-                cmd.Parameters.AddWithValue("@Id", _id);
-
-                cmd.Connection = cn;
-                cn.Open();
-
-                cmd.ExecuteNonQuery();
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("Ocorreu um erro ao tentar excluir cliente no banco de dados.", ex) { Data = { { "Id", 12 } } };
-            }
-            finally
-            {
-                cn.Close();
+                using (SqlCommand cmd = new SqlCommand(@"DELETE FROM Cliente WHERE Id = @Id", cn))
+                {
+                    cmd.Parameters.AddWithValue("@Id", _cliente.Id);
+                    if (_transaction == null)
+                    {
+                        cn.Open();
+                        transaction = cn.BeginTransaction();
+                    }
+                    cmd.Transaction = transaction;
+                    cmd.Connection = transaction.Connection;
+                    try
+                    {
+                        if (_cliente.EmailCliente.Count > 0)
+                        {
+                            ExcluirEmailCliente(_cliente, _cliente.EmailCliente, transaction);
+                        }
+                        if (_cliente.TelefoneClientes.Count > 0)
+                        {
+                            ExcluirTelefoneCliente(_cliente, _cliente.TelefoneClientes, transaction);
+                        }
+                        cmd.ExecuteNonQuery();
+                        if (_transaction == null)
+                            transaction.Commit();
+                    }
+                    catch (Exception ex)
+                    {
+                        if (transaction != null && transaction.Connection != null)
+                            transaction.Rollback();
+                        throw new Exception("Ocorreu um erro ao tentar excluir agendamento no banco de dados.", ex) { Data = { { "Id", -1 } } };
+                    }
+                }
             }
         }
+
+        private void ExcluirEmailCliente(Cliente _cliente, List<EmailCliente> _emailCliente, SqlTransaction _transaction)
+        {
+            SqlTransaction transaction = _transaction;
+            using (SqlConnection cn = new SqlConnection(Conexao.StringDeConexao))
+            {
+                using (SqlCommand cmd = new SqlCommand("DELETE FROM EmailCliente WHERE Id = @Id", cn))
+                {
+                    try
+                    {
+                        if (transaction == null)
+                        {
+                            cn.Open();
+                            transaction = cn.BeginTransaction();
+                        }
+                        cmd.Transaction = transaction;
+                        cmd.Connection = transaction.Connection;
+
+                        cmd.CommandType = System.Data.CommandType.Text;
+                        foreach (EmailCliente item in _emailCliente)
+                        {
+                            cmd.Parameters.Clear();
+                            cmd.Parameters.AddWithValue("@Id", item.Id);
+                            cmd.ExecuteNonQuery();
+                        }
+                        if (_transaction == null)
+                            transaction.Commit();
+                    }
+                    catch (Exception ex)
+                    {
+                        if (transaction != null && transaction.Connection != null)
+                            transaction.Rollback();
+                        throw new Exception("Ocorreu um erro ao tentar excluir o E-mail do Cliente do banco de dados.", ex) { Data = { { "Id", 32 } } };
+                    }
+                }
+            }
+        }
+
+        private void ExcluirTelefoneCliente(Cliente _cliente, List<TelefoneCliente> _telefoneClientes, SqlTransaction _transaction)
+        {
+            SqlTransaction transaction = _transaction;
+            using (SqlConnection cn = new SqlConnection(Conexao.StringDeConexao))
+            {
+                using (SqlCommand cmd = new SqlCommand("DELETE FROM TelefoneCliente WHERE Id = @Id", cn))
+                {
+                    try
+                    {
+                        if (transaction == null)
+                        {
+                            cn.Open();
+                            transaction = cn.BeginTransaction();
+                        }
+                        cmd.Transaction = transaction;
+                        cmd.Connection = transaction.Connection;
+
+                        cmd.CommandType = System.Data.CommandType.Text;
+                        foreach (TelefoneCliente item in _telefoneClientes)
+                        {
+                            cmd.Parameters.Clear();
+                            cmd.Parameters.AddWithValue("@Id", item.Id);
+                            cmd.ExecuteNonQuery();
+                        }
+                        if (_transaction == null)
+                            transaction.Commit();
+                    }
+                    catch (Exception ex)
+                    {
+                        if (transaction != null && transaction.Connection != null)
+                            transaction.Rollback();
+                        throw new Exception("Ocorreu um erro ao tentar excluir o Telefone do Cliente do banco de dados.", ex) { Data = { { "Id", 32 } } };
+                    }
+                }
+            }
+
+        }
+
         public List<Cliente> BuscarTodos()
 
         {

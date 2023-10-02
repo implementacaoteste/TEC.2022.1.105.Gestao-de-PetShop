@@ -84,9 +84,9 @@ namespace BLL
             ValidarDados(_cliente);
             new ClienteDAL().Alterar(_cliente);
         }
-        public void Excluir(int _id)
+        public void Excluir(Cliente _cliente)
         {
-            new ClienteDAL().Excluir(_id);
+            new ClienteDAL().Excluir(_cliente);
         }
     }
 }

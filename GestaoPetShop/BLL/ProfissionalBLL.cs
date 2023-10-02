@@ -29,9 +29,9 @@ namespace BLL
         {
             new ProfissionalDAL().Alterar(_profissional);
         }
-        public void Excluir(int _id)
+        public void Excluir(Profissional  _profissional)
         {
-            new ProfissionalDAL().Excluir(_id);
+            new ProfissionalDAL().Excluir(_profissional);
         }//Givas
         public Profissional BuscarPorId(int _id)//Givas
         {

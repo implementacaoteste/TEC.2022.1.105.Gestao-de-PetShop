@@ -370,29 +370,117 @@ namespace DAL
                 cn.Close();
             }
         }
-        public void Excluir(int _id)//Givas
+        public void Excluir(Profissional _profissional, SqlTransaction _transaction = null)//Givas
         {
-            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
-            try
+            SqlTransaction transaction = _transaction;
+            using (SqlConnection cn = new SqlConnection(Conexao.StringDeConexao))
             {
-                SqlCommand cmd = cn.CreateCommand();
-                cmd.CommandText = @"DELETE FROM Profissional WHERE Id = @Id";
-                cmd.CommandType = System.Data.CommandType.Text;
-
-                cmd.Parameters.AddWithValue("@Id", _id);
-
-                cmd.Connection = cn;
-                cn.Open();
-
-                cmd.ExecuteNonQuery();
+                using (SqlCommand cmd = new SqlCommand(@"DELETE FROM Profissional WHERE Id = @Id", cn))
+                {
+                    cmd.Parameters.AddWithValue("@Id", _profissional.Id);
+                    if (_transaction == null)
+                    {
+                        cn.Open();
+                        transaction = cn.BeginTransaction();
+                    }
+                    cmd.Transaction = transaction;
+                    cmd.Connection = transaction.Connection;
+                    try
+                    {
+                        if (_profissional.EmailProfissional.Count > 0)
+                        {
+                            ExcluirEmailProfissional(_profissional, _profissional.EmailProfissional, transaction);
+                        }
+                        if(_profissional.TelefoneProfissional.Count > 0)
+                        {
+                            ExcluirTelefoneProfissional(_profissional, _profissional.TelefoneProfissional, transaction);
+                        }
+                        cmd.ExecuteNonQuery();
+                        if (_transaction == null)
+                            transaction.Commit();
+                    }
+                    catch (Exception ex)
+                    {
+                        if (transaction != null && transaction.Connection != null)
+                            transaction.Rollback();
+                        throw new Exception("Ocorreu um erro ao tentar excluir agendamento no banco de dados.", ex) { Data = { { "Id", -1 } } };
+                    }
+                }
             }
-            catch (Exception ex)
+        }
+
+        private void ExcluirTelefoneProfissional(Profissional _profissional, List<TelefoneProfissional> _telefoneProfissional, SqlTransaction _transaction)
+        {
+            SqlTransaction transaction = _transaction;
+            using (SqlConnection cn = new SqlConnection(Conexao.StringDeConexao))
             {
-                throw new Exception("Ocorreu um erro ao tentar Excluir um Profissional no banco de dados.", ex) { Data = { { "Id", 136 } } };
+                using (SqlCommand cmd = new SqlCommand("DELETE FROM TelefoneProfissional WHERE Id = @Id", cn))
+                {
+                    try
+                    {
+                        if (transaction == null)
+                        {
+                            cn.Open();
+                            transaction = cn.BeginTransaction();
+                        }
+                        cmd.Transaction = transaction;
+                        cmd.Connection = transaction.Connection;
+
+                        cmd.CommandType = System.Data.CommandType.Text;
+                        foreach (TelefoneProfissional item in _telefoneProfissional)
+                        {
+                            cmd.Parameters.Clear();
+                            cmd.Parameters.AddWithValue("@Id", item.Id);
+                            cmd.ExecuteNonQuery();
+                        }
+                        if (_transaction == null)
+                            transaction.Commit();
+                    }
+                    catch (Exception ex)
+                    {
+                        if (transaction != null && transaction.Connection != null)
+                            transaction.Rollback();
+                        throw new Exception("Ocorreu um erro ao tentar excluir o Telefone do Profissional do banco de dados.", ex) { Data = { { "Id", 32 } } };
+                    }
+                }
             }
-            finally
+        }
+
+        private void ExcluirEmailProfissional(Profissional _profissional, List<EmailProfissional> _emailProfissional, SqlTransaction _transaction)
+        {
+
+            SqlTransaction transaction = _transaction;
+            using (SqlConnection cn = new SqlConnection(Conexao.StringDeConexao))
             {
-                cn.Close();
+                using (SqlCommand cmd = new SqlCommand("DELETE FROM EmailProfissional WHERE Id = @Id", cn))
+                {
+                    try
+                    {
+                        if (transaction == null)
+                        {
+                            cn.Open();
+                            transaction = cn.BeginTransaction();
+                        }
+                        cmd.Transaction = transaction;
+                        cmd.Connection = transaction.Connection;
+
+                        cmd.CommandType = System.Data.CommandType.Text;
+                        foreach (EmailProfissional item in _emailProfissional)
+                        {
+                            cmd.Parameters.Clear();
+                            cmd.Parameters.AddWithValue("@Id", item.Id);
+                            cmd.ExecuteNonQuery();
+                        }
+                        if (_transaction == null)
+                            transaction.Commit();
+                    }
+                    catch (Exception ex)
+                    {
+                        if (transaction != null && transaction.Connection != null)
+                            transaction.Rollback();
+                        throw new Exception("Ocorreu um erro ao tentar excluir E-mail do Profissional do banco de dados.", ex) { Data = { { "Id", 32 } } };
+                    }
+                }
             }
         }
     }
