@@ -42,21 +42,32 @@ namespace GestaoPetShop
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                //MessageBox.Show(ex.Message);
+                throw new Exception("Ocorreu um erro ao tentar cadastrar um profissional no banco de dados.", ex) { Data = { { "Id", 238 } } };
             }
         }
         private void FormCadastroProfissional_Load(object sender, EventArgs e)
         {
+            this.Hide();
             try
             {
                 LoadTheme();
 
                 if (id == 0)
+                {
+                    lblCadastrarProfissional.Visible = true;
+                    lblAlterarProfissional.Visible = false;
                     profissionalBindingSource.AddNew();
-                   
+                }
+
                 else
+                {
+                    lblCadastrarProfissional.Visible = false;
+                    lblAlterarProfissional.Visible = true;
+                    profissionalBindingSource.AddNew();
                     btnGerarSenha.Visible = true;
-                profissionalBindingSource.DataSource = new ProfissionalBLL().BuscarPorId(id);
+                    profissionalBindingSource.DataSource = new ProfissionalBLL().BuscarPorId(id);
+                }
 
                 if (!permitirSalvar)
                 {
@@ -78,20 +89,29 @@ namespace GestaoPetShop
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                //MessageBox.Show(ex.Message);
+                throw new Exception("Ocorreu um erro ao buscar um profissional por ID no banco de dados.", ex) { Data = { { "Id", 239 } } };
             }
         }
         private void LoadTheme()
         {
-            foreach (Control btns in this.Controls)
+            try
             {
-                if (btns.GetType() == typeof(Button))
+                foreach (Control btns in this.Controls)
                 {
-                    Button btn = (Button)btns;
-                    btn.BackColor = ThemeColor.PrimaryColor;
-                    btn.ForeColor = Color.White;
-                    btn.FlatAppearance.BorderColor = ThemeColor.SecondaryColor;
+                    if (btns.GetType() == typeof(Button))
+                    {
+                        Button btn = (Button)btns;
+                        btn.BackColor = ThemeColor.PrimaryColor;
+                        btn.ForeColor = Color.White;
+                        btn.FlatAppearance.BorderColor = ThemeColor.SecondaryColor;
+                    }
                 }
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu um erro ao na função de colorir botões.", ex) { Data = { { "Id", 240 } } };
             }
         }
         private void buttonCancelar_Click(object sender, EventArgs e)
@@ -111,28 +131,44 @@ namespace GestaoPetShop
         }
         private void buttonInserirEmail_Click(object sender, EventArgs e)
         {
-            if (textBoxEmail.Text == "")
+            try
             {
-                MessageBox.Show("O campo do E-mail não estar preenchido.");
-                return;
+                if (textBoxEmail.Text == "")
+                {
+                    MessageBox.Show("O campo do E-mail não estar preenchido.");
+                    return;
+                }
+                emailProfissionalBindingSource.AddNew();
+                ((EmailProfissional)emailProfissionalBindingSource.Current).Email = textBoxEmail.Text;
+                emailProfissionalBindingSource.EndEdit();
+                textBoxEmail.Text = "";
+
             }
-            emailProfissionalBindingSource.AddNew();
-            ((EmailProfissional)emailProfissionalBindingSource.Current).Email = textBoxEmail.Text;
-            emailProfissionalBindingSource.EndEdit();
-            textBoxEmail.Text = "";
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu um erro ao tentar adicionar o e-mail do profissional no banco de dados.", ex) { Data = { { "Id", 241 } } };
+            }
 
         }
         private void buttonInserirTelefone_Click(object sender, EventArgs e)
         {
-            if (textBoxTelefone.Text == "")
+            try
             {
-                MessageBox.Show("O campo do Telefone não estar preenchido.");
-                return;
+                if (textBoxTelefone.Text == "")
+                {
+                    MessageBox.Show("O campo do Telefone não estar preenchido.");
+                    return;
+                }
+                telefoneProfissionalBindingSource.AddNew();
+                ((TelefoneProfissional)telefoneProfissionalBindingSource.Current).Telefone = textBoxTelefone.Text;
+                telefoneProfissionalBindingSource.EndEdit();
+                textBoxTelefone.Text = "";
+
             }
-            telefoneProfissionalBindingSource.AddNew();
-            ((TelefoneProfissional)telefoneProfissionalBindingSource.Current).Telefone = textBoxTelefone.Text;
-            telefoneProfissionalBindingSource.EndEdit();
-            textBoxTelefone.Text = "";
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu um erro ao tentar adicionar o telefone do profissional no banco de dados.", ex) { Data = { { "Id", 242 } } };
+            }
         }
         private void buttonExcluirEmail_Click(object sender, EventArgs e)
         {
@@ -153,7 +189,7 @@ namespace GestaoPetShop
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                throw new Exception("Ocorreu um erro ao tentar excluir um E-mail do profissional no banco de dados.", ex) { Data = { { "Id", 243 } } };
             }
         }
         private void buttonExcluirTelefone_Click(object sender, EventArgs e)
@@ -174,7 +210,7 @@ namespace GestaoPetShop
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                throw new Exception("Ocorreu um erro ao tentar excluir um Telefone do profissional no banco de dados.", ex) { Data = { { "Id", 244 } } };
             }
         }
         private void nomeFuncaoComboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -187,12 +223,12 @@ namespace GestaoPetShop
             {
                 idFuncaoTextBox.Text = funcoes[x].Id.ToString();
                 ((Profissional)profissionalBindingSource.Current).IdFuncao = Convert.ToInt32(funcoes[x].Id);
-                    //Insert(x, Convert.ToString(funcoes[x].Id));
+                //Insert(x, Convert.ToString(funcoes[x].Id));
             }
         }
         private void btnGerarSenha_Click(object sender, EventArgs e)
         {
-            
+
             using (FormGerarSenha frm = new FormGerarSenha(id))
             {
                 frm.ShowDialog();

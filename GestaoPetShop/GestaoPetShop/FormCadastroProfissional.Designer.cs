@@ -73,13 +73,14 @@
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.buttonSalvar = new System.Windows.Forms.Button();
             this.buttonCancelar = new System.Windows.Forms.Button();
-            this.lblProfissional = new System.Windows.Forms.Label();
+            this.lblCadastrarProfissional = new System.Windows.Forms.Label();
             this.cPFTextBox = new System.Windows.Forms.TextBox();
             this.cEPTextBox = new System.Windows.Forms.TextBox();
             this.textBoxDataNascimento = new System.Windows.Forms.TextBox();
             this.nomeFuncaoComboBox = new System.Windows.Forms.ComboBox();
             this.idFuncaoTextBox = new System.Windows.Forms.TextBox();
             this.btnGerarSenha = new System.Windows.Forms.Button();
+            this.lblAlterarProfissional = new System.Windows.Forms.Label();
             bairroLabel = new System.Windows.Forms.Label();
             cidadeLabel = new System.Windows.Forms.Label();
             dataNascimentoLabel = new System.Windows.Forms.Label();
@@ -492,7 +493,7 @@
             this.emailProfissionalDataGridView.RowHeadersWidth = 51;
             this.emailProfissionalDataGridView.RowTemplate.Height = 24;
             this.emailProfissionalDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.emailProfissionalDataGridView.Size = new System.Drawing.Size(551, 148);
+            this.emailProfissionalDataGridView.Size = new System.Drawing.Size(551, 164);
             this.emailProfissionalDataGridView.TabIndex = 34;
             // 
             // dataGridViewTextBoxColumn3
@@ -546,7 +547,7 @@
             this.telefoneProfissionalDataGridView.RowHeadersWidth = 51;
             this.telefoneProfissionalDataGridView.RowTemplate.Height = 24;
             this.telefoneProfissionalDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.telefoneProfissionalDataGridView.Size = new System.Drawing.Size(519, 148);
+            this.telefoneProfissionalDataGridView.Size = new System.Drawing.Size(519, 164);
             this.telefoneProfissionalDataGridView.TabIndex = 34;
             // 
             // dataGridViewTextBoxColumn6
@@ -578,7 +579,7 @@
             this.buttonCancelar.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.buttonCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.buttonCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCancelar.Location = new System.Drawing.Point(972, 546);
+            this.buttonCancelar.Location = new System.Drawing.Point(972, 553);
             this.buttonCancelar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonCancelar.MaximumSize = new System.Drawing.Size(141, 37);
             this.buttonCancelar.MinimumSize = new System.Drawing.Size(141, 37);
@@ -589,18 +590,17 @@
             this.buttonCancelar.UseVisualStyleBackColor = false;
             this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
             // 
-            // lblProfissional
+            // lblCadastrarProfissional
             // 
-            this.lblProfissional.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.lblProfissional.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblProfissional.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProfissional.Location = new System.Drawing.Point(0, 0);
-            this.lblProfissional.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblProfissional.Name = "lblProfissional";
-            this.lblProfissional.Size = new System.Drawing.Size(1134, 40);
-            this.lblProfissional.TabIndex = 37;
-            this.lblProfissional.Text = "Cadastro de Profissional";
-            this.lblProfissional.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblCadastrarProfissional.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lblCadastrarProfissional.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCadastrarProfissional.Location = new System.Drawing.Point(0, 9);
+            this.lblCadastrarProfissional.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCadastrarProfissional.Name = "lblCadastrarProfissional";
+            this.lblCadastrarProfissional.Size = new System.Drawing.Size(1134, 40);
+            this.lblCadastrarProfissional.TabIndex = 37;
+            this.lblCadastrarProfissional.Text = "Cadastrar Profissional";
+            this.lblCadastrarProfissional.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // cPFTextBox
             // 
@@ -672,12 +672,25 @@
             this.btnGerarSenha.Visible = false;
             this.btnGerarSenha.Click += new System.EventHandler(this.btnGerarSenha_Click);
             // 
+            // lblAlterarProfissional
+            // 
+            this.lblAlterarProfissional.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lblAlterarProfissional.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAlterarProfissional.Location = new System.Drawing.Point(0, 9);
+            this.lblAlterarProfissional.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblAlterarProfissional.Name = "lblAlterarProfissional";
+            this.lblAlterarProfissional.Size = new System.Drawing.Size(1134, 40);
+            this.lblAlterarProfissional.TabIndex = 44;
+            this.lblAlterarProfissional.Text = "Alterar Profissional";
+            this.lblAlterarProfissional.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // FormCadastroProfissional
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1134, 594);
+            this.Controls.Add(this.lblAlterarProfissional);
             this.Controls.Add(label2);
             this.Controls.Add(label1);
             this.Controls.Add(this.pictureBoxFoto);
@@ -691,7 +704,7 @@
             this.Controls.Add(this.cEPTextBox);
             this.Controls.Add(cPFLabel1);
             this.Controls.Add(this.cPFTextBox);
-            this.Controls.Add(this.lblProfissional);
+            this.Controls.Add(this.lblCadastrarProfissional);
             this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.buttonSalvar);
             this.Controls.Add(this.telefoneProfissionalDataGridView);
@@ -765,7 +778,7 @@
         private System.Windows.Forms.DataGridView telefoneProfissionalDataGridView;
         private System.Windows.Forms.Button buttonSalvar;
         private System.Windows.Forms.Button buttonCancelar;
-        private System.Windows.Forms.Label lblProfissional;
+        private System.Windows.Forms.Label lblCadastrarProfissional;
         private System.Windows.Forms.TextBox cPFTextBox;
         private System.Windows.Forms.TextBox cEPTextBox;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
@@ -774,5 +787,6 @@
         private System.Windows.Forms.ComboBox nomeFuncaoComboBox;
         private System.Windows.Forms.TextBox idFuncaoTextBox;
         private System.Windows.Forms.Button btnGerarSenha;
+        private System.Windows.Forms.Label lblAlterarProfissional;
     }
 }

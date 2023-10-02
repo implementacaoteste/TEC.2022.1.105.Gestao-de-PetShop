@@ -176,6 +176,12 @@ namespace GestaoPetShop
             if (comboBoxBuscarPor.SelectedIndex != 3)
                 textBoxBuscar.Enabled = true;
         }
+
+        private void buttonCancelar_Click(object sender, EventArgs e)
+        {
+            clienteBindingSource.CancelEdit();
+            Close();
+        }
     }
     
 }

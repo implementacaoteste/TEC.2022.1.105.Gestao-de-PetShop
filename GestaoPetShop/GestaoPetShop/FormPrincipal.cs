@@ -12,24 +12,7 @@ namespace GestaoPetShop
         public FormPrincipal()
         {
             InitializeComponent();
-            //LoadTheme();
         }
-
-        //private void LoadTheme()
-        //{
-        //    foreach (Control btns in this.Controls)
-        //    {
-        //        if (btns.GetType() == typeof(Button))
-        //        {
-        //            Button btn = (Button)btns;
-        //            btn.BackColor = ThemeColor.PrimaryColor;
-        //            btn.ForeColor = Color.White;
-        //            btn.FlatAppearance.BorderColor = ThemeColor.SecondaryColor;
-        //        }
-        //    }
-        //    //label4.ForeColor = ThemeColor.SecondaryColor;
-        //    //label5.ForeColor = ThemeColor.PrimaryColor;
-        //}
         private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             try
@@ -49,25 +32,7 @@ namespace GestaoPetShop
         private void FormPrincipal_Load(object sender, EventArgs e)
         {
 
-            //  agendamentoDataGridView.DataSource = new Agendamento();// ERA APENAS UM TESTE -DEIXEI AQUI SÓ PRA LEMBRAR
-
-
-            //try
-            //{
-            //    using (FormLogin frm = new FormLogin())
-            //    {
-            //        frm.ShowDialog();
-            //        if (!frm.Logou)
-            //            Application.Exit();
-            //        lblUsuarioLogado.Text = Constantes.UsuarioLogado;
-            //    }
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show(ex.Message);
-            //}
         }
-
 
         private void FormPrincipal_KeyDown(object sender, KeyEventArgs e)
         {

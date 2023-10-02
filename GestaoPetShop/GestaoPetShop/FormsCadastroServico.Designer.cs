@@ -46,10 +46,6 @@
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.button_SalvarServico = new System.Windows.Forms.Button();
             this.button_CancelarCadastroOuAlterar = new System.Windows.Forms.Button();
-            this.splitter1 = new System.Windows.Forms.Splitter();
-            this.splitter2 = new System.Windows.Forms.Splitter();
-            this.splitter3 = new System.Windows.Forms.Splitter();
-            this.splitter4 = new System.Windows.Forms.Splitter();
             ativoLabel = new System.Windows.Forms.Label();
             descricaoLabel = new System.Windows.Forms.Label();
             idLabel = new System.Windows.Forms.Label();
@@ -182,38 +178,38 @@
             // label1CadastrarServico
             // 
             this.label1CadastrarServico.AutoSize = true;
-            this.label1CadastrarServico.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1CadastrarServico.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1CadastrarServico.ForeColor = System.Drawing.Color.Black;
-            this.label1CadastrarServico.Location = new System.Drawing.Point(383, 51);
+            this.label1CadastrarServico.Location = new System.Drawing.Point(421, 51);
             this.label1CadastrarServico.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1CadastrarServico.Name = "label1CadastrarServico";
-            this.label1CadastrarServico.Size = new System.Drawing.Size(230, 26);
+            this.label1CadastrarServico.Size = new System.Drawing.Size(292, 38);
             this.label1CadastrarServico.TabIndex = 11;
-            this.label1CadastrarServico.Text = "Cadastro de Serviço";
+            this.label1CadastrarServico.Text = "Cadastrar Serviço";
             // 
             // label2_AlterarServico
             // 
             this.label2_AlterarServico.AutoSize = true;
-            this.label2_AlterarServico.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2_AlterarServico.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2_AlterarServico.ForeColor = System.Drawing.Color.Black;
-            this.label2_AlterarServico.Location = new System.Drawing.Point(400, 51);
+            this.label2_AlterarServico.Location = new System.Drawing.Point(446, 51);
             this.label2_AlterarServico.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2_AlterarServico.Name = "label2_AlterarServico";
-            this.label2_AlterarServico.Size = new System.Drawing.Size(201, 26);
+            this.label2_AlterarServico.Size = new System.Drawing.Size(242, 38);
             this.label2_AlterarServico.TabIndex = 12;
-            this.label2_AlterarServico.Text = "Alterar de Serviço";
+            this.label2_AlterarServico.Text = "Alterar Serviço";
             // 
             // button_SalvarServico
             // 
-            this.button_SalvarServico.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.button_SalvarServico.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.button_SalvarServico.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button_SalvarServico.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.button_SalvarServico.FlatAppearance.BorderSize = 0;
             this.button_SalvarServico.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.button_SalvarServico.Location = new System.Drawing.Point(342, 438);
+            this.button_SalvarServico.Location = new System.Drawing.Point(393, 438);
             this.button_SalvarServico.Margin = new System.Windows.Forms.Padding(5);
             this.button_SalvarServico.Name = "button_SalvarServico";
-            this.button_SalvarServico.Size = new System.Drawing.Size(176, 46);
+            this.button_SalvarServico.Size = new System.Drawing.Size(106, 30);
             this.button_SalvarServico.TabIndex = 13;
             this.button_SalvarServico.Text = "Salvar";
             this.toolTip1.SetToolTip(this.button_SalvarServico, "Salvar");
@@ -222,66 +218,19 @@
             // 
             // button_CancelarCadastroOuAlterar
             // 
-            this.button_CancelarCadastroOuAlterar.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.button_CancelarCadastroOuAlterar.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.button_CancelarCadastroOuAlterar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button_CancelarCadastroOuAlterar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.button_CancelarCadastroOuAlterar.FlatAppearance.BorderSize = 0;
-            this.button_CancelarCadastroOuAlterar.Location = new System.Drawing.Point(576, 438);
+            this.button_CancelarCadastroOuAlterar.Location = new System.Drawing.Point(627, 438);
             this.button_CancelarCadastroOuAlterar.Margin = new System.Windows.Forms.Padding(5);
             this.button_CancelarCadastroOuAlterar.Name = "button_CancelarCadastroOuAlterar";
-            this.button_CancelarCadastroOuAlterar.Size = new System.Drawing.Size(176, 46);
+            this.button_CancelarCadastroOuAlterar.Size = new System.Drawing.Size(106, 30);
             this.button_CancelarCadastroOuAlterar.TabIndex = 14;
             this.button_CancelarCadastroOuAlterar.Text = "Cancelar";
             this.toolTip1.SetToolTip(this.button_CancelarCadastroOuAlterar, "Cancelar");
             this.button_CancelarCadastroOuAlterar.UseVisualStyleBackColor = false;
             this.button_CancelarCadastroOuAlterar.Click += new System.EventHandler(this.button_CancelarCadastroOuAlterar_Click);
-            // 
-            // splitter1
-            // 
-            this.splitter1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.splitter1.Location = new System.Drawing.Point(0, 0);
-            this.splitter1.Margin = new System.Windows.Forms.Padding(5);
-            this.splitter1.Name = "splitter1";
-            this.splitter1.Padding = new System.Windows.Forms.Padding(11);
-            this.splitter1.Size = new System.Drawing.Size(3, 594);
-            this.splitter1.TabIndex = 18;
-            this.splitter1.TabStop = false;
-            // 
-            // splitter2
-            // 
-            this.splitter2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.splitter2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.splitter2.Location = new System.Drawing.Point(1131, 0);
-            this.splitter2.Margin = new System.Windows.Forms.Padding(5);
-            this.splitter2.Name = "splitter2";
-            this.splitter2.Padding = new System.Windows.Forms.Padding(11);
-            this.splitter2.Size = new System.Drawing.Size(3, 594);
-            this.splitter2.TabIndex = 19;
-            this.splitter2.TabStop = false;
-            // 
-            // splitter3
-            // 
-            this.splitter3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.splitter3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.splitter3.Location = new System.Drawing.Point(3, 0);
-            this.splitter3.Margin = new System.Windows.Forms.Padding(5);
-            this.splitter3.Name = "splitter3";
-            this.splitter3.Padding = new System.Windows.Forms.Padding(11);
-            this.splitter3.Size = new System.Drawing.Size(1128, 3);
-            this.splitter3.TabIndex = 20;
-            this.splitter3.TabStop = false;
-            // 
-            // splitter4
-            // 
-            this.splitter4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.splitter4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.splitter4.Location = new System.Drawing.Point(3, 591);
-            this.splitter4.Margin = new System.Windows.Forms.Padding(5);
-            this.splitter4.Name = "splitter4";
-            this.splitter4.Padding = new System.Windows.Forms.Padding(11);
-            this.splitter4.Size = new System.Drawing.Size(1128, 3);
-            this.splitter4.TabIndex = 21;
-            this.splitter4.TabStop = false;
             // 
             // FormsCadastroServico
             // 
@@ -291,10 +240,6 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.CancelButton = this.button_SalvarServico;
             this.ClientSize = new System.Drawing.Size(1134, 594);
-            this.Controls.Add(this.splitter4);
-            this.Controls.Add(this.splitter3);
-            this.Controls.Add(this.splitter2);
-            this.Controls.Add(this.splitter1);
             this.Controls.Add(this.button_CancelarCadastroOuAlterar);
             this.Controls.Add(this.button_SalvarServico);
             this.Controls.Add(this.label2_AlterarServico);
@@ -340,9 +285,5 @@
         private System.Windows.Forms.Button button_SalvarServico;
         private System.Windows.Forms.Button button_CancelarCadastroOuAlterar;
         private System.Windows.Forms.ToolTip toolTip1;
-        private System.Windows.Forms.Splitter splitter1;
-        private System.Windows.Forms.Splitter splitter2;
-        private System.Windows.Forms.Splitter splitter3;
-        private System.Windows.Forms.Splitter splitter4;
     }
 }

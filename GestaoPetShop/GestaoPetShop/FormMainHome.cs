@@ -34,65 +34,97 @@ namespace GestaoPetShop
 
         private Color SelectThemeColor()
         {
-            int index = random.Next(ThemeColor.ColorList.Count);
-            while (tempIndex == index)
+            try
             {
-                index = random.Next(ThemeColor.ColorList.Count);
+                int index = random.Next(ThemeColor.ColorList.Count);
+                while (tempIndex == index)
+                {
+                    index = random.Next(ThemeColor.ColorList.Count);
+                }
+                tempIndex = index;
+                string color = ThemeColor.ColorList[index];
+                return ColorTranslator.FromHtml(color);
+
             }
-            tempIndex = index;
-            string color = ThemeColor.ColorList[index];
-            return ColorTranslator.FromHtml(color);
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu um erro ao gerar uma cor aleatório.", ex) { Data = { { "Id", 332 } } };
+            }
         }
         private void ActivateButton(object btnSender)
         {
-            if (btnSender != null)
+            try
             {
-                if (currentButton != (Button)btnSender)
+                if (btnSender != null)
                 {
-                    DisableButton();
-                    Color color = SelectThemeColor();
-                    currentButton = (Button)btnSender;
-                    currentButton.BackColor = color;
-                    currentButton.ForeColor = Color.White;
-                    currentButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-                    panelTitleBar.BackColor = color;
-                    panelLogo.BackColor = ThemeColor.ChangeColorBrightness(color, -0.3);
-                    ThemeColor.PrimaryColor = color;
-                    ThemeColor.SecondaryColor = ThemeColor.ChangeColorBrightness(color, -0.3);
-                    btnCloseChildForm.Visible = true;
+                    if (currentButton != (Button)btnSender)
+                    {
+                        DisableButton();
+                        Color color = SelectThemeColor();
+                        currentButton = (Button)btnSender;
+                        currentButton.BackColor = color;
+                        currentButton.ForeColor = Color.White;
+                        currentButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                        panelTitleBar.BackColor = color;
+                        panelLogo.BackColor = ThemeColor.ChangeColorBrightness(color, -0.3);
+                        ThemeColor.PrimaryColor = color;
+                        ThemeColor.SecondaryColor = ThemeColor.ChangeColorBrightness(color, -0.3);
+                        btnCloseChildForm.Visible = true;
 
+                    }
                 }
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu um erro ao formatar os botão ao formulário.", ex) { Data = { { "Id", 333 } } };
             }
         }
         private void DisableButton()
         {
-            foreach (Control previousBtn in panelMenu.Controls)
+            try
             {
-                if (previousBtn.GetType() == typeof(Button))
+                foreach (Control previousBtn in panelMenu.Controls)
                 {
-                    previousBtn.BackColor = Color.FromArgb(51, 51, 76);
-                    previousBtn.ForeColor = Color.Gainsboro;
-                    previousBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                    if (previousBtn.GetType() == typeof(Button))
+                    {
+                        previousBtn.BackColor = Color.FromArgb(51, 51, 76);
+                        previousBtn.ForeColor = Color.Gainsboro;
+                        previousBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 
+                    }
                 }
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu um erro ao desativar a função do botão.", ex) { Data = { { "Id", 334 } } };
             }
         }
         private void OpenChildForm(Form childForm, object btnSender)
         {
-            if (activeForm != null)
+            try
             {
-                activeForm.Close();
+                if (activeForm != null)
+                {
+                    activeForm.Close();
+                }
+                ActivateButton(btnSender);
+                activeForm = childForm;
+                childForm.TopLevel = false;
+                childForm.FormBorderStyle = FormBorderStyle.None;
+                childForm.Dock = DockStyle.Fill;
+                this.panelDesktopPane.Controls.Add(childForm);
+                this.panelDesktopPane.Tag = childForm;
+                childForm.BringToFront();
+                childForm.Show();
+                labelTitle.Text = childForm.Text;
+
             }
-            ActivateButton(btnSender);
-            activeForm = childForm;
-            childForm.TopLevel = false;
-            childForm.FormBorderStyle = FormBorderStyle.None;
-            childForm.Dock = DockStyle.Fill;
-            this.panelDesktopPane.Controls.Add(childForm);
-            this.panelDesktopPane.Tag = childForm;
-            childForm.BringToFront();
-            childForm.Show();
-            labelTitle.Text = childForm.Text;
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu um formatar os formulários secundários.", ex) { Data = { { "Id", 335 } } };
+            }
 
         }
         private void buttonPrincipal_Click(object sender, EventArgs e)
@@ -157,12 +189,20 @@ namespace GestaoPetShop
 
         private void Reset()
         {
-            DisableButton();
-            labelTitle.Text = "HOME";
-            panelTitleBar.BackColor = Color.FromArgb(0, 150, 136);
-            panelLogo.BackColor = Color.FromArgb(39, 39, 58);
-            currentButton = null;
-            btnCloseChildForm.Visible = false;
+            try
+            {
+                DisableButton();
+                labelTitle.Text = "HOME";
+                panelTitleBar.BackColor = Color.FromArgb(0, 150, 136);
+                panelLogo.BackColor = Color.FromArgb(39, 39, 58);
+                currentButton = null;
+                btnCloseChildForm.Visible = false;
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu um erro ao executar o reset.", ex) { Data = { { "Id", 336 } } };
+            }
         }
 
         private void FormMainHome_Load(object sender, EventArgs e)
@@ -179,16 +219,24 @@ namespace GestaoPetShop
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                throw new Exception("Ocorreu um erro ao executar o formuário de login.", ex) { Data = { { "Id", 337 } } };
             }
         }
 
         private void btnMaximizar_Click(object sender, EventArgs e)
         {
-            if (WindowState == FormWindowState.Normal)
-                this.WindowState = FormWindowState.Maximized;
-            else
-                this.WindowState = FormWindowState.Normal;
+            try
+            {
+                if (WindowState == FormWindowState.Normal)
+                    this.WindowState = FormWindowState.Maximized;
+                else
+                    this.WindowState = FormWindowState.Normal;
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu um erro no botão maximizar.", ex) { Data = { { "Id", 338 } } };
+            }
         }
 
         private void panelDesktopPane_Paint(object sender, PaintEventArgs e)

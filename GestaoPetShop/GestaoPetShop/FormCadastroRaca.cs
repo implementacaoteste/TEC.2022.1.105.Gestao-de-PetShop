@@ -29,7 +29,7 @@ namespace GestaoPetShop
 
         private void buttonSalvar_Click(object sender, EventArgs e)
         {
-          try
+            try
             {
                 if (!permitirSalvar)
                     return;
@@ -55,15 +55,24 @@ namespace GestaoPetShop
 
         private void FormCadastroRaca_Load(object sender, EventArgs e)
         {
-
-           try
+            this.Hide();
+            try
             {
                 LoadTheme();
 
                 if (id == 0)
+                {
+                    label1CadastrarRaca.Visible = true;
+                    label2AlterarRaca.Visible = false;
                     racaBindingSource.AddNew();
+                }
                 else
+                {
+                    label1CadastrarRaca.Visible = false;
+                    label2AlterarRaca.Visible = true;
+                    racaBindingSource.AddNew();
                     racaBindingSource.DataSource = new RacaBLL().BuscarPorId(id);
+                }
             }
             catch (Exception ex)
             {
