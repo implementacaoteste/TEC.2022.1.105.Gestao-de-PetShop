@@ -123,7 +123,7 @@ namespace DAL
                         animal.IdRaca = (int)rd["IdRaca"];
                         animal.IdCliente = (int)rd["IdCliente"];
                         animal.Nome = rd["Nome"].ToString();
-                        animal.Sexo = Convert.ToChar(rd["Sexo"]);
+                        animal.Sexo = rd["Sexo"].ToString();
                         animal.Agressivo = rd["agressivo"].ToString();
                         animal.Cor = rd["Cor"].ToString();
                         animal.Idade = (int)rd["Idade"];
@@ -194,7 +194,7 @@ namespace DAL
                         animal.IdRaca = (int)rd["IdRaca"];
                         animal.IdCliente = (int)rd["IdCliente"];
                         animal.Nome = rd["Nome"].ToString();
-                        animal.Sexo = Convert.ToChar(rd["Sexo"]);
+                        animal.Sexo = rd["Sexo"].ToString();
                         animal.Agressivo = rd["Agressivo"].ToString();
                         animal.Cor = rd["Cor"].ToString();
                         animal.Idade = (int)rd["Idade"];
@@ -239,7 +239,7 @@ namespace DAL
                         animal.IdRaca = (int)rd["IdRaca"];
                         animal.IdCliente = (int)rd["IdCliente"];
                         animal.Nome = rd["Nome"].ToString();
-                        animal.Sexo = Convert.ToChar(rd["Sexo"]);
+                        animal.Sexo = rd["Sexo"].ToString();
                         animal.Agressivo = rd["agressivo"].ToString();
                         animal.Cor = rd["Cor"].ToString();
                         animal.Alergia = rd["Alergia"].ToString();
@@ -282,7 +282,7 @@ namespace DAL
                     animal.IdRaca = (int)rd["IdRaca"];
                     animal.IdCliente = (int)rd["IdCliente"];
                     animal.Nome = rd["Nome"].ToString();
-                    animal.Sexo = Convert.ToChar(rd["Sexo"]);
+                    animal.Sexo = rd["Sexo"].ToString();
                     animal.Agressivo = rd["agressivo"].ToString();
                     animal.Cor = rd["Cor"].ToString();
                     animal.Idade = (int)rd["Idade"];
