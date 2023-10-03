@@ -16,7 +16,7 @@
 ## Desenvolvedores
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore -->
-![dimas](https://github.com/DimasMota.png)[<br /><sub><b>Dimas - Dev</b></sub>] |![givaldo](https://github.com/givacombr.png) |![milena](https://github.com/milenacalacio.png)|![railson](https://github.com/railsonsousa10.png) |![erisvaldo](https://github.com/implementacaoteste.png)
+![dimas(https://github.com/DimasMota.png)<br /><sub><b>Dimas - Dev</b></sub>] |![givaldo](https://github.com/givacombr.png) |![milena](https://github.com/milenacalacio.png)|![railson](https://github.com/railsonsousa10.png) |![erisvaldo](https://github.com/implementacaoteste.png)
  |:-----------------------------:|:-----------------------------:|:-----------------------------:|:-----------------------------:|:-----------------------------:|
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
