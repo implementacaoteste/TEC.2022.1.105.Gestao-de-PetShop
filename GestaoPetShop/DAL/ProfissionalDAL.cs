@@ -8,7 +8,7 @@ namespace DAL
 {
     public class ProfissionalDAL
     {
-        private int _idprofissional = 0;
+        //private int _idprofissional = 0;
         public void Alterar(Profissional _profissional, SqlTransaction _transaction = null)
         {
             SqlTransaction transaction = _transaction;
@@ -391,7 +391,7 @@ namespace DAL
                         {
                             ExcluirEmailProfissional(_profissional, _profissional.EmailProfissional, transaction);
                         }
-                        if(_profissional.TelefoneProfissional.Count > 0)
+                        if (_profissional.TelefoneProfissional.Count > 0)
                         {
                             ExcluirTelefoneProfissional(_profissional, _profissional.TelefoneProfissional, transaction);
                         }
@@ -481,6 +481,37 @@ namespace DAL
                         throw new Exception("Ocorreu um erro ao tentar excluir E-mail do Profissional do banco de dados.", ex) { Data = { { "Id", 32 } } };
                     }
                 }
+            }
+        }
+        public bool ExisteVinculoProfissionalComAgendamentoServico(int _idProfissional)
+        {
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+
+                cmd.Connection = cn;
+                cmd.CommandText = @"SELECT 1 AS retorno FROM AgendamentoServicos  WHERE  IdProfissional = @IdProfissional";
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.Parameters.AddWithValue("@IdProfissional", _idProfissional);
+                cn.Open();
+
+                using (SqlDataReader rd = cmd.ExecuteReader())
+                {
+                    if (rd.Read())
+                    {
+                        return true;
+                    }
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu um erro ao tentar buscar vínculos de Profisisonal com AgendamentoServico: " + ex.Message) { Data = { { "Id", 45 } } };
+            }
+            finally
+            {
+                cn.Close();
             }
         }
     }

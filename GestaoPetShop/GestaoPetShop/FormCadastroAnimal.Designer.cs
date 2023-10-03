@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCadastroAnimal));
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelCadastrarAnimal = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.animalBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -57,22 +57,23 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.labelAlterarAnimal = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.animalBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // labelCadastrarAnimal
             // 
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(369, 25);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label1.Size = new System.Drawing.Size(396, 43);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "Cadastro de Animal";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelCadastrarAnimal.BackColor = System.Drawing.Color.Transparent;
+            this.labelCadastrarAnimal.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCadastrarAnimal.ForeColor = System.Drawing.Color.Black;
+            this.labelCadastrarAnimal.Location = new System.Drawing.Point(369, 35);
+            this.labelCadastrarAnimal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelCadastrarAnimal.Name = "labelCadastrarAnimal";
+            this.labelCadastrarAnimal.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.labelCadastrarAnimal.Size = new System.Drawing.Size(396, 43);
+            this.labelCadastrarAnimal.TabIndex = 11;
+            this.labelCadastrarAnimal.Text = "Cadastrar Animal";
+            this.labelCadastrarAnimal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // textBox1
             // 
@@ -362,12 +363,27 @@
             this.label6.TabIndex = 37;
             this.label6.Text = "Pesquisa";
             // 
+            // labelAlterarAnimal
+            // 
+            this.labelAlterarAnimal.BackColor = System.Drawing.Color.Transparent;
+            this.labelAlterarAnimal.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelAlterarAnimal.ForeColor = System.Drawing.Color.Black;
+            this.labelAlterarAnimal.Location = new System.Drawing.Point(369, 35);
+            this.labelAlterarAnimal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelAlterarAnimal.Name = "labelAlterarAnimal";
+            this.labelAlterarAnimal.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.labelAlterarAnimal.Size = new System.Drawing.Size(396, 43);
+            this.labelAlterarAnimal.TabIndex = 38;
+            this.labelAlterarAnimal.Text = "Alterar Animal";
+            this.labelAlterarAnimal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // FormCadastroAnimal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1134, 594);
+            this.Controls.Add(this.labelAlterarAnimal);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -393,7 +409,7 @@
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.labelCadastrarAnimal);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
@@ -412,7 +428,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelCadastrarAnimal;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
@@ -439,5 +455,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label labelAlterarAnimal;
     }
 }

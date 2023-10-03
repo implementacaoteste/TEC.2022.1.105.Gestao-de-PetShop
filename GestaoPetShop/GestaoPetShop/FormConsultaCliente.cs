@@ -60,6 +60,9 @@ namespace GestaoPetShop
                 if (MessageBox.Show("Deseja realmente excluir este registro?", "Atenção", MessageBoxButtons.YesNo) == DialogResult.No)
                     return;
 
+                if (MessageBox.Show("Os animais vinculados a este Clientes serão excluídos. \n Deseja realmente continuar?", "Atenção", MessageBoxButtons.YesNo) == DialogResult.No)
+                    return;
+
                 Cliente cliente = new Cliente();
 
                 cliente = (Cliente)clienteBindingSource.Current;
