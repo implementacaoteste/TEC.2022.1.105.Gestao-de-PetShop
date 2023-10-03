@@ -19,9 +19,6 @@
 ![dimas](https://github.com/DimasMota.png) |![givaldo](https://github.com/givacombr.png) |![milena](https://github.com/milenacalacio.png)|![railson](https://github.com/railsonsousa10.png) |![erisvaldo](https://github.com/implementacaoteste.png)
  |:-----------------------------:|:-----------------------------:|:-----------------------------:|:-----------------------------:|:-----------------------------:|
 
-
-
-
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 ## Licença
