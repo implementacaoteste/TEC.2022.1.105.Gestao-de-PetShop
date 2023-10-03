@@ -86,6 +86,11 @@ namespace BLL
         }
         public void Excluir(Cliente _cliente)
         {
+            if(new ClienteDAL().ExisteVinculoClienteComAgendamento(_cliente.Id))
+            {
+                throw new Exception("Não é possível excluir este cliente.\nO cliente está vinculado em um agendamento");
+            }
+
             new ClienteDAL().Excluir(_cliente);
         }
     }
