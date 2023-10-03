@@ -209,6 +209,7 @@ namespace GestaoPetShop
         {
             try
             {
+                this.Visible = false;
                 using (FormLogin frm = new FormLogin())
                 {
                     frm.ShowDialog();
@@ -216,6 +217,7 @@ namespace GestaoPetShop
                         Application.Exit();
                     lblUsuarioLogado.Text = Constantes.UsuarioLogado;
                 }
+                this.Visible = true;
             }
             catch (Exception ex)
             {
