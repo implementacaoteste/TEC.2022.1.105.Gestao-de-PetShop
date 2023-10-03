@@ -61,19 +61,23 @@ namespace GestaoPetShop
 
         private void FormCadastroAnimal_Load(object sender, EventArgs e)
         {
+            this.Hide();
             try
             {
                 LoadTheme();
-
+                
                 if (id == 0)
                 {
+                    labelCadastrarAnimal.Visible = true;
+                    labelAlterarAnimal.Visible = false;
                     animalBindingSource.AddNew();
                     textBox5.Text = "";
-
                 }
                 else
                 {
-
+                    labelCadastrarAnimal.Visible = false;
+                    labelAlterarAnimal.Visible = true;
+                    animalBindingSource.AddNew();
                     animalBindingSource.DataSource = new AnimalBLL().BuscarPorId(id);
                 }
             }

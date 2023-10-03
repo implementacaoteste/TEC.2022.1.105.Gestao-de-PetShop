@@ -31,6 +31,11 @@ namespace BLL
         }
         public void Excluir(Profissional  _profissional)
         {
+            if(new ProfissionalDAL().ExisteVinculoProfissionalComAgendamentoServico(_profissional.Id))
+            {
+                throw new Exception("O profissional pode ser excluido.\nProfissional está vinculado a um agendamento.");
+            }
+
             new ProfissionalDAL().Excluir(_profissional);
         }//Givas
         public Profissional BuscarPorId(int _id)//Givas

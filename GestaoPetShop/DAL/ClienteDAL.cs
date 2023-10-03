@@ -5,12 +5,17 @@ using System.Collections.Generic;
 using System.Security.Cryptography;
 using System.Reflection.Emit;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using static iText.StyledXmlParser.Jsoup.Select.Evaluator;
+using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Header;
+using iText.Signatures;
+using System.Transactions;
 
 namespace DAL
 {
     public class ClienteDAL
     {
-        private int _idcliente = 0;
+
         public void Inserir(Cliente _cliente, SqlTransaction _transaction = null)
         {
 
@@ -236,6 +241,11 @@ namespace DAL
                         {
                             ExcluirTelefoneCliente(_cliente, _cliente.TelefoneClientes, transaction);
                         }
+
+                        
+                            ExcluirAnimaldoCliente(_cliente.Id,transaction);
+                        
+
                         cmd.ExecuteNonQuery();
                         if (_transaction == null)
                             transaction.Commit();
@@ -245,6 +255,45 @@ namespace DAL
                         if (transaction != null && transaction.Connection != null)
                             transaction.Rollback();
                         throw new Exception("Ocorreu um erro ao tentar excluir agendamento no banco de dados.", ex) { Data = { { "Id", -1 } } };
+                    }
+                }
+            }
+        }
+
+
+        private void ExcluirAnimaldoCliente(int _id, SqlTransaction _transaction)
+        {
+            SqlTransaction transaction = _transaction;
+            using (SqlConnection cn = new SqlConnection(Conexao.StringDeConexao))
+
+            {
+                using (SqlCommand cmd = new SqlCommand("DELETE FROM Animal WHERE IdCliente = @Id", cn))
+                {
+                    try
+                    {
+                        if (transaction == null)
+                        {
+                            cn.Open();
+                            transaction = cn.BeginTransaction();
+                        }
+                        cmd.Transaction = transaction;
+                        cmd.Connection = transaction.Connection;
+
+                        cmd.CommandType = System.Data.CommandType.Text;
+
+                        
+                            cmd.Parameters.Clear();
+                            cmd.Parameters.AddWithValue("@Id", _id);
+                            cmd.ExecuteNonQuery();
+                       
+                        if (_transaction == null)
+                            transaction.Commit();
+                    }
+                    catch (Exception ex)
+                    {
+                        if (transaction != null && transaction.Connection != null)
+                            transaction.Rollback();
+                        throw new Exception("Ocorreu um erro ao tentar excluir o E-mail do Cliente do banco de dados.", ex) { Data = { { "Id", 32 } } };
                     }
                 }
             }
@@ -522,6 +571,39 @@ namespace DAL
             catch (Exception ex)
             {
                 throw new Exception("Ocorreu um erro ao tentar buscar clientes por CPF no banco de dados", ex) { Data = { { "Id", 16 } } };
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
+        public bool ExisteVinculoClienteComAgendamento(int _idCliente)
+        {
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+
+                cmd.Connection = cn;
+                cmd.CommandText = @"SELECT 1 AS retorno FROM Cliente C INNER JOIN Animal A ON C.Id = A.IdCliente
+                                                                       INNER JOIN Agendamento Ag ON A.Id = Ag.IdAnimal
+                                                                       WHERE  C.Id = @IdCliente";
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.Parameters.AddWithValue("@IdCliente", _idCliente);
+                cn.Open();
+
+                using (SqlDataReader rd = cmd.ExecuteReader())
+                {
+                    if (rd.Read())
+                    {
+                        return true;
+                    }
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu um erro ao tentar buscar vínculos de Cliente com Agendamento: " + ex.Message) { Data = { { "Id", 45 } } };
             }
             finally
             {
