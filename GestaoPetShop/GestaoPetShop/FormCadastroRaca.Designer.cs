@@ -65,7 +65,7 @@
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(409, 171);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(317, 26);
+            this.textBox1.Size = new System.Drawing.Size(317, 30);
             this.textBox1.TabIndex = 0;
             // 
             // racaBindingSource
@@ -79,7 +79,7 @@
             this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox3.Location = new System.Drawing.Point(409, 229);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(317, 26);
+            this.textBox3.Size = new System.Drawing.Size(317, 30);
             this.textBox3.TabIndex = 1;
             // 
             // textBox5
@@ -89,7 +89,7 @@
             this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox5.Location = new System.Drawing.Point(409, 293);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(317, 26);
+            this.textBox5.Size = new System.Drawing.Size(317, 30);
             this.textBox5.TabIndex = 2;
             // 
             // checkBox1
@@ -101,7 +101,7 @@
             this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox1.Location = new System.Drawing.Point(409, 345);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(56, 20);
+            this.checkBox1.Size = new System.Drawing.Size(68, 24);
             this.checkBox1.TabIndex = 3;
             this.checkBox1.Text = "Ativo";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -112,7 +112,7 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(408, 152);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 16);
+            this.label2.Size = new System.Drawing.Size(53, 20);
             this.label2.TabIndex = 8;
             this.label2.Text = "Nome";
             // 
@@ -122,7 +122,7 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(408, 274);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(100, 16);
+            this.label4.Size = new System.Drawing.Size(125, 20);
             this.label4.TabIndex = 10;
             this.label4.Text = "País de Origem";
             // 
@@ -132,7 +132,7 @@
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(408, 210);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(57, 16);
+            this.label6.Size = new System.Drawing.Size(69, 20);
             this.label6.TabIndex = 12;
             this.label6.Text = "Espécie";
             // 
@@ -179,10 +179,10 @@
             // 
             // FormCadastroRaca
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1134, 594);
+            this.ClientSize = new System.Drawing.Size(1132, 586);
             this.Controls.Add(this.label2AlterarRaca);
             this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.buttonSalvar);
