@@ -30,24 +30,16 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPrincipal));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.button1 = new System.Windows.Forms.Button();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.button2 = new System.Windows.Forms.Button();
             this.lblUser = new System.Windows.Forms.Label();
             this.agendamentoDataGridView = new System.Windows.Forms.DataGridView();
-            this.agendamentoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.agendamentoServicosDataGridView = new System.Windows.Forms.DataGridView();
-            this.agendamentoServicosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quantidadeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.valorUnitarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tempoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -55,6 +47,14 @@
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.agendamentoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.agendamentoServicosDataGridView = new System.Windows.Forms.DataGridView();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quantidadeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.valorUnitarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tempoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.agendamentoServicosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.agendamentoDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.agendamentoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.agendamentoServicosDataGridView)).BeginInit();
@@ -64,8 +64,7 @@
             // monthCalendar1
             // 
             this.monthCalendar1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.monthCalendar1.Location = new System.Drawing.Point(493, 28);
-            this.monthCalendar1.Margin = new System.Windows.Forms.Padding(7);
+            this.monthCalendar1.Location = new System.Drawing.Point(657, 34);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 1;
             // 
@@ -79,10 +78,10 @@
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.ImageKey = "buscar-removebg-preview.png";
             this.button1.ImageList = this.imageList1;
-            this.button1.Location = new System.Drawing.Point(760, 28);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Location = new System.Drawing.Point(1013, 34);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(94, 39);
+            this.button1.Size = new System.Drawing.Size(125, 48);
             this.button1.TabIndex = 4;
             this.button1.Text = "Buscar";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -106,10 +105,10 @@
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.ImageKey = "fechar-removebg-preview.png";
             this.button2.ImageList = this.imageList1;
-            this.button2.Location = new System.Drawing.Point(760, 159);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
+            this.button2.Location = new System.Drawing.Point(1013, 196);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(94, 31);
+            this.button2.Size = new System.Drawing.Size(125, 38);
             this.button2.TabIndex = 5;
             this.button2.Text = "Fechar";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -123,10 +122,9 @@
             this.lblUser.BackColor = System.Drawing.Color.Transparent;
             this.lblUser.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUser.ForeColor = System.Drawing.Color.ForestGreen;
-            this.lblUser.Location = new System.Drawing.Point(148, 404);
-            this.lblUser.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblUser.Location = new System.Drawing.Point(197, 497);
             this.lblUser.Name = "lblUser";
-            this.lblUser.Size = new System.Drawing.Size(0, 19);
+            this.lblUser.Size = new System.Drawing.Size(0, 23);
             this.lblUser.TabIndex = 7;
             // 
             // agendamentoDataGridView
@@ -140,14 +138,14 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.agendamentoDataGridView.AutoGenerateColumns = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.agendamentoDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.agendamentoDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.agendamentoDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.agendamentoDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn8,
@@ -158,123 +156,24 @@
             this.dataGridViewTextBoxColumn19,
             this.dataGridViewTextBoxColumn17});
             this.agendamentoDataGridView.DataSource = this.agendamentoBindingSource;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.agendamentoDataGridView.DefaultCellStyle = dataGridViewCellStyle2;
-            this.agendamentoDataGridView.Location = new System.Drawing.Point(9, 200);
-            this.agendamentoDataGridView.Margin = new System.Windows.Forms.Padding(2);
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.agendamentoDataGridView.DefaultCellStyle = dataGridViewCellStyle6;
+            this.agendamentoDataGridView.Location = new System.Drawing.Point(12, 246);
+            this.agendamentoDataGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.agendamentoDataGridView.Name = "agendamentoDataGridView";
             this.agendamentoDataGridView.ReadOnly = true;
             this.agendamentoDataGridView.RowHeadersVisible = false;
             this.agendamentoDataGridView.RowHeadersWidth = 51;
             this.agendamentoDataGridView.RowTemplate.Height = 24;
-            this.agendamentoDataGridView.Size = new System.Drawing.Size(419, 304);
+            this.agendamentoDataGridView.Size = new System.Drawing.Size(559, 374);
             this.agendamentoDataGridView.TabIndex = 7;
             this.agendamentoDataGridView.Visible = false;
-            // 
-            // agendamentoBindingSource
-            // 
-            this.agendamentoBindingSource.DataSource = typeof(Models.Agendamento);
-            // 
-            // agendamentoServicosDataGridView
-            // 
-            this.agendamentoServicosDataGridView.AllowUserToAddRows = false;
-            this.agendamentoServicosDataGridView.AllowUserToDeleteRows = false;
-            this.agendamentoServicosDataGridView.AllowUserToOrderColumns = true;
-            this.agendamentoServicosDataGridView.AllowUserToResizeColumns = false;
-            this.agendamentoServicosDataGridView.AllowUserToResizeRows = false;
-            this.agendamentoServicosDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.agendamentoServicosDataGridView.AutoGenerateColumns = false;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.agendamentoServicosDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.agendamentoServicosDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.agendamentoServicosDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idDataGridViewTextBoxColumn,
-            this.dataGridViewTextBoxColumn9,
-            this.quantidadeDataGridViewTextBoxColumn,
-            this.valorUnitarioDataGridViewTextBoxColumn,
-            this.tempoDataGridViewTextBoxColumn});
-            this.agendamentoServicosDataGridView.DataSource = this.agendamentoServicosBindingSource;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.agendamentoServicosDataGridView.DefaultCellStyle = dataGridViewCellStyle4;
-            this.agendamentoServicosDataGridView.Location = new System.Drawing.Point(435, 200);
-            this.agendamentoServicosDataGridView.Margin = new System.Windows.Forms.Padding(2);
-            this.agendamentoServicosDataGridView.Name = "agendamentoServicosDataGridView";
-            this.agendamentoServicosDataGridView.ReadOnly = true;
-            this.agendamentoServicosDataGridView.RowHeadersVisible = false;
-            this.agendamentoServicosDataGridView.RowHeadersWidth = 51;
-            this.agendamentoServicosDataGridView.RowTemplate.Height = 24;
-            this.agendamentoServicosDataGridView.Size = new System.Drawing.Size(419, 304);
-            this.agendamentoServicosDataGridView.TabIndex = 8;
-            this.agendamentoServicosDataGridView.Visible = false;
-            // 
-            // agendamentoServicosBindingSource
-            // 
-            this.agendamentoServicosBindingSource.DataMember = "AgendamentoServicos";
-            this.agendamentoServicosBindingSource.DataSource = this.agendamentoBindingSource;
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idDataGridViewTextBoxColumn.Width = 40;
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "Servico";
-            this.dataGridViewTextBoxColumn9.HeaderText = "Servico";
-            this.dataGridViewTextBoxColumn9.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            this.dataGridViewTextBoxColumn9.ReadOnly = true;
-            // 
-            // quantidadeDataGridViewTextBoxColumn
-            // 
-            this.quantidadeDataGridViewTextBoxColumn.DataPropertyName = "Quantidade";
-            this.quantidadeDataGridViewTextBoxColumn.HeaderText = "Quant.";
-            this.quantidadeDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.quantidadeDataGridViewTextBoxColumn.Name = "quantidadeDataGridViewTextBoxColumn";
-            this.quantidadeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.quantidadeDataGridViewTextBoxColumn.Width = 60;
-            // 
-            // valorUnitarioDataGridViewTextBoxColumn
-            // 
-            this.valorUnitarioDataGridViewTextBoxColumn.DataPropertyName = "ValorUnitario";
-            this.valorUnitarioDataGridViewTextBoxColumn.HeaderText = "ValorUni($)";
-            this.valorUnitarioDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.valorUnitarioDataGridViewTextBoxColumn.Name = "valorUnitarioDataGridViewTextBoxColumn";
-            this.valorUnitarioDataGridViewTextBoxColumn.ReadOnly = true;
-            this.valorUnitarioDataGridViewTextBoxColumn.Width = 90;
-            // 
-            // tempoDataGridViewTextBoxColumn
-            // 
-            this.tempoDataGridViewTextBoxColumn.DataPropertyName = "Tempo";
-            this.tempoDataGridViewTextBoxColumn.HeaderText = "Tempo";
-            this.tempoDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.tempoDataGridViewTextBoxColumn.Name = "tempoDataGridViewTextBoxColumn";
-            this.tempoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.tempoDataGridViewTextBoxColumn.Width = 70;
             // 
             // dataGridViewTextBoxColumn8
             // 
@@ -339,12 +238,111 @@
             this.dataGridViewTextBoxColumn17.ReadOnly = true;
             this.dataGridViewTextBoxColumn17.Width = 80;
             // 
+            // agendamentoBindingSource
+            // 
+            this.agendamentoBindingSource.DataSource = typeof(Models.Agendamento);
+            // 
+            // agendamentoServicosDataGridView
+            // 
+            this.agendamentoServicosDataGridView.AllowUserToAddRows = false;
+            this.agendamentoServicosDataGridView.AllowUserToDeleteRows = false;
+            this.agendamentoServicosDataGridView.AllowUserToOrderColumns = true;
+            this.agendamentoServicosDataGridView.AllowUserToResizeColumns = false;
+            this.agendamentoServicosDataGridView.AllowUserToResizeRows = false;
+            this.agendamentoServicosDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.agendamentoServicosDataGridView.AutoGenerateColumns = false;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.agendamentoServicosDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            this.agendamentoServicosDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.agendamentoServicosDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn,
+            this.dataGridViewTextBoxColumn9,
+            this.quantidadeDataGridViewTextBoxColumn,
+            this.valorUnitarioDataGridViewTextBoxColumn,
+            this.tempoDataGridViewTextBoxColumn});
+            this.agendamentoServicosDataGridView.DataSource = this.agendamentoServicosBindingSource;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.agendamentoServicosDataGridView.DefaultCellStyle = dataGridViewCellStyle8;
+            this.agendamentoServicosDataGridView.Location = new System.Drawing.Point(580, 246);
+            this.agendamentoServicosDataGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.agendamentoServicosDataGridView.Name = "agendamentoServicosDataGridView";
+            this.agendamentoServicosDataGridView.ReadOnly = true;
+            this.agendamentoServicosDataGridView.RowHeadersVisible = false;
+            this.agendamentoServicosDataGridView.RowHeadersWidth = 51;
+            this.agendamentoServicosDataGridView.RowTemplate.Height = 24;
+            this.agendamentoServicosDataGridView.Size = new System.Drawing.Size(559, 374);
+            this.agendamentoServicosDataGridView.TabIndex = 8;
+            this.agendamentoServicosDataGridView.Visible = false;
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn.Width = 40;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "Servico";
+            this.dataGridViewTextBoxColumn9.HeaderText = "Servico";
+            this.dataGridViewTextBoxColumn9.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
+            // 
+            // quantidadeDataGridViewTextBoxColumn
+            // 
+            this.quantidadeDataGridViewTextBoxColumn.DataPropertyName = "Quantidade";
+            this.quantidadeDataGridViewTextBoxColumn.HeaderText = "Quant.";
+            this.quantidadeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.quantidadeDataGridViewTextBoxColumn.Name = "quantidadeDataGridViewTextBoxColumn";
+            this.quantidadeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.quantidadeDataGridViewTextBoxColumn.Width = 60;
+            // 
+            // valorUnitarioDataGridViewTextBoxColumn
+            // 
+            this.valorUnitarioDataGridViewTextBoxColumn.DataPropertyName = "ValorUnitario";
+            this.valorUnitarioDataGridViewTextBoxColumn.HeaderText = "ValorUni($)";
+            this.valorUnitarioDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.valorUnitarioDataGridViewTextBoxColumn.Name = "valorUnitarioDataGridViewTextBoxColumn";
+            this.valorUnitarioDataGridViewTextBoxColumn.ReadOnly = true;
+            this.valorUnitarioDataGridViewTextBoxColumn.Width = 90;
+            // 
+            // tempoDataGridViewTextBoxColumn
+            // 
+            this.tempoDataGridViewTextBoxColumn.DataPropertyName = "Tempo";
+            this.tempoDataGridViewTextBoxColumn.HeaderText = "Tempo";
+            this.tempoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.tempoDataGridViewTextBoxColumn.Name = "tempoDataGridViewTextBoxColumn";
+            this.tempoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.tempoDataGridViewTextBoxColumn.Width = 70;
+            // 
+            // agendamentoServicosBindingSource
+            // 
+            this.agendamentoServicosBindingSource.DataMember = "AgendamentoServicos";
+            this.agendamentoServicosBindingSource.DataSource = this.agendamentoBindingSource;
+            // 
             // FormPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(865, 515);
+            this.ClientSize = new System.Drawing.Size(1153, 634);
             this.Controls.Add(this.agendamentoServicosDataGridView);
             this.Controls.Add(this.agendamentoDataGridView);
             this.Controls.Add(this.lblUser);
@@ -353,7 +351,7 @@
             this.Controls.Add(this.button1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.KeyPreview = true;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormPrincipal";
