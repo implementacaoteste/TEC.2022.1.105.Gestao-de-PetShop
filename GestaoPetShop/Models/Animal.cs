@@ -14,7 +14,7 @@ namespace Models
         public int IdCliente { get; set; }
         public int IdRaca { get; set; }
         public string Nome { get; set; }
-        public char Sexo { get; set; }
+        public string Sexo { get; set; }
         public string Agressivo { get; set; }
         public string Cor { get; set; }
         public int Idade { get; set; }
