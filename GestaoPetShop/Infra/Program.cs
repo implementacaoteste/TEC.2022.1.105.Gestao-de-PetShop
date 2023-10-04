@@ -1,11 +1,10 @@
-﻿using Infra;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace GestaoPetShop
+namespace Infra
 {
     internal static class Program
     {
@@ -14,15 +13,12 @@ namespace GestaoPetShop
         /// </summary>
         [STAThread]
         static void Main()
-         {
+        {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-
-            MessageBox.Show(new Criptografia().CriptografarSenha("1235"));
-
-            Logs.Gravar("Usuario abriu o sistema");
-            Application.Run(new FormMainHome());
-            Logs.Gravar("Usuario fechou o sistema");
+            Logs.Gravar("Usuário abriu o sistema");
+            Application.Run(new Form1());
+            Logs.Gravar("Usuário fechou o sistema");
         }
     }
 }
