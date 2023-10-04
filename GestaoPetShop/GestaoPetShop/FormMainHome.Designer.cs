@@ -79,7 +79,7 @@
             this.panelMenu.Controls.Add(this.panelLogo);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
-            this.panelMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelMenu.Margin = new System.Windows.Forms.Padding(4);
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(293, 732);
             this.panelMenu.TabIndex = 11;
@@ -92,7 +92,7 @@
             this.buttonRelatorio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonRelatorio.ForeColor = System.Drawing.Color.Gainsboro;
             this.buttonRelatorio.Location = new System.Drawing.Point(0, 575);
-            this.buttonRelatorio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonRelatorio.Margin = new System.Windows.Forms.Padding(4);
             this.buttonRelatorio.Name = "buttonRelatorio";
             this.buttonRelatorio.Size = new System.Drawing.Size(293, 53);
             this.buttonRelatorio.TabIndex = 23;
@@ -109,7 +109,7 @@
             this.buttonFuncao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonFuncao.ForeColor = System.Drawing.Color.Gainsboro;
             this.buttonFuncao.Location = new System.Drawing.Point(0, 522);
-            this.buttonFuncao.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonFuncao.Margin = new System.Windows.Forms.Padding(4);
             this.buttonFuncao.Name = "buttonFuncao";
             this.buttonFuncao.Size = new System.Drawing.Size(293, 53);
             this.buttonFuncao.TabIndex = 22;
@@ -125,7 +125,7 @@
             this.buttonProfissional.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonProfissional.ForeColor = System.Drawing.Color.Gainsboro;
             this.buttonProfissional.Location = new System.Drawing.Point(0, 469);
-            this.buttonProfissional.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonProfissional.Margin = new System.Windows.Forms.Padding(4);
             this.buttonProfissional.Name = "buttonProfissional";
             this.buttonProfissional.Size = new System.Drawing.Size(293, 53);
             this.buttonProfissional.TabIndex = 21;
@@ -141,7 +141,7 @@
             this.buttonRaca.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonRaca.ForeColor = System.Drawing.Color.Gainsboro;
             this.buttonRaca.Location = new System.Drawing.Point(0, 416);
-            this.buttonRaca.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonRaca.Margin = new System.Windows.Forms.Padding(4);
             this.buttonRaca.Name = "buttonRaca";
             this.buttonRaca.Size = new System.Drawing.Size(293, 53);
             this.buttonRaca.TabIndex = 20;
@@ -157,7 +157,7 @@
             this.buttonAnimal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAnimal.ForeColor = System.Drawing.Color.Gainsboro;
             this.buttonAnimal.Location = new System.Drawing.Point(0, 363);
-            this.buttonAnimal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonAnimal.Margin = new System.Windows.Forms.Padding(4);
             this.buttonAnimal.Name = "buttonAnimal";
             this.buttonAnimal.Size = new System.Drawing.Size(293, 53);
             this.buttonAnimal.TabIndex = 19;
@@ -173,7 +173,7 @@
             this.buttonAgendamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAgendamento.ForeColor = System.Drawing.Color.Gainsboro;
             this.buttonAgendamento.Location = new System.Drawing.Point(0, 310);
-            this.buttonAgendamento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonAgendamento.Margin = new System.Windows.Forms.Padding(4);
             this.buttonAgendamento.Name = "buttonAgendamento";
             this.buttonAgendamento.Size = new System.Drawing.Size(293, 53);
             this.buttonAgendamento.TabIndex = 18;
@@ -189,7 +189,7 @@
             this.buttonServico.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonServico.ForeColor = System.Drawing.Color.Gainsboro;
             this.buttonServico.Location = new System.Drawing.Point(0, 257);
-            this.buttonServico.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonServico.Margin = new System.Windows.Forms.Padding(4);
             this.buttonServico.Name = "buttonServico";
             this.buttonServico.Size = new System.Drawing.Size(293, 53);
             this.buttonServico.TabIndex = 17;
@@ -205,7 +205,7 @@
             this.buttonCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCliente.ForeColor = System.Drawing.Color.Gainsboro;
             this.buttonCliente.Location = new System.Drawing.Point(0, 204);
-            this.buttonCliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonCliente.Margin = new System.Windows.Forms.Padding(4);
             this.buttonCliente.Name = "buttonCliente";
             this.buttonCliente.Size = new System.Drawing.Size(293, 53);
             this.buttonCliente.TabIndex = 16;
@@ -221,7 +221,7 @@
             this.buttonUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonUsuario.ForeColor = System.Drawing.Color.Gainsboro;
             this.buttonUsuario.Location = new System.Drawing.Point(0, 151);
-            this.buttonUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.buttonUsuario.Name = "buttonUsuario";
             this.buttonUsuario.Size = new System.Drawing.Size(293, 53);
             this.buttonUsuario.TabIndex = 15;
@@ -251,7 +251,7 @@
             this.buttonPrincipal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonPrincipal.ForeColor = System.Drawing.Color.Gainsboro;
             this.buttonPrincipal.Location = new System.Drawing.Point(0, 98);
-            this.buttonPrincipal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonPrincipal.Margin = new System.Windows.Forms.Padding(4);
             this.buttonPrincipal.Name = "buttonPrincipal";
             this.buttonPrincipal.Size = new System.Drawing.Size(293, 53);
             this.buttonPrincipal.TabIndex = 11;
@@ -269,7 +269,7 @@
             this.buttonSair.ForeColor = System.Drawing.Color.White;
             this.buttonSair.Image = ((System.Drawing.Image)(resources.GetObject("buttonSair.Image")));
             this.buttonSair.Location = new System.Drawing.Point(0, 635);
-            this.buttonSair.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonSair.Margin = new System.Windows.Forms.Padding(4);
             this.buttonSair.Name = "buttonSair";
             this.buttonSair.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.buttonSair.Size = new System.Drawing.Size(293, 53);
@@ -286,7 +286,7 @@
             this.panelLogo.Controls.Add(this.label2);
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
-            this.panelLogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelLogo.Margin = new System.Windows.Forms.Padding(4);
             this.panelLogo.Name = "panelLogo";
             this.panelLogo.Size = new System.Drawing.Size(293, 98);
             this.panelLogo.TabIndex = 0;
@@ -312,7 +312,7 @@
             this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitleBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelTitleBar.Location = new System.Drawing.Point(293, 0);
-            this.panelTitleBar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelTitleBar.Margin = new System.Windows.Forms.Padding(4);
             this.panelTitleBar.Name = "panelTitleBar";
             this.panelTitleBar.Size = new System.Drawing.Size(1078, 98);
             this.panelTitleBar.TabIndex = 12;
@@ -323,21 +323,23 @@
             this.btnMaximizar.FlatAppearance.BorderSize = 0;
             this.btnMaximizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMaximizar.Image = ((System.Drawing.Image)(resources.GetObject("btnMaximizar.Image")));
-            this.btnMaximizar.Location = new System.Drawing.Point(1021, 15);
-            this.btnMaximizar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnMaximizar.Location = new System.Drawing.Point(909, 21);
+            this.btnMaximizar.Margin = new System.Windows.Forms.Padding(4);
             this.btnMaximizar.Name = "btnMaximizar";
             this.btnMaximizar.Size = new System.Drawing.Size(53, 62);
             this.btnMaximizar.TabIndex = 2;
             this.btnMaximizar.UseVisualStyleBackColor = true;
+            this.btnMaximizar.Visible = false;
             this.btnMaximizar.Click += new System.EventHandler(this.btnMaximizar_Click);
             // 
             // btnCloseChildForm
             // 
+            this.btnCloseChildForm.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCloseChildForm.FlatAppearance.BorderSize = 0;
             this.btnCloseChildForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCloseChildForm.Image = ((System.Drawing.Image)(resources.GetObject("btnCloseChildForm.Image")));
-            this.btnCloseChildForm.Location = new System.Drawing.Point(0, 4);
-            this.btnCloseChildForm.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCloseChildForm.Location = new System.Drawing.Point(970, 2);
+            this.btnCloseChildForm.Margin = new System.Windows.Forms.Padding(4);
             this.btnCloseChildForm.Name = "btnCloseChildForm";
             this.btnCloseChildForm.Size = new System.Drawing.Size(108, 95);
             this.btnCloseChildForm.TabIndex = 1;
@@ -365,7 +367,7 @@
             this.panelDesktopPane.Controls.Add(this.pictureBox1);
             this.panelDesktopPane.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDesktopPane.Location = new System.Drawing.Point(293, 98);
-            this.panelDesktopPane.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelDesktopPane.Margin = new System.Windows.Forms.Padding(4);
             this.panelDesktopPane.Name = "panelDesktopPane";
             this.panelDesktopPane.Size = new System.Drawing.Size(1078, 634);
             this.panelDesktopPane.TabIndex = 13;
@@ -404,7 +406,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(360, 60);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(358, 310);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -426,7 +428,7 @@
             this.Controls.Add(this.panelMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimizeBox = false;
             this.Name = "FormMainHome";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
