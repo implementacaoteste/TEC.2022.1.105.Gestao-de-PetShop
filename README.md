@@ -10,12 +10,12 @@
 
 ## Recursos
 
-- Cadastro os Clientes;
-- Cadastro os Animais;
-- Cadastro Profissionais;
-- Cadastro Usuário;
-- Cadastro Serviços;
-- Cadastro de Funções e;
+- Gerenciar os Clientes;
+- Gerenciar os Animais;
+- Gerenciar Profissionais;
+- Gerenciar Usuário;
+- Gerenciar Serviços;
+- Gerenciar de Funções e;
 - Agendar serviços prestados ao PetShop.
 
 ## Desenvolvedores
