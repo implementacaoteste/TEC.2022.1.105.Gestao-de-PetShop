@@ -320,9 +320,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(865, 515);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(865, 515);
             this.Name = "FormConsultaRaca";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

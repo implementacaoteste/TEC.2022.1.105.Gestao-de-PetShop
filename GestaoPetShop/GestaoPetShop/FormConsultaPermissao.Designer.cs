@@ -171,9 +171,7 @@
             this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(865, 515);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(865, 515);
             this.Name = "FormConsultaPermissao";
             this.ShowInTaskbar = false;
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormConsultaPermissao_KeyDown);
