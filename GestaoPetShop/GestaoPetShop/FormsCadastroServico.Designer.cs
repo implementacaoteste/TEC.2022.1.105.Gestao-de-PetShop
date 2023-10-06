@@ -206,10 +206,10 @@
             this.button_SalvarServico.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.button_SalvarServico.FlatAppearance.BorderSize = 0;
             this.button_SalvarServico.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.button_SalvarServico.Location = new System.Drawing.Point(393, 438);
+            this.button_SalvarServico.Location = new System.Drawing.Point(320, 426);
             this.button_SalvarServico.Margin = new System.Windows.Forms.Padding(5);
             this.button_SalvarServico.Name = "button_SalvarServico";
-            this.button_SalvarServico.Size = new System.Drawing.Size(106, 30);
+            this.button_SalvarServico.Size = new System.Drawing.Size(141, 37);
             this.button_SalvarServico.TabIndex = 13;
             this.button_SalvarServico.Text = "Salvar";
             this.toolTip1.SetToolTip(this.button_SalvarServico, "Salvar");
@@ -222,10 +222,10 @@
             this.button_CancelarCadastroOuAlterar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button_CancelarCadastroOuAlterar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.button_CancelarCadastroOuAlterar.FlatAppearance.BorderSize = 0;
-            this.button_CancelarCadastroOuAlterar.Location = new System.Drawing.Point(627, 438);
+            this.button_CancelarCadastroOuAlterar.Location = new System.Drawing.Point(595, 426);
             this.button_CancelarCadastroOuAlterar.Margin = new System.Windows.Forms.Padding(5);
             this.button_CancelarCadastroOuAlterar.Name = "button_CancelarCadastroOuAlterar";
-            this.button_CancelarCadastroOuAlterar.Size = new System.Drawing.Size(106, 30);
+            this.button_CancelarCadastroOuAlterar.Size = new System.Drawing.Size(141, 37);
             this.button_CancelarCadastroOuAlterar.TabIndex = 14;
             this.button_CancelarCadastroOuAlterar.Text = "Cancelar";
             this.toolTip1.SetToolTip(this.button_CancelarCadastroOuAlterar, "Cancelar");

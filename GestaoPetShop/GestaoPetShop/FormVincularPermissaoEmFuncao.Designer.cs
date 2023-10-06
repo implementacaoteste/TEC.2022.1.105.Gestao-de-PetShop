@@ -60,6 +60,9 @@
             this.permissaoDataGridView.AllowUserToOrderColumns = true;
             this.permissaoDataGridView.AllowUserToResizeColumns = false;
             this.permissaoDataGridView.AllowUserToResizeRows = false;
+            this.permissaoDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.permissaoDataGridView.AutoGenerateColumns = false;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
@@ -82,7 +85,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.permissaoDataGridView.DefaultCellStyle = dataGridViewCellStyle2;
-            this.permissaoDataGridView.Location = new System.Drawing.Point(31, 171);
+            this.permissaoDataGridView.Location = new System.Drawing.Point(11, 171);
             this.permissaoDataGridView.Margin = new System.Windows.Forms.Padding(2);
             this.permissaoDataGridView.Name = "permissaoDataGridView";
             this.permissaoDataGridView.ReadOnly = true;
@@ -98,7 +101,7 @@
             this.permissaoDataGridView.RowHeadersWidth = 51;
             this.permissaoDataGridView.RowTemplate.Height = 24;
             this.permissaoDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.permissaoDataGridView.Size = new System.Drawing.Size(1072, 324);
+            this.permissaoDataGridView.Size = new System.Drawing.Size(1112, 371);
             this.permissaoDataGridView.TabIndex = 1;
             // 
             // dataGridViewTextBoxColumn1
@@ -125,9 +128,10 @@
             // 
             // buttonBuscarPermissao
             // 
+            this.buttonBuscarPermissao.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonBuscarPermissao.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.buttonBuscarPermissao.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonBuscarPermissao.Location = new System.Drawing.Point(962, 127);
+            this.buttonBuscarPermissao.Location = new System.Drawing.Point(982, 127);
             this.buttonBuscarPermissao.Margin = new System.Windows.Forms.Padding(2);
             this.buttonBuscarPermissao.Name = "buttonBuscarPermissao";
             this.buttonBuscarPermissao.Size = new System.Drawing.Size(141, 37);
@@ -138,6 +142,8 @@
             // 
             // comboBoxSelecionarBuscaPermissao
             // 
+            this.comboBoxSelecionarBuscaPermissao.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.comboBoxSelecionarBuscaPermissao.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxSelecionarBuscaPermissao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxSelecionarBuscaPermissao.FormattingEnabled = true;
@@ -145,7 +151,7 @@
             "Todos",
             "Id",
             "Nome"});
-            this.comboBoxSelecionarBuscaPermissao.Location = new System.Drawing.Point(32, 131);
+            this.comboBoxSelecionarBuscaPermissao.Location = new System.Drawing.Point(9, 131);
             this.comboBoxSelecionarBuscaPermissao.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxSelecionarBuscaPermissao.Name = "comboBoxSelecionarBuscaPermissao";
             this.comboBoxSelecionarBuscaPermissao.Size = new System.Drawing.Size(209, 28);
@@ -154,8 +160,9 @@
             // 
             // textBoxBuscarPermissao
             // 
+            this.textBoxBuscarPermissao.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxBuscarPermissao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxBuscarPermissao.Location = new System.Drawing.Point(259, 132);
+            this.textBoxBuscarPermissao.Location = new System.Drawing.Point(236, 132);
             this.textBoxBuscarPermissao.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxBuscarPermissao.Name = "textBoxBuscarPermissao";
             this.textBoxBuscarPermissao.Size = new System.Drawing.Size(687, 26);
@@ -165,7 +172,7 @@
             // 
             this.buttonInserirPermissao.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.buttonInserirPermissao.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonInserirPermissao.Location = new System.Drawing.Point(783, 527);
+            this.buttonInserirPermissao.Location = new System.Drawing.Point(837, 546);
             this.buttonInserirPermissao.Margin = new System.Windows.Forms.Padding(2);
             this.buttonInserirPermissao.Name = "buttonInserirPermissao";
             this.buttonInserirPermissao.Size = new System.Drawing.Size(141, 37);
@@ -178,7 +185,7 @@
             // 
             this.labelfuncao.AutoSize = true;
             this.labelfuncao.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelfuncao.Location = new System.Drawing.Point(127, 49);
+            this.labelfuncao.Location = new System.Drawing.Point(104, 49);
             this.labelfuncao.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelfuncao.Name = "labelfuncao";
             this.labelfuncao.Size = new System.Drawing.Size(55, 17);
@@ -189,7 +196,7 @@
             // 
             this.buttonCancelar.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.buttonCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCancelar.Location = new System.Drawing.Point(962, 527);
+            this.buttonCancelar.Location = new System.Drawing.Point(982, 546);
             this.buttonCancelar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonCancelar.Name = "buttonCancelar";
             this.buttonCancelar.Size = new System.Drawing.Size(141, 37);
@@ -202,7 +209,7 @@
             // 
             this.textBoxIdFuncao.Enabled = false;
             this.textBoxIdFuncao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxIdFuncao.Location = new System.Drawing.Point(32, 72);
+            this.textBoxIdFuncao.Location = new System.Drawing.Point(9, 72);
             this.textBoxIdFuncao.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxIdFuncao.Name = "textBoxIdFuncao";
             this.textBoxIdFuncao.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -213,7 +220,7 @@
             // 
             this.labelId.AutoSize = true;
             this.labelId.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelId.Location = new System.Drawing.Point(31, 49);
+            this.labelId.Location = new System.Drawing.Point(8, 49);
             this.labelId.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelId.Name = "labelId";
             this.labelId.Size = new System.Drawing.Size(19, 17);
@@ -224,7 +231,7 @@
             // 
             this.textBoxFuncao.Enabled = false;
             this.textBoxFuncao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxFuncao.Location = new System.Drawing.Point(128, 72);
+            this.textBoxFuncao.Location = new System.Drawing.Point(105, 72);
             this.textBoxFuncao.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxFuncao.Name = "textBoxFuncao";
             this.textBoxFuncao.Size = new System.Drawing.Size(259, 26);
@@ -234,11 +241,11 @@
             // 
             this.textBox1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(359, 11);
+            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(317, 11);
             this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(380, 27);
+            this.textBox1.Size = new System.Drawing.Size(500, 40);
             this.textBox1.TabIndex = 12;
             this.textBox1.Text = "Vincular Permissão - Função";
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -247,7 +254,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(31, 113);
+            this.label1.Location = new System.Drawing.Point(8, 113);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(77, 17);
@@ -258,7 +265,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(257, 113);
+            this.label2.Location = new System.Drawing.Point(234, 113);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(217, 17);
