@@ -60,8 +60,16 @@ namespace GestaoPetShop
                     label2CadastrarUsuario.Visible = false;
                     label4AlterarUsuario.Visible = true;
                     usuarioBindingSource.DataSource = new UsuarioBLL().BuscarPorId(Id);
-
-                }
+                    senhaTextBox.Text = "";
+                    textBoxConfirmarSenha.Text = "";
+                    ToolTip toolTip1 = new ToolTip();
+                    toolTip1.AutoPopDelay = 5000;
+                    toolTip1.InitialDelay = 1000;
+                    toolTip1.ReshowDelay = 500;
+                    toolTip1.ShowAlways = true;
+                    toolTip1.SetToolTip(this.buttonSalvar, "Eita treta");
+                    toolTip1.SetToolTip(this.ativoCheckBox, "Opção que permitir ativar ou desativar um usuário no sistema")
+ ;               }
 
             }
             catch (Exception ex)
