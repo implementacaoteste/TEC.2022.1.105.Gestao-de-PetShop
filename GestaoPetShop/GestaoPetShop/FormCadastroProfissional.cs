@@ -65,7 +65,12 @@ namespace GestaoPetShop
                     lblAlterarProfissional.Visible = true;
                     profissionalBindingSource.AddNew();
                     btnGerarSenha.Visible = true;
-                    profissionalBindingSource.DataSource = new ProfissionalBLL().BuscarPorId(id);
+                    Profissional profissional = new Profissional();
+                    profissional = new ProfissionalBLL().BuscarPorId(id);
+                    profissionalBindingSource.DataSource = profissional;
+                    //this.nomeFuncaoComboBox.Text = profissional.NomeFuncao;
+                  
+                   
                 }
 
                 if (!permitirSalvar)
@@ -88,8 +93,7 @@ namespace GestaoPetShop
             }
             catch (Exception ex)
             {
-                //MessageBox.Show(ex.Message);
-                throw new Exception("Ocorreu um erro ao buscar um profissional por ID no banco de dados.", ex) { Data = { { "Id", 239 } } };
+               MessageBox.Show(ex.Message);
             }
         }
         private void LoadTheme()
