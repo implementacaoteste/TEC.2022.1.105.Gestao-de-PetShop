@@ -264,7 +264,7 @@ GO
 CREATE PROCEDURE SP_CAD_USUARIO
 	@IdProfissional INT,
 	@UsuarioLogin VARCHAR(15),
-	@Senha VARCHAR(15)
+	@Senha VARCHAR(100)
 AS
 BEGIN
 	INSERT INTO USUARIO(IdProfissional,UsuarioLogin,Senha)
@@ -272,7 +272,7 @@ BEGIN
 END
 GO
 
-EXEC SP_CAD_USUARIO 1,'administrador','adm1234'
+EXEC SP_CAD_USUARIO 1,'administrador','HjAsWaTFbgNjwwyBrFLS0FiZTF7RQmTvkG13HT3yCZM='
 EXEC SP_CAD_USUARIO 2,'AnaPaula','aten12341'
 EXEC SP_CAD_USUARIO 3, 'Erisvaldo','123'
 GO
