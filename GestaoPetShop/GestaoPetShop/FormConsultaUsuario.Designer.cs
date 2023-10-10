@@ -88,6 +88,7 @@
             // 
             this.buttonBuscarUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonBuscarUsuario.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.buttonBuscarUsuario.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonBuscarUsuario.Location = new System.Drawing.Point(278, 31);
             this.buttonBuscarUsuario.Margin = new System.Windows.Forms.Padding(2);
             this.buttonBuscarUsuario.Name = "buttonBuscarUsuario";
@@ -101,6 +102,7 @@
             // 
             this.buttonAlterarUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonAlterarUsuario.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.buttonAlterarUsuario.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAlterarUsuario.Location = new System.Drawing.Point(423, 31);
             this.buttonAlterarUsuario.Margin = new System.Windows.Forms.Padding(2);
             this.buttonAlterarUsuario.Name = "buttonAlterarUsuario";
@@ -114,6 +116,7 @@
             // 
             this.buttonInserirUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonInserirUsuario.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.buttonInserirUsuario.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonInserirUsuario.Location = new System.Drawing.Point(568, 31);
             this.buttonInserirUsuario.Margin = new System.Windows.Forms.Padding(2);
             this.buttonInserirUsuario.Name = "buttonInserirUsuario";
@@ -127,6 +130,7 @@
             // 
             this.buttonExcluirUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonExcluirUsuario.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.buttonExcluirUsuario.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonExcluirUsuario.Location = new System.Drawing.Point(713, 31);
             this.buttonExcluirUsuario.Margin = new System.Windows.Forms.Padding(2);
             this.buttonExcluirUsuario.Name = "buttonExcluirUsuario";
