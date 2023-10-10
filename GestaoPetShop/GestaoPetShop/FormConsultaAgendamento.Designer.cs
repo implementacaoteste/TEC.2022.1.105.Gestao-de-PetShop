@@ -118,7 +118,7 @@
             this.button_BuscarAgendamentos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button_BuscarAgendamentos.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.button_BuscarAgendamentos.FlatAppearance.BorderSize = 0;
-            this.button_BuscarAgendamentos.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_BuscarAgendamentos.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_BuscarAgendamentos.ImageKey = "(none)";
             this.button_BuscarAgendamentos.Location = new System.Drawing.Point(274, 24);
             this.button_BuscarAgendamentos.Margin = new System.Windows.Forms.Padding(2);
@@ -134,7 +134,7 @@
             this.button_InserirAgendamentos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button_InserirAgendamentos.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.button_InserirAgendamentos.FlatAppearance.BorderSize = 0;
-            this.button_InserirAgendamentos.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_InserirAgendamentos.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_InserirAgendamentos.ImageKey = "(none)";
             this.button_InserirAgendamentos.Location = new System.Drawing.Point(419, 24);
             this.button_InserirAgendamentos.Margin = new System.Windows.Forms.Padding(2);
@@ -150,7 +150,7 @@
             this.button_AlterarAgendamentos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button_AlterarAgendamentos.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.button_AlterarAgendamentos.FlatAppearance.BorderSize = 0;
-            this.button_AlterarAgendamentos.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_AlterarAgendamentos.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_AlterarAgendamentos.ImageKey = "(none)";
             this.button_AlterarAgendamentos.Location = new System.Drawing.Point(564, 24);
             this.button_AlterarAgendamentos.Margin = new System.Windows.Forms.Padding(2);
@@ -166,7 +166,7 @@
             this.button_ExcluirAgendamento.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button_ExcluirAgendamento.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.button_ExcluirAgendamento.FlatAppearance.BorderSize = 0;
-            this.button_ExcluirAgendamento.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_ExcluirAgendamento.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_ExcluirAgendamento.ImageKey = "(none)";
             this.button_ExcluirAgendamento.Location = new System.Drawing.Point(712, 24);
             this.button_ExcluirAgendamento.Margin = new System.Windows.Forms.Padding(2);
