@@ -83,7 +83,7 @@ namespace GestaoPetShop
             {
                 Usuario usuario = new Usuario();
 
-                if(new UsuarioBLL().VerificarSenhaAtual(txtSenhaAtual, ((Usuario)usuarioBindingSource.Current).Id))
+                if(new UsuarioBLL().VerificarSenhaAtual(txtSenhaAtual.Text, ((Usuario)usuarioBindingSource.Current).Id))
                 {
                     MessageBox.Show("Senha atual incorreta!");
                     txtSenhaAtual.Focus();
@@ -114,6 +114,11 @@ namespace GestaoPetShop
 
             usuarioBindingSource.DataSource = new UsuarioBLL().BucarPorIdProfissional(id);
             txtNovaSenha.Clear();
+        }
+
+        private void buttonCancelar_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

@@ -150,13 +150,5 @@ namespace GestaoPetShop
                 MessageBox.Show(ex.Message);
             }
         }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            using(FormRelatorioGeral frm = new FormRelatorioGeral())
-            {
-                frm.ShowDialog();
-            }
-        }
     }
 }

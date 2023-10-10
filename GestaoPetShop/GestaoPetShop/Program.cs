@@ -18,7 +18,7 @@ namespace GestaoPetShop
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            //MessageBox.Show(new Criptografia().CriptografarSenha("1235"));
+            //MessageBox.Show(new Criptografia().CriptografarSenha("sdfgtAHK4523512"));
 
             Logs.Gravar("Usuario abriu o sistema");
             Application.Run(new FormMainHome());

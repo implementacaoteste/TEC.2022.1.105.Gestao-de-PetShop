@@ -667,11 +667,11 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT Ag.Id, Ag.DataAg,Ag.Horario,Ag.Total,Ag.Ativo, Ani.Id as AnimalId,
-                                    Ani.Nome as NomeAnimal,Cli.Id as ClienteId, Cli.Nome as NomeCliente, 
-                                    Si.Id as SituacaoId,Si.Descricao as DescSituacao 
-                                    FROM Agendamento Ag LEFT JOIN AgendamentoServico AgSer   ON Ag.Id = AgSer.IdAgendamento
-                                                        LEFT JOIN Profissional P             ON AgSer.IdProfissional = P.Id
+                cmd.CommandText = @"SELECT Ag.Id, Ag.DataAg, Ag.Horario, Ag.Total, Ag.Ativo, Ani.Id as AnimalId,
+                                    Ani.Nome as NomeAnimal, Cli.Id as ClienteId, Cli.Nome as NomeCliente, 
+                                    Si.Id as SituacaoId, Si.Descricao as DescSituacao 
+                                    FROM Profissional P LEFT JOIN AgendamentoServicos AgSer       ON P.Id = AgSer.IdProfissional
+                                                        LEFT JOIN Agendamento Ag             ON AgSer.IdAgendamento = Ag.Id
                                                         LEFT JOIN Animal Ani                 ON Ag.IdAnimal = Ani.Id
                                                         LEFT JOIN Cliente Cli                ON Ani.IdCliente = Cli.Id
                                                         LEFT JOIN Situacao Si                ON Ag.IdSituacao = Si.Id 

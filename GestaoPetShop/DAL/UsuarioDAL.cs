@@ -234,9 +234,9 @@ namespace DAL
                 cn.Close();
             }
         }
-        public void Excluir(int _id, SqlTransaction _transaction = null)
+        public void Excluir(int _id)
         {
-            SqlTransaction transaction = _transaction;
+           
 
             using (SqlConnection cn = new SqlConnection(Conexao.StringDeConexao))
             {
@@ -246,21 +246,18 @@ namespace DAL
                     {
                         cmd.CommandType = System.Data.CommandType.Text;
                         cmd.Parameters.AddWithValue("@Id", _id);
-                        if (_transaction == null)
-                        {
+                       
                             cn.Open();
-                            transaction = cn.BeginTransaction();
-                        }
-                        cmd.Transaction = transaction;
-                        cmd.Connection = transaction.Connection;
-                        if (_transaction == null)
-                            transaction.Commit();
+                        cmd.ExecuteNonQuery();
                     }
                     catch (Exception ex)
                     {
-                        if (transaction != null && transaction.Connection != null)
-                            transaction.Rollback();
+                        
                         throw new Exception("Ocorreu um erro ao tentar excluir usuário no banco de dados.", ex) { Data = { { "Id", 42 } } };
+                    }
+                    finally
+                    {
+                        cn.Close();
                     }
                 }
             }

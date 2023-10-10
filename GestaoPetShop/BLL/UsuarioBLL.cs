@@ -1,5 +1,6 @@
 ﻿using DAL;
 using Models;
+using Infra;
 using System;
 using System.Collections.Generic;
 using System.Runtime.Remoting.Channels;
@@ -12,8 +13,10 @@ namespace BLL
         public void Inserir(Usuario _usuario, string _confirmacaoDeSenha)
         {
             //ValidarPermissao(10);
+            
             ValidarDados(_usuario, _confirmacaoDeSenha);
-
+            _usuario.Senha = new Criptografia().CriptografarSenha(_usuario.Senha);
+           
             UsuarioDAL usuarioDAL = new UsuarioDAL();
             usuarioDAL.Inserir(_usuario);
         }
@@ -22,7 +25,7 @@ namespace BLL
             //ValidarPermissao(3);
 
             ValidarDados(_usuario, _confirmacaoDeSenha);
-
+            _usuario.Senha = new Criptografia().CriptografarSenha(_usuario.Senha);
             UsuarioDAL usuarioDAL = new UsuarioDAL();
             usuarioDAL.Alterar(_usuario);
         }
@@ -67,7 +70,8 @@ namespace BLL
         public void Autenticar(string _nomeUsuario, string _senha)
         {
             Usuario usuario = new UsuarioDAL().BuscarPorLoginAutenticar(_nomeUsuario);
-            if (_senha == usuario.Senha && usuario.Ativo)
+            string senha = new Criptografia().CriptografarSenha(_senha);
+            if (senha == usuario.Senha && usuario.Ativo)
             {
                 Constantes.IdUsuarioLogado = usuario.Id;
                 Constantes.UsuarioLogado = usuario.UsuarioLogin;
@@ -84,10 +88,11 @@ namespace BLL
             return new UsuarioDAL().BucarPorIdProfissional(_idProfissional);
         }
 
-        public bool VerificarSenhaAtual(TextBox _txtSenhaAtual, int _id)
+        public bool VerificarSenhaAtual(string _txtSenhaAtual, int _id)
         {
             string senhaatual = BuscarPorId(_id).Senha;
-            if (senhaatual == _txtSenhaAtual.Text)
+            string txtSenhaAtual = new Criptografia().CriptografarSenha(_txtSenhaAtual);
+            if (senhaatual == txtSenhaAtual)
                 return false;
             else
                 return true;

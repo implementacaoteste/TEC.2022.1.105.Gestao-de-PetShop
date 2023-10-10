@@ -502,6 +502,7 @@
             this.dataGridViewTextBoxColumn31.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.dataGridViewTextBoxColumn31.DataPropertyName = "NomeProfissional";
             this.dataGridViewTextBoxColumn31.HeaderText = "Profissional";
+            this.dataGridViewTextBoxColumn31.MinimumWidth = 125;
             this.dataGridViewTextBoxColumn31.Name = "dataGridViewTextBoxColumn31";
             this.dataGridViewTextBoxColumn31.ReadOnly = true;
             // 
@@ -594,13 +595,6 @@
         private System.Windows.Forms.DataGridView agendamentoDataGridView;
         private System.Windows.Forms.BindingSource agendamentoServicosBindingSource;
         private System.Windows.Forms.DataGridView agendamentoServicosDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn26;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn27;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn29;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn31;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
@@ -609,5 +603,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn20;
         private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn22;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn26;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn27;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn29;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn31;
     }
 }

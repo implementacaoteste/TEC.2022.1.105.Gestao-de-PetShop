@@ -42,13 +42,12 @@ namespace GestaoPetShop
             }
             catch (Exception ex)
             {
-                //MessageBox.Show(ex.Message);
-                throw new Exception("Ocorreu um erro ao tentar cadastrar um profissional no banco de dados.", ex) { Data = { { "Id", 238 } } };
+                MessageBox.Show(ex.Message);
             }
         }
         private void FormCadastroProfissional_Load(object sender, EventArgs e)
         {
-            this.Hide();
+            //this.Hide();
             try
             {
                 LoadTheme();

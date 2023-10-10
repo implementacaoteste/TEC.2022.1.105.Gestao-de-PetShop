@@ -2,6 +2,7 @@
 using Models;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace BLL
 {
@@ -15,7 +16,45 @@ namespace BLL
         private void ValidarDados(Profissional _profissional)//Givas
         {
             if (String.IsNullOrEmpty(_profissional.Nome))
-                throw new Exception("Informe o nome do cliente.") { Data = { { "Id", 39 } } }; ;
+                throw new Exception("Informe o nome do profissional.") { Data = { { "Id", 39 } } };
+
+            if (String.IsNullOrEmpty(_profissional.NomeFuncao))
+                throw new Exception("Informe o Função do profissional.") { Data = { { "Id", 39 } } };
+
+            if (String.IsNullOrEmpty(_profissional.Logradouro))
+                throw new Exception("Informe o Logradouro do profissional.") { Data = { { "Id", 39 } } };
+
+            if (String.IsNullOrEmpty(_profissional.Bairro))
+                throw new Exception("Informe o Bairro do profissional.") { Data = { { "Id", 39 } } };
+
+            if (String.IsNullOrEmpty(_profissional.Cidade))
+                throw new Exception("Informe o Cidade do profissional.") { Data = { { "Id", 39 } } };
+
+
+            string verificacao = Convert.ToString(_profissional.DataNascimento.Date);
+
+            if (verificacao.Count() != 19)
+                throw new Exception("Informe a Data de nascimento do profissional.") { Data = { { "Id", 39 } } };
+
+            if (_profissional.CPF.Count() != 14)
+                throw new Exception("Informe o nome do profissional.") { Data = { { "Id", 39 } } };
+
+            if(_profissional.Ativo != true)
+                throw new Exception("Informe o Ativo do profissional.") { Data = { { "Id", 39 } } };
+
+            if(_profissional.CEP.Count() != 9)
+                throw new Exception("Informe o CEP do profissional.") { Data = { { "Id", 39 } } };
+
+            if(_profissional.UF.Count() != 2)
+                throw new Exception("Informe o UF do profissional.") { Data = { { "Id", 39 } } };
+
+            if (_profissional.IdFuncao < 0)
+                throw new Exception("Informe o Id da Função do profissional.") { Data = { { "Id", 39 } } };
+
+            if (_profissional.TelefoneProfissional.Count < 1)
+                throw new Exception("Informe o Telefone do profissional.") { Data = { { "Id", 39 } } };
+
+
         }
         public List<Profissional> BuscarTodos()
         {
