@@ -101,7 +101,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.animalDataGridView.DefaultCellStyle = dataGridViewCellStyle2;
             this.animalDataGridView.Location = new System.Drawing.Point(11, 72);
-            this.animalDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.animalDataGridView.Margin = new System.Windows.Forms.Padding(2);
             this.animalDataGridView.Name = "animalDataGridView";
             this.animalDataGridView.ReadOnly = true;
             this.animalDataGridView.RowHeadersVisible = false;
@@ -198,7 +198,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxBuscar.Location = new System.Drawing.Point(108, 34);
-            this.textBoxBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxBuscar.Name = "textBoxBuscar";
             this.textBoxBuscar.Size = new System.Drawing.Size(154, 26);
             this.textBoxBuscar.TabIndex = 3;
@@ -212,7 +212,7 @@
             "Nome",
             "Id"});
             this.comboBox1.Location = new System.Drawing.Point(11, 32);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(93, 28);
             this.comboBox1.TabIndex = 4;
@@ -222,8 +222,9 @@
             // 
             this.buttonBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonBuscar.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.buttonBuscar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonBuscar.Location = new System.Drawing.Point(278, 32);
-            this.buttonBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonBuscar.Name = "buttonBuscar";
             this.buttonBuscar.Size = new System.Drawing.Size(141, 30);
             this.buttonBuscar.TabIndex = 5;
@@ -235,8 +236,9 @@
             // 
             this.buttonAlterar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonAlterar.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.buttonAlterar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAlterar.Location = new System.Drawing.Point(423, 32);
-            this.buttonAlterar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonAlterar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonAlterar.Name = "buttonAlterar";
             this.buttonAlterar.Size = new System.Drawing.Size(141, 30);
             this.buttonAlterar.TabIndex = 6;
@@ -248,8 +250,9 @@
             // 
             this.buttonIserir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonIserir.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.buttonIserir.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonIserir.Location = new System.Drawing.Point(568, 32);
-            this.buttonIserir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonIserir.Margin = new System.Windows.Forms.Padding(2);
             this.buttonIserir.Name = "buttonIserir";
             this.buttonIserir.Size = new System.Drawing.Size(141, 30);
             this.buttonIserir.TabIndex = 7;
@@ -261,8 +264,9 @@
             // 
             this.buttonExcluir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonExcluir.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.buttonExcluir.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonExcluir.Location = new System.Drawing.Point(713, 32);
-            this.buttonExcluir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonExcluir.Margin = new System.Windows.Forms.Padding(2);
             this.buttonExcluir.Name = "buttonExcluir";
             this.buttonExcluir.Size = new System.Drawing.Size(141, 30);
             this.buttonExcluir.TabIndex = 8;
@@ -274,8 +278,9 @@
             // 
             this.buttonSelecionar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonSelecionar.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.buttonSelecionar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSelecionar.Location = new System.Drawing.Point(568, 474);
-            this.buttonSelecionar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonSelecionar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSelecionar.Name = "buttonSelecionar";
             this.buttonSelecionar.Size = new System.Drawing.Size(141, 30);
             this.buttonSelecionar.TabIndex = 9;
@@ -286,8 +291,9 @@
             // 
             this.buttonCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonCancelar.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.buttonCancelar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCancelar.Location = new System.Drawing.Point(713, 474);
-            this.buttonCancelar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonCancelar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonCancelar.Name = "buttonCancelar";
             this.buttonCancelar.Size = new System.Drawing.Size(141, 30);
             this.buttonCancelar.TabIndex = 10;
@@ -338,7 +344,7 @@
             this.Controls.Add(this.animalDataGridView);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormConsultaAnimal";
