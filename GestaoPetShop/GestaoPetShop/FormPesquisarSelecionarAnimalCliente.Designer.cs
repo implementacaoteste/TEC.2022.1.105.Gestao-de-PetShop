@@ -60,7 +60,7 @@
             // 
             this.buttonBuscarAnimalCliente.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonBuscarAnimalCliente.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.buttonBuscarAnimalCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonBuscarAnimalCliente.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonBuscarAnimalCliente.Location = new System.Drawing.Point(982, 131);
             this.buttonBuscarAnimalCliente.Margin = new System.Windows.Forms.Padding(2);
             this.buttonBuscarAnimalCliente.Name = "buttonBuscarAnimalCliente";
@@ -75,7 +75,7 @@
             this.buttonSelecionarAnimalCliente.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonSelecionarAnimalCliente.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.buttonSelecionarAnimalCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSelecionarAnimalCliente.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSelecionarAnimalCliente.Location = new System.Drawing.Point(835, 546);
             this.buttonSelecionarAnimalCliente.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSelecionarAnimalCliente.Name = "buttonSelecionarAnimalCliente";
@@ -117,7 +117,7 @@
             this.buttonCancelarPesquisaAnimalCliente.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonCancelarPesquisaAnimalCliente.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.buttonCancelarPesquisaAnimalCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCancelarPesquisaAnimalCliente.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCancelarPesquisaAnimalCliente.Location = new System.Drawing.Point(981, 545);
             this.buttonCancelarPesquisaAnimalCliente.Name = "buttonCancelarPesquisaAnimalCliente";
             this.buttonCancelarPesquisaAnimalCliente.Size = new System.Drawing.Size(141, 37);
