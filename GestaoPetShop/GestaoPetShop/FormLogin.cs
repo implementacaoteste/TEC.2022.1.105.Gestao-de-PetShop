@@ -60,8 +60,8 @@ namespace GestaoPetShop
         private void FormLogin_Load(object sender, EventArgs e)
         {
 #if DEBUG
-            textBoxSenha.Text = "adm1234";
-            textBoxUsuario.Text = "administrador";
+            //textBoxSenha.Text = "adm1234";
+            //textBoxUsuario.Text = "administrador";
 #endif
         }
 
