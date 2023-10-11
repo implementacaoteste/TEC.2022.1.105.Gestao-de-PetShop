@@ -51,6 +51,14 @@ namespace GestaoPetShop
             try
             {
                 LoadTheme();
+                List<Funcao> funcoes = new List<Funcao>();
+                funcoes = new FuncaoBLL().BuscarTodos();
+
+                int num2 = funcoes.Count();
+                for (int x = 0; x < num2; x++)
+                {
+                    nomeFuncaoComboBox.Items.Insert(x, funcoes[x].Nome);
+                }
 
                 if (id == 0)
                 {
@@ -65,12 +73,12 @@ namespace GestaoPetShop
                     lblAlterarProfissional.Visible = true;
                     profissionalBindingSource.AddNew();
                     btnGerarSenha.Visible = true;
-                    Profissional profissional = new Profissional();
-                    profissional = new ProfissionalBLL().BuscarPorId(id);
-                    profissionalBindingSource.DataSource = profissional;
-                    //this.nomeFuncaoComboBox.Text = profissional.NomeFuncao;
-                  
                    
+                     
+                    profissionalBindingSource.DataSource = new ProfissionalBLL().BuscarPorId(id);
+
+
+
                 }
 
                 if (!permitirSalvar)
@@ -82,14 +90,6 @@ namespace GestaoPetShop
                     }
                 }
 
-                List<Funcao> funcoes = new List<Funcao>();
-                funcoes = new FuncaoBLL().BuscarTodos();
-
-                int num2 = funcoes.Count();
-                for (int x = 0; x < num2; x++)
-                {
-                    nomeFuncaoComboBox.Items.Insert(x, funcoes[x].Nome);
-                }
             }
             catch (Exception ex)
             {

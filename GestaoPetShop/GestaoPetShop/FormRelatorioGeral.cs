@@ -37,31 +37,48 @@ namespace GestaoPetShop
 
         private void GerarPdf()
         {
+            try
+            {
 
-            string nomeArquivo = @"C:\dados\relatorioCliente.pdf";
-            FileStream arquivoPDF = new FileStream(nomeArquivo, FileMode.Create);
-            Document doc = new Document(PageSize.A4);
-            iTextSharp.text.pdf.PdfWriter escritorPDF = iTextSharp.text.pdf.PdfWriter.GetInstance(doc, arquivoPDF);
+                string nomeArquivo = @"C:\dados\relatorioCliente.pdf";
+                FileStream arquivoPDF = new FileStream(nomeArquivo, FileMode.Create);
+                Document doc = new Document(PageSize.A4);
+                iTextSharp.text.pdf.PdfWriter escritorPDF = iTextSharp.text.pdf.PdfWriter.GetInstance(doc, arquivoPDF);
 
-            doc.Open();
-            string dados = "";
 
-            iTextSharp.text.Paragraph paragrafo = new iTextSharp.text.Paragraph(dados, new iTextSharp.text.Font(iTextSharp.text.Font.NORMAL, 14, (int)System.Drawing.FontStyle.Bold));
 
-            paragrafo.Alignment = Element.ALIGN_CENTER;
-            paragrafo.Add("Dimas Martins Mota \n");
+                doc.Open();
+                string dados = "";
 
-            paragrafo.Font = new iTextSharp.text.Font(iTextSharp.text.Font.NORMAL,18,(int)System.Drawing.FontStyle.Italic);
-            paragrafo.Alignment = Element.ALIGN_CENTER;
-            paragrafo.Add("Curso: Desenvolvimento de Sistemas \n");
+                iTextSharp.text.Paragraph paragrafo = new iTextSharp.text.Paragraph(dados, new iTextSharp.text.Font(iTextSharp.text.Font.NORMAL, 14, (int)System.Drawing.FontStyle.Bold));
 
-            string email="E-mail: dimasmartinsmota@hotmail.com";
-            paragrafo.Font = new iTextSharp.text.Font(iTextSharp.text.Font.NORMAL, 10, (int)System.Drawing.FontStyle.Regular);
-            paragrafo.Alignment = Element.ALIGN_CENTER;
-            paragrafo.Add(email + " \n");
+                paragrafo.Alignment = Element.ALIGN_CENTER;
+                paragrafo.Add("Dimas Martins Mota \n");
 
-            doc.Add(paragrafo);
-            doc.Close();
+                paragrafo.Font = new iTextSharp.text.Font(iTextSharp.text.Font.NORMAL, 18, (int)System.Drawing.FontStyle.Italic);
+                paragrafo.Alignment = Element.ALIGN_CENTER;
+                paragrafo.Add("Curso: Desenvolvimento de Sistemas \n");
+
+                string email = "E-mail: dimasmartinsmota@hotmail.com";
+                paragrafo.Font = new iTextSharp.text.Font(iTextSharp.text.Font.NORMAL, 10, (int)System.Drawing.FontStyle.Regular);
+                paragrafo.Alignment = Element.ALIGN_CENTER;
+                paragrafo.Add(email + " \n");
+
+                // inserindo um imagem
+
+                iTextSharp.text.Image logo = iTextSharp.text.Image.GetInstance(@"C:\dados\trecoimagem.png");
+                logo.ScaleToFit(140f, 120);
+                logo.Alignment = Element.ALIGN_LEFT;
+                //logo.SetAbsolutePosition(100f, 700f);
+                doc.Add(logo);
+                doc.Add(paragrafo);
+                doc.Close();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
 
 
         }
