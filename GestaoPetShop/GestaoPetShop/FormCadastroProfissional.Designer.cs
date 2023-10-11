@@ -107,7 +107,7 @@
             // 
             bairroLabel.AutoSize = true;
             bairroLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            bairroLabel.Location = new System.Drawing.Point(26, 194);
+            bairroLabel.Location = new System.Drawing.Point(12, 194);
             bairroLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             bairroLabel.Name = "bairroLabel";
             bairroLabel.Size = new System.Drawing.Size(46, 17);
@@ -140,7 +140,7 @@
             // 
             logradouroLabel.AutoSize = true;
             logradouroLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            logradouroLabel.Location = new System.Drawing.Point(25, 131);
+            logradouroLabel.Location = new System.Drawing.Point(11, 131);
             logradouroLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             logradouroLabel.Name = "logradouroLabel";
             logradouroLabel.Size = new System.Drawing.Size(82, 17);
@@ -151,7 +151,7 @@
             // 
             nomeLabel.AutoSize = true;
             nomeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            nomeLabel.Location = new System.Drawing.Point(23, 68);
+            nomeLabel.Location = new System.Drawing.Point(11, 67);
             nomeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             nomeLabel.Name = "nomeLabel";
             nomeLabel.Size = new System.Drawing.Size(45, 17);
@@ -226,7 +226,7 @@
             // 
             idFuncaoLabel.AutoSize = true;
             idFuncaoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            idFuncaoLabel.Location = new System.Drawing.Point(27, 259);
+            idFuncaoLabel.Location = new System.Drawing.Point(12, 259);
             idFuncaoLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             idFuncaoLabel.Name = "idFuncaoLabel";
             idFuncaoLabel.Size = new System.Drawing.Size(19, 17);
@@ -237,7 +237,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label1.Location = new System.Drawing.Point(25, 328);
+            label1.Location = new System.Drawing.Point(11, 328);
             label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             label1.Name = "label1";
             label1.Size = new System.Drawing.Size(114, 17);
@@ -248,7 +248,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label2.Location = new System.Drawing.Point(591, 328);
+            label2.Location = new System.Drawing.Point(569, 330);
             label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             label2.Name = "label2";
             label2.Size = new System.Drawing.Size(126, 17);
@@ -279,7 +279,7 @@
             // 
             this.bairroTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.profissionalBindingSource, "Bairro", true));
             this.bairroTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bairroTextBox.Location = new System.Drawing.Point(28, 212);
+            this.bairroTextBox.Location = new System.Drawing.Point(14, 212);
             this.bairroTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.bairroTextBox.Name = "bairroTextBox";
             this.bairroTextBox.Size = new System.Drawing.Size(352, 26);
@@ -299,7 +299,7 @@
             // 
             this.logradouroTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.profissionalBindingSource, "Logradouro", true));
             this.logradouroTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.logradouroTextBox.Location = new System.Drawing.Point(29, 149);
+            this.logradouroTextBox.Location = new System.Drawing.Point(15, 149);
             this.logradouroTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.logradouroTextBox.Name = "logradouroTextBox";
             this.logradouroTextBox.Size = new System.Drawing.Size(517, 26);
@@ -310,7 +310,7 @@
             this.nomeTextBox.BackColor = System.Drawing.SystemColors.Window;
             this.nomeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.profissionalBindingSource, "Nome", true));
             this.nomeTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nomeTextBox.Location = new System.Drawing.Point(26, 88);
+            this.nomeTextBox.Location = new System.Drawing.Point(14, 87);
             this.nomeTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.nomeTextBox.Name = "nomeTextBox";
             this.nomeTextBox.Size = new System.Drawing.Size(430, 26);
@@ -350,7 +350,7 @@
             // 
             this.pictureBoxFoto.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.pictureBoxFoto.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.profissionalBindingSource, "Foto", true));
-            this.pictureBoxFoto.Location = new System.Drawing.Point(995, 87);
+            this.pictureBoxFoto.Location = new System.Drawing.Point(1005, 87);
             this.pictureBoxFoto.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBoxFoto.Name = "pictureBoxFoto";
             this.pictureBoxFoto.Size = new System.Drawing.Size(94, 110);
@@ -362,7 +362,7 @@
             // 
             this.buttonBuscarFoto.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.buttonBuscarFoto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonBuscarFoto.Location = new System.Drawing.Point(972, 207);
+            this.buttonBuscarFoto.Location = new System.Drawing.Point(982, 207);
             this.buttonBuscarFoto.Margin = new System.Windows.Forms.Padding(2);
             this.buttonBuscarFoto.MaximumSize = new System.Drawing.Size(141, 37);
             this.buttonBuscarFoto.MinimumSize = new System.Drawing.Size(141, 37);
@@ -376,7 +376,7 @@
             // textBoxEmail
             // 
             this.textBoxEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxEmail.Location = new System.Drawing.Point(26, 349);
+            this.textBoxEmail.Location = new System.Drawing.Point(11, 349);
             this.textBoxEmail.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxEmail.Name = "textBoxEmail";
             this.textBoxEmail.Size = new System.Drawing.Size(261, 26);
@@ -385,17 +385,17 @@
             // textBoxTelefone
             // 
             this.textBoxTelefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxTelefone.Location = new System.Drawing.Point(594, 349);
+            this.textBoxTelefone.Location = new System.Drawing.Point(572, 349);
             this.textBoxTelefone.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxTelefone.Name = "textBoxTelefone";
-            this.textBoxTelefone.Size = new System.Drawing.Size(229, 26);
+            this.textBoxTelefone.Size = new System.Drawing.Size(261, 26);
             this.textBoxTelefone.TabIndex = 14;
             // 
             // buttonInserirEmail
             // 
             this.buttonInserirEmail.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.buttonInserirEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonInserirEmail.Location = new System.Drawing.Point(291, 344);
+            this.buttonInserirEmail.Location = new System.Drawing.Point(276, 344);
             this.buttonInserirEmail.Margin = new System.Windows.Forms.Padding(2);
             this.buttonInserirEmail.MaximumSize = new System.Drawing.Size(141, 37);
             this.buttonInserirEmail.MinimumSize = new System.Drawing.Size(141, 37);
@@ -410,7 +410,7 @@
             // 
             this.buttonExcluirEmail.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.buttonExcluirEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonExcluirEmail.Location = new System.Drawing.Point(436, 344);
+            this.buttonExcluirEmail.Location = new System.Drawing.Point(421, 344);
             this.buttonExcluirEmail.Margin = new System.Windows.Forms.Padding(2);
             this.buttonExcluirEmail.MaximumSize = new System.Drawing.Size(141, 37);
             this.buttonExcluirEmail.MinimumSize = new System.Drawing.Size(141, 37);
@@ -425,7 +425,7 @@
             // 
             this.buttonInserirTelefone.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.buttonInserirTelefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonInserirTelefone.Location = new System.Drawing.Point(827, 344);
+            this.buttonInserirTelefone.Location = new System.Drawing.Point(837, 344);
             this.buttonInserirTelefone.Margin = new System.Windows.Forms.Padding(2);
             this.buttonInserirTelefone.MaximumSize = new System.Drawing.Size(141, 37);
             this.buttonInserirTelefone.MinimumSize = new System.Drawing.Size(141, 37);
@@ -440,7 +440,7 @@
             // 
             this.buttonExcluirTelefone.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.buttonExcluirTelefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonExcluirTelefone.Location = new System.Drawing.Point(972, 344);
+            this.buttonExcluirTelefone.Location = new System.Drawing.Point(982, 344);
             this.buttonExcluirTelefone.Margin = new System.Windows.Forms.Padding(2);
             this.buttonExcluirTelefone.MaximumSize = new System.Drawing.Size(141, 37);
             this.buttonExcluirTelefone.MinimumSize = new System.Drawing.Size(141, 37);
@@ -485,7 +485,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.emailProfissionalDataGridView.DefaultCellStyle = dataGridViewCellStyle2;
-            this.emailProfissionalDataGridView.Location = new System.Drawing.Point(26, 385);
+            this.emailProfissionalDataGridView.Location = new System.Drawing.Point(11, 385);
             this.emailProfissionalDataGridView.Margin = new System.Windows.Forms.Padding(2);
             this.emailProfissionalDataGridView.Name = "emailProfissionalDataGridView";
             this.emailProfissionalDataGridView.ReadOnly = true;
@@ -539,7 +539,7 @@
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.telefoneProfissionalDataGridView.DefaultCellStyle = dataGridViewCellStyle4;
-            this.telefoneProfissionalDataGridView.Location = new System.Drawing.Point(594, 385);
+            this.telefoneProfissionalDataGridView.Location = new System.Drawing.Point(572, 385);
             this.telefoneProfissionalDataGridView.Margin = new System.Windows.Forms.Padding(2);
             this.telefoneProfissionalDataGridView.Name = "telefoneProfissionalDataGridView";
             this.telefoneProfissionalDataGridView.ReadOnly = true;
@@ -547,7 +547,7 @@
             this.telefoneProfissionalDataGridView.RowHeadersWidth = 51;
             this.telefoneProfissionalDataGridView.RowTemplate.Height = 24;
             this.telefoneProfissionalDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.telefoneProfissionalDataGridView.Size = new System.Drawing.Size(519, 164);
+            this.telefoneProfissionalDataGridView.Size = new System.Drawing.Size(551, 164);
             this.telefoneProfissionalDataGridView.TabIndex = 34;
             // 
             // dataGridViewTextBoxColumn6
@@ -563,7 +563,7 @@
             // 
             this.buttonSalvar.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.buttonSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSalvar.Location = new System.Drawing.Point(827, 553);
+            this.buttonSalvar.Location = new System.Drawing.Point(837, 553);
             this.buttonSalvar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSalvar.MaximumSize = new System.Drawing.Size(141, 37);
             this.buttonSalvar.MinimumSize = new System.Drawing.Size(141, 37);
@@ -579,7 +579,7 @@
             this.buttonCancelar.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.buttonCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.buttonCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCancelar.Location = new System.Drawing.Point(972, 553);
+            this.buttonCancelar.Location = new System.Drawing.Point(982, 553);
             this.buttonCancelar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonCancelar.MaximumSize = new System.Drawing.Size(141, 37);
             this.buttonCancelar.MinimumSize = new System.Drawing.Size(141, 37);
@@ -648,7 +648,7 @@
             this.idFuncaoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.profissionalBindingSource, "IdFuncao", true));
             this.idFuncaoTextBox.Enabled = false;
             this.idFuncaoTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.idFuncaoTextBox.Location = new System.Drawing.Point(29, 279);
+            this.idFuncaoTextBox.Location = new System.Drawing.Point(14, 279);
             this.idFuncaoTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.idFuncaoTextBox.Name = "idFuncaoTextBox";
             this.idFuncaoTextBox.Size = new System.Drawing.Size(64, 26);
@@ -660,7 +660,7 @@
             this.btnGerarSenha.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnGerarSenha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGerarSenha.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGerarSenha.Location = new System.Drawing.Point(972, 268);
+            this.btnGerarSenha.Location = new System.Drawing.Point(982, 268);
             this.btnGerarSenha.Margin = new System.Windows.Forms.Padding(2);
             this.btnGerarSenha.MaximumSize = new System.Drawing.Size(141, 37);
             this.btnGerarSenha.MinimumSize = new System.Drawing.Size(141, 37);
@@ -689,7 +689,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1028, 586);
+            this.ClientSize = new System.Drawing.Size(1134, 594);
             this.Controls.Add(this.lblAlterarProfissional);
             this.Controls.Add(label2);
             this.Controls.Add(label1);
@@ -735,9 +735,9 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(1149, 631);
+            this.MaximumSize = new System.Drawing.Size(1150, 633);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(1027, 597);
+            this.MinimumSize = new System.Drawing.Size(1150, 633);
             this.Name = "FormCadastroProfissional";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
