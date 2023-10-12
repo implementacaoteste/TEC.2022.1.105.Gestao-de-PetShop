@@ -55,10 +55,10 @@ namespace GestaoPetShop
                 doc.Open();
                 string dados = "";
 
-                iTextSharp.text.Paragraph paragrafo = new iTextSharp.text.Paragraph(dados, new iTextSharp.text.Font(iTextSharp.text.Font.NORMAL, 14, (int)System.Drawing.FontStyle.Bold));
+                iTextSharp.text.Paragraph paragrafo = new iTextSharp.text.Paragraph(dados, new iTextSharp.text.Font(iTextSharp.text.Font.NORMAL, 16, (int)System.Drawing.FontStyle.Bold));
 
                 paragrafo.Alignment = Element.ALIGN_CENTER;
-                paragrafo.Add("Dimas Martins Mota \n");
+                paragrafo.Add("PetShop \n");
 
                 paragrafo.Font = new iTextSharp.text.Font(iTextSharp.text.Font.NORMAL, 18, (int)System.Drawing.FontStyle.Italic);
                 paragrafo.Alignment = Element.ALIGN_CENTER;
