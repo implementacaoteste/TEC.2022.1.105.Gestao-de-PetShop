@@ -246,5 +246,13 @@ namespace GestaoPetShop
                 e.Handled = true;
             }
         }
+
+        private void emailTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

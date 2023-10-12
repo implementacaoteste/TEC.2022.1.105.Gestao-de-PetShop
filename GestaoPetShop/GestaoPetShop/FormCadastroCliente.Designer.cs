@@ -200,13 +200,15 @@
             // emailTextBox
             // 
             this.emailTextBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.emailTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "UF", true));
+            this.emailTextBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.emailTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.emailTextBox.Location = new System.Drawing.Point(668, 232);
             this.emailTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.emailTextBox.MaxLength = 2;
             this.emailTextBox.Name = "emailTextBox";
             this.emailTextBox.Size = new System.Drawing.Size(61, 26);
             this.emailTextBox.TabIndex = 8;
+            this.emailTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.emailTextBox_KeyPress);
             // 
             // label1CadastrarCliente
             // 
