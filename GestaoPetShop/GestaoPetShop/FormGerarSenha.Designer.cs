@@ -120,7 +120,7 @@
             // checkBoxMostrarSenha
             // 
             this.checkBoxMostrarSenha.AutoSize = true;
-            this.checkBoxMostrarSenha.Location = new System.Drawing.Point(253, 230);
+            this.checkBoxMostrarSenha.Location = new System.Drawing.Point(270, 200);
             this.checkBoxMostrarSenha.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxMostrarSenha.Name = "checkBoxMostrarSenha";
             this.checkBoxMostrarSenha.Size = new System.Drawing.Size(95, 17);
@@ -170,26 +170,28 @@
             // 
             // buttonSalvarNovaSenha
             // 
+            this.buttonSalvarNovaSenha.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.buttonSalvarNovaSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSalvarNovaSenha.Location = new System.Drawing.Point(50, 251);
+            this.buttonSalvarNovaSenha.Location = new System.Drawing.Point(51, 245);
             this.buttonSalvarNovaSenha.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSalvarNovaSenha.Name = "buttonSalvarNovaSenha";
             this.buttonSalvarNovaSenha.Size = new System.Drawing.Size(141, 37);
             this.buttonSalvarNovaSenha.TabIndex = 11;
             this.buttonSalvarNovaSenha.Text = "Salvar";
-            this.buttonSalvarNovaSenha.UseVisualStyleBackColor = true;
+            this.buttonSalvarNovaSenha.UseVisualStyleBackColor = false;
             this.buttonSalvarNovaSenha.Click += new System.EventHandler(this.buttonSalvarNovaSenha_Click);
             // 
             // buttonCancelar
             // 
+            this.buttonCancelar.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.buttonCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCancelar.Location = new System.Drawing.Point(207, 251);
+            this.buttonCancelar.Location = new System.Drawing.Point(208, 245);
             this.buttonCancelar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonCancelar.Name = "buttonCancelar";
             this.buttonCancelar.Size = new System.Drawing.Size(141, 37);
             this.buttonCancelar.TabIndex = 12;
             this.buttonCancelar.Text = "Cancelar";
-            this.buttonCancelar.UseVisualStyleBackColor = true;
+            this.buttonCancelar.UseVisualStyleBackColor = false;
             this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
             // 
             // FormGerarSenha

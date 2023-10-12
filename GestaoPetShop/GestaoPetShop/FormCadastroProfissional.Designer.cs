@@ -664,7 +664,6 @@
             // 
             this.btnGerarSenha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnGerarSenha.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnGerarSenha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGerarSenha.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGerarSenha.Location = new System.Drawing.Point(982, 268);
             this.btnGerarSenha.Margin = new System.Windows.Forms.Padding(2);
