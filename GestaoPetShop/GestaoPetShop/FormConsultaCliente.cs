@@ -13,7 +13,7 @@ namespace GestaoPetShop
         public FormConsultaCliente(int _selecionarcliente = 0)
         {
             InitializeComponent();
-            selecionarcliente =_selecionarcliente;
+            selecionarcliente = _selecionarcliente;
         }
 
         private void buttonBuscar_Click(object sender, EventArgs e)
@@ -79,7 +79,7 @@ namespace GestaoPetShop
         {
             try
             {
-                int opc = 0;
+                int opc = 0; 
                 using (FormCadastroCliente frm = new FormCadastroCliente(opc))
                 {
                     frm.ShowDialog();
@@ -160,7 +160,7 @@ namespace GestaoPetShop
             LoadTheme();
             //TODO: This line of code loads data into the 'petshopDataSet.Cliente' table.You can move, or remove it, as needed.
             //    this.clienteTableAdapter.Fill(this.petshopDataSet.Cliente);
-                comboBoxBuscarPor.SelectedIndex = 3;
+            comboBoxBuscarPor.SelectedIndex = 3;
             textBoxBuscar.Enabled = false;
             if (selecionarcliente == 1)
             {
@@ -171,7 +171,7 @@ namespace GestaoPetShop
 
             }
         }
-        private void LoadTheme() 
+        private void LoadTheme()
         {
             foreach (Control btns in this.Controls)
             {
@@ -197,5 +197,5 @@ namespace GestaoPetShop
             Close();
         }
     }
-    
+
 }

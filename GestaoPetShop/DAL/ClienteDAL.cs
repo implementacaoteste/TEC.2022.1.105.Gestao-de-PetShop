@@ -138,20 +138,10 @@ namespace DAL
             {
 
                 SqlCommand cmd = cn.CreateCommand();
-                cmd.CommandText = @"UPDATE Cliente SET 
-                                        Nome = @Nome, 
-                                        CPF = @CPF, 
-                                        Logradouro = @Logradouro, 
-                                        Numero = @Numero, 
-                                        Bairro = @Bairro,
-                                        Cidade = @Cidade,
-                                        UF= @UF,
-                                        Pais = @Pais,
-                                        CEP = @CEP,
-                                        DataNascimento = @DataNascimento,   
-                                        Foto = @Foto,            
-                                        Ativo = @Ativo
-                                    WHERE Id = @Id";
+                cmd.CommandText = @"UPDATE Cliente SET Nome = @Nome, CPF = @CPF, Logradouro = @Logradouro, 
+                                        Numero = @Numero, Bairro = @Bairro, Cidade = @Cidade, UF= @UF,
+                                        Pais = @Pais, CEP = @CEP, DataNascimento = @DataNascimento,   
+                                        Foto = @Foto, Ativo = @Ativo WHERE Id = @Id";
                 cmd.CommandType = System.Data.CommandType.Text;
 
                 cmd.Parameters.AddWithValue("@Id", _cliente.Id);
@@ -165,7 +155,7 @@ namespace DAL
                 cmd.Parameters.AddWithValue("@Pais", _cliente.Pais);
                 cmd.Parameters.AddWithValue("@CEP", _cliente.CEP);
                 cmd.Parameters.AddWithValue("@DataNascimento", _cliente.DataNascimento);
-                // cmd.Parameters.AddWithValue("@Foto", _cliente.Foto);
+
                 if (_cliente.Foto != null)
                     cmd.Parameters.AddWithValue("@Foto", _cliente.Foto);
                 else
