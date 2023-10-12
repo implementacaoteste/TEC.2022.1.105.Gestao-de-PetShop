@@ -338,13 +338,16 @@
             // 
             // uFTextBox
             // 
+            this.uFTextBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.uFTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.profissionalBindingSource, "UF", true));
             this.uFTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.uFTextBox.Location = new System.Drawing.Point(658, 212);
             this.uFTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.uFTextBox.MaxLength = 2;
             this.uFTextBox.Name = "uFTextBox";
             this.uFTextBox.Size = new System.Drawing.Size(64, 26);
             this.uFTextBox.TabIndex = 8;
+            this.uFTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.uFTextBox_KeyPress);
             // 
             // pictureBoxFoto
             // 
@@ -390,6 +393,7 @@
             this.textBoxTelefone.Name = "textBoxTelefone";
             this.textBoxTelefone.Size = new System.Drawing.Size(261, 26);
             this.textBoxTelefone.TabIndex = 14;
+            this.textBoxTelefone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxTelefone_KeyPress);
             // 
             // buttonInserirEmail
             // 
@@ -617,9 +621,11 @@
             this.cEPTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.profissionalBindingSource, "CEP", true));
             this.cEPTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cEPTextBox.Location = new System.Drawing.Point(687, 149);
+            this.cEPTextBox.MaxLength = 9;
             this.cEPTextBox.Name = "cEPTextBox";
             this.cEPTextBox.Size = new System.Drawing.Size(249, 26);
             this.cEPTextBox.TabIndex = 5;
+            this.cEPTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cEPTextBox_KeyPress);
             // 
             // textBoxDataNascimento
             // 

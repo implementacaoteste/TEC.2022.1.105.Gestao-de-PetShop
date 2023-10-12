@@ -274,9 +274,10 @@ GO
 
 EXEC SP_CAD_USUARIO 1,'administrador','HjAsWaTFbgNjwwyBrFLS0FiZTF7RQmTvkG13HT3yCZM='
 EXEC SP_CAD_USUARIO 2,'AnaPaula','QJhhkqDEKtUFhMtxDloEMBIykHVngoWCjhHh0hFWiRQ='
-EXEC SP_CAD_USUARIO 3, 'Erisvaldo','2TbqERhDgvUD7AVPSqQyIZUmHYb9DUyJHiRaOSfUrtA='
+EXEC SP_CAD_USUARIO 3,'Erisvaldo','2TbqERhDgvUD7AVPSqQyIZUmHYb9DUyJHiRaOSfUrtA='
+EXEC SP_CAD_USUARIO 4,'teste','4l0T6ECg5gGUAd70iFwB+OrZlqIhNCQHx5aftxeJm2g=' 
 GO
--- Ana Paula ana1234   e Erisvaldo 1234
+-- Ana Paula ana1234   e Erisvaldo 1234 e tst1234
 /*******************************************************************************************************************************/
 /**************************************INSERIR SITUAÇÃO **************************************************************/
 --use petshop
