@@ -238,5 +238,13 @@ namespace GestaoPetShop
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void textBoxTelefone_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsLetter(e.KeyChar) || char.IsPunctuation(e.KeyChar) || char.IsSymbol(e.KeyChar) || char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }
