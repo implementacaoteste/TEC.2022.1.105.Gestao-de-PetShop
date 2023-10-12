@@ -174,6 +174,7 @@
             this.tempoTextBox.Name = "tempoTextBox";
             this.tempoTextBox.Size = new System.Drawing.Size(164, 26);
             this.tempoTextBox.TabIndex = 2;
+            this.tempoTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tempoTextBox_KeyPress);
             // 
             // label1CadastrarServico
             // 
