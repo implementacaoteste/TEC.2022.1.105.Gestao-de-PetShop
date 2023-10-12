@@ -390,6 +390,7 @@
             this.textBoxTelefone.Name = "textBoxTelefone";
             this.textBoxTelefone.Size = new System.Drawing.Size(261, 26);
             this.textBoxTelefone.TabIndex = 14;
+            this.textBoxTelefone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxTelefone_KeyPress);
             // 
             // buttonInserirEmail
             // 
