@@ -182,9 +182,11 @@
             this.rGTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rGTextBox.Location = new System.Drawing.Point(712, 163);
             this.rGTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.rGTextBox.MaxLength = 9;
             this.rGTextBox.Name = "rGTextBox";
             this.rGTextBox.Size = new System.Drawing.Size(199, 26);
             this.rGTextBox.TabIndex = 5;
+            this.rGTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.rGTextBox_KeyPress);
             // 
             // foneTextBox
             // 

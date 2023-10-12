@@ -254,5 +254,13 @@ namespace GestaoPetShop
                 e.Handled = true;
             }
         }
+
+        private void rGTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsLetter(e.KeyChar) || char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }
