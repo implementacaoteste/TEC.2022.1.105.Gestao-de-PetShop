@@ -339,6 +339,51 @@ namespace DAL
                 cn.Close();
             }
         }
+        public List<Animal> BuscarAnimaisPorIdCliente(int _id) //BuscarPorCodigo
+        {
+            List<Animal> animais = new List<Animal>();
+            Animal animal;
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = cn;
+            cmd.CommandText = @"SELECT Id,IdRaca, IdCliente, Nome, Sexo,  Agressivo, Cor, Alergia, DataNascimento ,Ativo FROM Animal WHERE IdCliente = @Id";
+            cmd.CommandType = System.Data.CommandType.Text;
+            cmd.Parameters.AddWithValue("@Id", _id);
+
+            cn.Open();
+            using (SqlDataReader rd = cmd.ExecuteReader())
+
+                try
+                {
+                    while (rd.Read())
+                    {
+                        animal = new Animal();
+                        animal.Id = (int)rd["Id"];
+                        animal.IdRaca = (int)rd["IdRaca"];
+                        animal.IdCliente = (int)rd["IdCliente"];
+                        animal.Nome = rd["Nome"].ToString();
+                        animal.Sexo = rd["Sexo"].ToString();
+                        animal.Agressivo = rd["agressivo"].ToString();
+                        animal.Cor = rd["Cor"].ToString();
+                        animal.Alergia = rd["Alergia"].ToString();
+                        animal.DataNascimento = Convert.ToDateTime(rd["DataNascimento"]);
+                        animal.Ativo = (bool)rd["Ativo"];
+                        animal.Cliente = new ClienteDAL().BuscarPorId((int)rd["IdCliente"]);
+                        animal.Raca = new RacaDAL().BuscarPorId((int)rd["IdRaca"]);
+                        animais.Add(animal);
+                    }
+                    return animais;
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception("Ocorreu um erro ao tentar buscar animal por id no banco de dados", ex) { Data = { { "Id", 125 } } };
+                }
+                finally
+                {
+                    cn.Close();
+                }
+        }
     }
 }
 

@@ -411,7 +411,8 @@ namespace DAL
                         cliente.Ativo = (bool)rd["Ativo"];
                         cliente.EmailCliente = new EmailClienteDAL().BuscarPorIdCliente(cliente.Id);
                         cliente.TelefoneClientes = new TelefoneClienteDAL().BuscarPorIdCliente(cliente.Id);
-
+                        
+                        cliente.Animais = new AnimalDAL().BuscarAnimaisPorIdCliente(cliente.Id);
                         clienteList.Add(cliente);
                     }
                 }
