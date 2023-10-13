@@ -79,8 +79,9 @@ namespace GestaoPetShop
         {
             try
             {
-                int opc = 0; 
-                using (FormCadastroCliente frm = new FormCadastroCliente(opc))
+                //int opc = 0; 
+                //using (FormCadastroCliente frm = new FormCadastroCliente(opc))
+                using (FormCadastroCliente frm = new FormCadastroCliente())
                 {
                     frm.ShowDialog();
                 }
