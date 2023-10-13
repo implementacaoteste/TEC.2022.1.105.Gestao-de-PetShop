@@ -19,6 +19,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web.Configuration;
+using System.Web.UI.WebControls;
 using System.Windows.Forms;
 using static iText.Kernel.Pdf.Colorspace.PdfShading;
 
@@ -59,7 +60,7 @@ namespace GestaoPetShop
                 // inserindo um imagem
 
                 iTextSharp.text.Image logo = iTextSharp.text.Image.GetInstance(@"C:\Users\ADM\Documents\GitHub\TEC.2022.1.105.Gestao-de-PetShop\GestaoPetShop\bicho-de-estimacao.png");
-                logo.ScaleToFit(140f, 120); // tamanho da imagem
+                logo.ScaleToFit(80f, 60f); // tamanho da imagem
                 logo.Alignment = Element.ALIGN_CENTER; // localização da imagem
                 //logo.SetAbsolutePosition(100f, 700f); // outra forma localização da imagem
 
@@ -83,7 +84,31 @@ namespace GestaoPetShop
 
                 PdfPTable tabela = new PdfPTable(6); // criação de tabela com três colunas
                 tabela.DefaultCell.FixedHeight = 20; // altura da linha da tabela
+               
+                tabela.HorizontalAlignment = 0;
+                tabela.TotalWidth = 500f;
 
+
+                //PdfPCell celula1 = new PdfPCell(new Phrase("Id"));
+                //celula1.Padding = 2;
+                //celula1.PaddingLeft = 5;
+                //tabela.AddCell(celula1);
+
+                Chunk p1 = new Chunk("Id", FontFactory.GetFont("Times New Roman"));
+                p1.Font.Size = 6;
+                p1.Font.SetStyle(0);
+                p1.Font.Color = new iTextSharp.text.BaseColor(0, 0, 255);
+                Phrase c1 = new Phrase();
+                c1.Add(p1);
+                tabela.AddCell(c1);
+                //for (int i = 1; i < 11; i++)
+                //{
+                //    celula1 = new PdfPCell(new Phrase(0, i.ToString());
+                //    celula1.FixedHeight = 15f;
+                //    celula1.Padding = 3;
+                   
+                //    tabela.AddCell(celula1);
+                //}
                 //PdfPCell celula1 = new PdfPCell(new Phrase("Tabela de preço"));
                 //celula1.Colspan = 3; // mescla as três colunas da tabela na 1 linha
                 //celula1.Rotation = 90; // rotaciona o texto na primeira linha
@@ -91,9 +116,9 @@ namespace GestaoPetShop
 
                 // Cabeçalho na segunda linha, a escrita vai preenchedo por celula/linha quando uma
                 // linha está completa ela passa para a outra dando continuidade
-                
-                
-                tabela.AddCell("Id");
+
+
+                //tabela.AddCell("Id");
                 tabela.AddCell("Nome");
                 tabela.AddCell("Endereço");
                 tabela.AddCell("Telefone");
@@ -108,7 +133,18 @@ namespace GestaoPetShop
                     
                     tabela.AddCell(Convert.ToString(item.Id));
                     tabela.AddCell(item.Nome);
-                    tabela.AddCell("Rua: "+item.Logradouro+", Número:" + item.Numero+ ", Bairro "+item.Bairro+ ", Cidade: "+item.Cidade+ ", UF: "+item.UF+ ", CEP: "+item.CEP);
+
+                    string endereco = "Rua: " + item.Logradouro + ", Número:" + item.Numero + ", Bairro " + item.Bairro + ", Cidade: " + item.Cidade + ", UF: " + item.UF + ", CEP: " + item.CEP;
+                    Chunk p3 = new Chunk(endereco, FontFactory.GetFont("Times New Roman"));
+                    p3.Font.Size = 6;
+                    p3.Font.SetStyle(0);
+                    p3.Font.Color = new iTextSharp.text.BaseColor(0, 0, 255);
+                    c1 = new Phrase();
+                    c1.Add(p3);
+                    tabela.AddCell(c1);
+
+                    //tabela.AddCell(endereco);
+                   
                     StringBuilder sb = new StringBuilder();
                     foreach (var tel in item.TelefoneClientes)
                     {
