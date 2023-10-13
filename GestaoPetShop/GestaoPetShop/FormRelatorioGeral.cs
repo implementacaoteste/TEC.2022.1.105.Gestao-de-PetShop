@@ -47,7 +47,7 @@ namespace GestaoPetShop
                 datahoje = datahoje.Replace("/", "") ;
                 datahoje = datahoje.Replace(":", "");
                 datahoje = datahoje.Replace(" ", "");
-                string nomeArquivo = @"C:\dados\relatorioCliente"+ datahoje+".pdf";
+                string nomeArquivo = @"C:\Users\ADM\Documents\GitHub\TEC.2022.1.105.Gestao-de-PetShop\GestaoPetShop\relatorios\relatorioCliente" + datahoje+".pdf";
                 FileStream arquivoPDF = new FileStream(nomeArquivo, FileMode.Create);
                 Document doc = new Document(PageSize.A4);
                 iTextSharp.text.pdf.PdfWriter escritorPDF = iTextSharp.text.pdf.PdfWriter.GetInstance(doc, arquivoPDF);
@@ -64,7 +64,7 @@ namespace GestaoPetShop
                 logo.Alignment = Element.ALIGN_CENTER; // localização da imagem
                 //logo.SetAbsolutePosition(100f, 700f); // outra forma localização da imagem
 
-
+                // CABEÇALHO
                 iTextSharp.text.Paragraph paragrafo = new iTextSharp.text.Paragraph(dados, new iTextSharp.text.Font(iTextSharp.text.Font.NORMAL, 16, (int)System.Drawing.FontStyle.Bold));
 
                 paragrafo.Alignment = Element.ALIGN_CENTER;
@@ -79,6 +79,14 @@ namespace GestaoPetShop
                 paragrafo.Alignment = Element.ALIGN_CENTER;
                 paragrafo.Add(titulo + " \n\n");
 
+                //RODAPE
+                iTextSharp.text.Paragraph paragrafo2 = new iTextSharp.text.Paragraph(dados, new iTextSharp.text.Font(iTextSharp.text.Font.NORMAL, 8, (int)System.Drawing.FontStyle.Bold));
+
+                paragrafo2.Alignment = Element.ALIGN_CENTER;
+              
+                paragrafo2.SetLeading(15, 15);
+
+                paragrafo2.Add("Av. Dom Emanuel 1347, S/N, qd. H, lt. 1, Araguaína, TO, 77800-000,(63) 99200-0000  \n ");
 
                 // criação de tabelas
 
@@ -87,7 +95,7 @@ namespace GestaoPetShop
                 tabela.WidthPercentage = 100;
                 tabela.HorizontalAlignment = 0;
                 tabela.TotalWidth = 500f;
-                float[] headerwidths = { 10, 40, 50, 30, 40, 20 };
+                float[] headerwidths = { 10, 40, 50, 30, 50, 20 };
                 tabela.SetWidths( headerwidths);
 
 
@@ -220,26 +228,26 @@ namespace GestaoPetShop
                 {
 
                     Chunk p2 = new Chunk(Convert.ToString(item.Id), FontFactory.GetFont("Times New Roman"));
-                    p2.Font.Size = 7;
+                    p2.Font.Size = 8;
                     p2.Font.SetStyle(0);
                     p2.Font.Color = new iTextSharp.text.BaseColor(0, 0, 0);
                     Phrase c2 = new Phrase();
                     c2.Add(p2);
                     PdfPCell celula2 = new PdfPCell();
-                    celula2.BackgroundColor = new iTextSharp.text.BaseColor(Color.Aqua);
+                    celula2.BackgroundColor = new iTextSharp.text.BaseColor(Color.Transparent);
                     celula2.HorizontalAlignment = Element.ALIGN_CENTER;
                     celula2.VerticalAlignment = Element.ALIGN_CENTER;
                     celula2.AddElement(c2);
                     tabela.AddCell(celula2);
 
                     /*Chunk*/ p2 = new Chunk(item.Nome, FontFactory.GetFont("Times New Roman"));
-                    p2.Font.Size = 7;
+                    p2.Font.Size = 8;
                     p2.Font.SetStyle(0);
                     p2.Font.Color = new iTextSharp.text.BaseColor(0, 0, 0);
                     /*Phrase*/ c2 = new Phrase();
                     c2.Add(p2);
                     /*PdfPCell*/ celula2 = new PdfPCell();
-                    celula2.BackgroundColor = new iTextSharp.text.BaseColor(Color.Aqua);
+                    celula2.BackgroundColor = new iTextSharp.text.BaseColor(Color.Transparent);
                     celula2.HorizontalAlignment = Element.ALIGN_CENTER;
                     celula2.VerticalAlignment = Element.ALIGN_CENTER;
                     celula2.AddElement(c2);
@@ -249,7 +257,7 @@ namespace GestaoPetShop
                     string endereco = "Rua: " + item.Logradouro + ", Número:" + item.Numero + ", Bairro " + item.Bairro + ", Cidade: " + item.Cidade + ", UF: " + item.UF + ", CEP: " + item.CEP;
                     /*Chunk*/
                     p2 = new Chunk(endereco, FontFactory.GetFont("Times New Roman"));
-                    p2.Font.Size = 7;
+                    p2.Font.Size = 8;
                     p2.Font.SetStyle(0);
                     p2.Font.Color = new iTextSharp.text.BaseColor(0, 0, 0);
                     /*Phrase*/
@@ -257,23 +265,27 @@ namespace GestaoPetShop
                     c2.Add(p2);
                     /*PdfPCell*/
                     celula2 = new PdfPCell();
-                    celula2.BackgroundColor = new iTextSharp.text.BaseColor(Color.Aqua);
+                    celula2.BackgroundColor = new iTextSharp.text.BaseColor(Color.Transparent);
                     celula2.HorizontalAlignment = Element.ALIGN_CENTER;
                     celula2.VerticalAlignment = Element.ALIGN_CENTER;
                     celula2.AddElement(c2);
                     tabela.AddCell(celula2);
 
-                   
 
+                    bool aux = false;
                     StringBuilder sb = new StringBuilder();
                     foreach (var tel in item.TelefoneClientes)
                     {
+                        if (aux)
+                            sb.Append(", ");
+
                         sb.Append(tel.Telefone);
+                        aux = true;
                     }
                     string telefone = sb.ToString();
                     /*Chunk*/
                     p2 = new Chunk(telefone, FontFactory.GetFont("Times New Roman"));
-                    p2.Font.Size = 7;
+                    p2.Font.Size = 8;
                     p2.Font.SetStyle(0);
                     p2.Font.Color = new iTextSharp.text.BaseColor(0, 0, 0);
                     /*Phrase*/
@@ -281,22 +293,26 @@ namespace GestaoPetShop
                     c2.Add(p2);
                     /*PdfPCell*/
                     celula2 = new PdfPCell();
-                    celula2.BackgroundColor = new iTextSharp.text.BaseColor(Color.Aqua);
+                    celula2.BackgroundColor = new iTextSharp.text.BaseColor(Color.Transparent);
                     celula2.HorizontalAlignment = Element.ALIGN_CENTER;
                     celula2.VerticalAlignment = Element.ALIGN_CENTER;
                     celula2.AddElement(c2);
                     tabela.AddCell(celula2);
 
-
+                    aux = false;
                     StringBuilder em = new StringBuilder();
                     foreach (var emails in item.EmailCliente)
                     {
+                        if (aux)
+                           em.Append(", ");
+
                         em.Append(emails.Email);
+                        aux = true;
                     }
                     string email = em.ToString();
                     /*Chunk*/
                     p2 = new Chunk(email, FontFactory.GetFont("Times New Roman"));
-                    p2.Font.Size = 7;
+                    p2.Font.Size = 8;
                     p2.Font.SetStyle(0);
                     p2.Font.Color = new iTextSharp.text.BaseColor(0, 0, 0);
                     /*Phrase*/
@@ -304,22 +320,27 @@ namespace GestaoPetShop
                     c2.Add(p2);
                     /*PdfPCell*/
                     celula2 = new PdfPCell();
-                    celula2.BackgroundColor = new iTextSharp.text.BaseColor(Color.Aqua);
+                    celula2.BackgroundColor = new iTextSharp.text.BaseColor(Color.Transparent);
                     celula2.HorizontalAlignment = Element.ALIGN_CENTER;
                     celula2.VerticalAlignment = Element.ALIGN_CENTER;
                     celula2.AddElement(c2);
                     tabela.AddCell(celula2);
 
+                    aux = false;
                     StringBuilder an = new StringBuilder();
                     foreach (var animal in item.Animais)
                     {
-                        an.Append(", "+animal.Nome);
+                        if (aux)
+                           an.Append(", ");
+
+                        an.Append(animal.Nome);
+                        aux = true;
                     }
                     string ani = an.ToString();
 
                     /*Chunk*/
                     p2 = new Chunk(ani, FontFactory.GetFont("Times New Roman"));
-                    p2.Font.Size = 7;
+                    p2.Font.Size = 8;
                     p2.Font.SetStyle(0);
                     p2.Font.Color = new iTextSharp.text.BaseColor(0, 0, 0);
                     /*Phrase*/
@@ -327,7 +348,7 @@ namespace GestaoPetShop
                     c2.Add(p2);
                     /*PdfPCell*/
                     celula2 = new PdfPCell();
-                    celula2.BackgroundColor = new iTextSharp.text.BaseColor(Color.Aqua);
+                    celula2.BackgroundColor = new iTextSharp.text.BaseColor(Color.Transparent);
                     celula2.HorizontalAlignment = Element.ALIGN_CENTER;
                     celula2.VerticalAlignment = Element.ALIGN_CENTER;
                     celula2.AddElement(c2);
@@ -342,6 +363,7 @@ namespace GestaoPetShop
                 doc.Add(logo);
                 doc.Add(paragrafo);
                 doc.Add(tabela);
+                doc.Add(paragrafo2);
                 doc.Close();
             }
             catch (Exception ex)
