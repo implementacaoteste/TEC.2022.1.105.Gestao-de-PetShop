@@ -47,7 +47,7 @@ namespace GestaoPetShop
                 datahoje = datahoje.Replace("/", "") ;
                 datahoje = datahoje.Replace(":", "");
                 datahoje = datahoje.Replace(" ", "");
-                string nomeArquivo = @"C:\Users\ADM\Documents\GitHub\TEC.2022.1.105.Gestao-de-PetShop\GestaoPetShop\relatorios\relatorioCliente" + datahoje+".pdf";
+                string nomeArquivo = @"C:\dados\relatorioCliente" + datahoje+".pdf";
                 FileStream arquivoPDF = new FileStream(nomeArquivo, FileMode.Create);
                 Document doc = new Document(PageSize.A4);
                 iTextSharp.text.pdf.PdfWriter escritorPDF = iTextSharp.text.pdf.PdfWriter.GetInstance(doc, arquivoPDF);
@@ -84,7 +84,7 @@ namespace GestaoPetShop
 
                 paragrafo2.Alignment = Element.ALIGN_CENTER;
               
-                paragrafo2.SetLeading(15, 15);
+                paragrafo2.SetLeading(0, 50);
 
                 paragrafo2.Add("Av. Dom Emanuel 1347, S/N, qd. H, lt. 1, Araguaína, TO, 77800-000,(63) 99200-0000  \n ");
 
