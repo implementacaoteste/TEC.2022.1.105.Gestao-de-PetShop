@@ -13,6 +13,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -22,6 +23,7 @@ using System.Web.Configuration;
 using System.Web.UI.WebControls;
 using System.Windows.Forms;
 using static iText.Kernel.Pdf.Colorspace.PdfShading;
+using Button = System.Windows.Forms.Button;
 
 namespace GestaoPetShop
 {
@@ -59,7 +61,8 @@ namespace GestaoPetShop
 
                 // inserindo um imagem
 
-                iTextSharp.text.Image logo = iTextSharp.text.Image.GetInstance(@"C:\Users\ADM\Documents\GitHub\TEC.2022.1.105.Gestao-de-PetShop\GestaoPetShop\bicho-de-estimacao.png");
+                iTextSharp.text.Image logo = iTextSharp.text.Image.GetInstance(@"C:\dados\bicho-de-estimacao.png");
+                //iTextSharp.text.Image logo = iTextSharp.text.Image.GetInstance(@"C:\Users\ADM\Documents\GitHub\TEC.2022.1.105.Gestao-de-PetShop\GestaoPetShop\bicho-de-estimacao.png");
                 logo.ScaleToFit(80f, 60f); // tamanho da imagem
                 logo.Alignment = Element.ALIGN_CENTER; // localização da imagem
                 //logo.SetAbsolutePosition(100f, 700f); // outra forma localização da imagem
@@ -365,6 +368,18 @@ namespace GestaoPetShop
                 doc.Add(tabela);
                 doc.Add(paragrafo2);
                 doc.Close();
+
+                //abre O PDF no visualizador padrão Givas
+                var caminhoPDF = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, nomeArquivo);
+                if (File.Exists(caminhoPDF))
+                {
+                    Process.Start(new ProcessStartInfo()
+                    {
+                        Arguments = $"/c start {caminhoPDF}",
+                        FileName = "cmd.exe",
+                        CreateNoWindow = true
+                    });
+                }
             }
             catch (Exception ex)
             {
@@ -450,6 +465,25 @@ namespace GestaoPetShop
             }
 
 
+        }
+
+        private void FormRelatorioGeral_Load(object sender, EventArgs e) //Givas
+        {
+            LoadTheme();
+        }
+
+        private void LoadTheme() // Givas
+        {
+            foreach (Control btns in this.Controls)
+            {
+                if (btns.GetType() == typeof(Button))
+                {
+                    Button btn = (Button)btns;
+                    btn.BackColor = ThemeColor.PrimaryColor;
+                    btn.ForeColor = Color.White;
+                    btn.FlatAppearance.BorderColor = ThemeColor.SecondaryColor;
+                }
+            }
         }
     }
 }
