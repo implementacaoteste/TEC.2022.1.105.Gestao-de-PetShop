@@ -450,9 +450,6 @@ namespace GestaoPetShop
                 tabela.AddCell("65,00");
 
 
-
-
-
                 doc.Add(logo);
                 doc.Add(paragrafo);
                 doc.Add(tabela);
@@ -463,8 +460,6 @@ namespace GestaoPetShop
 
                 MessageBox.Show(ex.Message);
             }
-
-
         }
 
         private void FormRelatorioGeral_Load(object sender, EventArgs e) //Givas
