@@ -304,6 +304,7 @@
     <Compile Include="ProfissionalDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RacaDAL.cs" />
+    <Compile Include="RelatorioGeralDAL.cs" />
     <Compile Include="ServicoDAL.cs" />
     <Compile Include="SituacaoDAL.cs" />
     <Compile Include="TelefoneClienteDAL.cs" />

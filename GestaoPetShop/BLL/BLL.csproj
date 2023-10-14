@@ -302,6 +302,7 @@
     <Compile Include="ProfissionalBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RacaBLL.cs" />
+    <Compile Include="RelatorioGeralBLL.cs" />
     <Compile Include="ServicoBLL.cs" />
     <Compile Include="SituacaoBLL.cs" />
     <Compile Include="TelefoneClienteBLL.cs" />

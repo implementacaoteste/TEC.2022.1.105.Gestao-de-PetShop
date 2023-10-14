@@ -42,7 +42,7 @@
             this.buttonRelatorioCliente.Name = "buttonRelatorioCliente";
             this.buttonRelatorioCliente.Size = new System.Drawing.Size(105, 35);
             this.buttonRelatorioCliente.TabIndex = 0;
-            this.buttonRelatorioCliente.Text = "Relatório Cliente";
+            this.buttonRelatorioCliente.Text = "Relação de Cliente";
             this.buttonRelatorioCliente.UseVisualStyleBackColor = true;
             this.buttonRelatorioCliente.Click += new System.EventHandler(this.buttonRelatorioCliente_Click);
             // 
@@ -68,11 +68,11 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(474, 39);
+            this.button1.Location = new System.Drawing.Point(12, 53);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(105, 35);
             this.button1.TabIndex = 3;
-            this.button1.Text = "button1";
+            this.button1.Text = "Relação de Funcionários";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
