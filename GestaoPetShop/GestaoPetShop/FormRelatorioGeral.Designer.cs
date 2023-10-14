@@ -39,9 +39,9 @@
             // 
             this.buttonRelatorioCliente.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.buttonRelatorioCliente.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonRelatorioCliente.Location = new System.Drawing.Point(12, 83);
+            this.buttonRelatorioCliente.Location = new System.Drawing.Point(12, 68);
             this.buttonRelatorioCliente.Name = "buttonRelatorioCliente";
-            this.buttonRelatorioCliente.Size = new System.Drawing.Size(141, 30);
+            this.buttonRelatorioCliente.Size = new System.Drawing.Size(178, 30);
             this.buttonRelatorioCliente.TabIndex = 0;
             this.buttonRelatorioCliente.Text = "Relatório Cliente";
             this.buttonRelatorioCliente.UseVisualStyleBackColor = false;
@@ -50,10 +50,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(321, 194);
+            this.pictureBox1.Location = new System.Drawing.Point(255, 143);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(207, 156);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.Size = new System.Drawing.Size(355, 287);
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
@@ -61,7 +60,7 @@
             // 
             this.btnTeste.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.btnTeste.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTeste.Location = new System.Drawing.Point(354, 83);
+            this.btnTeste.Location = new System.Drawing.Point(353, 68);
             this.btnTeste.Name = "btnTeste";
             this.btnTeste.Size = new System.Drawing.Size(141, 30);
             this.btnTeste.TabIndex = 2;
