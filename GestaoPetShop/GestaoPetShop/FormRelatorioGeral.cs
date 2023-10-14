@@ -6,6 +6,7 @@ using iText.Layout.Properties;
 using iTextSharp;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
+using Microsoft.ReportingServices.ReportProcessing.OnDemandReportObjectModel;
 using Models;
 using RestSharp;
 using System;
@@ -13,6 +14,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -27,6 +29,142 @@ namespace GestaoPetShop
 {
     public partial class FormRelatorioGeral : Form
     {
+        class Eventos : PdfPageEventHelper
+
+        {
+
+            // propriedade da fonte que será usada no cabeçalho
+
+            public iTextSharp.text.Font fonte { get; set; }
+
+
+
+            // a classe recebe a fonte no seu construtor a classe não possui construtor padrão, para obrigar
+
+            // a passagem da fonte e evitar erros
+
+            public Eventos(iTextSharp.text.Font fonte_)
+
+            {
+
+                fonte = fonte_;
+
+            }
+
+
+
+            // Este método cria um cabeçalho para o documento
+
+            public override void OnStartPage(iTextSharp.text.pdf.PdfWriter escritorPDF, Document doc)
+
+            {
+
+                iTextSharp.text.Image logo = iTextSharp.text.Image.GetInstance(@"C:\Users\ADM\Documents\GitHub\TEC.2022.1.105.Gestao-de-PetShop\GestaoPetShop\bicho-de-estimacao.png");
+                logo.ScaleToFit(70f, 50f); // tamanho da imagem
+                logo.Alignment = Element.ALIGN_CENTER; // localização da imagem
+                //logo.SetAbsolutePosition(100f, 700f); // outra forma localização da imagem
+                doc.Add(logo);
+
+
+                // Cria um novo paragrafo com o texto do cabeçalho
+
+                iTextSharp.text.Paragraph ph = new iTextSharp.text.Paragraph("PetShop ");
+                ph.Font = new iTextSharp.text.Font(iTextSharp.text.Font.NORMAL, 12, (int)System.Drawing.FontStyle.Regular);
+                ph.Alignment = Element.ALIGN_CENTER;
+
+
+                // adiciono a linha e posteriormente mais linhas que podem ser necessárias em um cabeçalho de relatório
+
+                doc.Add(ph);
+
+                ph = new iTextSharp.text.Paragraph("Cuidando do seu melhor amigo! ");
+                ph.Font = new iTextSharp.text.Font( iTextSharp.text.Font.NORMAL, 8, (int)System.Drawing.FontStyle.Regular);
+                ph.Alignment = Element.ALIGN_CENTER;
+                doc.Add(ph);
+
+
+
+                // cria um novo paragrafo para imprimir um traço e uma linha em branco
+
+                ph = new iTextSharp.text.Paragraph();
+
+
+
+                // cria um objeto sepatador (um traço)
+
+                iTextSharp.text.pdf.draw.VerticalPositionMark seperator = new iTextSharp.text.pdf.draw.LineSeparator();
+
+
+
+                // adiciona o separador ao paragravo
+
+                ph.Add(seperator);
+
+
+
+                // adiciona a linha em branco(enter) ao paragrafo
+
+                ph.Add(new Chunk("\n"));
+
+
+
+                // imprime o pagagrafo no documento
+
+                doc.Add(ph);
+
+            }
+
+
+
+            public override void OnEndPage(iTextSharp.text.pdf.PdfWriter escritorPDF, Document doc)
+
+            {
+
+                // para o rodapé é um pouco diferente precisamos criar um PdfContentByte e uma BaseFont e
+
+                // setar as propriedades dos mesmos para então poder imprimir alinhado a direita
+
+
+
+                // cria uma instancia da classe PdfContentByte
+                PdfContentByte cb2 = escritorPDF.DirectContent;
+                PdfContentByte cb = escritorPDF.DirectContent;
+
+
+
+                // cria uma instancia da classe font
+                BaseFont font2;
+                BaseFont font;
+
+
+
+                // seta as propriedades da fonte
+                font2 = BaseFont.CreateFont(BaseFont.COURIER_BOLD, BaseFont.WINANSI, BaseFont.NOT_EMBEDDED);
+                font = BaseFont.CreateFont(BaseFont.COURIER_BOLD, BaseFont.WINANSI, BaseFont.NOT_EMBEDDED);
+
+
+
+                // seta a fonte do objeto PdfContentByte
+                cb2.SetFontAndSize(font, 9);
+                cb.SetFontAndSize(font, 9);
+
+
+
+                // escreve a linha para imprimir o numero da página
+
+                string texto2 = "\"Av. Dom Emanuel 1347, S/N, qd. H, lt. 1, Araguaína, TO, 77800-000,(63) 99200-0000";
+
+                string texto = "Página: " + doc.PageNumber.ToString();
+
+
+
+                // imprime a linha no rodapé
+                cb2.ShowTextAligned(Element.ALIGN_JUSTIFIED, texto2, doc.Left, doc.Bottom - 10,0);
+                cb.ShowTextAligned(Element.ALIGN_RIGHT, texto, doc.Right, doc.Bottom - 20, 0);
+
+            }
+
+        }
         public FormRelatorioGeral()
         {
             InitializeComponent();
@@ -49,8 +187,46 @@ namespace GestaoPetShop
                 datahoje = datahoje.Replace(" ", "");
                 string nomeArquivo = @"C:\dados\relatorioCliente" + datahoje+".pdf";
                 FileStream arquivoPDF = new FileStream(nomeArquivo, FileMode.Create);
+               
                 Document doc = new Document(PageSize.A4);
                 iTextSharp.text.pdf.PdfWriter escritorPDF = iTextSharp.text.pdf.PdfWriter.GetInstance(doc, arquivoPDF);
+
+
+                // cria um objeto do tipo FontFamily, que contem as propriedades de uma fonte
+
+                iTextSharp.text.Font.FontFamily familha = new iTextSharp.text.Font.FontFamily();
+
+
+
+                // atribui a familia da fonte, no caso Courier
+
+                familha = iTextSharp.text.Font.FontFamily.COURIER;
+
+
+
+                // cria uma fonte atribuindo a familha, o tamanho da fonte e o estilo (normal, negrito...)
+
+                iTextSharp.text.Font fonte = new iTextSharp.text.Font(familha, 16, (int)System.Drawing.FontStyle.Bold);
+
+
+
+                // cria uma instancia da classe eventos, é uma classe que mostrarei posteriormente
+
+                // esta clase trata a criação do cabeçalho e rodapé da página
+                Eventos ev = new Eventos(fonte);
+
+
+
+                // seta o atributo de eventos da classe com a variavel de eventos criada antes
+
+                escritorPDF.PageEvent = ev;
+
+                // altera a fonte para normal, a negrito era apenas para o cabeçalho e rodapé da página
+
+                fonte = new iTextSharp.text.Font(familha, 8, (int)System.Drawing.FontStyle.Regular);
+
+
+
 
 
 
@@ -59,34 +235,35 @@ namespace GestaoPetShop
 
                 // inserindo um imagem
 
-                iTextSharp.text.Image logo = iTextSharp.text.Image.GetInstance(@"C:\Users\ADM\Documents\GitHub\TEC.2022.1.105.Gestao-de-PetShop\GestaoPetShop\bicho-de-estimacao.png");
-                logo.ScaleToFit(80f, 60f); // tamanho da imagem
-                logo.Alignment = Element.ALIGN_CENTER; // localização da imagem
-                //logo.SetAbsolutePosition(100f, 700f); // outra forma localização da imagem
+                //iTextSharp.text.Image logo = iTextSharp.text.Image.GetInstance(@"C:\Users\ADM\Documents\GitHub\TEC.2022.1.105.Gestao-de-PetShop\GestaoPetShop\bicho-de-estimacao.png");
+                //logo.ScaleToFit(80f, 60f); // tamanho da imagem
+                //logo.Alignment = Element.ALIGN_CENTER; // localização da imagem
+                ////logo.SetAbsolutePosition(100f, 700f); // outra forma localização da imagem
 
                 // CABEÇALHO
                 iTextSharp.text.Paragraph paragrafo = new iTextSharp.text.Paragraph(dados, new iTextSharp.text.Font(iTextSharp.text.Font.NORMAL, 16, (int)System.Drawing.FontStyle.Bold));
 
-                paragrafo.Alignment = Element.ALIGN_CENTER;
-                paragrafo.Add("PetShop \n ");
+                //paragrafo.Alignment = Element.ALIGN_CENTER;
+                //paragrafo.Add("PetShop \n ");
 
-                paragrafo.Font = new iTextSharp.text.Font(iTextSharp.text.Font.NORMAL, 10, (int)System.Drawing.FontStyle.Italic);
-                paragrafo.Alignment = Element.ALIGN_CENTER;
-                paragrafo.Add("Cuidando do seu melhor amigo! \n\n");
+                //paragrafo.Font = new iTextSharp.text.Font(iTextSharp.text.Font.NORMAL, 10, (int)System.Drawing.FontStyle.Italic);
+                //paragrafo.Alignment = Element.ALIGN_CENTER;
+                //paragrafo.Add("Cuidando do seu melhor amigo! \n\n");
 
                 string titulo = "RELAÇÃO DE CLIENTES";
                 paragrafo.Font = new iTextSharp.text.Font(iTextSharp.text.Font.NORMAL, 14, (int)System.Drawing.FontStyle.Regular);
                 paragrafo.Alignment = Element.ALIGN_CENTER;
                 paragrafo.Add(titulo + " \n\n");
 
-                //RODAPE
-                iTextSharp.text.Paragraph paragrafo2 = new iTextSharp.text.Paragraph(dados, new iTextSharp.text.Font(iTextSharp.text.Font.NORMAL, 8, (int)System.Drawing.FontStyle.Bold));
+                ////RODAPE
+                //iTextSharp.text.Paragraph paragrafo2 = new iTextSharp.text.Paragraph(dados, new iTextSharp.text.Font(iTextSharp.text.Font.NORMAL, 8, (int)System.Drawing.FontStyle.Bold));
 
-                paragrafo2.Alignment = Element.ALIGN_CENTER;
+                //paragrafo2.Alignment = Element.ALIGN_CENTER;
+               
               
-                paragrafo2.SetLeading(0, 50);
+                //paragrafo2.SetLeading(0, 50);
 
-                paragrafo2.Add("Av. Dom Emanuel 1347, S/N, qd. H, lt. 1, Araguaína, TO, 77800-000,(63) 99200-0000  \n ");
+                //paragrafo2.Add("Av. Dom Emanuel 1347, S/N, qd. H, lt. 1, Araguaína, TO, 77800-000,(63) 99200-0000  \n ");
 
                 // criação de tabelas
 
@@ -360,11 +537,14 @@ namespace GestaoPetShop
 
 
 
-                doc.Add(logo);
+                //doc.Add(logo);
                 doc.Add(paragrafo);
                 doc.Add(tabela);
-                doc.Add(paragrafo2);
+                //doc.Add(paragrafo2);
                 doc.Close();
+                // manda abrir o pdf
+
+                Process.Start(@"C:\dados\relatorioCliente" + datahoje + ".pdf");
             }
             catch (Exception ex)
             {
@@ -450,6 +630,14 @@ namespace GestaoPetShop
             }
 
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            using(testedimas frm = new testedimas())
+            {
+                frm.ShowDialog();
+            }
         }
     }
 }

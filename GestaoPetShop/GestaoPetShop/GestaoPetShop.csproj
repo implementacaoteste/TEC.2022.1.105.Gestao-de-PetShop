@@ -483,6 +483,12 @@
     <Compile Include="Relatorio\FormRelatorioCliente.Designer.cs">
       <DependentUpon>FormRelatorioCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="testedimas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="testedimas.Designer.cs">
+      <DependentUpon>testedimas.cs</DependentUpon>
+    </Compile>
     <Compile Include="ThemeColor.cs" />
     <Compile Include="TratarErro.cs" />
     <EmbeddedResource Include="FormConsultaAgendamento.resx">
@@ -568,6 +574,9 @@
       <DependentUpon>FormRelatorioCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Relatorio\ReportCliente.rdlc" />
+    <EmbeddedResource Include="testedimas.resx">
+      <DependentUpon>testedimas.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="modelagemDataSet.xsc">
       <DependentUpon>modelagemDataSet.xsd</DependentUpon>
     </None>
