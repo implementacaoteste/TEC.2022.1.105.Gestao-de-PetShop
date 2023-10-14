@@ -153,7 +153,7 @@ namespace GestaoPetShop
 
                 // escreve a linha para imprimir o numero da página
 
-                string texto2 = "\"Av. Dom Emanuel 1347, S/N, qd. H, lt. 1, Araguaína, TO, 77800-000,(63) 99200-0000";
+                string texto2 = "Av. Dom Emanuel 1347, S/N, qd. H, lt. 1, Araguaína, TO, 77800-000,(63) 99200-0000";
 
                 string texto = "Página: " + doc.PageNumber.ToString();
 
@@ -222,16 +222,16 @@ namespace GestaoPetShop
                 paragrafo.Add(titulo + " \n\n");
 
 
-                PdfPTable tabela = new PdfPTable(6); // criação de tabela com três colunas
+                PdfPTable tabela = new PdfPTable(7); // criação de tabela com três colunas
                 tabela.DefaultCell.FixedHeight = 20; // altura da linha da tabela
                 tabela.WidthPercentage = 100;
                 tabela.HorizontalAlignment = 0;
                 tabela.TotalWidth = 500f;
-                float[] headerwidths = { 10, 40, 50, 30, 50, 20 };
+                float[] headerwidths = {11, 11, 40, 50, 30, 50, 20 };
                 tabela.SetWidths(headerwidths);
 
 
-                Chunk p1 = new Chunk("Id", FontFactory.GetFont("Times New Roman"));
+                Chunk p1 = new Chunk("Ord", FontFactory.GetFont("Times New Roman"));
                 p1.Font.Size = 10;
                 p1.Font.SetStyle(0);
                 p1.Font.Color = new iTextSharp.text.BaseColor(0, 0, 0);
@@ -242,6 +242,22 @@ namespace GestaoPetShop
                 celula1.HorizontalAlignment = Element.ALIGN_CENTER;
                 celula1.VerticalAlignment = Element.ALIGN_CENTER;
 
+                celula1.AddElement(c1);
+                tabela.AddCell(celula1);
+
+                /* Chunk*/
+                p1 = new Chunk("Id", FontFactory.GetFont("Times New Roman"));
+                p1.Font.Size = 10;
+                p1.Font.SetStyle(0);
+                p1.Font.Color = new iTextSharp.text.BaseColor(0, 0, 0);
+                /* Phrase*/
+                c1 = new Phrase();
+                c1.Add(p1);
+                /* PdfPCell*/
+                celula1 = new PdfPCell();
+                celula1.BackgroundColor = new iTextSharp.text.BaseColor(Color.Aqua);
+                celula1.HorizontalAlignment = Element.ALIGN_CENTER;
+                celula1.VerticalAlignment = Element.ALIGN_CENTER;
                 celula1.AddElement(c1);
                 tabela.AddCell(celula1);
 
@@ -331,17 +347,33 @@ namespace GestaoPetShop
 
                 List<Cliente> clientes = new List<Cliente>();
                 clientes = new ClienteBLL().BuscarTodos();
-
+                int x = 1;
                 foreach (var item in clientes)
                 {
 
-                    Chunk p2 = new Chunk(Convert.ToString(item.Id), FontFactory.GetFont("Times New Roman"));
+                    Chunk p2 = new Chunk(Convert.ToString(x++), FontFactory.GetFont("Times New Roman"));
                     p2.Font.Size = 8;
                     p2.Font.SetStyle(0);
                     p2.Font.Color = new iTextSharp.text.BaseColor(0, 0, 0);
                     Phrase c2 = new Phrase();
                     c2.Add(p2);
                     PdfPCell celula2 = new PdfPCell();
+                    celula2.BackgroundColor = new iTextSharp.text.BaseColor(Color.Transparent);
+                    celula2.HorizontalAlignment = Element.ALIGN_CENTER;
+                    celula2.VerticalAlignment = Element.ALIGN_CENTER;
+                    celula2.AddElement(c2);
+                    tabela.AddCell(celula2);
+
+                    /*Chunk*/
+                    p2 = new Chunk(Convert.ToString(item.Id), FontFactory.GetFont("Times New Roman"));
+                    p2.Font.Size = 8;
+                    p2.Font.SetStyle(0);
+                    p2.Font.Color = new iTextSharp.text.BaseColor(0, 0, 0);
+                    /*Phrase*/
+                    c2 = new Phrase();
+                    c2.Add(p2);
+                    /*PdfPCell*/
+                    celula2 = new PdfPCell();
                     celula2.BackgroundColor = new iTextSharp.text.BaseColor(Color.Transparent);
                     celula2.HorizontalAlignment = Element.ALIGN_CENTER;
                     celula2.VerticalAlignment = Element.ALIGN_CENTER;
@@ -615,16 +647,16 @@ namespace GestaoPetShop
                 paragrafo.Add(titulo + " \n\n");
 
 
-                PdfPTable tabela = new PdfPTable(6); // criação de tabela com três colunas
+                PdfPTable tabela = new PdfPTable(7); // criação de tabela com três colunas
                 tabela.DefaultCell.FixedHeight = 20; // altura da linha da tabela
                 tabela.WidthPercentage = 100;
                 tabela.HorizontalAlignment = 0;
                 tabela.TotalWidth = 500f;
-                float[] headerwidths = { 10, 40, 20, 50, 30, 40 };
+                float[] headerwidths = { 11,11, 40, 20, 50, 30, 40 };
                 tabela.SetWidths(headerwidths);
 
 
-                Chunk p1 = new Chunk("Id", FontFactory.GetFont("Times New Roman"));
+                Chunk p1 = new Chunk("Ord", FontFactory.GetFont("Times New Roman"));
                 p1.Font.Size = 10;
                 p1.Font.SetStyle(0);
                 p1.Font.Color = new iTextSharp.text.BaseColor(0, 0, 0);
@@ -635,6 +667,22 @@ namespace GestaoPetShop
                 celula1.HorizontalAlignment = Element.ALIGN_CENTER;
                 celula1.VerticalAlignment = Element.ALIGN_CENTER;
 
+                celula1.AddElement(c1);
+                tabela.AddCell(celula1);
+
+                /* Chunk*/
+                p1 = new Chunk("Id", FontFactory.GetFont("Times New Roman"));
+                p1.Font.Size = 10;
+                p1.Font.SetStyle(0);
+                p1.Font.Color = new iTextSharp.text.BaseColor(0, 0, 0);
+                /* Phrase*/
+                c1 = new Phrase();
+                c1.Add(p1);
+                /* PdfPCell*/
+                celula1 = new PdfPCell();
+                celula1.BackgroundColor = new iTextSharp.text.BaseColor(Color.Aqua);
+                celula1.HorizontalAlignment = Element.ALIGN_CENTER;
+                celula1.VerticalAlignment = Element.ALIGN_CENTER;
                 celula1.AddElement(c1);
                 tabela.AddCell(celula1);
 
@@ -719,13 +767,14 @@ namespace GestaoPetShop
                 tabela.AddCell(celula1);
 
 
-                List<Profissional> profissionais = new List<Cliente>();
-                profissionais = new ClienteBLL().BuscarTodos();
-
-                foreach (var item in clientes)
+                List<Profissional> profissionais = new List<Profissional>();
+                profissionais = new ProfissionalBLL().BuscarTodos();
+                int x = 1;
+                foreach (var item in profissionais)
                 {
+                    bool aux = false; // variavel para auxiliar na separação de lista
 
-                    Chunk p2 = new Chunk(Convert.ToString(item.Id), FontFactory.GetFont("Times New Roman"));
+                    Chunk p2 = new Chunk(Convert.ToString(x++), FontFactory.GetFont("Times New Roman"));
                     p2.Font.Size = 8;
                     p2.Font.SetStyle(0);
                     p2.Font.Color = new iTextSharp.text.BaseColor(0, 0, 0);
@@ -739,7 +788,40 @@ namespace GestaoPetShop
                     tabela.AddCell(celula2);
 
                     /*Chunk*/
+                    p2 = new Chunk(Convert.ToString(item.Id), FontFactory.GetFont("Times New Roman"));
+                    p2.Font.Size = 8;
+                    p2.Font.SetStyle(0);
+                    p2.Font.Color = new iTextSharp.text.BaseColor(0, 0, 0);
+                    /*Phrase*/
+                    c2 = new Phrase();
+                    c2.Add(p2);
+                    /*PdfPCell*/
+                    celula2 = new PdfPCell();
+                    celula2.BackgroundColor = new iTextSharp.text.BaseColor(Color.Transparent);
+                    celula2.HorizontalAlignment = Element.ALIGN_CENTER;
+                    celula2.VerticalAlignment = Element.ALIGN_CENTER;
+                    celula2.AddElement(c2);
+                    tabela.AddCell(celula2);
+
+                    /*Chunk*/
                     p2 = new Chunk(item.Nome, FontFactory.GetFont("Times New Roman"));
+                    p2.Font.Size = 8;
+                    p2.Font.SetStyle(0);
+                    p2.Font.Color = new iTextSharp.text.BaseColor(0, 0, 0);
+                    /*Phrase*/
+                    c2 = new Phrase();
+                    c2.Add(p2);
+                    /*PdfPCell*/
+                    celula2 = new PdfPCell();
+                    celula2.BackgroundColor = new iTextSharp.text.BaseColor(Color.Transparent);
+                    celula2.HorizontalAlignment = Element.ALIGN_CENTER;
+                    celula2.VerticalAlignment = Element.ALIGN_CENTER;
+                    celula2.AddElement(c2);
+                    tabela.AddCell(celula2);
+
+                    
+                    /*Chunk*/
+                    p2 = new Chunk(item.NomeFuncao, FontFactory.GetFont("Times New Roman"));
                     p2.Font.Size = 8;
                     p2.Font.SetStyle(0);
                     p2.Font.Color = new iTextSharp.text.BaseColor(0, 0, 0);
@@ -773,9 +855,9 @@ namespace GestaoPetShop
                     tabela.AddCell(celula2);
 
 
-                    bool aux = false;
+                    aux = false;
                     StringBuilder sb = new StringBuilder();
-                    foreach (var tel in item.TelefoneClientes)
+                    foreach (var tel in item.TelefoneProfissional)
                     {
                         if (aux)
                             sb.Append(", ");
@@ -802,7 +884,7 @@ namespace GestaoPetShop
 
                     aux = false;
                     StringBuilder em = new StringBuilder();
-                    foreach (var emails in item.EmailCliente)
+                    foreach (var emails in item.EmailProfissional)
                     {
                         if (aux)
                             em.Append(", ");
@@ -827,33 +909,6 @@ namespace GestaoPetShop
                     celula2.AddElement(c2);
                     tabela.AddCell(celula2);
 
-                    aux = false;
-                    StringBuilder an = new StringBuilder();
-                    foreach (var animal in item.Animais)
-                    {
-                        if (aux)
-                            an.Append(", ");
-
-                        an.Append(animal.Nome);
-                        aux = true;
-                    }
-                    string ani = an.ToString();
-
-                    /*Chunk*/
-                    p2 = new Chunk(ani, FontFactory.GetFont("Times New Roman"));
-                    p2.Font.Size = 8;
-                    p2.Font.SetStyle(0);
-                    p2.Font.Color = new iTextSharp.text.BaseColor(0, 0, 0);
-                    /*Phrase*/
-                    c2 = new Phrase();
-                    c2.Add(p2);
-                    /*PdfPCell*/
-                    celula2 = new PdfPCell();
-                    celula2.BackgroundColor = new iTextSharp.text.BaseColor(Color.Transparent);
-                    celula2.HorizontalAlignment = Element.ALIGN_CENTER;
-                    celula2.VerticalAlignment = Element.ALIGN_CENTER;
-                    celula2.AddElement(c2);
-                    tabela.AddCell(celula2);
 
                 }
 
@@ -865,7 +920,7 @@ namespace GestaoPetShop
                 doc.Add(tabela);
                 doc.Close();
 
-                Process.Start(@"C:\dados\relatorioCliente" + datahoje + ".pdf");
+                Process.Start(@"C:\dados\relacaoProfissionais" + datahoje + ".pdf");
             }
             catch (Exception ex)
             {
