@@ -33,7 +33,7 @@
             this.btnTeste = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnRelacaoDeAgendamentos = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -77,21 +77,22 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // btnRelacaoDeAgendamentos
             // 
-            this.button2.Location = new System.Drawing.Point(12, 94);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(105, 35);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Relação de Funcionários";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnRelacaoDeAgendamentos.Location = new System.Drawing.Point(12, 94);
+            this.btnRelacaoDeAgendamentos.Name = "btnRelacaoDeAgendamentos";
+            this.btnRelacaoDeAgendamentos.Size = new System.Drawing.Size(105, 35);
+            this.btnRelacaoDeAgendamentos.TabIndex = 4;
+            this.btnRelacaoDeAgendamentos.Text = "Relação de Agendamentos";
+            this.btnRelacaoDeAgendamentos.UseVisualStyleBackColor = true;
+            this.btnRelacaoDeAgendamentos.Click += new System.EventHandler(this.btnRelacaoDeAgendamentos_Click);
             // 
             // FormRelatorioGeral
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnRelacaoDeAgendamentos);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnTeste);
             this.Controls.Add(this.pictureBox1);
@@ -109,6 +110,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnTeste;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnRelacaoDeAgendamentos;
     }
 }

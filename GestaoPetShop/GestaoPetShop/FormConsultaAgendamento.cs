@@ -418,6 +418,7 @@ namespace GestaoPetShop
             comboBox_SelecionarTipoBusca.SelectedIndex = 0;
             textBox_BuscarAgendamento.Enabled = false;
             textBox_BuscarData.Enabled = false;
+         
 
             LoadTheme();
         }

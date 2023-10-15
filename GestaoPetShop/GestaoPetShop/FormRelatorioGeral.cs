@@ -908,13 +908,7 @@ namespace GestaoPetShop
                     celula2.VerticalAlignment = Element.ALIGN_CENTER;
                     celula2.AddElement(c2);
                     tabela.AddCell(celula2);
-
-
                 }
-
-
-
-
 
                 doc.Add(paragrafo);
                 doc.Add(tabela);
@@ -924,11 +918,423 @@ namespace GestaoPetShop
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show(ex.Message);
             }
-
-
         }
+
+        private void btnRelacaoDeAgendamentos_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string datahoje = Convert.ToString(DateTime.Now);
+                datahoje = datahoje.Replace("/", "");
+                datahoje = datahoje.Replace(":", "");
+                datahoje = datahoje.Replace(" ", "");
+                string nomeArquivo = @"C:\dados\relacaoDeAgendamentos" + datahoje + ".pdf";
+                FileStream arquivoPDF = new FileStream(nomeArquivo, FileMode.Create);
+
+                Document doc = new Document(PageSize.A4);
+                iTextSharp.text.pdf.PdfWriter escritorPDF = iTextSharp.text.pdf.PdfWriter.GetInstance(doc, arquivoPDF);
+
+
+                // cria um objeto do tipo FontFamily, que contem as propriedades de uma fonte
+                iTextSharp.text.Font.FontFamily familha = new iTextSharp.text.Font.FontFamily();
+
+                // atribui a familia da fonte, no caso Courier
+                familha = iTextSharp.text.Font.FontFamily.COURIER;
+
+                // cria uma fonte atribuindo a familha, o tamanho da fonte e o estilo (normal, negrito...)
+                iTextSharp.text.Font fonte = new iTextSharp.text.Font(familha, 12, (int)System.Drawing.FontStyle.Bold);
+                iTextSharp.text.Font fonte2 = new iTextSharp.text.Font(familha, 10, (int)System.Drawing.FontStyle.Bold);
+
+
+                // cria uma instancia da classe eventos, é uma classe que mostrarei posteriormente
+                // esta clase trata a criação do cabeçalho e rodapé da página
+                Eventos ev = new Eventos(fonte, fonte2);
+
+                // seta o atributo de eventos da classe com a variavel de eventos criada antes
+                escritorPDF.PageEvent = ev;
+
+                // altera a fonte para normal, a negrito era apenas para o cabeçalho e rodapé da página
+
+                fonte = new iTextSharp.text.Font(familha, 8, (int)System.Drawing.FontStyle.Regular);
+
+                doc.Open();
+
+                string dados = "";
+
+
+                iTextSharp.text.Paragraph paragrafo = new iTextSharp.text.Paragraph(dados, new iTextSharp.text.Font(iTextSharp.text.Font.NORMAL, 16, (int)System.Drawing.FontStyle.Bold));
+
+                string titulo = "RELAÇÃO DE AGENDAMENTOS";
+                paragrafo.Font = new iTextSharp.text.Font(iTextSharp.text.Font.NORMAL, 14, (int)System.Drawing.FontStyle.Regular);
+                paragrafo.Alignment = Element.ALIGN_CENTER;
+                paragrafo.Add(titulo + " \n\n");
+
+
+                PdfPTable tabela = new PdfPTable(9); // criação de tabela com três colunas
+                tabela.DefaultCell.FixedHeight = 20; // altura da linha da tabela
+                tabela.WidthPercentage = 100;
+                tabela.HorizontalAlignment = 0;
+                tabela.TotalWidth = 500f;
+                float[] headerwidths = { 10, 10, 20, 20, 20, 40, 20,60,20 };
+                tabela.SetWidths(headerwidths);
+
+
+                Chunk p1 = new Chunk("Ord", FontFactory.GetFont("Times New Roman"));
+                p1.Font.Size = 10;
+                p1.Font.SetStyle(0);
+                p1.Font.Color = new iTextSharp.text.BaseColor(0, 0, 0);
+                Phrase c1 = new Phrase();
+                c1.Add(p1);
+                PdfPCell celula1 = new PdfPCell();
+                celula1.BackgroundColor = new iTextSharp.text.BaseColor(Color.Aqua);
+                celula1.HorizontalAlignment = Element.ALIGN_CENTER;
+                celula1.VerticalAlignment = Element.ALIGN_CENTER;
+
+                celula1.AddElement(c1);
+                tabela.AddCell(celula1);
+
+                /* Chunk*/
+                p1 = new Chunk("Id", FontFactory.GetFont("Times New Roman"));
+                p1.Font.Size = 10;
+                p1.Font.SetStyle(0);
+                p1.Font.Color = new iTextSharp.text.BaseColor(0, 0, 0);
+                /* Phrase*/
+                c1 = new Phrase();
+                c1.Add(p1);
+                /* PdfPCell*/
+                celula1 = new PdfPCell();
+                celula1.BackgroundColor = new iTextSharp.text.BaseColor(Color.Aqua);
+                celula1.HorizontalAlignment = Element.ALIGN_CENTER;
+                celula1.VerticalAlignment = Element.ALIGN_CENTER;
+                celula1.AddElement(c1);
+                tabela.AddCell(celula1);
+
+                /* Chunk*/
+                p1 = new Chunk("Data", FontFactory.GetFont("Times New Roman"));
+                p1.Font.Size = 10;
+                p1.Font.SetStyle(0);
+                p1.Font.Color = new iTextSharp.text.BaseColor(0, 0, 0);
+                /* Phrase*/
+                c1 = new Phrase();
+                c1.Add(p1);
+                /* PdfPCell*/
+                celula1 = new PdfPCell();
+                celula1.BackgroundColor = new iTextSharp.text.BaseColor(Color.Aqua);
+                celula1.HorizontalAlignment = Element.ALIGN_CENTER;
+                celula1.VerticalAlignment = Element.ALIGN_CENTER;
+                celula1.AddElement(c1);
+                tabela.AddCell(celula1);
+
+                /* Chunk*/
+                p1 = new Chunk("Horário", FontFactory.GetFont("Times New Roman"));
+                p1.Font.Size = 10;
+                p1.Font.SetStyle(0);
+                p1.Font.Color = new iTextSharp.text.BaseColor(0, 0, 0);
+                /* Phrase*/
+                c1 = new Phrase();
+                c1.Add(p1);
+                /* PdfPCell*/
+                celula1 = new PdfPCell();
+                celula1.BackgroundColor = new iTextSharp.text.BaseColor(Color.Aqua);
+                celula1.HorizontalAlignment = Element.ALIGN_CENTER;
+                celula1.VerticalAlignment = Element.ALIGN_CENTER;
+                celula1.AddElement(c1);
+                tabela.AddCell(celula1);
+
+                /* Chunk*/
+                p1 = new Chunk("Animal", FontFactory.GetFont("Times New Roman"));
+                p1.Font.Size = 10;
+                p1.Font.SetStyle(0);
+                p1.Font.Color = new iTextSharp.text.BaseColor(0, 0, 0);
+                /* Phrase*/
+                c1 = new Phrase();
+                c1.Add(p1);
+                /* PdfPCell*/
+                celula1 = new PdfPCell();
+                celula1.BackgroundColor = new iTextSharp.text.BaseColor(Color.Aqua);
+                celula1.HorizontalAlignment = Element.ALIGN_CENTER;
+                celula1.VerticalAlignment = Element.ALIGN_CENTER;
+                celula1.AddElement(c1);
+                tabela.AddCell(celula1);
+
+                /* Chunk*/
+                p1 = new Chunk("Cliente", FontFactory.GetFont("Times New Roman"));
+                p1.Font.Size = 10;
+                p1.Font.SetStyle(0);
+                p1.Font.Color = new iTextSharp.text.BaseColor(0, 0, 0);
+                /* Phrase*/
+                c1 = new Phrase();
+                c1.Add(p1);
+                /* PdfPCell*/
+                celula1 = new PdfPCell();
+                celula1.BackgroundColor = new iTextSharp.text.BaseColor(Color.Aqua);
+                celula1.HorizontalAlignment = Element.ALIGN_CENTER;
+                celula1.VerticalAlignment = Element.ALIGN_CENTER;
+                celula1.AddElement(c1);
+                tabela.AddCell(celula1);
+
+                /* Chunk*/
+                p1 = new Chunk("Situação", FontFactory.GetFont("Times New Roman"));
+                p1.Font.Size = 10;
+                p1.Font.SetStyle(0);
+                p1.Font.Color = new iTextSharp.text.BaseColor(0, 0, 0);
+                /* Phrase*/
+                c1 = new Phrase();
+                c1.Add(p1);
+                /* PdfPCell*/
+                celula1 = new PdfPCell();
+                celula1.BackgroundColor = new iTextSharp.text.BaseColor(Color.Aqua);
+                celula1.HorizontalAlignment = Element.ALIGN_CENTER;
+                celula1.VerticalAlignment = Element.ALIGN_CENTER;
+                celula1.AddElement(c1);
+                tabela.AddCell(celula1);
+
+                /* Chunk*/
+                p1 = new Chunk("Serviços", FontFactory.GetFont("Times New Roman"));
+                p1.Font.Size = 10;
+                p1.Font.SetStyle(0);
+                p1.Font.Color = new iTextSharp.text.BaseColor(0, 0, 0);
+                /* Phrase*/
+                c1 = new Phrase();
+                c1.Add(p1);
+                /* PdfPCell*/
+                celula1 = new PdfPCell();
+                celula1.BackgroundColor = new iTextSharp.text.BaseColor(Color.Aqua);
+                celula1.HorizontalAlignment = Element.ALIGN_CENTER;
+                celula1.VerticalAlignment = Element.ALIGN_CENTER;
+                celula1.AddElement(c1);
+                tabela.AddCell(celula1);
+
+                /* Chunk*/
+                p1 = new Chunk("Total", FontFactory.GetFont("Times New Roman"));
+                p1.Font.Size = 10;
+                p1.Font.SetStyle(0);
+                p1.Font.Color = new iTextSharp.text.BaseColor(0, 0, 0);
+                /* Phrase*/
+                c1 = new Phrase();
+                c1.Add(p1);
+                /* PdfPCell*/
+                celula1 = new PdfPCell();
+                celula1.BackgroundColor = new iTextSharp.text.BaseColor(Color.Aqua);
+                celula1.HorizontalAlignment = Element.ALIGN_CENTER;
+                celula1.VerticalAlignment = Element.ALIGN_CENTER;
+                celula1.AddElement(c1);
+                tabela.AddCell(celula1);
+
+
+                List<Agendamento> agendamentos = new List<Agendamento>();
+                agendamentos = new AgendamentoBLL().BuscarTodos(0,1);
+                int x = 1;
+                Decimal valorTotalAgendamentos = 0;
+                foreach (var item in agendamentos)
+                {
+                    bool aux = false; // variavel para auxiliar na separação de lista
+
+                    Chunk p2 = new Chunk(Convert.ToString(x++), FontFactory.GetFont("Times New Roman"));
+                    p2.Font.Size = 8;
+                    p2.Font.SetStyle(0);
+                    p2.Font.Color = new iTextSharp.text.BaseColor(0, 0, 0);
+                    Phrase c2 = new Phrase();
+                    c2.Add(p2);
+                    PdfPCell celula2 = new PdfPCell();
+                    celula2.BackgroundColor = new iTextSharp.text.BaseColor(Color.Transparent);
+                    celula2.HorizontalAlignment = Element.ALIGN_CENTER;
+                    celula2.VerticalAlignment = Element.ALIGN_CENTER;
+                    celula2.AddElement(c2);
+                    tabela.AddCell(celula2);
+
+                    /*Chunk*/
+                    p2 = new Chunk(Convert.ToString(item.Id), FontFactory.GetFont("Times New Roman"));
+                    p2.Font.Size = 8;
+                    p2.Font.SetStyle(0);
+                    p2.Font.Color = new iTextSharp.text.BaseColor(0, 0, 0);
+                    /*Phrase*/
+                    c2 = new Phrase();
+                    c2.Add(p2);
+                    /*PdfPCell*/
+                    celula2 = new PdfPCell();
+                    celula2.BackgroundColor = new iTextSharp.text.BaseColor(Color.Transparent);
+                    celula2.HorizontalAlignment = Element.ALIGN_CENTER;
+                    celula2.VerticalAlignment = Element.ALIGN_CENTER;
+                    celula2.AddElement(c2);
+                    tabela.AddCell(celula2);
+
+                    string dataagenda = Convert.ToString(item.DataAg.Date);
+                    dataagenda = dataagenda.Remove(10);
+                    /*Chunk*/
+                    p2 = new Chunk(dataagenda, FontFactory.GetFont("Times New Roman"));
+                    p2.Font.Size = 8;
+                    p2.Font.SetStyle(0);
+                    p2.Font.Color = new iTextSharp.text.BaseColor(0, 0, 0);
+                    /*Phrase*/
+                    c2 = new Phrase();
+                    c2.Add(p2);
+                    /*PdfPCell*/
+                    celula2 = new PdfPCell();
+                    celula2.BackgroundColor = new iTextSharp.text.BaseColor(Color.Transparent);
+                    celula2.HorizontalAlignment = Element.ALIGN_CENTER;
+                    celula2.VerticalAlignment = Element.ALIGN_CENTER;
+                    celula2.AddElement(c2);
+                    tabela.AddCell(celula2);
+
+
+                    /*Chunk*/
+                    p2 = new Chunk(item.Horario, FontFactory.GetFont("Times New Roman"));
+                    p2.Font.Size = 8;
+                    p2.Font.SetStyle(0);
+                    p2.Font.Color = new iTextSharp.text.BaseColor(0, 0, 0);
+                    /*Phrase*/
+                    c2 = new Phrase();
+                    c2.Add(p2);
+                    /*PdfPCell*/
+                    celula2 = new PdfPCell();
+                    celula2.BackgroundColor = new iTextSharp.text.BaseColor(Color.Transparent);
+                    celula2.HorizontalAlignment = Element.ALIGN_CENTER;
+                    celula2.VerticalAlignment = Element.ALIGN_CENTER;
+                    celula2.AddElement(c2);
+                    tabela.AddCell(celula2);
+
+                    /*Chunk*/
+                    p2 = new Chunk(item.NomeAnimal, FontFactory.GetFont("Times New Roman"));
+                    p2.Font.Size = 8;
+                    p2.Font.SetStyle(0);
+                    p2.Font.Color = new iTextSharp.text.BaseColor(0, 0, 0);
+                    /*Phrase*/
+                    c2 = new Phrase();
+                    c2.Add(p2);
+                    /*PdfPCell*/
+                    celula2 = new PdfPCell();
+                    celula2.BackgroundColor = new iTextSharp.text.BaseColor(Color.Transparent);
+                    celula2.HorizontalAlignment = Element.ALIGN_CENTER;
+                    celula2.VerticalAlignment = Element.ALIGN_CENTER;
+                    celula2.AddElement(c2);
+                    tabela.AddCell(celula2);
+
+                    /*Chunk*/
+                    p2 = new Chunk(item.NomeCliente, FontFactory.GetFont("Times New Roman"));
+                    p2.Font.Size = 8;
+                    p2.Font.SetStyle(0);
+                    p2.Font.Color = new iTextSharp.text.BaseColor(0, 0, 0);
+                    /*Phrase*/
+                    c2 = new Phrase();
+                    c2.Add(p2);
+                    /*PdfPCell*/
+                    celula2 = new PdfPCell();
+                    celula2.BackgroundColor = new iTextSharp.text.BaseColor(Color.Transparent);
+                    celula2.HorizontalAlignment = Element.ALIGN_CENTER;
+                    celula2.VerticalAlignment = Element.ALIGN_CENTER;
+                    celula2.AddElement(c2);
+                    tabela.AddCell(celula2);
+
+                    /*Chunk*/
+                    p2 = new Chunk(item.DescricaoSituacao, FontFactory.GetFont("Times New Roman"));
+                    p2.Font.Size = 8;
+                    p2.Font.SetStyle(0);
+                    p2.Font.Color = new iTextSharp.text.BaseColor(0, 0, 0);
+                    /*Phrase*/
+                    c2 = new Phrase();
+                    c2.Add(p2);
+                    /*PdfPCell*/
+                    celula2 = new PdfPCell();
+                    celula2.BackgroundColor = new iTextSharp.text.BaseColor(Color.Transparent);
+                    celula2.HorizontalAlignment = Element.ALIGN_CENTER;
+                    celula2.VerticalAlignment = Element.ALIGN_CENTER;
+                    celula2.AddElement(c2);
+                    tabela.AddCell(celula2);
+
+                    aux = false;
+                    StringBuilder sb = new StringBuilder();
+                    foreach (var servicos in item.AgendamentoServicos)
+                    {
+                        if (aux)
+                            sb.Append(";\n ");
+
+                        sb.Append("* "+servicos.Servico+ "- " + servicos.NomeProfissional + "- " + servicos.Subtotal);
+                        aux = true;
+                    }
+                    string serv = sb.ToString();
+                    /*Chunk*/
+                    p2 = new Chunk(serv, FontFactory.GetFont("Times New Roman"));
+                    p2.Font.Size = 8;
+                    p2.Font.SetStyle(0);
+                    p2.Font.Color = new iTextSharp.text.BaseColor(0, 0, 0);
+                    /*Phrase*/
+                    c2 = new Phrase();
+                    c2.Add(p2);
+                    /*PdfPCell*/
+                    celula2 = new PdfPCell();
+                    celula2.BackgroundColor = new iTextSharp.text.BaseColor(Color.Transparent);
+                    celula2.HorizontalAlignment = Element.ALIGN_CENTER;
+                    celula2.VerticalAlignment = Element.ALIGN_CENTER;
+                    celula2.AddElement(c2);
+                    tabela.AddCell(celula2);
+
+                   
+                    /*Chunk*/
+                    p2 = new Chunk(Convert.ToString(item.Total), FontFactory.GetFont("Times New Roman"));
+                    p2.Font.Size = 8;
+                    p2.Font.SetStyle(0);
+                    p2.Font.Color = new iTextSharp.text.BaseColor(0, 0, 0);
+                    /*Phrase*/
+                    c2 = new Phrase();
+                    c2.Add(p2);
+                    /*PdfPCell*/
+                    celula2 = new PdfPCell();
+                    celula2.BackgroundColor = new iTextSharp.text.BaseColor(Color.Transparent);
+                    celula2.HorizontalAlignment = Element.ALIGN_CENTER;
+                    celula2.VerticalAlignment = Element.ALIGN_CENTER;
+                    celula2.AddElement(c2);
+                    tabela.AddCell(celula2);
+
+                    valorTotalAgendamentos = valorTotalAgendamentos + item.Total;
+                }
+
+                Chunk p3 = new Chunk(("Valor Total dos agendamentos"), FontFactory.GetFont("Times New Roman"));
+                p3.Font.Size = 8;
+                p3.Font.SetStyle(0);
+                p3.Font.Color = new iTextSharp.text.BaseColor(0, 0, 0);
+                /*Phrase*/
+                Phrase c3 = new Phrase();
+                c3.Add(p3);
+                /*PdfPCell*/
+                PdfPCell celula3 = new PdfPCell();
+                celula3.BackgroundColor = new iTextSharp.text.BaseColor(Color.Transparent);
+                celula3.HorizontalAlignment = Element.ALIGN_CENTER;
+                celula3.VerticalAlignment = Element.ALIGN_CENTER;
+                celula3.Colspan = 8;
+                celula3.AddElement(c3);
+                tabela.AddCell(celula3);
+
+                p3 = new Chunk(Convert.ToString(valorTotalAgendamentos), FontFactory.GetFont("Times New Roman"));
+                p3.Font.Size = 8;
+                p3.Font.SetStyle(0);
+                p3.Font.Color = new iTextSharp.text.BaseColor(0, 0, 0);
+                /*Phrase*/
+                c3 = new Phrase();
+                c3.Add(p3);
+                /*PdfPCell*/
+                celula3 = new PdfPCell();
+                celula3.BackgroundColor = new iTextSharp.text.BaseColor(Color.Transparent);
+                celula3.HorizontalAlignment = Element.ALIGN_CENTER;
+                celula3.VerticalAlignment = Element.ALIGN_CENTER;
+              
+                celula3.AddElement(c3);
+                tabela.AddCell(celula3);
+
+                doc.Add(paragrafo);
+                doc.Add(tabela);
+                doc.Close();
+
+                Process.Start(@"C:\dados\relacaoDeAgendamentos" + datahoje + ".pdf");
+              
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
     }
 }
