@@ -157,10 +157,10 @@ namespace GestaoPetShop
 
                 LoadTheme();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
-                throw;
+                MessageBox.Show(ex.Message);
             }
         }
 
@@ -182,7 +182,7 @@ namespace GestaoPetShop
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu um erro ao colorir botão.", ex) { Data = { { "Id", 330 } } };
+                MessageBox.Show(ex.Message);
             }
         }
 
@@ -201,10 +201,10 @@ namespace GestaoPetShop
                     MessageBox.Show("Não foi selecionado um Profissional");
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
-                throw;
+                MessageBox.Show(ex.Message);
             }
         }
 

@@ -46,15 +46,34 @@ namespace BLL
 
         public List<Funcao> BuscarTodos()
         {
-            return new FuncaoDAL().BuscarTodos();
+            List<Funcao> funcoes = new List<Funcao>();
+            funcoes = new FuncaoDAL().BuscarTodos();
+            if(funcoes.Count < 1)
+            {
+                throw new Exception("Função não encontrada");
+            }
+            return funcoes;
         }
         public List<Funcao> BuscarPorNome(string _nome)
         {
-            return new FuncaoDAL().BuscarPorNome(_nome);
+            List<Funcao> funcoes = new List<Funcao>();
+            funcoes = new FuncaoDAL().BuscarPorNome(_nome);
+            if (funcoes.Count < 1)
+            {
+                throw new Exception("Função não encontrada");
+            }
+            return funcoes;
         }
         public Funcao BuscarPorId(int _id)
         {
-            return new FuncaoDAL().BuscarPorId(_id);
+            Funcao funcao = new Funcao();
+
+           funcao = new FuncaoDAL().BuscarPorId(_id);
+            if(funcao.Id == 0)
+            {
+                throw new Exception("Função não encontrada");
+            }
+            return funcao;
         }
 
         public void InserirPermissaoNaFuncao(int _idFuncao, int _idPermissao)

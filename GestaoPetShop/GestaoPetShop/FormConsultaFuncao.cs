@@ -42,7 +42,7 @@ namespace GestaoPetShop
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu um erro ao buscar alguma função (Todos - Id - Nome) no banco de dados.", ex) { Data = { { "Id", 246 } } };
+                MessageBox.Show(ex.Message);
             }
         }//Givas
         private void btnCadastrar_Click(object sender, EventArgs e)
@@ -79,7 +79,7 @@ namespace GestaoPetShop
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu um erro, é preciso selecionar uma Função para Alterar no banco de dados.", ex) { Data = { { "Id", 247 } } };
+               MessageBox.Show(ex.Message);
             }
         }//Givas
 
@@ -102,7 +102,7 @@ namespace GestaoPetShop
             }
             catch (Exception ex)
             {
-                throw new Exception("É preciso selecionar um registro e confirmar se deseja excluir.", ex) { Data = { { "Id", 248 } } };
+                MessageBox.Show(ex.Message);
             }
         }//Givas
 
@@ -207,7 +207,7 @@ namespace GestaoPetShop
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu um erro ao colorir um tema ao botão.", ex) { Data = { { "Id", 249 } } };
+                MessageBox.Show (ex.Message);
             }
         }
 
