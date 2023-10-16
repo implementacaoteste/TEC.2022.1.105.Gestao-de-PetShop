@@ -39,28 +39,31 @@
             // 
             // buttonRelatorioCliente
             // 
-            this.buttonRelatorioCliente.Location = new System.Drawing.Point(12, 12);
+            this.buttonRelatorioCliente.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.buttonRelatorioCliente.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonRelatorioCliente.Location = new System.Drawing.Point(12, 27);
             this.buttonRelatorioCliente.Name = "buttonRelatorioCliente";
-            this.buttonRelatorioCliente.Size = new System.Drawing.Size(105, 35);
+            this.buttonRelatorioCliente.Size = new System.Drawing.Size(165, 57);
             this.buttonRelatorioCliente.TabIndex = 0;
             this.buttonRelatorioCliente.Text = "Relação de Cliente";
-            this.buttonRelatorioCliente.UseVisualStyleBackColor = true;
+            this.buttonRelatorioCliente.UseVisualStyleBackColor = false;
             this.buttonRelatorioCliente.Click += new System.EventHandler(this.buttonRelatorioCliente_Click);
             // 
             // btnTeste
             // 
+            this.btnTeste.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.btnTeste.Location = new System.Drawing.Point(322, 24);
             this.btnTeste.Name = "btnTeste";
             this.btnTeste.Size = new System.Drawing.Size(75, 23);
             this.btnTeste.TabIndex = 2;
             this.btnTeste.Text = "teste";
-            this.btnTeste.UseVisualStyleBackColor = true;
+            this.btnTeste.UseVisualStyleBackColor = false;
             this.btnTeste.Click += new System.EventHandler(this.btnTeste_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(287, 123);
+            this.pictureBox1.Location = new System.Drawing.Point(321, 123);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(207, 156);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -69,29 +72,34 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(12, 53);
+            this.button1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(12, 88);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(105, 35);
+            this.button1.Size = new System.Drawing.Size(165, 57);
             this.button1.TabIndex = 3;
             this.button1.Text = "Relação de Funcionários";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnRelacaoDeAgendamentos
             // 
-            this.btnRelacaoDeAgendamentos.Location = new System.Drawing.Point(12, 94);
+            this.btnRelacaoDeAgendamentos.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btnRelacaoDeAgendamentos.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRelacaoDeAgendamentos.Location = new System.Drawing.Point(12, 151);
             this.btnRelacaoDeAgendamentos.Name = "btnRelacaoDeAgendamentos";
-            this.btnRelacaoDeAgendamentos.Size = new System.Drawing.Size(105, 35);
+            this.btnRelacaoDeAgendamentos.Size = new System.Drawing.Size(165, 57);
             this.btnRelacaoDeAgendamentos.TabIndex = 4;
             this.btnRelacaoDeAgendamentos.Text = "Relação de Agendamentos";
-            this.btnRelacaoDeAgendamentos.UseVisualStyleBackColor = true;
+            this.btnRelacaoDeAgendamentos.UseVisualStyleBackColor = false;
             this.btnRelacaoDeAgendamentos.Click += new System.EventHandler(this.btnRelacaoDeAgendamentos_Click);
             // 
             // FormRelatorioGeral
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ClientSize = new System.Drawing.Size(849, 476);
             this.Controls.Add(this.btnRelacaoDeAgendamentos);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnTeste);
@@ -99,6 +107,7 @@
             this.Controls.Add(this.buttonRelatorioCliente);
             this.Name = "FormRelatorioGeral";
             this.Text = "FormRelatorioGeral";
+            this.Load += new System.EventHandler(this.FormRelatorioGeral_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
