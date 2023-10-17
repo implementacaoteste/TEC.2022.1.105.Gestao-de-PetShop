@@ -94,6 +94,11 @@ namespace GestaoPetShop
             }
         }
 
+        private void textBox1_KeyDown(object sender, KeyEventArgs e)
+        {
+            textBox1.Focus();
+        }
+
         //private void buttonCancelar_Click(object sender, EventArgs e)
         //{
         //    Close();

@@ -166,5 +166,10 @@ namespace GestaoPetShop
                 e.Handled = true;
             }
         }
+
+        private void textBox8_KeyDown(object sender, KeyEventArgs e)
+        {
+            textBox8.Focus();
+        }
     }
 }
