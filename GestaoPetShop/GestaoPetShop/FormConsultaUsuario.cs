@@ -23,6 +23,7 @@ namespace GestaoPetShop
         {
             try
             {
+
                 switch (comboBoxSelecionarTipoPesquisaUsuario.SelectedIndex)
                 {
                     case 0:

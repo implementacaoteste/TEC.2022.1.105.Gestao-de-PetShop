@@ -21,7 +21,7 @@ namespace BLL
             agendamentoDAL.Inserir(_agendamento);
         }
 
-        private bool ValidarPreenchimento(Agendamento _agendamento)
+        private void ValidarPreenchimento(Agendamento _agendamento)
         {
             if( _agendamento.IdAnimal == 0)
                 throw new Exception("Animal não informado.");
@@ -29,8 +29,13 @@ namespace BLL
             if ( _agendamento.IdSituacao == 0)
                 throw new Exception("Situação não informada");
 
+            if(_agendamento.Id == 0)
+            {
+
             if ( _agendamento.DataAg.Date < DateTime.Now.Date )
                 throw new Exception("Data inválida ou não informada");
+            }
+
 
             if (String.IsNullOrEmpty (_agendamento.Horario))
                 throw new Exception("Horário inválido.");
@@ -39,21 +44,34 @@ namespace BLL
                 throw new Exception("Total inválido.");
 
           
+            if(_agendamento.Id == 0)
+            {
 
             if (_agendamento.Ativo == false)
                 throw new Exception("Ativo não marcado.");
+            }
+            else
+            {
+                Agendamento agendamento = new AgendamentoBLL().BuscarAgendamentoPorId(_agendamento.Id,0);
+                if(_agendamento.Ativo != agendamento.Ativo)
+                {
+                    new UsuarioBLL().ValidarPermissao(37);
+                }
+            }
+            
 
             List<AgendamentoServico> agendamentoServicos = new List<AgendamentoServico>();
             agendamentoServicos = _agendamento.AgendamentoServicos;
             if (agendamentoServicos.Count < 1)
                 throw new Exception("Não foi inserido serviços no agendamento.");
 
-            return false;
+           
 
         }
 
         public void Alterar(Agendamento _agendamento, List<AgendamentoServico> _servicosParaExcluir)//
         {
+            ValidarPreenchimento(_agendamento);
             AgendamentoDAL agendamentoDAL = new AgendamentoDAL();
             agendamentoDAL.Alterar(_agendamento, _servicosParaExcluir);//
         }

@@ -12,7 +12,7 @@ namespace BLL
     {
         public void Inserir(Usuario _usuario, string _confirmacaoDeSenha)
         {
-            //ValidarPermissao(10);
+            ValidarPermissao(10);
             
             ValidarDados(_usuario, _confirmacaoDeSenha);
             _usuario.Senha = new Criptografia().CriptografarSenha(_usuario.Senha);
@@ -22,7 +22,7 @@ namespace BLL
         }
         public void Alterar(Usuario _usuario, string _confirmacaoDeSenha)
         {
-            //ValidarPermissao(3);
+            ValidarPermissao(19);
 
             ValidarDados(_usuario, _confirmacaoDeSenha);
             _usuario.Senha = new Criptografia().CriptografarSenha(_usuario.Senha);
@@ -31,23 +31,23 @@ namespace BLL
         }
         public void Excluir(int _id)
         {
-            //ValidarPermissao(4);
+            ValidarPermissao(28);
             new UsuarioDAL().Excluir(_id);
         }
 
         public List<Usuario> BuscarTodos()
         {
-            //ValidarPermissao(1);
+            ValidarPermissao(1);
             return new UsuarioDAL().BuscarTodos();
         }
         public Usuario BuscarPorId(int _id)
         {
-            //ValidarPermissao(1);
+            ValidarPermissao(1);
             return new UsuarioDAL().BuscarPorId(_id);
         }
         public List<Usuario> BuscarPorLogin(string _login)
         {
-            //ValidarPermissao(1);
+            ValidarPermissao(1);
             return new UsuarioDAL().BuscarPorLogin(_login);
         }
         private void ValidarDados(Usuario _usuario, string _confirmacaoDeSenha)
@@ -81,10 +81,12 @@ namespace BLL
         }
         public List<Usuario> BuscarPorNomeProfissional(string _nomeProfissional)
         {
+            ValidarPermissao(1);
             return new UsuarioDAL().BuscarPorNomeProfissional(_nomeProfissional);
         }
         public Usuario BucarPorIdProfissional(int _idProfissional)
         {
+            ValidarPermissao(1);
             return new UsuarioDAL().BucarPorIdProfissional(_idProfissional);
         }
 
