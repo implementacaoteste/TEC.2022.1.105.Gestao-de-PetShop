@@ -159,6 +159,7 @@
             this.nomeTextBox.Name = "nomeTextBox";
             this.nomeTextBox.Size = new System.Drawing.Size(442, 26);
             this.nomeTextBox.TabIndex = 0;
+            this.nomeTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.nomeTextBox_KeyDown);
             // 
             // clienteBindingSource
             // 
@@ -356,9 +357,11 @@
             this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox5.Location = new System.Drawing.Point(748, 94);
             this.textBox5.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox5.MaxLength = 10;
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(163, 26);
             this.textBox5.TabIndex = 2;
+            this.textBox5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox5_KeyPress);
             // 
             // label6
             // 

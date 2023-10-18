@@ -289,6 +289,7 @@
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(232, 26);
             this.textBox8.TabIndex = 30;
+            this.textBox8.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox8_KeyDown);
             // 
             // textBox9
             // 

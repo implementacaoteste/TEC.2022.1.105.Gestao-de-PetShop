@@ -315,6 +315,7 @@
             this.nomeTextBox.Name = "nomeTextBox";
             this.nomeTextBox.Size = new System.Drawing.Size(430, 26);
             this.nomeTextBox.TabIndex = 0;
+            this.nomeTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.nomeTextBox_KeyDown);
             // 
             // numeroTextBox
             // 
@@ -632,9 +633,11 @@
             this.textBoxDataNascimento.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.profissionalBindingSource, "DataNascimento", true));
             this.textBoxDataNascimento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxDataNascimento.Location = new System.Drawing.Point(773, 88);
+            this.textBoxDataNascimento.MaxLength = 10;
             this.textBoxDataNascimento.Name = "textBoxDataNascimento";
             this.textBoxDataNascimento.Size = new System.Drawing.Size(163, 26);
             this.textBoxDataNascimento.TabIndex = 2;
+            this.textBoxDataNascimento.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxDataNascimento_KeyPress);
             // 
             // nomeFuncaoComboBox
             // 

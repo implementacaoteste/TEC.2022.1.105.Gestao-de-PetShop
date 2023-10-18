@@ -24,6 +24,7 @@ namespace GestaoPetShop
         
         private void FormsCadastroServico_Load(object sender, EventArgs e)
         {
+            LoadTheme();
             this.Hide();
             try
             {
@@ -46,6 +47,20 @@ namespace GestaoPetShop
             {
 
                 MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void LoadTheme()
+        {
+            foreach (Control btns in this.Controls)
+            {
+                if (btns.GetType() == typeof(Button))
+                {
+                    Button btn = (Button)btns;
+                    btn.BackColor = ThemeColor.PrimaryColor;
+                    btn.ForeColor = Color.White;
+                    btn.FlatAppearance.BorderColor = ThemeColor.SecondaryColor;
+                }
             }
         }
 

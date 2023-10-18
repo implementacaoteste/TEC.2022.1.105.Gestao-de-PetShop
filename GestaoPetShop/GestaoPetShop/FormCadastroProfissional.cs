@@ -261,5 +261,18 @@ namespace GestaoPetShop
                 e.Handled = true;
             }
         }
+
+        private void textBoxDataNascimento_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsLetter(e.KeyChar) || char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void nomeTextBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            nomeTextBox.Focus();
+        }
     }
 }
