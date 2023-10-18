@@ -61,7 +61,7 @@ namespace GestaoPetShop
 
             {
 
-                iTextSharp.text.Image logo = iTextSharp.text.Image.GetInstance(@"C:\Users\ADM\Documents\GitHub\TEC.2022.1.105.Gestao-de-PetShop\GestaoPetShop\bicho-de-estimacao.png");
+                iTextSharp.text.Image logo = iTextSharp.text.Image.GetInstance(@"C:\dados\bicho-de-estimacao.png");
                 logo.ScaleToFit(70f, 50f); // tamanho da imagem
                 logo.Alignment = Element.ALIGN_CENTER; // localização da imagem
                 //logo.SetAbsolutePosition(100f, 700f); // outra forma localização da imagem
