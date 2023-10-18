@@ -3,6 +3,7 @@ using Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Emit;
 
 namespace BLL
 {
@@ -22,6 +23,16 @@ namespace BLL
 
             if (String.IsNullOrEmpty(_cliente.CPF))
                 throw new Exception("Informe o CPF do cliente.");
+            if(_cliente.Id == 0)
+            {
+                Cliente cliente = new ClienteBLL().BuscarPorCPF(_cliente.CPF);
+                
+
+                if (_cliente.CPF == cliente.CPF)
+                {
+                    throw new Exception("CPF já cadastrado \n" + "Id "+cliente.Id +" Nome: "+ cliente.Nome );
+                }
+            }
 
             if (_cliente.DataNascimento.Date == dateTime)
                 throw new Exception("Informe o data de nascimento do cliente.");

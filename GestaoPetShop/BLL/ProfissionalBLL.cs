@@ -37,7 +37,18 @@ namespace BLL
                 throw new Exception("Informe a Data de nascimento do profissional.") { Data = { { "Id", 39 } } };
 
             if (_profissional.CPF.Count() != 14)
-                throw new Exception("Informe o nome do profissional.") { Data = { { "Id", 39 } } };
+                throw new Exception("CPF incorreto.") { Data = { { "Id", 39 } } };
+
+            if(_profissional.Id == 0)
+            {
+                Profissional profissional = new ProfissionalBLL().BuscarPorCPF(_profissional.CPF);
+
+                if(_profissional.CPF == profissional.CPF)
+                {
+                    throw new Exception("CPF já cadastrado.\n"+"Id: "+profissional.Id + "Nome: "+ profissional.Nome) { Data = { { "Id", 39 } } };
+                }
+            }
+
 
             if(_profissional.Ativo != true)
                 throw new Exception("Informe o Ativo do profissional.") { Data = { { "Id", 39 } } };

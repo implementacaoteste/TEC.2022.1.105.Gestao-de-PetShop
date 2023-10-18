@@ -24,6 +24,21 @@ namespace GestaoPetShop
                 int opcsituacao; // variavel para escolher a Situação do Agendamento (Todos,Agendado, Em andamento ou Finalizado)
                 int opcativo; // variável para escolher e o Agendamento é Ativo, Inativo ou todos
                 string dataconsulta;
+                if (String.IsNullOrEmpty(comboBox_SelecionarSituacaoBusca.Text))
+                {
+                    MessageBox.Show("Selecione a situação");
+                    return;
+                }
+                if (String.IsNullOrEmpty(comboBoxSelecionarAtivoBuscar.Text))
+                {
+                    MessageBox.Show("Selecione a Ativo");
+                    return;
+                }
+                if (String.IsNullOrEmpty(comboBox_SelecionarSituacaoBusca.Text))
+                {
+                    MessageBox.Show("Selecione a a forma de busca");
+                    return;
+                }
 
                 if (comboBox_SelecionarSituacaoBusca.SelectedIndex == 0)
                     opcsituacao = 0; // Todas as situações (agendado, em andamento, finalizado)
@@ -75,7 +90,7 @@ namespace GestaoPetShop
                                 MessageBox.Show("Insirar o Nome do Profissional para pesquisa");
                                 return;
                             }
-                            agendamentoBindingSource.DataSource = agendamentoBLL.BuscarAgendamentoPorNomeProfissional(textBox_BuscarAgendamento.Text,opcativo,opcsituacao);
+                            agendamentoBindingSource.DataSource = agendamentoBLL.BuscarAgendamentoPorNomeProfissional(textBox_BuscarAgendamento.Text, opcativo, opcsituacao);
                             break;
                         }
                     case 3:// BUSCAR AGENDMAENTO PELO NOME DO CLIENTE CLIENTE
@@ -93,13 +108,13 @@ namespace GestaoPetShop
                         {
 
                             dataconsulta = textBox_BuscarData.Text;
-                            if (textBox_BuscarData.Text == ""|| dataconsulta.Count() != 10)
+                            if (textBox_BuscarData.Text == "" || dataconsulta.Count() != 10)
                             {
                                 MessageBox.Show("Insirar o Data válida para pesquisa");
                                 return;
                             }
                             opcbusca = 4;
-                            agendamentoBindingSource.DataSource = agendamentoBLL.BuscarAgendamentoPorData(opcbusca, dataconsulta,opcativo,opcsituacao);
+                            agendamentoBindingSource.DataSource = agendamentoBLL.BuscarAgendamentoPorData(opcbusca, dataconsulta, opcativo, opcsituacao);
                             break;
                         }
                     case 5:// BUSCAR POR MÊS E ANO
@@ -158,7 +173,7 @@ namespace GestaoPetShop
                                 return;
                             }
                             opcbusca = 1;
-                            agendamentoBindingSource.DataSource = agendamentoBLL.BuscarAgendamentoPorServicoData(textBox_BuscarAgendamento.Text, textBox_BuscarData.Text,opcbusca,opcativo,opcsituacao);
+                            agendamentoBindingSource.DataSource = agendamentoBLL.BuscarAgendamentoPorServicoData(textBox_BuscarAgendamento.Text, textBox_BuscarData.Text, opcbusca, opcativo, opcsituacao);
                             break;
                         }
                     case 8: // BUSCAR AGENDAMENTO POR SERVICO ANO
@@ -249,7 +264,7 @@ namespace GestaoPetShop
                                 return;
                             }
                             opcbusca = 1;
-                            agendamentoBindingSource.DataSource = agendamentoBLL.BuscarAgendamentoPorProfissionalData(textBox_BuscarAgendamento.Text, dataconsulta, opcbusca,opcativo,opcsituacao);
+                            agendamentoBindingSource.DataSource = agendamentoBLL.BuscarAgendamentoPorProfissionalData(textBox_BuscarAgendamento.Text, dataconsulta, opcbusca, opcativo, opcsituacao);
                         }
                         break;
                     case 12:// BUSCAR AGENDAMENTO POR PROFISSIONAL E MÊS/ANO
@@ -284,7 +299,7 @@ namespace GestaoPetShop
                                 dataconsulta = textBox_BuscarData.Text;
                             }
                             opcbusca = 2; // USADO PARA SELECIONAR EM AGENDAMENTODAL A FORMA DE BUSCA
-                            agendamentoBindingSource.DataSource = agendamentoBLL.BuscarAgendamentoPorProfissionalData(textBox_BuscarAgendamento.Text, dataconsulta, opcbusca,opcativo,opcsituacao);
+                            agendamentoBindingSource.DataSource = agendamentoBLL.BuscarAgendamentoPorProfissionalData(textBox_BuscarAgendamento.Text, dataconsulta, opcbusca, opcativo, opcsituacao);
                             break;
                         }
                     case 13:// BUSCAR AGENDAMENTO POR PROFISSIONAL E ANO
@@ -337,7 +352,7 @@ namespace GestaoPetShop
                 MessageBox.Show(ex.Message);
             }
         }
-   
+
         private void button_InserirAgendamentos_Click(object sender, EventArgs e)
         {
             try
@@ -394,7 +409,7 @@ namespace GestaoPetShop
                 MessageBox.Show(ex.Message);
             }
         }
-      
+
         private void monthCalendar_Agendamento_DateChanged(object sender, DateRangeEventArgs e)
         {
 
@@ -418,7 +433,7 @@ namespace GestaoPetShop
             comboBox_SelecionarTipoBusca.SelectedIndex = 0;
             textBox_BuscarAgendamento.Enabled = false;
             textBox_BuscarData.Enabled = false;
-         
+
 
             LoadTheme();
         }
@@ -443,72 +458,84 @@ namespace GestaoPetShop
             {
                 case 0:
                     {
+                        agendamentoBindingSource.Clear();
                         textBox_BuscarData.Enabled = false;
                         textBox_BuscarAgendamento.Enabled = false;
                         break;
                     }
                 case 1: // BUSCAR AGENDAMENTO POR ID
                     {
+                        agendamentoBindingSource.Clear();
                         textBox_BuscarData.Enabled = false;
                         textBox_BuscarAgendamento.Enabled = true;
                         break;
                     }
                 case 2:// BUSCAR AGENDAMENTO PELO NOME DO PROFISSIONAL
                     {
+                        agendamentoBindingSource.Clear();
                         textBox_BuscarData.Enabled = false;
                         textBox_BuscarAgendamento.Enabled = true;
                         break;
                     }
                 case 3:// BUSCAR AGENDMAENTO PELO NOME DO CLIENTE CLIENTE
                     {
+                        agendamentoBindingSource.Clear();
                         textBox_BuscarData.Enabled = false;
                         textBox_BuscarAgendamento.Enabled = true;
                         break;
                     }
                 case 4: // BUSCAR AGENDAMENTO POR DIA/MÊS/ANO
                     {
+                        agendamentoBindingSource.Clear();
                         textBox_BuscarAgendamento.Enabled = false;
                         textBox_BuscarData.Enabled = true;
                         break;
                     }
                 case 5:// BUSCAR POR MÊS E ANO
                     {
+                        agendamentoBindingSource.Clear();
                         textBox_BuscarAgendamento.Enabled = false;
                         textBox_BuscarData.Enabled = true;
                         break;
                     }
                 case 6: // BUSCAR POR ANO
                     {
+                        agendamentoBindingSource.Clear();
                         textBox_BuscarAgendamento.Enabled = false;
                         textBox_BuscarData.Enabled = true;
                         break;
                     }
                 case 7:// BUSCAR AGENDAMENTO POR SERVICO DIA/MES/ANO
                     {
+                        agendamentoBindingSource.Clear();
                         textBox_BuscarData.Enabled = true;
                         textBox_BuscarAgendamento.Enabled = true;
                         break;
                     }
                 case 8: // BUSCAR AGENDAMENTO POR SERVICO ANO
                     {
+                        agendamentoBindingSource.Clear();
                         textBox_BuscarData.Enabled = true;
                         textBox_BuscarAgendamento.Enabled = true;
                         break;
                     }
                 case 9: // BUSCAR AGENDAMENTO POR SERVICO E MÊS/ANO
                     {
+                        agendamentoBindingSource.Clear();
                         textBox_BuscarData.Enabled = true;
                         textBox_BuscarAgendamento.Enabled = true;
                         break;
                     }
                 case 10: // Busca por nome do serviço
                     {
+                        agendamentoBindingSource.Clear();
                         textBox_BuscarData.Enabled = false;
                         textBox_BuscarAgendamento.Enabled = true;
                         break;
                     }
                 case 11: // BUSCAR POR PROFISSIONAL E DIA/MÊS/ANO
                     {
+                        agendamentoBindingSource.Clear();
                         textBox_BuscarData.Enabled = true;
                         textBox_BuscarAgendamento.Enabled = true;
 
@@ -516,18 +543,21 @@ namespace GestaoPetShop
                     }
                 case 12:// BUSCAR AGENDAMENTO POR PROFISSIONAL E MÊS/ANO
                     {
+                        agendamentoBindingSource.Clear();
                         textBox_BuscarData.Enabled = true;
                         textBox_BuscarAgendamento.Enabled = true;
                         break;
                     }
                 case 13:// BUSCAR AGENDAMENTO POR PROFISSIONAL E ANO
                     {
+                        agendamentoBindingSource.Clear();
                         textBox_BuscarData.Enabled = true;
                         textBox_BuscarAgendamento.Enabled = true;
                         break;
                     }
                 default:
                     {
+                        agendamentoBindingSource.Clear();
                         MessageBox.Show("Escolha a forma de busca");
                         comboBox_SelecionarTipoBusca.Focus();
                         break;
