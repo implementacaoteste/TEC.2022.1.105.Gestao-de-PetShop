@@ -61,6 +61,23 @@ namespace BLL
             if (_usuario.UsuarioLogin.Length <= 2)
                 throw new Exception("O Login deve ter mais de 2 caracteres.");
 
+            if(_usuario.Id == 0)
+            {
+                if(_usuario.Ativo != true)
+                {
+                    throw new Exception("Ativo não está marcado");
+                }
+            }
+            else
+            {
+                Usuario usuario = new UsuarioBLL().BuscarPorId(_usuario.Id);
+
+                if(_usuario.Ativo != usuario.Ativo)
+                {
+                    ValidarPermissao(37);
+                }
+            }
+
         }
         public void ValidarPermissao(int _idPermissao)
         {

@@ -11,6 +11,7 @@ namespace BLL
     {
         public void Inserir(Cliente _cliente)
         {
+            new UsuarioBLL().ValidarPermissao(11);
             ValidarDados(_cliente);
             new ClienteDAL().Inserir(_cliente);
         }
@@ -65,6 +66,14 @@ namespace BLL
                     throw new Exception("Ativo não marcado.");
 
             }
+            else
+            {
+                Cliente cliente = new ClienteBLL().BuscarPorId(_cliente.Id);
+                if(_cliente.Ativo != cliente.Ativo)
+                {
+                    new UsuarioBLL().ValidarPermissao(37);
+                }
+            }
 
             List<TelefoneCliente> telefoneClientes = new List<TelefoneCliente>();
             telefoneClientes = _cliente.TelefoneClientes;
@@ -74,18 +83,22 @@ namespace BLL
         }
         public List<Cliente> BuscarTodos()
         {
+            new UsuarioBLL().ValidarPermissao(2);
             return new ClienteDAL().BuscarTodos();
         }
         public List<Cliente> BuscarPorNome(string _nome)
         {
+            new UsuarioBLL().ValidarPermissao(2);
             return new ClienteDAL().BuscarPorNome(_nome);
         }
         public Cliente BuscarPorId(int _id)
         {
+            new UsuarioBLL().ValidarPermissao(2);
             return new ClienteDAL().BuscarPorId(_id);
         }
         public Cliente BuscarPorCPF(string _CPF)
         {
+            new UsuarioBLL().ValidarPermissao(2);
             if (String.IsNullOrEmpty(_CPF))
                 throw new Exception("Informe um CPF") { Data = { { "Id", 17 } } };
 
@@ -93,12 +106,14 @@ namespace BLL
         }
         public void Alterar(Cliente _cliente)
         {
+            new UsuarioBLL().ValidarPermissao(20);
             ValidarDados(_cliente);
             new ClienteDAL().Alterar(_cliente);
         }
         public void Excluir(Cliente _cliente)
         {
-            if(new ClienteDAL().ExisteVinculoClienteComAgendamento(_cliente.Id))
+            new UsuarioBLL().ValidarPermissao(29);
+            if (new ClienteDAL().ExisteVinculoClienteComAgendamento(_cliente.Id))
             {
                 throw new Exception("Não é possível excluir este cliente.\nO cliente está vinculado em um agendamento");
             }
