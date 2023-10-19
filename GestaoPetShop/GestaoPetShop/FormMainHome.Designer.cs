@@ -54,6 +54,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.buttonLogOff = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             this.panelTitleBar.SuspendLayout();
@@ -64,6 +65,7 @@
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.panelMenu.Controls.Add(this.buttonLogOff);
             this.panelMenu.Controls.Add(this.buttonRelatorio);
             this.panelMenu.Controls.Add(this.buttonFuncao);
             this.panelMenu.Controls.Add(this.buttonProfissional);
@@ -79,9 +81,8 @@
             this.panelMenu.Controls.Add(this.panelLogo);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
-            this.panelMenu.Margin = new System.Windows.Forms.Padding(4);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(293, 732);
+            this.panelMenu.Size = new System.Drawing.Size(220, 595);
             this.panelMenu.TabIndex = 11;
             // 
             // buttonRelatorio
@@ -91,10 +92,9 @@
             this.buttonRelatorio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonRelatorio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonRelatorio.ForeColor = System.Drawing.Color.Gainsboro;
-            this.buttonRelatorio.Location = new System.Drawing.Point(0, 575);
-            this.buttonRelatorio.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonRelatorio.Location = new System.Drawing.Point(0, 440);
             this.buttonRelatorio.Name = "buttonRelatorio";
-            this.buttonRelatorio.Size = new System.Drawing.Size(293, 53);
+            this.buttonRelatorio.Size = new System.Drawing.Size(220, 40);
             this.buttonRelatorio.TabIndex = 23;
             this.buttonRelatorio.Text = "R&elatório";
             this.buttonRelatorio.UseVisualStyleBackColor = true;
@@ -107,10 +107,9 @@
             this.buttonFuncao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonFuncao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonFuncao.ForeColor = System.Drawing.Color.Gainsboro;
-            this.buttonFuncao.Location = new System.Drawing.Point(0, 522);
-            this.buttonFuncao.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonFuncao.Location = new System.Drawing.Point(0, 400);
             this.buttonFuncao.Name = "buttonFuncao";
-            this.buttonFuncao.Size = new System.Drawing.Size(293, 53);
+            this.buttonFuncao.Size = new System.Drawing.Size(220, 40);
             this.buttonFuncao.TabIndex = 22;
             this.buttonFuncao.Text = "Função";
             this.buttonFuncao.UseVisualStyleBackColor = true;
@@ -123,10 +122,9 @@
             this.buttonProfissional.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonProfissional.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonProfissional.ForeColor = System.Drawing.Color.Gainsboro;
-            this.buttonProfissional.Location = new System.Drawing.Point(0, 469);
-            this.buttonProfissional.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonProfissional.Location = new System.Drawing.Point(0, 360);
             this.buttonProfissional.Name = "buttonProfissional";
-            this.buttonProfissional.Size = new System.Drawing.Size(293, 53);
+            this.buttonProfissional.Size = new System.Drawing.Size(220, 40);
             this.buttonProfissional.TabIndex = 21;
             this.buttonProfissional.Text = "Profissional";
             this.buttonProfissional.UseVisualStyleBackColor = true;
@@ -139,10 +137,9 @@
             this.buttonRaca.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonRaca.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonRaca.ForeColor = System.Drawing.Color.Gainsboro;
-            this.buttonRaca.Location = new System.Drawing.Point(0, 416);
-            this.buttonRaca.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonRaca.Location = new System.Drawing.Point(0, 320);
             this.buttonRaca.Name = "buttonRaca";
-            this.buttonRaca.Size = new System.Drawing.Size(293, 53);
+            this.buttonRaca.Size = new System.Drawing.Size(220, 40);
             this.buttonRaca.TabIndex = 20;
             this.buttonRaca.Text = "Raça";
             this.buttonRaca.UseVisualStyleBackColor = true;
@@ -155,10 +152,9 @@
             this.buttonAnimal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAnimal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAnimal.ForeColor = System.Drawing.Color.Gainsboro;
-            this.buttonAnimal.Location = new System.Drawing.Point(0, 363);
-            this.buttonAnimal.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonAnimal.Location = new System.Drawing.Point(0, 280);
             this.buttonAnimal.Name = "buttonAnimal";
-            this.buttonAnimal.Size = new System.Drawing.Size(293, 53);
+            this.buttonAnimal.Size = new System.Drawing.Size(220, 40);
             this.buttonAnimal.TabIndex = 19;
             this.buttonAnimal.Text = "Animal";
             this.buttonAnimal.UseVisualStyleBackColor = true;
@@ -171,10 +167,9 @@
             this.buttonAgendamento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAgendamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAgendamento.ForeColor = System.Drawing.Color.Gainsboro;
-            this.buttonAgendamento.Location = new System.Drawing.Point(0, 310);
-            this.buttonAgendamento.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonAgendamento.Location = new System.Drawing.Point(0, 240);
             this.buttonAgendamento.Name = "buttonAgendamento";
-            this.buttonAgendamento.Size = new System.Drawing.Size(293, 53);
+            this.buttonAgendamento.Size = new System.Drawing.Size(220, 40);
             this.buttonAgendamento.TabIndex = 18;
             this.buttonAgendamento.Text = "Agendamento";
             this.buttonAgendamento.UseVisualStyleBackColor = true;
@@ -187,10 +182,9 @@
             this.buttonServico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonServico.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonServico.ForeColor = System.Drawing.Color.Gainsboro;
-            this.buttonServico.Location = new System.Drawing.Point(0, 257);
-            this.buttonServico.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonServico.Location = new System.Drawing.Point(0, 200);
             this.buttonServico.Name = "buttonServico";
-            this.buttonServico.Size = new System.Drawing.Size(293, 53);
+            this.buttonServico.Size = new System.Drawing.Size(220, 40);
             this.buttonServico.TabIndex = 17;
             this.buttonServico.Text = "Serviço";
             this.buttonServico.UseVisualStyleBackColor = true;
@@ -203,10 +197,9 @@
             this.buttonCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCliente.ForeColor = System.Drawing.Color.Gainsboro;
-            this.buttonCliente.Location = new System.Drawing.Point(0, 204);
-            this.buttonCliente.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonCliente.Location = new System.Drawing.Point(0, 160);
             this.buttonCliente.Name = "buttonCliente";
-            this.buttonCliente.Size = new System.Drawing.Size(293, 53);
+            this.buttonCliente.Size = new System.Drawing.Size(220, 40);
             this.buttonCliente.TabIndex = 16;
             this.buttonCliente.Text = "Cliente";
             this.buttonCliente.UseVisualStyleBackColor = true;
@@ -219,10 +212,9 @@
             this.buttonUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonUsuario.ForeColor = System.Drawing.Color.Gainsboro;
-            this.buttonUsuario.Location = new System.Drawing.Point(0, 151);
-            this.buttonUsuario.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonUsuario.Location = new System.Drawing.Point(0, 120);
             this.buttonUsuario.Name = "buttonUsuario";
-            this.buttonUsuario.Size = new System.Drawing.Size(293, 53);
+            this.buttonUsuario.Size = new System.Drawing.Size(220, 40);
             this.buttonUsuario.TabIndex = 15;
             this.buttonUsuario.Text = "Usuário";
             this.buttonUsuario.UseVisualStyleBackColor = true;
@@ -235,9 +227,10 @@
             this.lblUsuarioLogado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblUsuarioLogado.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsuarioLogado.ForeColor = System.Drawing.Color.ForestGreen;
-            this.lblUsuarioLogado.Location = new System.Drawing.Point(0, 700);
+            this.lblUsuarioLogado.Location = new System.Drawing.Point(0, 569);
+            this.lblUsuarioLogado.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblUsuarioLogado.Name = "lblUsuarioLogado";
-            this.lblUsuarioLogado.Size = new System.Drawing.Size(287, 23);
+            this.lblUsuarioLogado.Size = new System.Drawing.Size(215, 19);
             this.lblUsuarioLogado.TabIndex = 14;
             this.lblUsuarioLogado.Text = "Logado";
             this.lblUsuarioLogado.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -249,10 +242,9 @@
             this.buttonPrincipal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonPrincipal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonPrincipal.ForeColor = System.Drawing.Color.Gainsboro;
-            this.buttonPrincipal.Location = new System.Drawing.Point(0, 98);
-            this.buttonPrincipal.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonPrincipal.Location = new System.Drawing.Point(0, 80);
             this.buttonPrincipal.Name = "buttonPrincipal";
-            this.buttonPrincipal.Size = new System.Drawing.Size(293, 53);
+            this.buttonPrincipal.Size = new System.Drawing.Size(220, 40);
             this.buttonPrincipal.TabIndex = 11;
             this.buttonPrincipal.Text = "&Principal";
             this.buttonPrincipal.UseVisualStyleBackColor = true;
@@ -267,11 +259,10 @@
             this.buttonSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSair.ForeColor = System.Drawing.Color.White;
             this.buttonSair.Image = ((System.Drawing.Image)(resources.GetObject("buttonSair.Image")));
-            this.buttonSair.Location = new System.Drawing.Point(0, 635);
-            this.buttonSair.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonSair.Location = new System.Drawing.Point(0, 516);
             this.buttonSair.Name = "buttonSair";
             this.buttonSair.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.buttonSair.Size = new System.Drawing.Size(293, 53);
+            this.buttonSair.Size = new System.Drawing.Size(220, 43);
             this.buttonSair.TabIndex = 10;
             this.buttonSair.Text = "Sair";
             this.buttonSair.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -285,9 +276,8 @@
             this.panelLogo.Controls.Add(this.label2);
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
-            this.panelLogo.Margin = new System.Windows.Forms.Padding(4);
             this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(293, 98);
+            this.panelLogo.Size = new System.Drawing.Size(220, 80);
             this.panelLogo.TabIndex = 0;
             // 
             // label2
@@ -295,10 +285,9 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.LightGray;
-            this.label2.Location = new System.Drawing.Point(36, 37);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(27, 30);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(200, 25);
+            this.label2.Size = new System.Drawing.Size(167, 20);
             this.label2.TabIndex = 0;
             this.label2.Text = "Gestão de PetShop";
             // 
@@ -310,10 +299,9 @@
             this.panelTitleBar.Controls.Add(this.labelTitle);
             this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitleBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panelTitleBar.Location = new System.Drawing.Point(293, 0);
-            this.panelTitleBar.Margin = new System.Windows.Forms.Padding(4);
+            this.panelTitleBar.Location = new System.Drawing.Point(220, 0);
             this.panelTitleBar.Name = "panelTitleBar";
-            this.panelTitleBar.Size = new System.Drawing.Size(1078, 98);
+            this.panelTitleBar.Size = new System.Drawing.Size(808, 80);
             this.panelTitleBar.TabIndex = 12;
             // 
             // btnMaximizar
@@ -322,10 +310,9 @@
             this.btnMaximizar.FlatAppearance.BorderSize = 0;
             this.btnMaximizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMaximizar.Image = ((System.Drawing.Image)(resources.GetObject("btnMaximizar.Image")));
-            this.btnMaximizar.Location = new System.Drawing.Point(909, 21);
-            this.btnMaximizar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnMaximizar.Location = new System.Drawing.Point(682, 17);
             this.btnMaximizar.Name = "btnMaximizar";
-            this.btnMaximizar.Size = new System.Drawing.Size(53, 62);
+            this.btnMaximizar.Size = new System.Drawing.Size(40, 50);
             this.btnMaximizar.TabIndex = 2;
             this.btnMaximizar.UseVisualStyleBackColor = true;
             this.btnMaximizar.Visible = false;
@@ -337,10 +324,9 @@
             this.btnCloseChildForm.FlatAppearance.BorderSize = 0;
             this.btnCloseChildForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCloseChildForm.Image = ((System.Drawing.Image)(resources.GetObject("btnCloseChildForm.Image")));
-            this.btnCloseChildForm.Location = new System.Drawing.Point(970, 2);
-            this.btnCloseChildForm.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCloseChildForm.Location = new System.Drawing.Point(728, 2);
             this.btnCloseChildForm.Name = "btnCloseChildForm";
-            this.btnCloseChildForm.Size = new System.Drawing.Size(108, 95);
+            this.btnCloseChildForm.Size = new System.Drawing.Size(81, 77);
             this.btnCloseChildForm.TabIndex = 1;
             this.btnCloseChildForm.UseVisualStyleBackColor = true;
             this.btnCloseChildForm.Click += new System.EventHandler(this.btnCloseChildForm_Click);
@@ -351,9 +337,8 @@
             this.labelTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTitle.ForeColor = System.Drawing.Color.White;
             this.labelTitle.Location = new System.Drawing.Point(0, 0);
-            this.labelTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(1078, 98);
+            this.labelTitle.Size = new System.Drawing.Size(808, 80);
             this.labelTitle.TabIndex = 0;
             this.labelTitle.Text = "HOME";
             this.labelTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -365,10 +350,9 @@
             this.panelDesktopPane.Controls.Add(this.label1);
             this.panelDesktopPane.Controls.Add(this.pictureBox1);
             this.panelDesktopPane.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelDesktopPane.Location = new System.Drawing.Point(293, 98);
-            this.panelDesktopPane.Margin = new System.Windows.Forms.Padding(4);
+            this.panelDesktopPane.Location = new System.Drawing.Point(220, 80);
             this.panelDesktopPane.Name = "panelDesktopPane";
-            this.panelDesktopPane.Size = new System.Drawing.Size(1078, 634);
+            this.panelDesktopPane.Size = new System.Drawing.Size(808, 515);
             this.panelDesktopPane.TabIndex = 13;
             this.panelDesktopPane.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDesktopPane_Paint);
             // 
@@ -378,10 +362,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(360, 554);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(270, 450);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(368, 36);
+            this.label3.Size = new System.Drawing.Size(276, 29);
             this.label3.TabIndex = 2;
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -391,10 +374,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 84F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(195, 374);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(146, 304);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(708, 143);
+            this.label1.Size = new System.Drawing.Size(531, 116);
             this.label1.TabIndex = 1;
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -404,10 +386,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(360, 60);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Location = new System.Drawing.Point(270, 49);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(358, 310);
+            this.pictureBox1.Size = new System.Drawing.Size(268, 252);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -417,17 +398,32 @@
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // buttonLogOff
+            // 
+            this.buttonLogOff.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonLogOff.FlatAppearance.BorderSize = 0;
+            this.buttonLogOff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonLogOff.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonLogOff.ForeColor = System.Drawing.Color.Gainsboro;
+            this.buttonLogOff.Location = new System.Drawing.Point(0, 480);
+            this.buttonLogOff.Name = "buttonLogOff";
+            this.buttonLogOff.Size = new System.Drawing.Size(220, 40);
+            this.buttonLogOff.TabIndex = 24;
+            this.buttonLogOff.Text = "Trocar de Usuário";
+            this.buttonLogOff.UseVisualStyleBackColor = true;
+            this.buttonLogOff.Visible = false;
+            this.buttonLogOff.Click += new System.EventHandler(this.buttonLogOff_Click);
+            // 
             // FormMainHome
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1371, 732);
+            this.ClientSize = new System.Drawing.Size(1028, 595);
             this.Controls.Add(this.panelDesktopPane);
             this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.panelMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimizeBox = false;
             this.Name = "FormMainHome";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -468,5 +464,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button buttonLogOff;
     }
 }

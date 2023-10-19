@@ -255,5 +255,28 @@ namespace GestaoPetShop
             label1.Text = DateTime.Now.ToLongTimeString();
             timer1.Start();
         }
+
+        private void buttonLogOff_Click(object sender, EventArgs e) // givas testando
+        {
+            //try
+            //{
+            //    this.Visible = true;
+            //    using (FormLogin frm = new FormLogin())
+            //    {
+            //        frm.Show();
+            //        this.Hide();
+            //        lblUsuarioLogado.Text = Constantes.UsuarioLogado;
+            //    }
+            //    this.Visible = false;
+
+            //    if (MessageBox.Show("Deseja fechar essa aplicação?", "Atenção", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            //        this.Close();
+            //}
+            //catch (Exception ex)
+            //{
+            //    throw new Exception("Ocorreu um erro ao tentar sair da aplicação.", ex);
+            //}
+        }
+
     }
 }

@@ -57,8 +57,13 @@ namespace GestaoPetShop
                 bunifuThinButton21_Click(null, null);
         }
 
-        private void FormLogin_Load(object sender, EventArgs e)
+        private void FormLogin_Load(object sender, EventArgs e) 
         {
+            //FormMainHome mainmenu = new FormMainHome(); //para testar givas
+            //mainmenu.Show(); //para testar givas
+            //mainmenu.FormClosed += Logout; //para testar givas
+            //this.Hide(); //para testar givas
+
 #if DEBUG
             //textBoxSenha.Text = "adm1234";
             //textBoxUsuario.Text = "administrador";
@@ -83,5 +88,13 @@ namespace GestaoPetShop
         {
             this.Close();
         }
+
+        //private void Logout(object sender, FormClosedEventArgs e) //para testar givas
+        //{
+        //    textBoxUsuario.Clear();
+        //    textBoxSenha.Clear();
+        //    this.Show();
+        //    textBoxSenha.Focus();
+        //}
     }
 }
