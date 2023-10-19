@@ -12,6 +12,7 @@ namespace BLL
     {
         public void Inserir (Funcao _funcao)
         {
+            new UsuarioBLL().ValidarPermissao(18);
             if (String.IsNullOrEmpty(_funcao.Nome))
                 throw new Exception("Não foi inserido nome para a função.") { Data = { { "Id", 31 } } };
 
@@ -20,6 +21,7 @@ namespace BLL
         }
         public void Alterar (Funcao _funcao)
         {
+            new UsuarioBLL().ValidarPermissao(27);
             if (String.IsNullOrEmpty(_funcao.Nome))
                 throw new Exception("Não foi inserido nome para a função.") { Data = { { "Id", 32 } } };
 
@@ -29,7 +31,7 @@ namespace BLL
         }
         public void Excluir (int _id)
         {
-
+            new UsuarioBLL().ValidarPermissao(36);
             if (ExisteVinculaDeFuncaoComProfissional(_id))
             {
                 throw new Exception("Esta função não pode ser excluída enquanto tiver vículo com profissional.") { Data = { { "Id", 33 } } }; ;
@@ -46,6 +48,7 @@ namespace BLL
 
         public List<Funcao> BuscarTodos()
         {
+            new UsuarioBLL().ValidarPermissao(9);
             List<Funcao> funcoes = new List<Funcao>();
             funcoes = new FuncaoDAL().BuscarTodos();
             if(funcoes.Count < 1)
@@ -56,6 +59,7 @@ namespace BLL
         }
         public List<Funcao> BuscarPorNome(string _nome)
         {
+            new UsuarioBLL().ValidarPermissao(9);
             List<Funcao> funcoes = new List<Funcao>();
             funcoes = new FuncaoDAL().BuscarPorNome(_nome);
             if (funcoes.Count < 1)
@@ -66,6 +70,7 @@ namespace BLL
         }
         public Funcao BuscarPorId(int _id)
         {
+            new UsuarioBLL().ValidarPermissao(9);
             Funcao funcao = new Funcao();
 
            funcao = new FuncaoDAL().BuscarPorId(_id);
@@ -78,11 +83,13 @@ namespace BLL
 
         public void InserirPermissaoNaFuncao(int _idFuncao, int _idPermissao)
         {
+            new UsuarioBLL().ValidarPermissao(36);// mesma função que tem a permissão de excluir
             new FuncaoDAL().InserirPermissaoNaFuncao(_idFuncao, _idPermissao);
         }
 
         public void RemoverPermissaoDeFuncao(int _idFuncao, int _idPermissao)
         {
+            new UsuarioBLL().ValidarPermissao(36); // mesma função que tem a permissão de excluir
             new FuncaoDAL().RemoverPermissaoDeFuncao(_idFuncao,_idPermissao);
         }
     }

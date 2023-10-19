@@ -42,16 +42,16 @@ namespace GestaoPetShop
                     labelCadastroAgenda.Visible = false;
                 }
 
-                List<Profissional> agendamentoProfissinal = new List<Profissional>();
+                List<Profissional> agendamentoProfissional = new List<Profissional>();
                 List<Situacao> situacoes = new List<Situacao>();
                 string _nomeProfissional = "";
                 int _idProfissional = 0;
 
-                agendamentoProfissinal = new AgendamentoBLL().BuscarPorNomeProfissional(_nomeProfissional, _idProfissional);
-                int num2 = agendamentoProfissinal.Count();
+                agendamentoProfissional = new AgendamentoBLL().BuscarPorNomeProfissional(_nomeProfissional, _idProfissional);
+                int num2 = agendamentoProfissional.Count();
                 for (int x = 0; x < num2; x++)
                 {
-                    nomeProfissionalComboBox.Items.Insert(x, agendamentoProfissinal[x].Nome);
+                    nomeProfissionalComboBox.Items.Insert(x, agendamentoProfissional[x].Nome);
                 }
 
                 situacoes = new SituacaoBLL().BuscarTodos();

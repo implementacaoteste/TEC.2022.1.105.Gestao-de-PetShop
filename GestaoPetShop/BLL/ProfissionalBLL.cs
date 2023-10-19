@@ -10,6 +10,7 @@ namespace BLL
     {
         public void Inserir(Profissional _profissional)
         {
+            new UsuarioBLL().ValidarPermissao(16);
             ValidarDados(_profissional);
             new ProfissionalDAL().Inserir(_profissional);
         }
@@ -39,24 +40,32 @@ namespace BLL
             if (_profissional.CPF.Count() != 14)
                 throw new Exception("CPF incorreto.") { Data = { { "Id", 39 } } };
 
-            if(_profissional.Id == 0)
+            if (_profissional.Id == 0)
             {
                 Profissional profissional = new ProfissionalBLL().BuscarPorCPF(_profissional.CPF);
 
-                if(_profissional.CPF == profissional.CPF)
+                if (_profissional.CPF == profissional.CPF)
                 {
-                    throw new Exception("CPF já cadastrado.\n"+"Id: "+profissional.Id + "Nome: "+ profissional.Nome) { Data = { { "Id", 39 } } };
+                    throw new Exception("CPF já cadastrado.\n" + "Id: " + profissional.Id + "Nome: " + profissional.Nome) { Data = { { "Id", 39 } } };
                 }
+
+                if (_profissional.Ativo != true)
+                    throw new Exception("Informe o Ativo do profissional.") { Data = { { "Id", 39 } } };
+            }
+            else
+            {
+                Profissional profissional = new ProfissionalBLL().BuscarPorId(_profissional.Id);
+
+                if(_profissional.Ativo != profissional.Ativo)
+                    new UsuarioBLL().ValidarPermissao(37);
             }
 
 
-            if(_profissional.Ativo != true)
-                throw new Exception("Informe o Ativo do profissional.") { Data = { { "Id", 39 } } };
 
-            if(_profissional.CEP.Count() != 9)
+            if (_profissional.CEP.Count() != 9)
                 throw new Exception("Informe o CEP do profissional.") { Data = { { "Id", 39 } } };
 
-            if(_profissional.UF.Count() != 2)
+            if (_profissional.UF.Count() != 2)
                 throw new Exception("Informe o UF do profissional.") { Data = { { "Id", 39 } } };
 
             if (_profissional.IdFuncao < 0)
@@ -69,19 +78,24 @@ namespace BLL
         }
         public List<Profissional> BuscarTodos()
         {
+            new UsuarioBLL().ValidarPermissao(7);
             return new ProfissionalDAL().BuscarTodos();
         }
         public List<Profissional> BuscarPorNome(string _nome)
         {
+            new UsuarioBLL().ValidarPermissao(7);
             return new ProfissionalDAL().BuscarPorNome(_nome);
         }
         public void Alterar(Profissional _profissional)
         {
+            new UsuarioBLL().ValidarPermissao(25);
+            ValidarDados(_profissional);
             new ProfissionalDAL().Alterar(_profissional);
         }
-        public void Excluir(Profissional  _profissional)
+        public void Excluir(Profissional _profissional)
         {
-            if(new ProfissionalDAL().ExisteVinculoProfissionalComAgendamentoServico(_profissional.Id))
+            new UsuarioBLL().ValidarPermissao(34);
+            if (new ProfissionalDAL().ExisteVinculoProfissionalComAgendamentoServico(_profissional.Id))
             {
                 throw new Exception("O profissional pode ser excluido.\nProfissional está vinculado a um agendamento.");
             }
@@ -90,10 +104,12 @@ namespace BLL
         }//Givas
         public Profissional BuscarPorId(int _id)//Givas
         {
+            new UsuarioBLL().ValidarPermissao(7);
             return new ProfissionalDAL().BuscarPorId(_id);
         }
         public Profissional BuscarPorCPF(string _CPF)//Givas
         {
+            new UsuarioBLL().ValidarPermissao(7);
             if (String.IsNullOrEmpty(_CPF))
                 throw new Exception("Informe um CPF") { Data = { { "Id", 40 } } };
 

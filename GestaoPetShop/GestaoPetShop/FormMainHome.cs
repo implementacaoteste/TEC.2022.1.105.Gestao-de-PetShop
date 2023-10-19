@@ -258,6 +258,20 @@ namespace GestaoPetShop
 
         private void buttonLogOff_Click(object sender, EventArgs e) // givas testando
         {
+
+
+            try
+            {
+                using (FormMainHome frm = new FormMainHome())
+                {
+                    frm.ShowDialog();
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
             //try
             //{
             //    this.Visible = true;

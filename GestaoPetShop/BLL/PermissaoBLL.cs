@@ -9,15 +9,16 @@ namespace BLL
     {
         public void Inserir(Permissao _permissao)//Givas
         {
-            //new PermissaoDAL().Inserir(_permissao);
+            new UsuarioBLL().ValidarPermissao(17);
             if (_permissao.Descricao.Length <= 10 || _permissao.Descricao.Length >= 50)
-                throw new Exception("A descrição da permissao de usuário deve ter ais de 10 caracteres.") { Data = { { "Id", 34 } } }; ;
+                throw new Exception("A descrição da permissao de usuário deve ter mais de 10 caracteres.") { Data = { { "Id", 34 } } }; ;
 
             PermissaoDAL permissaoDAL = new PermissaoDAL();
             permissaoDAL.Inserir(_permissao);
         }
         public List<Permissao> BuscarTodos()
         {
+            new UsuarioBLL().ValidarPermissao(8);
             PermissaoDAL permissaoDAL = new PermissaoDAL();
             List<Permissao> permissaos = permissaoDAL.BuscarTodos();
             if (permissaos.Count == 0)
@@ -28,6 +29,7 @@ namespace BLL
         }//Givas
         public List<Permissao> BuscarPermissaoPorNome(string _nomePermissao)
         {
+            new UsuarioBLL().ValidarPermissao(8);
             //return new PermissaoDAL().BuscarPorDescricao(_descricao);
             PermissaoDAL permissaoDAL = new PermissaoDAL();
             List<Permissao> permissaos = permissaoDAL.BuscarPermissaoPorNome(_nomePermissao);
@@ -39,6 +41,7 @@ namespace BLL
         }//Givas
         public List<Permissao> BuscarPorId(int _id)
         {
+            new UsuarioBLL().ValidarPermissao(8);
             PermissaoDAL permissaoDAL = new PermissaoDAL();
             List<Permissao> permissaos = permissaoDAL.BuscarPorId(_id);
             if (permissaos.Count == 0)
@@ -49,6 +52,7 @@ namespace BLL
         }//Givas
         public void Alterar(Permissao _permissao)
         {
+            new UsuarioBLL().ValidarPermissao(26);
             new PermissaoDAL().Alterar(_permissao);
             if (_permissao.Descricao.Length <= 3 || _permissao.Descricao.Length >= 250)
                 throw new Exception("A alteração informada deverá conter de 3 a 250 caracteres.") { Data = { { "Id", 38 } } }; ;
@@ -58,6 +62,7 @@ namespace BLL
         }//Givas
         public void Excluir(int _id)
         {
+            new UsuarioBLL().ValidarPermissao(35);
             new PermissaoDAL().Excluir(_id);
         }//Givas
     }

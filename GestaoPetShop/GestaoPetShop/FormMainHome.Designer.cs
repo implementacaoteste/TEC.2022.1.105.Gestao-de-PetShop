@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMainHome));
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.buttonLogOff = new System.Windows.Forms.Button();
             this.buttonRelatorio = new System.Windows.Forms.Button();
             this.buttonFuncao = new System.Windows.Forms.Button();
             this.buttonProfissional = new System.Windows.Forms.Button();
@@ -54,7 +55,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.buttonLogOff = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             this.panelTitleBar.SuspendLayout();
@@ -84,6 +84,21 @@
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(220, 595);
             this.panelMenu.TabIndex = 11;
+            // 
+            // buttonLogOff
+            // 
+            this.buttonLogOff.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonLogOff.FlatAppearance.BorderSize = 0;
+            this.buttonLogOff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonLogOff.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonLogOff.ForeColor = System.Drawing.Color.Gainsboro;
+            this.buttonLogOff.Location = new System.Drawing.Point(0, 480);
+            this.buttonLogOff.Name = "buttonLogOff";
+            this.buttonLogOff.Size = new System.Drawing.Size(220, 40);
+            this.buttonLogOff.TabIndex = 24;
+            this.buttonLogOff.Text = "Trocar de Usuário";
+            this.buttonLogOff.UseVisualStyleBackColor = true;
+            this.buttonLogOff.Click += new System.EventHandler(this.buttonLogOff_Click);
             // 
             // buttonRelatorio
             // 
@@ -372,7 +387,7 @@
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 84F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 84F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(146, 304);
             this.label1.Name = "label1";
@@ -397,22 +412,6 @@
             // 
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // buttonLogOff
-            // 
-            this.buttonLogOff.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonLogOff.FlatAppearance.BorderSize = 0;
-            this.buttonLogOff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonLogOff.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonLogOff.ForeColor = System.Drawing.Color.Gainsboro;
-            this.buttonLogOff.Location = new System.Drawing.Point(0, 480);
-            this.buttonLogOff.Name = "buttonLogOff";
-            this.buttonLogOff.Size = new System.Drawing.Size(220, 40);
-            this.buttonLogOff.TabIndex = 24;
-            this.buttonLogOff.Text = "Trocar de Usuário";
-            this.buttonLogOff.UseVisualStyleBackColor = true;
-            this.buttonLogOff.Visible = false;
-            this.buttonLogOff.Click += new System.EventHandler(this.buttonLogOff_Click);
             // 
             // FormMainHome
             // 
