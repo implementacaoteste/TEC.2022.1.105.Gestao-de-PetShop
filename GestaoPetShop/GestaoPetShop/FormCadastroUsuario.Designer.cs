@@ -48,7 +48,6 @@
             this.btnBuscarProfissional = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4AlterarUsuario = new System.Windows.Forms.Label();
             senhaLabel = new System.Windows.Forms.Label();
             label1 = new System.Windows.Forms.Label();
@@ -159,7 +158,7 @@
             // label2CadastrarUsuario
             // 
             this.label2CadastrarUsuario.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2CadastrarUsuario.Location = new System.Drawing.Point(367, 18);
+            this.label2CadastrarUsuario.Location = new System.Drawing.Point(367, 56);
             this.label2CadastrarUsuario.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2CadastrarUsuario.Name = "label2CadastrarUsuario";
             this.label2CadastrarUsuario.Size = new System.Drawing.Size(400, 47);
@@ -270,21 +269,10 @@
             this.groupBox1.TabIndex = 19;
             this.groupBox1.TabStop = false;
             // 
-            // label3
-            // 
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(367, 18);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(400, 47);
-            this.label3.TabIndex = 20;
-            this.label3.Text = "Alterar Usuários";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // label4AlterarUsuario
             // 
             this.label4AlterarUsuario.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4AlterarUsuario.Location = new System.Drawing.Point(367, 18);
+            this.label4AlterarUsuario.Location = new System.Drawing.Point(367, 56);
             this.label4AlterarUsuario.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4AlterarUsuario.Name = "label4AlterarUsuario";
             this.label4AlterarUsuario.Size = new System.Drawing.Size(400, 47);
@@ -312,7 +300,6 @@
             this.Controls.Add(label1);
             this.Controls.Add(senhaLabel);
             this.Controls.Add(this.senhaTextBox);
-            this.Controls.Add(this.label3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
@@ -348,7 +335,6 @@
         private System.Windows.Forms.BindingSource usuarioBindingSource;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4AlterarUsuario;
     }
 }
