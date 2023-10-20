@@ -46,7 +46,11 @@ namespace GestaoPetShop
                             usuarioBindingSource.DataSource = new UsuarioBLL().BucarPorIdProfissional(Convert.ToInt32(textBoxBuscarUsuario.Text));
                             break;
                         }
-
+                    default:
+                        {
+                            MessageBox.Show("Profissional não localizado.");
+                            break;
+                        }
                 }
 
             }
@@ -111,7 +115,11 @@ namespace GestaoPetShop
                             usuarioBindingSource.DataSource = new UsuarioBLL().BucarPorIdProfissional(Convert.ToInt32(textBoxBuscarUsuario.Text));
                             break;
                         }
-
+                    default:
+                        {
+                            MessageBox.Show("Profissional não localizado.");
+                            break;
+                        }
                 }
             }
             catch (Exception ex)
