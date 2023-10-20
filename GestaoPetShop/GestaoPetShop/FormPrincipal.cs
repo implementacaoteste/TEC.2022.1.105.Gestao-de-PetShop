@@ -31,7 +31,20 @@ namespace GestaoPetShop
 
         private void FormPrincipal_Load(object sender, EventArgs e)
         {
+            try
+            {
 
+                string dataconsultaagendamento =Convert.ToString(DateTime.Now);
+
+                //textBoxQuantidadeAgendado.Text = Convert.ToString(new AgendamentoBLL().BuscarAgendamentoPorData(4, dataconsultaagendamento, 1, 1).Count);
+                //textBox2QuantidadeEmAndamento.Text = Convert.ToString(new AgendamentoBLL().BuscarAgendamentoPorData(4, dataconsultaagendamento, 1, 2).Count);
+                //textBoxQuantidadeFinalizado.Text = Convert.ToString(new AgendamentoBLL().BuscarAgendamentoPorData(4, dataconsultaagendamento, 1, 3).Count);
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void FormPrincipal_KeyDown(object sender, KeyEventArgs e)
@@ -80,9 +93,32 @@ namespace GestaoPetShop
             {
                 string dataconsultaagendamento = monthCalendar1.SelectionStart.ToShortDateString();
                 int opcbusca = 4;
-                int opcativo = 0;
+                int opcativo = 1;
                 int opcsituacao = 0;
-                agendamentoBindingSource.DataSource = new AgendamentoBLL().BuscarAgendamentoPorData(opcbusca, dataconsultaagendamento, opcativo, opcsituacao);
+                List<Agendamento> agendamento = new AgendamentoBLL().BuscarAgendamentoPorData(opcbusca, dataconsultaagendamento, opcativo, opcsituacao);
+                agendamentoBindingSource.DataSource = agendamento;
+                //int quantAgendado=0;
+                //int quantEmAndamento=0;
+                //int quantFinalizado=0;
+                //foreach (var item in agendamento)
+                //{
+                //    if (item.IdSituacao == 1)
+                //    {
+                //        quantAgendado++;
+                //    }
+                //    if (item.IdSituacao == 2)
+                //    {
+                //        quantEmAndamento++;
+                //    }
+                //    if (item.IdSituacao == 3)
+                //    {
+                //        quantFinalizado++;
+                //    }
+                //}
+
+                //textBoxQuantidadeAgendado.Text = Convert.ToString(quantAgendado);
+                //textBox2QuantidadeEmAndamento.Text = Convert.ToString(quantEmAndamento);
+                //textBoxQuantidadeFinalizado.Text = Convert.ToString(quantFinalizado);
 
                 agendamentoDataGridView.Visible = true;
                 agendamentoServicosDataGridView.Visible = true;
@@ -147,6 +183,52 @@ namespace GestaoPetShop
             }
             catch (Exception ex)
             {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void groupBoxSituacao_Enter(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            try
+            {
+
+                string dataconsultaagendamento = Convert.ToString(DateTime.Now);
+                int opcbusca = 4;
+                int opcativo = 1;
+                int opcsituacao = 0;
+                List<Agendamento> agendamento = new AgendamentoBLL().BuscarAgendamentoPorData(opcbusca, dataconsultaagendamento, opcativo, opcsituacao);
+              
+                int quantAgendado = 0;
+                int quantEmAndamento = 0;
+                int quantFinalizado = 0;
+                foreach (var item in agendamento)
+                {
+                    if (item.IdSituacao == 1)
+                    {
+                        quantAgendado++;
+                    }
+                    if (item.IdSituacao == 2)
+                    {
+                        quantEmAndamento++;
+                    }
+                    if (item.IdSituacao == 3)
+                    {
+                        quantFinalizado++;
+                    }
+                }
+
+                textBoxQuantidadeAgendado.Text = Convert.ToString(quantAgendado);
+                textBox2QuantidadeEmAndamento.Text = Convert.ToString(quantEmAndamento);
+                textBoxQuantidadeFinalizado.Text = Convert.ToString(quantFinalizado);
+            }
+            catch (Exception ex)
+            {
+
                 MessageBox.Show(ex.Message);
             }
         }
