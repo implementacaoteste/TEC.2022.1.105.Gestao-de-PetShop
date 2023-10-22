@@ -34,7 +34,6 @@ namespace BLL
             ValidarPermissao(28);
             new UsuarioDAL().Excluir(_id);
         }
-
         public List<Usuario> BuscarTodos()
         {
             ValidarPermissao(1);
@@ -104,9 +103,16 @@ namespace BLL
         public Usuario BucarPorIdProfissional(int _idProfissional)
         {
             ValidarPermissao(1);
-            return new UsuarioDAL().BucarPorIdProfissional(_idProfissional);
+            UsuarioDAL usuarioDAL = new UsuarioDAL();
+            Usuario usuario = new Usuario();
+            usuario = usuarioDAL.BuscarPorId(_idProfissional);
+            if (usuario == null || usuario.IdProfissional == 0)
+            {
+                throw new Exception("Usuário não localizado.");
+            }
+            return usuario;
+            //return new UsuarioDAL().BucarPorIdProfissional(_idProfissional);
         }
-
         public bool VerificarSenhaAtual(string _txtSenhaAtual, int _id)
         {
             string senhaatual = BuscarPorId(_id).Senha;
