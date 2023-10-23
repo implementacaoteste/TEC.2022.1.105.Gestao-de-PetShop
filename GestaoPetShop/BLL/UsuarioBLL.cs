@@ -13,10 +13,10 @@ namespace BLL
         public void Inserir(Usuario _usuario, string _confirmacaoDeSenha)
         {
             ValidarPermissao(10);
-            
+
             ValidarDados(_usuario, _confirmacaoDeSenha);
             _usuario.Senha = new Criptografia().CriptografarSenha(_usuario.Senha);
-           
+
             UsuarioDAL usuarioDAL = new UsuarioDAL();
             usuarioDAL.Inserir(_usuario);
         }
@@ -34,7 +34,6 @@ namespace BLL
             ValidarPermissao(28);
             new UsuarioDAL().Excluir(_id);
         }
-
         public List<Usuario> BuscarTodos()
         {
             ValidarPermissao(1);
@@ -48,7 +47,14 @@ namespace BLL
         public List<Usuario> BuscarPorLogin(string _login)
         {
             ValidarPermissao(1);
-            return new UsuarioDAL().BuscarPorLogin(_login);
+            UsuarioDAL usuarioDAL = new UsuarioDAL();
+            List<Usuario> usuarios = new List<Usuario>();
+            usuarios = usuarioDAL.BuscarPorLogin(_login);
+            if (usuarios != null && usuarios.Count < 1)
+            {
+                throw new Exception("Login não encontrado.");
+            }
+            return usuarios;
         }
         private void ValidarDados(Usuario _usuario, string _confirmacaoDeSenha)
         {
@@ -61,9 +67,9 @@ namespace BLL
             if (_usuario.UsuarioLogin.Length <= 2)
                 throw new Exception("O Login deve ter mais de 2 caracteres.");
 
-            if(_usuario.Id == 0)
+            if (_usuario.Id == 0)
             {
-                if(_usuario.Ativo != true)
+                if (_usuario.Ativo != true)
                 {
                     throw new Exception("Ativo não está marcado");
                 }
@@ -72,7 +78,7 @@ namespace BLL
             {
                 Usuario usuario = new UsuarioBLL().BuscarPorId(_usuario.Id);
 
-                if(_usuario.Ativo != usuario.Ativo)
+                if (_usuario.Ativo != usuario.Ativo)
                 {
                     ValidarPermissao(37);
                 }
@@ -99,14 +105,29 @@ namespace BLL
         public List<Usuario> BuscarPorNomeProfissional(string _nomeProfissional)
         {
             ValidarPermissao(1);
-            return new UsuarioDAL().BuscarPorNomeProfissional(_nomeProfissional);
+            UsuarioDAL usuarioDAL = new UsuarioDAL();
+            List<Usuario> usuarios = new List<Usuario>();
+            usuarios = usuarioDAL.BuscarPorNomeProfissional(_nomeProfissional);
+            if (usuarios != null && usuarios.Count < 1)
+            {
+                throw new Exception("Profissional não encontrado.");
+            }
+            return usuarios;
+            //return new UsuarioDAL().BuscarPorNomeProfissional(_nomeProfissional);
         }
         public Usuario BucarPorIdProfissional(int _idProfissional)
         {
             ValidarPermissao(1);
-            return new UsuarioDAL().BucarPorIdProfissional(_idProfissional);
+            UsuarioDAL usuarioDAL = new UsuarioDAL();
+            Usuario usuario = new Usuario();
+            usuario = usuarioDAL.BuscarPorId(_idProfissional);
+            if (usuario == null || usuario.IdProfissional == 0)
+            {
+                throw new Exception("Usuário não localizado.");
+            }
+            return usuario;
+            //return new UsuarioDAL().BucarPorIdProfissional(_idProfissional);
         }
-
         public bool VerificarSenhaAtual(string _txtSenhaAtual, int _id)
         {
             string senhaatual = BuscarPorId(_id).Senha;

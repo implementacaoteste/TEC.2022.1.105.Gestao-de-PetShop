@@ -56,13 +56,14 @@
             // 
             // textBoxBuscarUsuario
             // 
-            this.textBoxBuscarUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.textBoxBuscarUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxBuscarUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxBuscarUsuario.Location = new System.Drawing.Point(128, 33);
+            this.textBoxBuscarUsuario.Location = new System.Drawing.Point(142, 33);
             this.textBoxBuscarUsuario.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxBuscarUsuario.Name = "textBoxBuscarUsuario";
-            this.textBoxBuscarUsuario.Size = new System.Drawing.Size(146, 26);
+            this.textBoxBuscarUsuario.Size = new System.Drawing.Size(132, 26);
             this.textBoxBuscarUsuario.TabIndex = 1;
             // 
             // comboBoxSelecionarTipoPesquisaUsuario
@@ -80,7 +81,7 @@
             this.comboBoxSelecionarTipoPesquisaUsuario.Location = new System.Drawing.Point(9, 33);
             this.comboBoxSelecionarTipoPesquisaUsuario.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxSelecionarTipoPesquisaUsuario.Name = "comboBoxSelecionarTipoPesquisaUsuario";
-            this.comboBoxSelecionarTipoPesquisaUsuario.Size = new System.Drawing.Size(115, 28);
+            this.comboBoxSelecionarTipoPesquisaUsuario.Size = new System.Drawing.Size(129, 28);
             this.comboBoxSelecionarTipoPesquisaUsuario.TabIndex = 0;
             this.comboBoxSelecionarTipoPesquisaUsuario.SelectedIndexChanged += new System.EventHandler(this.comboBoxSelecionarTipoPesquisaUsuario_SelectedIndexChanged);
             // 
@@ -250,7 +251,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(106, 13);
+            this.label3.Location = new System.Drawing.Point(139, 14);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(262, 17);

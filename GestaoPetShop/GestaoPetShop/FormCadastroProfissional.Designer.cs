@@ -74,13 +74,13 @@
             this.buttonSalvar = new System.Windows.Forms.Button();
             this.buttonCancelar = new System.Windows.Forms.Button();
             this.lblCadastrarProfissional = new System.Windows.Forms.Label();
-            this.cPFTextBox = new System.Windows.Forms.TextBox();
-            this.cEPTextBox = new System.Windows.Forms.TextBox();
-            this.textBoxDataNascimento = new System.Windows.Forms.TextBox();
             this.nomeFuncaoComboBox = new System.Windows.Forms.ComboBox();
             this.idFuncaoTextBox = new System.Windows.Forms.TextBox();
             this.btnGerarSenha = new System.Windows.Forms.Button();
             this.lblAlterarProfissional = new System.Windows.Forms.Label();
+            this.cEPTextBox = new System.Windows.Forms.MaskedTextBox();
+            this.textBoxDataNascimento = new System.Windows.Forms.MaskedTextBox();
+            this.cPFTextBox = new System.Windows.Forms.MaskedTextBox();
             bairroLabel = new System.Windows.Forms.Label();
             cidadeLabel = new System.Windows.Forms.Label();
             dataNascimentoLabel = new System.Windows.Forms.Label();
@@ -195,7 +195,7 @@
             // 
             cPFLabel1.AutoSize = true;
             cPFLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            cPFLabel1.Location = new System.Drawing.Point(494, 68);
+            cPFLabel1.Location = new System.Drawing.Point(581, 68);
             cPFLabel1.Name = "cPFLabel1";
             cPFLabel1.Size = new System.Drawing.Size(34, 17);
             cPFLabel1.TabIndex = 37;
@@ -205,7 +205,7 @@
             // 
             cEPLabel1.AutoSize = true;
             cEPLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            cEPLabel1.Location = new System.Drawing.Point(687, 131);
+            cEPLabel1.Location = new System.Drawing.Point(770, 129);
             cEPLabel1.Name = "cEPLabel1";
             cEPLabel1.Size = new System.Drawing.Size(35, 17);
             cEPLabel1.TabIndex = 38;
@@ -313,7 +313,7 @@
             this.nomeTextBox.Location = new System.Drawing.Point(14, 87);
             this.nomeTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.nomeTextBox.Name = "nomeTextBox";
-            this.nomeTextBox.Size = new System.Drawing.Size(430, 26);
+            this.nomeTextBox.Size = new System.Drawing.Size(518, 26);
             this.nomeTextBox.TabIndex = 0;
             this.nomeTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.nomeTextBox_KeyDown);
             // 
@@ -391,6 +391,7 @@
             this.textBoxTelefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxTelefone.Location = new System.Drawing.Point(572, 349);
             this.textBoxTelefone.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxTelefone.MaxLength = 13;
             this.textBoxTelefone.Name = "textBoxTelefone";
             this.textBoxTelefone.Size = new System.Drawing.Size(261, 26);
             this.textBoxTelefone.TabIndex = 14;
@@ -607,38 +608,6 @@
             this.lblCadastrarProfissional.Text = "Cadastrar Profissional";
             this.lblCadastrarProfissional.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // cPFTextBox
-            // 
-            this.cPFTextBox.BackColor = System.Drawing.SystemColors.Window;
-            this.cPFTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.profissionalBindingSource, "CPF", true));
-            this.cPFTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cPFTextBox.Location = new System.Drawing.Point(495, 88);
-            this.cPFTextBox.Name = "cPFTextBox";
-            this.cPFTextBox.Size = new System.Drawing.Size(240, 26);
-            this.cPFTextBox.TabIndex = 1;
-            // 
-            // cEPTextBox
-            // 
-            this.cEPTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.profissionalBindingSource, "CEP", true));
-            this.cEPTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cEPTextBox.Location = new System.Drawing.Point(687, 149);
-            this.cEPTextBox.MaxLength = 9;
-            this.cEPTextBox.Name = "cEPTextBox";
-            this.cEPTextBox.Size = new System.Drawing.Size(249, 26);
-            this.cEPTextBox.TabIndex = 5;
-            this.cEPTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cEPTextBox_KeyPress);
-            // 
-            // textBoxDataNascimento
-            // 
-            this.textBoxDataNascimento.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.profissionalBindingSource, "DataNascimento", true));
-            this.textBoxDataNascimento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxDataNascimento.Location = new System.Drawing.Point(773, 88);
-            this.textBoxDataNascimento.MaxLength = 10;
-            this.textBoxDataNascimento.Name = "textBoxDataNascimento";
-            this.textBoxDataNascimento.Size = new System.Drawing.Size(163, 26);
-            this.textBoxDataNascimento.TabIndex = 2;
-            this.textBoxDataNascimento.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxDataNascimento_KeyPress);
-            // 
             // nomeFuncaoComboBox
             // 
             this.nomeFuncaoComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.profissionalBindingSource, "NomeFuncao", true));
@@ -692,12 +661,47 @@
             this.lblAlterarProfissional.Text = "Alterar Profissional";
             this.lblAlterarProfissional.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // cEPTextBox
+            // 
+            this.cEPTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.profissionalBindingSource, "CEP", true));
+            this.cEPTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cEPTextBox.Location = new System.Drawing.Point(773, 149);
+            this.cEPTextBox.Mask = "00000-999";
+            this.cEPTextBox.Name = "cEPTextBox";
+            this.cEPTextBox.Size = new System.Drawing.Size(132, 26);
+            this.cEPTextBox.TabIndex = 45;
+            // 
+            // textBoxDataNascimento
+            // 
+            this.textBoxDataNascimento.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.profissionalBindingSource, "DataNascimento", true));
+            this.textBoxDataNascimento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxDataNascimento.Location = new System.Drawing.Point(773, 87);
+            this.textBoxDataNascimento.Mask = "00/00/0000";
+            this.textBoxDataNascimento.Name = "textBoxDataNascimento";
+            this.textBoxDataNascimento.Size = new System.Drawing.Size(132, 26);
+            this.textBoxDataNascimento.TabIndex = 46;
+            this.textBoxDataNascimento.ValidatingType = typeof(System.DateTime);
+            // 
+            // cPFTextBox
+            // 
+            this.cPFTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.profissionalBindingSource, "CPF", true));
+            this.cPFTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cPFTextBox.Location = new System.Drawing.Point(584, 87);
+            this.cPFTextBox.Mask = "000,000,000-00";
+            this.cPFTextBox.Name = "cPFTextBox";
+            this.cPFTextBox.Size = new System.Drawing.Size(163, 26);
+            this.cPFTextBox.TabIndex = 47;
+            // 
             // FormCadastroProfissional
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1134, 594);
+            this.Controls.Add(this.cPFTextBox);
+            this.Controls.Add(this.textBoxDataNascimento);
+            this.Controls.Add(this.cEPTextBox);
             this.Controls.Add(this.lblAlterarProfissional);
             this.Controls.Add(label2);
             this.Controls.Add(label1);
@@ -707,11 +711,8 @@
             this.Controls.Add(this.idFuncaoTextBox);
             this.Controls.Add(nomeFuncaoLabel);
             this.Controls.Add(this.nomeFuncaoComboBox);
-            this.Controls.Add(this.textBoxDataNascimento);
             this.Controls.Add(cEPLabel1);
-            this.Controls.Add(this.cEPTextBox);
             this.Controls.Add(cPFLabel1);
-            this.Controls.Add(this.cPFTextBox);
             this.Controls.Add(this.lblCadastrarProfissional);
             this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.buttonSalvar);
@@ -787,14 +788,14 @@
         private System.Windows.Forms.Button buttonSalvar;
         private System.Windows.Forms.Button buttonCancelar;
         private System.Windows.Forms.Label lblCadastrarProfissional;
-        private System.Windows.Forms.TextBox cPFTextBox;
-        private System.Windows.Forms.TextBox cEPTextBox;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.TextBox textBoxDataNascimento;
         private System.Windows.Forms.ComboBox nomeFuncaoComboBox;
         private System.Windows.Forms.TextBox idFuncaoTextBox;
         private System.Windows.Forms.Button btnGerarSenha;
         private System.Windows.Forms.Label lblAlterarProfissional;
+        private System.Windows.Forms.MaskedTextBox cEPTextBox;
+        private System.Windows.Forms.MaskedTextBox textBoxDataNascimento;
+        private System.Windows.Forms.MaskedTextBox cPFTextBox;
     }
 }

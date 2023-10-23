@@ -56,7 +56,7 @@ namespace BLL
             {
                 Profissional profissional = new ProfissionalBLL().BuscarPorId(_profissional.Id);
 
-                if(_profissional.Ativo != profissional.Ativo)
+                if (_profissional.Ativo != profissional.Ativo)
                     new UsuarioBLL().ValidarPermissao(37);
             }
 
@@ -84,7 +84,15 @@ namespace BLL
         public List<Profissional> BuscarPorNome(string _nome)
         {
             new UsuarioBLL().ValidarPermissao(7);
-            return new ProfissionalDAL().BuscarPorNome(_nome);
+            ProfissionalDAL profissionalDAL = new ProfissionalDAL();
+            List<Profissional> profissionais = new List<Profissional>();
+            profissionais = profissionalDAL.BuscarPorNome(_nome);
+            if (profissionais.Count < 1)
+            {
+                throw new Exception("Profissional não encontrado.");
+            }
+            return profissionais;
+            //return new ProfissionalDAL().BuscarPorNome(_nome);
         }
         public void Alterar(Profissional _profissional)
         {
@@ -105,7 +113,15 @@ namespace BLL
         public Profissional BuscarPorId(int _id)//Givas
         {
             new UsuarioBLL().ValidarPermissao(7);
-            return new ProfissionalDAL().BuscarPorId(_id);
+            ProfissionalDAL profissionalDAL = new ProfissionalDAL();
+            Profissional profissional = new Profissional();
+            profissional = profissionalDAL.BuscarPorId(_id);
+            if (profissional == null || profissional.Id == 0)
+            {
+                throw new Exception("Profissional não encontrado.");
+            }
+            return profissional;
+            //return new ProfissionalDAL().BuscarPorId(_id);
         }
         public Profissional BuscarPorCPF(string _CPF)//Givas
         {
@@ -113,7 +129,15 @@ namespace BLL
             if (String.IsNullOrEmpty(_CPF))
                 throw new Exception("Informe um CPF") { Data = { { "Id", 40 } } };
 
-            return new ProfissionalDAL().BuscarPorCPF(_CPF);
+            ProfissionalDAL profissionalDAL = new ProfissionalDAL();
+            Profissional profissional = new Profissional();
+            profissional = profissionalDAL.BuscarPorCPF(_CPF);
+            if (profissional == null)
+            {
+                throw new Exception("CPF não encontrado.");
+            }
+            return profissional;
+            //return new ProfissionalDAL().BuscarPorCPF(_CPF);
         }
     }
 }

@@ -91,9 +91,11 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = @"SELECT U.Id, U.UsuarioLogin, U.IdProfissional, U.Senha,U.Ativo, P.Nome FROM Usuario U 
-                                                                   INNER JOIN Profissional P ON U.IdProfissional = P.Id
-                                                                    WHERE U.Id = @Id";
+                cmd.CommandText = @"SELECT U.Id, U.UsuarioLogin, 
+                                           U.IdProfissional, U.Senha,U.Ativo, 
+                                           P.Nome FROM Usuario U 
+                                           INNER JOIN Profissional P ON U.IdProfissional = P.Id
+                                           WHERE U.Id = @Id";
                 cmd.CommandType = System.Data.CommandType.Text;
 
                 cmd.Parameters.AddWithValue("@Id", _id);
