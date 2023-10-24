@@ -135,6 +135,7 @@ insert into Permissao (Nome) values ('Excluir Serviços');--33
 insert into Permissao (Nome) values ('Excluir Profissional');--34
 insert into Permissao (Nome) values ('Excluir Permissão');--35
 insert into Permissao (Nome) values ('Excluir Função');--36
+insert into Permissao (Nome) values ('Alterar Ativo');--37
 GO
 /**********************************************************************************************************************/
 
