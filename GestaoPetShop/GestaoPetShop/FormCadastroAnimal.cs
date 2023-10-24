@@ -111,6 +111,7 @@ namespace GestaoPetShop
 
                     if (frm.Cliente != null)
                     {
+                        ((Animal)animalBindingSource.Current).IdCliente = frm.Cliente.Id;
                         ((Animal)animalBindingSource.Current).Cliente = frm.Cliente;
                         textBox8.Text = frm.Cliente.Nome;
                     }
@@ -132,6 +133,7 @@ namespace GestaoPetShop
 
                     if (frm.Raca != null)
                     {
+                        ((Animal)animalBindingSource.Current).IdRaca = frm.Raca.Id;
                         ((Animal)animalBindingSource.Current).Raca = frm.Raca;
                         textBox9.Text = frm.Raca.Nome;
                     }
