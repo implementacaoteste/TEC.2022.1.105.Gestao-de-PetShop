@@ -94,9 +94,10 @@
             nomeLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             nomeLabel.AutoSize = true;
             nomeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            nomeLabel.Location = new System.Drawing.Point(23, 94);
+            nomeLabel.Location = new System.Drawing.Point(11, 76);
+            nomeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             nomeLabel.Name = "nomeLabel";
-            nomeLabel.Size = new System.Drawing.Size(53, 20);
+            nomeLabel.Size = new System.Drawing.Size(45, 17);
             nomeLabel.TabIndex = 1;
             nomeLabel.Text = "Nome";
             // 
@@ -105,9 +106,10 @@
             cPFLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             cPFLabel.AutoSize = true;
             cPFLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            cPFLabel.Location = new System.Drawing.Point(654, 94);
+            cPFLabel.Location = new System.Drawing.Point(490, 76);
+            cPFLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             cPFLabel.Name = "cPFLabel";
-            cPFLabel.Size = new System.Drawing.Size(42, 20);
+            cPFLabel.Size = new System.Drawing.Size(34, 17);
             cPFLabel.TabIndex = 3;
             cPFLabel.Text = "CPF";
             // 
@@ -116,9 +118,10 @@
             rGLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             rGLabel.AutoSize = true;
             rGLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            rGLabel.Location = new System.Drawing.Point(935, 177);
+            rGLabel.Location = new System.Drawing.Point(793, 142);
+            rGLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             rGLabel.Name = "rGLabel";
-            rGLabel.Size = new System.Drawing.Size(43, 20);
+            rGLabel.Size = new System.Drawing.Size(35, 17);
             rGLabel.TabIndex = 5;
             rGLabel.Text = "CEP";
             // 
@@ -127,9 +130,10 @@
             foneLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             foneLabel.AutoSize = true;
             foneLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            foneLabel.Location = new System.Drawing.Point(582, 260);
+            foneLabel.Location = new System.Drawing.Point(494, 211);
+            foneLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             foneLabel.Name = "foneLabel";
-            foneLabel.Size = new System.Drawing.Size(61, 20);
+            foneLabel.Size = new System.Drawing.Size(52, 17);
             foneLabel.TabIndex = 7;
             foneLabel.Text = "Cidade";
             // 
@@ -138,9 +142,10 @@
             emailLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             emailLabel.AutoSize = true;
             emailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            emailLabel.Location = new System.Drawing.Point(881, 260);
+            emailLabel.Location = new System.Drawing.Point(714, 211);
+            emailLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             emailLabel.Name = "emailLabel";
-            emailLabel.Size = new System.Drawing.Size(31, 20);
+            emailLabel.Size = new System.Drawing.Size(26, 17);
             emailLabel.TabIndex = 9;
             emailLabel.Text = "UF";
             // 
@@ -149,10 +154,10 @@
             this.nomeTextBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.nomeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "Nome", true));
             this.nomeTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nomeTextBox.Location = new System.Drawing.Point(23, 116);
-            this.nomeTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.nomeTextBox.Location = new System.Drawing.Point(11, 94);
+            this.nomeTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.nomeTextBox.Name = "nomeTextBox";
-            this.nomeTextBox.Size = new System.Drawing.Size(588, 30);
+            this.nomeTextBox.Size = new System.Drawing.Size(442, 26);
             this.nomeTextBox.TabIndex = 0;
             this.nomeTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.nomeTextBox_KeyDown);
             // 
@@ -165,10 +170,10 @@
             this.foneTextBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.foneTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "Cidade", true));
             this.foneTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.foneTextBox.Location = new System.Drawing.Point(582, 286);
-            this.foneTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.foneTextBox.Location = new System.Drawing.Point(494, 232);
+            this.foneTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.foneTextBox.Name = "foneTextBox";
-            this.foneTextBox.Size = new System.Drawing.Size(240, 30);
+            this.foneTextBox.Size = new System.Drawing.Size(181, 26);
             this.foneTextBox.TabIndex = 7;
             // 
             // emailTextBox
@@ -177,11 +182,11 @@
             this.emailTextBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.emailTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "UF", true));
             this.emailTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.emailTextBox.Location = new System.Drawing.Point(881, 286);
-            this.emailTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.emailTextBox.Location = new System.Drawing.Point(714, 232);
+            this.emailTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.emailTextBox.MaxLength = 2;
             this.emailTextBox.Name = "emailTextBox";
-            this.emailTextBox.Size = new System.Drawing.Size(80, 30);
+            this.emailTextBox.Size = new System.Drawing.Size(61, 26);
             this.emailTextBox.TabIndex = 8;
             this.emailTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.emailTextBox_KeyPress);
             // 
@@ -189,9 +194,10 @@
             // 
             this.label1CadastrarCliente.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.label1CadastrarCliente.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1CadastrarCliente.Location = new System.Drawing.Point(325, 6);
+            this.label1CadastrarCliente.Location = new System.Drawing.Point(244, 5);
+            this.label1CadastrarCliente.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1CadastrarCliente.Name = "label1CadastrarCliente";
-            this.label1CadastrarCliente.Size = new System.Drawing.Size(861, 49);
+            this.label1CadastrarCliente.Size = new System.Drawing.Size(646, 40);
             this.label1CadastrarCliente.TabIndex = 0;
             this.label1CadastrarCliente.Text = "Cadastrar Cliente";
             this.label1CadastrarCliente.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -201,12 +207,12 @@
             this.buttonSalvar.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.buttonSalvar.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.buttonSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSalvar.Location = new System.Drawing.Point(1059, 681);
-            this.buttonSalvar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.buttonSalvar.MaximumSize = new System.Drawing.Size(188, 46);
-            this.buttonSalvar.MinimumSize = new System.Drawing.Size(188, 46);
+            this.buttonSalvar.Location = new System.Drawing.Point(841, 553);
+            this.buttonSalvar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonSalvar.MaximumSize = new System.Drawing.Size(141, 37);
+            this.buttonSalvar.MinimumSize = new System.Drawing.Size(141, 37);
             this.buttonSalvar.Name = "buttonSalvar";
-            this.buttonSalvar.Size = new System.Drawing.Size(188, 46);
+            this.buttonSalvar.Size = new System.Drawing.Size(141, 37);
             this.buttonSalvar.TabIndex = 20;
             this.buttonSalvar.Text = "&Salvar";
             this.buttonSalvar.UseVisualStyleBackColor = false;
@@ -218,12 +224,12 @@
             this.buttonCancelar.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.buttonCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.buttonCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCancelar.Location = new System.Drawing.Point(1299, 681);
-            this.buttonCancelar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.buttonCancelar.MaximumSize = new System.Drawing.Size(188, 46);
-            this.buttonCancelar.MinimumSize = new System.Drawing.Size(188, 46);
+            this.buttonCancelar.Location = new System.Drawing.Point(986, 553);
+            this.buttonCancelar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonCancelar.MaximumSize = new System.Drawing.Size(141, 37);
+            this.buttonCancelar.MinimumSize = new System.Drawing.Size(141, 37);
             this.buttonCancelar.Name = "buttonCancelar";
-            this.buttonCancelar.Size = new System.Drawing.Size(188, 46);
+            this.buttonCancelar.Size = new System.Drawing.Size(141, 37);
             this.buttonCancelar.TabIndex = 21;
             this.buttonCancelar.Text = "&Cancelar";
             this.buttonCancelar.UseVisualStyleBackColor = false;
@@ -234,9 +240,10 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(994, 260);
+            this.label2.Location = new System.Drawing.Point(799, 211);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(42, 20);
+            this.label2.Size = new System.Drawing.Size(35, 17);
             this.label2.TabIndex = 13;
             this.label2.Text = "País";
             // 
@@ -245,10 +252,10 @@
             this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "Pais", true));
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(994, 286);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox1.Location = new System.Drawing.Point(799, 232);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(209, 30);
+            this.textBox1.Size = new System.Drawing.Size(158, 26);
             this.textBox1.TabIndex = 9;
             // 
             // textBox2
@@ -256,10 +263,10 @@
             this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "Bairro", true));
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(23, 286);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox2.Location = new System.Drawing.Point(11, 232);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(527, 30);
+            this.textBox2.Size = new System.Drawing.Size(396, 26);
             this.textBox2.TabIndex = 6;
             // 
             // label3
@@ -267,9 +274,10 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(23, 260);
+            this.label3.Location = new System.Drawing.Point(11, 211);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(55, 20);
+            this.label3.Size = new System.Drawing.Size(46, 17);
             this.label3.TabIndex = 16;
             this.label3.Text = "Bairro";
             // 
@@ -278,10 +286,10 @@
             this.textBox3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textBox3.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "Numero", true));
             this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(658, 201);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox3.Location = new System.Drawing.Point(494, 163);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(264, 30);
+            this.textBox3.Size = new System.Drawing.Size(199, 26);
             this.textBox3.TabIndex = 4;
             // 
             // label4
@@ -289,9 +297,10 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(658, 177);
+            this.label4.Location = new System.Drawing.Point(494, 144);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(68, 20);
+            this.label4.Size = new System.Drawing.Size(58, 17);
             this.label4.TabIndex = 18;
             this.label4.Text = "Número";
             // 
@@ -300,10 +309,10 @@
             this.textBox4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textBox4.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "Logradouro", true));
             this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(23, 201);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox4.Location = new System.Drawing.Point(11, 163);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(588, 30);
+            this.textBox4.Size = new System.Drawing.Size(442, 26);
             this.textBox4.TabIndex = 3;
             // 
             // label5
@@ -311,9 +320,10 @@
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(23, 177);
+            this.label5.Location = new System.Drawing.Point(11, 144);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(94, 20);
+            this.label5.Size = new System.Drawing.Size(82, 17);
             this.label5.TabIndex = 20;
             this.label5.Text = "Logradouro";
             // 
@@ -322,9 +332,10 @@
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(987, 94);
+            this.label6.Location = new System.Drawing.Point(793, 76);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(159, 20);
+            this.label6.Size = new System.Drawing.Size(134, 17);
             this.label6.TabIndex = 22;
             this.label6.Text = "Data de nascimento";
             // 
@@ -336,10 +347,10 @@
             this.AtivocheckBox1.CheckState = System.Windows.Forms.CheckState.Checked;
             this.AtivocheckBox1.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.clienteBindingSource, "Ativo", true));
             this.AtivocheckBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AtivocheckBox1.Location = new System.Drawing.Point(1127, 335);
-            this.AtivocheckBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.AtivocheckBox1.Location = new System.Drawing.Point(898, 272);
+            this.AtivocheckBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.AtivocheckBox1.Name = "AtivocheckBox1";
-            this.AtivocheckBox1.Size = new System.Drawing.Size(68, 24);
+            this.AtivocheckBox1.Size = new System.Drawing.Size(58, 21);
             this.AtivocheckBox1.TabIndex = 19;
             this.AtivocheckBox1.Text = "Ativo";
             this.AtivocheckBox1.UseVisualStyleBackColor = true;
@@ -349,12 +360,12 @@
             this.buttonBuscarFoto.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.buttonBuscarFoto.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.buttonBuscarFoto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonBuscarFoto.Location = new System.Drawing.Point(1298, 236);
-            this.buttonBuscarFoto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.buttonBuscarFoto.MaximumSize = new System.Drawing.Size(188, 46);
-            this.buttonBuscarFoto.MinimumSize = new System.Drawing.Size(188, 46);
+            this.buttonBuscarFoto.Location = new System.Drawing.Point(982, 191);
+            this.buttonBuscarFoto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonBuscarFoto.MaximumSize = new System.Drawing.Size(141, 37);
+            this.buttonBuscarFoto.MinimumSize = new System.Drawing.Size(141, 37);
             this.buttonBuscarFoto.Name = "buttonBuscarFoto";
-            this.buttonBuscarFoto.Size = new System.Drawing.Size(188, 46);
+            this.buttonBuscarFoto.Size = new System.Drawing.Size(141, 37);
             this.buttonBuscarFoto.TabIndex = 18;
             this.buttonBuscarFoto.Text = "Buscar foto";
             this.buttonBuscarFoto.UseVisualStyleBackColor = false;
@@ -390,15 +401,15 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.telefoneClientesDataGridView.DefaultCellStyle = dataGridViewCellStyle2;
-            this.telefoneClientesDataGridView.Location = new System.Drawing.Point(765, 436);
-            this.telefoneClientesDataGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.telefoneClientesDataGridView.Location = new System.Drawing.Point(581, 354);
+            this.telefoneClientesDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.telefoneClientesDataGridView.Name = "telefoneClientesDataGridView";
             this.telefoneClientesDataGridView.ReadOnly = true;
             this.telefoneClientesDataGridView.RowHeadersVisible = false;
             this.telefoneClientesDataGridView.RowHeadersWidth = 51;
             this.telefoneClientesDataGridView.RowTemplate.Height = 24;
             this.telefoneClientesDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.telefoneClientesDataGridView.Size = new System.Drawing.Size(723, 233);
+            this.telefoneClientesDataGridView.Size = new System.Drawing.Size(542, 189);
             this.telefoneClientesDataGridView.TabIndex = 17;
             // 
             // dataGridViewTextBoxColumn4
@@ -419,10 +430,10 @@
             // 
             this.textBoxEmail.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textBoxEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxEmail.Location = new System.Drawing.Point(22, 391);
-            this.textBoxEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBoxEmail.Location = new System.Drawing.Point(14, 317);
+            this.textBoxEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxEmail.Name = "textBoxEmail";
-            this.textBoxEmail.Size = new System.Drawing.Size(331, 30);
+            this.textBoxEmail.Size = new System.Drawing.Size(249, 26);
             this.textBoxEmail.TabIndex = 10;
             // 
             // buttonInserirEmail
@@ -430,12 +441,12 @@
             this.buttonInserirEmail.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.buttonInserirEmail.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.buttonInserirEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonInserirEmail.Location = new System.Drawing.Point(359, 385);
-            this.buttonInserirEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.buttonInserirEmail.MaximumSize = new System.Drawing.Size(188, 46);
-            this.buttonInserirEmail.MinimumSize = new System.Drawing.Size(188, 46);
+            this.buttonInserirEmail.Location = new System.Drawing.Point(267, 313);
+            this.buttonInserirEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonInserirEmail.MaximumSize = new System.Drawing.Size(141, 37);
+            this.buttonInserirEmail.MinimumSize = new System.Drawing.Size(141, 37);
             this.buttonInserirEmail.Name = "buttonInserirEmail";
-            this.buttonInserirEmail.Size = new System.Drawing.Size(188, 46);
+            this.buttonInserirEmail.Size = new System.Drawing.Size(141, 37);
             this.buttonInserirEmail.TabIndex = 11;
             this.buttonInserirEmail.Text = "Inserir";
             this.buttonInserirEmail.UseVisualStyleBackColor = false;
@@ -446,12 +457,12 @@
             this.buttonInserirTelefone.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.buttonInserirTelefone.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.buttonInserirTelefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonInserirTelefone.Location = new System.Drawing.Point(1106, 385);
-            this.buttonInserirTelefone.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.buttonInserirTelefone.MaximumSize = new System.Drawing.Size(188, 46);
-            this.buttonInserirTelefone.MinimumSize = new System.Drawing.Size(188, 46);
+            this.buttonInserirTelefone.Location = new System.Drawing.Point(841, 313);
+            this.buttonInserirTelefone.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonInserirTelefone.MaximumSize = new System.Drawing.Size(141, 37);
+            this.buttonInserirTelefone.MinimumSize = new System.Drawing.Size(141, 37);
             this.buttonInserirTelefone.Name = "buttonInserirTelefone";
-            this.buttonInserirTelefone.Size = new System.Drawing.Size(188, 46);
+            this.buttonInserirTelefone.Size = new System.Drawing.Size(141, 37);
             this.buttonInserirTelefone.TabIndex = 15;
             this.buttonInserirTelefone.Text = "Inserir";
             this.buttonInserirTelefone.UseVisualStyleBackColor = false;
@@ -487,14 +498,14 @@
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.emailClienteDataGridView.DefaultCellStyle = dataGridViewCellStyle4;
-            this.emailClienteDataGridView.Location = new System.Drawing.Point(22, 436);
-            this.emailClienteDataGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.emailClienteDataGridView.Location = new System.Drawing.Point(14, 354);
+            this.emailClienteDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.emailClienteDataGridView.Name = "emailClienteDataGridView";
             this.emailClienteDataGridView.ReadOnly = true;
             this.emailClienteDataGridView.RowHeadersVisible = false;
             this.emailClienteDataGridView.RowHeadersWidth = 51;
             this.emailClienteDataGridView.RowTemplate.Height = 24;
-            this.emailClienteDataGridView.Size = new System.Drawing.Size(720, 233);
+            this.emailClienteDataGridView.Size = new System.Drawing.Size(540, 189);
             this.emailClienteDataGridView.TabIndex = 13;
             // 
             // dataGridViewTextBoxColumn3
@@ -516,12 +527,12 @@
             this.buttonExcluirEmail.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.buttonExcluirEmail.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.buttonExcluirEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonExcluirEmail.Location = new System.Drawing.Point(554, 385);
-            this.buttonExcluirEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.buttonExcluirEmail.MaximumSize = new System.Drawing.Size(188, 46);
-            this.buttonExcluirEmail.MinimumSize = new System.Drawing.Size(188, 46);
+            this.buttonExcluirEmail.Location = new System.Drawing.Point(412, 313);
+            this.buttonExcluirEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonExcluirEmail.MaximumSize = new System.Drawing.Size(141, 37);
+            this.buttonExcluirEmail.MinimumSize = new System.Drawing.Size(141, 37);
             this.buttonExcluirEmail.Name = "buttonExcluirEmail";
-            this.buttonExcluirEmail.Size = new System.Drawing.Size(188, 46);
+            this.buttonExcluirEmail.Size = new System.Drawing.Size(141, 37);
             this.buttonExcluirEmail.TabIndex = 12;
             this.buttonExcluirEmail.Text = "Excluir";
             this.buttonExcluirEmail.UseVisualStyleBackColor = false;
@@ -532,12 +543,12 @@
             this.buttonExcluirTelefone.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.buttonExcluirTelefone.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.buttonExcluirTelefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonExcluirTelefone.Location = new System.Drawing.Point(1299, 385);
-            this.buttonExcluirTelefone.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.buttonExcluirTelefone.MaximumSize = new System.Drawing.Size(188, 46);
-            this.buttonExcluirTelefone.MinimumSize = new System.Drawing.Size(188, 46);
+            this.buttonExcluirTelefone.Location = new System.Drawing.Point(986, 313);
+            this.buttonExcluirTelefone.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonExcluirTelefone.MaximumSize = new System.Drawing.Size(141, 37);
+            this.buttonExcluirTelefone.MinimumSize = new System.Drawing.Size(141, 37);
             this.buttonExcluirTelefone.Name = "buttonExcluirTelefone";
-            this.buttonExcluirTelefone.Size = new System.Drawing.Size(188, 46);
+            this.buttonExcluirTelefone.Size = new System.Drawing.Size(141, 37);
             this.buttonExcluirTelefone.TabIndex = 16;
             this.buttonExcluirTelefone.Text = "Excluir";
             this.buttonExcluirTelefone.UseVisualStyleBackColor = false;
@@ -549,10 +560,10 @@
             this.pictureBoxFoto.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.pictureBoxFoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBoxFoto.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.clienteBindingSource, "Foto", true));
-            this.pictureBoxFoto.Location = new System.Drawing.Point(1317, 95);
-            this.pictureBoxFoto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBoxFoto.Location = new System.Drawing.Point(999, 76);
+            this.pictureBoxFoto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBoxFoto.Name = "pictureBoxFoto";
-            this.pictureBoxFoto.Size = new System.Drawing.Size(141, 136);
+            this.pictureBoxFoto.Size = new System.Drawing.Size(106, 111);
             this.pictureBoxFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxFoto.TabIndex = 24;
             this.pictureBoxFoto.TabStop = false;
@@ -561,9 +572,10 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(28, 364);
+            this.label7.Location = new System.Drawing.Point(11, 296);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(118, 20);
+            this.label7.Size = new System.Drawing.Size(98, 17);
             this.label7.TabIndex = 16;
             this.label7.Text = "Digite o e-mail";
             // 
@@ -571,9 +583,10 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(776, 368);
+            this.label8.Location = new System.Drawing.Point(582, 299);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(131, 20);
+            this.label8.Size = new System.Drawing.Size(111, 17);
             this.label8.TabIndex = 34;
             this.label8.Text = "Digite o telefone";
             // 
@@ -581,9 +594,10 @@
             // 
             this.label2AlterarCliente.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.label2AlterarCliente.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2AlterarCliente.Location = new System.Drawing.Point(325, 6);
+            this.label2AlterarCliente.Location = new System.Drawing.Point(244, 5);
+            this.label2AlterarCliente.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2AlterarCliente.Name = "label2AlterarCliente";
-            this.label2AlterarCliente.Size = new System.Drawing.Size(861, 49);
+            this.label2AlterarCliente.Size = new System.Drawing.Size(646, 40);
             this.label2AlterarCliente.TabIndex = 35;
             this.label2AlterarCliente.Text = "Alterar Cliente";
             this.label2AlterarCliente.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -592,49 +606,52 @@
             // 
             this.textBox5.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "DataNascimento", true));
             this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(994, 116);
+            this.textBox5.Location = new System.Drawing.Point(796, 94);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox5.Mask = "00/00/0000";
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(209, 30);
+            this.textBox5.Size = new System.Drawing.Size(158, 26);
             this.textBox5.TabIndex = 38;
             this.textBox5.ValidatingType = typeof(System.DateTime);
             // 
             // textBoxTelefone
             // 
             this.textBoxTelefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxTelefone.Location = new System.Drawing.Point(765, 391);
+            this.textBoxTelefone.Location = new System.Drawing.Point(585, 318);
+            this.textBoxTelefone.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxTelefone.Mask = "(99) 00000-0000";
             this.textBoxTelefone.Name = "textBoxTelefone";
-            this.textBoxTelefone.Size = new System.Drawing.Size(335, 30);
+            this.textBoxTelefone.Size = new System.Drawing.Size(252, 26);
             this.textBoxTelefone.TabIndex = 39;
             // 
             // rGTextBox
             // 
             this.rGTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "CEP", true));
             this.rGTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rGTextBox.Location = new System.Drawing.Point(939, 201);
+            this.rGTextBox.Location = new System.Drawing.Point(796, 161);
+            this.rGTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rGTextBox.Mask = "00000-999";
             this.rGTextBox.Name = "rGTextBox";
-            this.rGTextBox.Size = new System.Drawing.Size(264, 30);
+            this.rGTextBox.Size = new System.Drawing.Size(161, 26);
             this.rGTextBox.TabIndex = 40;
             // 
             // cPFTextBox
             // 
             this.cPFTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "CPF", true));
             this.cPFTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cPFTextBox.Location = new System.Drawing.Point(657, 116);
+            this.cPFTextBox.Location = new System.Drawing.Point(493, 94);
+            this.cPFTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cPFTextBox.Mask = "000,000,000-00";
             this.cPFTextBox.Name = "cPFTextBox";
-            this.cPFTextBox.Size = new System.Drawing.Size(304, 30);
+            this.cPFTextBox.Size = new System.Drawing.Size(229, 26);
             this.cPFTextBox.TabIndex = 41;
             // 
             // FormCadastroCliente
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1509, 721);
+            this.ClientSize = new System.Drawing.Size(1134, 594);
             this.Controls.Add(this.cPFTextBox);
             this.Controls.Add(this.rGTextBox);
             this.Controls.Add(this.textBoxTelefone);
@@ -673,11 +690,11 @@
             this.Controls.Add(nomeLabel);
             this.Controls.Add(this.nomeTextBox);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(1527, 768);
+            this.MaximumSize = new System.Drawing.Size(1150, 633);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(1527, 768);
+            this.MinimumSize = new System.Drawing.Size(1150, 633);
             this.Name = "FormCadastroCliente";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
