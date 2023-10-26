@@ -61,10 +61,12 @@
             this.textBoxSenha.Location = new System.Drawing.Point(52, 209);
             this.textBoxSenha.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSenha.Name = "textBoxSenha";
-            this.textBoxSenha.PasswordChar = '*';
             this.textBoxSenha.Size = new System.Drawing.Size(182, 27);
             this.textBoxSenha.TabIndex = 4;
+            this.textBoxSenha.UseSystemPasswordChar = true;
             this.textBoxSenha.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxSenha_KeyDown);
+            this.textBoxSenha.MouseDown += new System.Windows.Forms.MouseEventHandler(this.textBoxSenha_MouseDown);
+            this.textBoxSenha.MouseUp += new System.Windows.Forms.MouseEventHandler(this.textBoxSenha_MouseUp);
             // 
             // label2
             // 

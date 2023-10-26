@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace GestaoPetShop
 {
-    public partial class FormLogin : Form
+    public partial class FormLogin : Form //givas
     {
         public bool Logou;
 
@@ -80,9 +80,19 @@ namespace GestaoPetShop
             }
         }
 
-        private void bunifuThinButton22_Click(object sender, EventArgs e)
+        private void bunifuThinButton22_Click(object sender, EventArgs e)//givas
         {
             this.Close();
+        }
+
+        private void textBoxSenha_MouseDown(object sender, MouseEventArgs e) //givas
+        {
+            textBoxSenha.UseSystemPasswordChar = false;
+        }
+
+        private void textBoxSenha_MouseUp(object sender, MouseEventArgs e)//givas
+        {
+            textBoxSenha.UseSystemPasswordChar=true;
         }
     }
 }
