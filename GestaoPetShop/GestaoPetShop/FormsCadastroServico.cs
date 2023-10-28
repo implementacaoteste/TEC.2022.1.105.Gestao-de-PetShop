@@ -20,12 +20,13 @@ namespace GestaoPetShop
         {
             InitializeComponent();
             id = _id;
+           
         }
         
         private void FormsCadastroServico_Load(object sender, EventArgs e)
         {
             LoadTheme();
-            this.Hide();
+            //this.Hide();
             try
             {
                 if (id == 0)
@@ -104,5 +105,8 @@ namespace GestaoPetShop
                 e.Handled = true;
             }
         }
+
+
+
     }
 }

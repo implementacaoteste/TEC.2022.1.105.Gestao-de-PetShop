@@ -76,7 +76,7 @@
             descricaoLabel.Name = "descricaoLabel";
             descricaoLabel.Size = new System.Drawing.Size(71, 17);
             descricaoLabel.TabIndex = 3;
-            descricaoLabel.Text = "Descriçao";
+            descricaoLabel.Text = "Descrição";
             // 
             // idLabel
             // 
@@ -100,7 +100,7 @@
             precoLabel.Name = "precoLabel";
             precoLabel.Size = new System.Drawing.Size(45, 17);
             precoLabel.TabIndex = 7;
-            precoLabel.Text = "Preco";
+            precoLabel.Text = "Preço";
             // 
             // tempoLabel
             // 
@@ -119,13 +119,12 @@
             this.ativoCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.servicoBindingSource, "Ativo", true));
             this.ativoCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ativoCheckBox.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.ativoCheckBox.Location = new System.Drawing.Point(312, 328);
+            this.ativoCheckBox.Location = new System.Drawing.Point(303, 324);
             this.ativoCheckBox.Margin = new System.Windows.Forms.Padding(5);
             this.ativoCheckBox.Name = "ativoCheckBox";
             this.ativoCheckBox.Size = new System.Drawing.Size(424, 38);
             this.ativoCheckBox.TabIndex = 4;
             this.ativoCheckBox.Text = "Define se esse serviço pode ser usado";
-            this.ativoCheckBox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.ativoCheckBox.UseVisualStyleBackColor = true;
             // 
             // servicoBindingSource
@@ -174,7 +173,6 @@
             this.tempoTextBox.Name = "tempoTextBox";
             this.tempoTextBox.Size = new System.Drawing.Size(164, 26);
             this.tempoTextBox.TabIndex = 2;
-            this.tempoTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tempoTextBox_KeyPress);
             // 
             // label1CadastrarServico
             // 
