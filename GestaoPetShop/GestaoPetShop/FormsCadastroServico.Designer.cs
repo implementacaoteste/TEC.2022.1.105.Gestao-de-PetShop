@@ -62,7 +62,7 @@
             ativoLabel.Location = new System.Drawing.Point(250, 334);
             ativoLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             ativoLabel.Name = "ativoLabel";
-            ativoLabel.Size = new System.Drawing.Size(43, 17);
+            ativoLabel.Size = new System.Drawing.Size(51, 20);
             ativoLabel.TabIndex = 1;
             ativoLabel.Text = "Ativo:";
             // 
@@ -74,7 +74,7 @@
             descricaoLabel.Location = new System.Drawing.Point(390, 147);
             descricaoLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             descricaoLabel.Name = "descricaoLabel";
-            descricaoLabel.Size = new System.Drawing.Size(71, 17);
+            descricaoLabel.Size = new System.Drawing.Size(86, 20);
             descricaoLabel.TabIndex = 3;
             descricaoLabel.Text = "Descrição";
             // 
@@ -86,7 +86,7 @@
             idLabel.Location = new System.Drawing.Point(258, 147);
             idLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             idLabel.Name = "idLabel";
-            idLabel.Size = new System.Drawing.Size(19, 17);
+            idLabel.Size = new System.Drawing.Size(22, 20);
             idLabel.TabIndex = 5;
             idLabel.Text = "Id";
             // 
@@ -98,7 +98,7 @@
             precoLabel.Location = new System.Drawing.Point(480, 240);
             precoLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             precoLabel.Name = "precoLabel";
-            precoLabel.Size = new System.Drawing.Size(45, 17);
+            precoLabel.Size = new System.Drawing.Size(53, 20);
             precoLabel.TabIndex = 7;
             precoLabel.Text = "Preço";
             // 
@@ -110,7 +110,7 @@
             tempoLabel.Location = new System.Drawing.Point(252, 240);
             tempoLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             tempoLabel.Name = "tempoLabel";
-            tempoLabel.Size = new System.Drawing.Size(52, 17);
+            tempoLabel.Size = new System.Drawing.Size(60, 20);
             tempoLabel.TabIndex = 9;
             tempoLabel.Text = "Tempo";
             // 
@@ -138,7 +138,7 @@
             this.descricaoTextBox.Location = new System.Drawing.Point(389, 174);
             this.descricaoTextBox.Margin = new System.Windows.Forms.Padding(5);
             this.descricaoTextBox.Name = "descricaoTextBox";
-            this.descricaoTextBox.Size = new System.Drawing.Size(492, 26);
+            this.descricaoTextBox.Size = new System.Drawing.Size(492, 30);
             this.descricaoTextBox.TabIndex = 1;
             // 
             // idTextBox
@@ -151,7 +151,7 @@
             this.idTextBox.Margin = new System.Windows.Forms.Padding(5);
             this.idTextBox.Name = "idTextBox";
             this.idTextBox.ReadOnly = true;
-            this.idTextBox.Size = new System.Drawing.Size(85, 26);
+            this.idTextBox.Size = new System.Drawing.Size(85, 30);
             this.idTextBox.TabIndex = 0;
             // 
             // precoTextBox
@@ -161,8 +161,9 @@
             this.precoTextBox.Location = new System.Drawing.Point(482, 263);
             this.precoTextBox.Margin = new System.Windows.Forms.Padding(5);
             this.precoTextBox.Name = "precoTextBox";
-            this.precoTextBox.Size = new System.Drawing.Size(164, 26);
+            this.precoTextBox.Size = new System.Drawing.Size(164, 30);
             this.precoTextBox.TabIndex = 3;
+            this.precoTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tempoTextBox_KeyPress);
             // 
             // tempoTextBox
             // 
@@ -171,8 +172,9 @@
             this.tempoTextBox.Location = new System.Drawing.Point(257, 263);
             this.tempoTextBox.Margin = new System.Windows.Forms.Padding(5);
             this.tempoTextBox.Name = "tempoTextBox";
-            this.tempoTextBox.Size = new System.Drawing.Size(164, 26);
+            this.tempoTextBox.Size = new System.Drawing.Size(164, 30);
             this.tempoTextBox.TabIndex = 2;
+            this.tempoTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tempoTextBox_KeyPress);
             // 
             // label1CadastrarServico
             // 
@@ -182,7 +184,7 @@
             this.label1CadastrarServico.Location = new System.Drawing.Point(421, 51);
             this.label1CadastrarServico.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1CadastrarServico.Name = "label1CadastrarServico";
-            this.label1CadastrarServico.Size = new System.Drawing.Size(292, 38);
+            this.label1CadastrarServico.Size = new System.Drawing.Size(366, 47);
             this.label1CadastrarServico.TabIndex = 11;
             this.label1CadastrarServico.Text = "Cadastrar Serviço";
             // 
@@ -194,7 +196,7 @@
             this.label2_AlterarServico.Location = new System.Drawing.Point(446, 51);
             this.label2_AlterarServico.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2_AlterarServico.Name = "label2_AlterarServico";
-            this.label2_AlterarServico.Size = new System.Drawing.Size(242, 38);
+            this.label2_AlterarServico.Size = new System.Drawing.Size(305, 47);
             this.label2_AlterarServico.TabIndex = 12;
             this.label2_AlterarServico.Text = "Alterar Serviço";
             // 
@@ -233,12 +235,12 @@
             // 
             // FormsCadastroServico
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.CancelButton = this.button_SalvarServico;
-            this.ClientSize = new System.Drawing.Size(1134, 594);
+            this.ClientSize = new System.Drawing.Size(1132, 586);
             this.Controls.Add(this.button_CancelarCadastroOuAlterar);
             this.Controls.Add(this.button_SalvarServico);
             this.Controls.Add(this.label2_AlterarServico);
