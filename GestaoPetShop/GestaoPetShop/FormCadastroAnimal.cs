@@ -173,5 +173,10 @@ namespace GestaoPetShop
         {
             textBox8.Focus();
         }
+
+        private void textBox7_Click(object sender, EventArgs e)
+        {
+            textBox7.SelectionStart = 0;
+        }
     }
 }

@@ -274,5 +274,25 @@ namespace GestaoPetShop
         {
             nomeTextBox.Focus();
         }
+
+        private void cPFTextBox_Click(object sender, EventArgs e)
+        {
+            cPFTextBox.SelectionStart = 0;
+        }
+
+        private void textBoxDataNascimento_Click(object sender, EventArgs e)
+        {
+            textBoxDataNascimento.SelectionStart = 0;
+        }
+
+        private void cEPTextBox_Click(object sender, EventArgs e)
+        {
+            cEPTextBox.SelectionStart = 0;
+        }
+
+        private void textBoxTelefone_Click(object sender, EventArgs e)
+        {
+            textBoxTelefone.SelectionStart = 0;
+        }
     }
 }
