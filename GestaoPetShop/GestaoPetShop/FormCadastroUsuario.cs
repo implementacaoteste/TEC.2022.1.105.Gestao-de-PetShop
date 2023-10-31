@@ -62,14 +62,16 @@ namespace GestaoPetShop
                     usuarioBindingSource.DataSource = new UsuarioBLL().BuscarPorId(Id);
                     senhaTextBox.Text = "";
                     textBoxConfirmarSenha.Text = "";
+                    //
                     ToolTip toolTip1 = new ToolTip();
                     toolTip1.AutoPopDelay = 5000;
                     toolTip1.InitialDelay = 1000;
                     toolTip1.ReshowDelay = 500;
                     toolTip1.ShowAlways = true;
                     toolTip1.SetToolTip(this.buttonSalvar, "Eita treta");
-                    toolTip1.SetToolTip(this.ativoCheckBox, "Opção que permitir ativar ou desativar um usuário no sistema")
- ;               }
+                    toolTip1.SetToolTip(this.ativoCheckBox, "Opção que permitir ativar ou desativar um usuário no sistema");
+                    toolTip1.SetToolTip(this.senhaTextBox, "Definir senha para acessar o sistema");
+;               }
 
             }
             catch (Exception ex)
