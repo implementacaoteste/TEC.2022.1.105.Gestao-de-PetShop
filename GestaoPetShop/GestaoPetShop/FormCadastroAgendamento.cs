@@ -137,6 +137,9 @@ namespace GestaoPetShop
             }
             catch (Exception ex)
             {
+                if (new TratarErro().GetId(ex) == 240)
+                    ativoCheckBox.Checked = true;
+
                 MessageBox.Show(ex.Message);
             }
         }
@@ -286,7 +289,21 @@ namespace GestaoPetShop
             }
         }
 
-       
-    }
+        private void textBoxQuantidade_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsLetter(e.KeyChar) || char.IsPunctuation(e.KeyChar) || char.IsSymbol(e.KeyChar) || char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;// codigo que impede que seja inserido letras ou simbolos
+            }
+        }
 
+        private void textBoxValorUnitario_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsLetter(e.KeyChar) || char.IsPunctuation(e.KeyChar) || char.IsSymbol(e.KeyChar) || char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true; // codigo que impede que seja inserido letras ou simbolos
+            }
+        }
+    }
+  
 }

@@ -59,7 +59,9 @@ namespace BLL
                     new UsuarioBLL().ValidarPermissao(37);
                 }
             }
-            
+
+            if (_agendamento.IdSituacao == 2 || _agendamento.IdSituacao == 3 && _agendamento.Ativo == false)
+                throw new Exception("Não pode Desativar o Ativo de um agendamento com Situação Em andamento ou Finalizado") { Data = { { "Id", 240 } } }; ;
 
             List<AgendamentoServico> agendamentoServicos = new List<AgendamentoServico>();
             agendamentoServicos = _agendamento.AgendamentoServicos;
@@ -275,7 +277,7 @@ namespace BLL
            situacao = agendamentoDAL.BuscarSituacaoPorNome(_descricaoSituacao);
             if(situacao == null || situacao.Id < 0)
             {
-                throw new Exception("Situação não encontrada.");
+                throw new Exception("Situação não encontrada.") { Data = { { "Id", 241 } } };
             }
             return situacao;
         }
