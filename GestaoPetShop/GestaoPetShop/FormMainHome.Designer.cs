@@ -330,7 +330,6 @@
             this.btnMaximizar.Size = new System.Drawing.Size(40, 50);
             this.btnMaximizar.TabIndex = 2;
             this.btnMaximizar.UseVisualStyleBackColor = true;
-            this.btnMaximizar.Visible = false;
             this.btnMaximizar.Click += new System.EventHandler(this.btnMaximizar_Click);
             // 
             // btnCloseChildForm

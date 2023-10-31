@@ -227,18 +227,19 @@ namespace GestaoPetShop
 
         private void btnMaximizar_Click(object sender, EventArgs e)
         {
-            try
-            {
-                if (WindowState == FormWindowState.Normal)
-                    this.WindowState = FormWindowState.Maximized;
-                else
-                    this.WindowState = FormWindowState.Normal;
+            this.WindowState = FormWindowState.Minimized;
+            //try
+            //{
+            //    if (WindowState == FormWindowState.Normal)
+            //        this.WindowState = FormWindowState.Maximized;
+            //    else
+            //        this.WindowState = FormWindowState.Normal;
 
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("Ocorreu um erro no botão maximizar.", ex) { Data = { { "Id", 338 } } };
-            }
+            //}
+            //catch (Exception ex)
+            //{
+            //    throw new Exception("Ocorreu um erro no botão maximizar.", ex) { Data = { { "Id", 338 } } };
+            //}
         }
 
         private void panelDesktopPane_Paint(object sender, PaintEventArgs e)
