@@ -26,7 +26,8 @@
 
 ## AGRADECIMENTOS
 	Agradeço a todos os que de alguma forma contribuíram com este trabalho. Primeiramente a Deus, por nos dar toda a energia, saúde e força necessária para as noites sem dormir e os incansáveis dias de dedicação. Aos meus professores, por todas as correções feitas, sabedoria compartilhada e amor ao desenvolvimento de novos estudos. 
-	Meu agradecimento especial aos meus colegas de equipe e de sala de aula. Todos nós nos desdobramos para conseguir entregar o melhor de cada um de nós aos trabalhos e execícios propostos, que é fruto do empenho de todos os envolvidos. Fomos um time implacável e sei que o resultado do nosso estudo ficará no registro para todos os que vierem após nós. Sem a nossa união, nada disso seria possível. Agradeço por dividirem tantos momentos de descobertas, desafios, erros e muito acertos.
+	Meu agradecimento especial aos meus colegas de equipe e de sala de aula. Todos nós nos desdobramos para conseguir entregar o melhor de cada um de nós aos trabalhos e execícios propostos, que é fruto do empenho de todos os envolvidos. 
+ 	Fomos um time implacável e sei que o resultado do nosso estudo ficará no registro para todos os que vierem após nós. Sem a nossa união, nada disso seria possível. Agradeço por dividirem tantos momentos de descobertas, desafios, erros e muito acertos.
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
