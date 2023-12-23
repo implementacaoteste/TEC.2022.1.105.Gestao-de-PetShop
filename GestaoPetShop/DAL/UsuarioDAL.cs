@@ -176,9 +176,9 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = "SELECT Id, UsuarioLogin, IdProfissional, Senha,Ativo FROM Usuario WHERE UPPER(UsuarioLogin) LIKE UPPER(@Login)";
+                cmd.CommandText = "SELECT Id, UsuarioLogin, IdProfissional, Senha,Ativo FROM Usuario WHERE UsuarioLogin = @Login";
                 cmd.CommandType = System.Data.CommandType.Text;
-                cmd.Parameters.AddWithValue("@Login", "%"+_login+"%");
+                cmd.Parameters.AddWithValue("@Login", _login);
 
                 cn.Open();
 

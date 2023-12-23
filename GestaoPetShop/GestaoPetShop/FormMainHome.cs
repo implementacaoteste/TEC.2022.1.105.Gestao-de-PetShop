@@ -263,10 +263,7 @@ namespace GestaoPetShop
 
             try
             {
-                using (FormMainHome frm = new FormMainHome())
-                {
-                    frm.ShowDialog();
-                }
+                Application.Restart();
             }
             catch (Exception ex)
             {
