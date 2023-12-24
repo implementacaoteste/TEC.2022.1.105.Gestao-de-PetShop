@@ -51,9 +51,20 @@ namespace GestaoPetShop
                 }
 
             }
-            catch(System.FormatException ex)
+            catch (System.FormatException ex)
             {
-                MessageBox.Show("Buscar por Id aceita apenas números \n "+ex.Message);
+                if (textBox_BuscarServico.Text == "")
+                {
+                    MessageBox.Show("Id não informado \n" + ex.Message);
+                    
+                }
+                else
+                {
+
+                    MessageBox.Show("Buscar por Id aceita apenas números \n " + ex.Message);
+                }
+                textBox_BuscarServico.Clear();
+                textBox_BuscarServico.Focus();
             }
             catch (Exception ex)
             {
@@ -64,20 +75,11 @@ namespace GestaoPetShop
         }
         private void button_InserirServico_Click(object sender, EventArgs e)
         {
-            //this.Hide();
-            using (FormsCadastroServico frm = new FormsCadastroServico())
+            int id = 0;
+            using (FormsCadastroServico frm = new FormsCadastroServico(id))
             {
-                try
-                {
+              
                     frm.ShowDialog();
-
-                }
-                catch (Exception ex)
-                {
-
-                    MessageBox.Show(ex.Message);
-                }
-
             }
         }
         private void button_AlterarServico_Click(object sender, EventArgs e)
@@ -141,7 +143,7 @@ namespace GestaoPetShop
 
             LoadTheme();
         }
-        private void LoadTheme() 
+        private void LoadTheme()
         {
             foreach (Control btns in this.Controls)
             {
@@ -159,7 +161,7 @@ namespace GestaoPetShop
         {
             if (comboBox_EscolhaBuscarServico.SelectedIndex != 0)
                 textBox_BuscarServico.Enabled = true;
-           if(comboBox_EscolhaBuscarServico.SelectedIndex == 0)
+            if (comboBox_EscolhaBuscarServico.SelectedIndex == 0)
             {
                 textBox_BuscarServico.Clear();
                 servicoBindingSource.Clear();

@@ -1,34 +1,27 @@
 ﻿using BLL;
 using Models;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GestaoPetShop
 {
     public partial class FormsCadastroServico : Form
     {
-        int id;
+       private int id;
         public FormsCadastroServico(int _id = 0)
         {
             InitializeComponent();
             id = _id;
-           
+
         }
-        
+
         private void FormsCadastroServico_Load(object sender, EventArgs e)
         {
-            LoadTheme();
-            //this.Hide();
+            this.Hide();
             try
             {
+                LoadTheme();
                 if (id == 0)
                 {
                     label1CadastrarServico.Visible = true;
@@ -41,13 +34,14 @@ namespace GestaoPetShop
                     label2_AlterarServico.Visible = true;
                     servicoBindingSource.DataSource = new ServicoBLL().BuscarPorId(id);
                 }
-                
-                    
+
+
             }
             catch (Exception ex)
             {
 
                 MessageBox.Show(ex.Message);
+
             }
         }
 
@@ -71,20 +65,20 @@ namespace GestaoPetShop
             {
                 servicoBindingSource.EndEdit();
                 ServicoBLL servicoBLL = new ServicoBLL();
-               
+
                 if (id == 0)
                 {
                     servicoBLL.Inserir((Servico)servicoBindingSource.Current);
                     MessageBox.Show("Cadastrado com sucesso!");
-                    Close();
+
                 }
                 else
                 {
                     servicoBLL.Alterar((Servico)servicoBindingSource.Current);
                     MessageBox.Show("Alterado com sucesso!");
-                    Close();
 
                 }
+                //this.Close();
             }
             catch (Exception ex)
             {
