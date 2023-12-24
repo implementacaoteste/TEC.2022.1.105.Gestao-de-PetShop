@@ -51,6 +51,10 @@ namespace GestaoPetShop
                 }
 
             }
+            catch(System.FormatException ex)
+            {
+                MessageBox.Show("Buscar por Id aceita apenas números \n "+ex.Message);
+            }
             catch (Exception ex)
             {
 
@@ -134,6 +138,7 @@ namespace GestaoPetShop
             comboBox_EscolhaBuscarServico.SelectedIndex = 0;
             textBox_BuscarServico.Enabled = false;
 
+
             LoadTheme();
         }
         private void LoadTheme() 
@@ -154,8 +159,28 @@ namespace GestaoPetShop
         {
             if (comboBox_EscolhaBuscarServico.SelectedIndex != 0)
                 textBox_BuscarServico.Enabled = true;
-            else
+           if(comboBox_EscolhaBuscarServico.SelectedIndex == 0)
+            {
+                textBox_BuscarServico.Clear();
+                servicoBindingSource.Clear();
                 textBox_BuscarServico.Enabled = false;
+                textBox_BuscarServico.BackColor = Color.WhiteSmoke;
+            }
+            if (comboBox_EscolhaBuscarServico.SelectedIndex == 1)
+            {
+                textBox_BuscarServico.Clear();
+                servicoBindingSource.Clear();
+                textBox_BuscarServico.BackColor = Color.White;
+
+            }
+            if (comboBox_EscolhaBuscarServico.SelectedIndex == 2)
+            {
+                textBox_BuscarServico.Clear();
+                servicoBindingSource.Clear();
+                textBox_BuscarServico.BackColor = Color.White;
+
+            }
+
         }
     }
 }

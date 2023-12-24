@@ -38,8 +38,8 @@ namespace BLL
             }
             else
             {
-                Servico servico = new ServicoBLL().BuscarPorId(_servico.Id);
-                if(_servico.Ativo != servico.Ativo)
+                Servico servico = new ServicoBLL().BuscarPorId(_servico.Id); // serve para verificar se o usuário tem permissão para alterar o ativo da permissão
+                if(_servico.Ativo != servico.Ativo) // o Ativo serve para permitir ou bloquear um serviço sem deleta-lo do sistema.
                     new UsuarioBLL().ValidarPermissao(37);
             }
         }
