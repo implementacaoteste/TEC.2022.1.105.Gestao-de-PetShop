@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.UI;
 
 namespace BLL
 {
@@ -84,8 +85,14 @@ namespace BLL
         public void InserirPermissaoNaFuncao(int _idFuncao, int _idPermissao)
         {
             new UsuarioBLL().ValidarPermissao(36);// mesma função que tem a permissão de excluir
+           if( new FuncaoDAL().ExistePermissaoNaFuncao(_idFuncao, _idPermissao))
+            {
+                throw new Exception("Esta permissão já está cadastrada para essa função");
+            }
             new FuncaoDAL().InserirPermissaoNaFuncao(_idFuncao, _idPermissao);
         }
+
+      
 
         public void RemoverPermissaoDeFuncao(int _idFuncao, int _idPermissao)
         {

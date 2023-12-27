@@ -14,7 +14,7 @@ using System.Windows.Forms;
 
 namespace GestaoPetShop
 {
-    public partial class testedimas : Form
+    public partial class testeDimasPDF : Form
     {
         class Eventos : PdfPageEventHelper
 
@@ -150,7 +150,7 @@ namespace GestaoPetShop
 
         }
 
-        public testedimas()
+        public testeDimasPDF()
         {
             InitializeComponent();
         }

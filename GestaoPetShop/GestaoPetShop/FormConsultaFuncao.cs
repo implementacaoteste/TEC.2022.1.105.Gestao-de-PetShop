@@ -40,6 +40,21 @@ namespace GestaoPetShop
                     MessageBox.Show("Escolha a forma de buscar");
                 }
             }
+            catch (System.FormatException ex)
+            {
+                if (textBoxBuscarFuncao.Text == "")
+                {
+                    MessageBox.Show("Id não informado \n" + ex.Message);
+
+                }
+                else
+                {
+
+                    MessageBox.Show("Buscar por Id aceita apenas números \n " + ex.Message);
+                }
+                textBoxBuscarFuncao.Clear();
+                textBoxBuscarFuncao.Focus();
+            }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
@@ -48,16 +63,17 @@ namespace GestaoPetShop
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
             //this.Hide();
-            using (FormCadastroFuncao frm = new FormCadastroFuncao())
+            try
             {
-                try
+                using (FormCadastrarFuncao frm = new FormCadastrarFuncao())
                 {
                     frm.ShowDialog();
                 }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
+                funcaoBindingSource.DataSource = new FuncaoBLL().BuscarTodos();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }//Givas
         private void btnAlterar_Click(object sender, EventArgs e)
@@ -71,15 +87,15 @@ namespace GestaoPetShop
                 }
                 int id = ((Funcao)funcaoBindingSource.Current).Id;
 
-                using (FormCadastroFuncao frm = new FormCadastroFuncao(id))
+                using (FormCadastrarFuncao frm = new FormCadastrarFuncao(id))
                 {
                     frm.ShowDialog();
                 }
-                btnBuscarFuncao_Click(null, null);
+                funcaoBindingSource.DataSource = new FuncaoBLL().BuscarTodos();
             }
             catch (Exception ex)
             {
-               MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message);
             }
         }//Givas
 
@@ -207,14 +223,27 @@ namespace GestaoPetShop
             }
             catch (Exception ex)
             {
-                MessageBox.Show (ex.Message);
+                MessageBox.Show(ex.Message);
             }
         }
 
         private void comboBoxEscolhaBuscarFuncao_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (comboBoxEscolhaBuscarFuncao.SelectedIndex != 0)
+            {
+
                 textBoxBuscarFuncao.Enabled = true;
+                textBoxBuscarFuncao.Clear();
+                funcaoBindingSource.Clear();
+            }
+
+
+            if(comboBoxEscolhaBuscarFuncao.SelectedIndex == 0)
+            {
+                textBoxBuscarFuncao.Clear();
+                textBoxBuscarFuncao.Enabled = false;
+                funcaoBindingSource.Clear();
+            }
         }
     }
 }

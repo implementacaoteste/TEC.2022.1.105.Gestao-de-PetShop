@@ -297,5 +297,39 @@ namespace DAL
                 cn.Close ();
             }
         }
+
+        public bool ExistePermissaoNaFuncao(int idFuncao, int idPermissao)
+        {
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            try
+            {
+                SqlCommand cmd = cn.CreateCommand();
+                cmd.CommandText = @"SELECT 1  FROM FuncaoPermissao WHERE IdFuncao = @IdFuncao AND IdPermissao = @IdPermissao ";
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.Parameters.AddWithValue("@IdFuncao", idFuncao);
+                cmd.Parameters.AddWithValue("@IdPermissao", idPermissao);
+                cn.Open();
+
+                using (SqlDataReader rd = cmd.ExecuteReader())
+                {
+                    while (rd.Read())
+                    {
+                        return true;
+                    }
+                }
+                return false;
+
+               
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception("Erro ao tentar verificar vínculo de permissão com função"+ ex);
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
     }
 }

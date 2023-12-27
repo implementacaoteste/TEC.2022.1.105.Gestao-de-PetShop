@@ -76,11 +76,12 @@ namespace GestaoPetShop
         private void button_InserirServico_Click(object sender, EventArgs e)
         {
             int id = 0;
-            using (FormsCadastroServico frm = new FormsCadastroServico(id))
+            using (FormCadastrarServico frm = new FormCadastrarServico(id))
             {
               
                     frm.ShowDialog();
             }
+            servicoBindingSource.Clear();
         }
         private void button_AlterarServico_Click(object sender, EventArgs e)
         {
@@ -94,11 +95,11 @@ namespace GestaoPetShop
                 }
                 int id = ((Servico)servicoBindingSource.Current).Id;
 
-                using (FormsCadastroServico frm = new FormsCadastroServico(id))
+                using (FormCadastrarServico frm = new FormCadastrarServico(id))
                 {
                     frm.ShowDialog();
                 }
-
+                servicoBindingSource.Clear();
 
             }
             catch (Exception ex)

@@ -1,6 +1,6 @@
 ﻿namespace GestaoPetShop
 {
-    partial class testedimas
+    partial class testeDimasPDF
     {
         /// <summary>
         /// Required designer variable.

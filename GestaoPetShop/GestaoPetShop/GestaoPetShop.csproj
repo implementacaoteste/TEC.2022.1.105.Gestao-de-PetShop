@@ -312,6 +312,18 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormCadastrarFuncao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCadastrarFuncao.Designer.cs">
+      <DependentUpon>FormCadastrarFuncao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCadastrarServico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCadastrarServico.Designer.cs">
+      <DependentUpon>FormCadastrarServico.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormConsultaAgendamento.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -329,12 +341,6 @@
     </Compile>
     <Compile Include="FormConsultaFuncao.Designer.cs">
       <DependentUpon>FormConsultaFuncao.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormCadastroFuncao.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormCadastroFuncao.Designer.cs">
-      <DependentUpon>FormCadastroFuncao.cs</DependentUpon>
     </Compile>
     <Compile Include="FormCadastroProfissional.cs">
       <SubType>Form</SubType>
@@ -438,12 +444,6 @@
     <Compile Include="FormRelatorioGeral.Designer.cs">
       <DependentUpon>FormRelatorioGeral.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormsCadastroServico.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormsCadastroServico.Designer.cs">
-      <DependentUpon>FormsCadastroServico.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormPesquisarSelecionarAnimalCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -484,14 +484,20 @@
     <Compile Include="Relatorio\FormRelatorioCliente.Designer.cs">
       <DependentUpon>FormRelatorioCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="testedimas.cs">
+    <Compile Include="testeDimasPDF.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="testedimas.Designer.cs">
-      <DependentUpon>testedimas.cs</DependentUpon>
+    <Compile Include="testeDimasPDF.Designer.cs">
+      <DependentUpon>testeDimasPDF.cs</DependentUpon>
     </Compile>
     <Compile Include="ThemeColor.cs" />
     <Compile Include="TratarErro.cs" />
+    <EmbeddedResource Include="FormCadastrarFuncao.resx">
+      <DependentUpon>FormCadastrarFuncao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCadastrarServico.resx">
+      <DependentUpon>FormCadastrarServico.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormConsultaAgendamento.resx">
       <DependentUpon>FormConsultaAgendamento.cs</DependentUpon>
     </EmbeddedResource>
@@ -500,9 +506,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormConsultaFuncao.resx">
       <DependentUpon>FormConsultaFuncao.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormCadastroFuncao.resx">
-      <DependentUpon>FormCadastroFuncao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormCadastroProfissional.resx">
       <DependentUpon>FormCadastroProfissional.cs</DependentUpon>
@@ -557,9 +560,6 @@
     <EmbeddedResource Include="FormRelatorioGeral.resx">
       <DependentUpon>FormRelatorioGeral.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormsCadastroServico.resx">
-      <DependentUpon>FormsCadastroServico.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FormPesquisarSelecionarAnimalCliente.resx">
       <DependentUpon>FormPesquisarSelecionarAnimalCliente.cs</DependentUpon>
     </EmbeddedResource>
@@ -575,8 +575,8 @@
       <DependentUpon>FormRelatorioCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Relatorio\ReportCliente.rdlc" />
-    <EmbeddedResource Include="testedimas.resx">
-      <DependentUpon>testedimas.cs</DependentUpon>
+    <EmbeddedResource Include="testeDimasPDF.resx">
+      <DependentUpon>testeDimasPDF.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="modelagemDataSet.xsc">
       <DependentUpon>modelagemDataSet.xsd</DependentUpon>
